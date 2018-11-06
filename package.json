@@ -2,8 +2,7 @@
   "name": "@coopdigital/foundations-vars",
   "version": "1.0.0",
   "description": "Co-op CSS Foundations: Variables",
-  "main": "src/component.html",
-  "style": "src/component.css",
+  "style": "src/vars.pcss",
   "author": "Matthew Morek (matthew.morek@coopdigital.co.uk)",
   "license": "MIT",
   "files": [
@@ -17,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/component-template.git"
+    "url": "git+https://github.com/coopdigital/foundations-vars.git"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
