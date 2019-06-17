@@ -3,7 +3,7 @@
   "version": "1.2.2",
   "description": "Co-op CSS Foundations: Variables",
   "style": "src/vars.pcss",
-  "main: "dist/vars.css",
+  "main": "dist/vars.css",
   "author": "Matthew Morek (matthew.morek@coopdigital.co.uk)",
   "contributors": [
     "Paul Welsh <paul@nonbreakingspace.co.uk> (https://github.com/spacedawwwg)"
