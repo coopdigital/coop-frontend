@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-colors",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "Co-op CSS Foundations: Colors",
   "main": "dist/colors.css",
@@ -32,6 +32,6 @@
     "stylelint-prettier": "^1.0.3"
   },
   "dependencies": {
-    "@coopdigital/foundations-vars": "^1.2.3"
+    "@coopdigital/foundations-vars": "^1.2.4"
   }
 }
