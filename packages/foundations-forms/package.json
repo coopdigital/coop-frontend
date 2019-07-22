@@ -1,6 +1,7 @@
 {
   "name": "@coopdigital/foundations-forms",
   "version": "1.0.1",
+  "private": true,
   "description": "CSS Foundations: Forms",
   "main": "dist/forms.css",
   "style": "src/forms.pcss",
