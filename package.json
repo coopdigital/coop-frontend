@@ -1,0 +1,10 @@
+{
+  "name": "@coopdigital/foundations",
+  "description": "Co-op CSS Foundations libraries",
+  "author": "Co-op Digital",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.16.1"
+  }
+}
