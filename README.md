@@ -1,4 +1,4 @@
-# Co-op Foundations
+# Co-op Front-end
 
 A mono-repository containing all the available Co-op Foundations libraries.
 
