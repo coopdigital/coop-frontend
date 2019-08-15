@@ -1,8 +1,22 @@
 # Co-op Front-end
 
-A mono-repository containing all the available Co-op Foundations libraries.
+A mono-repository containing all the available Co-op Foundations libraries. All libraries are found in the [packages](./packages) directory.
 
-This repository uses [lerna](https://github.com/lerna/lerna) to manage versioning of all the different packages. Let's discuss this whole approach in the issues: what do we think of using subdirectories? Do we know how we want to handle actual publishing of packages: should it be the reviewer's responsibility to merge then run `lerna publish`? What about CI/CD process? 
+## Local development
+This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. Clone this repository, then install dependencies:
+ 
+ ```shell script
+$ npm install
+```
 
-All the packages in this test repo are marked as private for now so you can try running `lerna publish` -- it won't have any effect other than pushing new tags to this repository.
+This will install lerna, then [bootstrap the local packages](https://github.com/lerna/lerna/tree/master/commands/bootstrap#readme).
 
+### Publishing new versions
+
+Creating and publishing new versions is only enabled on the master branch. To create and publish new versions, the following needs to be run by a user with write permissions to the @coopdigital npm registry:
+
+```shell script
+$ lerna publish
+``` 
+
+This should provide a prompt to update the version according to [semantic versioning](https://semver.org/) -- note that cross-linked dependencies within the local packages will be updated automatically.
