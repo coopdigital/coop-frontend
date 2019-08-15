@@ -1,7 +1,6 @@
 {
   "name": "@coopdigital/foundations-grid",
-  "version": "1.0.3",
-  "private": true,
+  "version": "1.0.1",
   "description": "Co-op CSS Foundations: Grid.",
   "main": "dist/grid.html",
   "style": "dist/grid.css",
@@ -29,16 +28,15 @@
   },
   "devDependencies": {
     "@coopdigital/css-foundations": "^1.7.6",
-    "autoprefixer": "^9.3.1",
-    "cssnano": "^4.1.7",
-    "postcss": "^7.0.5",
-    "postcss-cli": "^6.0.1",
+    "autoprefixer": "^9.6.0",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.2",
     "postcss-import": "^12.0.1",
-    "postcss-load-config": "^2.0.0",
-    "precss": "^3.1.2",
-    "prettier": "^1.14.3",
-    "stylelint": "^9.10.1",
-    "stylelint-config-prettier": "^4.0.0",
-    "stylelint-prettier": "^1.0.3"
+    "postcss-load-config": "^2.1.0",
+    "precss": "^4.0.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-prettier": "^1.1.1"
   }
 }

@@ -1,18 +1,30 @@
+/* MQ Breakpoints */
+/* 320px */
+/* 480px */
+/* 750px */
+/* 960px */
+/* 1300px */
 :root {
   --font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* font-size: 1.2499999rem uses thinner text decoration on links rather than 1.25rem */
+
+  /* Typography: Base */
   --type-base--body: 1rem;
   --type-base--h-mega: 2.25rem;
   --type-base--h1: 1.875rem;
-  --type-base--h2: 1.25rem;
+  --type-base--h2: 1.2499999rem;
   --type-base--h3: 1.125rem;
   --type-base--h4: 1.125rem;
   --type-base--h5: 1.125rem;
   --type-base--h6: 0.8125rem;
-  --type-base--blockquote: 1.25rem;
-  --type-base--lead: 1.25rem;
+  --type-base--blockquote: 1.2499999rem;
+  --type-base--lead: 1.2499999rem;
   --type-base--small: 0.8125rem;
   --type-base--line-height: 1.7;
-  --type-medium--body: 1.25rem;
+
+  /* Typography: Medium */
+  --type-medium--body: 1.2499999rem;
   --type-medium--h-mega: 3rem;
   --type-medium--h1: 2.875rem;
   --type-medium--h2: 1.625rem;
@@ -24,71 +36,96 @@
   --type-medium--lead: 1.625rem;
   --type-medium--small: 1rem;
   --type-medium--base-line-height: 1.6;
+
+  /* Spacing: Base */
   --spacing-base: 2rem;
-  --spacing-base--3-4: 1.5rem;
   --spacing-base--3-4: calc(var(--spacing-base) / 4 * 3);
-  --spacing-base--1-2: 1rem;
   --spacing-base--1-2: calc(var(--spacing-base) / 2);
-  --spacing-base--1-4: 0.5rem;
   --spacing-base--1-4: calc(var(--spacing-base) / 4);
-  --spacing-base--1-8: 0.25rem;
   --spacing-base--1-8: calc(var(--spacing-base) / 8);
+
+  /* Spacing: Medium */
   --spacing-medium: 4rem;
-  --spacing-medium--3-4: 3rem;
   --spacing-medium--3-4: calc(var(--spacing-medium) / 4 * 3);
-  --spacing-medium--1-2: 2rem;
   --spacing-medium--1-2: calc(var(--spacing-medium) / 2);
-  --spacing-medium--1-4: 1rem;
   --spacing-medium--1-4: calc(var(--spacing-medium) / 4);
-  --spacing-medium--1-8: 0.5rem;
   --spacing-medium--1-8: calc(var(--spacing-medium) / 8);
+
+  /* Colours */
   --color-brand: #00b1e7;
   --color-text: #282828;
-  --color-white: #fff;
-  --color-black: #000;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Links */
   --color-link: #00729a;
   --color-link--hover: #000102;
   --color-link--focus: #eec300;
   --color-link--active: #005981;
   --color-link--visited: #004c67;
+
+  /* Buttons */
   --color-button-primary: #0f8482;
   --color-button-primary--hover: #2b9e9c;
   --color-button-primary--active: #0c6d6b;
+
   --color-button-dark: #374c63;
   --color-button-dark--hover: #4a6683;
   --color-button-dark--active: #2e3f53;
-  --color-button: #374c63;
+
+  /* default button */
   --color-button: var(--color-button-dark);
-  --color-button--hover: #4a6683;
   --color-button--hover: var(--color-button-dark--hover);
-  --color-button--active: #2e3f53;
   --color-button--active: var(--color-button-dark--active);
+
+  /* Palette */
+  /* Greyscale */
   --color-grey-light: #f3f3f3;
   --color-grey-mid: #c4c4c4;
   --color-grey-dark: #6e6e6e;
-  --color-yellow-bright: #ff0;
+
+  /* Yellowscale */
+  --color-yellow-bright: #ffff00;
   --color-yellow-light: #ffec00;
   --color-yellow-mid: #ffd308;
+
+  /* Greenscale */
   --color-green-bright: #edfb3c;
   --color-green-light: #bad303;
   --color-green-mid: #4f820d;
   --color-green-dark: #385c0a;
+
+  /* Turquoisescale - previously GreenBlue */
   --color-turquoise-bright: #0afbfb;
   --color-turquoise-light: #72dcdb;
   --color-turquoise-mid: #0f8482;
   --color-turquoise-dark: #166d66;
+
+  /* Bluescale */
   --color-blue-bright: #418cfc;
   --color-blue-light: #92d8fe;
   --color-blue-mid: #326bb7;
   --color-blue-dark: #334c89;
+
+  /* Pinkscale */
   --color-pink-bright: #fc43d3;
   --color-pink-light: #ff80d3;
+
+  /* Purplescale */
   --color-purple-mid: #ad208e;
   --color-purple-dark: #61307d;
+
+  /* Orangescale */
   --color-orange-mid: #f8642c;
+
+  /* Redscale */
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
 }
+/*===============================================
+Forms - Co-op CSS Foundations
+===============================================*/
 .coop-form {
   margin-bottom: 2rem;
   margin-bottom: var(--spacing-base);
@@ -96,27 +133,27 @@
 .coop-form__row {
   margin-bottom: var(--quarter-spacing-unit);
 }
-.coop-form__row:after,
-.coop-form__row:before {
+.coop-form__row::before,
+.coop-form__row::after {
   content: " ";
   display: table;
 }
-.coop-form__row:after {
+.coop-form__row::after {
   clear: both;
 }
-.coop-form__label,
-label {
+label,
+.coop-form__label {
   font-size: 1.125rem;
-  font-family: Avenir-Next, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-weight: 500;
   display: block;
-  margin: 0 0 0.25rem;
+  margin: 0 0 calc(calc(2rem / 4) / 2);
   margin: 0 0 calc(var(--spacing-base--1-4) / 2);
 }
 @media (min-width: 46.875em) {
-  .coop-form__label,
-  label {
+  label,
+  .coop-form__label {
     font-size: 1.25rem;
   }
 }
@@ -125,7 +162,7 @@ label {
   color: #6e6e6e;
   color: var(--color-grey-dark);
   font-size: 0.75rem;
-  font-family: Avenir-Next, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
@@ -133,40 +170,41 @@ label {
 .coop-form__label--inline {
   display: inline;
 }
-.coop-form__legend,
-legend {
-  font-family: Avenir-Next, Helvetica Neue, Helvetica, Arial, sans-serif;
+legend,
+.coop-form__legend {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-weight: 500;
   display: block;
-  margin: 0 0 0.5rem;
+  margin: 0 0 calc(2rem / 4);
   margin: 0 0 var(--spacing-base--1-4);
   font-size: 1.5rem;
 }
 @media (min-width: 46.875em) {
-  .coop-form__legend,
-  legend {
+  legend,
+  .coop-form__legend {
     font-size: 1.75rem;
   }
 }
-.coop-form__fieldset,
-fieldset {
+fieldset,
+.coop-form__fieldset {
   border: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
-.coop-form__input,
-.coop-form__textarea,
 input[type="text"],
-textarea {
+.coop-form__input,
+textarea,
+.coop-form__textarea {
   display: block;
   width: 100%;
-  padding: 0.5rem;
+  padding: calc(2rem / 4);
   padding: var(--spacing-base--1-4);
-  background: #fff;
+  background: #ffffff;
   background: var(--color-white);
-  border: 1px solid #6e6e6e;
+  border: 1px solid;
+  border-color: #6e6e6e;
   border-color: var(--color-grey-dark);
   color: #282828;
   color: var(--color-text);
@@ -174,46 +212,46 @@ textarea {
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem;
 }
-.coop-form__input:focus,
-.coop-form__textarea:focus,
 input[type="text"]:focus,
-textarea:focus {
-  background: #fff;
+.coop-form__input:focus,
+textarea:focus,
+.coop-form__textarea:focus {
+  background: #ffffff;
   background: var(--color-white);
-  border-color: #000;
+  border-color: #000000;
   border-color: var(--color-black);
   outline-offset: 3px;
   outline: 2px dotted #eec300;
   outline: 2px dotted var(--color-link--focus);
   transition: none;
 }
-.coop-form__input:hover::-webkit-input-placeholder,
-.coop-form__textarea:hover::-webkit-input-placeholder,
 input[type="text"]:hover::-webkit-input-placeholder,
-textarea:hover::-webkit-input-placeholder {
+.coop-form__input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder,
+.coop-form__textarea:hover::-webkit-input-placeholder {
   color: #c4c4c4;
   color: var(--color-grey-mid);
 }
-.coop-form__input:focus::-webkit-input-placeholder,
-.coop-form__textarea:focus::-webkit-input-placeholder,
 input[type="text"]:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  transition: opacity 0.5s ease 0.5s;
+.coop-form__input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+.coop-form__textarea:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease;
   opacity: 0;
 }
-.coop-form__input.coop-form__field--inline,
-.coop-form__textarea.coop-form__field--inline,
 input[type="text"].coop-form__field--inline,
-textarea.coop-form__field--inline {
+.coop-form__input.coop-form__field--inline,
+textarea.coop-form__field--inline,
+.coop-form__textarea.coop-form__field--inline {
   display: inline-block;
   width: auto;
 }
-.coop-form__textarea,
-textarea {
+textarea,
+.coop-form__textarea {
   resize: vertical;
 }
-.coop-form__select,
-select {
+select,
+.coop-form__select {
   -webkit-appearance: menulist;
   -moz-appearance: menulist;
   appearance: menulist;
@@ -221,10 +259,12 @@ select {
   cursor: pointer;
   display: block;
   width: 100%;
+  padding: var(--spacing-base--1-6) calc(2rem / 8);
   padding: var(--spacing-base--1-6) var(--spacing-base--1-8);
-  background: #fff;
+  background: #ffffff;
   background: var(--color-white);
-  border: 1px solid #6e6e6e;
+  border: 1px solid;
+  border-color: #6e6e6e;
   border-color: var(--color-grey-dark);
   color: #282828;
   color: var(--color-text);
@@ -232,36 +272,36 @@ select {
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem;
 }
-.coop-form__select:focus,
-select:focus {
-  background: #fff;
+select:focus,
+.coop-form__select:focus {
+  background: #ffffff;
   background: var(--color-white);
-  border-color: #000;
+  border-color: #000000;
   border-color: var(--color-black);
   outline-offset: 3px;
   outline: 2px dotted #eec300;
   outline: 2px dotted var(--color-link--focus);
   transition: none;
 }
-.coop-form__select:hover::-webkit-input-placeholder,
-select:hover::-webkit-input-placeholder {
+select:hover::-webkit-input-placeholder,
+.coop-form__select:hover::-webkit-input-placeholder {
   color: #c4c4c4;
   color: var(--color-grey-mid);
 }
-.coop-form__select:focus::-webkit-input-placeholder,
-select:focus::-webkit-input-placeholder {
-  transition: opacity 0.5s ease 0.5s;
+select:focus::-webkit-input-placeholder,
+.coop-form__select:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease;
   opacity: 0;
 }
-.coop-form__select.coop-form__field--inline,
-select.coop-form__field--inline {
+select.coop-form__field--inline,
+.coop-form__select.coop-form__field--inline {
   display: inline-block;
   width: auto;
 }
-.coop-form__checkbox,
-.coop-form__radio,
 input[type="checkbox"],
-input[type="radio"] {
+.coop-form__checkbox,
+input[type="radio"],
+.coop-form__radio {
   display: inline;
   cursor: pointer;
 }
@@ -290,7 +330,7 @@ input[type="radio"] {
   }
 }
 .coop-form__indented fieldset {
-  margin-bottom: 1.5rem;
+  margin-bottom: calc(2rem / 4 * 3);
   margin-bottom: var(--spacing-base--3-4);
 }
 .coop-form__invalid {
@@ -304,7 +344,7 @@ input[type="radio"] {
   color: #d63118;
   color: var(--color-red-mid);
 }
-.coop-form__error:before {
+.coop-form__error::before {
   position: absolute;
   left: 0;
   font-size: 1.5rem;
