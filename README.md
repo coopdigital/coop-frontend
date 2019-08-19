@@ -26,4 +26,4 @@ This should provide a prompt to update the version according to [semantic versio
 
 [Lefthook](https://github.com/Arkweid/lefthook)is used to manage git hooks in the repo.  [Intro article to lefthook](https://evilmartians.com/chronicles/lefthook-knock-your-teams-code-back-into-shape?utm_source=lefthook).
 
-Currently, only one pre-commit hook is setup. This runs stylelint against currently staged files.
+Currently, only one pre-commit hook is setup. This runs stylelint against currently staged `.css` and `.pcss` files.
