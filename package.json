@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@arkweid/lefthook": "^0.6.3",
     "lerna": "^3.16.4"
   },
   "scripts": {

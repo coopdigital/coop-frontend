@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  commands:
+    css:
+      tags: frontend css
+      glob: "*.{css,pcss}"
+      run: node_modules/.bin/stylelint {staged_files} --fix && git add {staged_files}
