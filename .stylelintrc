@@ -20,5 +20,5 @@
       "selector-type-no-unknown": true,
       "unit-no-unknown": true
     },
-    "defaultSeverity": "error",
+    "defaultSeverity": "error"
 }
