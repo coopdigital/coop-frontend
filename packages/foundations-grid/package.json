@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-grid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Co-op CSS Foundations: Grid.",
   "main": "dist/grid.html",
   "style": "dist/grid.css",
