@@ -131,7 +131,8 @@ Forms - Co-op CSS Foundations
   margin-bottom: var(--spacing-base);
 }
 .coop-form__row {
-  margin-bottom: var(--quarter-spacing-unit);
+  margin-bottom: calc(2rem / 4);
+  margin-bottom: var(--spacing-base--1-4);
 }
 .coop-form__row::before,
 .coop-form__row::after {

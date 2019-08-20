@@ -9,6 +9,7 @@
     "lerna": "^3.16.4"
   },
   "scripts": {
+    "publish": "lerna run build && lerna publish",
     "postinstall": "lerna bootstrap --hoist"
   }
 }

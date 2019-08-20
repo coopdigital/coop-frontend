@@ -3,9 +3,11 @@
   "rules": {
       "at-rule-no-unknown": true,
       "color-no-invalid-hex": true,
-      "declaration-block-no-duplicate-properties": true,
+      "declaration-block-no-duplicate-properties": [ true, {
+        "ignore": ["consecutive-duplicates-with-different-values"]
+        }
+      ],
       "declaration-block-no-shorthand-property-overrides": true,
-      "font-family-name-quotes": "always-where-recommended",
       "font-family-no-duplicate-names": true,
       "function-calc-no-unspaced-operator": true,
       "function-linear-gradient-no-nonstandard-direction": true,
