@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "design-manual"
   ],
   "version": "independent",
   "command": {
