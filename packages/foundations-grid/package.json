@@ -37,5 +37,6 @@
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
-  }
+  },
+  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
 }
