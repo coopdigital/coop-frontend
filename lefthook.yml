@@ -3,4 +3,5 @@ pre-commit:
   commands:
     build-packages:
       tags: frontend css
+      glob: "*.{css,pcss}"
       run: lerna run dist && git add {staged_files}
