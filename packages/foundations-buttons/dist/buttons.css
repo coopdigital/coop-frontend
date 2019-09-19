@@ -152,17 +152,18 @@
   border-radius: 7px;
   transition: all 0.15s linear;
   outline: none;
-  text-decoration: none;
+  text-decoration: none
 }
 
 @media (min-width: 46.875em) {
-  .coop-btn {
+
+.coop-btn {
     font-size: 1.2499999rem;
     font-size: var(--type-medium--body);
     padding: calc(4rem / 4) calc(calc(4rem / 2) * 1.25);
-    padding: var(--spacing-medium--1-4) calc(var(--spacing-medium--1-2) * 1.25);
-  }
+    padding: var(--spacing-medium--1-4) calc(var(--spacing-medium--1-2) * 1.25)
 }
+  }
 
 .coop-btn:hover,
 .coop-btn:focus {
@@ -217,40 +218,43 @@
 .coop-btn--small {
   padding: calc(2rem / 8) calc(2rem / 4);
   padding: var(--spacing-base--1-8) var(--spacing-base--1-4);
-  font-size: 0.8rem;
+  font-size: 0.8rem
 }
 
 @media (min-width: 46.875em) {
-  .coop-btn--small {
+
+.coop-btn--small {
     padding: calc(4rem / 8) calc(4rem / 4);
-    padding: var(--spacing-medium--1-8) var(--spacing-medium--1-4);
-  }
+    padding: var(--spacing-medium--1-8) var(--spacing-medium--1-4)
 }
+  }
 
 .coop-btn--medium {
   padding: calc(calc(2rem / 4) / 2) calc(2rem / 4);
-  padding: calc(var(--spacing-base--1-4) / 2) var(--spacing-base--1-4);
+  padding: calc(var(--spacing-base--1-4) / 2) var(--spacing-base--1-4)
 }
 
 @media (min-width: 46.875em) {
-  .coop-btn--medium {
+
+.coop-btn--medium {
     font-size: 1rem;
     font-size: var(--type-base--body);
     padding: calc(calc(4rem / 4) / 2) calc(4rem / 4);
-    padding: calc(var(--spacing-medium--1-4) / 2) var(--spacing-medium--1-4);
-  }
+    padding: calc(var(--spacing-medium--1-4) / 2) var(--spacing-medium--1-4)
 }
+  }
 
 .coop-btn--large {
   padding: calc(2rem / 2) calc(2rem / 2);
   padding: var(--spacing-base--1-2) var(--spacing-base--1-2);
   font-size: 1.2499999rem;
-  font-size: var(--type-medium--body);
+  font-size: var(--type-medium--body)
 }
 
 @media (min-width: 46.875em) {
-  .coop-btn--large {
+
+.coop-btn--large {
     padding: calc(4rem / 4) calc(4rem / 2);
-    padding: var(--spacing-medium--1-4) var(--spacing-medium--1-2);
-  }
+    padding: var(--spacing-medium--1-4) var(--spacing-medium--1-2)
 }
+  }

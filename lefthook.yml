@@ -1,7 +1,6 @@
 pre-commit:
   parallel: true
   commands:
-    css:
+    build-packages:
       tags: frontend css
-      glob: "*.{css,pcss}"
-      run: node_modules/.bin/stylelint {staged_files} --fix && git add {staged_files}
+      run: lerna run dist && git add {staged_files}

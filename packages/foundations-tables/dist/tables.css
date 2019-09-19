@@ -30,7 +30,8 @@ table th,
   table td,
   .coop-table th,
   .coop-table td {
-    padding: var(--spacing-base--1-4) var(--spacing-base--1-4) var(--spacing-base--1-4) 0;
+    padding: var(--spacing-base--1-4) var(--spacing-base--1-4)
+      var(--spacing-base--1-4) 0;
     text-align: left;
     vertical-align: top;
   }
@@ -48,8 +49,8 @@ table tbody th, .coop-table tbody th {
     }
 
 table tbody th:after, .coop-table tbody th:after {
-        content: '';
-        position : absolute;
+        content: "";
+        position: absolute;
         left: 0;
         bottom: -1px;
         height: 1px;
@@ -72,7 +73,6 @@ table ul, .coop-table ul {
 /* Stacked columns basic responsive table solution */
 
 .coop-table-smallscreen--stacked {
-
   /* defaults to 480px */
 }
 
@@ -80,7 +80,7 @@ table ul, .coop-table ul {
     .coop-table-smallscreen--stacked th,
     .coop-table-smallscreen--stacked td {
       padding-top: var(--spacing-base--1-8);
-      padding-botom: var(--spacing-base--1-8);
+      padding-bottom: var(--spacing-base--1-8);
       padding-right: 0;
       padding-left: 0;
       text-align: left;
@@ -120,7 +120,7 @@ table ul, .coop-table ul {
       }
 
         .coop-table-smallscreen--stacked tbody td:before {
-          content: attr(data-th)"";
+          content: attr(data-th) "";
           vertical-align: top;
           font-family: var(--font-family);
           font-weight: normal;
@@ -148,7 +148,8 @@ table ul, .coop-table ul {
   margin-bottom: 0;
 }
 
-.coop-table--unstyled th, .coop-table--unstyled td {
+.coop-table--unstyled th,
+  .coop-table--unstyled td {
     padding-top: var(--spacing-base--1-8);
     padding-bottom: var(--spacing-base--1-8);
     padding-left: 0;
@@ -157,7 +158,8 @@ table ul, .coop-table ul {
 
 @media (--mq-medium) {
 
-  .coop-table--unstyled th, .coop-table--unstyled td {
+  .coop-table--unstyled th,
+  .coop-table--unstyled td {
       padding: var(--spacing-medium--1-4)
   }
     }
@@ -171,7 +173,7 @@ table ul, .coop-table ul {
   }
 
 .coop-table--unstyled tbody th,
-  .coop-table--unstyled tbody td{
+  .coop-table--unstyled tbody td {
     background: var(--color-white);
     border-bottom: 0;
     font-family: var(--font-family);
