@@ -27,7 +27,6 @@
     "url": "git+https://github.com/coopdigital/foundations-grid.git"
   },
   "devDependencies": {
-    "@coopdigital/css-foundations": "^1.7.6",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
