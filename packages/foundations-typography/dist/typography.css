@@ -237,36 +237,36 @@ p {
   font-size: 1rem;
   font-size: var(--type-base--body);
   margin-bottom: calc(2rem / 4);
-  margin-bottom: var(--spacing-base--1-4)
+  margin-bottom: var(--spacing-base--1-4);
 }
 p:last-child {
-    margin-bottom: calc(4rem / 2);
-    margin-bottom: var(--spacing-medium--1-2);
-  }
+  margin-bottom: calc(4rem / 2);
+  margin-bottom: var(--spacing-medium--1-2);
+}
 @media (min-width: 46.875em) {
-p {
+  p {
     font-size: 1.2499999rem;
     font-size: var(--type-medium--body);
     margin-bottom: calc(4rem / 4);
-    margin-bottom: var(--spacing-medium--1-4)
-}
+    margin-bottom: var(--spacing-medium--1-4);
   }
+}
 ul,
 ol {
   font-size: 1rem;
   font-size: var(--type-base--body);
   margin-bottom: calc(2rem / 4);
-  margin-bottom: var(--spacing-base--1-4)
+  margin-bottom: var(--spacing-base--1-4);
 }
 @media (min-width: 46.875em) {
-ul,
-ol {
+  ul,
+  ol {
     font-size: 1.2499999rem;
     font-size: var(--type-medium--body);
     margin-bottom: calc(4rem / 4);
-    margin-bottom: var(--spacing-medium--1-4)
-}
+    margin-bottom: var(--spacing-medium--1-4);
   }
+}
 .coop-h-mega {
   font-weight: bold;
   font-size: 2.25rem;
@@ -275,52 +275,52 @@ ol {
   margin-bottom: calc(2rem / 2);
   margin-bottom: var(--spacing-base--1-2);
   padding-top: calc(2rem / 2);
-  padding-top: var(--spacing-base--1-2)
+  padding-top: var(--spacing-base--1-2);
 }
 @media (min-width: 46.875em) {
-.coop-h-mega {
+  .coop-h-mega {
     font-size: 3rem;
     font-size: var(--type-medium--h-mega);
     margin-bottom: calc(4rem / 2);
     margin-bottom: var(--spacing-medium--1-2);
     padding-top: calc(4rem / 2);
-    padding-top: var(--spacing-medium--1-2)
-}
+    padding-top: var(--spacing-medium--1-2);
   }
+}
 h1,
 .coop-h1 {
   font-size: 1.875rem;
   font-size: var(--type-base--h1);
   line-height: 1.4;
   margin-bottom: calc(2rem / 2);
-  margin-bottom: var(--spacing-base--1-2)
+  margin-bottom: var(--spacing-base--1-2);
 }
 @media (min-width: 46.875em) {
-h1,
-.coop-h1 {
+  h1,
+  .coop-h1 {
     font-size: 2.875rem;
     font-size: var(--type-medium--h1);
     margin-bottom: calc(4rem / 2);
-    margin-bottom: var(--spacing-medium--1-2)
-}
+    margin-bottom: var(--spacing-medium--1-2);
   }
+}
 h2,
 .coop-h2 {
   font-size: 1.2499999rem;
   font-size: var(--type-base--h2);
   line-height: 1.55;
   margin-bottom: calc(2rem / 2);
-  margin-bottom: var(--spacing-base--1-2)
+  margin-bottom: var(--spacing-base--1-2);
 }
 @media (min-width: 46.875em) {
-h2,
-.coop-h2 {
+  h2,
+  .coop-h2 {
     font-size: 1.625rem;
     font-size: var(--type-medium--h2);
     margin-bottom: calc(4rem / 2);
-    margin-bottom: var(--spacing-medium--1-2)
-}
+    margin-bottom: var(--spacing-medium--1-2);
   }
+}
 h3,
 .coop-h3 {
   font-size: 1.125rem;
@@ -329,19 +329,19 @@ h3,
   padding-top: calc(2rem / 8);
   padding-top: var(--spacing-base--1-8);
   margin-bottom: calc(2rem / 8);
-  margin-bottom: var(--spacing-base--1-8)
+  margin-bottom: var(--spacing-base--1-8);
 }
 @media (min-width: 46.875em) {
-h3,
-.coop-h3 {
+  h3,
+  .coop-h3 {
     font-size: 1.375rem;
     font-size: var(--type-medium--h3);
     padding-top: calc(4rem / 8);
     padding-top: var(--spacing-medium--1-8);
     margin-bottom: calc(4rem / 8);
-    margin-bottom: var(--spacing-medium--1-8)
-}
+    margin-bottom: var(--spacing-medium--1-8);
   }
+}
 h4,
 .coop-h4 {
   font-size: 1.125rem;
@@ -350,19 +350,19 @@ h4,
   padding-top: calc(2rem / 8);
   padding-top: var(--spacing-base--1-8);
   margin-bottom: calc(2rem / 8);
-  margin-bottom: var(--spacing-base--1-8)
+  margin-bottom: var(--spacing-base--1-8);
 }
 @media (min-width: 46.875em) {
-h4,
-.coop-h4 {
+  h4,
+  .coop-h4 {
     font-size: 1.375rem;
     font-size: var(--type-medium--h4);
     padding-top: calc(4rem / 8);
     padding-top: var(--spacing-medium--1-8);
     margin-bottom: calc(4rem / 8);
-    margin-bottom: var(--spacing-medium--1-8)
-}
+    margin-bottom: var(--spacing-medium--1-8);
   }
+}
 h5,
 .coop-h5 {
   font-size: 1.125rem;
@@ -371,19 +371,19 @@ h5,
   padding-top: calc(2rem / 8);
   padding-top: var(--spacing-base--1-8);
   margin-bottom: calc(2rem / 8);
-  margin-bottom: var(--spacing-base--1-8)
+  margin-bottom: var(--spacing-base--1-8);
 }
 @media (min-width: 46.875em) {
-h5,
-.coop-h5 {
+  h5,
+  .coop-h5 {
     font-size: 1.375rem;
     font-size: var(--type-medium--h5);
     padding-top: calc(4rem / 8);
     padding-top: var(--spacing-medium--1-8);
     margin-bottom: calc(4rem / 8);
-    margin-bottom: var(--spacing-medium--1-8)
-}
+    margin-bottom: var(--spacing-medium--1-8);
   }
+}
 h6,
 .coop-h6 {
   font-size: 0.8125rem;
@@ -392,19 +392,19 @@ h6,
   padding-top: calc(2rem / 4);
   padding-top: var(--spacing-base--1-4);
   margin-bottom: calc(2rem / 8);
-  margin-bottom: var(--spacing-base--1-8)
+  margin-bottom: var(--spacing-base--1-8);
 }
 @media (min-width: 46.875em) {
-h6,
-.coop-h6 {
+  h6,
+  .coop-h6 {
     font-size: 1rem;
     font-size: var(--type-medium--h6);
     padding-top: calc(4rem / 4);
     padding-top: var(--spacing-medium--1-4);
     margin-bottom: calc(4rem / 8);
-    margin-bottom: var(--spacing-medium--1-8)
-}
+    margin-bottom: var(--spacing-medium--1-8);
   }
+}
 small,
 .coop-smallprint {
   line-height: 1.25;
@@ -413,19 +413,19 @@ small,
   padding-top: calc(2rem / 4);
   padding-top: var(--spacing-base--1-4);
   margin-bottom: calc(2rem / 8);
-  margin-bottom: var(--spacing-base--1-8)
+  margin-bottom: var(--spacing-base--1-8);
 }
 @media (min-width: 46.875em) {
-small,
-.coop-smallprint {
+  small,
+  .coop-smallprint {
     font-size: 1rem;
     font-size: var(--type-medium--small);
     padding-top: calc(4rem / 4);
     padding-top: var(--spacing-medium--1-4);
     margin-bottom: calc(4rem / 8);
-    margin-bottom: var(--spacing-medium--1-8)
-}
+    margin-bottom: var(--spacing-medium--1-8);
   }
+}
 hr,
 .coop-hr {
   display: block;
@@ -436,11 +436,12 @@ hr,
   border-width: 0 0 1px;
   height: 0;
   color: #c4c4c4;
-  color: var(--color-grey-mid)
+  color: var(--color-grey-mid);
 }
-hr.dashed, .coop-hr.dashed {
-    border-style: dashed;
-  }
+hr.dashed,
+.coop-hr.dashed {
+  border-style: dashed;
+}
 .coop-regular {
   font-weight: normal;
   font-style: normal;
@@ -470,54 +471,56 @@ blockquote,
   margin-left: calc(2rem / 4);
   margin-left: var(--spacing-base--1-4);
   padding-left: calc(2rem / 4);
-  padding-left: var(--spacing-base--1-4)
+  padding-left: var(--spacing-base--1-4);
 }
 blockquote:before,
-  blockquote:after,
-  .coop-blockquote:before,
-  .coop-blockquote:after {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 6px;
-    margin-top: calc(2rem / 4);
-    margin-top: var(--spacing-base--1-4);
-    margin-right: 0;
-    margin-bottom: calc(2rem / 4);
-    margin-bottom: var(--spacing-base--1-4);
-    margin-left: calc(2rem / 4);
-    margin-left: var(--spacing-base--1-4);
-    background: #f3f3f3;
-    background: var(--color-grey-light);
-  }
-@media (min-width: 46.875em) {
-blockquote,
-.coop-blockquote {
-    margin-left: calc(2rem / 2);
-    margin-left: var(--spacing-base--1-2)
+blockquote:after,
+.coop-blockquote:before,
+.coop-blockquote:after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 6px;
+  margin-top: calc(2rem / 4);
+  margin-top: var(--spacing-base--1-4);
+  margin-right: 0;
+  margin-bottom: calc(2rem / 4);
+  margin-bottom: var(--spacing-base--1-4);
+  margin-left: calc(2rem / 4);
+  margin-left: var(--spacing-base--1-4);
+  background: #f3f3f3;
+  background: var(--color-grey-light);
 }
+@media (min-width: 46.875em) {
+  blockquote,
+  .coop-blockquote {
+    margin-left: calc(2rem / 2);
+    margin-left: var(--spacing-base--1-2);
   }
-blockquote p, .coop-blockquote p {
-    margin-bottom: calc(2rem / 4);
-    margin-bottom: var(--spacing-base--1-4);
-    font-style: normal;
-    font-weight: normal;
-    text-indent: -0.25rem
-  }
+}
+blockquote p,
+.coop-blockquote p {
+  margin-bottom: calc(2rem / 4);
+  margin-bottom: var(--spacing-base--1-4);
+  font-style: normal;
+  font-weight: normal;
+  text-indent: -0.25rem;
+}
 blockquote p.alpha,
-    blockquote p.beta,
-    .coop-blockquote p.alpha,
-    .coop-blockquote p.beta {
-      font-style: normal;
-      font-weight: normal;
-    }
-blockquote cite, .coop-blockquote cite {
-    font-size: 1rem;
-    font-size: var(--type-base--body);
-    font-style: normal;
-    margin-top: calc(2rem / 4);
-    margin-top: var(--spacing-base--1-4);
-  }
+blockquote p.beta,
+.coop-blockquote p.alpha,
+.coop-blockquote p.beta {
+  font-style: normal;
+  font-weight: normal;
+}
+blockquote cite,
+.coop-blockquote cite {
+  font-size: 1rem;
+  font-size: var(--type-base--body);
+  font-style: normal;
+  margin-top: calc(2rem / 4);
+  margin-top: var(--spacing-base--1-4);
+}
 cite,
 .coop-blockquote__cite {
   display: block;
@@ -540,14 +543,14 @@ address {
 }
 p + ul {
   margin-top: calc(-1 * calc(2rem / 8));
-  margin-top: calc(-1 * var(--spacing-base--1-8))
+  margin-top: calc(-1 * var(--spacing-base--1-8));
 }
 @media (min-width: 46.875em) {
-p + ul {
+  p + ul {
     margin-top: calc(-1 * calc(4rem / 8));
-    margin-top: calc(-1 * var(--spacing-medium--1-8))
-}
+    margin-top: calc(-1 * var(--spacing-medium--1-8));
   }
+}
 dl,
 .coop-definition-list {
   font-size: 1rem;
@@ -556,18 +559,20 @@ dl,
   margin-bottom: calc(2rem / 2);
   margin-bottom: var(--spacing-base--1-2);
 }
-dl dt, .coop-definition-list dt {
-    font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-family: var(--font-family);
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-dl dd, .coop-definition-list dd {
-    font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-family: var(--font-family);
-    margin: 0 0 calc(2rem / 4);
-    margin: 0 0 var(--spacing-base--1-4);
-  }
+dl dt,
+.coop-definition-list dt {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+dl dd,
+.coop-definition-list dd {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
+  margin: 0 0 calc(2rem / 4);
+  margin: 0 0 var(--spacing-base--1-4);
+}
 .coop-undecorated-list,
 .coop-list-bare {
   list-style-type: none;
@@ -578,55 +583,55 @@ dl dd, .coop-definition-list dd {
   padding: 0;
 }
 .coop-list-inline li {
-    display: inline-block;
-  }
+  display: inline-block;
+}
 /* ===================================
  * Links - Co-op Front-end Foundations
  * =================================== */
 a {
   color: #00729a;
   color: var(--color-link);
-  text-decoration: underline
+  text-decoration: underline;
 }
 a:hover {
-    color: #000102;
-    color: var(--color-link--hover);
-    text-decoration: none;
-  }
+  color: #000102;
+  color: var(--color-link--hover);
+  text-decoration: none;
+}
 a:active,
-  a:focus {
-    transition: none;
-    outline: 2px dotted #eec300;
-    outline: 2px dotted var(--color-link--focus);
-    outline-offset: 3px;
-  }
+a:focus {
+  transition: none;
+  outline: 2px dotted #eec300;
+  outline: 2px dotted var(--color-link--focus);
+  outline-offset: 3px;
+}
 .link-white {
   color: #ffffff;
-  color: var(--color-white)
+  color: var(--color-white);
 }
 .link-white:hover {
-    color: #ffffff;
-    color: var(--color-white);
-  }
+  color: #ffffff;
+  color: var(--color-white);
+}
 .link-white:active,
-  .link-white:focus {
-    transition: none;
-    outline: 2px dotted #ffffff;
-    outline: 2px dotted var(--color-white);
-    outline-offset: 3px;
-  }
+.link-white:focus {
+  transition: none;
+  outline: 2px dotted #ffffff;
+  outline: 2px dotted var(--color-white);
+  outline-offset: 3px;
+}
 .link-black {
   color: #000000;
-  color: var(--color-black)
+  color: var(--color-black);
 }
 .link-black:hover {
-    color: #000000;
-    color: var(--color-black);
-  }
+  color: #000000;
+  color: var(--color-black);
+}
 .link-black:active,
-  .link-black:focus {
-    transition: none;
-    outline: 2px dotted #000000;
-    outline: 2px dotted var(--color-black);
-    outline-offset: 3px;
-  }
+.link-black:focus {
+  transition: none;
+  outline: 2px dotted #000000;
+  outline: 2px dotted var(--color-black);
+  outline-offset: 3px;
+}

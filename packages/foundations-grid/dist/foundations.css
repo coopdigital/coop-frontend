@@ -1724,8 +1724,7 @@ table th {
 table td,
 table th {
   padding: 0.5rem 0.5rem 0.5rem 0;
-  padding: calc(2rem / 4) calc(2rem / 4)
-    calc(2rem / 4) 0;
+  padding: calc(2rem / 4) calc(2rem / 4) calc(2rem / 4) 0;
   padding: var(--spacing-base--1-4) var(--spacing-base--1-4)
     var(--spacing-base--1-4) 0;
   text-align: left;
