@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS Foundations: Layout",
   "main": "dist/layout.css",
   "style": "src/layout.pcss",
