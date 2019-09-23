@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-global",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "CSS Foundations: Global",
   "main": "dist/global.css",
   "style": "src/global.pcss",
@@ -11,9 +11,10 @@
     "src"
   ],
   "scripts": {
-    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
-    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint"
+    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run lint:src && npm run build && npm run lint:dist"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   },
   "bugs": "https://github.com/coopdigital/foundations-global/issues",
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^1.2.3",
+    "@coopdigital/foundations-vars": "^1.2.4",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",

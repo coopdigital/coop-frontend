@@ -1,0 +1,38 @@
+{
+  "name": "@coopdigital/foundations-layout",
+  "version": "1.0.2",
+  "description": "CSS Foundations: Layout",
+  "main": "dist/layout.css",
+  "style": "src/layout.pcss",
+  "author": "Matthew Morek (matthew.morek@coopdigital.co.uk)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run lint:src && npm run build && npm run lint:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/foundations-layout.git"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^1.0.0",
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.7",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.0.0",
+    "precss": "^3.1.2",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.7.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.3"
+  },
+  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
+}

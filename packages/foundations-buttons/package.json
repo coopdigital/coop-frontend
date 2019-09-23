@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-buttons",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "description": "CSS Foundations: Buttons",
   "main": "dist/buttons.css",
   "style": "src/buttons.pcss",
@@ -15,16 +15,17 @@
     "src"
   ],
   "scripts": {
-    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
-    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint"
+    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run lint:src && npm run build && npm run lint:dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coopdigital/foundations-buttons.git"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^1.2.3",
+    "@coopdigital/foundations-vars": "^1.2.4",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
@@ -35,5 +36,6 @@
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
-  }
+  },
+  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
 }

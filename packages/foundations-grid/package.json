@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-grid",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "Co-op CSS Foundations: Grid.",
   "main": "dist/grid.html",
   "style": "dist/grid.css",
@@ -17,17 +17,16 @@
     "src"
   ],
   "scripts": {
-    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
-    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint",
-    "init": "rm -rf ./.git && git init"
+    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run lint:src && npm run build && npm run lint:dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coopdigital/foundations-grid.git"
   },
   "devDependencies": {
-    "@coopdigital/css-foundations": "^1.7.6",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
@@ -38,5 +37,6 @@
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
-  }
+  },
+  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
 }
