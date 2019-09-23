@@ -20,7 +20,7 @@ jobs:
       - run:
           name: 'Build all packages'
           command: npm run build:all
-  build-site:
+  build_site:
     working_directory: design-manual
     docker:
       - image: circleci/ruby:2.5.1-node
@@ -49,3 +49,12 @@ jobs:
 #          key: dependency-cache-{{ checksum "package.json" }}
 #          paths:
 #            - ./node_modules
+
+workflows:
+  version: 2
+  build_packages_and_site:
+    jobs:
+      - build
+      - build_site:
+          requires:
+            - build
