@@ -57,6 +57,4 @@ workflows:
   build_packages_and_site:
     jobs:
       - build_packages
-      - build_site:
-          requires:
-            - build_packages
+      - build_site
