@@ -59,4 +59,4 @@ workflows:
       - build_packages
       - build_site:
           requires:
-            - build
+            - build_packages
