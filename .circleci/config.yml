@@ -1,6 +1,7 @@
-version: 2
+version: 2.0
+
 jobs:
-  build:
+  build_packages:
     docker:
       - image: circleci/node:latest
     steps:
@@ -20,6 +21,7 @@ jobs:
       - run:
           name: 'Build all packages'
           command: npm run build:all
+
   build_site:
     working_directory: design-manual
     docker:
@@ -54,7 +56,7 @@ workflows:
   version: 2
   build_packages_and_site:
     jobs:
-      - build
+      - build_packages
       - build_site:
           requires:
             - build
