@@ -2,7 +2,6 @@ version: 2.0
 
 jobs:
   build_packages:
-    working_directory: ~/coop-frontend
     docker:
       - image: circleci/node:latest
     steps:
@@ -24,28 +23,30 @@ jobs:
           command: npm run build:all
 
   build_site:
-    working_directory: ~/coop-frontend/design-manual
     docker:
       - image: circleci/ruby:2.5.1-node
     steps:
-      - checkout:
-          - path: ~/coop-frontend
+      - checkout
       - run:
           name: update npm
           command: 'sudo npm install -g npm@latest'
+          working_directory: ~/project/design-manual
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install bundler
           command: gem install bundler
+          working_directory: ~/project/design-manual
       - run:
           name: Install gems
           command: bundle install
+          working_directory: ~/project/design-manual
       - restore_cache:
           key: gemfile-{{ checksum "Gemfile.lock" }}
       - run:
           name: Install node modules
           command: npm install
+          working_directory: ~/project/design-manual
 #      - run:
 #          name: Deploy to heroku
 #          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git
