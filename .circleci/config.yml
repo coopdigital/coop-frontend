@@ -14,13 +14,14 @@ jobs:
       - run:
           name: 'Install NPM dependencies'
           command: npm install
-      - run:
-          name: 'Build all packages'
-          command: npm run build:all
       - save_cache:
           key: build-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run:
+          name: 'Build all packages'
+          command: npm run build:all
+
 
   build_site:
     docker:
@@ -59,9 +60,12 @@ jobs:
           key: site-cache-{{ checksum "design-manual/package.json" }}
           paths:
             - ./node_modules
-#      - run:
-#          name: Deploy to heroku
-#          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git
+
+  deploy:
+    steps:
+      - run:
+          name: 'Deploy to Heroku'
+          command: git subtree push --prefix design-manual https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
 workflows:
   version: 2
@@ -71,3 +75,9 @@ workflows:
       - build_site:
           requires:
             - build_packages
+      - deploy:
+          requires:
+            - build_site
+          filters:
+            branches:
+              only: master
