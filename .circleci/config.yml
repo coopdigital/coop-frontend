@@ -52,7 +52,7 @@ jobs:
           command: npm run build
           working_directory: ~/project/design-manual
       - save_cache:
-          key: gemfile-{{ checksum "design-manual/Gemfile.lockGemfile.lock" }}
+          key: gemfile-{{ checksum "design-manual/Gemfile.lock" }}
           paths:
             - vendor/bundle
       - save_cache:
