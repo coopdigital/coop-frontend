@@ -2,6 +2,7 @@ version: 2.0
 
 jobs:
   build_packages:
+    working_directory: ~/coop-frontend
     docker:
       - image: circleci/node:latest
     steps:
@@ -23,12 +24,12 @@ jobs:
           command: npm run build:all
 
   build_site:
-    working_directory: ~/project/design-manual
+    working_directory: ~/coop-frontend/design-manual
     docker:
       - image: circleci/ruby:2.5.1-node
     steps:
       - checkout:
-          - path: ~/project
+          - path: ~/coop-frontend
       - run:
           name: update npm
           command: 'sudo npm install -g npm@latest'
