@@ -27,7 +27,8 @@ jobs:
     docker:
       - image: circleci/ruby:2.5.1-node
     steps:
-      - checkout
+      - checkout:
+          - path: ~/project
       - run:
           name: update npm
           command: 'sudo npm install -g npm@latest'
