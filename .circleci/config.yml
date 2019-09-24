@@ -62,6 +62,8 @@ jobs:
             - ./node_modules
 
   deploy:
+    docker:
+      - image: circleci/node:latest
     steps:
       - run:
           name: 'Deploy to Heroku'
