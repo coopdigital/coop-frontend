@@ -31,33 +31,33 @@ jobs:
       - run:
           name: update npm
           command: 'sudo npm install -g npm@latest'
-          working_directory: ~/project/design-manual
+          working_directory: ~/project/design-system
       - restore_cache:
-          key: site-cache-{{ checksum "design-manual/package.json" }}
+          key: site-cache-{{ checksum "design-system/package.json" }}
       - run:
           name: Install bundler
           command: gem install bundler
-          working_directory: ~/project/design-manual
+          working_directory: ~/project/design-system
       - restore_cache:
-          key: gemfile-{{ checksum "design-manual/Gemfile.lock" }}
+          key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
       - run:
           name: Install gems
           command: bundle install
-          working_directory: ~/project/design-manual
+          working_directory: ~/project/design-system
       - run:
           name: Install node modules
           command: npm install
-          working_directory: ~/project/design-manual
+          working_directory: ~/project/design-system
       - run:
           name: Build site
           command: npm run build
-          working_directory: ~/project/design-manual
+          working_directory: ~/project/design-system
       - save_cache:
-          key: gemfile-{{ checksum "design-manual/Gemfile.lock" }}
+          key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
           paths:
             - vendor/bundle
       - save_cache:
-          key: site-cache-{{ checksum "design-manual/package.json" }}
+          key: site-cache-{{ checksum "design-system/package.json" }}
           paths:
             - ./node_modules
 
@@ -67,7 +67,7 @@ jobs:
     steps:
       - run:
           name: 'Deploy to Heroku'
-          command: git subtree push --prefix design-manual https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+          command: git subtree push --prefix design-system https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
 workflows:
   version: 2
