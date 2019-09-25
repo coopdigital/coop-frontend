@@ -55,7 +55,6 @@
     "postcss-url": "^8.0.0"
   },
   "scripts": {
-    "build": "gulp build",
-    "dist": "echo Design System - no build required"
+    "build": "gulp build"
   }
 }
