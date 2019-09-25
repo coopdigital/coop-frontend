@@ -1,6 +1,4 @@
 var gulp = require('gulp');
-var scsslint = require('gulp-scss-lint');
-var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var connect = require('gulp-connect');
@@ -47,9 +45,6 @@ var settings = {
       src + 'src/css/main.css'
     ],
   },
-  autoprefixer: {
-    browsers: ['> 5%', 'last 2 versions']
-  },
   include: {
     includePaths: [
       __dirname + '/node_modules',
@@ -84,20 +79,14 @@ gulp.task('lintjs', function() {
  * Build tasks
  */
 // Copy Co-op components
-
 gulp.task('copy', function () {
-  gulp.src([
+  return gulp.src([
     '../node_modules/@coopdigital/**/*'
   ])
   .pipe(gulp.dest('src/_includes/pattern-library/components'))
 });
 
 // Jekyll
-gulp.task('html', ['contentful', 'jekyll'], function() {
-  return gulp.src(dest + '**/*.html')
-    .pipe(connect.reload());
-});
-
 gulp.task('contentful', function(gulpCallBack) {
   var contentful = spawn('jekyll', ['contentful'], {stdio: 'inherit'});
   contentful.on('exit', function(code) {
@@ -105,11 +94,16 @@ gulp.task('contentful', function(gulpCallBack) {
   });
 });
 
-gulp.task('jekyll', ['contentful'], function (gulpCallBack){
+gulp.task('jekyll', gulp.series('contentful'), function (gulpCallBack){
   var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit', cwd: 'src'});
   jekyll.on('exit', function(code) {
     gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
   });
+});
+
+gulp.task('html', gulp.series('contentful', 'jekyll'), function() {
+  return gulp.src(dest + '**/*.html')
+    .pipe(connect.reload());
 });
 
 // Styles
@@ -121,13 +115,13 @@ gulp.task('css', () => gulp.src(src_paths.css)
     postcssCustomMedia(/* pluginOptions */)
   ])
 )
-.pipe(autoprefixer(settings.autoprefixer))
+.pipe(autoprefixer())
 .pipe(gulp.dest(dest_paths.styles))
 
 );
 
 // Scripts
-gulp.task('js', ['lintjs'], function() {
+gulp.task('js', gulp.series('lintjs'), function() {
   return gulp.src(src_paths.scripts)
     .pipe(sourcemaps.init())
       .pipe(include(settings.include))
@@ -148,7 +142,7 @@ gulp.task('assets', function() {
     .pipe(gulp.dest(dest_paths.assets))
     .pipe(connect.reload());
 });
-gulp.task('imagemin', ['assets'], function() {
+gulp.task('imagemin', gulp.series('assets'), function() {
   return gulp.src(dest_paths.assets + '/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest(dest_paths.assets + '/images'));
@@ -158,18 +152,18 @@ gulp.task('imagemin', ['assets'], function() {
 /**
  * Watch tasks
  */
-gulp.task('watch', function() {
-  gulp.watch('src/_css/**/*.css', ['css']);
-  gulp.watch(src_paths.scripts, ['lintjs', 'js']);
-  gulp.watch(src_paths.assets, ['imagemin']);
-  gulp.watch(src_paths.html, ['html']);
+gulp.task('watch', async function() {
+  gulp.watch('src/_css/**/*.css', gulp.parallel('css'));
+  gulp.watch(src_paths.scripts, gulp.parallel('lintjs', 'js'));
+  gulp.watch(src_paths.assets, gulp.parallel('imagemin'));
+  gulp.watch(src_paths.html, gulp.parallel('html'));
 });
 
 
 /**
  * Local server
  */
-gulp.task('connect', function() {
+gulp.task('connect', async function() {
   connect.server({
     port: 9000,
     root: 'build',
@@ -180,6 +174,6 @@ gulp.task('connect', function() {
 /**
  * Run tasks
  */
-gulp.task('build', ['html', 'css', 'vendorjs', 'js', 'imagemin', 'copy']);
-gulp.task('server', ['build', 'watch', 'connect']);
-gulp.task('default', ['build']);
+gulp.task('build', gulp.series('copy', 'html', 'css', 'vendorjs', 'js', 'imagemin'));
+gulp.task('server', gulp.series('build', 'connect', 'watch'));
+gulp.task('default', gulp.series('build'));

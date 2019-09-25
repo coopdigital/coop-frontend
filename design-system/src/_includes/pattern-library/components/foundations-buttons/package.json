@@ -17,12 +17,12 @@
     "fetchSpec": "~1.0.4"
   },
   "_requiredBy": [
-    "/@coopdigital/css-foundations"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/@coopdigital/foundations-buttons/-/foundations-buttons-1.0.4.tgz",
   "_shasum": "21337e6e7cea8abbe9e9364217cd3a30a16356bb",
   "_spec": "@coopdigital/foundations-buttons@~1.0.4",
-  "_where": "/Users/fred/Co-op/coop-frontend/node_modules/@coopdigital/css-foundations",
+  "_where": "/Users/fred/Co-op/coop-frontend",
   "author": {
     "name": "Matt Tyas",
     "email": "matt.tyas@coopdigital.co.uk",

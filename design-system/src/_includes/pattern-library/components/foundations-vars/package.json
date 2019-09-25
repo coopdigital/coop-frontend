@@ -17,13 +17,12 @@
     "fetchSpec": "~1.0.0"
   },
   "_requiredBy": [
-    "/@coopdigital/css-foundations",
-    "/@coopdigital/foundations-colors"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/@coopdigital/foundations-vars/-/foundations-vars-1.0.1.tgz",
   "_shasum": "c795f5d93acce749c39867f125a401ff25d1e6cc",
   "_spec": "@coopdigital/foundations-vars@~1.0.0",
-  "_where": "/Users/fred/Co-op/coop-frontend/node_modules/@coopdigital/css-foundations",
+  "_where": "/Users/fred/Co-op/coop-frontend",
   "author": {
     "name": "Matthew Morek",
     "url": "matthew.morek@coopdigital.co.uk"
