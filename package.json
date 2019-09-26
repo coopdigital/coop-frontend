@@ -10,6 +10,7 @@
   },
   "scripts": {
     "publish": "lerna publish",
-    "postinstall": "lerna bootstrap --hoist"
+    "postinstall": "lerna bootstrap --hoist",
+    "build:all": "lerna run dist"
   }
 }

@@ -1,0 +1,75 @@
+{
+  "_from": "@coopdigital/component-card@^1.0.1",
+  "_id": "@coopdigital/component-card@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-H7mQFCau0713spPObUIMUjsEGM5Jl3LoDy7SPXV1tpMMQCK7/KcXPGLajrcHdEHhqUMZsGe5ipIHZpTpJPsKcQ==",
+  "_location": "/@coopdigital/component-card",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@coopdigital/component-card@^1.0.1",
+    "name": "@coopdigital/component-card",
+    "escapedName": "@coopdigital%2fcomponent-card",
+    "scope": "@coopdigital",
+    "rawSpec": "^1.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@coopdigital/component-card/-/component-card-1.0.2.tgz",
+  "_shasum": "d16e2b0a384674eaa77edb62f48f44cb95566a66",
+  "_spec": "@coopdigital/component-card@^1.0.1",
+  "_where": "/Users/fred/Co-op/coop-frontend",
+  "author": {
+    "name": "Matt Tyas",
+    "url": "matt.tyas@coopdigital.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/component-card/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Co-op Components: Card",
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^1.0.0",
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.7",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.0.0",
+    "precss": "^3.1.2",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.7.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.3"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/coopdigital/component-card#readme",
+  "keywords": [
+    "card",
+    "content"
+  ],
+  "license": "MIT",
+  "main": "src/card.html",
+  "name": "@coopdigital/component-card",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/component-card.git"
+  },
+  "scripts": {
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "init": "rm -rf ./.git && git init",
+    "lint": "stylelint 'dist/*.css' --fix",
+    "test": "npm run build && npm run lint"
+  },
+  "style": "src/card.pcss",
+  "version": "1.0.2"
+}

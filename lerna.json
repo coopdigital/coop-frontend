@@ -1,13 +1,13 @@
 {
+  "npmClient": "npm",
   "packages": [
-    "packages/*"
+    "packages/*",
+    "design-system"
   ],
   "version": "independent",
   "command": {
-    "version": {
-      "allowBranch": "master"
-    },
     "publish": {
+      "allowBranch": "master",
       "ignoreChanges": ["*.md"]
     }
   }

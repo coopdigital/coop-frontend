@@ -349,136 +349,6 @@ template {
   display: none;
 }
 
-:root {
-  /* MQ Brakpoints */
-  /* 320px */
-  @custom-media --mq-xsmall screen and (min-width: 20em);
-  /* 480px */
-  @custom-media --mq-small screen and (min-width: 30em);
-  /* 750px */
-  @custom-media --mq-medium screen and (min-width: 46.875em);
-  /* 960px */
-  @custom-media --mq-large screen and (min-width: 60em);
-  /* 1300px */
-  @custom-media --mq-xlarge screen and (min-width: 81.25em);
-
-  --font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  /* Typography: Base */
-  --type-base--body: 1rem;
-  --type-base--h-mega: 2.25rem;
-  --type-base--h1: 1.875rem;
-  --type-base--h2: 1.25rem;
-  --type-base--h3: 1.125rem;
-  --type-base--h4: 1.125rem;
-  --type-base--h5: 1.125rem;
-  --type-base--h6: 0.8125rem;
-  --type-base--blockquote: 1.25rem;
-  --type-base--lead: 1.25rem;
-  --type-base--small: 0.8125rem;
-  --type-base--line-height: 1.7;
-
-  /* Typography: Medium */
-  --type-medium--body: 1.25rem;
-  --type-medium--h-mega: 3rem;
-  --type-medium--h1: 2.875rem;
-  --type-medium--h2: 1.625rem;
-  --type-medium--h3: 1.375rem;
-  --type-medium--h4: 1.375rem;
-  --type-medium--h5: 1.375rem;
-  --type-medium--h6: 1rem;
-  --type-medium--blockquote: 1.625rem;
-  --type-medium--lead: 1.625rem;
-  --type-medium--small: 1rem;
-  --type-medium--base-line-height: 1.6;
-
-  /* Spacing: Base */
-  --spacing-base: 2rem;
-  --spacing-base--3-4: calc(var(--spacing-base) / 4 * 3);
-  --spacing-base--1-2: calc(var(--spacing-base) / 2);
-  --spacing-base--1-4: calc(var(--spacing-base) / 4);
-  --spacing-base--1-8: calc(var(--spacing-base) / 8);
-
-  /* Spacing: Medium */
-  --spacing-medium: 4rem;
-  --spacing-medium--3-4: calc(var(--spacing-medium) / 4 * 3);
-  --spacing-medium--1-2: calc(var(--spacing-medium) / 2);
-  --spacing-medium--1-4: calc(var(--spacing-medium) / 4);
-  --spacing-medium--1-8: calc(var(--spacing-medium) / 8);
-
-  /* Colours */
-  --color-brand: #00B1E7;
-  --color-text: #282828;
-
-  --color-white: #FFFFFF;
-  --color-black: #000000;
-
-  /* Links */
-  --color-link: #00729A;
-  --color-link--hover: #000102;
-  --color-link--focus: #EEC300;
-  --color-link--active: #005981;
-  --color-link--visited: #004C67;
-
-  /* Buttons */
-  --color-button-primary: #0F8482;
-  --color-button-primary--hover: #2B9E9C;
-  --color-button-primary--active: #0C6D6B;
-
-  --color-button-dark: #374C63;
-  --color-button-dark--hover: #4A6683;
-  --color-button-dark--active: #2E3F53;
-
-  /* default button */
-  --color-button: var(--color-button-dark);
-  --color-button--hover: var(--color-button-dark--hover);
-  --color-button--active: var(--color-button-dark--active);
-
-  /* Palette */
-  /* Greyscale */
-  --color-grey-light: #F3F3F3;
-  --color-grey-mid: #C4C4C4;
-  --color-grey-dark: #6E6E6E;
-
-  /* Yellowscale */
-  --color-yellow-bright: #FFFF00;
-  --color-yellow-light: #FFEC00;
-  --color-yellow-mid: #FFD308;
-
-  /* Greenscale */
-  --color-green-bright: #EDFB3C;
-  --color-green-light: #BAD303;
-  --color-green-mid: #4F820D;
-  --color-green-dark: #385C0A;
-
-  /* Turquoisescale - previously GreenBlue */
-  --color-turquoise-bright: #0AFBFB;
-  --color-turquoise-light: #72DCDB;
-  --color-turquoise-mid: #0F8482;
-  --color-turquoise-dark: #166D66;
-
-  /* Bluescale */
-  --color-blue-bright: #418CFC;
-  --color-blue-light: #92D8FE;
-  --color-blue-mid: #326BB7;
-  --color-blue-dark: #334C89;
-
-  /* Pinkscale */
-  --color-pink-bright: #FC43D3;
-  --color-pink-light: #FF80D3;
-
-  /* Purplescale */
-  --color-purple-mid: #AD208E;
-  --color-purple-dark: #61307D;
-
-  /* Orangescale */
-  --color-orange-mid: #F8642C;
-
-  /* Redscale */
-  --color-red-mid: #D63118;
-  --color-red-dark: #9F2A00;
-}
-
 /* MQ Breakpoints */
 
 /* 320px */
@@ -669,10 +539,14 @@ img {
   font-weight: normal;
   font-display: swap;
   src: url("https://assets.digital.coop.co.uk/finder/static/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix");
-  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("eot"),
-     url("https://assets.digital.coop.co.uk/finder/static/fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2") format("woff2"),
-     url("https://assets.digital.coop.co.uk/finder/static/fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"),
-     url("https://assets.digital.coop.co.uk/finder/static/fonts/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype");
+  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix")
+      format("eot"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2")
+      format("woff2"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff")
+      format("woff"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf")
+      format("truetype");
 }
 
 @font-face {
@@ -681,21 +555,29 @@ img {
   font-style: italic;
   font-display: swap;
   src: url("https://assets.digital.coop.co.uk/finder/static/fonts/d1fddef1-d940-4904-8f6c-17e809462301.eot?#iefix");
-  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/d1fddef1-d940-4904-8f6c-17e809462301.eot?#iefix") format("eot"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/7377dbe6-f11a-4a05-b33c-bc8ce1f60f84.woff2") format("woff2"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/92b66dbd-4201-4ac2-a605-4d4ffc8705cc.woff") format("woff"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/18839597-afa8-4f0b-9abb-4a30262d0da8.ttf") format("truetype");
+  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/d1fddef1-d940-4904-8f6c-17e809462301.eot?#iefix")
+      format("eot"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/7377dbe6-f11a-4a05-b33c-bc8ce1f60f84.woff2")
+      format("woff2"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/92b66dbd-4201-4ac2-a605-4d4ffc8705cc.woff")
+      format("woff"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/18839597-afa8-4f0b-9abb-4a30262d0da8.ttf")
+      format("truetype");
 }
 
-@font-face{
-  font-family:"Avenir-Next";
+@font-face {
+  font-family: "Avenir-Next";
   font-weight: 500;
   font-display: swap;
   src: url("https://assets.digital.coop.co.uk/finder/static/fonts/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix");
-  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix") format("eot"),
-    url("https://assets.digital.coop.co.uk/finder/static/fonts/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2") format("woff2"),
-    url("https://assets.digital.coop.co.uk/finder/static/fonts/f26faddb-86cc-4477-a253-1e1287684336.woff") format("woff"),
-    url("https://assets.digital.coop.co.uk/finder/static/fonts/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf") format("truetype");
+  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix")
+      format("eot"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2")
+      format("woff2"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/f26faddb-86cc-4477-a253-1e1287684336.woff")
+      format("woff"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf")
+      format("truetype");
 }
 
 @font-face {
@@ -703,10 +585,14 @@ img {
   font-weight: 600;
   font-display: swap;
   src: url("https://assets.digital.coop.co.uk/finder/static/fonts/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?#iefix");
-  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?#iefix") format("eot"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/aad99a1f-7917-4dd6-bbb5-b07cedbff64f.woff2") format("woff2"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff") format("woff"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf") format("truetype");
+  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?#iefix")
+      format("eot"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/aad99a1f-7917-4dd6-bbb5-b07cedbff64f.woff2")
+      format("woff2"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff")
+      format("woff"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf")
+      format("truetype");
 }
 
 @font-face {
@@ -715,10 +601,14 @@ img {
   font-style: italic;
   font-display: swap;
   src: url("https://assets.digital.coop.co.uk/finder/static/fonts/770d9a7e-8842-4376-9319-8f2c8b8e880d.eot?#iefix");
-  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/770d9a7e-8842-4376-9319-8f2c8b8e880d.eot?#iefix") format("eot"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/687932cb-145b-4690-a21d-ed1243db9e36.woff2") format("woff2"),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/bc350df4-3100-4ce1-84ce-4a5363dbccfa.woff") format('woff'),
-       url("https://assets.digital.coop.co.uk/finder/static/fonts/bc13ae80-cd05-42b4-b2a9-c123259cb166.ttf") format("truetype");
+  src: url("https://assets.digital.coop.co.uk/finder/static/fonts/770d9a7e-8842-4376-9319-8f2c8b8e880d.eot?#iefix")
+      format("eot"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/687932cb-145b-4690-a21d-ed1243db9e36.woff2")
+      format("woff2"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/bc350df4-3100-4ce1-84ce-4a5363dbccfa.woff")
+      format("woff"),
+    url("https://assets.digital.coop.co.uk/finder/static/fonts/bc13ae80-cd05-42b4-b2a9-c123259cb166.ttf")
+      format("truetype");
 }
 
 h1,
@@ -1040,7 +930,7 @@ blockquote:before,
   blockquote:after,
   .coop-blockquote:before,
   .coop-blockquote:after {
-    content: '';
+    content: "";
     display: block;
     width: 45px;
     height: 6px;
@@ -1120,8 +1010,8 @@ p + ul {
 @media (min-width: 46.875em) {
 
 p + ul {
-     margin-top: calc(-1 * calc(4rem / 8));
-     margin-top: calc(-1 * var(--spacing-medium--1-8))
+    margin-top: calc(-1 * calc(4rem / 8));
+    margin-top: calc(-1 * var(--spacing-medium--1-8))
 }
   }
 
@@ -1170,15 +1060,13 @@ dl dd, .coop-definition-list dd {
 a {
   color: #00729a;
   color: var(--color-link);
-  border-bottom: 0.05em solid #00729a;
-  border-bottom: 0.05em solid var(--color-link);
-  text-decoration: none
+  text-decoration: underline
 }
 
 a:hover {
     color: #000102;
     color: var(--color-link--hover);
-    border: 0;
+    text-decoration: none;
   }
 
 a:active,
@@ -1191,16 +1079,12 @@ a:active,
 
 .link-white {
   color: #ffffff;
-  color: var(--color-white);
-  border-bottom: 0.05em solid #ffffff;
-  border-bottom: 0.05em solid var(--color-white);
-  text-decoration: none
+  color: var(--color-white)
 }
 
 .link-white:hover {
     color: #ffffff;
     color: var(--color-white);
-    border: 0;
   }
 
 .link-white:active,
@@ -1213,25 +1097,21 @@ a:active,
 
 .link-black {
   color: #000000;
-  color: var(--color-black);
-    border-bottom: 0.05em solid #000000;
-    border-bottom: 0.05em solid var(--color-black);
-    text-decoration: none
+  color: var(--color-black)
 }
 
 .link-black:hover {
-      color: #000000;
-      color: var(--color-black);
-      border: 0;
-    }
+    color: #000000;
+    color: var(--color-black);
+  }
 
 .link-black:active,
-    .link-black:focus {
-      transition: none;
-      outline: 2px dotted #000000;
-      outline: 2px dotted var(--color-black);
-      outline-offset: 3px;
-    }
+  .link-black:focus {
+    transition: none;
+    outline: 2px dotted #000000;
+    outline: 2px dotted var(--color-black);
+    outline-offset: 3px;
+  }
 
 .coop-l-container {
   width: 100%;
@@ -1724,7 +1604,8 @@ a:active,
   border: 0;
   border-radius: 7px;
   transition: all 0.15s linear;
-  outline: none
+  outline: none;
+  text-decoration: none
 }
 
 @media (min-width: 46.875em) {
@@ -1741,6 +1622,8 @@ a:active,
 .coop-btn:focus {
   background: #4a6683;
   background: var(--color-button-dark--hover);
+  color: #ffffff;
+  color: var(--color-white);
   border: 0;
 }
 
@@ -1754,23 +1637,31 @@ a:active,
 .coop-btn:active {
   background: #2e3f53;
   background: var(--color-button-dark--active);
+  color: #ffffff;
+  color: var(--color-white);
   outline: 0;
 }
 
 .coop-btn--primary {
   background: #0f8482;
   background: var(--color-button-primary);
+  color: #ffffff;
+  color: var(--color-white);
 }
 
 .coop-btn--primary:hover,
 .coop-btn--primary:focus {
   background: #2b9e9c;
   background: var(--color-button-primary--hover);
+  color: #ffffff;
+  color: var(--color-white);
 }
 
 .coop-btn--active:active {
   background: #0c6d6b;
   background: var(--color-button-primary--active);
+  color: #ffffff;
+  color: var(--color-white);
 }
 
 .coop-btn--full {

@@ -1,0 +1,79 @@
+{
+  "_from": "@coopdigital/component-card--product@^1.0.8",
+  "_id": "@coopdigital/component-card--product@1.0.8",
+  "_inBundle": false,
+  "_integrity": "sha512-3PgMbm4y12pS1/ETTIRKpqO6zO49/n2AdO9b2JpH287ETDU7udktpZcJ+KA6TN06dtRnbxtK0utWJnVvlGDZQQ==",
+  "_location": "/@coopdigital/component-card--product",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@coopdigital/component-card--product@^1.0.8",
+    "name": "@coopdigital/component-card--product",
+    "escapedName": "@coopdigital%2fcomponent-card--product",
+    "scope": "@coopdigital",
+    "rawSpec": "^1.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.8"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@coopdigital/component-card--product/-/component-card--product-1.0.8.tgz",
+  "_shasum": "f586b1d0d82235f239db4f8e06d4a914005561ea",
+  "_spec": "@coopdigital/component-card--product@^1.0.8",
+  "_where": "/Users/fred/Co-op/coop-frontend",
+  "author": {
+    "name": "Matt Tyas",
+    "url": "matt.tyas@coopdigital.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/component-card--product/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Co-op Components: Card - product",
+  "devDependencies": {
+    "@coopdigital/component-card": "^1.0.1",
+    "@coopdigital/foundations-vars": "^1.0.0",
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.7",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.0.0",
+    "precss": "^3.1.2",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.7.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.3"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/coopdigital/component-card--product#readme",
+  "keywords": [
+    "card",
+    "content",
+    "food",
+    "product",
+    "e-commerce"
+  ],
+  "license": "MIT",
+  "main": "src/card--product.html",
+  "name": "@coopdigital/component-card--product",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/component-card--product.git"
+  },
+  "scripts": {
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "init": "rm -rf ./.git && git init",
+    "lint": "stylelint 'dist/*.css' --fix",
+    "test": "npm run build && npm run lint"
+  },
+  "style": "src/card--product.css",
+  "version": "1.0.8"
+}

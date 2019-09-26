@@ -1,0 +1,40 @@
+---
+layout: default
+id: user-research-principles
+body-page-class: dm-dark
+---
+
+<article class="coop-l-wrap">
+    {% include breadcrumbs.html %}
+    {% for page in site.data.contentful.spaces.design-system-content.page %}
+        {% if page.sys.id == 'W8GjmmJyakgA0kQc2YqUg' %}
+        <header>
+            <div class="coop-l-row">
+                <div class="coop-l-column coop-l-medium-8 coop-l-small-12 intro-box">
+                    <h1>{{ page.title }}</h1>
+                    <div class="highlight-banner m-bh-med-b">
+                        {{ page.introduction | markdownify }}
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="coop-l-row">
+            <div class="coop-l-column coop-l-medium-3 coop-l-small-12 fixedsticky">
+                <p class="bold">We:</p>
+                <nav>
+                    <ul class="coop-list-bare in-page-nav">
+                        {% for item in page.in_page_navigation %}
+                        <li><a href="#{{ item.section_id }}">{{ item.url_text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="coop-l-column coop-l-medium-8 coop-l-medium-offset-1 coop-l-small-12">
+                <section class="ds-section">
+                    {{ page.content | markdownify }}
+                </section>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</article>

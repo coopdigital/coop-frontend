@@ -1,0 +1,126 @@
+---
+layout: default
+id: thirdleveltables
+group: "inner-page"
+body-page-class: dm-dark
+---
+<article class="coop-l-wrap">
+    {% include breadcrumbs.html %}
+    <header>
+        <div class="coop-l-row">
+            <div class="coop-l-column coop-l-medium-8 coop-l-small-12  intro-box">
+                <h1>Table patterns</h1>
+                <div class="highlight-banner m-bh-med-b">
+                    <p>There are different approaches you can take when making a table, depending on the type and amount of information you are presenting. This isn’t an exhaustive list of patterns. We’re still exploring what works and what doesn’t, so please share examples and research.</p>
+                    <p>This section is a more detailed description of <a href="https://coop-design-system.herokuapp.com/index.html">how to use the table patterns in the pattern library.</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="coop-l-row">
+        <div class="coop-l-column coop-l-medium-4 coop-l-small-12 fixedsticky">
+            <nav>
+
+                <ul class="coop-list-bare in-page-nav">
+                    <li><a href="#interacting-with-tables">Interacting with tables</a></li>
+                    <li><a href="#responsive-tables">Responsive tables</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="coop-l-column coop-l-medium-8 coop-l-small-12">
+            <section id="interacting-with-tables" class="dm-section">
+                <h2>Interacting with tables</h2>
+                <h3>Form inputs within tables</h3>
+                <p>Avoid doing this &mdash; make a form instead.</p>
+                <h3>Hiding and revealing tables (accordions)</h3>
+                <p>We don’t yet have a recommendation about how to hide and reveal tables.</p>
+                <p>If you have any examples to share, or have researched this pattern, please get in touch.</p>
+                <h3>Large tables (or lots of tables)</h3>
+                <p>Don’t try to answer multiple questions by making one very large table. Instead break the information out into smaller, more focused tables. It’s easier to scroll through a long page with lots of tables than to hunt for information in one big table.</p>
+                <p>People don’t mind scrolling through a long page, so long as they are confident they will find what they are looking for. Use the content at the top of the page to set the user’s expectations so they are happy to scroll. Consider using in-page navigation to help the user find the information they need in a long page.</p>
+                <blockquote>
+                    <p>&lsquo;Users do scroll when the content is relevant, organised properly and formatted for ease of scanning. In fact, people prefer scrolling the page for content over pagination when the topics within that page answer the right questions.&rsquo;</p>
+                    <cite><a href="https://www.nngroup.com/">Nielsen Norman Group</a></cite>
+                </blockquote>
+            </section>
+            <section id="responsive-tables" class="dm-section">
+                <h2>Responsive tables</h2>
+                <p>There are a few ways of making a table responsive.</p>
+                <p>Whichever approach you choose, it should reflect how users will look at the data in the table.</p>
+                <p>The patterns used for making a table responsive should be appropriate to the data in the table and how users are looking at that data.</p>
+                <h3>Table width reduces</h3>
+                <p>This approach works well when there is very little content in the columns &mdash; just figures.</p>
+                <p>In this scenario, the design of the table stays the same for all screen sizes &mdash; it just scales down.</p>
+                <div class="coop-l-row">
+                    <div class="coop-l-column coop-l-medium-12">
+                        <h3 class="example-heading"><span class="example_label">Example</span> Cell widths reduce with device size</h3>
+                        <div class="example example--padded">
+                            <table>
+                              <caption>This table compares our Classic and Select Plus pet insurance</caption>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Compare Pet Insurance</th>
+                                  <th scope="col" class="table--numeral">Classic</th>
+                                  <th scope="col" class="table--numeral">Select Plus</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="table--numeral">
+                                  <th scope="row">Vet fees cover</th>
+                                  <td>&pound;2000</td>
+                                  <td>&pound;5000</td>
+                                </tr>
+                                <tr class="table--numeral">
+                                  <th scope="row">Extra treatments</th>
+                                  <td>Not included</td>
+                                  <td>&pound;750</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <h3>Rows become mini-tables</h3>
+                <p>This approach works for a table with different types of values &mdash; including text.</p>
+                <p>Remove horizontal lines, with the exception of the heavier line which is now be used to separate the mini-tables.</p>
+                <div class="coop-l-row">
+                    <div class="coop-l-column coop-l-edium-12">
+                        {% include experimental-banner.html %}
+                        <h3 class="example-heading"><span class="example_label">Example</span> Responsive table - rows become mini-tables</h3>
+                        <div class="example example--padded">
+                            <table class="table-smallscreen--stacked">
+                              <caption>This table compares our Classic and Select Plus pet insurance</caption>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Compare Pet Insurance</th>
+                                  <th scope="col" class="table--numeral">Classic</th>
+                                  <th scope="col" class="table--numeral">Select Plus</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="table--numeral">
+                                  <th scope="row">Vet fees cover</th>
+                                  <td data-th="Classic">&pound;2000</td>
+                                  <td data-th="Select Plus">&pound;5000</td>
+                                </tr>
+                                <tr class="table--numeral">
+                                  <th scope="row">Extra treatments</th>
+                                  <td data-th="Classic">Not included</td>
+                                  <td data-th="Select Plus">&pound;750</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p>Another example of this responsive table is on the <a href="../../updates/index.html">design manual updates page</a>. The code example is on the <a href="code-standards-for-tables.html">tables code standards page</a>.</p>
+            </section>
+            <div class="related-footer">
+                <h3>More about tables</h3>
+                <ul class="coop-list-bare content-links">
+                    <li><a href="designing-tables.html">Designing tables</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>

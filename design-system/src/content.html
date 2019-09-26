@@ -1,0 +1,35 @@
+---
+layout: default
+id: guidance
+body-page-class: dm-dark
+---
+
+<article class="coop-l-wrap">
+{% include breadcrumbs.html %}
+    <header>
+        <div class="coop-l-row">
+            <div class="coop-l-column coop-l-medium-8 coop-l-small-12 intro-box">
+                <h1>This page has moved</h1>
+                <div class="highlight-banner m-bh-med-b">
+                    {{ page.introduction | markdownify }}
+                </div>
+            </div>
+        </div>
+    </header>  
+    <div class="coop-l-row">
+        <!-- <div class="coop-l-column coop-l-medium-4 coop-l-small-12 fixedsticky">
+            <nav>
+                <ul class="coop-list-bare in-page-nav">
+                    {% for item in page.in_page_navigation %}
+                    <li><a href="#{{ item.section_id }}">{{ item.url_text }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div> -->
+        <div class="coop-l-column coop-l-medium-8 coop-l-small-12">
+            <section class="ds-section">
+                <p><a href="/content/index.html">The content design guidelines are now here</a>.</p>
+            </section>
+        </div>
+    </div>
+</article>

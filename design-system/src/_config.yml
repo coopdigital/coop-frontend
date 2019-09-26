@@ -1,0 +1,18 @@
+# Jekyll config
+
+# Site settings
+title: Co-op design system
+description: Co-op design system
+baseurl: ""
+url: "http://coop-design-manual.herokuapp.com"
+
+# Build settings
+source: ./
+destination: ../build
+keep_files: ['css', 'js', 'assets']
+markdown: kramdown
+
+# Collections
+collections:
+  pattern-library:
+    output: false

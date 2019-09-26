@@ -1,0 +1,65 @@
+{
+  "name": "design-system",
+  "private": true,
+  "engines": {
+    "node": "8.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/design-manual.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/design-manual/issues"
+  },
+  "homepage": "https://github.com/coopdigital/design-manual#readme",
+  "dependencies": {
+    "@coopdigital/component-card": "^1.0.1",
+    "@coopdigital/component-card--product": "^1.0.8",
+    "@coopdigital/component-checkbox": "^2.0.1",
+    "@coopdigital/component-search": "^1.0.1",
+    "@coopdigital/component-signpost": "^1.0.1",
+    "@coopdigital/component-skipnav": "^1.0.0",
+    "@coopdigital/component-tags": "^1.0.2",
+    "@coopdigital/coop-frontend-foundations": "^0.1.2",
+    "@coopdigital/css-foundations": "^1.8.1",
+    "@coopdigital/foundations-buttons": "^1.0.2",
+    "@coopdigital/foundations-typography": "^2.1.2",
+    "@coopdigital/foundations-vars": "^1.0.0",
+    "contentful-migration": "^1.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-include": "^2.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-scss-lint": "^1.0.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.9.6",
+    "jshint-stylish": "^2.1.0",
+    "node-sass": "^4.11.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.1.0",
+    "postcss-plugin": "^1.0.0",
+    "postcss-sass": "^0.4.1",
+    "postcss-sassy-import": "^1.2.3",
+    "postcss-scss": "^2.0.0",
+    "postcss-url": "^8.0.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "dist": "echo Design System - no need to build"
+  },
+  "browserslist": [
+    "> 5%",
+    "last 2 versions"
+  ]
+}

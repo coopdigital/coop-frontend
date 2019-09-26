@@ -1,0 +1,70 @@
+{
+  "_from": "@coopdigital/component-search@^1.0.1",
+  "_id": "@coopdigital/component-search@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-aLTnH8a0IiWZCI/WeVznixzRp85PkuhxXRYaIO1c++dzERSegtQmZrfZB7E2/cEkbeQIGeqXQTnBstej+Y4XzA==",
+  "_location": "/@coopdigital/component-search",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@coopdigital/component-search@^1.0.1",
+    "name": "@coopdigital/component-search",
+    "escapedName": "@coopdigital%2fcomponent-search",
+    "scope": "@coopdigital",
+    "rawSpec": "^1.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@coopdigital/component-search/-/component-search-1.0.2.tgz",
+  "_shasum": "e037034f3e5185ca735c2d9e401ac4de30fb0455",
+  "_spec": "@coopdigital/component-search@^1.0.1",
+  "_where": "/Users/fred/Co-op/coop-frontend",
+  "author": {
+    "name": "Matt Tyas",
+    "url": "matt.tyas@coopdigital.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/component-template/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Co-op Component Search",
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^1.0.1",
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.9",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-import": "^12.0.1",
+    "precss": "^3.1.2",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.7.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.3"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/coopdigital/component-template#readme",
+  "license": "MIT",
+  "main": "src/component.html",
+  "name": "@coopdigital/component-search",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/component-template.git"
+  },
+  "scripts": {
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "init": "rm -rf ./.git && git init",
+    "lint": "stylelint 'dist/*.css' --fix",
+    "test": "npm run build && npm run lint"
+  },
+  "style": "src/component.css",
+  "version": "1.0.2"
+}
