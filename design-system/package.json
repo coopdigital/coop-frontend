@@ -56,7 +56,8 @@
   },
   "scripts": {
     "build": "gulp build",
-    "dist": "echo Design System - no need to build"
+    "dist": "echo Design System - no need to build",
+    "server": "gulp server"
   },
   "browserslist": [
     "> 5%",

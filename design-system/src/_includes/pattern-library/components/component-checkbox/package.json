@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/@coopdigital/component-checkbox/-/component-checkbox-2.0.1.tgz",
   "_shasum": "640af19c49e4407cb5956162c0c4032d262f6a7c",
   "_spec": "@coopdigital/component-checkbox@^2.0.1",
-  "_where": "/Users/fred/Co-op/coop-frontend",
+  "_where": "/Users/fred/Dev/Co-op/coop-frontend",
   "author": {
     "name": "Matt Tyas",
     "email": "matt.tyas@coopdigital.co.uk",
