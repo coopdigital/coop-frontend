@@ -1,25 +1,27 @@
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var connect = require('gulp-connect');
-var concat = require('gulp-concat');
-var include = require('gulp-include');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var cssimport = require('gulp-cssimport');
-var postcss = require('gulp-postcss');
-var postcssCustomMedia = require('postcss-custom-media');
-var spawn = require('child_process').spawn;
+'use strict';
+
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const connect = require('gulp-connect');
+const concat = require('gulp-concat');
+const include = require('gulp-include');
+const jshint = require('gulp-jshint');
+const stylish = require('jshint-stylish');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+const cssimport = require('gulp-cssimport');
+const postcss = require('gulp-postcss');
+const postcssCustomMedia = require('postcss-custom-media');
+const spawn = require('child_process').spawn;
 
 /**
  * Settings
  */
-var src = 'src/';
-var dest = 'build/';
+const src = 'src/';
+const dest = 'build/';
 
-var src_paths = {
+const src_paths = {
   css: src + '_css/**/*.css',
   temp: src + 'temp/**/*',
   scripts: src + '_js/*.js',
@@ -30,13 +32,13 @@ var src_paths = {
   html: src + '**/*.html'
 };
 
-var dest_paths = {
+const dest_paths = {
   styles: dest + 'assets/css',
   scripts: dest + 'assets/js',
   assets: dest + 'assets'
 };
 
-var settings = {
+const settings = {
   css: {
     outputStyle: 'compressed',
     includePaths: [
@@ -53,7 +55,7 @@ var settings = {
   }
 };
 
-var importOptions = {
+const importOptions = {
     matchPattern: "!*.{pcss}",
     includePaths: [
       '../node_modules/@coopdigital',
@@ -65,63 +67,63 @@ var importOptions = {
 /**
  * Lint tasks
  */
-gulp.task('lintjs', function() {
+function lintjs() {
   return gulp.src([
     src_paths.scripts,
     '!' + src + '_js/vendor'
   ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
-});
+}
 
 
 /**
  * Build tasks
  */
 // Copy Co-op components
-gulp.task('copy', function () {
+function copyComponents() {
   return gulp.src([
     '../node_modules/@coopdigital/**/*'
   ])
   .pipe(gulp.dest('src/_includes/pattern-library/components'))
-});
+}
 
 // Jekyll
-gulp.task('contentful', function(gulpCallBack) {
-  var contentful = spawn('jekyll', ['contentful'], {stdio: 'inherit'});
+function contentful(gulpCallBack) {
+  const contentful = spawn('jekyll', ['contentful'], {stdio: 'inherit'});
   contentful.on('exit', function(code) {
     gulpCallBack(code === 0 ? null : 'ERROR: Jekyll Contentful process exited with code: '+code);
   });
-});
+}
 
-gulp.task('jekyll', gulp.series('contentful'), function (gulpCallBack){
-  var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit', cwd: 'src'});
+function jekyll(gulpCallBack) {
+  const jekyll = spawn('jekyll', ['build'], {stdio: 'inherit', cwd: 'src'});
   jekyll.on('exit', function(code) {
     gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
   });
-});
+}
 
-gulp.task('html', gulp.series('contentful', 'jekyll'), function() {
+function html() {
   return gulp.src(dest + '**/*.html')
     .pipe(connect.reload());
-});
+}
 
 // Styles
-
-gulp.task('css', () => gulp.src(src_paths.css)
-.pipe(cssimport(importOptions))
-.pipe(
-  postcss([
-    postcssCustomMedia(/* pluginOptions */)
-  ])
-)
-.pipe(autoprefixer())
-.pipe(gulp.dest(dest_paths.styles))
-
-);
+function css() {
+  return gulp
+    .src(src_paths.css)
+    .pipe(cssimport(importOptions))
+    .pipe(
+      postcss([
+        postcssCustomMedia(/* pluginOptions */)
+      ])
+    )
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(dest_paths.styles))
+}
 
 // Scripts
-gulp.task('js', gulp.series('lintjs'), function() {
+function js() {
   return gulp.src(src_paths.scripts)
     .pipe(sourcemaps.init())
       .pipe(include(settings.include))
@@ -130,50 +132,74 @@ gulp.task('js', gulp.series('lintjs'), function() {
     .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.scripts))
     .pipe(connect.reload());
-});
-gulp.task('vendorjs', function() {
-  return gulp.src(['node_modules/coop-frontend-toolkit/scripts/vendor/**/*', src + '_js/vendor/**/*'])
+}
+
+function vendorjs() {
+  return gulp
+    .src(['node_modules/coop-frontend-toolkit/scripts/vendor/**/*', src + '_js/vendor/**/*'])
     .pipe(gulp.dest(dest_paths.scripts + '/vendor'));
-});
+}
 
 // Static assets
-gulp.task('assets', function() {
-  return gulp.src(src_paths.assets)
+function assets() {
+  return gulp
+    .src(src_paths.assets)
     .pipe(gulp.dest(dest_paths.assets))
     .pipe(connect.reload());
-});
-gulp.task('imagemin', gulp.series('assets'), function() {
-  return gulp.src(dest_paths.assets + '/images/**/*')
+}
+
+function optimiseImages() {
+  return gulp
+    .src(dest_paths.assets + '/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest(dest_paths.assets + '/images'));
-});
+}
 
 
 /**
  * Watch tasks
  */
-gulp.task('watch', async function() {
-  gulp.watch('src/_css/**/*.css', gulp.parallel('css'));
-  gulp.watch(src_paths.scripts, gulp.parallel('lintjs', 'js'));
-  gulp.watch(src_paths.assets, gulp.parallel('imagemin'));
-  gulp.watch(src_paths.html, gulp.parallel('html'));
-});
+function watch(done) {
+  gulp.watch('src/_css/**/*.css', css);
+  gulp.watch(src_paths.scripts, gulp.series(lintjs, js));
+  gulp.watch(src_paths.assets, optimiseImages);
+  gulp.watch(src_paths.html, html);
+  done();
+}
 
 
 /**
  * Local server
  */
-gulp.task('connect', async function() {
+function serve(done) {
   connect.server({
     port: 9000,
     root: 'build',
     livereload: true
   });
-});
+  done();
+}
 
 /**
  * Run tasks
  */
-gulp.task('build', gulp.series('copy', 'html', 'css', 'vendorjs', 'js', 'imagemin'));
-gulp.task('server', gulp.series('build', 'connect', 'watch'));
-gulp.task('default', gulp.series('build'));
+const build = gulp.parallel(gulp.series(copyComponents, contentful, jekyll), css, vendorjs, gulp.series(lintjs, js), gulp.series(assets, optimiseImages));
+const server = gulp.series(build, serve, watch);
+
+
+module.exports = {
+  copyComponents,
+  contentful,
+  jekyll,
+  html,
+  css,
+  vendorjs,
+  lintjs,
+  js,
+  assets,
+  optimiseImages,
+  build,
+  server,
+  default: build
+};
+

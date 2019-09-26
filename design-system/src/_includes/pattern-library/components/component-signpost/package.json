@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/@coopdigital/component-signpost/-/component-signpost-1.0.1.tgz",
   "_shasum": "62f045172581157cc21db4be42b9b40a381fe2af",
   "_spec": "@coopdigital/component-signpost@^1.0.1",
-  "_where": "/Users/fred/Co-op/coop-frontend",
+  "_where": "/Users/fred/Dev/Co-op/coop-frontend",
   "author": {
     "name": "Matt Tyas",
     "url": "matt.tyas@coopdigital.co.uk"
