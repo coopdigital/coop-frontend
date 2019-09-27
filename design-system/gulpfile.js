@@ -13,6 +13,7 @@ const imagemin = require('gulp-imagemin');
 const cssimport = require('gulp-cssimport');
 const postcss = require('gulp-postcss');
 const postcssCustomMedia = require('postcss-custom-media');
+const postcssNesting = require('postcss-nesting');
 const spawn = require('child_process').spawn;
 
 /**
@@ -22,7 +23,7 @@ const src = 'src/';
 const dest = 'build/';
 
 const src_paths = {
-  css: src + '_css/**/*.css',
+  css: src + '_css/**/*.{pcss,css}',
   temp: src + 'temp/**/*',
   scripts: src + '_js/*.js',
   assets: [
@@ -56,8 +57,9 @@ const settings = {
 };
 
 const importOptions = {
-    matchPattern: "!*.{pcss}",
+    matchPattern: "*.{pcss,css}", 
     includePaths: [
+      '../node_modules',
       '../node_modules/@coopdigital',
       __dirname + '/node_modules/@coopdigital'
     ]
@@ -114,9 +116,12 @@ function css() {
     .src(src_paths.css)
     .pipe(cssimport(importOptions))
     .pipe(
-      postcss([
-        postcssCustomMedia(/* pluginOptions */)
-      ])
+      postcss(
+        [
+          postcssCustomMedia(),
+          postcssNesting()
+        ]
+      )
     )
     .pipe(autoprefixer())
     .pipe(gulp.dest(dest_paths.styles))
@@ -160,10 +165,10 @@ function optimiseImages() {
  * Watch tasks
  */
 function watch(done) {
-  gulp.watch('src/_css/**/*.css', css);
+  gulp.watch('src/_css/**/**.{pcss,css}', css);
   gulp.watch(src_paths.scripts, gulp.series(lintjs, js));
   gulp.watch(src_paths.assets, optimiseImages);
-  gulp.watch(src_paths.html, html);
+  gulp.watch(src_paths.html, html); 
   done();
 }
 

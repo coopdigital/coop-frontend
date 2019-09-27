@@ -2,8 +2,20 @@
 /* Synced with coop.co.uk - remove later */
 @import 'design-system/temp-vars.css';
 
-/* Foundations */
-@import "css-foundations/dist/foundations.css";
+/* Foundations */  
+@import "normalize.css/normalize.css";
+@import "foundations-vars/src/vars.pcss";
+@import "foundations-global/src/global.pcss";
+@import "foundations-typography/src/typography.pcss";
+@import "foundations-grid/src/grid.pcss";
+@import "foundations-colors/src/colors.pcss";
+@import "foundations-buttons/src/buttons.pcss";
+@import "foundations-forms/src/forms.pcss";
+@import "foundations-tables/src/tables.pcss";
+@import "foundations-layout/src/layout.pcss";
+
+/* Include legacy grid to help support projects still using it. */
+@import "foundations-grid/dist/legacy-grid.css";
 
 /* Components */
 @import 'component-skipnav/dist/skipnav.css';
