@@ -120,10 +120,8 @@
   
 .coop-u-link-black {
     color: #000;
-    border-bottom: 1px solid #000;
 }
 
 .coop-u-link-black:hover {
     color: #000;
-    border-bottom: 0;
 }
