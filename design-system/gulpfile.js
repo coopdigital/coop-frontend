@@ -60,7 +60,7 @@ const importOptions = {
     matchPattern: "*.{pcss,css}", 
     includePaths: [
       '../node_modules',
-      __dirname + '../node_modules',
+      __dirname + '/node_modules',
       '../node_modules/@coopdigital',
       __dirname + '/node_modules/@coopdigital'
     ]
