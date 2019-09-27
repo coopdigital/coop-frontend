@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/@coopdigital/component-search/-/component-search-1.0.2.tgz",
   "_shasum": "e037034f3e5185ca735c2d9e401ac4de30fb0455",
   "_spec": "@coopdigital/component-search@^1.0.1",
-  "_where": "/Users/fred/Dev/Co-op/coop-frontend",
+  "_where": "/Applications/MAMP/htdocs/coop-frontend",
   "author": {
     "name": "Matt Tyas",
     "url": "matt.tyas@coopdigital.co.uk"

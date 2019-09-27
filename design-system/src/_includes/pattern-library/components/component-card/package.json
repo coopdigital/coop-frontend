@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/@coopdigital/component-card/-/component-card-1.0.2.tgz",
   "_shasum": "d16e2b0a384674eaa77edb62f48f44cb95566a66",
   "_spec": "@coopdigital/component-card@^1.0.1",
-  "_where": "/Users/fred/Dev/Co-op/coop-frontend",
+  "_where": "/Applications/MAMP/htdocs/coop-frontend",
   "author": {
     "name": "Matt Tyas",
     "url": "matt.tyas@coopdigital.co.uk"

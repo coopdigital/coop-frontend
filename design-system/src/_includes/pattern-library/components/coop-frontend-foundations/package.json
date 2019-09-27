@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/@coopdigital/coop-frontend-foundations/-/coop-frontend-foundations-0.1.2.tgz",
   "_shasum": "765df166fa93b1b696f8d6fee8cc51e6f1d5f879",
   "_spec": "@coopdigital/coop-frontend-foundations@^0.1.2",
-  "_where": "/Users/fred/Dev/Co-op/coop-frontend",
+  "_where": "/Applications/MAMP/htdocs/coop-frontend",
   "author": {
     "name": "Coop Digital"
   },
@@ -40,7 +40,7 @@
       "email": "kyle.welsby@coopdigital.co.uk"
     }
   ],
-  "deprecated": "This package has been deprecated in favour of @coopdigital/css-foundations. Please use that package instead.",
+  "deprecated": false,
   "description": "Frontend foundations contains styles for building Coop branded digital content.",
   "devDependencies": {
     "@csstools/postcss-sass": "^2.0.0",
