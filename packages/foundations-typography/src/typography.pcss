@@ -11,14 +11,12 @@ ul,
 ol,
 p,
 address,
-.coop-h1,
-.coop-h2,
-.coop-h3,
-.coop-h4,
-.coop-h5,
-.coop-h6 {
-  font-family: var(--font-family);
-  font-weight: normal;
+.coop-t-h1,
+.coop-t-h2,
+.coop-t-h3,
+.coop-t-h4,
+.coop-t-h5,
+.coop-t-h6 {
   margin-top: 0;
 }
 
@@ -28,304 +26,140 @@ h3,
 h4,
 h5,
 h6,
-.coop-h1,
-.coop-h2,
-.coop-h3,
-.coop-h4,
-.coop-h5,
-.coop-h6 {
+.coop-t-h1,
+.coop-t-h2,
+.coop-t-h3,
+.coop-t-h4,
+.coop-t-h5,
+.coop-t-h6 {
   font-weight: bold;
 }
 
-p {
-  font-size: var(--type-base--body);
-  margin-bottom: var(--spacing-base--1-4);
-
-  &:last-child {
-    margin-bottom: var(--spacing-medium--1-2);
-  }
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6,
+p + .coop-t-h2,
+p + .coop-t-h3,
+p + .coop-t-h4,
+p + .coop-t-h5,
+p + .coop-t-h6,
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6,
+ul + .coop-t-h2,
+ul + .coop-t-h3,
+ul + .coop-t-h4,
+ul + .coop-t-h5,
+ul + .coop-t-h6,
+ol + h2,
+ol + h3,
+ol + h4,
+ol + h5,
+ol + h6,
+ol + .coop-t-h2,
+ol + .coop-t-h3,
+ol + .coop-t-h4,
+ol + .coop-t-h5,
+ol + .coop-t-h6 {
+  padding-top: var(--spacing-16);
 
   @media (--mq-medium) {
-    font-size: var(--type-medium--body);
-    margin-bottom: var(--spacing-medium--1-4);
+    padding-top: var(--spacing-32);
+  }
+}
+
+h1,
+.coop-t-h1 {
+  font-size: var(--type-h1-s);
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    font-size: var(--type-h1-l);
+    margin-bottom: var(--spacing-16);
+  }
+}
+
+h2,
+.coop-t-h2 {
+  font-size: var(--type-h2-s);
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    font-size: var(--type-h2-l);
+    margin-bottom: var(--spacing-16);
+  }
+}
+
+h3,
+.coop-t-h3 {
+  font-size: var(--type-h3-s);
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    font-size: var(--type-h3-l);
+    margin-bottom: var(--spacing-16);
+  }
+}
+
+h4,
+h5,
+h6,
+.coop-t-h456 {
+  font-size: var(--type-h456-s);
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    font-size: var(--type-h456-l);
+    margin-bottom: var(--spacing-16);
+  }
+}
+
+.coop-t-lead-p {
+  font-size: var(--type-lp-s);
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    font-size: var(--type-lp-l);
+    margin-bottom: var(--spacing-16);
+  }
+}
+
+p {
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-16);
   }
 }
 
 ul,
 ol {
-  font-size: var(--type-base--body);
-  margin-bottom: var(--spacing-base--1-4);
+  padding-left: 22px;
+  margin-bottom: var(--spacing-8);
 
   @media (--mq-medium) {
-    font-size: var(--type-medium--body);
-    margin-bottom: var(--spacing-medium--1-4);
-  }
-}
-
-.coop-h-mega {
-  font-weight: bold;
-  font-size: var(--type-base--h-mega);
-  line-height: 1.385;
-  margin-bottom: var(--spacing-base--1-2);
-  padding-top: var(--spacing-base--1-2);
-
-  @media (--mq-medium) {
-    font-size: var(--type-medium--h-mega);
-    margin-bottom: var(--spacing-medium--1-2);
-    padding-top: var(--spacing-medium--1-2);
-  }
-}
-
-h1,
-.coop-h1 {
-  font-size: var(--type-base--h1);
-  line-height: 1.4;
-  margin-bottom: var(--spacing-base--1-2);
-
-  @media (--mq-medium) {
-    font-size: var(--type-medium--h1);
-    margin-bottom: var(--spacing-medium--1-2);
-  }
-}
-
-h2,
-.coop-h2 {
-  font-size: var(--type-base--h2);
-  line-height: 1.55;
-  margin-bottom: var(--spacing-base--1-2);
-
-  @media (--mq-medium) {
-    font-size: var(--type-medium--h2);
-    margin-bottom: var(--spacing-medium--1-2);
-  }
-}
-
-h3,
-.coop-h3 {
-  font-size: var(--type-base--h3);
-  line-height: 1.455;
-  padding-top: var(--spacing-base--1-8);
-  margin-bottom: var(--spacing-base--1-8);
-
-  @media (--mq-medium) {
-    font-size: var(--type-medium--h3);
-    padding-top: var(--spacing-medium--1-8);
-    margin-bottom: var(--spacing-medium--1-8);
-  }
-}
-
-h4,
-.coop-h4 {
-  font-size: var(--type-base--h4);
-  line-height: 1.455;
-  padding-top: var(--spacing-base--1-8);
-  margin-bottom: var(--spacing-base--1-8);
-
-  @media (--mq-medium) {
-    font-size: var(--type-medium--h4);
-    padding-top: var(--spacing-medium--1-8);
-    margin-bottom: var(--spacing-medium--1-8);
-  }
-}
-
-h5,
-.coop-h5 {
-  font-size: var(--type-base--h5);
-  line-height: 1.455;
-  padding-top: var(--spacing-base--1-8);
-  margin-bottom: var(--spacing-base--1-8);
-
-  @media (--mq-medium) {
-    font-size: var(--type-medium--h5);
-    padding-top: var(--spacing-medium--1-8);
-    margin-bottom: var(--spacing-medium--1-8);
-  }
-}
-
-h6,
-.coop-h6 {
-  font-size: var(--type-base--h6);
-  line-height: 1.5;
-  padding-top: var(--spacing-base--1-4);
-  margin-bottom: var(--spacing-base--1-8);
-
-  @media (--mq-medium) {
-    font-size: var(--type-medium--h6);
-    padding-top: var(--spacing-medium--1-4);
-    margin-bottom: var(--spacing-medium--1-8);
+    margin-bottom: var(--spacing-16);
   }
 }
 
 small,
-.coop-smallprint {
-  line-height: 1.25;
-  font-size: var(--type-base--small);
-  padding-top: var(--spacing-base--1-4);
-  margin-bottom: var(--spacing-base--1-8);
+.coop-t-smallprint {
+  font-size: var(--type-sp-s);
 
   @media (--mq-medium) {
-    font-size: var(--type-medium--small);
-    padding-top: var(--spacing-medium--1-4);
-    margin-bottom: var(--spacing-medium--1-8);
+    font-size: var(--type-sp-l);
   }
 }
 
-hr,
-.coop-hr {
-  display: block;
-  margin: 2rem 0 3rem;
-  border-style: solid;
-  border-color: var(--color-grey-mid);
-  border-width: 0 0 1px;
-  height: 0;
-  color: var(--color-grey-mid);
-
-  &.dashed {
-    border-style: dashed;
-  }
-}
-
-.coop-regular {
-  font-weight: normal;
-  font-style: normal;
-}
-
-.coop-italic,
-.coop-em {
-  font-weight: normal;
-  font-style: italic;
-}
-
-.coop-bold,
-.coop-strong {
-  font-weight: bold;
-  font-style: normal;
-}
-
-.coop-medium {
-  font-weight: 500;
-  font-style: normal;
-}
-
-.coop-bold-italic {
-  font-family: bold;
-  font-style: italic;
-}
-
-blockquote,
-.coop-blockquote {
-  margin-bottom: var(--spacing-base--1-2);
-  margin-left: var(--spacing-base--1-4);
-  padding-left: var(--spacing-base--1-4);
-
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 6px;
-    margin-top: var(--spacing-base--1-4);
-    margin-right: 0;
-    margin-bottom: var(--spacing-base--1-4);
-    margin-left: var(--spacing-base--1-4);
-    background: var(--color-grey-light);
-  }
-
-  @media (--mq-medium) {
-    margin-left: var(--spacing-base--1-2);
-  }
-
-  p {
-    margin-bottom: var(--spacing-base--1-4);
-    font-style: normal;
-    font-weight: normal;
-    text-indent: -0.25rem;
-
-    &.alpha,
-    &.beta {
-      font-style: normal;
-      font-weight: normal;
-    }
-  }
-
-  cite {
-    font-size: var(--type-base--body);
-    font-style: normal;
-    margin-top: var(--spacing-base--1-4);
-  }
-}
-
-cite,
-.coop-blockquote__cite {
-  display: block;
-  font-size: 0.75rem;
-}
-
-del,
-.coop-line-through {
-  text-decoration: line-through;
-}
-
-address {
-  font-weight: normal;
-  font-style: normal;
-}
-
-.coop-intro-text {
-  font-size: var(--type-base--lead);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-base--1-8);
-}
-
-p + ul {
-  margin-top: calc(-1 * var(--spacing-base--1-8));
-
-  @media (--mq-medium) {
-    margin-top: calc(-1 * var(--spacing-medium--1-8));
-  }
-}
-
-dl,
-.coop-definition-list {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-top: 0;
-  margin-bottom: var(--spacing-base--1-2);
-
-  dt {
-    font-family: var(--font-family);
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-
-  dd {
-    font-family: var(--font-family);
-    margin: 0 0 var(--spacing-base--1-4);
-  }
-}
-
-.coop-undecorated-list,
-.coop-list-bare {
-  list-style-type: none;
-  padding: 0;
-}
-
-.coop-list-inline {
-  list-style-type: none;
-  padding: 0;
-
-  li {
-    display: inline-block;
-  }
-}
-
-/* ===================================
- * Links - Co-op Front-end Foundations
- * =================================== */
-
-a {
+a,
+.coop-t-link {
   color: var(--color-link);
   text-decoration: underline;
+  text-decoration-skip-ink: auto;
 
   &:hover {
     color: var(--color-link--hover);
@@ -340,11 +174,15 @@ a {
   }
 }
 
-.link-white {
+/* New file - typography utilities */
+
+.coop-t-link-white {
   color: var(--color-white);
+  text-decoration: underline;
 
   &:hover {
     color: var(--color-white);
+    text-decoration: none;
   }
 
   &:active,
@@ -355,11 +193,13 @@ a {
   }
 }
 
-.link-black {
+.coop-t-link-black {
   color: var(--color-black);
+  text-decoration: underline;
 
   &:hover {
     color: var(--color-black);
+    text-decoration: none;
   }
 
   &:active,
@@ -368,4 +208,102 @@ a {
     outline: 2px dotted var(--color-black);
     outline-offset: 3px;
   }
+}
+
+hr,
+.coop-t-hr {
+  display: block;
+  border-style: solid;
+  border-color: var(--color-grey-mid);
+  border-width: 0 0 1px;
+  height: 0;
+  color: var(--color-grey-mid);
+  margin-top: var(--spacing-16);
+  margin-bottom: var(--spacing-32);
+
+  @media (--mq-medium) {
+    margin-top: var(--spacing-32);
+    margin-bottom: var(--spacing-64);
+  }
+}
+
+.coop-t-regular {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.coop-t-talic {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.coop-t-bold {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.coop-t-medium {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.coop-t-bold-italic {
+  font-family: bold;
+  font-style: italic;
+}
+
+.coop-t-text-centre {
+  text-align: center;
+}
+
+.coop-t-text-left {
+  text-align: left;
+}
+
+.coop-t-text-right {
+  text-align: right;
+}
+
+.coop-t-nowrap {
+  white-space: nowrap;
+}
+
+.coop-t-font-size-14 {
+  font-size: 0.875rem; /* 14px */
+}
+
+.coop-t-font-size-16 {
+  font-size: 1rem; /* 16px */
+}
+
+.coop-t-font-size-18 {
+  font-size: 1.125rem; /* 18px */
+}
+
+.coop-t-font-size-20 {
+  font-size: 1.25rem; /* 20px */
+}
+
+.coop-t-font-size-22 {
+  font-size: 1.375rem; /* 22px */
+}
+
+.coop-t-font-size-24 {
+  font-size: 1.5rem; /* 24px */
+}
+
+.coop-t-font-size-26 {
+  font-size: 1.625rem; /* 26px */
+}
+
+.coop-t-font-size-28 {
+  font-size: 1.75rem; /* 28px */
+}
+
+.coop-t-font-size-30 {
+  font-size: 1.875rem; /* 30px */
+}
+
+.coop-t-font-size-32 {
+  font-size: 2rem; /* 32px */
 }
