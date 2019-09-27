@@ -506,15 +506,8 @@ blockquote p,
   font-weight: normal;
   text-indent: -0.25rem;
 }
-blockquote p.alpha,
-blockquote p.beta,
-.coop-blockquote p.alpha,
-.coop-blockquote p.beta {
-  font-style: normal;
-  font-weight: normal;
-}
-blockquote cite,
-.coop-blockquote cite {
+blockquote p cite,
+.coop-blockquote p cite {
   font-size: 1rem;
   font-size: var(--type-base--body);
   font-style: normal;
@@ -559,14 +552,12 @@ dl,
   margin-bottom: calc(2rem / 2);
   margin-bottom: var(--spacing-base--1-2);
 }
-dl dt,
 .coop-definition-list dt {
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-weight: bold;
   margin-bottom: 0;
 }
-dl dd,
 .coop-definition-list dd {
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
