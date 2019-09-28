@@ -436,6 +436,24 @@ ol {
     margin-bottom: var(--spacing-16);
   }
 }
+dl,
+.coop-t-definition-list {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: var(--spacing-base--1-2);
+}
+.coop-t-definition-list dt {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.coop-t-definition-list dd {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
+  margin: 0 0 var(--spacing-base--1-4);
+}
 small,
 .coop-t-smallprint {
   font-size: 1rem;
@@ -447,6 +465,46 @@ small,
     font-size: 1.2499999rem;
     font-size: var(--type-sp-l);
   }
+}
+blockquote,
+.coop-t-blockquote {
+  margin-bottom: var(--spacing-base--1-2);
+  margin-left: var(--spacing-base--1-4);
+  padding-left: var(--spacing-base--1-4);
+}
+blockquote:before,
+blockquote:after,
+.coop-t-blockquote:before,
+.coop-t-blockquote:after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 6px;
+  margin-top: var(--spacing-base--1-4);
+  margin-right: 0;
+  margin-bottom: var(--spacing-base--1-4);
+  margin-left: var(--spacing-base--1-4);
+  background: #f3f3f3;
+  background: var(--color-grey-light);
+}
+@media (min-width: 46.875em) {
+  blockquote,
+  .coop-t-blockquote {
+    margin-left: var(--spacing-base--1-2);
+  }
+}
+blockquote p,
+.coop-t-blockquote p {
+  margin-bottom: var(--spacing-base--1-4);
+  font-style: normal;
+  font-weight: normal;
+  text-indent: -0.25rem;
+}
+blockquote p cite,
+.coop-t-blockquote p cite {
+  font-size: var(--type-base--body);
+  font-style: normal;
+  margin-top: var(--spacing-base--1-4);
 }
 a,
 .coop-t-link {

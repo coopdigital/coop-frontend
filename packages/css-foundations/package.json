@@ -31,7 +31,6 @@
     "@coopdigital/foundations-typography": "^2.1.2",
     "@coopdigital/foundations-vars": "^1.2.4",
     "autoprefixer": "^9.6.0",
-    "normalize.css": "~8.0.1",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
     "postcss-import": "^12.0.1",
