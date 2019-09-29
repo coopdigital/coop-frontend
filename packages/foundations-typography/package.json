@@ -4,7 +4,7 @@
   "description": "Co-op Foundations: Typography",
   "main": "dist/typography.css",
   "style": "src/typography.pcss",
-  "author": "Matthew Morek (matthew.morek@coopdigital.co.uk)",
+  "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
   "license": "MIT",
   "files": [
     "src",

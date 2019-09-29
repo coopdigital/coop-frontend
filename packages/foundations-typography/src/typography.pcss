@@ -72,6 +72,16 @@ ol + .coop-t-h6 {
   }
 }
 
+.coop-t-h-mega {
+  font-size: var(--type-h1-mega-s);
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    font-size: var(--type-h1-mega-l);
+    margin-bottom: var(--spacing-16);
+  }
+}
+
 h1,
 .coop-t-h1 {
   font-size: var(--type-h1-s);
@@ -144,6 +154,15 @@ ol {
   @media (--mq-medium) {
     margin-bottom: var(--spacing-16);
   }
+}
+
+.coop-u-list-bare {
+  list-style-type: none;
+  padding: 0;
+}
+
+.coop-u-list-inline li {
+  display: inline-block;
 }
 
 dl,
@@ -231,8 +250,6 @@ a,
     outline-offset: 3px;
   }
 }
-
-/* New file - typography utilities */
 
 .coop-t-link-white {
   color: var(--color-white);
@@ -325,6 +342,8 @@ hr,
 .coop-t-nowrap {
   white-space: nowrap;
 }
+
+/* Utilities */
 
 .coop-t-font-size-14 {
   font-size: 0.875rem; /* 14px */

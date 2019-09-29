@@ -1,3 +1,119 @@
+/* MQ Breakpoints */
+/* 320px */
+/* 480px */
+/* 750px */
+/* 960px */
+/* 1300px */
+:root {
+  --font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* font-size: 1.2499999rem uses thinner text decoration on links rather than 1.25rem */
+
+  /* Typography */
+  --type-body-l: 1.25rem; /* 20px */
+  --type-body-s: 1.125rem; /* 18px */
+
+  --type-line-height: 1.5; /* 32px */
+
+  --type-h1-mega-l: 3.5rem; /* 56px */
+  --type-h1-mega-s: 3rem; /* 48px */
+  --type-h1-l: 2.875rem; /* 46px */
+  --type-h1-s: 1.875rem; /* 30px */
+  --type-h2-l: 2rem; /* 32px */
+  --type-h2-s: 1.625rem; /* 26px */
+  --type-h3-l: 1.625rem; /* 26px */
+  --type-h3-s: 1.375rem; /* 22px */
+  --type-h456-l: 1.375rem; /* 22px */
+  --type-h456-s: 1.125rem; /* 18px */
+
+  --type-blockquote: 1.2499999rem; /* 18px */
+
+  --type-lp-l: 1.625rem; /* 26px */
+  --type-lp-s: 1.375rem; /* 22px */
+
+  --type-sp-l: 1.2499999rem; /* 18px */
+  --type-sp-s: 1rem; /* 16px */
+
+  /* Spacing */
+  --spacing-64: 4rem; /* 64px */
+  --spacing-32: 2rem; /* 32px */
+  --spacing-16: 1rem; /* 16px */
+  --spacing-8: 0.5rem; /* 8px  */
+  --spacing-4: 0.25rem; /* 4px  */
+  --spacing-2: 0.125rem; /* 2px  */
+
+  /* Colours */
+  --color-brand: #00b1e7;
+  --color-text: #282828;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Links */
+  --color-link: #00729a;
+  --color-link--hover: #000102;
+  --color-link--focus: #eec300;
+  --color-link--active: #005981;
+  --color-link--visited: #004c67;
+
+  /* Buttons */
+  --color-button-primary: #0f8482;
+  --color-button-primary--hover: #2b9e9c;
+  --color-button-primary--active: #0c6d6b;
+
+  --color-button-dark: #374c63;
+  --color-button-dark--hover: #4a6683;
+  --color-button-dark--active: #2e3f53;
+
+  /* default button */
+  --color-button: var(--color-button-dark);
+  --color-button--hover: var(--color-button-dark--hover);
+  --color-button--active: var(--color-button-dark--active);
+
+  /* Palette */
+  /* Greyscale */
+  --color-grey-light: #f3f3f3;
+  --color-grey-mid: #c4c4c4;
+  --color-grey-dark: #6e6e6e;
+
+  /* Yellowscale */
+  --color-yellow-bright: #ffff00;
+  --color-yellow-light: #ffec00;
+  --color-yellow-mid: #ffd308;
+
+  /* Greenscale */
+  --color-green-bright: #edfb3c;
+  --color-green-light: #bad303;
+  --color-green-mid: #4f820d;
+  --color-green-dark: #385c0a;
+
+  /* Turquoisescale - previously GreenBlue */
+  --color-turquoise-bright: #0afbfb;
+  --color-turquoise-light: #72dcdb;
+  --color-turquoise-mid: #0f8482;
+  --color-turquoise-dark: #166d66;
+
+  /* Bluescale */
+  --color-blue-bright: #418cfc;
+  --color-blue-light: #92d8fe;
+  --color-blue-mid: #326bb7;
+  --color-blue-dark: #334c89;
+
+  /* Pinkscale */
+  --color-pink-bright: #fc43d3;
+  --color-pink-light: #ff80d3;
+
+  /* Purplescale */
+  --color-purple-mid: #ad208e;
+  --color-purple-dark: #61307d;
+
+  /* Orangescale */
+  --color-orange-mid: #f8642c;
+
+  /* Redscale */
+  --color-red-mid: #d63118;
+  --color-red-dark: #9f2a00;
+}
 table,
 .coop-table {
   width: 100%;
@@ -5,86 +121,85 @@ table,
   font-size: var(--type-base--body);
   margin-bottom: var(--spacing-base--1-2);
 }
-
-@media (--mq-medium) {
+@media (min-width: 46.875em) {
   table,
   .coop-table {
     font-size: var(--type-medium--body);
     margin-bottom: var(--spacing-medium--1-2);
   }
 }
-
 table caption,
 .coop-table caption {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-weight: bold;
   text-align: left;
 }
-
-table th,
+table,
 .coop-table th {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-weight: bold;
 }
-
 table th,
-table td,
 .coop-table th,
+table td,
 .coop-table td {
   padding: var(--spacing-base--1-4) var(--spacing-base--1-4)
     var(--spacing-base--1-4) 0;
   text-align: left;
   vertical-align: top;
 }
-
 table thead,
 .coop-table thead {
+  border-bottom: 2px solid #c4c4c4;
   border-bottom: 2px solid var(--color-grey-mid);
 }
-
 table thead .coop-table--regular-th,
 .coop-table thead .coop-table--regular-th {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
 }
-
 table tbody th,
-.coop-table tbody th {
+.coop-table thead th {
   position: relative;
 }
-
 table tbody th:after,
-.coop-table tbody th:after {
+.coop-table thead th:after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
   height: 1px;
-  width: 80%;
+  width: 85%;
+  border-bottom: 1px solid #c4c4c4;
   border-bottom: 1px solid var(--color-grey-mid);
 }
-
 table tbody td,
-.coop-table tbody td {
+.coop-table thead td {
+  position: relative;
+}
+table tbody td:after,
+.coop-table thead td:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 85%;
+  border-bottom: 1px solid #c4c4c4;
   border-bottom: 1px solid var(--color-grey-mid);
 }
-
 table tfoot td,
 .coop-table tfoot td {
+  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
 }
-
 table ul,
 .coop-table ul {
   margin-bottom: 0;
 }
-
-/* Stacked columns basic responsive table solution */
-
-.coop-table-smallscreen--stacked {
-  /* defaults to 480px */
-}
-
-@media (--mq-small) {
+@media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked th,
   .coop-table-smallscreen--stacked td {
     padding-top: var(--spacing-base--1-8);
@@ -93,11 +208,14 @@ table ul,
     padding-left: 0;
     text-align: left;
   }
-
+}
+@media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked thead,
   .coop-table-smallscreen--stacked tfoot {
     border-bottom: 0;
   }
+}
+@media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked thead th,
   .coop-table-smallscreen--stacked thead td,
   .coop-table-smallscreen--stacked tfoot th,
@@ -112,18 +230,21 @@ table ul,
     opacity: 0;
     letter-spacing: 0;
   }
+}
+@media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked tbody th {
     display: block;
+    border-top: 2px solid #c4c4c4;
     border-top: 2px solid var(--color-grey-mid);
     margin-top: var(--spacing-base--1-4);
   }
-
-  .coop-table-smallscreen--stacked
-    tbody
-    .coop-table-smallscreen--stacked_hidden {
+}
+@media (max-width: 46.875em) {
+  .coop-table-smallscreen--stacked_hidden {
     display: none;
   }
-
+}
+@media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked tbody td {
     display: block;
     border-bottom: 0;
@@ -132,74 +253,35 @@ table ul,
   .coop-table-smallscreen--stacked tbody td:before {
     content: attr(data-th) "";
     vertical-align: top;
+    font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: var(--font-family);
     font-weight: normal;
     /* Should be amended with a custom value... */
     width: 40%;
     display: inline-block;
   }
-  .coop-table-smallscreen--stacked tbody th:after {
+}
+@media (max-width: 46.875em) {
+  .coop-table-smallscreen--stacked tbody th::after {
     border-bottom: 0;
   }
-
+}
+@media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked tbody ul {
     display: inline-block;
-    /* This old chestnut https://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
     margin-left: -5px;
   }
-
+}
+@media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked tbody a {
     margin-left: -5px;
   }
 }
-
-.coop-table--unstyled {
-  border: 0;
-  margin-bottom: 0;
-}
-
-.coop-table--unstyled th,
-.coop-table--unstyled td {
-  padding-top: var(--spacing-base--1-8);
-  padding-bottom: var(--spacing-base--1-8);
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media (--mq-medium) {
-  .coop-table--unstyled th,
-  .coop-table--unstyled td {
-    padding: var(--spacing-medium--1-4);
-  }
-}
-
-.coop-table--unstyled .coop-table--tr-divider {
-  border-bottom: 1px solid var(--color-grey-mid);
-}
-
-.coop-table--unstyled thead th {
-  background: var(--color-white);
-}
-
-.coop-table--unstyled tbody th,
-.coop-table--unstyled tbody td {
-  background: var(--color-white);
-  border-bottom: 0;
-  font-family: var(--font-family);
-  font-weight: normal;
-}
-
-.coop-table--unstyled .coop-table__bold {
-  font-family: var(--font-family);
-  font-weight: bold;
-}
-
 .coop-table__header {
   padding: 1rem 0 0 0;
   margin-bottom: 0;
 }
-
-@media (--mq-medium) {
+@media (max-width: 46.875em) {
   .coop-table__header {
     padding: 1rem 0.5rem 0.8rem 0.5rem;
   }
