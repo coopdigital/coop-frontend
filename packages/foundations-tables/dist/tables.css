@@ -35,12 +35,27 @@
   --type-sp-s: 1rem; /* 16px */
 
   /* Spacing */
-  --spacing-64: 4rem; /* 64px */
-  --spacing-32: 2rem; /* 32px */
-  --spacing-16: 1rem; /* 16px */
-  --spacing-8: 0.5rem; /* 8px  */
-  --spacing-4: 0.25rem; /* 4px  */
-  --spacing-2: 0.125rem; /* 2px  */
+  --spacing-64: 4rem;
+  --spacing-32: 2rem;
+  --spacing-16: 1rem;
+  --spacing-8: 0.5rem;
+  --spacing-4: 0.25rem;
+  --spacing-2: 0.125rem;
+
+  /* Legacy spacing */
+  /* Spacing: Base */
+  --spacing-base: 2rem;
+  --spacing-base--3-4: calc(var(--spacing-base) / 4 * 3);
+  --spacing-base--1-2: calc(var(--spacing-base) / 2);
+  --spacing-base--1-4: calc(var(--spacing-base) / 4);
+  --spacing-base--1-8: calc(var(--spacing-base) / 8);
+
+  /* Spacing: Medium */
+  --spacing-medium: 4rem;
+  --spacing-medium--3-4: calc(var(--spacing-medium) / 4 * 3);
+  --spacing-medium--1-2: calc(var(--spacing-medium) / 2);
+  --spacing-medium--1-4: calc(var(--spacing-medium) / 4);
+  --spacing-medium--1-8: calc(var(--spacing-medium) / 8);
 
   /* Colours */
   --color-brand: #00b1e7;
@@ -119,12 +134,14 @@ table,
   width: 100%;
   table-layout: fixed;
   font-size: var(--type-base--body);
+  margin-bottom: calc(2rem / 2);
   margin-bottom: var(--spacing-base--1-2);
 }
 @media (min-width: 46.875em) {
   table,
   .coop-table {
     font-size: var(--type-medium--body);
+    margin-bottom: calc(4rem / 2);
     margin-bottom: var(--spacing-medium--1-2);
   }
 }
@@ -145,6 +162,7 @@ table th,
 .coop-table th,
 table td,
 .coop-table td {
+  padding: calc(2rem / 4) calc(2rem / 4) calc(2rem / 4) 0;
   padding: var(--spacing-base--1-4) var(--spacing-base--1-4)
     var(--spacing-base--1-4) 0;
   text-align: left;
@@ -202,7 +220,9 @@ table ul,
 @media (max-width: 46.875em) {
   .coop-table-smallscreen--stacked th,
   .coop-table-smallscreen--stacked td {
+    padding-top: calc(2rem / 8);
     padding-top: var(--spacing-base--1-8);
+    padding-bottom: calc(2rem / 8);
     padding-bottom: var(--spacing-base--1-8);
     padding-right: 0;
     padding-left: 0;
@@ -236,6 +256,7 @@ table ul,
     display: block;
     border-top: 2px solid #c4c4c4;
     border-top: 2px solid var(--color-grey-mid);
+    margin-top: calc(2rem / 4);
     margin-top: var(--spacing-base--1-4);
   }
 }

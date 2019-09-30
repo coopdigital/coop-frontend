@@ -70,6 +70,7 @@
     "last 2 versions"
   ],
   "devDependencies": {
+    "postcss-custom-properties": "^9.0.2",
     "postcss-nesting": "^7.0.1"
   }
 }

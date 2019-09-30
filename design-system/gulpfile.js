@@ -13,6 +13,7 @@ const imagemin = require('gulp-imagemin');
 const cssimport = require('gulp-cssimport');
 const postcss = require('gulp-postcss');
 const postcssCustomMedia = require('postcss-custom-media');
+const postcssCustomProperties = require('postcss-custom-properties');
 const postcssNesting = require('postcss-nesting');
 const spawn = require('child_process').spawn;
 
@@ -120,6 +121,7 @@ function css() {
       postcss(
         [
           postcssCustomMedia(),
+          postcssCustomProperties(),
           postcssNesting()
         ]
       )

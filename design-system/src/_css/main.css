@@ -1,7 +1,7 @@
 
 /* Synced with coop.co.uk - remove later */
 @import 'design-system/temp-vars.css';
-             
+              
 /* Foundations */    
 @import "normalize.css/normalize.css";
 @import "foundations-vars/src/vars.pcss"; 
@@ -20,7 +20,10 @@
 /* Components */
 @import 'component-skipnav/dist/skipnav.css';
 @import 'component-signpost/dist/signpost.css';
-@import 'component-tags/dist/tags.css';
+
+/* Removed as the base 64 encoding breaks the postCSScutomproperties plugin */
+/* @import 'component-tags/dist/tags.css'; */ 
+
 @import 'component-search/dist/component.css';
 @import 'component-card/dist/card.css'; 
 @import 'component-card--product/dist/card--product.css';

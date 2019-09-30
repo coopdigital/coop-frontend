@@ -35,12 +35,27 @@
   --type-sp-s: 1rem; /* 16px */
 
   /* Spacing */
-  --spacing-64: 4rem; /* 64px */
-  --spacing-32: 2rem; /* 32px */
-  --spacing-16: 1rem; /* 16px */
-  --spacing-8: 0.5rem; /* 8px  */
-  --spacing-4: 0.25rem; /* 4px  */
-  --spacing-2: 0.125rem; /* 2px  */
+  --spacing-64: 4rem;
+  --spacing-32: 2rem;
+  --spacing-16: 1rem;
+  --spacing-8: 0.5rem;
+  --spacing-4: 0.25rem;
+  --spacing-2: 0.125rem;
+
+  /* Legacy spacing */
+  /* Spacing: Base */
+  --spacing-base: 2rem;
+  --spacing-base--3-4: calc(var(--spacing-base) / 4 * 3);
+  --spacing-base--1-2: calc(var(--spacing-base) / 2);
+  --spacing-base--1-4: calc(var(--spacing-base) / 4);
+  --spacing-base--1-8: calc(var(--spacing-base) / 8);
+
+  /* Spacing: Medium */
+  --spacing-medium: 4rem;
+  --spacing-medium--3-4: calc(var(--spacing-medium) / 4 * 3);
+  --spacing-medium--1-2: calc(var(--spacing-medium) / 2);
+  --spacing-medium--1-4: calc(var(--spacing-medium) / 4);
+  --spacing-medium--1-8: calc(var(--spacing-medium) / 8);
 
   /* Colours */
   --color-brand: #00b1e7;
@@ -420,6 +435,7 @@ dl,
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 0;
+  margin-bottom: calc(2rem / 2);
   margin-bottom: var(--spacing-base--1-2);
 }
 .coop-t-definition-list dt {
@@ -431,6 +447,7 @@ dl,
 .coop-t-definition-list dd {
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
+  margin: 0 0 calc(2rem / 4);
   margin: 0 0 var(--spacing-base--1-4);
 }
 small,
@@ -447,8 +464,11 @@ small,
 }
 blockquote,
 .coop-t-blockquote {
+  margin-bottom: calc(2rem / 2);
   margin-bottom: var(--spacing-base--1-2);
+  margin-left: calc(2rem / 4);
   margin-left: var(--spacing-base--1-4);
+  padding-left: calc(2rem / 4);
   padding-left: var(--spacing-base--1-4);
 }
 blockquote:before,
@@ -459,9 +479,12 @@ blockquote:after,
   display: block;
   width: 45px;
   height: 6px;
+  margin-top: calc(2rem / 4);
   margin-top: var(--spacing-base--1-4);
   margin-right: 0;
+  margin-bottom: calc(2rem / 4);
   margin-bottom: var(--spacing-base--1-4);
+  margin-left: calc(2rem / 4);
   margin-left: var(--spacing-base--1-4);
   background: #f3f3f3;
   background: var(--color-grey-light);
@@ -469,11 +492,13 @@ blockquote:after,
 @media (min-width: 46.875em) {
   blockquote,
   .coop-t-blockquote {
+    margin-left: calc(2rem / 2);
     margin-left: var(--spacing-base--1-2);
   }
 }
 blockquote p,
 .coop-t-blockquote p {
+  margin-bottom: calc(2rem / 4);
   margin-bottom: var(--spacing-base--1-4);
   font-style: normal;
   font-weight: normal;
@@ -483,6 +508,7 @@ blockquote p cite,
 .coop-t-blockquote p cite {
   font-size: var(--type-base--body);
   font-style: normal;
+  margin-top: calc(2rem / 4);
   margin-top: var(--spacing-base--1-4);
 }
 a,

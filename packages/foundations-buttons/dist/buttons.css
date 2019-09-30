@@ -43,12 +43,27 @@
   --type-sp-s: 1rem; /* 16px */
 
   /* Spacing */
-  --spacing-64: 4rem; /* 64px */
-  --spacing-32: 2rem; /* 32px */
-  --spacing-16: 1rem; /* 16px */
-  --spacing-8: 0.5rem; /* 8px  */
-  --spacing-4: 0.25rem; /* 4px  */
-  --spacing-2: 0.125rem; /* 2px  */
+  --spacing-64: 4rem;
+  --spacing-32: 2rem;
+  --spacing-16: 1rem;
+  --spacing-8: 0.5rem;
+  --spacing-4: 0.25rem;
+  --spacing-2: 0.125rem;
+
+  /* Legacy spacing */
+  /* Spacing: Base */
+  --spacing-base: 2rem;
+  --spacing-base--3-4: calc(var(--spacing-base) / 4 * 3);
+  --spacing-base--1-2: calc(var(--spacing-base) / 2);
+  --spacing-base--1-4: calc(var(--spacing-base) / 4);
+  --spacing-base--1-8: calc(var(--spacing-base) / 8);
+
+  /* Spacing: Medium */
+  --spacing-medium: 4rem;
+  --spacing-medium--3-4: calc(var(--spacing-medium) / 4 * 3);
+  --spacing-medium--1-2: calc(var(--spacing-medium) / 2);
+  --spacing-medium--1-4: calc(var(--spacing-medium) / 4);
+  --spacing-medium--1-8: calc(var(--spacing-medium) / 8);
 
   /* Colours */
   --color-brand: #00b1e7;
@@ -125,6 +140,7 @@
 
 .coop-btn {
   display: inline-block;
+  padding: calc(2rem / 4) calc(calc(2rem / 2) * 1.25);
   padding: var(--spacing-base--1-4) calc(var(--spacing-base--1-2) * 1.25);
   color: #ffffff;
   color: var(--color-white);
@@ -147,6 +163,7 @@
 @media (min-width: 46.875em) {
   .coop-btn {
     font-size: var(--type-medium--body);
+    padding: calc(4rem / 4) calc(calc(4rem / 2) * 1.25);
     padding: var(--spacing-medium--1-4) calc(var(--spacing-medium--1-2) * 1.25);
   }
 }
@@ -202,34 +219,40 @@
 }
 
 .coop-btn--small {
+  padding: calc(2rem / 8) calc(2rem / 4);
   padding: var(--spacing-base--1-8) var(--spacing-base--1-4);
   font-size: 0.8rem;
 }
 
 @media (min-width: 46.875em) {
   .coop-btn--small {
+    padding: calc(4rem / 8) calc(4rem / 4);
     padding: var(--spacing-medium--1-8) var(--spacing-medium--1-4);
   }
 }
 
 .coop-btn--medium {
+  padding: calc(calc(2rem / 4) / 2) calc(2rem / 4);
   padding: calc(var(--spacing-base--1-4) / 2) var(--spacing-base--1-4);
 }
 
 @media (min-width: 46.875em) {
   .coop-btn--medium {
     font-size: var(--type-base--body);
+    padding: calc(calc(4rem / 4) / 2) calc(4rem / 4);
     padding: calc(var(--spacing-medium--1-4) / 2) var(--spacing-medium--1-4);
   }
 }
 
 .coop-btn--large {
+  padding: calc(2rem / 2) calc(2rem / 2);
   padding: var(--spacing-base--1-2) var(--spacing-base--1-2);
   font-size: var(--type-medium--body);
 }
 
 @media (min-width: 46.875em) {
   .coop-btn--large {
+    padding: calc(4rem / 4) calc(4rem / 2);
     padding: var(--spacing-medium--1-4) var(--spacing-medium--1-2);
   }
 }
