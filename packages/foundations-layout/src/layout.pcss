@@ -1,6 +1,6 @@
 @import "@coopdigital/foundations-vars";
 
-/* [namespace]-[utility]-[margin]-[direction] */
+/* [namespace]-[utility]-[margin]-[responsive]-[direction]-[value] */
 
 .coop-u-margin-0 {
   margin: 0;
@@ -14,15 +14,7 @@
   margin-top: var(--spacing-2);
 }
 
-.coop-u-margin-r-2 {
-  margin-right: var(--spacing-2);
-}
-
 .coop-u-margin-b-2 {
-  margin-bottom: var(--spacing-2);
-}
-
-.coop-u-margin-l-2 {
   margin-bottom: var(--spacing-2);
 }
 
@@ -34,16 +26,15 @@
   margin-top: var(--spacing-4);
 }
 
-.coop-u-margin-r-4 {
-  margin-right: var(--spacing-4);
-}
-
 .coop-u-margin-b-4 {
   margin-bottom: var(--spacing-4);
 }
 
-.coop-u-margin-l-4 {
-  margin-bottom: var(--spacing-4);
+.coop-u-margin-resp-b-4-2 {
+  margin-bottom: var(--spacing-2);
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-4);
+  }
 }
 
 .coop-u-margin-8 {
@@ -54,16 +45,15 @@
   margin-top: var(--spacing-8);
 }
 
-.coop-u-margin-r-8 {
-  margin-right: var(--spacing-8);
-}
-
 .coop-u-margin-b-8 {
   margin-bottom: var(--spacing-8);
 }
 
-.coop-u-margin-l-8 {
-  margin-bottom: var(--spacing-8);
+.coop-u-margin-resp-b-8-4 {
+  margin-bottom: var(--spacing-4);
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-8);
+  }
 }
 
 .coop-u-margin-16 {
@@ -74,16 +64,15 @@
   margin-top: var(--spacing-16);
 }
 
-.coop-u-margin-r-16 {
-  margin-right: var(--spacing-16);
-}
-
 .coop-u-margin-b-16 {
   margin-bottom: var(--spacing-16);
 }
 
-.coop-u-margin-l-16 {
-  margin-bottom: var(--spacing-16);
+.coop-u-margin-resp-b-16-8 {
+  margin-bottom: var(--spacing-8);
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-16);
+  }
 }
 
 .coop-u-margin-32 {
@@ -94,16 +83,15 @@
   margin-top: var(--spacing-32);
 }
 
-.coop-u-margin-r-32 {
-  margin-right: var(--spacing-32);
-}
-
 .coop-u-margin-b-32 {
   margin-bottom: var(--spacing-32);
 }
 
-.coop-u-margin-l-32 {
-  margin-bottom: var(--spacing-32);
+.coop-u-margin-resp-b-32-16 {
+  margin-bottom: var(--spacing-16);
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-32);
+  }
 }
 
 .coop-u-margin-64 {
@@ -114,16 +102,15 @@
   margin-top: var(--spacing-64);
 }
 
-.coop-u-margin-r-64 {
-  margin-right: var(--spacing-64);
-}
-
 .coop-u-margin-b-64 {
   margin-bottom: var(--spacing-64);
 }
 
-.coop-u-margin-l-64 {
-  margin-bottom: var(--spacing-64);
+.coop-u-margin-resp-b-64-32 {
+  margin-bottom: var(--spacing-32);
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-64);
+  }
 }
 
 .coop-u-padding-0 {
@@ -134,24 +121,72 @@
   padding: var(--spacing-2);
 }
 
+.coop-u-padding-t-2 {
+  padding-top: var(--spacing-2);
+}
+
+.coop-u-padding-b-2 {
+  padding-bottom: var(--spacing-2);
+}
+
 .coop-u-padding-4 {
   padding: var(--spacing-4);
+}
+
+.coop-u-padding-t-4 {
+  padding-top: var(--spacing-4);
+}
+
+.coop-u-padding-b-4 {
+  padding-bottom: var(--spacing-4);
 }
 
 .coop-u-padding-8 {
   padding: var(--spacing-8);
 }
 
+.coop-u-padding-t-8 {
+  padding-top: var(--spacing-8);
+}
+
+.coop-u-padding-b-8 {
+  padding-bottom: var(--spacing-8);
+}
+
 .coop-u-padding-16 {
   padding: var(--spacing-16);
+}
+
+.coop-u-padding-t-16 {
+  padding-top: var(--spacing-16);
+}
+
+.coop-u-padding-b-16 {
+  padding-bottom: var(--spacing-16);
 }
 
 .coop-u-padding-32 {
   padding: var(--spacing-32);
 }
 
+.coop-u-padding-t-32 {
+  padding-top: var(--spacing-32);
+}
+
+.coop-u-padding-b-32 {
+  padding-bottom: var(--spacing-32);
+}
+
 .coop-u-padding-64 {
   padding: var(--spacing-64);
+}
+
+.coop-u-padding-t-64 {
+  padding-top: var(--spacing-64);
+}
+
+.coop-u-padding-b-64 {
+  padding-bottom: var(--spacing-64);
 }
 
 .coop-u-border {
