@@ -147,12 +147,10 @@ table,
 }
 table caption,
 .coop-table caption {
-  font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: var(--font-family);
-  font-weight: bold;
+  font-weight: normal;
   text-align: left;
 }
-table,
+table th,
 .coop-table th {
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
@@ -173,8 +171,7 @@ table thead,
   border-bottom: 2px solid #c4c4c4;
   border-bottom: 2px solid var(--color-grey-mid);
 }
-table thead .coop-table--regular-th,
-.coop-table thead .coop-table--regular-th {
+.coop-table--regular-th {
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
 }
@@ -189,7 +186,7 @@ table tbody th:after,
   left: 0;
   bottom: -1px;
   height: 1px;
-  width: 85%;
+  width: 95%;
   border-bottom: 1px solid #c4c4c4;
   border-bottom: 1px solid var(--color-grey-mid);
 }
@@ -204,7 +201,7 @@ table tbody td:after,
   left: 0;
   bottom: -1px;
   height: 1px;
-  width: 85%;
+  width: 95%;
   border-bottom: 1px solid #c4c4c4;
   border-bottom: 1px solid var(--color-grey-mid);
 }
