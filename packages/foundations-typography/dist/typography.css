@@ -612,6 +612,10 @@ hr,
   font-family: bold;
   font-style: italic;
 }
+a.coop-t-nounderline,
+.coop-t-nounderline {
+  text-decoration: none;
+}
 .coop-t-text-centre {
   text-align: center;
 }
