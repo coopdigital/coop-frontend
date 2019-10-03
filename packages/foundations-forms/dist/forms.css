@@ -144,8 +144,8 @@
 }
 
 .coop-form__row {
-  margin-bottom: calc(2rem / 4);
-  margin-bottom: var(--spacing-base--1-4);
+  margin-bottom: calc(2rem / 2);
+  margin-bottom: var(--spacing-base--1-2);
 }
 
 .coop-form__row::before,
@@ -180,7 +180,7 @@ label,
   display: block;
   color: #6e6e6e;
   color: var(--color-grey-dark);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-style: normal;
@@ -217,7 +217,7 @@ fieldset,
   width: 100%;
 }
 
-input[type="text"],
+input,
 .coop-form__input,
 textarea,
 .coop-form__textarea {
@@ -237,7 +237,7 @@ textarea,
   font-size: 1.25rem;
 }
 
-input[type="text"]:focus,
+input:focus,
 .coop-form__input:focus,
 textarea:focus,
 .coop-form__textarea:focus {
@@ -251,7 +251,7 @@ textarea:focus,
   transition: none;
 }
 
-input[type="text"]:hover::-webkit-input-placeholder,
+input:hover::-webkit-input-placeholder,
 .coop-form__input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder,
 .coop-form__textarea:hover::-webkit-input-placeholder {
@@ -259,7 +259,7 @@ textarea:hover::-webkit-input-placeholder,
   color: var(--color-grey-mid);
 }
 
-input[type="text"]:focus::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder,
 .coop-form__input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder,
 .coop-form__textarea:focus::-webkit-input-placeholder {
@@ -267,7 +267,7 @@ textarea:focus::-webkit-input-placeholder,
   opacity: 0;
 }
 
-input[type="text"].coop-form__field--inline,
+input.coop-form__field--inline,
 .coop-form__input.coop-form__field--inline,
 textarea.coop-form__field--inline,
 .coop-form__textarea.coop-form__field--inline {
@@ -490,4 +490,30 @@ input[type="radio"],
 
 .coop-c-form-choice__input:checked + .coop-c-form-choice__label::after {
   opacity: 1;
+}
+
+.coop-c-message {
+  padding: 0.5rem 1rem;
+  padding: var(--spacing-8) var(--spacing-16);
+  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 46.875em) {
+  .coop-c-message {
+    padding: 1rem 2rem;
+    padding: var(--spacing-16) var(--spacing-32);
+    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-32);
+  }
+}
+
+.coop-c-message--error {
+  background: #fef3f4;
+  border: 1px solid #d63118;
+}
+
+.coop-c-form-error__text {
+  color: #d63118;
+  margin-bottom: 0;
 }

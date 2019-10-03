@@ -7,7 +7,7 @@
 }
 
 .coop-form__row {
-  margin-bottom: var(--spacing-base--1-4);
+  margin-bottom: var(--spacing-base--1-2);
 
   &::before,
   &::after {
@@ -36,7 +36,7 @@ label,
 .coop-label__hint {
   display: block;
   color: var(--color-grey-dark);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
@@ -67,7 +67,7 @@ fieldset,
   width: 100%;
 }
 
-input[type="text"],
+input,
 .coop-form__input,
 textarea,
 .coop-form__textarea {
@@ -298,4 +298,24 @@ input[type="radio"],
 
 .coop-c-form-choice__input:checked + .coop-c-form-choice__label::after {
   opacity: 1;
+}
+
+.coop-c-message {
+  padding: var(--spacing-8) var(--spacing-16);
+  margin-bottom: var(--spacing-16);
+
+  @media (--mq-medium) {
+    padding: var(--spacing-16) var(--spacing-32);
+    margin-bottom: var(--spacing-32);
+  }
+}
+
+.coop-c-message--error {
+  background: #fef3f4;
+  border: 1px solid #d63118;
+}
+
+.coop-c-form-error__text {
+  color: #d63118;
+  margin-bottom: 0;
 }

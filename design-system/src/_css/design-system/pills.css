@@ -44,3 +44,12 @@
     border: 2px solid var(--color-link--hover);
     color: var(--color-link--hover);
 }
+
+.coop-list-inline li {
+    display: inline-block;
+}
+
+.coop-list-bare {
+    list-style: none;
+    padding-left: 0;
+}

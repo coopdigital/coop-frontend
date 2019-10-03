@@ -45,3 +45,11 @@ table {
     border: 1px solid var(--color-grey-dark);
     background: var(--color-grey-mid);
 }
+
+.m-bh-med-b {
+    margin-bottom: 32px;
+}
+
+.coop-u-padding-tb {
+    padding-top: 32px;
+}
