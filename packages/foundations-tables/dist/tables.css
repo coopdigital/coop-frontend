@@ -175,27 +175,16 @@ table thead,
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
 }
+table tbody td,
+.coop-table thead td,
 table tbody th,
 .coop-table thead th {
   position: relative;
 }
+table tbody td:after,
+.coop-table thead td:after,
 table tbody th:after,
 .coop-table thead th:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 1px;
-  width: 95%;
-  border-bottom: 1px solid #c4c4c4;
-  border-bottom: 1px solid var(--color-grey-mid);
-}
-table tbody td,
-.coop-table thead td {
-  position: relative;
-}
-table tbody td:after,
-.coop-table thead td:after {
   content: "";
   position: absolute;
   left: 0;

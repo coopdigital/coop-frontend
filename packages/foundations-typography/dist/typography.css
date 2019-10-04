@@ -369,7 +369,9 @@ h3,
 h4,
 h5,
 h6,
-.coop-t-h456 {
+.coop-t-h4,
+.coop-t-h5,
+.coop-t-h6 {
   font-size: 1.125rem;
   font-size: var(--type-h456-s);
   margin-bottom: 0.5rem;
@@ -379,7 +381,9 @@ h6,
   h4,
   h5,
   h6,
-  .coop-t-h456 {
+  .coop-t-h4,
+  .coop-t-h5,
+  .coop-t-h6 {
     font-size: 1.375rem;
     font-size: var(--type-h456-l);
     margin-bottom: 1rem;
@@ -464,12 +468,19 @@ small,
 }
 blockquote,
 .coop-t-blockquote {
-  margin-bottom: calc(2rem / 2);
-  margin-bottom: var(--spacing-base--1-2);
-  margin-left: calc(2rem / 4);
-  margin-left: var(--spacing-base--1-4);
-  padding-left: calc(2rem / 4);
-  padding-left: var(--spacing-base--1-4);
+  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-32);
+  margin-left: 1rem;
+  margin-left: var(--spacing-16);
+  padding-left: 1rem;
+  padding-left: var(--spacing-16);
+}
+@media (min-width: 46.875em) {
+  blockquote,
+  .coop-t-blockquote {
+    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-32);
+  }
 }
 blockquote:before,
 blockquote:after,
@@ -479,27 +490,15 @@ blockquote:after,
   display: block;
   width: 45px;
   height: 6px;
-  margin-top: calc(2rem / 4);
-  margin-top: var(--spacing-base--1-4);
-  margin-right: 0;
-  margin-bottom: calc(2rem / 4);
-  margin-bottom: var(--spacing-base--1-4);
-  margin-left: calc(2rem / 4);
-  margin-left: var(--spacing-base--1-4);
+  margin: 1rem 0;
+  margin: var(--spacing-16) 0;
   background: #f3f3f3;
   background: var(--color-grey-light);
 }
-@media (min-width: 46.875em) {
-  blockquote,
-  .coop-t-blockquote {
-    margin-left: calc(2rem / 2);
-    margin-left: var(--spacing-base--1-2);
-  }
-}
 blockquote p,
 .coop-t-blockquote p {
-  margin-bottom: calc(2rem / 4);
-  margin-bottom: var(--spacing-base--1-4);
+  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-16);
   font-style: normal;
   font-weight: normal;
   text-indent: -0.25rem;
@@ -508,8 +507,8 @@ blockquote p cite,
 .coop-t-blockquote p cite {
   font-size: var(--type-base--body);
   font-style: normal;
-  margin-top: calc(2rem / 4);
-  margin-top: var(--spacing-base--1-4);
+  margin-top: 1rem;
+  margin-top: var(--spacing-16);
 }
 a,
 .coop-t-link {
