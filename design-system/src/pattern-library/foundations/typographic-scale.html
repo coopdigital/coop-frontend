@@ -34,7 +34,7 @@ id: pattern-library
             </ul>
         </nav>
     </div>
-    <div class="coop-u-grey-light-bg m-bh-med-b">
+    <div class="coop-u-grey-light-bg coop-u-padding-resp-t-32-16 coop-u-padding-resp-b-32-16 coop-u-margin-resp-b-32-16">
         <div class="coop-l-wrap">
             <div class="coop-l-row">
                 <div class="coop-l-column coop-l-all-12">
@@ -68,16 +68,11 @@ id: pattern-library
     <div class="coop-l-wrap">
         <div class="coop-l-row">
             <div class="coop-l-column coop-l-medium-7 coop-l-small-12">
-                <section id="design-and-content" class="m-tb-med-x margin-bb padding-bh">
+                <section id="design-and-content" class="coop-u-margin-resp-b-32-16">
                     <h2>Design and content</h2>
                     <p>{{ designPattern.design_and_content_documentation | markdownify }}</p>
                 </section>
-                <section id="suggest-a-change" class="m-tb-med-x margin-bb padding-bh">
-                    <h2>Suggest a pattern</h2>
-                    <p>Use this form to suggest a new pattern or a change to an existing one.</p>
-                    <p><a href="https://goo.gl/forms/jWx9l3CmFJ5JN2JB2">Suggest a new pattern or a change</a></p>
-                </section>
-                {% include pattern-page/suggest-a-pattern.html %}
+                {% include pattern-page/suggest-a-pattern.html %} 
             </div>
         </div>
     </div>

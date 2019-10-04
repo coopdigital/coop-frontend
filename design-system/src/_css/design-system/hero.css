@@ -15,12 +15,6 @@
     position: relative;
 }
 
-@media (--mq-xlarge) {
-    .ds-hero {
-        margin-bottom: 32px;
-    }
-}
-
 .ds-hero .coop-u-pull-right {
     /* foundations are not loading in the right order */
     float: right;
@@ -67,7 +61,7 @@
 }
 
 .intro-box {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .intro-box p,
@@ -77,7 +71,7 @@
 
 @media (--mq-large) {
     .intro-box {
-        margin-bottom: 64px;
+        margin-bottom: 32px;
     }
     .intro-box p,
     .intro-box ul {

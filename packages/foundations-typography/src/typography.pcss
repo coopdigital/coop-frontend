@@ -118,7 +118,9 @@ h3,
 h4,
 h5,
 h6,
-.coop-t-h456 {
+.coop-t-h4,
+.coop-t-h5,
+.coop-t-h6 {
   font-size: var(--type-h456-s);
   margin-bottom: var(--spacing-8);
 
@@ -195,9 +197,13 @@ small,
 
 blockquote,
 .coop-t-blockquote {
-  margin-bottom: var(--spacing-base--1-2);
-  margin-left: var(--spacing-base--1-4);
-  padding-left: var(--spacing-base--1-4);
+  margin-bottom: var(--spacing-32);
+  margin-left: var(--spacing-16);
+  padding-left: var(--spacing-16);
+
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-32);
+  }
 
   &:before,
   &:after {
@@ -205,21 +211,14 @@ blockquote,
     display: block;
     width: 45px;
     height: 6px;
-    margin-top: var(--spacing-base--1-4);
-    margin-right: 0;
-    margin-bottom: var(--spacing-base--1-4);
-    margin-left: var(--spacing-base--1-4);
+    margin: var(--spacing-16) 0;
     background: var(--color-grey-light);
-  }
-
-  @media (--mq-medium) {
-    margin-left: var(--spacing-base--1-2);
   }
 }
 
 blockquote p,
 .coop-t-blockquote p {
-  margin-bottom: var(--spacing-base--1-4);
+  margin-bottom: var(--spacing-16);
   font-style: normal;
   font-weight: normal;
   text-indent: -0.25rem;
@@ -229,7 +228,7 @@ blockquote p cite,
 .coop-t-blockquote p cite {
   font-size: var(--type-base--body);
   font-style: normal;
-  margin-top: var(--spacing-base--1-4);
+  margin-top: var(--spacing-16);
 }
 
 a,
