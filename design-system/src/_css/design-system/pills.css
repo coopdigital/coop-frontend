@@ -2,6 +2,7 @@
     padding: 12px 20px;
     border-radius: 40px;
     border: 0;
+    text-decoration: none;
     background: $grey-light;
     color: var(--color-text);
     transition: background .15s ease;
@@ -43,4 +44,13 @@
     background: transparent;
     border: 2px solid var(--color-link--hover);
     color: var(--color-link--hover);
+}
+
+.coop-list-inline li {
+    display: inline-block;
+}
+
+.coop-list-bare {
+    list-style: none;
+    padding-left: 0;
 }

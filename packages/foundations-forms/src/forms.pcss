@@ -1,15 +1,13 @@
-@import "@coopdigital/foundations-vars";
+/* Forms */
 
-/*===============================================
-Forms - Co-op CSS Foundations
-===============================================*/
+@import "@coopdigital/foundations-vars";
 
 .coop-form {
   margin-bottom: var(--spacing-base);
 }
 
 .coop-form__row {
-  margin-bottom: var(--spacing-base--1-4);
+  margin-bottom: var(--spacing-base--1-2);
 
   &::before,
   &::after {
@@ -38,7 +36,7 @@ label,
 .coop-label__hint {
   display: block;
   color: var(--color-grey-dark);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
@@ -69,7 +67,7 @@ fieldset,
   width: 100%;
 }
 
-input[type="text"],
+input,
 .coop-form__input,
 textarea,
 .coop-form__textarea {
@@ -209,4 +207,115 @@ input[type="radio"],
   &:last-child {
     margin-bottom: 0.5rem;
   }
+}
+
+.coop-c-form-choice {
+  position: relative;
+}
+
+.coop-c-form-choice__legend {
+  margin-bottom: var(--spacing-4);
+  font-size: var(--type-body-s);
+
+  @media (--mq-medium) {
+    font-size: var(--type-body-l);
+  }
+}
+
+.coop-c-form-choice__input {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.coop-c-form-choice__label {
+  cursor: pointer;
+  padding: 0px 10px 10px 39px;
+  display: block;
+  line-height: 1.6;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.coop-c-form-choice__input:focus + .coop-c-form-choice__label::before {
+  background: #ffffff;
+  border-color: #000000;
+  outline-offset: 3px;
+  outline: 2px dotted #eec300;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.coop-c-form-choice__input + .coop-c-form-choice__label::before {
+  content: "";
+  border: 2px solid;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.coop-c-form-choice__input + .coop-c-form-choice__label::after {
+  content: "";
+  border: 1px solid #ddd;
+  background: black;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  opacity: 0;
+}
+
+.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::before,
+.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::after {
+  border-radius: 15%;
+}
+.coop-c-form-choice__input--radio-button + .coop-c-form-choice__label::before,
+.coop-c-form-choice__input--radio-button + .coop-c-form-choice__label::after {
+  border-radius: 50%;
+}
+
+.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::after {
+  background: none;
+  border: solid;
+  border-width: 0 0 3px 3px;
+  transform: rotate(-45deg);
+  border-top-color: transparent;
+  width: 15px;
+  height: 8px;
+  left: 5px;
+  top: 11px;
+}
+
+.coop-c-form-choice__input:checked + .coop-c-form-choice__label::after {
+  opacity: 1;
+}
+
+.coop-c-message {
+  padding: var(--spacing-8) var(--spacing-16);
+  margin-bottom: var(--spacing-16);
+
+  @media (--mq-medium) {
+    padding: var(--spacing-16) var(--spacing-32);
+    margin-bottom: var(--spacing-32);
+  }
+}
+
+.coop-c-message--error {
+  background: #fef3f4;
+  border: 1px solid #d63118;
+}
+
+.coop-c-form-error__text {
+  color: #d63118;
+  margin-bottom: 0;
 }

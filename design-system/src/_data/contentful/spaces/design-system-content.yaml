@@ -170,31 +170,33 @@ designPattern:
 - sys:
     id: nyqE2V53eCUsKKguIcimS
     created_at: !ruby/object:DateTime 2018-11-08 21:17:09.747000000 Z
-    updated_at: !ruby/object:DateTime 2019-04-26 09:36:28.406000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-04 11:47:28.916000000 Z
     content_type_id: designPattern
-    revision: 2
+    revision: 4
   title: Font
   status: live
+  github_url: https://github.com/coopdigital/foundations-typography
+  npm_url: https://www.npmjs.com/package/@coopdigital/foundations-typography
   introduction: We use Avenir Next in regular, medium and demi bold weights. Its characteristic
     clear, open letterforms and letter spacing help communicate a consistent Co-op
     brand identity.
   design_and_content_documentation: |-
-    <p>The Avenir font is served from a CDN (content delivery network) if you need access email <a href="mailto:design@coopdigital.co.uk">design@coopdigital</a>.</p>
+    <p>The Avenir font is served from a CDN (content delivery network) if you need access email <a href="mailto:design@coopdigital.co.uk">design@coopdigital.co.uk</a>.</p>
 
     <p>The design team are only responsible for support and distribution of the fonts online.</p>
 - sys:
     id: 6iRruMXnlmieAEIoMWeEeG
     created_at: !ruby/object:DateTime 2018-11-08 21:36:57.455000000 Z
-    updated_at: !ruby/object:DateTime 2018-11-08 21:36:57.456000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-04 08:55:55.841000000 Z
     content_type_id: designPattern
-    revision: 1
+    revision: 12
   title: Typographic scale
   status: live
-  introduction: All of our spacing is derived from multiples of 8px. This is our baseline
-    grid. This baseline allows us to space our text, images or any other page elements
-    using these values.
-  design_and_content_documentation: |-
-    <table class="typographic-scale table-smallscreen--stacked margin-bb">
+  github_url: https://github.com/coopdigital/foundations-typography
+  npm_url: https://www.npmjs.com/package/@coopdigital/foundations-typography
+  introduction: Our typographic scale creates hierarchy within our content.
+  design_and_content_documentation: |
+    <table class="typographic-scale table-smallscreen--stacked coop-u-margin-b-32">
         <caption>Size, line height and spacing above 768px</caption>
         <thead>
             <tr>
@@ -207,57 +209,123 @@ designPattern:
         <tbody>
             <tr>
                 <th scope="row">Mega</th>
-                <td data-th="Size above 768px">60px</td>
-                <td data-th="Leading">83px</td>
-                <td data-th="Spacing">Top 32px<br>Bottom 32px</td>
+                <td data-th="Size above 768px">56px</td>
+                <td data-th="Leading">84px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">H1</th>
                 <td data-th="Size above 768px">46px</td>
-                <td data-th="Leading">64px</td>
-                <td data-th="Spacing">Bottom 32px</td>
+                <td data-th="Leading">69px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">H2</th>
-                <td data-th="Size above 768px">26px</td>
-                <td data-th="Leading">40px</td>
-                <td data-th="Spacing">Bottom 8px</td>
+                <td data-th="Size above 768px">32px</td>
+                <td data-th="Leading">48px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">H3</th>
-                <td data-th="Size above 768px">22px</td>
-                <td data-th="Leading">32px</td>
-                <td data-th="Spacing">Top 8px<br>Bottom 8px</td>
+                <td data-th="Size above 768px">26px</td>
+                <td data-th="Leading">39px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">H4</th>
                 <td data-th="Size above 768px">22px</td>
-                <td data-th="Leading">32px</td>
-                <td data-th="Spacing">Top 8px Btm 8px</td>
+                <td data-th="Leading">33px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">H5</th>
                 <td data-th="Size above 768px">22px</td>
-                <td data-th="Leading">32px</td>
-                <td data-th="Spacing">Top 8px<br>Bottom 8px</td>
+                <td data-th="Leading">33px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">H6</th>
                 <td data-th="Size above 768px">16px</td>
-                <td data-th="Leading">24px</td>
-                <td data-th="Spacing">Top 0px<br>Bottom 4px</td>
+                <td data-th="Leading">33px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">P lead</th>
                 <td data-th="Size above 768px">26px</td>
-                <td data-th="Leading">42px</td>
-                <td data-th="Spacing">Bottom 8px</td>
+                <td data-th="Leading">30px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
             </tr>
             <tr>
                 <th scope="row">Paragraph</th>
                 <td data-th="Size above 768px">20px</td>
-                <td data-th="Leading">32px</td>
-                <td data-th="Spacing">Bottom 32px</td>
+                <td data-th="Leading">30px</td>
+                <td data-th="Spacing">Bottom margin 16px</td>
+            </tr>
+        </tbody>
+    </table><table class="typographic-scale table-smallscreen--stacked coop-u-margin-b-32">
+        <caption>Size, line height and spacing below 768px</caption>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Size</th>
+                <th scope="col">Line height</th>
+                <th scope="col">Spacing</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Mega</th>
+                <td data-th="Size below 768px">48px</td>
+                <td data-th="Leading">72px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
+            </tr>
+            <tr>
+                <th scope="row">H1</th>
+                <td data-th="Size below 768px">30px</td>
+                <td data-th="Leading">45px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
+            </tr>
+            <tr>
+                <th scope="row">H2</th>
+                <td data-th="Size below 768px">26px</td>
+                <td data-th="Leading">39px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
+            </tr>
+            <tr>
+                <th scope="row">H3</th>
+                <td data-th="Size below 768px">22px</td>
+                <td data-th="Leading">33px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
+            </tr>
+            <tr>
+                <th scope="row">H4</th>
+                <td data-th="Size below 768px">18px</td>
+                <td data-th="Leading">27px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
+            </tr>
+            <tr>
+                <th scope="row">H5</th>
+                <td data-th="Size below 768px">18px</td>
+                <td data-th="Leading">27px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
+            </tr>
+            <tr>
+                <th scope="row">H6</th>
+                <td data-th="Size below 768px">18px</td>
+                <td data-th="Leading">27px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>>
+            </tr>
+            <tr>
+                <th scope="row">P lead</th>
+                <td data-th="Size below 768px">22px</td>
+                <td data-th="Leading">33px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
+            </tr>
+            <tr>
+                <th scope="row">Paragraph</th>
+                <td data-th="Size below 768px">18px</td>
+                <td data-th="Leading">27px</td>
+                <td data-th="Spacing">Bottom margin 8px</td>
             </tr>
         </tbody>
     </table>

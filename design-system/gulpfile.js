@@ -13,6 +13,7 @@ const imagemin = require('gulp-imagemin');
 const cssimport = require('gulp-cssimport');
 const postcss = require('gulp-postcss');
 const postcssCustomMedia = require('postcss-custom-media');
+const postcssCustomProperties = require('postcss-custom-properties');
 const postcssNesting = require('postcss-nesting');
 const spawn = require('child_process').spawn;
 
@@ -64,7 +65,7 @@ const importOptions = {
       '../node_modules/@coopdigital',
       __dirname + '/node_modules/@coopdigital'
     ]
-};
+}; 
 
 
 /**
@@ -105,9 +106,10 @@ function jekyll(gulpCallBack) {
     gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
   });
 }
-
+ 
 function html() {
-  return gulp.src(dest + '**/*.html')
+  return gulp
+    .src(dest + '**/*.html')
     .pipe(connect.reload());
 }
 
@@ -120,12 +122,14 @@ function css() {
       postcss(
         [
           postcssCustomMedia(),
+          postcssCustomProperties(),
           postcssNesting()
         ]
       )
     )
     .pipe(autoprefixer())
     .pipe(gulp.dest(dest_paths.styles))
+    .pipe(connect.reload());  
 }
 
 // Scripts
@@ -166,10 +170,10 @@ function optimiseImages() {
  * Watch tasks
  */
 function watch(done) {
-  gulp.watch('src/_css/**/**.{pcss,css}', css);
+  gulp.watch(['src/_css/**/**.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
   gulp.watch(src_paths.scripts, gulp.series(lintjs, js));
   gulp.watch(src_paths.assets, optimiseImages);
-  gulp.watch(src_paths.html, html); 
+  gulp.watch(src_paths.html, gulp.series(jekyll, html));
   done();
 }
 
@@ -197,7 +201,6 @@ module.exports = {
   copyComponents,
   contentful,
   jekyll,
-  html,
   css,
   vendorjs,
   lintjs,

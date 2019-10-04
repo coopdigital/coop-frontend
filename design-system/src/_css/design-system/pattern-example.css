@@ -34,11 +34,11 @@
     display: none;
 }
 
-@media (--mq-xlarge) {
+@media (--mq-medium) {
     .ds-tabs {
         display: block;
         position: absolute;
-        top: -70px;
+        top: -60px;
         right: -20px;
     }
 }

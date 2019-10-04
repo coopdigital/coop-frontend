@@ -57,6 +57,7 @@
 
 .icon-link {
     border-bottom: 0;
+    text-decoration: none;
 }
 
 .icon-link::before {
@@ -74,6 +75,7 @@
 } 
   
 .icon-link .link-info {
+    text-decoration: none;
     color: var(--color-grey-mid); 
 }
   
@@ -92,8 +94,8 @@
 }
 
 .dm-icon-list {
-    margin-top: 64px;
-    margin-bottom: 0;
+    margin-top: 16px;
+    margin-bottom: 32px;
 }
 
 .dm-icon-list a {

@@ -54,6 +54,8 @@
 .in-page-nav__section-title {
     color: var(--color-text);
     border-bottom: 0;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .in-page-nav__section-title:hover {
