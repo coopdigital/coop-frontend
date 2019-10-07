@@ -1,10 +1,10 @@
 {
   "name": "@coopdigital/css-foundations",
   "version": "2.0.0",
+  "author": "@coopdigital",
   "description": "Co-op CSS Foundations",
   "main": "dist/foundations.css",
   "style": "src/foundations.pcss",
-  "author": "Matthew Morek <matthew.morek@coopdigital.co.uk> (https://github.com/matthewmorek)",
   "license": "MIT",
   "files": [
     "dist",
@@ -18,7 +18,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/css-foundations.git"
+    "url": "github:coopdigital/coop-frontend",
+    "directory": "packages/css-foundations"
   },
   "devDependencies": {
     "@coopdigital/foundations-buttons": "^1.2.6",
