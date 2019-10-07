@@ -1,10 +1,10 @@
 {
   "name": "@coopdigital/foundations-vars",
   "version": "2.0.0",
+  "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Variables",
   "style": "src/vars.pcss",
   "main": "dist/vars.css",
-  "author": "Matthew Morek (matthew.morek@coopdigital.co.uk)",
   "contributors": [
     "Paul Welsh <paul@nonbreakingspace.co.uk> (https://github.com/spacedawwwg)"
   ],
@@ -21,7 +21,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/foundations-vars.git"
+    "url": "github:coopdigital/coop-frontend",
+    "directory": "packages/foundations-vars"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.0",

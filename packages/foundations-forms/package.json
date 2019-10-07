@@ -1,10 +1,10 @@
 {
   "name": "@coopdigital/foundations-forms",
   "version": "2.0.0",
+  "author": "@coopdigital",
   "description": "CSS Foundations: Forms",
   "main": "dist/forms.css",
   "style": "src/forms.pcss",
-  "author": "Matthew Morek <matthew.morek@coopdigital.co.uk> (https://github.com/matthewmorek)",
   "license": "MIT",
   "files": [
     "dist",
@@ -18,7 +18,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/foundations-forms.git"
+    "url": "github:coopdigital/coop-frontend",
+    "directory": "packages/foundations-forms"
   },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^2.0.0",

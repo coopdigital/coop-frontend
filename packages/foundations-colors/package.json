@@ -1,10 +1,10 @@
 {
   "name": "@coopdigital/foundations-colors",
   "version": "1.0.5",
+  "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Colors",
   "main": "dist/colors.css",
   "style": "src/colors.pcss",
-  "author": "Matthew Morek (matthew.morek@coopdigital.co.uk)",
   "license": "MIT",
   "files": [
     "dist",
@@ -18,7 +18,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/foundations-colors.git"
+    "url": "github:coopdigital/coop-frontend",
+    "directory": "packages/foundations-colors"
   },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^2.0.0",
