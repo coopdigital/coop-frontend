@@ -18,28 +18,28 @@
 
 
 /* Components */
-@import 'component-search/src/component.pcss';
-/* @import 'component-signpost/src/signpost.pcss'; */
-@import 'component-card/src/card.pcss';
-@import 'component-card--product/src/card--product.pcss';
-@import 'component-skipnav/src/skipnav.pcss';
+@import "component-search/src/component.pcss";
+@import "component-signpost/src/signpost.pcss";
+@import "component-card/src/card.pcss";
+@import "component-card--product/src/card--product.pcss";
+@import "component-skipnav/src/skipnav.pcss";
 
 /* Removed as the base 64 encoding breaks the postCSScutomproperties plugin */
 /* @import 'component-tags/dist/tags.css'; */
 
 
 /* Design system */
-@import 'design-system/header.css';
-@import 'design-system/hero.css';
-@import 'design-system/sections.css';
-@import 'design-system/sub-navigation.css';
-@import 'design-system/signposts.css';
-@import 'design-system/card-floating.css';
-@import 'design-system/links.css';
-@import 'design-system/pills.css';
-@import 'design-system/statuses.css';
-@import 'design-system/pattern-example.css';
-@import 'design-system/code.css';
-@import 'design-system/swatches.css';
-@import 'design-system/states.css';
-@import 'design-system/footer.css';
+@import "design-system/header.css";
+@import "design-system/hero.css";
+@import "design-system/sections.css";
+@import "design-system/sub-navigation.css";
+@import "design-system/signposts.css";
+@import "design-system/card-floating.css";
+@import "design-system/links.css";
+@import "design-system/pills.css";
+@import "design-system/statuses.css";
+@import "design-system/pattern-example.css";
+@import "design-system/code.css";
+@import "design-system/swatches.css";
+@import "design-system/states.css";
+@import "design-system/footer.css";
