@@ -1,27 +1,27 @@
 {
-  "_from": "@coopdigital/component-card@^1.0.1",
-  "_id": "@coopdigital/component-card@1.0.2",
+  "_from": "@coopdigital/component-card@^1.0.3",
+  "_id": "@coopdigital/component-card@1.0.3",
   "_inBundle": false,
-  "_integrity": "sha512-H7mQFCau0713spPObUIMUjsEGM5Jl3LoDy7SPXV1tpMMQCK7/KcXPGLajrcHdEHhqUMZsGe5ipIHZpTpJPsKcQ==",
+  "_integrity": "sha512-uvDv/uRC7oMgLpU+Z2YJPVbvm0X6NiGwH+fLIZIdVIJoJmWFhbSVVgHHKiWXMR1LDkeS3QPwRg7ydC7/mgem1Q==",
   "_location": "/@coopdigital/component-card",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@coopdigital/component-card@^1.0.1",
+    "raw": "@coopdigital/component-card@^1.0.3",
     "name": "@coopdigital/component-card",
     "escapedName": "@coopdigital%2fcomponent-card",
     "scope": "@coopdigital",
-    "rawSpec": "^1.0.1",
+    "rawSpec": "^1.0.3",
     "saveSpec": null,
-    "fetchSpec": "^1.0.1"
+    "fetchSpec": "^1.0.3"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@coopdigital/component-card/-/component-card-1.0.2.tgz",
-  "_shasum": "d16e2b0a384674eaa77edb62f48f44cb95566a66",
-  "_spec": "@coopdigital/component-card@^1.0.1",
+  "_resolved": "https://registry.npmjs.org/@coopdigital/component-card/-/component-card-1.0.3.tgz",
+  "_shasum": "a0211c73cae08302392a4b921ad3a5f02e89a0a6",
+  "_spec": "@coopdigital/component-card@^1.0.3",
   "_where": "/Applications/MAMP/htdocs/coop-frontend",
   "author": {
     "name": "Matt Tyas",
@@ -35,7 +35,7 @@
   "deprecated": false,
   "description": "Co-op Components: Card",
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^1.0.0",
+    "@coopdigital/foundations-vars": "^2.0.1",
     "autoprefixer": "^9.3.1",
     "cssnano": "^4.1.7",
     "postcss": "^7.0.5",
@@ -71,5 +71,5 @@
     "test": "npm run build && npm run lint"
   },
   "style": "src/card.pcss",
-  "version": "1.0.2"
+  "version": "1.0.3"
 }

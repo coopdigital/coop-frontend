@@ -1,0 +1,46 @@
+{
+  "name": "@coopdigital/component-card",
+  "version": "1.0.2",
+  "description": "Co-op Components: Card",
+  "main": "src/card.html",
+  "style": "src/card.pcss",
+  "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "test": "npm run build && npm run lint",
+    "init": "rm -rf ./.git && git init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/component-card.git"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^2.0.1",
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.7",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.0.0",
+    "precss": "^3.1.2",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.7.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/component-card/issues"
+  },
+  "homepage": "https://github.com/coopdigital/component-card#readme",
+  "dependencies": {},
+  "keywords": [
+    "card",
+    "content"
+  ]
+}
