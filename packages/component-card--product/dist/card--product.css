@@ -1,29 +1,29 @@
 :root {
   --font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --type-base--body: 1rem;
-  --type-base--h-mega: 2.25rem;
-  --type-base--h1: 1.875rem;
-  --type-base--h2: 1.25rem;
-  --type-base--h3: 1.125rem;
-  --type-base--h4: 1.125rem;
-  --type-base--h5: 1.125rem;
-  --type-base--h6: 0.8125rem;
-  --type-base--blockquote: 1.25rem;
-  --type-base--lead: 1.25rem;
-  --type-base--small: 0.8125rem;
-  --type-base--line-height: 1.7;
-  --type-medium--body: 1.25rem;
-  --type-medium--h-mega: 3rem;
-  --type-medium--h1: 2.875rem;
-  --type-medium--h2: 1.625rem;
-  --type-medium--h3: 1.375rem;
-  --type-medium--h4: 1.375rem;
-  --type-medium--h5: 1.375rem;
-  --type-medium--h6: 1rem;
-  --type-medium--blockquote: 1.625rem;
-  --type-medium--lead: 1.625rem;
-  --type-medium--small: 1rem;
-  --type-medium--base-line-height: 1.6;
+  --type-body-l: 1.2499999rem;
+  --type-body-s: 1.125rem;
+  --type-line-height: 1.5;
+  --type-h1-mega-l: 3.5rem;
+  --type-h1-mega-s: 3rem;
+  --type-h1-l: 2.875rem;
+  --type-h1-s: 1.875rem;
+  --type-h2-l: 2rem;
+  --type-h2-s: 1.625rem;
+  --type-h3-l: 1.625rem;
+  --type-h3-s: 1.375rem;
+  --type-h456-l: 1.375rem;
+  --type-h456-s: 1.125rem;
+  --type-blockquote: 1.2499999rem;
+  --type-lp-l: 1.625rem;
+  --type-lp-s: 1.375rem;
+  --type-sp-l: 1.2499999rem;
+  --type-sp-s: 1rem;
+  --spacing-64: 4rem;
+  --spacing-32: 2rem;
+  --spacing-16: 1rem;
+  --spacing-8: 0.5rem;
+  --spacing-4: 0.25rem;
+  --spacing-2: 0.125rem;
   --spacing-base: 2rem;
   --spacing-base--3-4: 1.5rem;
   --spacing-base--3-4: calc(var(--spacing-base) / 4 * 3);
@@ -93,7 +93,7 @@
   margin-bottom: 2rem;
   margin-bottom: var(--spacing-base);
 }
-@media screen and (min-width: 46.875em) {
+@media (min-width: 46.875em) {
   .coop-c-card {
     margin-bottom: 4rem;
     margin-bottom: var(--spacing-medium);
@@ -115,7 +115,7 @@
   margin-bottom: 0;
   padding-bottom: 0;
 }
-@media screen and (min-width: 46.875em) {
+@media (min-width: 46.875em) {
   .coop-c-card__content {
     padding: 24px;
   }
@@ -130,13 +130,13 @@
   margin: -32px 0.5rem 0 0;
   margin: -32px var(--spacing-medium--1-8) 0 0;
 }
-@media screen and (min-width: 30em) {
+@media (min-width: 30em) {
   .coop-c-card__image + .coop-c-card__content {
     margin-right: 1rem;
     margin-right: var(--spacing-medium--1-4);
   }
 }
-@media screen and (min-width: 46.875em) {
+@media (min-width: 46.875em) {
   .coop-c-card__image + .coop-c-card__content {
     margin: -50px 2rem 0 0;
     margin: -50px var(--spacing-medium--1-2) 0 0;
@@ -155,20 +155,18 @@
   background: #fff;
   background: var(--color-white);
   font-weight: 500;
-  font-size: 1rem;
   font-size: var(--type-base--body);
   padding: 8px 12px;
 }
-@media screen and (min-width: 46.875em) {
+@media (min-width: 46.875em) {
   .coop-c-card-heading {
     top: -24px;
     left: 40px;
     padding: 8px 12px;
-    font-size: 1.25rem;
     font-size: var(--type-medium--body);
   }
 }
-@media screen and (min-width: 60em) {
+@media (min-width: 60em) {
   .coop-c-card-heading {
     top: -35px;
     padding: 18px 24px;
@@ -193,7 +191,8 @@
 .coop-c-card__content .coop-c-card__title {
   text-decoration: underline;
 }
-.coop-c-card__content:hover .coop-c-card__title {
+.coop-c-card__content:hover .coop-c-card__title,
+.coop-c-card__p {
   text-decoration: none;
 }
 .coop-c-card--product .coop-c-card__title {
@@ -260,7 +259,6 @@
   margin-bottom: 8px;
 }
 .coop-c-card--product .coop-c-card__paragraph {
-  font-size: 1rem;
   font-size: var(--type-base--body);
 }
 .coop-c-card__price {
@@ -272,17 +270,15 @@
   color: #d63a28;
 }
 .coop-c-card__price-was {
+  display: block;
   color: #282828;
   color: var(--color-text);
-}
-.coop-c-card__price--deal-info,
-.coop-c-card__price-was {
-  display: block;
-  font-size: 1rem;
   font-size: var(--type-base--body);
 }
 .coop-c-card__price--deal-info {
+  display: block;
   color: #d63a28;
+  font-size: var(--type-base--body);
 }
 .coop-c-card--alcohol
   .coop-c-card__link

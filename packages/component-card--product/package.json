@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "stylelint 'dist/*.css' --fix",
     "build": "postcss src/*.pcss --dir dist/ --ext css",
-    "test": "npm run build && npm run lint",
+    "dist": "npm run build && npm run lint",
     "init": "rm -rf ./.git && git init"
   },
   "repository": {
