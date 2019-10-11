@@ -1,9 +1,9 @@
 {
   "name": "@coopdigital/component-skipnav",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Co-op Component: Skipnav",
-  "main": "src/skipnav.html",
-  "style": "src/skipnav.css",
+  "main": "dist/skipnav.css",
+  "style": "src/skipnav.pcss",
   "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
   "license": "MIT",
   "files": [
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
-    "build": "node_modules/.bin/postcss src/*.css --dir dist/ --ext css",
+    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
     "dist": "npm run build && npm run lint",
     "init": "rm -rf ./.git && git init"
   },

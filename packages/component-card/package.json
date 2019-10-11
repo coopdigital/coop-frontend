@@ -1,8 +1,8 @@
 {
   "name": "@coopdigital/component-card",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Co-op Components: Card",
-  "main": "src/card.html",
+  "main": "dist/card.css",
   "style": "src/card.pcss",
   "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
   "license": "MIT",

@@ -13,24 +13,19 @@
 @import "foundations-forms/src/forms.pcss";
 @import "foundations-tables/src/tables.pcss";
 @import "foundations-layout/src/layout.pcss";
-
 /* Include legacy grid to help support projects still using it. */
 @import "foundations-grid/dist/legacy-grid.css";
 
 
 /* Components */
-@import 'component-search/src/search.pcss';
-
-
-@import 'component-skipnav/dist/skipnav.css';
-@import 'component-signpost/dist/signpost.css';
-
-@import 'component-card/dist/card.css';
-@import 'component-card--product/dist/card--product.css';
+@import 'component-search/src/component.pcss';
+@import 'component-skipnav/src/skipnav.pcss';
+@import 'component-signpost/src/signpost.pcss';
+@import 'component-card/src/card.pcss';
+@import 'component-card--product/src/card--product.pcss';
 
 /* Removed as the base 64 encoding breaks the postCSScutomproperties plugin */
 /* @import 'component-tags/dist/tags.css'; */
-
 
 
 /* Design system */
