@@ -46,7 +46,10 @@ const settings = {
     includePaths: [
       'node_modules',
       '../node_modules',
-      src + 'src/css/main.css'
+      src + 'src/css/main.css',
+      __dirname + '/node_modules',
+      '../node_modules/@coopdigital',
+      __dirname + '/node_modules/@coopdigital'
     ],
   },
   include: {
@@ -58,14 +61,14 @@ const settings = {
 };
 
 const importOptions = {
-    matchPattern: "*.{pcss,css}", 
+    matchPattern: "*.{pcss,css}",
     includePaths: [
       '../node_modules',
       __dirname + '/node_modules',
       '../node_modules/@coopdigital',
       __dirname + '/node_modules/@coopdigital'
     ]
-}; 
+};
 
 
 /**
@@ -106,7 +109,7 @@ function jekyll(gulpCallBack) {
     gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
   });
 }
- 
+
 function html() {
   return gulp
     .src(dest + '**/*.html')
@@ -129,7 +132,7 @@ function css() {
     )
     .pipe(autoprefixer())
     .pipe(gulp.dest(dest_paths.styles))
-    .pipe(connect.reload());  
+    .pipe(connect.reload());
 }
 
 // Scripts
@@ -211,4 +214,3 @@ module.exports = {
   server,
   default: build
 };
-
