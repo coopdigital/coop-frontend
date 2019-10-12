@@ -30,6 +30,7 @@
 
 
 /* Design system */
+@import "design-system/skipnav.css";
 @import "design-system/header.css";
 @import "design-system/hero.css";
 @import "design-system/sections.css";

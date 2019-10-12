@@ -175,6 +175,7 @@
   color: var(--color-text);
   border-bottom: 0;
 }
+.coop-c-card-heading__link,
 .coop-c-card-heading__link:hover {
   color: #282828;
   color: var(--color-text);
