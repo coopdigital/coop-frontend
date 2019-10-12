@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-forms",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "author": "@coopdigital",
   "description": "CSS Foundations: Forms",
   "main": "dist/forms.css",
@@ -22,7 +22,7 @@
     "directory": "packages/foundations-forms"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.0.3",
+    "@coopdigital/foundations-vars": "^2.0.4",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",

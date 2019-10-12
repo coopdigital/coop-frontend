@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-colors",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Colors",
   "main": "dist/colors.css",
@@ -22,7 +22,7 @@
     "directory": "packages/foundations-colors"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.0.3",
+    "@coopdigital/foundations-vars": "^2.0.4",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
