@@ -171,8 +171,6 @@
 }
 .coop-c-card-heading__link {
   display: block;
-  color: #282828;
-  color: var(--color-text);
   border-bottom: 0;
 }
 .coop-c-card-heading__link,
