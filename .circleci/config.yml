@@ -32,8 +32,6 @@ jobs:
           name: update npm
           command: 'sudo npm install -g npm@latest'
           working_directory: ~/project/design-system
-      - restore_cache:
-          key: site-cache-{{ checksum "design-system/package.json" }}
       - run:
           name: Install bundler
           command: gem install bundler
