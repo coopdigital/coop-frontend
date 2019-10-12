@@ -19,7 +19,7 @@
 
 /* Components */
 @import "component-search/src/component.pcss";
-@import "component-card/src/card.pcss";  
+@import "component-card/src/card.pcss";
 @import "component-card--product/src/card--product.pcss";
 
 /* Problems with these breaking the build
@@ -30,6 +30,7 @@
 
 
 /* Design system */
+@import "design-system/skipnav.css";
 @import "design-system/header.css";
 @import "design-system/hero.css";
 @import "design-system/sections.css";
