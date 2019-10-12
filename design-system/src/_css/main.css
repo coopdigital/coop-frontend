@@ -21,15 +21,10 @@
 @import "component-search/src/component.pcss";
 @import "component-card/src/card.pcss";
 @import "component-card--product/src/card--product.pcss";
+
+/* Problems with these breaking the build
 @import "component-skipnav/src/skipnav.pcss";
-
-/*
-@import "component-card--product/src/card--product.pcss";
-
 @import "component-signpost/src/signpost.pcss";*/
-
-
-
 /* Removed as the base 64 encoding breaks the postCSScutomproperties plugin */
 /* @import 'component-tags/dist/tags.css'; */
 
