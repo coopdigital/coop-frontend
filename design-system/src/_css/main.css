@@ -18,11 +18,11 @@
 
 
 /* Components */
-@import "home/circleci/project/design-system/node_modules/@coopdigital/component-search/src/component.pcss";
-@import "home/circleci/project/design-system/node_modules/@coopdigital/component-signpost/src/signpost.pcss";
-@import "home/circleci/project/design-system/node_modules/@coopdigital/component-card/src/card.pcss";
-@import "home/circleci/project/design-system/node_modules/@coopdigital/component-card--product/src/card--product.pcss";
-@import "home/circleci/project/design-system/node_modules/@coopdigital/component-skipnav/src/skipnav.pcss";
+@import "component-search/src/component.pcss";
+@import "component-signpost/src/signpost.pcss";
+@import "component-card/src/card.pcss";
+@import "component-card--product/src/card--product.pcss";
+@import "component-skipnav/src/skipnav.pcss";
 
 /* Removed as the base 64 encoding breaks the postCSScutomproperties plugin */
 /* @import 'component-tags/dist/tags.css'; */
