@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/coopdigital/design-manual#readme",
   "dependencies": {
-    "@coopdigital/component-card": "^1.0.3",
+    "@coopdigital/component-card": "^1.0.3",  
     "@coopdigital/component-card--product": "^1.0.9",
     "@coopdigital/component-search": "^1.0.3",
     "@coopdigital/component-signpost": "^1.0.2",
@@ -46,7 +46,6 @@
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.9.6",
     "jshint-stylish": "^2.1.0",
-    "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-custom-media": "^7.0.8",
