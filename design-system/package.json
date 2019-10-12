@@ -15,7 +15,7 @@
   "dependencies": {
     "@coopdigital/component-card": "^1.0.3",
     "@coopdigital/component-card--product": "^1.0.9",
-    "@coopdigital/component-search": "^1.0.3",
+    "@coopdigital/component-search": "^1.0.4",
     "@coopdigital/component-signpost": "^1.0.2",
     "@coopdigital/component-skipnav": "^1.0.1",
     "@coopdigital/component-tags": "^1.0.2",
