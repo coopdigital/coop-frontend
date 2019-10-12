@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-layout",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "@coopdigital",
   "description": "CSS Foundations: Layout",
   "main": "dist/layout.css",
@@ -22,7 +22,7 @@
     "directory": "packages/foundations-layout"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.0.1",
+    "@coopdigital/foundations-vars": "^2.0.2",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
