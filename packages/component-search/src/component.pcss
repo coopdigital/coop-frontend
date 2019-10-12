@@ -1,0 +1,60 @@
+@import '@coopdigital/foundations-vars';
+
+.coop-c-search {
+  position: relative;
+}
+
+.coop-c-search__input {
+  box-sizing: border-box;
+  padding: 0.9rem 3.5rem 0.9rem 0.9rem;
+  border-color: #C4C4C4;
+  border-color: var(--color-grey-mid);
+}
+
+.coop-c-search__input:hover,
+.coop-c-search__input:focus {
+  border-color: #6E6E6E;
+  border-color: var(--color-grey-dark);
+}
+
+.coop-c-search__input:focus {
+  transition: none;
+  outline: 2px dotted #EEC300;
+  outline: 2px dotted var(--color-link--focus);
+  outline-offset: 3px;
+}
+
+@media (min-width: 750px) {
+  .coop-c-search__input {
+    padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+  }
+}
+
+.coop-c-search__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 15px;
+  margin-bottom: 0;
+  background: var(--color-button);
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.coop-c-search__button:hover {
+  background: var(--color-button--hover);
+}
+
+.coop-c-search__button:focus {
+  transition: none;
+  outline: 2px dotted #EEC300;
+  outline: 2px dotted var(--color-link--focus);
+  outline-offset: 3px;
+}
+
+.coop-c-search__button svg {
+  position: relative;
+  top: 4px;
+}
