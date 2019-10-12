@@ -19,7 +19,7 @@
 
 /* Components */
 @import "component-search/src/component.pcss";
-@import "component-card/src/card.pcss";  
+@import "component-card/src/card.pcss";
 @import "component-card--product/src/card--product.pcss";
 
 /* Problems with these breaking the build
