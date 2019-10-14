@@ -591,12 +591,12 @@ designPattern:
 - sys:
     id: 2Sf5HLM2ooWSAU2UIS0AQg
     created_at: !ruby/object:DateTime 2018-11-20 08:25:36.906000000 Z
-    updated_at: !ruby/object:DateTime 2018-11-20 08:25:36.906000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-14 13:00:44.931000000 Z
     content_type_id: designPattern
-    revision: 1
+    revision: 2
   title: Signpost
   status: live
-  github_url: https://github.com/coopdigital/component-signpost
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-signpost
   npm_url: https://www.npmjs.com/package/@coopdigital/component-signpost
   introduction: Signpost navigation is used in pages to link to permanent content.
 - sys:
