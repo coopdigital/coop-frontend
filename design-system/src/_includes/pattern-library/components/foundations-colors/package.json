@@ -1,69 +1,38 @@
 {
-  "_from": "@coopdigital/foundations-colors@~1.0.0",
-  "_id": "@coopdigital/foundations-colors@1.0.0",
-  "_inBundle": false,
-  "_integrity": "sha512-mituGiYexGspkmN4fsRtLTWQ77r1BaFr5X/uC8rTcpzHgqlE0Kgxkozi6A5taWviGbvsvu/mLaN/z9vgEEobsA==",
-  "_location": "/@coopdigital/foundations-colors",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "@coopdigital/foundations-colors@~1.0.0",
-    "name": "@coopdigital/foundations-colors",
-    "escapedName": "@coopdigital%2ffoundations-colors",
-    "scope": "@coopdigital",
-    "rawSpec": "~1.0.0",
-    "saveSpec": null,
-    "fetchSpec": "~1.0.0"
-  },
-  "_requiredBy": [
-    "/@coopdigital/css-foundations"
-  ],
-  "_resolved": "https://registry.npmjs.org/@coopdigital/foundations-colors/-/foundations-colors-1.0.0.tgz",
-  "_shasum": "8adc55b223346d25293326653c9fb692af435df4",
-  "_spec": "@coopdigital/foundations-colors@~1.0.0",
-  "_where": "/Users/fred/Co-op/coop-frontend/node_modules/@coopdigital/css-foundations",
-  "author": {
-    "name": "Matthew Morek",
-    "url": "matthew.morek@coopdigital.co.uk"
-  },
-  "bugs": {
-    "url": "https://github.com/coopdigital/foundations-colors/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "@coopdigital/foundations-vars": "^1.0.0"
-  },
-  "deprecated": false,
+  "name": "@coopdigital/foundations-colors",
+  "version": "1.0.9",
+  "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Colors",
-  "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "postcss": "^7.0.5",
-    "postcss-cli": "^6.0.1",
-    "postcss-import": "^12.0.1",
-    "precss": "^3.1.2",
-    "prettier": "^1.14.3",
-    "stylelint": "^9.7.0",
-    "stylelint-config-prettier": "^4.0.0",
-    "stylelint-prettier": "^1.0.3"
-  },
+  "main": "dist/colors.css",
+  "style": "src/colors.pcss",
+  "license": "MIT",
   "files": [
     "dist",
     "src"
   ],
-  "homepage": "https://github.com/coopdigital/foundations-colors#readme",
-  "license": "MIT",
-  "main": "dist/colors.css",
-  "name": "@coopdigital/foundations-colors",
+  "scripts": {
+    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run lint:src && npm run build && npm run lint:dist"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/foundations-colors.git"
+    "url": "github:coopdigital/coop-frontend",
+    "directory": "packages/foundations-colors"
   },
-  "scripts": {
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint",
-    "lint": "stylelint 'dist/*.css' --fix"
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^2.0.4",
+    "autoprefixer": "^9.6.0",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.1.0",
+    "precss": "^4.0.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-prettier": "^1.1.1"
   },
-  "style": "src/colors.pcss",
-  "version": "1.0.0"
+  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
 }

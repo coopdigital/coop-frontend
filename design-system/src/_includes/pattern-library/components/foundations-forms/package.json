@@ -1,41 +1,28 @@
 {
-  "_from": "@coopdigital/foundations-forms@~1.0.1",
-  "_id": "@coopdigital/foundations-forms@1.0.4",
-  "_inBundle": false,
-  "_integrity": "sha512-BowmMrqh+m5wyKlmlex7QQEOn62pAegqURPSZx0YExbxfleyz1FH6ZmQP5evuATj3UmdjfTpQfguoP6Vtvydbg==",
-  "_location": "/@coopdigital/foundations-forms",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "@coopdigital/foundations-forms@~1.0.1",
-    "name": "@coopdigital/foundations-forms",
-    "escapedName": "@coopdigital%2ffoundations-forms",
-    "scope": "@coopdigital",
-    "rawSpec": "~1.0.1",
-    "saveSpec": null,
-    "fetchSpec": "~1.0.1"
-  },
-  "_requiredBy": [
-    "/@coopdigital/css-foundations"
-  ],
-  "_resolved": "https://registry.npmjs.org/@coopdigital/foundations-forms/-/foundations-forms-1.0.4.tgz",
-  "_shasum": "8e08bc862c9c4de197925f2bc2932d4454fd5c5c",
-  "_spec": "@coopdigital/foundations-forms@~1.0.1",
-  "_where": "/Users/fred/Co-op/coop-frontend/node_modules/@coopdigital/css-foundations",
-  "author": {
-    "name": "Matthew Morek",
-    "email": "matthew.morek@coopdigital.co.uk",
-    "url": "https://github.com/matthewmorek"
-  },
-  "bugs": {
-    "url": "https://github.com/coopdigital/foundations-forms/issues"
-  },
-  "bundleDependencies": false,
-  "deprecated": false,
+  "name": "@coopdigital/foundations-forms",
+  "version": "2.0.4",
+  "author": "@coopdigital",
   "description": "CSS Foundations: Forms",
+  "main": "dist/forms.css",
+  "style": "src/forms.pcss",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run lint:src && npm run build && npm run lint:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:coopdigital/coop-frontend",
+    "directory": "packages/foundations-forms"
+  },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^1.2.3",
+    "@coopdigital/foundations-vars": "^2.0.4",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
@@ -47,24 +34,5 @@
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "gitHead": "310ef9cf5b13a948a0e7b110136af601e6c248bd",
-  "homepage": "https://github.com/coopdigital/foundations-forms#readme",
-  "license": "MIT",
-  "main": "dist/forms.css",
-  "name": "@coopdigital/foundations-forms",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coopdigital/foundations-forms.git"
-  },
-  "scripts": {
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint",
-    "lint": "stylelint 'dist/*.css' --fix"
-  },
-  "style": "src/forms.pcss",
-  "version": "1.0.4"
+  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
 }

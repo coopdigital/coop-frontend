@@ -560,12 +560,12 @@ designPattern:
 - sys:
     id: 59IgUOk2tyqWmQeEAuEu8C
     created_at: !ruby/object:DateTime 2018-11-16 20:55:59.171000000 Z
-    updated_at: !ruby/object:DateTime 2018-12-07 13:42:31.792000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-14 11:03:13.759000000 Z
     content_type_id: designPattern
-    revision: 7
+    revision: 8
   title: Editorial card
   status: live
-  github_url: https://github.com/coopdigital/component-card
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-card
   npm_url: https://www.npmjs.com/package/@coopdigital/component-card
   introduction: 'An editorial card contains a small piece of prose information on
     one subject that people can get more information about by tapping or clicking
@@ -574,14 +574,15 @@ designPattern:
     to make a considered decision whether to click or tap. It is a good way of presenting
     content consistently without overloading a page with information. \n\nAn editorial
     card displays an image and short title with options to include a supporting line
-    or contextual title. It links to a single destination.\n\nCards are responsive
-    and adapt well to changing views, whether displaying few cards or many.\n\nEditorial
-    cards are ideal for presenting  general, prose information on different subjects.
-    If you are using cards to present a group of items that share common features
-    or characteristics, for example data imported from a spreadsheet, consider using
-    [product cards](/pattern-library/components/cards/product-card.html) instead.\n\nSee
-    examples of the editorial card component in use on [colleagues.coop.co.uk](https://colleagues.coop.co.uk)
-    and [coop.co.uk](https://coop.co.uk)."
+    or contextual title. It links to a single destination.\n\nThe editorial card can
+    have an optional label to show a category or tag associated with the content or
+    a paragraph if the title alone does not describe the content accurately.\n\nCards
+    are responsive and adapt well to changing views, whether displaying few cards
+    or many.\n\nEditorial cards are ideal for presenting  general, prose information
+    on different subjects. If you are using cards to present a group of items that
+    share common features or characteristics, for example data imported from a spreadsheet,
+    consider using [product cards](/pattern-library/components/cards/product-card.html)
+    instead.\n\nSee examples of the editorial card component in use on [coop.co.uk](https://coop.co.uk)."
   accessibility_documentation: "Don’t use buttons or links to other destinations within
     a card as this may cause confusion or uncertainty for users.\n\nThe entirety of
     a card should be active, to create a large, easily clickable area. \n\nFor more

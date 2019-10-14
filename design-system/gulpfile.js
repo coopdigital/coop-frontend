@@ -15,6 +15,7 @@ const postcss = require('gulp-postcss');
 const postcssCustomMedia = require('postcss-custom-media');
 const postcssCustomProperties = require('postcss-custom-properties');
 const postcssNesting = require('postcss-nesting');
+const postcssCalc = require('postcss-calc');
 const spawn = require('child_process').spawn;
 
 /**
@@ -90,7 +91,7 @@ function lintjs() {
 // Copy Co-op components
 function copyComponents() {
   return gulp.src([
-    '../node_modules/@coopdigital/**/*'
+    '../packages/**/*'
   ])
   .pipe(gulp.dest('src/_includes/pattern-library/components'))
 }
@@ -126,7 +127,8 @@ function css() {
         [
           postcssCustomMedia(),
           postcssCustomProperties(),
-          postcssNesting()
+          postcssNesting(),
+          postcssCalc()
         ]
       )
     )

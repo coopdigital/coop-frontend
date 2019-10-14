@@ -1,77 +1,42 @@
 {
-  "_from": "@coopdigital/foundations-buttons@~1.0.4",
-  "_id": "@coopdigital/foundations-buttons@1.0.4",
-  "_inBundle": false,
-  "_integrity": "sha512-w908bk3cUQVDuUJTNYlmlpSUbsk17RKHIQ5tdogXg5aUZ/e3/OB/gyio7/XxMBurILSn5OBDLIw288tKpDH47Q==",
-  "_location": "/@coopdigital/foundations-buttons",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "@coopdigital/foundations-buttons@~1.0.4",
-    "name": "@coopdigital/foundations-buttons",
-    "escapedName": "@coopdigital%2ffoundations-buttons",
-    "scope": "@coopdigital",
-    "rawSpec": "~1.0.4",
-    "saveSpec": null,
-    "fetchSpec": "~1.0.4"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@coopdigital/foundations-buttons/-/foundations-buttons-1.0.4.tgz",
-  "_shasum": "21337e6e7cea8abbe9e9364217cd3a30a16356bb",
-  "_spec": "@coopdigital/foundations-buttons@~1.0.4",
-  "_where": "/Users/fred/Co-op/coop-frontend",
-  "author": {
-    "name": "Matt Tyas",
-    "email": "matt.tyas@coopdigital.co.uk",
-    "url": "https://github.com/matt-tyas"
-  },
-  "bugs": {
-    "url": "https://github.com/coopdigital/foundations-buttons/issues"
-  },
-  "bundleDependencies": false,
-  "contributors": [
-    {
-      "name": "Matthew Morek",
-      "email": "matthew.morek@coopdigital.co.uk",
-      "url": "https://github.com/matthewmorek"
-    }
-  ],
-  "deprecated": false,
+  "name": "@coopdigital/foundations-buttons",
+  "version": "1.2.10",
+  "author": "@coopdigital",
   "description": "CSS Foundations: Buttons",
-  "devDependencies": {
-    "@coopdigital/foundations-vars": "~1.0.0",
-    "autoprefixer": "^9.3.1",
-    "cssnano": "^4.1.7",
-    "postcss": "^7.0.5",
-    "postcss-cli": "^6.0.1",
-    "postcss-import": "^12.0.1",
-    "postcss-load-config": "^2.0.0",
-    "precss": "^3.1.2",
-    "prettier": "^1.14.3",
-    "stylelint": "^9.7.0",
-    "stylelint-config-prettier": "^4.0.0",
-    "stylelint-prettier": "^1.0.3"
-  },
+  "main": "dist/buttons.css",
+  "style": "src/buttons.pcss",
+  "contributors": [
+    "Matthew Morek <matthew.morek@coopdigital.co.uk> (https://github.com/matthewmorek)",
+    "Paul Welsh <paul@nonbreakingspace.co.uk> (https://github.com/spacedawwwg)"
+  ],
+  "license": "MIT",
   "files": [
     "dist",
     "src"
   ],
-  "homepage": "https://github.com/coopdigital/foundations-buttons#readme",
-  "license": "MIT",
-  "main": "dist/buttons.css",
-  "name": "@coopdigital/foundations-buttons",
+  "scripts": {
+    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run lint:src && npm run build && npm run lint:dist"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/foundations-buttons.git"
+    "url": "github:coopdigital/coop-frontend",
+    "directory": "packages/foundations-buttons"
   },
-  "scripts": {
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint",
-    "lint": "stylelint 'dist/*.css' --fix"
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^2.0.4",
+    "autoprefixer": "^9.6.0",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.1.0",
+    "precss": "^4.0.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-prettier": "^1.1.1"
   },
-  "style": "src/buttons.pcss",
-  "version": "1.0.4"
+  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
 }

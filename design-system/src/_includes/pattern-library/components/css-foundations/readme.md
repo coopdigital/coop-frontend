@@ -1,5 +1,5 @@
 # Co-op CSS Foundations
-Co-op CSS Foundations contains all the core CSS styles needed to build Co-op branded digital content.
+Co-op CSS Foundations contains all the core CSS styles needed to build Co-op branded digital content. It brings together all the packages projects will need in one place. Components and custom styles should be included or written separately and decided on a project by project basis. 
 
 The foundations set the basic Co-op look and feel - they should be included in all Co-op services.
 
@@ -47,6 +47,7 @@ In Vue, you can just reference it from a global component like so:
 CSS Foundations follows a modular architecture and as such is composed out of several CSS Modules. You are free to use either individual modules or load the entire framework into your project.
 
 ### Modules
+- [X] normalize [`necolas/normalize.css`](https://github.com/necolas/normalize.css)
 - [x] Variables [`@coopdigital/foundations-vars`](https://github.com/coopdigital/foundations-vars)
 - [x] Global [`@coopdigital/foundations-global`](https://github.com/coopdigital/foundations-global)
 - [x] Typography [`@coopdigital/foundations-typography`](https://github.com/coopdigital/foundations-typography)
@@ -54,8 +55,8 @@ CSS Foundations follows a modular architecture and as such is composed out of se
 - [x] Buttons [`@coopdigital/foundations-buttons`](https://github.com/coopdigital/foundations-buttons)
 - [x] Forms [`@coopdigital/foundations-forms`](https://github.com/coopdigital/foundations-forms)
 - [x] Tables [`@coopdigital/foundations-tables`](https://github.com/coopdigital/foundations-tables)
-- [x] Grid [`@coopdigital/foundations-grid`](https://github.com/coopdigital/foundations-grid)
-- [ ] Utilities & Helpers
+- [x] Grid (Flexbox and legacy) [`@coopdigital/foundations-grid`](https://github.com/coopdigital/foundations-grid)
+- [x] Layout (spacing and utility helpers) [`@coopdigital/foundations-layout`](https://github.com/coopdigital/foundations-layout)
 
 ### How to develop?
 This package only serves as a master package for all individual CSS modules. Development should be done within individual package repositories, following general guidelines.
