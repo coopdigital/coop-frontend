@@ -1,39 +1,25 @@
 {
-  "_from": "@coopdigital/component-search@^1.0.3",
-  "_id": "@coopdigital/component-search@1.0.3",
-  "_inBundle": false,
-  "_integrity": "sha512-tSvmDk/f3iKhvpfRRm4oJndQOb58ISKDDABDvmMX1d7DF9qyo3g6vLdTDMwR2efFqcHyKc2kBCgLT2aAdur8Ig==",
-  "_location": "/@coopdigital/component-search",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "@coopdigital/component-search@^1.0.3",
-    "name": "@coopdigital/component-search",
-    "escapedName": "@coopdigital%2fcomponent-search",
-    "scope": "@coopdigital",
-    "rawSpec": "^1.0.3",
-    "saveSpec": null,
-    "fetchSpec": "^1.0.3"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@coopdigital/component-search/-/component-search-1.0.3.tgz",
-  "_shasum": "3c7062c82727f33aa47e1fa8ceaa9871b1fffb37",
-  "_spec": "@coopdigital/component-search@^1.0.3",
-  "_where": "/Applications/MAMP/htdocs/coop-frontend",
-  "author": {
-    "name": "Matt Tyas",
-    "url": "matt.tyas@coopdigital.co.uk"
-  },
-  "bugs": {
-    "url": "https://github.com/coopdigital/component-template/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {},
-  "deprecated": false,
+  "name": "@coopdigital/component-search",
+  "version": "1.0.5",
   "description": "Co-op Component Search",
+  "main": "src/component.html",
+  "style": "src/component.css",
+  "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
+    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run build && npm run lint",
+    "init": "rm -rf ./.git && git init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/component-template.git"
+  },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^2.0.1",
     "autoprefixer": "^9.3.1",
@@ -46,25 +32,5 @@
     "stylelint": "^9.7.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-prettier": "^1.0.3"
-  },
-  "files": [
-    "dist",
-    "src"
-  ],
-  "homepage": "https://github.com/coopdigital/component-template#readme",
-  "license": "MIT",
-  "main": "src/component.html",
-  "name": "@coopdigital/component-search",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coopdigital/component-template.git"
-  },
-  "scripts": {
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
-    "init": "rm -rf ./.git && git init",
-    "lint": "stylelint 'dist/*.css' --fix",
-    "test": "npm run build && npm run lint"
-  },
-  "style": "src/component.css",
-  "version": "1.0.3"
+  }
 }

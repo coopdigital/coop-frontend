@@ -1,41 +1,27 @@
 {
-  "_from": "@coopdigital/component-card@^1.0.3",
-  "_id": "@coopdigital/component-card@1.0.3",
-  "_inBundle": false,
-  "_integrity": "sha512-uvDv/uRC7oMgLpU+Z2YJPVbvm0X6NiGwH+fLIZIdVIJoJmWFhbSVVgHHKiWXMR1LDkeS3QPwRg7ydC7/mgem1Q==",
-  "_location": "/@coopdigital/component-card",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "@coopdigital/component-card@^1.0.3",
-    "name": "@coopdigital/component-card",
-    "escapedName": "@coopdigital%2fcomponent-card",
-    "scope": "@coopdigital",
-    "rawSpec": "^1.0.3",
-    "saveSpec": null,
-    "fetchSpec": "^1.0.3"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@coopdigital/component-card/-/component-card-1.0.3.tgz",
-  "_shasum": "a0211c73cae08302392a4b921ad3a5f02e89a0a6",
-  "_spec": "@coopdigital/component-card@^1.0.3",
-  "_where": "/Applications/MAMP/htdocs/coop-frontend",
-  "author": {
-    "name": "Matt Tyas",
-    "url": "matt.tyas@coopdigital.co.uk"
-  },
-  "bugs": {
-    "url": "https://github.com/coopdigital/component-card/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {},
-  "deprecated": false,
+  "name": "@coopdigital/component-card",
+  "version": "1.0.7",
   "description": "Co-op Components: Card",
+  "main": "dist/card.css",
+  "style": "src/card.pcss",
+  "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
+    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
+    "dist": "npm run build && npm run lint",
+    "init": "rm -rf ./.git && git init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/component-card.git"
+  },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.0.1",
+    "@coopdigital/foundations-vars": "^2.0.4",
     "autoprefixer": "^9.3.1",
     "cssnano": "^4.1.7",
     "postcss": "^7.0.5",
@@ -48,28 +34,12 @@
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-prettier": "^1.0.3"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
+  "bugs": {
+    "url": "https://github.com/coopdigital/component-card/issues"
+  },
   "homepage": "https://github.com/coopdigital/component-card#readme",
   "keywords": [
     "card",
     "content"
-  ],
-  "license": "MIT",
-  "main": "src/card.html",
-  "name": "@coopdigital/component-card",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coopdigital/component-card.git"
-  },
-  "scripts": {
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
-    "init": "rm -rf ./.git && git init",
-    "lint": "stylelint 'dist/*.css' --fix",
-    "test": "npm run build && npm run lint"
-  },
-  "style": "src/card.pcss",
-  "version": "1.0.3"
+  ]
 }

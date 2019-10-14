@@ -1,42 +1,56 @@
+/* Forms */
+
 /* MQ Breakpoints */
+
 /* 320px */
+
 /* 480px */
+
 /* 750px */
+
 /* 960px */
+
 /* 1300px */
+
 :root {
   --font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* font-size: 1.2499999rem uses thinner text decoration on links rather than 1.25rem */
 
-  /* Typography: Base */
-  --type-base--body: 1rem;
-  --type-base--h-mega: 2.25rem;
-  --type-base--h1: 1.875rem;
-  --type-base--h2: 1.2499999rem;
-  --type-base--h3: 1.125rem;
-  --type-base--h4: 1.125rem;
-  --type-base--h5: 1.125rem;
-  --type-base--h6: 0.8125rem;
-  --type-base--blockquote: 1.2499999rem;
-  --type-base--lead: 1.2499999rem;
-  --type-base--small: 0.8125rem;
-  --type-base--line-height: 1.7;
+  /* Typography */
+  --type-body-l: 1.2499999rem; /* 20px */
+  --type-body-s: 1.125rem; /* 18px */
 
-  /* Typography: Medium */
-  --type-medium--body: 1.2499999rem;
-  --type-medium--h-mega: 3rem;
-  --type-medium--h1: 2.875rem;
-  --type-medium--h2: 1.625rem;
-  --type-medium--h3: 1.375rem;
-  --type-medium--h4: 1.375rem;
-  --type-medium--h5: 1.375rem;
-  --type-medium--h6: 1rem;
-  --type-medium--blockquote: 1.625rem;
-  --type-medium--lead: 1.625rem;
-  --type-medium--small: 1rem;
-  --type-medium--base-line-height: 1.6;
+  --type-line-height: 1.5; /* 32px */
 
+  --type-h1-mega-l: 3.5rem; /* 56px */
+  --type-h1-mega-s: 3rem; /* 48px */
+  --type-h1-l: 2.875rem; /* 46px */
+  --type-h1-s: 1.875rem; /* 30px */
+  --type-h2-l: 2rem; /* 32px */
+  --type-h2-s: 1.625rem; /* 26px */
+  --type-h3-l: 1.625rem; /* 26px */
+  --type-h3-s: 1.375rem; /* 22px */
+  --type-h456-l: 1.375rem; /* 22px */
+  --type-h456-s: 1.125rem; /* 18px */
+
+  --type-blockquote: 1.2499999rem; /* 18px */
+
+  --type-lp-l: 1.625rem; /* 26px */
+  --type-lp-s: 1.375rem; /* 22px */
+
+  --type-sp-l: 1.2499999rem; /* 18px */
+  --type-sp-s: 1rem; /* 16px */
+
+  /* Spacing */
+  --spacing-64: 4rem;
+  --spacing-32: 2rem;
+  --spacing-16: 1rem;
+  --spacing-8: 0.5rem;
+  --spacing-4: 0.25rem;
+  --spacing-2: 0.125rem;
+
+  /* Legacy spacing */
   /* Spacing: Base */
   --spacing-base: 2rem;
   --spacing-base--3-4: calc(var(--spacing-base) / 4 * 3);
@@ -123,25 +137,27 @@
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
 }
-/*===============================================
-Forms - Co-op CSS Foundations
-===============================================*/
+
 .coop-form {
   margin-bottom: 2rem;
   margin-bottom: var(--spacing-base);
 }
+
 .coop-form__row {
-  margin-bottom: calc(2rem / 4);
-  margin-bottom: var(--spacing-base--1-4);
+  margin-bottom: calc(2rem / 2);
+  margin-bottom: var(--spacing-base--1-2);
 }
+
 .coop-form__row::before,
 .coop-form__row::after {
   content: " ";
   display: table;
 }
+
 .coop-form__row::after {
   clear: both;
 }
+
 label,
 .coop-form__label {
   font-size: 1.125rem;
@@ -152,25 +168,29 @@ label,
   margin: 0 0 calc(calc(2rem / 4) / 2);
   margin: 0 0 calc(var(--spacing-base--1-4) / 2);
 }
+
 @media (min-width: 46.875em) {
   label,
   .coop-form__label {
     font-size: 1.25rem;
   }
 }
+
 .coop-label__hint {
   display: block;
   color: #6e6e6e;
   color: var(--color-grey-dark);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
 }
+
 .coop-form__label--inline {
   display: inline;
 }
+
 legend,
 .coop-form__legend {
   font-family: "Avenir-Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -181,12 +201,14 @@ legend,
   margin: 0 0 var(--spacing-base--1-4);
   font-size: 1.5rem;
 }
+
 @media (min-width: 46.875em) {
   legend,
   .coop-form__legend {
     font-size: 1.75rem;
   }
 }
+
 fieldset,
 .coop-form__fieldset {
   border: none;
@@ -194,7 +216,8 @@ fieldset,
   margin: 0;
   width: 100%;
 }
-input[type="text"],
+
+input,
 .coop-form__input,
 textarea,
 .coop-form__textarea {
@@ -213,7 +236,8 @@ textarea,
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem;
 }
-input[type="text"]:focus,
+
+input:focus,
 .coop-form__input:focus,
 textarea:focus,
 .coop-form__textarea:focus {
@@ -226,31 +250,36 @@ textarea:focus,
   outline: 2px dotted var(--color-link--focus);
   transition: none;
 }
-input[type="text"]:hover::-webkit-input-placeholder,
+
+input:hover::-webkit-input-placeholder,
 .coop-form__input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder,
 .coop-form__textarea:hover::-webkit-input-placeholder {
   color: #c4c4c4;
   color: var(--color-grey-mid);
 }
-input[type="text"]:focus::-webkit-input-placeholder,
+
+input:focus::-webkit-input-placeholder,
 .coop-form__input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder,
 .coop-form__textarea:focus::-webkit-input-placeholder {
   transition: opacity 0.5s 0.5s ease;
   opacity: 0;
 }
-input[type="text"].coop-form__field--inline,
+
+input.coop-form__field--inline,
 .coop-form__input.coop-form__field--inline,
 textarea.coop-form__field--inline,
 .coop-form__textarea.coop-form__field--inline {
   display: inline-block;
   width: auto;
 }
+
 textarea,
 .coop-form__textarea {
   resize: vertical;
 }
+
 select,
 .coop-form__select {
   -webkit-appearance: menulist;
@@ -273,6 +302,7 @@ select,
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem;
 }
+
 select:focus,
 .coop-form__select:focus {
   background: #ffffff;
@@ -284,21 +314,25 @@ select:focus,
   outline: 2px dotted var(--color-link--focus);
   transition: none;
 }
+
 select:hover::-webkit-input-placeholder,
 .coop-form__select:hover::-webkit-input-placeholder {
   color: #c4c4c4;
   color: var(--color-grey-mid);
 }
+
 select:focus::-webkit-input-placeholder,
 .coop-form__select:focus::-webkit-input-placeholder {
   transition: opacity 0.5s 0.5s ease;
   opacity: 0;
 }
+
 select.coop-form__field--inline,
 .coop-form__select.coop-form__field--inline {
   display: inline-block;
   width: auto;
 }
+
 input[type="checkbox"],
 .coop-form__checkbox,
 input[type="radio"],
@@ -306,6 +340,7 @@ input[type="radio"],
   display: inline;
   cursor: pointer;
 }
+
 .coop-form__indented {
   border-left: 3px solid #00b1e7;
   border-left: 3px solid var(--color-brand);
@@ -319,25 +354,31 @@ input[type="radio"],
   margin-left: calc(var(--spacing--base--1-2) / 1.1);
   width: calc(100% - var(--spacing--base) - 3px);
 }
+
 .coop-form__indented:last-child {
   margin-bottom: 0;
 }
+
 .coop-form__indented label {
   font-size: 1rem;
 }
+
 @media (min-width: 46.875em) {
   .coop-form__indented label {
     font-size: 1.1rem;
   }
 }
+
 .coop-form__indented fieldset {
   margin-bottom: calc(2rem / 4 * 3);
   margin-bottom: var(--spacing-base--3-4);
 }
+
 .coop-form__invalid {
   border-color: #d63118;
   border-color: var(--color-red-mid);
 }
+
 .coop-form__error {
   position: relative;
   margin: 0.5rem 0;
@@ -345,11 +386,134 @@ input[type="radio"],
   color: #d63118;
   color: var(--color-red-mid);
 }
+
 .coop-form__error::before {
   position: absolute;
   left: 0;
   font-size: 1.5rem;
 }
+
 .coop-form__error:last-child {
   margin-bottom: 0.5rem;
+}
+
+.coop-c-form-choice {
+  position: relative;
+}
+
+.coop-c-form-choice__legend {
+  margin-bottom: 0.25rem;
+  margin-bottom: var(--spacing-4);
+  font-size: 1.125rem;
+  font-size: var(--type-body-s);
+}
+
+@media (min-width: 46.875em) {
+  .coop-c-form-choice__legend {
+    font-size: 1.2499999rem;
+    font-size: var(--type-body-l);
+  }
+}
+
+.coop-c-form-choice__input {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.coop-c-form-choice__label {
+  cursor: pointer;
+  padding: 0px 10px 10px 39px;
+  display: block;
+  line-height: 1.6;
+  touch-action: manipulation;
+}
+
+.coop-c-form-choice__input:focus + .coop-c-form-choice__label::before {
+  background: #ffffff;
+  border-color: #000000;
+  outline-offset: 3px;
+  outline: 2px dotted #eec300;
+  transition: none;
+}
+
+.coop-c-form-choice__input + .coop-c-form-choice__label::before {
+  content: "";
+  border: 2px solid;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.coop-c-form-choice__input + .coop-c-form-choice__label::after {
+  content: "";
+  border: 1px solid #ddd;
+  background: black;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  opacity: 0;
+}
+
+.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::before,
+.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::after {
+  border-radius: 15%;
+}
+
+.coop-c-form-choice__input--radio-button + .coop-c-form-choice__label::before,
+.coop-c-form-choice__input--radio-button + .coop-c-form-choice__label::after {
+  border-radius: 50%;
+}
+
+.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::after {
+  background: none;
+  border: solid;
+  border-width: 0 0 3px 3px;
+  transform: rotate(-45deg);
+  border-top-color: transparent;
+  width: 15px;
+  height: 8px;
+  left: 5px;
+  top: 11px;
+}
+
+.coop-c-form-choice__input:checked + .coop-c-form-choice__label::after {
+  opacity: 1;
+}
+
+.coop-c-message {
+  padding: 0.5rem 1rem;
+  padding: var(--spacing-8) var(--spacing-16);
+  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 46.875em) {
+  .coop-c-message {
+    padding: 1rem 2rem;
+    padding: var(--spacing-16) var(--spacing-32);
+    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-32);
+  }
+}
+
+.coop-c-message--error {
+  background: #fef3f4;
+  border: 1px solid #d63118;
+}
+
+.coop-c-form-error__text {
+  color: #d63118;
+  margin-bottom: 0;
 }
