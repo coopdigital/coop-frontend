@@ -3,38 +3,57 @@
 @import "@coopdigital/foundations-vars";
 @import "@coopdigital/component-card";
 
-.coop-c-card--product .coop-c-card__title {
+
+.coop-c-card--product {
+  padding-bottom: 0;
+  box-shadow: 0 5px 0 0 rgba(0,0,0,0.05);
+  transition: box-shadow 200ms ease-in;
+  margin-bottom: var(--spacing-32);
+}
+
+.coop-c-card--product:hover {
+  box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
+}
+
+.coop-c-card--product:hover .coop-c-card__content {
+  box-shadow: none;
+}
+
+.coop-c-card--product:hover .coop-c-card__content .coop-c-card__title {
+  box-shadow: none;
+}
+
+.coop-c-card--product .coop-c-card__title { 
   font-weight: 500;
   margin-bottom: 4px;
 }
 
-.coop-c-card--product .coop-c-card__image-product {
-  padding: 0 var(--spacing-base);
+.coop-c-card--product .coop-c-card__image-product { 
+  padding: 0 var(--spacing-32);
+}
+
+.coop-c-card--product .coop-c-card__link.coop-l-flex__item {
+  flex-direction: column;
 }
 
 .coop-c-card--product .coop-c-card__link {
-  overflow: hidden;
-  padding-bottom: 5px;
-  box-shadow: 0 5px 0 0 rgba(0,0,0,0.05);
-  transition: box-shadow 200ms ease-in;
-}
-
-.coop-c-card--product .coop-c-card__link:hover {
-  box-shadow: 0 5px 0 0 rgba(0,0,0,0.15);
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
 .coop-c-card--product .coop-c-card__link:hover .coop-c-card__title {
   text-decoration: underline;
 }
-
+  
 .coop-c-card--product .coop-c-card__link:hover .coop-c-card__image {
   transform: none;
 }
 
 .coop-c-card--product .coop-c-card__link .coop-c-card__title {
-  font-size: 1.125rem;
-  font-size: 18px;  
+  font-size: var(--type-h456-s);
   text-decoration: none;
+  display: flex;
 }
 
 .coop-c-card--product .coop-c-card__link .coop-c-card__content {
@@ -46,59 +65,66 @@
   overflow: hidden;
   float: none;
   width: 100%;
-  height: auto;
   transition: transform 200ms ease-in;
   text-align: center;
 }
 
-.coop-c-card--product .coop-c-card__link .coop-c-card__image .coop-c-card__image-src {
+.coop-c-card--product .coop-c-card__link .coop-c-card__image picture {
+  position: relative;
+  padding: var(--spacing-16) var(--spacing-16) 0;
+  z-index: 1;
   display: block;
   width: 100%;
 }
 
-.coop-c-card--product .coop-c-card__link .coop-c-card__image + .coop-c-card__content {
+.coop-c-card--product .coop-c-card__link .coop-c-card__image img {
+  display: block;
+  width: 100%;
+}
+
+.coop-c-card--product .coop-c-card__image + .coop-c-card__content {
   position: relative;
   float: none;
   width: 100%;
-  padding: 0 16px 5px 16px;
+  padding: var(--spacing-16) var(--spacing-16) var(--spacing-8);
   margin: 0;
 }
 
 .coop-c-card--product .coop-c-card__content-bottom .coop-c-icon {
-  margin-bottom: 8px;
+  margin-bottom: var(--spacing-8);
 }
 
 .coop-c-card--product .coop-c-card__paragraph {
-  font-size: var(--type-base--body);
+  font-size: var(--type-h456-s);
 }
 
 .coop-c-card__price {
   font-weight: bold;
   font-size: 1.5rem;
-  font-size: 24px;
+  margin-bottom: 0;
 }
 
 .coop-c-card__price--sale {
-  color: #D63A28;
+  color: var(--color-red-mid);
 }
 
 .coop-c-card__price-was {
   display: block;
   color: var(--color-text);
-  font-size: var(--type-base--body);
+  font-size: 0.625rem
 }
+
 
 .coop-c-card__price--deal-info {
   display: block;
-  color: #D63A28;
-  font-size: var(--type-base--body);
+  color: var(--color-red-mid);
+  font-size: 0.625rem
 }
 
-.coop-c-card--alcohol .coop-c-card__link .coop-c-card__image+.coop-c-card__content--wine {
-  padding-top: 0;
+.coop-c-card__price--equivalency-info {
+  display: block;
+  color: #6E6E6E;
+  font-size: 0.875rem;
+  margin-bottom: 0;
 }
 
-.coop-c-card__image-alcohol {
-  width: 135px;
-  margin: 12px auto 0 auto;
-}

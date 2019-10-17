@@ -91,7 +91,7 @@ function lintjs() {
 // Copy Co-op components
 function copyComponents() {
   return gulp.src([
-    '../packages/**/*'
+    '../packages/**/!(node_modules)*.{pcss,css,html}'
   ])
   .pipe(gulp.dest('src/_includes/pattern-library/components'))
 }
