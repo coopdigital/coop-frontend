@@ -114,6 +114,7 @@
   transition: box-shadow 0.2s ease-in;
   color: #282828;
   color: var(--color-text);
+  text-decoration: none;
 }
 @media (min-width: 46.875em) {
   .coop-c-signpost__link {
@@ -225,7 +226,7 @@
 }
 @media (min-width: 46.875em) {
   .coop-c-signpost__content {
-    min-height: none;
+    min-height: 0;
     padding: 1rem 1.5rem;
   }
 }
