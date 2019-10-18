@@ -103,23 +103,7 @@
 }
 .coop-c-list-tags .coop-c-icon,
 .coop-c-list-tags .coop-c-tag {
-  font-size: 0.75rem;
-}
-.coop-c-list-tags__item {
-  display: inline-block;
-  margin-right: 1rem;
-  margin-right: var(--spacing-16);
-  font-size: 0.625rem;
-}
-.coop-c-list-tags__item .coop-c-icon__left {
-  top: 8px;
-  width: 24px;
-}
-@media (min-width: 46.875em) {
-  .coop-c-list-tags__item .coop-c-icon__left {
-    top: 9px;
-    width: 28px;
-  }
+  font-size: 0.875rem;
 }
 .coop-c-tag {
   background: #f3f3f3;
