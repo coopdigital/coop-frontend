@@ -754,17 +754,15 @@ designPattern:
 - sys:
     id: 46q57n3LYPUeTGYSHbZUsB
     created_at: !ruby/object:DateTime 2019-10-18 13:52:03.368000000 Z
-    updated_at: !ruby/object:DateTime 2019-10-18 13:57:30.236000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-18 14:26:47.775000000 Z
     content_type_id: designPattern
-    revision: 3
+    revision: 4
   title: Country flags
   status: live
   github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-tags
   npm_url: https://www.npmjs.com/package/@coopdigital/component-tags
   introduction: Flags are used to show the origin of a product.
   design_and_content_documentation: |-
-    Tags show the most distinctive common properties of an object such as a product. Tags don’t move or animate.
-
     ## Flags on cards
 
     Flags can be used on a product card - but if used should not be clickable, as cards can only contain one link.
