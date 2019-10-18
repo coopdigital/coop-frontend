@@ -23,8 +23,7 @@
 @import "component-card--product/src/card--product.pcss";
 @import "component-skipnav/src/skipnav.pcss";
 @import "component-signpost/src/signpost.pcss";
-/* Removed as the base 64 encoding breaks the postCSScutomproperties plugin */
-/* @import 'component-tags/dist/tags.css'; */
+@import 'component-tags/src/tags.pcss';
 
 
 /* Design system */
