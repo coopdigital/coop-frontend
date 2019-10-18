@@ -651,12 +651,12 @@ designPattern:
 - sys:
     id: 6IIXRPgCWWmy6iIKK4Mqyq
     created_at: !ruby/object:DateTime 2018-11-21 08:36:05.869000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-18 15:20:34.008000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-18 13:56:17.310000000 Z
     content_type_id: designPattern
-    revision: 6
+    revision: 7
   title: Tags
-  status: beta
-  github_url: https://github.com/coopdigital/component-tags
+  status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-tags
   npm_url: https://www.npmjs.com/package/@coopdigital/component-tags
   introduction: A tag shows a particular feature of an item such as a recipe or product,
     enabling users to quickly see important common properties, and make a choice.
@@ -664,10 +664,6 @@ designPattern:
     red wine, or Fair Trade.
   design_and_content_documentation: |-
     Tags show the most distinctive common properties of an object such as a product. Tags don’t move or animate.
-
-    ## Tags on cards
-
-    Up to 4 tags can be used on a product card - but if used should not be clickable, as cards can only contain one link.
 
     ## Tags on pages
 
@@ -755,6 +751,29 @@ designPattern:
     If you have a question about colour, contact [design@coopdigital.co.uk](mailto:design@coopdigital.co.uk).
 
     [For more information see our general guide on accessibility](https://coop-design-manual.herokuapp.com/accessibility.html).
+- sys:
+    id: 46q57n3LYPUeTGYSHbZUsB
+    created_at: !ruby/object:DateTime 2019-10-18 13:52:03.368000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-18 13:57:30.236000000 Z
+    content_type_id: designPattern
+    revision: 3
+  title: Country flags
+  status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-tags
+  npm_url: https://www.npmjs.com/package/@coopdigital/component-tags
+  introduction: Flags are used to show the origin of a product.
+  design_and_content_documentation: |-
+    Tags show the most distinctive common properties of an object such as a product. Tags don’t move or animate.
+
+    ## Flags on cards
+
+    Flags can be used on a product card - but if used should not be clickable, as cards can only contain one link.
+
+    ## Flags on pages
+
+    On a specific page flags can be shown. Used in this context tags can be tappable or clickable to link to a page displaying other items that share the same property.
+
+    See examples of flags in use on [coop.co.uk/products/wine](https://www.coop.co.uk/products/wine).
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
