@@ -13,7 +13,6 @@
 @import "foundations-forms/src/forms.pcss";
 @import "foundations-tables/src/tables.pcss";
 @import "foundations-layout/src/layout.pcss";
-/* Include legacy grid to help support projects still using it. */
 @import "foundations-grid/dist/legacy-grid.css";
 
 
