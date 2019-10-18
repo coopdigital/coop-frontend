@@ -1809,9 +1809,9 @@ page:
 - sys:
     id: 3JcC1cQTjEdq6Pvo3dJGAc
     created_at: !ruby/object:DateTime 2019-05-10 09:21:00.051000000 Z
-    updated_at: !ruby/object:DateTime 2019-07-19 14:16:21.840000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-18 14:16:27.371000000 Z
     content_type_id: page
-    revision: 8
+    revision: 10
   title: Code resources
   introduction: |-
     Our front-end foundations and components are a collection of CSS and HTML files that Co-op's Digital services use.
@@ -1866,28 +1866,24 @@ page:
       revision: 2
     url_text: Pattern library
     section_id: pattern-library
-  content: "## [Front-end foundations](#foundations)\nThe front-end foundations are
-    the base styles (for things like layout and typography) that all Co-op services
-    use.\n\nYou can install individual foundations packages or the foundations CSS
-    that brings them all together - depending on your needs.\n\nSee the:\n\n<ul>\n
-    \ <li><a href=\"https://github.com/coopdigital/css-foundations\">Foundations CSS</a></li>\n
+  content: "## [Co-op front-end](#foundations)\nThe front-end are the base styles
+    (for things like layout and typography) that all Co-op services use.\n\nYou can
+    install individual foundations packages or the foundations CSS that brings them
+    all together - depending on your needs.\n\nThen you can pick and choose whcih
+    components you need on top of the base styles.\n\nSee the:\n\n<ul>\n  <li><a href=\"https://github.com/coopdigital/coop-frontend\">Co-op
+    front-end - a mono repo coantaing all the front-end foundations and components</a></li>\n
     \ <li><a href=\"https://www.npmjs.com/settings/coopdigital/packages\">Indivdual
     foundations packages on NPM</a></li>\n  <li><a href=\"https://coop-design-system.herokuapp.com/pattern-library/\">Examples
-    of the foundations in the pattern library</a></li>\n</ul>\n\n## [Front-end components](#components)\nThe
-    front-end components are common UI patterns thaat have been identified as useful
-    to more than one service.\n\nYou can install these individually. Only use them
-    if you are sure that they fulfil your user's needs.\n\nSee the:\n\n<ul>\n  <li><a
-    href=\"https://www.npmjs.com/settings/coopdigital/packages\">See the indivdual
-    component pacakges on NPM</a></li>\n  <li><a href=\"https://coop-design-system.herokuapp.com/pattern-library/\">Examples
-    of the components in the pattern library</a></li>\n</ul>\n\n## [Webpack build
+    of the foundations in the pattern library</a></li>\n</ul>\n\n## [Webpack build
     pipeline](#webpack)\nComing soon. A default webpack set-up for your service. \n\n<p>If
     you need more information on setting this up now email <a href=\"mailto:design@coopdigital.co.uk\">design@coopdigital.co.uk</a></p>\n\n##
     [Prototyping kit](#prototyping)\nThe prototyping kit brings together all the foundations
     and components in one package that allows you to build early versions of services
     and publish them to the internet quickly.\n\nGet the:\n\n<ul>\n  <li><a href=\"/getting-started.html\">See
     the getting started guide</a></li>\n  <li><a href=\"https://github.com/coopdigital/prototyping-kit\">Download
-    the prototyping kit</a></li>\n</ul>\n\n## [Email templates](#email)\nA basic Co-op
-    branded responsive email template for service messages.\n<p><a href=\"https://github.com/coopdigital/email-templates\">See
+    the prototyping kit</a></li>\n  <li><a href=\"https://github.com/coopdigital/coop-prototyping-kit\">Download
+    the Gulp prototyping kit</a></li>\n</ul>\n\n## [Email templates](#email)\nA basic
+    Co-op branded responsive email template for service messages.\n<p><a href=\"https://github.com/coopdigital/email-templates\">See
     the email templates</a></p>\n\n## [Pattern library](#patternlibrary)\nA collection
     of our design patterns as code snippets with guidance. Use in conjunction with
     the front-end toolkit and/or prototyping kit.\n<p><a href=\"/pattern-library/\">Visit
@@ -2476,9 +2472,9 @@ page:
 - sys:
     id: 6ylf54HomNWckGFG2WP9ju
     created_at: !ruby/object:DateTime 2019-06-24 10:37:46.725000000 Z
-    updated_at: !ruby/object:DateTime 2019-07-17 14:17:09.930000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-18 14:19:37.427000000 Z
     content_type_id: page
-    revision: 5
+    revision: 7
   title: Getting started
   introduction: Use our guides to get set up with our design files, prototyping kit
     and front-end code
@@ -2525,9 +2521,13 @@ page:
     { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div
     class='embed-container'><iframe src='https://www.youtube.com/embed/kRl0Nx66bcw'
     frameborder='0' allowfullscreen></iframe></div>\n\n### 2. Creating a basic page\nComing
-    soon.\n\n### 3. Publishing to the internet and password protecting\nComing soon.\n\n##
-    [Front-end](#front-end)\nFor a deeper dive into the code resources we offer visit
-    the <a href=\"https://parceljs.org/\">code resources page</a>.\n"
+    soon.\n\n### 3. Publishing to the internet and password protecting\nComing soon.\n\n###
+    Gulp prototyping kit\nIf you don't want to download Docker, we still support our
+    older Gulp prototyping kit based on the <a href=\"https://jekyllrb.com/\">static
+    site generator Jekyll</a>.\n\n<a href=\"https://github.com/coopdigital/coop-prototyping-kit\">Download
+    the Gulp prototyping kit</a>.\n\n## [Front-end](#front-end)\nFor a deeper dive
+    into the code resources we offer visit the <a href=\"https://coop-design-system.herokuapp.com/code.html\">code
+    resources page</a>.\n"
 inPageNavigationLink:
 - sys:
     id: 6Cp3eqqWBykQ8GW0oAUyKA
