@@ -978,6 +978,7 @@ a:active,
   a:focus,
   .coop-t-link:active,
   .coop-t-link:focus {
+    -webkit-transition: none;
     transition: none;
     outline: 2px dotted #eec300;
     outline: 2px dotted var(--color-link--focus);
@@ -998,6 +999,7 @@ a:active,
 
 .coop-t-link-white:active,
   .coop-t-link-white:focus {
+    -webkit-transition: none;
     transition: none;
     outline: 2px dotted #ffffff;
     outline: 2px dotted var(--color-white);
@@ -1018,6 +1020,7 @@ a:active,
 
 .coop-t-link-black:active,
   .coop-t-link-black:focus {
+    -webkit-transition: none;
     transition: none;
     outline: 2px dotted #000000;
     outline: 2px dotted var(--color-black);
@@ -1148,9 +1151,13 @@ a.coop-t-nounderline,
 }
 
 .coop-l-grid {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   flex-wrap: nowrap;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   margin-top: -2rem;
   margin-left: -1rem;
@@ -1158,6 +1165,7 @@ a.coop-t-nounderline,
 }
 
 .coop-l-grid-item {
+  -webkit-box-flex: 1;
   flex: 1 0 auto;
   max-width: 100%;
   padding-left: 1rem;
@@ -1166,11 +1174,14 @@ a.coop-t-nounderline,
 }
 
 .coop-l-grid--fluid .coop-l-grid-item {
+  -webkit-box-flex: 1;
   flex: 1;
 }
 
 @media (min-width: 480px) {
   .coop-l-grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -1194,6 +1205,7 @@ a.coop-t-nounderline,
 }
 
 .coop-u-flex {
+  display: -webkit-box;
   display: flex;
 }
 
@@ -1206,35 +1218,48 @@ a.coop-t-nounderline,
 }
 
 .coop-u-flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   flex-direction: row;
 }
 
 .coop-u-flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 
 .coop-u-flex-row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
   flex-direction: row-reverse;
 }
 
 .coop-u-flex-column-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
   flex-direction: column-reverse;
 }
 
 .coop-u-flex-start {
+  -webkit-box-pack: start;
   justify-content: flex-start;
 }
 
 .coop-u-flex-center {
+  -webkit-box-pack: center;
   justify-content: center;
 }
 
 .coop-u-flex-end {
+  -webkit-box-pack: end;
   justify-content: flex-end;
 }
 
 .coop-u-flex-centered {
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -1625,6 +1650,7 @@ a.coop-t-nounderline,
   text-align: center;
   border: 0;
   border-radius: 7px;
+  -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   outline: none;
   text-decoration: none;
@@ -1650,6 +1676,7 @@ a.coop-t-nounderline,
 }
 
 .coop-btn:focus {
+  -webkit-transition: none;
   transition: none;
   outline: 2px dotted #eec300;
   outline: 2px dotted var(--color-link--focus);
@@ -1831,6 +1858,7 @@ textarea,
   color: #282828;
   color: var(--color-text);
   outline: 0;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem
 }
@@ -1843,6 +1871,7 @@ input:focus, .coop-form__input:focus, textarea:focus, .coop-form__textarea:focus
     outline-offset: 3px;
     outline: 2px dotted #eec300;
     outline: 2px dotted var(--color-link--focus);
+    -webkit-transition: none;
     transition: none;
   }
 
@@ -1852,6 +1881,7 @@ input:hover::-webkit-input-placeholder, .coop-form__input:hover::-webkit-input-p
   }
 
 input:focus::-webkit-input-placeholder, .coop-form__input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder, .coop-form__textarea:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.5s 0.5s ease;
     transition: opacity 0.5s 0.5s ease;
     opacity: 0;
   }
@@ -1885,6 +1915,7 @@ select,
   color: #282828;
   color: var(--color-text);
   outline: 0;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem
 }
@@ -1897,6 +1928,7 @@ select:focus, .coop-form__select:focus {
     outline-offset: 3px;
     outline: 2px dotted #eec300;
     outline: 2px dotted var(--color-link--focus);
+    -webkit-transition: none;
     transition: none;
   }
 
@@ -1906,6 +1938,7 @@ select:hover::-webkit-input-placeholder, .coop-form__select:hover::-webkit-input
   }
 
 select:focus::-webkit-input-placeholder, .coop-form__select:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.5s 0.5s ease;
     transition: opacity 0.5s 0.5s ease;
     opacity: 0;
   }
@@ -2023,6 +2056,7 @@ input[type="radio"],
   border-color: #000000;
   outline-offset: 3px;
   outline: 2px dotted #eec300;
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -2063,7 +2097,8 @@ input[type="radio"],
   background: none;
   border: solid;
   border-width: 0 0 3px 3px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   border-top-color: transparent;
   width: 15px;
   height: 8px;
@@ -4155,16 +4190,24 @@ table ul,
 }
 
 .coop-l-flexed {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
 }
 
 @media (min-width: 60em) {
   .coop-l-flexed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
   }
   .coop-l-flexed--reversed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
     flex-direction: row-reverse;
   }
 }
