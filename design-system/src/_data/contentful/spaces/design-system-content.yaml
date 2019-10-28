@@ -772,6 +772,28 @@ designPattern:
     On a specific page flags can be shown. Used in this context tags can be tappable or clickable to link to a page displaying other items that share the same property.
 
     See examples of flags in use on [coop.co.uk/products/wine](https://www.coop.co.uk/products/wine).
+- sys:
+    id: 2VmGQOF8w1PLKeVSzp0UF2
+    created_at: !ruby/object:DateTime 2019-10-28 12:40:58.062000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-28 12:56:12.484000000 Z
+    content_type_id: designPattern
+    revision: 4
+  title: Squircles
+  status: live
+  github_url: https://github.com/coopdigital/coop-frontend/
+  introduction: We use squircles to draw a person's eye to a value offer (a deal or
+    price) or to signify that something we think will interest a person has been added.
+  design_and_content_documentation: |-
+    We see squircles a lot in physical locations (such as stores) as there is more competition for a person's attention. Online we still use squircles to draw a person's eye - but we use it a lot less. This is because when we design a user journey it should be focused around one or a small set of secific user needs.
+
+    Squircles should always be paired with an editorial card that contains more information on the deal or new content being promoted.
+
+    Within our content management system some squircles are editable whereas some are fixed.
+
+    ![Screen 2019-10-28 at 12.45.27](//images.ctfassets.net/95z9ms2kvox3/19Xe8yVY7IgynFESbLX3Wp/39340a442af10cecf58f26bf0b4cfb97/Screen__2019-10-28_at_12.45.27.png)
+  variations: |2
+
+    - [Editorial card](https://coop-design-system.herokuapp.com/pattern-library/components/cards/editorial-card.html)
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu

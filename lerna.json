@@ -7,7 +7,7 @@
   "version": "independent",
   "command": {
     "publish": {
-      "allowBranch": "squircles",
+      "allowBranch": "master",
       "ignoreChanges": ["*.md"]
     }
   }
