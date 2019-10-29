@@ -775,12 +775,13 @@ designPattern:
 - sys:
     id: 2VmGQOF8w1PLKeVSzp0UF2
     created_at: !ruby/object:DateTime 2019-10-28 12:40:58.062000000 Z
-    updated_at: !ruby/object:DateTime 2019-10-28 12:56:12.484000000 Z
+    updated_at: !ruby/object:DateTime 2019-10-28 13:31:33.304000000 Z
     content_type_id: designPattern
-    revision: 4
+    revision: 5
   title: Squircles
   status: live
-  github_url: https://github.com/coopdigital/coop-frontend/
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-squircles
+  npm_url: https://www.npmjs.com/package/@coopdigital/component-squircles
   introduction: We use squircles to draw a person's eye to a value offer (a deal or
     price) or to signify that something we think will interest a person has been added.
   design_and_content_documentation: |-
