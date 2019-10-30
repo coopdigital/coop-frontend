@@ -65,7 +65,9 @@
   "scripts": {
     "build": "gulp build",
     "dist": "echo Design System - no need to build",
-    "server": "gulp server"
+    "server": "gulp server",
+    "contentful": "gulp contentful",
+    "algolia": "gulp algolia"
   },
   "browserslist": [
     "> 5%",

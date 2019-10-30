@@ -196,7 +196,7 @@ function serve(done) {
  * Run tasks
  */
 const build = gulp.parallel(
-  gulp.series(copyComponents, contentful, jekyll, algolia),
+  gulp.series(copyComponents, jekyll),
   css,
   vendorjs,
   gulp.series(lintjs, js),
