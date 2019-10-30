@@ -100,14 +100,14 @@ function copyComponents() {
 function contentful(gulpCallBack) {
   const contentful = spawn('jekyll', ['contentful'], {stdio: 'inherit'});
   contentful.on('exit', function(code) {
-    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll Contentful process exited with code: '+code);
+    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll Contentful process exited with code: ' + code);
   });
 }
 
 function jekyll(gulpCallBack) {
-  const jekyll = spawn('jekyll', ['build'], {stdio: 'inherit', cwd: 'src'});
+  const jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
   jekyll.on('exit', function(code) {
-    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
   });
 }
 
@@ -203,15 +203,11 @@ const server = gulp.series(build, serve, watch);
 
 
 module.exports = {
-  copyComponents,
   contentful,
   jekyll,
   css,
-  vendorjs,
-  lintjs,
   js,
   assets,
-  optimiseImages,
   build,
   server,
   default: build

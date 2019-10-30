@@ -1,3 +1,22 @@
+# Jekyll config
+
+# Site settings
+title: Co-op design system
+description: Co-op design system
+baseurl: ""
+url: "http://coop-design-manual.herokuapp.com"
+
+# Build settings
+source: ./src
+destination: ./build
+keep_files: ['css', 'js', 'assets']
+markdown: kramdown
+
+# Collections
+collections:
+  pattern-library:
+    output: false
+
 # Contentful
 contentful:
   spaces:
@@ -8,7 +27,7 @@ contentful:
         all_entries: true
         base_path: ./src
 
+# Algolia
 algolia:
   application_id: IYUPP0IQ1H
-  index_name:     designsystem 
-  
+  index_name:     designsystem
