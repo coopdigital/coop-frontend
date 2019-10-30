@@ -37,10 +37,16 @@ The Design system is automatically deployed to Heroku (<https://coop-design-manu
 
 ## Algolia search indexing
 
-To update the Algolia search index, you will first need to set the following variables with the relevant values in your `.env` file:
+To test updating the Algolia search index, you will first need to set the following variables with the relevant values in your `.env` file:
 
 ```
 ALGOLIA_API_KEY=
 ALGOLIA_APPLICATION_ID=
 ALGOLIA_INDEX_NAME=
+```
+
+Then you can update the index by running the `algolia` script:
+
+```
+npm run algolia
 ```

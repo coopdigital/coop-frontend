@@ -67,7 +67,8 @@
     "dist": "echo Design System - no need to build",
     "server": "gulp server",
     "contentful": "gulp contentful",
-    "algolia": "gulp algolia"
+    "algolia": "gulp algolia",
+    "heroku-postbuild": "gulp algolia"
   },
   "browserslist": [
     "> 5%",

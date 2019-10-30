@@ -49,6 +49,10 @@ jobs:
           command: npm install
           working_directory: ~/project/design-system
       - run:
+          name: Fetch Contentful entries
+          command: npm run contentful
+          working_directory: ~/project/design-system
+      - run:
           name: Build site
           command: npm run build
           working_directory: ~/project/design-system
