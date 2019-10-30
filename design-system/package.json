@@ -31,6 +31,7 @@
     "@coopdigital/foundations-typography": "^3.0.5",
     "@coopdigital/foundations-vars": "^2.0.4",
     "contentful-migration": "^1.0.1",
+    "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-concat": "^2.6.0",

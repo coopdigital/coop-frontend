@@ -8,6 +8,8 @@ bower_components/
 
 # Jekyll/styleguide builds
 .env
+.env*
+!.env.sample
 .sass-cache
 .jekyll-metadata
 build/

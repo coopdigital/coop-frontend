@@ -1,5 +1,5 @@
 'use strict';
-
+require('dotenv').config()
 const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
