@@ -7,3 +7,8 @@ contentful:
         environment:  master
         all_entries: true
         base_path: ./src
+
+algolia:
+  application_id: IYUPP0IQ1H
+  index_name:     designsystem 
+  

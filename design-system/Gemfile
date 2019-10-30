@@ -9,4 +9,5 @@ gem 'contentful_bootstrap'
 
 group :jekyll_plugins do
   gem 'jekyll-contentful-data-import'
+  gem 'jekyll-algolia', '~> 1.0'
 end
