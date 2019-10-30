@@ -18,16 +18,23 @@ collections:
     output: false
 
 # Contentful
+# The following environment variables are required by the Contentful plugin
+# and should be set on the environment or in the `.env` file:
+# CONTENTFUL_SPACE_ID
+# CONTENTFUL_ACCESS_TOKEN
+# CONTENTFUL_ENVIRONMENT
 contentful:
   spaces:
     - design-system-content:
-        space:        ENV_CONTENTFUL_SPACE_ID
+        space: ENV_CONTENTFUL_SPACE_ID
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN
-        environment:  ENV_CONTENTFUL_ENVIRONMENT
+        environment: ENV_CONTENTFUL_ENVIRONMENT
         all_entries: true
         base_path: ./src
 
 # Algolia
-algolia:
-  application_id: ENV_ALGOLIA_APP_ID
-  index_name:     ENV_ALGOLIA_INDEX_NAME
+# The following environment variables are required by the Algolia plugin
+# and should be set on the environment or in the `.env` file:
+# ALGOLIA_API_KEY
+# ALGOLIA_APPLICATION_ID
+# ALGOLIA_INDEX_NAME
