@@ -68,7 +68,7 @@
     "server": "gulp server",
     "contentful": "gulp contentful",
     "algolia": "gulp algolia",
-    "heroku-postbuild": "gulp build && gulp algolia"
+    "heroku-postbuild": "gulp contentful && gulp build && gulp algolia"
   },
   "browserslist": [
     "> 5%",
