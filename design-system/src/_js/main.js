@@ -7,17 +7,6 @@ $(function(){
 
   $('.in-page-nav').fixedsticky();
 
-  // var stickyNav = $('.fixedsticky--horz').offset().top;
-
-  // $(window).scroll(function() {  
-  //     if ($(window).scrollTop() > stickyNav) {
-  //         $('.fixedsticky--horz').addClass('fixedsticky--horz-styled');
-  //     }
-  //     else {
-  //         $('.fixedsticky--horz').removeClass('fixedsticky--horz-styled');
-  //     }  
-  // });
-
   Coop.init();
 
   function showElement(element) {
@@ -443,3 +432,28 @@ $("#in-page-nav li a").click(function() {
     new window.Tabs($("#TabContainer"));
   });
 }).call(this);
+
+
+var search = instantsearch({
+  appId: 'IYUPP0IQ1H',
+  apiKey: 'b245cff1a7e1bbd25d9b9173ec9f5090',
+  indexName: 'designsystem',
+  routing: true
+});
+
+// initialize SearchBox
+search.addWidget(instantsearch.widgets.searchBox({
+  container: '#search-box',
+  placeholder: 'Search the design system'
+}));
+
+// initialize hits widget
+search.addWidget(instantsearch.widgets.hits({
+  container: '#hits',
+  templates: {
+    empty: 'No results',
+    item: '{{{_highlightResult.title.value}}}'
+  }
+}));
+
+search.start();

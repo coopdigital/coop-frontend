@@ -139,7 +139,7 @@ function js() {
     .pipe(sourcemaps.init())
     .pipe(include(settings.include))
     .pipe(concat("main.js"))
-    .pipe(uglify())
+    .pipe(uglify('esversion: 6'))
     .pipe(sourcemaps.write("maps/"))
     .pipe(gulp.dest(dest_paths.scripts))
     .pipe(connect.reload());
