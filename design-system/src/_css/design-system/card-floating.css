@@ -19,7 +19,8 @@
 }
 
 .card--shadow.card--home {
-    margin-top: var(--spacing-32);
+    margin-top: var(--spacing-16);
+    margin-bottom: var(--spacing-16);
 }
 
 .card--nm h2 {

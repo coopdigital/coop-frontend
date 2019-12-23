@@ -1830,10 +1830,10 @@ page:
 - sys:
     id: 3JcC1cQTjEdq6Pvo3dJGAc
     created_at: !ruby/object:DateTime 2019-05-10 09:21:00.051000000 Z
-    updated_at: !ruby/object:DateTime 2019-10-18 14:16:27.371000000 Z
+    updated_at: !ruby/object:DateTime 2019-12-20 13:33:12.064000000 Z
     content_type_id: page
-    revision: 10
-  title: Code resources
+    revision: 11
+  title: Front-end resources
   introduction: |-
     Our front-end foundations and components are a collection of CSS and HTML files that Co-op's Digital services use.
 
