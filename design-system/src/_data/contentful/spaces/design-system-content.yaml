@@ -1831,51 +1831,51 @@ page:
   - sys:
       id: 4GzAfegJ6Ttc2sq7Kxx313
       created_at: !ruby/object:DateTime 2020-01-21 11:13:54.282000000 Z
-      updated_at: !ruby/object:DateTime 2020-01-21 11:13:54.282000000 Z
+      updated_at: !ruby/object:DateTime 2020-01-22 15:56:44.677000000 Z
       content_type_id: inPageNavigationLink
-      revision: 1
+      revision: 2
     url_text: Focus on what people need to do
-    section_id: focus
+    section_id: focus-on-what-people-need-to-do
   - sys:
       id: 2gXTSf7U1FqhORJgjip0iv
       created_at: !ruby/object:DateTime 2020-01-21 11:18:39.108000000 Z
-      updated_at: !ruby/object:DateTime 2020-01-21 11:18:39.108000000 Z
+      updated_at: !ruby/object:DateTime 2020-01-22 15:57:02.926000000 Z
       content_type_id: inPageNavigationLink
-      revision: 1
+      revision: 2
     url_text: Make decisions with evidence
-    section_id: 'evidence '
+    section_id: make-decisions-with-evidence
   - sys:
       id: 4HM17Q4ziMwJoGILYqwPHB
       created_at: !ruby/object:DateTime 2020-01-21 11:18:54.330000000 Z
-      updated_at: !ruby/object:DateTime 2020-01-21 11:18:54.330000000 Z
+      updated_at: !ruby/object:DateTime 2020-01-22 15:57:12.636000000 Z
       content_type_id: inPageNavigationLink
-      revision: 1
+      revision: 2
     url_text: Be clear
-    section_id: 'clear '
+    section_id: 'be-clear '
   - sys:
       id: 46oieIwCWzA0ylPVA8N3M4
       created_at: !ruby/object:DateTime 2020-01-21 11:19:09.881000000 Z
-      updated_at: !ruby/object:DateTime 2020-01-21 11:19:09.881000000 Z
+      updated_at: !ruby/object:DateTime 2020-01-22 15:57:21.665000000 Z
       content_type_id: inPageNavigationLink
-      revision: 1
+      revision: 2
     url_text: Be considerate
-    section_id: considerate
+    section_id: be-considerate
   - sys:
       id: 3p3SDvFUdKkic2rKDbPJb5
       created_at: !ruby/object:DateTime 2020-01-21 11:19:24.527000000 Z
-      updated_at: !ruby/object:DateTime 2020-01-21 11:19:24.527000000 Z
+      updated_at: !ruby/object:DateTime 2020-01-22 15:57:29.499000000 Z
       content_type_id: inPageNavigationLink
-      revision: 1
+      revision: 2
     url_text: Be inclusive
-    section_id: 'inclusive '
+    section_id: 'be-inclusive '
   - sys:
       id: 5d2JF5hFNI5nIS4qiNKwfj
       created_at: !ruby/object:DateTime 2020-01-21 11:19:45.471000000 Z
-      updated_at: !ruby/object:DateTime 2020-01-21 11:19:45.471000000 Z
+      updated_at: !ruby/object:DateTime 2020-01-22 15:57:57.957000000 Z
       content_type_id: inPageNavigationLink
-      revision: 1
+      revision: 2
     url_text: Say as little as possible and as much as necessary
-    section_id: little
+    section_id: say-as-little-as-possible-and-as-much-as-necessary
   content: "## [Focus on what people need to do](#focus)\n\n### Give information only
     when it’s needed \nPeople don’t read, understand and remember information if they’re
     given it at a point where they can’t act on it. Understand the journey - only
@@ -3291,51 +3291,51 @@ inPageNavigationLink:
 - sys:
     id: 4GzAfegJ6Ttc2sq7Kxx313
     created_at: !ruby/object:DateTime 2020-01-21 11:13:54.282000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-21 11:13:54.282000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-22 15:56:44.677000000 Z
     content_type_id: inPageNavigationLink
-    revision: 1
+    revision: 2
   url_text: Focus on what people need to do
-  section_id: focus
+  section_id: focus-on-what-people-need-to-do
 - sys:
     id: 2gXTSf7U1FqhORJgjip0iv
     created_at: !ruby/object:DateTime 2020-01-21 11:18:39.108000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-21 11:18:39.108000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-22 15:57:02.926000000 Z
     content_type_id: inPageNavigationLink
-    revision: 1
+    revision: 2
   url_text: Make decisions with evidence
-  section_id: 'evidence '
+  section_id: make-decisions-with-evidence
 - sys:
     id: 4HM17Q4ziMwJoGILYqwPHB
     created_at: !ruby/object:DateTime 2020-01-21 11:18:54.330000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-21 11:18:54.330000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-22 15:57:12.636000000 Z
     content_type_id: inPageNavigationLink
-    revision: 1
+    revision: 2
   url_text: Be clear
-  section_id: 'clear '
+  section_id: 'be-clear '
 - sys:
     id: 46oieIwCWzA0ylPVA8N3M4
     created_at: !ruby/object:DateTime 2020-01-21 11:19:09.881000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-21 11:19:09.881000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-22 15:57:21.665000000 Z
     content_type_id: inPageNavigationLink
-    revision: 1
+    revision: 2
   url_text: Be considerate
-  section_id: considerate
+  section_id: be-considerate
 - sys:
     id: 3p3SDvFUdKkic2rKDbPJb5
     created_at: !ruby/object:DateTime 2020-01-21 11:19:24.527000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-21 11:19:24.527000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-22 15:57:29.499000000 Z
     content_type_id: inPageNavigationLink
-    revision: 1
+    revision: 2
   url_text: Be inclusive
-  section_id: 'inclusive '
+  section_id: 'be-inclusive '
 - sys:
     id: 5d2JF5hFNI5nIS4qiNKwfj
     created_at: !ruby/object:DateTime 2020-01-21 11:19:45.471000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-21 11:19:45.471000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-22 15:57:57.957000000 Z
     content_type_id: inPageNavigationLink
-    revision: 1
+    revision: 2
   url_text: Say as little as possible and as much as necessary
-  section_id: little
+  section_id: say-as-little-as-possible-and-as-much-as-necessary
 landingPage:
 - sys:
     id: 3rvIIO3YA8G22KUs2GUG4o
