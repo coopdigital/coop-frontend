@@ -23,7 +23,7 @@ jobs:
           command: npm run build:all
 
 
-  build_site:
+  build:
     docker:
       - image: circleci/ruby:2.5.1-node
     steps:
@@ -75,12 +75,12 @@ workflows:
   build_packages_and_site:
     jobs:
       - build_packages
-      - build_site:
+      - build:
           requires:
             - build_packages
       - deploy:
           requires:
-            - build_site
+            - build
           filters:
             branches:
               only: master
