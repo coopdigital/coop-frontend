@@ -1818,9 +1818,9 @@ page:
 - sys:
     id: 6pZ7nCcL9mQoE0SEO8QW6
     created_at: !ruby/object:DateTime 2018-12-05 11:37:14.380000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-21 11:34:07.329000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-23 08:31:18.609000000 Z
     content_type_id: page
-    revision: 4
+    revision: 5
   title: Content design principles
   status: live
   introduction: "We design content that meets people’s needs. \n\nPeople come to us
@@ -1926,45 +1926,43 @@ page:
     people need to be communicated with and do it in a way that suits them.\n\n\n##
     [Be considerate](considerate)\n\n### Don’t tell people how they should feel \n\nAvoid
     words like ‘quick’, ‘easy’ and ‘convenient’ - we don’t know whether that is true
-    for them and we shouldn’t make assumptions. \n\nIt is fine to say our food is
-    delicious – we are selling products and services.  \n\n### Reflect how people
-    see things \nWe often have an in-depth knowledge of the subject we are writing
-    about. This can be at odds with what the person reading knows or believes.  \n
-    \nDesign content to reflect how people see things by:  \n- answering their questions
-    \ \n- using the language that they use  \n- being clear about what they need to
-    do next \n\n### Be friendly but not over familiar  \nBe friendly when communicating,
-    it makes the content more human so it’s easier for people to interact with us.
-    Don’t allow that to get in the way of being clear, simple and to the point.  People
-    who come to our content may: \n\n- have English as a second language \n- be from
-    different cultures  \n- have their own insecurities and struggles \n\nPuns, humour
-    or over-familiarity can lose credibility, be confusing to some people and be insensitive
-    to your audience’s personal circumstances. \n\n\n## [Be inclusive](inclusive)\n\n###
-    Use plain English, including with specialists  \n\nUsing familiar and clear language
-    makes things easier for people to understand and increases the likelihood of them
-    interacting with us.  \n\nAvoid acronyms, abbreviations and metaphors.  \n\nWhen
-    writing for specialists, experts or senior staff who understand complex language
-    or jargon, use plain English. Specialists often have a lot to read – allow them
-    to understand that information as quickly as possible. It respects their time.
-    \n \n### Use images to aid understanding - not to replace words \n\nNever use
-    images to replace text content. If you need an image to help people understand
-    something always include a text description. \n \n### Avoid using time to set
-    expectations \n\nTelling people that something ‘takes xx minutes to complete’
-    is misleading and insensitive to people outside of the average, including people
-    with disabilities, or who use accessibility tools. \n\nConsider using a non-subjective
-    description, like ‘this survey has 10 multiple-choice questions’.\n\n### Make
-    complex things easy to understand \n\nIf you’re writing content for a complex
-    service: \n- use as few words as possible without losing the meaning – clarity
-    is more important than brevity \n- break multi-channel processes into steps to
-    manage people’s expectations  \n- make it clear where people are in the process
-    \ \n\n\n## [Say as little as possible and as much as necessary](little)\n\n###
-    Consider whether content is needed\nBe bold and delete content that people don’t
-    need or that they aren’t interested in. Consider whether creating more content
-    is necessary. Content is expensive to maintain, and the quantity of content has
-    environmental implications. \n\n### Edit ruthlessly  \nOur audience are mostly
-    on mobile devices, time-poor and have something they need to do or know. Get the
-    message across quickly otherwise they’ll be frustrated and go elsewhere. Each
-    word needs to be working for its place. Edit, then edit again to pack maximum
-    meaning into minimal content.  \n\n\n\n\n\n\n\n"
+    for them and we shouldn’t make assumptions.  \n\n### Reflect how people see things
+    \nWe often have an in-depth knowledge of the subject we are writing about. This
+    can be at odds with what the person reading knows or believes.  \n \nDesign content
+    to reflect how people see things by:  \n- answering their questions  \n- using
+    the language that they use  \n- being clear about what they need to do next \n\n###
+    Be friendly but not over familiar  \nBe friendly when communicating, it makes
+    the content more human so it’s easier for people to interact with us. Don’t allow
+    that to get in the way of being clear, simple and to the point.  People who come
+    to our content may: \n\n- have English as a second language \n- be from different
+    cultures  \n- have their own insecurities and struggles \n\nPuns, humour or over-familiarity
+    can lose credibility, be confusing to some people and be insensitive to your audience’s
+    personal circumstances. \n\n\n## [Be inclusive](inclusive)\n\n### Use plain English,
+    including with specialists  \n\nUsing familiar and clear language makes things
+    easier for people to understand and increases the likelihood of them interacting
+    with us.  \n\nAvoid acronyms, abbreviations and metaphors.  \n\nWhen writing for
+    specialists, experts or senior staff who understand complex language or jargon,
+    use plain English. Specialists often have a lot to read – allow them to understand
+    that information as quickly as possible. It respects their time. \n \n### Use
+    images to aid understanding - not to replace words \n\nNever use images to replace
+    text content. If you need an image to help people understand something always
+    include a text description. \n \n### Avoid using time to set expectations \n\nTelling
+    people that something ‘takes xx minutes to complete’ is misleading and insensitive
+    to people outside of the average, including people with disabilities, or who use
+    accessibility tools. \n\nConsider using a non-subjective description, like ‘this
+    survey has 10 multiple-choice questions’.\n\n### Make complex things easy to understand
+    \n\nIf you’re writing content for a complex service: \n- use as few words as possible
+    without losing the meaning – clarity is more important than brevity \n- break
+    multi-channel processes into steps to manage people’s expectations  \n- make it
+    clear where people are in the process  \n\n\n## [Say as little as possible and
+    as much as necessary](little)\n\n### Consider whether content is needed\nBe bold
+    and delete content that people don’t need or that they aren’t interested in. Consider
+    whether creating more content is necessary. Content is expensive to maintain,
+    and the quantity of content has environmental implications. \n\n### Edit ruthlessly
+    \ \nOur audience are mostly on mobile devices, time-poor and have something they
+    need to do or know. Get the message across quickly otherwise they’ll be frustrated
+    and go elsewhere. Each word needs to be working for its place. Edit, then edit
+    again to pack maximum meaning into minimal content.  \n\n\n\n\n\n\n\n"
 - sys:
     id: 3JcC1cQTjEdq6Pvo3dJGAc
     created_at: !ruby/object:DateTime 2019-05-10 09:21:00.051000000 Z
