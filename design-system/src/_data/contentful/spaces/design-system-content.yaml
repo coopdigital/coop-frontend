@@ -1818,15 +1818,15 @@ page:
 - sys:
     id: 6pZ7nCcL9mQoE0SEO8QW6
     created_at: !ruby/object:DateTime 2018-12-05 11:37:14.380000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-23 08:31:18.609000000 Z
+    updated_at: !ruby/object:DateTime 2020-01-24 09:27:20.463000000 Z
     content_type_id: page
-    revision: 5
+    revision: 14
   title: Content design principles
   status: live
   introduction: "We design content that meets people’s needs. \n\nPeople come to us
     to do something. They have a task they need to achieve - they need to do, buy,
     or apply for something.  \n\nThese guidelines help us to make it easy for them
-    to do what they need to do, and in turn make it easier for them to choose Co-op. "
+    to do what they need to do, and in turn make it easier for them to choose Co-op"
   in_page_navigation:
   - sys:
       id: 4GzAfegJ6Ttc2sq7Kxx313
@@ -1879,7 +1879,7 @@ page:
   content: "## [Focus on what people need to do](#focus)\n\n### Give information only
     when it’s needed \nPeople don’t read, understand and remember information if they’re
     given it at a point where they can’t act on it. Understand the journey - only
-    give information people need at that point \n\n### Only ask for the information
+    give information people need at that point. \n\n### Only ask for the information
     you need \nOnly ask for personal details if it’s essential - this is the law and
     not a guideline. \n\n### An example \nIf you do need to ask your users about who
     they are, make sure you: \n- ask for ‘full name’ in one field - not everyone has
@@ -1890,7 +1890,7 @@ page:
     ‘Last name’. \n\n### Be active and direct\nWrite concise content that is clear
     about who does what and lets people get on with what they need to do. \n\n###
     An example\n__Good:__ \nActive sentence: Send your invoice to the finance manager.
-    \n__Bad:__ \nPassive sentence: The invoice is sent to the finance manager. \n\n###
+    \n\n__Bad:__ \nPassive sentence: The invoice is sent to the finance manager. \n\n###
     Let people decide whether they’re in the right place quickly \nPeople pay more
     attention to content that’s near the top of a page, so it’s important that the
     titles describe what the page does. By stating who content is for and what it
@@ -2685,6 +2685,15 @@ page:
     the Gulp prototyping kit</a>.\n\n## [Front-end](#front-end)\nFor a deeper dive
     into the code resources we offer visit the <a href=\"https://coop-design-system.herokuapp.com/code.html\">code
     resources page</a>.\n"
+- sys:
+    id: 3RaY0OnMiFLoXWSONJ8GzM
+    created_at: !ruby/object:DateTime 2020-02-12 14:28:43.773000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-12 14:28:43.773000000 Z
+    content_type_id: page
+    revision: 1
+  title: Content tools and resources
+  status: live
+  introduction: "# Content tools and resources"
 inPageNavigationLink:
 - sys:
     id: 6Cp3eqqWBykQ8GW0oAUyKA
