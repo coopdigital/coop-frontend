@@ -2688,12 +2688,77 @@ page:
 - sys:
     id: 3RaY0OnMiFLoXWSONJ8GzM
     created_at: !ruby/object:DateTime 2020-02-12 14:28:43.773000000 Z
-    updated_at: !ruby/object:DateTime 2020-02-12 14:28:43.773000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-12 15:54:30.974000000 Z
     content_type_id: page
-    revision: 1
+    revision: 4
   title: Content tools and resources
   status: live
-  introduction: "# Content tools and resources"
+  introduction: This is a list of tools and resources for creating useful, usable
+    content.
+  in_page_navigation:
+  - sys:
+      id: OoFTVtdJHLPENItdfldb7
+      created_at: !ruby/object:DateTime 2020-02-12 15:54:11.531000000 Z
+      updated_at: !ruby/object:DateTime 2020-02-12 15:54:11.531000000 Z
+      content_type_id: inPageNavigationLink
+      revision: 1
+    url_text: Tools
+    section_id: tools
+  - sys:
+      id: 5DaXn2k9VF3mqBBxHK9KLE
+      created_at: !ruby/object:DateTime 2020-02-12 15:54:14.815000000 Z
+      updated_at: !ruby/object:DateTime 2020-02-12 15:54:14.815000000 Z
+      content_type_id: inPageNavigationLink
+      revision: 1
+    url_text: Resources
+    section_id: resources
+  - sys:
+      id: 29YqWvHCICy7K68Sk9spWF
+      created_at: !ruby/object:DateTime 2020-02-12 15:54:18.285000000 Z
+      updated_at: !ruby/object:DateTime 2020-02-12 15:54:18.285000000 Z
+      content_type_id: inPageNavigationLink
+      revision: 1
+    url_text: Guides
+    section_id: guides
+  - sys:
+      id: 5z7QWiLHaxZP3LPzWqwPYW
+      created_at: !ruby/object:DateTime 2020-02-12 15:54:22.004000000 Z
+      updated_at: !ruby/object:DateTime 2020-02-12 15:54:22.004000000 Z
+      content_type_id: inPageNavigationLink
+      revision: 1
+    url_text: Blog posts
+    section_id: blog-posts
+  - sys:
+      id: 50x4mJejAV2dDaaJajrtjB
+      created_at: !ruby/object:DateTime 2020-02-12 15:54:25.711000000 Z
+      updated_at: !ruby/object:DateTime 2020-02-12 15:54:25.711000000 Z
+      content_type_id: inPageNavigationLink
+      revision: 1
+    url_text: Research
+    section_id: research
+  content: "## [Tools](#tools) \n\n[Hemingway](http://www.hemingwayapp.com/)\n\nChecks
+    your writing and highlights complicated, passive sentences. \n\n\n[Grammarly](https://www.grammarly.com/)\n\nChecks
+    spelling, grammar and clarity. \n\n \n[Wave accessibility checker](https://wave.webaim.org/)\n\nChecks
+    web pages for accessibility problems. \n\n \n## [Resources](#resources) \n\n###
+    [Guides](#guides)\n\n[Readability guidelines](https://readabilityguidelines.co.uk/)
+    \  \n\nThese guidelines are maintained by a collaborative project and are supported
+    by lots of evidence. \n\n\n[gov.uk style guide](https://www.gov.uk/guidance/style-guide)\n\nGov.uk
+    does a lot of testing and research into what works well for users. They also have
+    useful information and patterns in their design system. \n\n\n[NHS style guide](https://service-manual.nhs.uk/content)\n\nThe
+    NHS style guide has evidence-based advice and guidance. \n\n \n[Guardian style
+    guide](https://www.theguardian.com/guardian-observer-style-guide-a)\n\nThe Guardian
+    is a fallback for any words and phrases that are not in our style guide.  \n\n\n###
+    [Blog posts](#blog-posts) \n\n[What is content design?](https://contentdesign.london/content-design/what-is-content-design/)\n\nA
+    summary of content design and why it matters. \n\n\n[The importance of clear writing](https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/)\n\nExplains
+    how simple, clear writing is more likely to be read and lead to action. \n\n \n[Why
+    simplicity is better for everyone](https://contentdesign.london/reading/dumbing-down/)
+    \n\nExplains why ‘dumbing down’ is really making your content more accessible.
+    \n\n \n[Why FAQs do not work](https://digitalblog.coop.co.uk/2018/09/13/why-faqs-arent-the-answer-youve-been-looking-for/)
+    \n\nExplains why we avoid using FAQs. \n\n\n### [Research](#research) \n\n\n[Nielsen
+    Norman Group](https://www.nngroup.com/articles/) \n\nA wide range of research
+    into all aspects of usability, accessibility and user experience. \n\n\n[Gov.uk
+    research and evidence](https://www.gov.uk/guidance/content-design/research-and-evidence)
+    \n\nList of books and guides that support the government approach to content design. "
 inPageNavigationLink:
 - sys:
     id: 6Cp3eqqWBykQ8GW0oAUyKA
@@ -3343,6 +3408,46 @@ inPageNavigationLink:
     revision: 2
   url_text: Say as little as possible and as much as necessary
   section_id: say-as-little-as-possible-and-as-much-as-necessary
+- sys:
+    id: OoFTVtdJHLPENItdfldb7
+    created_at: !ruby/object:DateTime 2020-02-12 15:54:11.531000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-12 15:54:11.531000000 Z
+    content_type_id: inPageNavigationLink
+    revision: 1
+  url_text: Tools
+  section_id: tools
+- sys:
+    id: 5DaXn2k9VF3mqBBxHK9KLE
+    created_at: !ruby/object:DateTime 2020-02-12 15:54:14.815000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-12 15:54:14.815000000 Z
+    content_type_id: inPageNavigationLink
+    revision: 1
+  url_text: Resources
+  section_id: resources
+- sys:
+    id: 29YqWvHCICy7K68Sk9spWF
+    created_at: !ruby/object:DateTime 2020-02-12 15:54:18.285000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-12 15:54:18.285000000 Z
+    content_type_id: inPageNavigationLink
+    revision: 1
+  url_text: Guides
+  section_id: guides
+- sys:
+    id: 5z7QWiLHaxZP3LPzWqwPYW
+    created_at: !ruby/object:DateTime 2020-02-12 15:54:22.004000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-12 15:54:22.004000000 Z
+    content_type_id: inPageNavigationLink
+    revision: 1
+  url_text: Blog posts
+  section_id: blog-posts
+- sys:
+    id: 50x4mJejAV2dDaaJajrtjB
+    created_at: !ruby/object:DateTime 2020-02-12 15:54:25.711000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-12 15:54:25.711000000 Z
+    content_type_id: inPageNavigationLink
+    revision: 1
+  url_text: Research
+  section_id: research
 landingPage:
 - sys:
     id: 3rvIIO3YA8G22KUs2GUG4o
