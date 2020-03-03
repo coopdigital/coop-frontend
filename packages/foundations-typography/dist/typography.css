@@ -520,7 +520,6 @@ a:active,
 a:focus,
 .coop-t-link:active,
 .coop-t-link:focus {
-  -webkit-transition: none;
   transition: none;
   outline: 2px dotted #eec300;
   outline: 2px dotted var(--color-link--focus);
@@ -538,7 +537,6 @@ a:focus,
 }
 .coop-t-link-white:active,
 .coop-t-link-white:focus {
-  -webkit-transition: none;
   transition: none;
   outline: 2px dotted #ffffff;
   outline: 2px dotted var(--color-white);
@@ -556,7 +554,6 @@ a:focus,
 }
 .coop-t-link-black:active,
 .coop-t-link-black:focus {
-  -webkit-transition: none;
   transition: none;
   outline: 2px dotted #000000;
   outline: 2px dotted var(--color-black);
