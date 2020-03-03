@@ -2,8 +2,8 @@
   "name": "@coopdigital/shared-component--editorialcard",
   "version": "0.0.0",
   "description": "Co-op Shared Component: Editorial Card",
-  "main": "dist/card.css",
-  "style": "src/card.pcss",
+  "main": "dist/editorialCard.css",
+  "style": "src/editorialCard.pcss",
   "author": "Gup Badyal (gupreet.baydal@coop.co.uk)",
   "license": "MIT",
   "files": [
