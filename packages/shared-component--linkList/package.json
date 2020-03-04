@@ -1,7 +1,7 @@
 {
   "name": "@coopdigital/shared-component--linklist",
   "version": "0.0.0",
-  "description": "Co-op Shared Component: Feature Card",
+  "description": "Co-op Shared Component: Link list",
   "main": "dist/linkList.css",
   "style": "src/linkList.pcss",
   "author": "Gup Badyal (gupreet.baydal@coop.co.uk)",
