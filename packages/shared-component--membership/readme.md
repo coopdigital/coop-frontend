@@ -1,2 +1,2 @@
 # Component card
-Feature card component 
+Membership component 
