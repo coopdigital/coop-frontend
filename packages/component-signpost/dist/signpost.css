@@ -110,11 +110,13 @@
   flex-direction: row;
   border-bottom: none;
   width: 100%;
-  box-shadow: 0 0.3125rem 0 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.2s ease-in;
   color: #282828;
   color: var(--color-text);
   text-decoration: none;
+  overflow: hidden;
+  border-radius: 8px;
 }
 @media (min-width: 46.875em) {
   .coop-c-signpost__link {
@@ -128,7 +130,7 @@
 }
 .coop-c-signpost__link:focus,
 .coop-c-signpost__link:hover {
-  box-shadow: 0 0.3125rem 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .coop-c-signpost__link__deal {
   color: #fff;
