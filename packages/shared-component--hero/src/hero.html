@@ -4,23 +4,21 @@
   {% set squircleClass = '' %}
   {% set contentPullClass = '' %}
   {% set themeColour = '' %}
+  {% set backgroundColour = '' %}
 
   {% if content.image.data %}
     {% set mediaClass = 'coop-c-hero--media' %}
   {% endif %}
 
   {% if content.heroBackground and content.heroBackground.data %}
-    {% if content.heroBackground.data.id %}
+		{% if content.heroBackground.data.id %}
+			{% set squircleClass = 'coop-c-hero--squircle' %}
       {% set backgroundColour = 'coop-c-hero--' + content.heroBackground.data.id %}
     {% endif %}
   {% endif %}
 
   {% if content.contentPull.data %}
     {% set contentPullClass = 'coop-c-hero--pull' %}
-  {% endif %}
-
-  {% if content.showSquircle.data == true %}
-    {% set squircleClass = 'coop-c-hero--squircle' %}
   {% endif %}
 
   <div class="coop-c-hero {{ squircleClass }} {{ mediaClass }} {{ backgroundColour }} {{ contentPullClass }}">
@@ -91,7 +89,7 @@
           {% endif %}
         </div>
       {% endif %}
-      {% if content.showSquircle.data == true %}
+      {% if squircleClass %}
         <div class="coop-c-hero__squircle" aria-hidden="true">
           <div class="coop-c-hero__squircle__inner">
             <svg class="coop-c-hero__squircle__svg" viewBox="0 0 1802 1726">
