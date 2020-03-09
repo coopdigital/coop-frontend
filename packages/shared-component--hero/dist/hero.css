@@ -336,79 +336,92 @@
   top: 0;
   left: 0;
 }
-.coop-c-hero--color-1 {
+.coop-c-hero--color-1,
+.coop-c-hero--color-1 a {
   color: var(--theme--1-text);
 }
 .coop-c-hero--color-1 .coop-c-hero__squircle__svg {
   fill: var(--theme--1-bg);
 }
-.coop-c-hero--color-1a {
+.coop-c-hero--color-1a,
+.coop-c-hero--color-1a a {
   color: var(--theme--1a-text);
 }
 .coop-c-hero--color-1a .coop-c-hero__squircle__svg {
   fill: var(--theme--1a-bg);
 }
-.coop-c-hero--color-1b {
+.coop-c-hero--color-1b,
+.coop-c-hero--color-1b a {
   color: var(--theme--1b-text);
 }
 .coop-c-hero--color-1b .coop-c-hero__squircle__svg {
   fill: var(--theme--1b-bg);
 }
-.coop-c-hero--color-2 {
+.coop-c-hero--color-2,
+.coop-c-hero--color-2 a {
   color: var(--theme--2-text);
 }
 .coop-c-hero--color-2 .coop-c-hero__squircle__svg {
   fill: var(--theme--2-bg);
 }
-.coop-c-hero--color-2a {
+.coop-c-hero--color-2a,
+.coop-c-hero--color-2a a {
   color: var(--theme--2a-text);
 }
 .coop-c-hero--color-2a .coop-c-hero__squircle__svg {
   fill: var(--theme--2a-bg);
 }
-.coop-c-hero--color-2b {
+.coop-c-hero--color-2b,
+.coop-c-hero--color-2b a {
   color: var(--theme--2b-text);
 }
 .coop-c-hero--color-2b .coop-c-hero__squircle__svg {
   fill: var(--theme--2b-bg);
 }
-.coop-c-hero--color-3 {
+.coop-c-hero--color-3,
+.coop-c-hero--color-3 a {
   color: var(--theme--3-text);
 }
 .coop-c-hero--color-3 .coop-c-hero__squircle__svg {
   fill: var(--theme--3-bg);
 }
-.coop-c-hero--color-3a {
+.coop-c-hero--color-3a,
+.coop-c-hero--color-3a a {
   color: var(--theme--3a-text);
 }
 .coop-c-hero--color-3a .coop-c-hero__squircle__svg {
   fill: var(--theme--3a-bg);
 }
-.coop-c-hero--color-3b {
+.coop-c-hero--color-3b,
+.coop-c-hero--color-3b a {
   color: var(--theme--3b-text);
 }
 .coop-c-hero--color-3b .coop-c-hero__squircle__svg {
   fill: var(--theme--3b-bg);
 }
-.coop-c-hero--color-4 {
+.coop-c-hero--color-4,
+.coop-c-hero--color-4 a {
   color: var(--theme--4-text);
 }
 .coop-c-hero--color-4 .coop-c-hero__squircle__svg {
   fill: var(--theme--4-bg);
 }
-.coop-c-hero--color-4a {
+.coop-c-hero--color-4a,
+.coop-c-hero--color-4a a {
   color: var(--theme--4a-text);
 }
 .coop-c-hero--color-4a .coop-c-hero__squircle__svg {
   fill: var(--theme--4a-bg);
 }
-.coop-c-hero--color-4b {
+.coop-c-hero--color-4b,
+.coop-c-hero--color-4b a {
   color: var(--theme--4b-text);
 }
 .coop-c-hero--color-4b .coop-c-hero__squircle__svg {
   fill: var(--theme--4b-bg);
 }
-.coop-c-hero--color-5 {
+.coop-c-hero--color-5,
+.coop-c-hero--color-5 a {
   color: var(--theme--5-text);
 }
 .coop-c-hero--color-5 .coop-c-hero__squircle__svg {
