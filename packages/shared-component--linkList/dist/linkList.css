@@ -90,7 +90,7 @@
   --color-red-dark: #9f2a00;
 }
 .coop-c-list-container__title {
-  font-size: 28px;
+  font-size: 1.375rem;
   margin-bottom: 8px;
   padding-bottom: 8px;
 }
@@ -103,16 +103,10 @@
   margin-top: 0;
 }
 .coop-c-list-container__list li {
-  font-size: 20px;
+  font-size: 1.125rem;
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-}
-@media (min-width: 20em) {
-  .coop-c-list-container__list li {
-    font-size: 24px;
-    margin: 6px;
-  }
 }
 .coop-c-list-container__list__link,
 .coop-c-list-container__list__link:active,

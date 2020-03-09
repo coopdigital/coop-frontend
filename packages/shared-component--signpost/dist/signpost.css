@@ -241,15 +241,13 @@
 }
 @media (min-width: 46.875em) {
   .coop-c-signpost__title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
     padding-right: 1rem;
   }
 }
 @media (min-width: 60em) {
   .coop-c-signpost__title {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 a:focus .coop-c-signpost__title,
