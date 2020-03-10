@@ -2,65 +2,51 @@
 
 {% macro render(content, cms, config = {}) %}
 
-{# Set default classes and configuration #}
-{% set orientationClass = '' %}
-{% set hasLinksClass = '' %}
-
-{% if config %}
-  {% if config.isHorizontal %}
-    {% set orientationClass = 'coop-c-offersmodule--full' %}
-  {% endif %}
-{% endif %}
-
-{% if content.fields.links %}
-  {% set hasLinksClass = 'coop-c-offersmodule--links' %}
-{% endif %}
-
 <div class="coop-offers-module-container">
-  <aside class="coop-c-offersmodule {{orientationClass}} {{hasLinksClass}}">
-    <header class="coop-c-offersmodule__header">
-      <h3 class="coop-c-offersmodule__title">
-        Save with offers personalised to <span class="coop-c-offersmodule__offset-underline">you</span>
-      </h3>
-    </header>
-    <div class="coop-c-offersmodule__body">
-      <div class="coop-l-grid">
-        <div class="coop-l-grid-item col-md-6 col-lg-5">
-          <p class="coop-c-offersmodule__cta">
-            <a
-              href="https://coop.co.uk/offers"
-              class="coop-c-offersmodule__cta__link"
-              data-contenttype="Offers module" 
-              data-contentparent="Save with offers personalised to you" 
-              data-linktext="Sign in to see your offers"
-            >
-              Sign in to see your offers
-            </a>
-          </p>
-          <p class="coop-c-offersmodule__sign-in">
-            <a
-              href="https://membership.coop.co.uk/register"
-              class="coop-c-offersmodule__sign-in__link"
-              data-contenttype="Offers module" 
-              data-contentparent="Sign in to see your offers" 
-              data-linktext="Become a Co-op member to get your offers"
-            >
-              Become a Co-op Member to get your offers
-            </a>
-          </p>
-        </div>
-        <div class="coop-l-grid-item col-md-6 col-lg-7">
-          <ul class="coop-c-offersmodule__links">
-            <li class="coop-c-offersmodule__links__item">Get money off products you like to buy or might want to try</li>
-            <li class="coop-c-offersmodule__links__item">Every week you can choose 2 offers to use in Co-op Food stores</li>
-          </ul>
-        </div>
+  <div class="coop-c-offersmodule">
+    <div class="coop-l-grid">
+      <div class="coop-l-grid-item col-md-7 col-lg-6">
+        <header class="coop-c-offersmodule__header">
+          <h3 class="coop-c-offersmodule__title">
+            Save with offers personalised to you
+          </h3>
+        </header>
+        <ul class="coop-c-offersmodule__links">
+          <li class="coop-c-offersmodule__links__item">Get money off products you like to buy or might want to try</li>
+          <li class="coop-c-offersmodule__links__item">Every week you can choose 2 offers to use in Co-op Food stores</li>
+        </ul>
+      </div>
+      <div class="coop-l-grid-item col-md-5 col-lg-5">
+        <p class="coop-c-offersmodule__cta">
+          <a
+            href="https://coop.co.uk/offers"
+            class="coop-c-offersmodule__cta__link"
+            data-contenttype="Offers module" 
+            data-contentparent="Save with offers personalised to you" 
+            data-linktext="Find out more about offers"
+          >
+            Find out more about offers
+          </a>
+        </p>
+        <p class="coop-c-offersmodule__sign-in">
+          <a
+            href="https://membership.coop.co.uk/register"
+            class="coop-c-offersmodule__sign-in__link"
+            data-contenttype="Offers module" 
+            data-contentparent="Sign in to see your offers" 
+            data-linktext="Become a Co-op member to get your offers"
+          >
+            Become a Co-op Member to get your offers
+          </a>
+        </p>
+      </div>
+      <div class="coop-l-grid-item col-lg-1 coop-c-offersmodule__media-container">
+        <figure class="coop-c-offersmodule__media">
+          <img src="{{ static('/static/images/logo/membership-card-sm.png') }}" alt="Image of a Co-op offers card" />
+        </figure>
       </div>
     </div>
-    <figure class="coop-c-offersmodule__media">
-      <img src="{{ static('/static/images/logo/membership-card-sm.png') }}" alt="Image of a Co-op offers card" />
-    </figure>
-  </aside>
+  </div>
   <div class="coop-double-squircles-bg">
     <svg class="coop-double-squircles-bg__v1" width="441px" height="339px" viewBox="0 0 441 339" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="New-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
