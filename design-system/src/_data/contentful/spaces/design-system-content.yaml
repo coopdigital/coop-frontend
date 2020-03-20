@@ -3513,9 +3513,9 @@ landingPage:
 - sys:
     id: 4vQeNl83y8WyeGAcU60wOU
     created_at: !ruby/object:DateTime 2018-12-05 12:51:56.179000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-24 10:25:38.536000000 Z
+    updated_at: !ruby/object:DateTime 2020-03-20 11:29:10.188000000 Z
     content_type_id: landingPage
-    revision: 5
+    revision: 9
   title: Brand assets
   introduction: We [design in the open](https://coop-design-system.herokuapp.com/principles.html#we-design-in-the-open),
     so our design assets — the logos, sketching sheets and guidelines — that you might
@@ -3537,17 +3537,14 @@ landingPage:
                     <ul class="coop-list-bare">
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/principles/DP_poster_v7.pdf">Design principles v7 PDF (46kb)</a></li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/brand/WR_B_024-Brand Guidelines_16_9Low.pdf">Co-op brand guidelines (4mb)</a></li>
-                        <li><a href="https://coop.getbynder.com">Brand portal</a> - contact <a href="mailto:sue.scales@coop.co.uk">Sue Scales</a> for access</li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/email/email-guidelines.pdf">Email design guidelines (727kb)</a></li>
-                    </ul>
-                </div>
-            </div>
+                    </ul><p>Get access to the <a href="https://coop.getbynder.com">brand portal</a> - contact <a href="mailto:rachel.hardwick@coop.co.uk">Rachel Hardwick</a> for access.</p></div></div>
 - sys:
     id: 1XQmgZ7H4dNNeK8RB0waw9
     created_at: !ruby/object:DateTime 2019-06-21 11:21:40.900000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-21 11:21:40.900000000 Z
+    updated_at: !ruby/object:DateTime 2020-03-20 11:29:00.107000000 Z
     content_type_id: landingPage
-    revision: 1
+    revision: 5
   title: Assets
   introduction: We [design in the open](https://coop-design-system.herokuapp.com/principles.html#we-design-in-the-open),
     so our design assets — the logos, sketching sheets and guidelines — that you might
@@ -3569,8 +3566,5 @@ landingPage:
                     <ul class="coop-list-bare">
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/principles/DP_poster_v7.pdf">Design principles v7 PDF (46kb)</a></li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/brand/WR_B_024-Brand Guidelines_16_9Low.pdf">Co-op brand guidelines (4mb)</a></li>
-                        <li><a href="https://coop.getbynder.com">Brand portal</a> - contact <a href="mailto:sue.scales@coop.co.uk">Sue Scales</a> for access</li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/email/email-guidelines.pdf">Email design guidelines (727kb)</a></li>
-                    </ul>
-                </div>
-            </div>
+                    </ul><p>Get access to the <a href="https://coop.getbynder.com">brand portal</a> - contact <a href="mailto:rachel.hardwick@coop.co.uk">Rachel Hardwick</a> for access.</p></div></div>
