@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-buttons",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "author": "@coopdigital",
   "description": "CSS Foundations: Buttons",
   "main": "dist/buttons.css",
@@ -26,7 +26,7 @@
     "directory": "packages/foundations-buttons"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.0.4",
+    "@coopdigital/foundations-vars": "^2.1.0",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
