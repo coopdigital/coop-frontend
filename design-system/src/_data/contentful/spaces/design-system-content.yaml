@@ -3513,13 +3513,13 @@ landingPage:
 - sys:
     id: 4vQeNl83y8WyeGAcU60wOU
     created_at: !ruby/object:DateTime 2018-12-05 12:51:56.179000000 Z
-    updated_at: !ruby/object:DateTime 2020-03-20 11:29:10.188000000 Z
+    updated_at: !ruby/object:DateTime 2020-03-23 10:59:23.085000000 Z
     content_type_id: landingPage
-    revision: 9
+    revision: 10
   title: Brand assets
   introduction: We [design in the open](https://coop-design-system.herokuapp.com/principles.html#we-design-in-the-open),
     so our design assets — the logos, sketching sheets and guidelines — that you might
-    need for your service, you can download here
+    need for your service, you can download here.
   content: |-
     <div class="coop-l-row">
                 <div class="coop-l-column coop-l-small-12 coop-l-large-6">
