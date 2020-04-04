@@ -48,7 +48,7 @@
   --color-black: #000;
   --color-link: #00729a;
   --color-link--hover: #000102;
-  --color-link--focus: #eec300;
+  --color-link--focus: #eb5f1e;
   --color-link--active: #005981;
   --color-link--visited: #004c67;
   --color-button-primary: #0f8482;
@@ -106,6 +106,7 @@
 .coop-c-search__input:focus {
   transition: none;
   outline: 2px dotted #eec300;
+  outline: 2px dotted #eb5f1e;
   outline: 2px dotted var(--color-link--focus);
   outline-offset: 3px;
 }
@@ -134,6 +135,7 @@
 .coop-c-search__button:focus {
   transition: none;
   outline: 2px dotted #eec300;
+  outline: 2px dotted #eb5f1e;
   outline: 2px dotted var(--color-link--focus);
   outline-offset: 3px;
 }

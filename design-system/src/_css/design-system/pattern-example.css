@@ -7,7 +7,7 @@
 }
 
 .tabs-container__panel:focus {
-    outline: 2px dotted var(--color-yellow-mid);
+    outline: 2px solid var(--color-link--focus);
     outline-offset: 3px;
 }
 

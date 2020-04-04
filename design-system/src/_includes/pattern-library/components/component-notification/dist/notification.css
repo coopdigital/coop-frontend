@@ -1,0 +1,40 @@
+.coop-c-notification {
+  padding: var(--spacing-16);
+  background-color: var(--color-blue-notification-light);
+}
+.coop-c-notification,
+.coop-c-notification:focus,
+.coop-c-notification:hover {
+  border-left: 4px solid var(--color-blue-notification);
+}
+.coop-c-notification:focus .coop-c--notification__heading,
+.coop-c-notification:hover .coop-c--notification__heading {
+  text-decoration: none;
+}
+.coop-c-notification .coop-c-notification__link {
+  display: block;
+  color: var(--color-text);
+  border: none;
+  text-decoration: none;
+}
+.coop-c-notification .coop-c-notification__wrapper {
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.coop-c-notification .coop-c-notification__heading {
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+.coop-c-notification .coop-c-notification__heading:focus,
+.coop-c-notification .coop-c-notification__heading:hover {
+  text-decoration: none;
+}
+.coop-c-notification .coopssn-c-notification__content {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}

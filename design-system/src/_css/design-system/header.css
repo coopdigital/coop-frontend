@@ -59,33 +59,3 @@
     vertical-align: top;
 }
 
-.ds-c-notice {
-    width: 100%;
-    padding: 16px; 
-    margin-bottom: 16px;
-    background: #D4EAF5;
-    border-radius: 5px;
-}
-
-@media (--mq-large) { 
-    .ds-c-notice {
-        padding: 32px;
-    }
-}
-
-.ds-c-notice p {
-    width: 100%;
-    margin-bottom: 0;
-    padding-left: 64px;
-}
-
-@media (--mq-large) { 
-    .ds-c-notice p {
-        width: 75%;  
-    }
-}
-
-.ds-c-notice__image {
-    position: absolute;
-    width: 32px;
-}
