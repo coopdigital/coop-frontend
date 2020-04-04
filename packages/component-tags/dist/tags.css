@@ -88,6 +88,12 @@
   --color-orange-mid: #f8642c;
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
+  --color-blue-notification: #326bb7;
+  --color-blue-notification-light: #d4eaf5;
+  --color-orange-alert: #ff9d34;
+  --color-orange-alert-light: #ffebe3;
+  --color-red-error: #d63118;
+  --color-red-error-light: #fef3f4;
 }
 .coop-c-list-tags {
   margin-top: 0;

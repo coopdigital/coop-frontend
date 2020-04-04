@@ -11,11 +11,11 @@
 @import "foundations-colors/src/colors.pcss";
 @import "foundations-buttons/src/buttons.pcss";
 @import "foundations-forms/src/forms.pcss";
-@import "foundations-tables/src/tables.pcss";
+@import "foundations-tables/src/tables.pcss"; 
 @import "foundations-layout/src/layout.pcss";
 @import "foundations-grid/dist/legacy-grid.css";
-
-
+  
+        
 /* Components */
 @import "component-search/src/component.pcss";
 @import "component-card/src/card.pcss";
@@ -24,7 +24,8 @@
 @import "component-signpost/src/signpost.pcss";
 @import 'component-tags/src/tags.pcss';
 @import 'component-squircles/src/squircles.pcss'; 
-
+@import 'component-notification/src/notification.css'; 
+@import 'component-notification--alert/src/notification--alert.css'; 
 
 /* Design system */
 @import "design-system/skipnav.css";
