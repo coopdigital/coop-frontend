@@ -424,7 +424,7 @@ template {
   /* Links */
   --color-link: #00729a;
   --color-link--hover: #000102;
-  --color-link--focus: #eec300;
+  --color-link--focus: #eb5f1e;
   --color-link--active: #005981;
   --color-link--visited: #004c67;
 
@@ -485,6 +485,14 @@ template {
   /* Redscale */
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
+
+  /* Notifications */
+  --color-blue-notification: #326bb7;
+  --color-blue-notification-light: #d4eaf5;
+  --color-orange-alert: #ff9d34;
+  --color-orange-alert-light: #ffebe3;
+  --color-red-error: #d63118;
+  --color-red-error-light: #fef3f4;
 }
 
 /* Globals */
@@ -979,8 +987,8 @@ a:active,
   .coop-t-link:active,
   .coop-t-link:focus {
     transition: none;
-    outline: 2px dotted #eec300;
-    outline: 2px dotted var(--color-link--focus);
+    outline: 2px solid #eb5f1e;
+    outline: 2px solid var(--color-link--focus);
     outline-offset: 3px;
   }
 
@@ -1301,17 +1309,17 @@ a.coop-t-nounderline,
 }
 
 .coop-u-link-focus {
-  color: #eec300;
+  color: #eb5f1e;
   color: var(--color-link--focus);
 }
 
 .coop-u-link-focus-bg {
-  background: #eec300;
+  background: #eb5f1e;
   background: var(--color-link--focus);
 }
 
 .coop-u-link-focus-outline {
-  outline: 4px solid #eec300;
+  outline: 4px solid #eb5f1e;
   outline: 4px solid var(--color-link--focus);
 }
 
@@ -1651,7 +1659,7 @@ a.coop-t-nounderline,
 
 .coop-btn:focus {
   transition: none;
-  outline: 2px dotted #eec300;
+  outline: 2px dotted #eb5f1e;
   outline: 2px dotted var(--color-link--focus);
   outline-offset: 3px;
 }
@@ -1841,7 +1849,7 @@ input:focus, .coop-form__input:focus, textarea:focus, .coop-form__textarea:focus
     border-color: #000000;
     border-color: var(--color-black);
     outline-offset: 3px;
-    outline: 2px dotted #eec300;
+    outline: 2px dotted #eb5f1e;
     outline: 2px dotted var(--color-link--focus);
     transition: none;
   }
@@ -1896,7 +1904,7 @@ select:focus, .coop-form__select:focus {
     border-color: #000000;
     border-color: var(--color-black);
     outline-offset: 3px;
-    outline: 2px dotted #eec300;
+    outline: 2px dotted #eb5f1e;
     outline: 2px dotted var(--color-link--focus);
     transition: none;
   }

@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/css-foundations",
-  "version": "2.0.5",
+  "version": "2.0.8",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations",
   "main": "dist/foundations.css",
@@ -22,15 +22,15 @@
     "directory": "packages/css-foundations"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^1.2.10",
-    "@coopdigital/foundations-colors": "^1.0.9",
-    "@coopdigital/foundations-forms": "^2.0.4",
-    "@coopdigital/foundations-global": "^2.0.4",
-    "@coopdigital/foundations-grid": "^1.0.13",
-    "@coopdigital/foundations-layout": "^2.0.4",
-    "@coopdigital/foundations-tables": "^1.1.4",
-    "@coopdigital/foundations-typography": "^3.0.5",
-    "@coopdigital/foundations-vars": "^2.0.4",
+    "@coopdigital/foundations-buttons": "^1.2.13",
+    "@coopdigital/foundations-colors": "^1.1.2",
+    "@coopdigital/foundations-forms": "^2.0.7",
+    "@coopdigital/foundations-global": "^2.0.7",
+    "@coopdigital/foundations-grid": "^1.0.14",
+    "@coopdigital/foundations-layout": "^2.0.7",
+    "@coopdigital/foundations-tables": "^1.1.7",
+    "@coopdigital/foundations-typography": "^3.0.8",
+    "@coopdigital/foundations-vars": "^2.1.2",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
@@ -42,5 +42,5 @@
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
   },
-  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
+  "gitHead": "d3640920b8c6cb4b67aeb7d8e685a5ff8dfe00c6"
 }

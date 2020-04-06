@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-buttons",
-  "version": "1.2.10",
+  "version": "1.2.13",
   "author": "@coopdigital",
   "description": "CSS Foundations: Buttons",
   "main": "dist/buttons.css",
@@ -26,7 +26,7 @@
     "directory": "packages/foundations-buttons"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.0.4",
+    "@coopdigital/foundations-vars": "^2.1.2",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
@@ -38,5 +38,5 @@
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
   },
-  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
+  "gitHead": "d3640920b8c6cb4b67aeb7d8e685a5ff8dfe00c6"
 }

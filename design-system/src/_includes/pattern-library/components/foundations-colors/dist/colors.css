@@ -75,7 +75,7 @@
   /* Links */
   --color-link: #00729a;
   --color-link--hover: #000102;
-  --color-link--focus: #eec300;
+  --color-link--focus: #eb5f1e;
   --color-link--active: #005981;
   --color-link--visited: #004c67;
 
@@ -199,17 +199,17 @@
 }
 
 .coop-u-link-focus {
-  color: #eec300;
+  color: #eb5f1e;
   color: var(--color-link--focus);
 }
 
 .coop-u-link-focus-bg {
-  background: #eec300;
+  background: #eb5f1e;
   background: var(--color-link--focus);
 }
 
 .coop-u-link-focus-outline {
-  outline: 4px solid #eec300;
+  outline: 4px solid #eb5f1e;
   outline: 4px solid var(--color-link--focus);
 }
 

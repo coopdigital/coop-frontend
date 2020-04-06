@@ -52,9 +52,9 @@ designPattern:
 - sys:
     id: 6wmK1ZxEeAAC2iuuYqgiui
     created_at: !ruby/object:DateTime 2018-11-08 20:53:34.160000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-18 14:56:59.759000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-03 15:49:51.636000000 Z
     content_type_id: designPattern
-    revision: 5
+    revision: 7
   title: Links
   status: live
   github_url: https://github.com/coopdigital/foundations-typography
@@ -79,9 +79,9 @@ designPattern:
     \       </div>\n    </div>\n    <div class=\"coop-l-column coop-l-small-6 coop-l-medium-4\">\n
     \       <div class=\"dm-colour\">\n            <div class=\"dm-colour__swatch
     dm-colour__swatch--wide coop-u-link-focus-bg coop-u-padding-q coop-u-margin-bh\">\n
-    \             <ul class=\"list-bare dm-colour__definition\">\n                  <li
+    \             <ul class=\"list-bare dm-colour__definition coop-u-white\">\n                  <li
     class=\"coop-bold\">Link focus</li>\n                  <li>var(--color-link--focus)</li>\n
-    \                 <li>#E7C442</li>\n              </ul>\n            </div>\n
+    \                 <li>#EB5F1E</li>\n              </ul>\n            </div>\n
     \       </div>\n    </div>\n    <div class=\"coop-l-column coop-l-small-6 coop-l-medium-4\">\n
     \       <div class=\"dm-colour\">\n            <div class=\"dm-colour__swatch
     dm-colour__swatch--wide coop-u-link-active-bg coop-u-padding-q coop-u-margin-bh\">\n
@@ -680,38 +680,41 @@ designPattern:
 - sys:
     id: 5NKFvxYDk5Lx8g599rjm4t
     created_at: !ruby/object:DateTime 2019-06-18 14:11:32.550000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-18 14:14:12.174000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-13 13:54:36.320000000 Z
     content_type_id: designPattern
-    revision: 5
+    revision: 6
   title: Tables
   status: live
-  introduction: Tables are a good way to present large amounts of complex information
-    when the user needs to compare different things or or interrogate that information.
-    The table format is familiar and, when done well, helps people to find answers
-    to questions.
-  accessibility_documentation: "### Captions\nA caption is the heading for a table.
-    Most screen readers announce the content of captions. Captions help users to find
-    a table and understand what it’s about and decide if they want to read it. The
-    caption is provided by the &lt;caption&gt; element.\n\n### Headers and footers\nBoth
-    columns and rows of a table can have headings. These are marked up as &lt;th&gt;
-    (table heading). We also use the &lt;thead&gt;and &lt;tbody&gt; tags. Although
-    these are not technically needed in all tables, they add some semantic value and
-    are useful if a table needs to be printed as the &lt;thead&gt; element is repeated
-    across all printed pages.\n  \nTable footers (&lt;tfoot&gt;) can be used if there
-    is a lot of rows in a table. It will be displayed by a browser under the body
-    content, but in the markup must be above it. If you have to support a very old
-    browser test this display as in some older browsers it is displayed before the
-    body. In this case move it to below the table content.\n\n### Row headings\nWhen
-    a row needs a heading the &lt;td&gt; of that row should be marked up as a &lt;th&gt;.\n\n###
-    Scope\nWhen the data that relates to the headings is ambiguous the attribute scope=&#x201C;col&#x201D;
-    or scope=&#x201C;row&#x201D; should be added. The scope attribute defines the
-    direction of the header cells and associates them with the corresponding data
-    cells. The scope attribute is also needed for larger tables with one header row
-    or column. We recommend always defining the scope of your column or row headings.\n
-    \ \n### Top left cell\nThe top left cell of a table is often blank as there is
-    no overarching header for the row headings and the content of the table has been
-    described by the &lt;caption&gt;. This cell can be left blank, but must be marked
-    up as an empty &lt;td&gt;&lt;/td&gt;.\n"
+  introduction: "Tables can help users compare or interrogate information. \n\nOnly
+    use tables to present data.\n\n[Do not use a table to display non-data content](https://coop-design-system.herokuapp.com/content/digital-content-guidelines.html#t)
+    or to improve the page layout. \n"
+  accessibility_documentation: "\n### Table size \nHave more rows than columns where
+    possible. Longer, rather than wider, tables make it easier for people to read
+    and understand.  \nUse a maximum of 4 columns. This is the amount that can be
+    comfortably displayed on a smart phone. \n\nThis guidance is from the [gov.uk
+    design system](https://www.gov.uk/guidance/content-design/tables).\n\n### Captions\nA
+    caption is the heading for a table. Most screen readers announce the content of
+    captions. Captions help users to find a table and understand what it’s about and
+    decide if they want to read it. The caption is provided by the &lt;caption&gt;
+    element.\n\n### Headers and footers\nBoth columns and rows of a table can have
+    headings. These are marked up as &lt;th&gt; (table heading). We also use the &lt;thead&gt;and
+    &lt;tbody&gt; tags. Although these are not technically needed in all tables, they
+    add some semantic value and are useful if a table needs to be printed as the &lt;thead&gt;
+    element is repeated across all printed pages.\n  \nTable footers (&lt;tfoot&gt;)
+    can be used if there is a lot of rows in a table. It will be displayed by a browser
+    under the body content, but in the markup must be above it. If you have to support
+    a very old browser test this display as in some older browsers it is displayed
+    before the body. In this case move it to below the table content.\n\n### Row headings\nWhen
+    a row needs a heading the &lt;td&gt; of that row should be marked up as a &lt;th&gt;.\nMake
+    the heading descriptive.\n\n### Scope\nWhen the data that relates to the headings
+    is ambiguous the attribute scope=&#x201C;col&#x201D; or scope=&#x201C;row&#x201D;
+    should be added. The scope attribute defines the direction of the header cells
+    and associates them with the corresponding data cells. The scope attribute is
+    also needed for larger tables with one header row or column. We recommend always
+    defining the scope of your column or row headings.\n  \n### Top left cell\nThe
+    top left cell of a table is often blank as there is no overarching header for
+    the row headings and the content of the table has been described by the &lt;caption&gt;.
+    This cell can be left blank, but must be marked up as an empty &lt;td&gt;&lt;/td&gt;.\n"
 - sys:
     id: 4QWuu1rP55ONnLRxlqET79
     created_at: !ruby/object:DateTime 2019-06-18 15:08:30.199000000 Z
@@ -795,6 +798,30 @@ designPattern:
   variations: |2
 
     - [Editorial card](https://coop-design-system.herokuapp.com/pattern-library/components/cards/editorial-card.html)
+- sys:
+    id: 2VJK6b6AvX9bXLBtGt8hjT
+    created_at: !ruby/object:DateTime 2020-04-03 16:22:11.609000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-03 16:31:53.248000000 Z
+    content_type_id: designPattern
+    revision: 2
+  title: Alert notification
+  status: live
+  introduction: Alert.
+  design_and_content_documentation: Alert.
+  accessibility_documentation: Alert.
+  variations: Alert.
+- sys:
+    id: 3sHpp4UdZjYCXkvBLPIVqe
+    created_at: !ruby/object:DateTime 2020-04-03 16:31:19.784000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-03 16:31:46.897000000 Z
+    content_type_id: designPattern
+    revision: 2
+  title: Information notification
+  status: live
+  introduction: Information
+  design_and_content_documentation: Information
+  accessibility_documentation: Information
+  variations: Information
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
@@ -2103,10 +2130,10 @@ page:
 - sys:
     id: 7kofk9MtaxOfFOwxfcGvjj
     created_at: !ruby/object:DateTime 2019-05-23 10:07:52.788000000 Z
-    updated_at: !ruby/object:DateTime 2019-07-18 08:48:36.848000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-13 13:55:57.266000000 Z
     content_type_id: page
-    revision: 14
-  title: Digital content guidelines
+    revision: 16
+  title: Digital content glossary
   status: live
   introduction: |
     We write content for the user, not for ourselves.
@@ -2335,7 +2362,7 @@ page:
     Banking Group\nNo longer part of Co-op.\n \n### Co-op branded\nNot ‘own-brand’.
     \n\n### Co-op Commitment\n\n### Co-op committees \nThere are various committees
     made up of members of the board. You can find out more about the committees on
-    our website\n \nrisk and audit committee\nnominations committee\nremuneration
+    our website.\n \nrisk and audit committee\nnominations committee\nremuneration
     committee\nscrutiny committee\nnon-executive directors’ fees committee\n\n###
     Co-operative Group Limited\nThe trading name of Co-op, use it only when you need
     to for legal reasons.\n \n### co-operative movement\n \n### co-operative principles\n
@@ -2605,21 +2632,33 @@ page:
     harder to read. Use ‘or’ instead.\n \n### Staff\nWe do not call people who work
     at Co-op ‘staff’. Internally, we use ‘colleague’ and if we’re talking to customers
     we use ‘team member’ or ‘member of our team’.\n\n### Stores\nCall the places where
-    we sell our products ‘stores’, not ‘shops’.\n\n\n## [T](#t)\n \n### Time\nUse
-    the 12 hour clock, so ‘9am to 5pm’. If you need to include the minutes, write
-    ‘9.15am’.\n \nUse ‘midday’ rather than noon, 12noon or 12pm. Use ‘midnight’ and
-    not ‘12am’. But be careful that it’s not misleading. \n\nFor example, if you said:\n‘Please
-    complete and send your application form by 6 July 2018, at midnight’\n\nThen your
-    user might wonder if you meant ‘ 6 July 2018, 11.59pm’ or ‘5 July 2018, 11.59pm’\n\nTo
-    avoid this confusion, consider using ‘11.59pm’ where possible.\n\nIt’s not necessary
-    to specify time zones, such as ‘1pm GMT’.\n\n\n### Titles\nTitles of pages and
-    sub-headers should:\n- be sentence case\n- be unique, clear and descriptive \n-
-    be front-loaded with key words if possible — people tend to scan the first couple
-    of words only\n- use words you know your users actually use\n- be active where
-    possible, ‘Apply for…’, ‘Report…’, ‘Find…’\n- not use acronyms unless they are
-    well-known, like EU or BBC\n \n \n## [W](#w)\n \n### Watchout words\nWhen describing
-    food, avoid the following words and phrases, unless you can qualify them:\n\nCraft\n\nFarm
-    fresh\n\nNew (unless the product really is new)\n\nNatural\n\nHealthy/Healthier\n\nHomegrown\n\nLocal
+    we sell our products ‘stores’, not ‘shops’.\n\n\n## [T](#t)\n\n### Tables\n\nOnly
+    use tables for data.\n\nIf you use a table, [make it accessible and use appropriate
+    markup](https://coop-design-system.herokuapp.com/pattern-library/foundations/tables.html).\n\nDo
+    not use a table to display non-data content or to improve the page layout. \n\nThis
+    is because: \n\n- consuming content in a table can be overwhelming for some people
+    \n- it can be harder for people to scan and understand if they use screen magnifiers
+    \ \n- screen readers read layout tables in a linear way – from left to right,
+    top to bottom – this can make content confusing or misleading if not structured
+    correctly  \n- there are often more effective ways of displaying the information
+    \ \n\nA table can often be replaced by a: \n\n- list of bullets, with appropriate
+    sub-headings \n- [‘card’ pattern](https://coop-design-system.herokuapp.com/pattern-library/components/cards/product-card.html),
+    to allow people to compare information  \n- csv spreadsheet for large amounts
+    of data  \n\n\n### Time\nUse the 12 hour clock, so ‘9am to 5pm’. If you need to
+    include the minutes, write ‘9.15am’.\n \nUse ‘midday’ rather than noon, 12noon
+    or 12pm. Use ‘midnight’ and not ‘12am’. But be careful that it’s not misleading.
+    \n\nFor example, if you said:\n‘Please complete and send your application form
+    by 6 July 2018, at midnight’\n\nThen your user might wonder if you meant ‘ 6 July
+    2018, 11.59pm’ or ‘5 July 2018, 11.59pm’\n\nTo avoid this confusion, consider
+    using ‘11.59pm’ where possible.\n\nIt’s not necessary to specify time zones, such
+    as ‘1pm GMT’.\n\n\n### Titles\nTitles of pages and sub-headers should:\n- be sentence
+    case\n- be unique, clear and descriptive \n- be front-loaded with key words if
+    possible — people tend to scan the first couple of words only\n- use words you
+    know your users actually use\n- be active where possible, ‘Apply for…’, ‘Report…’,
+    ‘Find…’\n- not use acronyms unless they are well-known, like EU or BBC\n \n \n##
+    [W](#w)\n \n### Watchout words\nWhen describing food, avoid the following words
+    and phrases, unless you can qualify them:\n\nCraft\n\nFarm fresh\n\nNew (unless
+    the product really is new)\n\nNatural\n\nHealthy/Healthier\n\nHomegrown\n\nLocal
     (can be used if the product is made within 30 miles)\n\nLower price (unless you
     have a higher price for comparison)\n\nReduced fat\n\nWholesome\n\nAuthentic\n\nHand
     made\n\nOriginal\n\nFresh\n\nTraditional\n \n### Websites\nDo not use the prefix
@@ -2688,12 +2727,12 @@ page:
 - sys:
     id: 3RaY0OnMiFLoXWSONJ8GzM
     created_at: !ruby/object:DateTime 2020-02-12 14:28:43.773000000 Z
-    updated_at: !ruby/object:DateTime 2020-02-12 15:54:30.974000000 Z
+    updated_at: !ruby/object:DateTime 2020-02-24 15:55:33.230000000 Z
     content_type_id: page
-    revision: 4
+    revision: 7
   title: Content tools and resources
   status: live
-  introduction: This is a list of tools and resources for creating useful, usable
+  introduction: This is a list of tools and resources for creating helpful, accessible
     content.
   in_page_navigation:
   - sys:
@@ -2704,14 +2743,6 @@ page:
       revision: 1
     url_text: Tools
     section_id: tools
-  - sys:
-      id: 5DaXn2k9VF3mqBBxHK9KLE
-      created_at: !ruby/object:DateTime 2020-02-12 15:54:14.815000000 Z
-      updated_at: !ruby/object:DateTime 2020-02-12 15:54:14.815000000 Z
-      content_type_id: inPageNavigationLink
-      revision: 1
-    url_text: Resources
-    section_id: resources
   - sys:
       id: 29YqWvHCICy7K68Sk9spWF
       created_at: !ruby/object:DateTime 2020-02-12 15:54:18.285000000 Z
@@ -2739,22 +2770,22 @@ page:
   content: "## [Tools](#tools) \n\n[Hemingway](http://www.hemingwayapp.com/)\n\nChecks
     your writing and highlights complicated, passive sentences. \n\n\n[Grammarly](https://www.grammarly.com/)\n\nChecks
     spelling, grammar and clarity. \n\n \n[Wave accessibility checker](https://wave.webaim.org/)\n\nChecks
-    web pages for accessibility problems. \n\n \n## [Resources](#resources) \n\n###
-    [Guides](#guides)\n\n[Readability guidelines](https://readabilityguidelines.co.uk/)
-    \  \n\nThese guidelines are maintained by a collaborative project and are supported
-    by lots of evidence. \n\n\n[gov.uk style guide](https://www.gov.uk/guidance/style-guide)\n\nGov.uk
-    does a lot of testing and research into what works well for users. They also have
-    useful information and patterns in their design system. \n\n\n[NHS style guide](https://service-manual.nhs.uk/content)\n\nThe
+    web pages for accessibility problems. \n\n## [Guides](#guides)\n\n[Readability
+    guidelines](https://readabilityguidelines.co.uk/)   \n\nThese guidelines are maintained
+    by a collaborative project and are supported by lots of evidence. \n\n\n[gov.uk
+    style guide](https://www.gov.uk/guidance/style-guide)\n\nGov.uk does a lot of
+    testing and research into what works well for users. They also have useful information
+    and patterns in their design system. \n\n\n[NHS style guide](https://service-manual.nhs.uk/content)\n\nThe
     NHS style guide has evidence-based advice and guidance. \n\n \n[Guardian style
     guide](https://www.theguardian.com/guardian-observer-style-guide-a)\n\nThe Guardian
-    is a fallback for any words and phrases that are not in our style guide.  \n\n\n###
+    is a fallback for any words and phrases that are not in our style guide.  \n\n\n##
     [Blog posts](#blog-posts) \n\n[What is content design?](https://contentdesign.london/content-design/what-is-content-design/)\n\nA
     summary of content design and why it matters. \n\n\n[The importance of clear writing](https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/)\n\nExplains
     how simple, clear writing is more likely to be read and lead to action. \n\n \n[Why
     simplicity is better for everyone](https://contentdesign.london/reading/dumbing-down/)
     \n\nExplains why ‘dumbing down’ is really making your content more accessible.
     \n\n \n[Why FAQs do not work](https://digitalblog.coop.co.uk/2018/09/13/why-faqs-arent-the-answer-youve-been-looking-for/)
-    \n\nExplains why we avoid using FAQs. \n\n\n### [Research](#research) \n\n\n[Nielsen
+    \n\nExplains why we avoid using FAQs. \n\n\n## [Research](#research) \n\n[Nielsen
     Norman Group](https://www.nngroup.com/articles/) \n\nA wide range of research
     into all aspects of usability, accessibility and user experience. \n\n\n[Gov.uk
     research and evidence](https://www.gov.uk/guidance/content-design/research-and-evidence)
@@ -3506,13 +3537,13 @@ landingPage:
 - sys:
     id: 4vQeNl83y8WyeGAcU60wOU
     created_at: !ruby/object:DateTime 2018-12-05 12:51:56.179000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-24 10:25:38.536000000 Z
+    updated_at: !ruby/object:DateTime 2020-03-23 10:59:23.085000000 Z
     content_type_id: landingPage
-    revision: 5
+    revision: 10
   title: Brand assets
   introduction: We [design in the open](https://coop-design-system.herokuapp.com/principles.html#we-design-in-the-open),
     so our design assets — the logos, sketching sheets and guidelines — that you might
-    need for your service, you can download here
+    need for your service, you can download here.
   content: |-
     <div class="coop-l-row">
                 <div class="coop-l-column coop-l-small-12 coop-l-large-6">
@@ -3530,17 +3561,14 @@ landingPage:
                     <ul class="coop-list-bare">
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/principles/DP_poster_v7.pdf">Design principles v7 PDF (46kb)</a></li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/brand/WR_B_024-Brand Guidelines_16_9Low.pdf">Co-op brand guidelines (4mb)</a></li>
-                        <li><a href="https://coop.getbynder.com">Brand portal</a> - contact <a href="mailto:sue.scales@coop.co.uk">Sue Scales</a> for access</li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/email/email-guidelines.pdf">Email design guidelines (727kb)</a></li>
-                    </ul>
-                </div>
-            </div>
+                    </ul><p>Get access to the <a href="https://coop.getbynder.com">brand portal</a> - contact <a href="mailto:rachel.hardwick@coop.co.uk">Rachel Hardwick</a> for access.</p></div></div>
 - sys:
     id: 1XQmgZ7H4dNNeK8RB0waw9
     created_at: !ruby/object:DateTime 2019-06-21 11:21:40.900000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-21 11:21:40.900000000 Z
+    updated_at: !ruby/object:DateTime 2020-03-20 11:29:00.107000000 Z
     content_type_id: landingPage
-    revision: 1
+    revision: 5
   title: Assets
   introduction: We [design in the open](https://coop-design-system.herokuapp.com/principles.html#we-design-in-the-open),
     so our design assets — the logos, sketching sheets and guidelines — that you might
@@ -3562,8 +3590,5 @@ landingPage:
                     <ul class="coop-list-bare">
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/principles/DP_poster_v7.pdf">Design principles v7 PDF (46kb)</a></li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/brand/WR_B_024-Brand Guidelines_16_9Low.pdf">Co-op brand guidelines (4mb)</a></li>
-                        <li><a href="https://coop.getbynder.com">Brand portal</a> - contact <a href="mailto:sue.scales@coop.co.uk">Sue Scales</a> for access</li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/email/email-guidelines.pdf">Email design guidelines (727kb)</a></li>
-                    </ul>
-                </div>
-            </div>
+                    </ul><p>Get access to the <a href="https://coop.getbynder.com">brand portal</a> - contact <a href="mailto:rachel.hardwick@coop.co.uk">Rachel Hardwick</a> for access.</p></div></div>

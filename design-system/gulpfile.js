@@ -50,7 +50,8 @@ const settings = {
       src + 'src/css/main.css',
       __dirname + '/node_modules',
       '../node_modules/@coopdigital',
-      __dirname + '/node_modules/@coopdigital'
+      __dirname + '/node_modules/@coopdigital',
+      'src/_includes/pattern-library/components'  
     ],
   },
   include: {
@@ -67,7 +68,8 @@ const importOptions = {
       '../node_modules',
       __dirname + '/node_modules',
       '../node_modules/@coopdigital',
-      __dirname + '/node_modules/@coopdigital'
+      __dirname + '/node_modules/@coopdigital',
+      'src/_includes/pattern-library/components' 
     ]
 };
 

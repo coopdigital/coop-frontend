@@ -67,7 +67,7 @@
   /* Links */
   --color-link: #00729a;
   --color-link--hover: #000102;
-  --color-link--focus: #eec300;
+  --color-link--focus: #eb5f1e;
   --color-link--active: #005981;
   --color-link--visited: #004c67;
 
@@ -128,6 +128,14 @@
   /* Redscale */
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
+
+  /* Notifications */
+  --color-blue-notification: #326bb7;
+  --color-blue-notification-light: #d4eaf5;
+  --color-orange-alert: #ff9d34;
+  --color-orange-alert-light: #ffebe3;
+  --color-red-error: #d63118;
+  --color-red-error-light: #fef3f4;
 }
 /* ===================================
  * Fonts - Co-op Front-end Foundations
@@ -521,8 +529,8 @@ a:focus,
 .coop-t-link:active,
 .coop-t-link:focus {
   transition: none;
-  outline: 2px dotted #eec300;
-  outline: 2px dotted var(--color-link--focus);
+  outline: 2px solid #eb5f1e;
+  outline: 2px solid var(--color-link--focus);
   outline-offset: 3px;
 }
 .coop-t-link-white {

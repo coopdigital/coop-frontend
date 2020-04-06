@@ -75,7 +75,7 @@
   /* Links */
   --color-link: #00729a;
   --color-link--hover: #000102;
-  --color-link--focus: #eec300;
+  --color-link--focus: #eb5f1e;
   --color-link--active: #005981;
   --color-link--visited: #004c67;
 
@@ -247,7 +247,7 @@ textarea:focus,
   border-color: #000000;
   border-color: var(--color-black);
   outline-offset: 3px;
-  outline: 2px dotted #eec300;
+  outline: 2px dotted #eb5f1e;
   outline: 2px dotted var(--color-link--focus);
   -webkit-transition: none;
   transition: none;
@@ -314,7 +314,7 @@ select:focus,
   border-color: #000000;
   border-color: var(--color-black);
   outline-offset: 3px;
-  outline: 2px dotted #eec300;
+  outline: 2px dotted #eb5f1e;
   outline: 2px dotted var(--color-link--focus);
   -webkit-transition: none;
   transition: none;

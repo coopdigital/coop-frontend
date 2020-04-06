@@ -4,11 +4,11 @@
     width: 100%;
     position: absolute;
     top: 0;
-    height: 50%;
+    height: 55%;
 }
 
 .ds-hero {
-    padding-top: 60px;
+    padding-top: 32px;
     overflow: hidden;
     margin-bottom: 0;
     z-index: 1;

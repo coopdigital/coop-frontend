@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-vars",
-  "version": "2.0.4",
+  "version": "2.1.2",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Variables",
   "style": "src/vars.pcss",
@@ -35,5 +35,6 @@
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
-  }
+  },
+  "gitHead": "d3640920b8c6cb4b67aeb7d8e685a5ff8dfe00c6"
 }
