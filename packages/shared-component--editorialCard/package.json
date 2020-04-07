@@ -1,9 +1,9 @@
 {
-  "name": "@coopdigital/shared-component--text",
-  "version": "0.0.2",
-  "description": "Co-op Shared Component: Text",
-  "main": "dist/text.css",
-  "style": "src/text.pcss",
+  "name": "@coopdigital/shared-component--editorialcard",
+  "version": "0.0.0",
+  "description": "Co-op Shared Component: Editorial Card",
+  "main": "dist/card.css",
+  "style": "src/card.pcss",
   "author": "Gup Badyal (gupreet.baydal@coop.co.uk)",
   "license": "MIT",
   "files": [
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/shared-component--text.git"
+    "url": "git+https://github.com/coopdigital/shared-component--editorialCard.git"
   },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^2.0.4",
@@ -35,11 +35,11 @@
     "stylelint-prettier": "^1.0.3"
   },
   "bugs": {
-    "url": "https://github.com/coopdigital/shared-component--text/issues"
+    "url": "https://github.com/coopdigital/shared-component--editorialCard/issues"
   },
-  "homepage": "https://github.com/coopdigital/shared-component--text#readme",
+  "homepage": "https://github.com/coopdigital/shared-component--editorialCard#readme",
   "keywords": [
-    "content",
-    "text"
+    "card",
+    "content"
   ]
 }
