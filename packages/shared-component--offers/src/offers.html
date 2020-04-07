@@ -1,0 +1,84 @@
+{% import 'macros/elements/link.html' as link %}
+
+{% macro render(content, cms, config = {}) %}
+
+{# Set default classes and configuration #}
+{% set orientationClass = '' %}
+{% set hasLinksClass = '' %}
+
+{% if config %}
+  {% if config.isHorizontal %}
+    {% set orientationClass = 'coop-c-offersmodule--full' %}
+  {% endif %}
+{% endif %}
+
+{% if content.fields.links %}
+  {% set hasLinksClass = 'coop-c-offersmodule--links' %}
+{% endif %}
+
+<div class="coop-offers-module-container">
+  <aside class="coop-c-offersmodule {{orientationClass}} {{hasLinksClass}}">
+    <header class="coop-c-offersmodule__header">
+      <h3 class="coop-c-offersmodule__title">
+        Save with offers personalised to <span class="coop-c-offersmodule__offset-underline">you</span>
+      </h3>
+    </header>
+    <div class="coop-c-offersmodule__body">
+      <div class="coop-l-grid">
+        <div class="coop-l-grid-item col-md-6 col-lg-5">
+          <p class="coop-c-offersmodule__cta">
+            <a
+              href="https://coop.co.uk/offers"
+              class="coop-c-offersmodule__cta__link"
+              data-contenttype="Offers module" 
+              data-contentparent="Save with offers personalised to you" 
+              data-linktext="Sign in to see your offers"
+            >
+              Sign in to see your offers
+            </a>
+          </p>
+          <p class="coop-c-offersmodule__sign-in">
+            <a
+              href="https://membership.coop.co.uk/register"
+              class="coop-c-offersmodule__sign-in__link"
+              data-contenttype="Offers module" 
+              data-contentparent="Sign in to see your offers" 
+              data-linktext="Become a Co-op member to get your offers"
+            >
+              Become a Co-op Member to get your offers
+            </a>
+          </p>
+        </div>
+        <div class="coop-l-grid-item col-md-6 col-lg-7">
+          <ul class="coop-c-offersmodule__links">
+            <li class="coop-c-offersmodule__links__item">Get money off products you like to buy or might want to try</li>
+            <li class="coop-c-offersmodule__links__item">Every week you can choose 2 offers to use in Co-op Food stores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <figure class="coop-c-offersmodule__media">
+      <img src="{{ static('/static/images/logo/membership-card-sm.png') }}" alt="Image of a Co-op offers card" />
+    </figure>
+  </aside>
+  <div class="coop-double-squircles-bg">
+    <svg class="coop-double-squircles-bg__v1" width="441px" height="339px" viewBox="0 0 441 339" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="New-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Group-2" fill-rule="nonzero">
+                <path d="M172.512278,339 C206.312456,339 238.528826,333.240221 268.756228,322.804428 C301.340925,310.529889 324.545552,284.190775 333.864235,253.37048 C341.108007,228.176015 345,201.520295 345,173.963469 C345,146.491882 341.108007,119.848339 333.864235,94.6416974 C324.545552,63.8092251 301.340925,37.4701107 268.756228,25.2199262 C238.528826,14.7597786 206.312456,9 172.512278,9 C138.773488,9 106.483452,14.7597786 76.3419929,25.2199262 C43.7327402,37.4701107 20.466726,63.8092251 11.2339858,94.6416974 C3.97793594,119.848339 1.13686838e-13,146.491882 1.13686838e-13,173.963469 C1.13686838e-13,201.520295 3.97793594,228.176015 11.2339858,253.37048 C20.466726,284.190775 43.7327402,310.529889 76.3419929,322.804428 C106.483452,333.240221 138.773488,339 172.512278,339 Z" id="shape-copy-10" fill="#F0D2CE" style="mix-blend-mode: multiply;"></path>
+                <path d="M286.011032,297 C316.382206,297 345.330249,291.816199 372.491103,282.423985 C401.770107,271.3769 422.620641,247.671697 430.99395,219.933432 C437.502847,197.258413 441,173.268266 441,148.467122 C441,123.742694 437.502847,99.7635055 430.99395,77.0775277 C422.620641,49.3283026 401.770107,25.6230996 372.491103,14.5979336 C345.330249,5.18380074 316.382206,0 286.011032,0 C255.695018,0 226.680783,5.18380074 199.597153,14.5979336 C170.296085,25.6230996 149.390391,49.3283026 141.094306,77.0775277 C134.574377,99.7635055 131,123.742694 131,148.467122 C131,173.268266 134.574377,197.258413 141.094306,219.933432 C149.390391,247.671697 170.296085,271.3769 199.597153,282.423985 C226.680783,291.816199 255.695018,297 286.011032,297 Z" id="shape-copy-13" fill="#326BB7" style="mix-blend-mode: multiply;"></path>
+            </g>
+        </g>
+    </svg> 
+    <svg class="coop-double-squircles-bg__v2" width="319px" height="286px" viewBox="0 0 319 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="New-Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Offers-component" transform="translate(-598.000000, -1401.000000)" fill-rule="nonzero">
+                <path d="M803.508078,1629 C825.747616,1629 846.945053,1625.21251 866.833808,1618.35018 C888.273594,1610.27875 903.541566,1592.95878 909.672989,1572.6921 C914.439181,1556.12483 917,1538.59668 917,1520.47598 C917,1502.41133 914.439181,1484.89118 909.672989,1468.3159 C903.541566,1448.04122 888.273594,1430.72125 866.833808,1422.66583 C846.945053,1415.78749 825.747616,1412 803.508078,1412 C781.308932,1412 760.063025,1415.78749 740.230819,1422.66583 C718.774875,1430.72125 703.466512,1448.04122 697.391637,1468.3159 C692.617367,1484.89118 690,1502.41133 690,1520.47598 C690,1538.59668 692.617367,1556.12483 697.391637,1572.6921 C703.466512,1592.95878 718.774875,1610.27875 740.230819,1618.35018 C760.063025,1625.21251 781.308932,1629 803.508078,1629 Z" id="shape-copy-24" fill="#3067B1" style="mix-blend-mode: multiply;"></path>
+                <path d="M747.510641,1687 C776.804128,1687 804.724982,1682.00819 830.922064,1672.96384 C859.162135,1662.3259 879.272811,1639.49867 887.349004,1612.78775 C893.62694,1590.95255 897,1567.85092 897,1543.96834 C897,1520.15963 893.62694,1497.06856 887.349004,1475.2228 C879.272811,1448.50133 859.162135,1425.6741 830.922064,1415.05727 C804.724982,1405.99181 776.804128,1401 747.510641,1401 C718.270356,1401 690.285658,1405.99181 664.16306,1415.05727 C635.901708,1425.6741 615.737829,1448.50133 607.736121,1475.2228 C601.447544,1497.06856 598,1520.15963 598,1543.96834 C598,1567.85092 601.447544,1590.95255 607.736121,1612.78775 C615.737829,1639.49867 635.901708,1662.3259 664.16306,1672.96384 C690.285658,1682.00819 718.270356,1687 747.510641,1687 Z" id="shape-copy-27" fill="#EDCFCB" style="mix-blend-mode: multiply;"></path>
+            </g>
+        </g>
+    </svg>
+  </div>
+</div>
+
+{% endmacro %}
