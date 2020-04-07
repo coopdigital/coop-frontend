@@ -241,6 +241,7 @@ textarea,
   color: #282828;
   color: var(--color-text);
   outline: 0;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem;
 }
@@ -256,6 +257,7 @@ textarea:focus,
   outline-offset: 3px;
   outline: 2px dotted #eb5f1e;
   outline: 2px dotted var(--color-link--focus);
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -308,6 +310,7 @@ select,
   color: #282828;
   color: var(--color-text);
   outline: 0;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 1.25rem;
 }
@@ -321,6 +324,7 @@ select:focus,
   outline-offset: 3px;
   outline: 2px dotted #eb5f1e;
   outline: 2px dotted var(--color-link--focus);
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -450,6 +454,7 @@ input[type="radio"],
   border-color: #000000;
   outline-offset: 3px;
   outline: 2px dotted #eec300;
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -490,6 +495,7 @@ input[type="radio"],
   background: none;
   border: solid;
   border-width: 0 0 3px 3px;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   border-top-color: transparent;
   width: 15px;
