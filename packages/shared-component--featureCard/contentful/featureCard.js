@@ -1,6 +1,6 @@
 module.exports = function (migration) {
   const featureCard = migration.createContentType('featureCard');
-  featureCard.name('-- featureCard')
+  featureCard.name('-- Feature card')
     .description('A text box with image that can be displayed with or without a squircle. Use to highlight and link to featured content.')
 
   featureCard.createField('name')
