@@ -121,7 +121,7 @@ module.exports = function (migration) {
     'link',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'This text should briefly tell people what the featured content is about.' }
+    { helpText: 'Link to the page you want people to go to when they click the card.' }
   )
 }
 
