@@ -1,0 +1,80 @@
+{% import 'macros/elements/link.html' as link %}
+
+{% macro render(content, cms, config = {}) %}
+
+{# Set default classes and configuration #}
+{% set orientationClass = '' %}
+{% set hasLinksClass = '' %}
+
+{% if config %}
+{% if config.isHorizontal %}
+{% set orientationClass = 'coop-c-membershipmodule--full' %}
+{% endif %}
+{% endif %}
+
+{% if content.fields.links %}
+{% set hasLinksClass = 'coop-c-membershipmodule--links' %}
+{% endif %}
+
+<aside class="coop-c-membershipmodule {{orientationClass}} {{hasLinksClass}}">
+  <header class="coop-c-membershipmodule__header">
+    <h3 class="coop-c-membershipmodule__title">
+      Become a Co-op Member
+    </h3>
+  </header>
+  <p class="coop-c-membershipmodule__lead">
+    Join Co-op, earn rewards and help your community
+  </p>
+  <div class="coop-c-membershipmodule__body">
+    <p class="coop-c-membershipmodule__cta">
+      <a href="https://membership.coop.co.uk/register"
+        class="coop-btn coop-btn--medium coop-btn--primary coop-c-membershipmodule__cta__link"
+        data-contenttype="Membership module" data-contentparent="Become a member" data-linktext="Become a Co-op Member">
+        Become a Co-op Member
+      </a>
+    </p>
+    <p class="coop-c-membershipmodule__sign-in">
+      <a href="https://membership.coop.co.uk/sign-in?utm_source=coop.co.uk&utm_medium=referral"
+        class="coop-c-membershipmodule__sign-in__link" data-contenttype="Membership module"
+        data-contentparent="Become a member" data-linktext="Sign into your Membership account">
+        Sign into your Membership account
+      </a>
+    </p>
+  </div>
+  <figure class="coop-c-membershipmodule__media">
+    <img src="{{ static('/static/images/logo/membership-module-logo-lg.png') }}" alt="Image of a Co-op membership card" />
+  </figure>
+  {% if content.fields.links %}
+  <ul class="coop-c-membershipmodule__links">
+    {% for membershipLink in content.fields.links %}
+    {% if membershipLink and membershipLink.sys.id %}
+    {% with linkEntry = cms.get_entry(membershipLink.sys.id) %}
+    {% set linkConfig = {
+      'linkStyle': 'default',
+      'linkClasses': 'coop-c-membershipmodule__links__link',
+      'linkAttributes': [
+        {
+          "attr": "data-contenttype",
+          "value": "Membership module"
+        },
+        {
+          "attr": "data-contentparent",
+          "value": "Become a member"
+        },
+        {
+          "attr": "data-linktext",
+          "value": linkEntry.data.fields.title
+        }
+      ]
+    } %}
+    <li class="coop-c-membershipmodule__links__item">
+      {{ link.render(linkEntry.data, cms, linkConfig) }}
+    </li>
+    {% endwith %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</aside>
+
+{% endmacro %}
