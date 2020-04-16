@@ -88,6 +88,12 @@
   --color-orange-mid: #f8642c;
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
+  --color-blue-notification: #326bb7;
+  --color-blue-notification-light: #d4eaf5;
+  --color-orange-alert: #ff9d34;
+  --color-orange-alert-light: #ffebe3;
+  --color-red-error: #d63118;
+  --color-red-error-light: #fef3f4;
 }
 .coop-c-search {
   position: relative;
@@ -105,14 +111,13 @@
 }
 .coop-c-search__input:focus {
   transition: none;
-  outline: 2px dotted #eec300;
-  outline: 2px dotted #eb5f1e;
-  outline: 2px dotted var(--color-link--focus);
+  outline: 2px solid #eb5f1e;
+  outline: 2px solid var(--color-link--focus);
   outline-offset: 3px;
 }
 @media (min-width: 750px) {
   .coop-c-search__input {
-    padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+    padding: 1.25rem 4.5rem 1.25rem 1.25rem;
   }
 }
 .coop-c-search__button {
@@ -134,9 +139,8 @@
 }
 .coop-c-search__button:focus {
   transition: none;
-  outline: 2px dotted #eec300;
-  outline: 2px dotted #eb5f1e;
-  outline: 2px dotted var(--color-link--focus);
+  outline: 2px solid #eb5f1e;
+  outline: 2px solid var(--color-link--focus);
   outline-offset: 3px;
 }
 .coop-c-search__button svg {
