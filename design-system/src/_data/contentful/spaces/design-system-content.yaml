@@ -801,27 +801,27 @@ designPattern:
 - sys:
     id: 2VJK6b6AvX9bXLBtGt8hjT
     created_at: !ruby/object:DateTime 2020-04-03 16:22:11.609000000 Z
-    updated_at: !ruby/object:DateTime 2020-04-03 16:31:53.248000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-04 14:52:56.922000000 Z
     content_type_id: designPattern
-    revision: 2
+    revision: 3
   title: Alert notification
   status: live
-  introduction: Alert.
-  design_and_content_documentation: Alert.
-  accessibility_documentation: Alert.
-  variations: Alert.
+  introduction: Guidelines coming soon.
+  design_and_content_documentation: Documentation coming soon.
+  accessibility_documentation: Documentation coming soon.
+  variations: "[Information notification](https://coop-design-system.herokuapp.com/pattern-library/components/notifications/information-notification.html)"
 - sys:
     id: 3sHpp4UdZjYCXkvBLPIVqe
     created_at: !ruby/object:DateTime 2020-04-03 16:31:19.784000000 Z
-    updated_at: !ruby/object:DateTime 2020-04-03 16:31:46.897000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-04 14:53:59.657000000 Z
     content_type_id: designPattern
-    revision: 2
+    revision: 4
   title: Information notification
   status: live
-  introduction: Information
-  design_and_content_documentation: Information
-  accessibility_documentation: Information
-  variations: Information
+  introduction: Guidelines coming soon.
+  design_and_content_documentation: Documentation coming soon.
+  accessibility_documentation: Documentation coming soon.
+  variations: "[Alert notification](https://coop-design-system.herokuapp.com/pattern-library/components/notifications/alert-notification.html)"
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
