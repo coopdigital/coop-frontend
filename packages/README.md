@@ -26,7 +26,9 @@ Then create a design pattern page in the [design system Contentful space](https:
 
 Publish the page then `cd design-system` and in your terminal and run `npm run server` to grab the latest data from Contentful. 
 
-Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the component page you created in `{% if designPattern.sys.id == 'your page ID' %}`. Let the local design system build refresh.
+Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the component page you created in `{% if designPattern.sys.id == 'your page ID' %}`. 
+
+Let the local design system build refresh.
 
 You should then see your new page at - for example: `localhost:9000/pattern-library/components/cards/product-card.html`
 
