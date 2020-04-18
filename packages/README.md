@@ -10,6 +10,8 @@ $ npm install
 This will install lerna, then [bootstrap the local packages](https://github.com/lerna/lerna/tree/master/commands/bootstrap#readme).
 
 ## Adding a new package
+Create a new branch. 
+
 Make a copy of the [component-template](https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template) following the README. Add your HTML and CSS.
 
 Shared components use Jinja2 and will need a corresponding model in Contentful. For information on how and why to create these email matt.tyas@coop.co.uk.
@@ -22,7 +24,7 @@ Then create a design pattern page in the [design system Contentful space](https:
 
 Publish the page then `cd design-system` and in your terminal and run `npm run server` to grab the latest data from Contentful. 
 
-Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the compnent page you created in `{% if designPattern.sys.id == 'your page ID' %}`. Let the local design system buid refresh.
+Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the compnent page you created in `{% if designPattern.sys.id == 'your page ID' %}`. Let the local design system build refresh.
 
 You should then see your new page at, for example: localhost:9000/pattern-library/components/cards/product-card.html
 
@@ -32,6 +34,9 @@ You can then reference this in your component page as an include to render the c
 ```HTML
 {% include pattern-library/components/[my-component]/src/[my-component].html %}
 ```
+If your component is ready to publish commit your files and open a pull request.
+
+Once your pull request is merged you'll need to switch to master and pull.
 
 ## Publishing new versions
 Creating and publishing new versions is only enabled on the master branch. To create and publish new versions, the following needs to be run by a user with write permissions to the @coopdigital npm registry.
