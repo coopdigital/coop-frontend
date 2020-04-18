@@ -1,7 +1,7 @@
 # Developing foundation and component packages for the design system
 
 ## Installation
-This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. Clone this repository, then install dependencies in the root of the repo:
+This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. Install dependencies in the root of the repo:
 
  ```shell script
 $ npm install
