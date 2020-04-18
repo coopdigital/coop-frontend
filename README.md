@@ -8,6 +8,6 @@ The [design system](http://coop.co.uk/designsystem) is within a sub folder of th
 
 
 ## Developing foundation and component packages for the design system
-This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. These are published as separate pacakges to [Co-op digtial's NPM organisation](https://www.npmjs.com/org/coopdigital). These pacakges can be installed by digtial teams as required as dependencies of their project.
+This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. These are published as separate pacakges to [Co-op digtial's NPM organisation](https://www.npmjs.com/org/coopdigital). These packages can be installed by digtial teams as required as dependencies of their project.
 
 [How add and publish a package](https://github.com/coopdigital/coop-frontend/blob/master/packages/README.md)
