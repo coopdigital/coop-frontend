@@ -10,15 +10,28 @@ $ npm install
 This will install lerna, then [bootstrap the local packages](https://github.com/lerna/lerna/tree/master/commands/bootstrap#readme).
 
 ## Adding a new package
+Make a copy of the [component-template](https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template) following the README. Add your HTML and CSS.
 
+Shared components use Jinja2 and will need a corresponding model in Contentful. For information on how and why to create these email matt.tyas@coop.co.uk.
 
 
 ## Testing the package in the design system
+Create a page for the component in an [existing or new folder here](https://github.com/coopdigital/coop-frontend/tree/master/design-system/src/pattern-library/components). 
 
+Then create a design pattern page in the [design system Contentful space](https://app.contentful.com/spaces/95z9ms2kvox3/entries?id=PqNCla0FvyJeggwp&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author&filters.0.key=__status&filters.0.val=published). For access email matt.tyas@coop.co.uk.
 
+Publish the page then `cd design-system` and in your terminal and run `npm run server` to grab the latest data from Contentful. 
 
-## 
+Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the compnent page you created in `{% if designPattern.sys.id == 'your page ID' %}`. Let the local design system buid refresh.
 
+You should then see your new page at, for example: localhost:9000/pattern-library/components/cards/product-card.html
+
+Running the design system build will have copied your component to /_includes/pattern-library/components/my-component
+
+You can then reference this in your component page as an include to render the component and the component as an HTML example:
+```HTML
+{% include pattern-library/components/[my-component]/src/[my-component].html %}
+```
 
 ## Publishing new versions
 Creating and publishing new versions is only enabled on the master branch. To create and publish new versions, the following needs to be run by a user with write permissions to the @coopdigital npm registry.
