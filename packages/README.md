@@ -47,7 +47,7 @@ $ npm run publish
 
 If you need permissions email matt.tyas@coop.co.uk
 
-This should provide a prompt to update the version according to [semantic versioning](https://semver.org/) -- note that cross-linked dependencies within the local packages will be updated automatically.
+This should provide a prompt to update the version according to [semantic versioning](https://semver.org/) - note that cross-linked dependencies within the local packages will be updated automatically.
 
 ## To see changes in the live design system
 As the package versions are updated by Lerna you'll need to also update the [design system package.json file](https://github.com/coopdigital/coop-frontend/blob/master/design-system/package.json) file to make sure the changes are reflected in the live site.
