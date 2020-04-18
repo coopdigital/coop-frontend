@@ -1,5 +1,5 @@
 # Component Template
-This repository serves as a template for creating new components for the Co-op design system.
+This repository is a template for creating new components for the Co-op design system.
 
 ---
 
