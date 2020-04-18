@@ -1,7 +1,6 @@
 # Co-op Front-end
 A mono-repository containing all the available Co-op Foundations libraries. All libraries are found in the [packages](./packages) directory.
 
-
 ## Co-op Design system
 The [design system](http://coop.co.uk/designsystem) is within a sub folder of this repo and can be run locally and deployed to Heroku independently of the foundations and component packages. 
 
