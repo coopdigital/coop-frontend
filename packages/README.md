@@ -12,7 +12,9 @@ This will install lerna, then [bootstrap the local packages](https://github.com/
 ## Adding a new package
 Create a new branch. 
 
-Make a copy of the [component-template](https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template) following the README. Add your HTML and CSS.
+Make a copy of the [component-template](https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template) following the README. 
+
+Add your HTML and CSS.
 
 Shared components use Jinja2 and will need a corresponding model in Contentful. For information on how and why to create these email matt.tyas@coop.co.uk.
 
