@@ -24,13 +24,13 @@ Then create a design pattern page in the [design system Contentful space](https:
 
 Publish the page then `cd design-system` and in your terminal and run `npm run server` to grab the latest data from Contentful. 
 
-Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the compnent page you created in `{% if designPattern.sys.id == 'your page ID' %}`. Let the local design system build refresh.
+Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the component page you created in `{% if designPattern.sys.id == 'your page ID' %}`. Let the local design system build refresh.
 
-You should then see your new page at, for example: localhost:9000/pattern-library/components/cards/product-card.html
+You should then see your new page at - for example: localhost:9000/pattern-library/components/cards/product-card.html
 
 Running the design system build will have copied your component to /_includes/pattern-library/components/my-component
 
-You can then reference this in your component page as an include to render the component and the component as an HTML example:
+You can then reference this in your component page as an include to render the component and the component as an HTML example in your page:
 ```HTML
 {% include pattern-library/components/[my-component]/src/[my-component].html %}
 ```
