@@ -1,5 +1,5 @@
 # Co-op Front-end
-A mono-repository containing the design system website and foundations and component packages needed for designing and building digital services for the Co‑op. All packages are found in the [packages](./packages) directory.
+A mono-repository containing the design system website and foundations and component packages needed for designing and building digital services for the Co‑op. All packages can be found in the [packages](./packages) directory.
 
 ## Co-op Design system
 The [design system](http://coop.co.uk/designsystem) is a sub folder of this repo and can be run locally and deployed to Heroku independently of the foundations and component packages. 
