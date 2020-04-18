@@ -19,6 +19,6 @@ npm run server
 ```
 
 ## Heroku deployment
-Changes should be created on branches then submitted as a pull request. [Circle CI](https://circleci.com/gh/coopdigital/workflows/coop-frontend) run a `build_pacakges` (to check that all the foundations and components are building successfully) and `build` to check that the Design system is building correctly.
+Changes should be created on branches then submitted as a pull request. [Circle CI](https://circleci.com/gh/coopdigital/workflows/coop-frontend) runs `build_pacakges` (to check that all the foundations and components are building successfully) and `build` to check that the Design system is building correctly.
 
-Once the branch is merged the Design system is automatically deployed to Heroku (<https://coop-design-manual.herokuapp.com>)  using an extra `deploy` step in the Cirlce CI workflow.
+Once the branch is merged the Design system is automatically deployed to Heroku (<https://coop-design-manual.herokuapp.com>) using an extra `deploy` step in the Cirlce CI workflow.
