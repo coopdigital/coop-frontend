@@ -7,7 +7,7 @@ This repository serves as a template for creating new components and modules for
 Your brief description of your component or module.
 
 ## Installation
-Install via `npm` or Yarn:
+Install via `npm`:
 ```bash
 $ npm install @coopdigital/component-[name] --save
 ```
