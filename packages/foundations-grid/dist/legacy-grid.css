@@ -1068,23 +1068,15 @@
   }
 }
 .coop-l-flexed {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
 }
 @media (min-width: 60em) {
   .coop-l-flexed {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     flex-direction: row;
   }
   .coop-l-flexed--reversed {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
     flex-direction: row-reverse;
   }
 }
