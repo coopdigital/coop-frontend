@@ -1,0 +1,105 @@
+{% macro render(content, cms) %}
+
+  {% set mediaClass = '' %}
+  {% set squircleClass = '' %}
+  {% set contentPullClass = '' %}
+  {% set themeColour = '' %}
+
+  {% if content.image.data %}
+    {% set mediaClass = 'coop-c-hero--media' %}
+  {% endif %}
+
+  {% if content.heroBackground and content.heroBackground.data %}
+    {% if content.heroBackground.data.id %}
+      {% set backgroundColour = 'coop-c-hero--' + content.heroBackground.data.id %}
+    {% endif %}
+  {% endif %}
+
+  {% if content.contentPull.data %}
+    {% set contentPullClass = 'coop-c-hero--pull' %}
+  {% endif %}
+
+  {% if content.showSquircle.data == true %}
+    {% set squircleClass = 'coop-c-hero--squircle' %}
+  {% endif %}
+
+  <div class="coop-c-hero {{ squircleClass }} {{ mediaClass }} {{ backgroundColour }} {{ contentPullClass }}">
+    <div class="coop-c-hero__inner">
+
+      {% if content.heroHeading.data %}
+        <h1 class="coop-c-hero__title">{{ content.heroHeading.data }}</h1>
+      {% endif %}
+
+      {% if content.image.data %}
+        {% with image = cms.get_asset(content.image.data) %}
+
+          {% if image.data.fields.description %}
+            {% set altText = image.data.fields.description %}
+          {% else %}
+            {% set altText = image.data.fields.title %}
+          {% endif %}
+
+          <div class="coop-c-hero__media">
+            <picture class="coop-c-hero__image">
+              
+              {%- set imageType = image.data.fields.file.contentType.split('/')[1] -%}
+              {%- if imageType == 'jpeg' -%}
+                {%- set imageType = 'jpg' -%}
+              {%- endif -%}
+              <source media="(min-width: 60em)"
+                      srcset="{{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w=600&amp;h=338 1x,
+                              {{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ 600 * 2 }}&amp;h={{ 338 * 2 }} 2x"
+                      type="image/webp" />
+              <source srcset="{{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w=600&amp;h=338 1x,
+                              {{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ 600 * 2 }}&amp;h={{ 338 * 2 }} 2x"
+                      type="image/webp" />
+              
+              <source media="(min-width: 60em)"
+                      srcset="{{ image.data.fields.file.url }}?fm={{imageType}}&amp;q=60&amp;w=600&amp;h=338 1x,
+                              {{ image.data.fields.file.url }}?fm={{imageType}}&amp;q=60&amp;w={{ 600 * 2 }}&amp;h={{ 338 * 2 }} 2x"
+                      type="image/jpeg" />
+              <source srcset="{{ image.data.fields.file.url }}?fm={{imageType}}&amp;q=60&amp;w=600&amp;h=338 1x,
+                              {{ image.data.fields.file.url }}?fm={{imageType}}&amp;q=60&amp;w={{ 600 * 2 }}&amp;h={{ 338 * 2 }} 2x"
+                      type="image/jpeg" />
+              
+              <img src="{{ image.data.fields.file.url }}?fm={{imageType}}&amp;q=60&amp;w=600&amp;h=338"
+                  width="600"
+                  height="338"
+                  alt="{{ altText }}" />
+            </picture>
+          </div>
+        {% endwith %}
+      {% endif %}
+
+      {% if content.heroBody.data or content.heroLink.data %}
+        <div class="coop-c-hero__body">
+          {% if content.heroBody.data %}
+            {{ content.heroBody.data | markdown }}
+          {% endif %}
+          {% if content.heroLink.data %}
+            <div class="coop-c-hero__link">
+              {% with heroLink = cms.get_entry(content.heroLink.data.sys.id) %}
+                {% if heroLink.type == 'internalLink' %}
+                  {% with internalLink = cms.get_entry(heroLink.fields.page.data.sys.id) %}
+                    <a href="/{{ internalLink.full_url_path }}">{{ heroLink.fields.title.data }}</a>
+                  {% endwith %}
+                {% elif heroLink.fields.url.data %}
+                  <a href="{{ heroLink.fields.url.data }}">{{ heroLink.fields.title.data }}</a>
+                {% endif %}
+              {% endwith %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if content.showSquircle.data == true %}
+        <div class="coop-c-hero__squircle" aria-hidden="true">
+          <div class="coop-c-hero__squircle__inner">
+            <svg class="coop-c-hero__squircle__svg" viewBox="0 0 1802 1726">
+              <path class="coop-c-hero__squircle__path" d="M1743 446.3c-49.7-167.6-173.7-299.6-339.6-362C1079.6-28.2 724.1-28.2 397 84.9 232.6 146.7 109.2 278.6 58.5 446.8 19.7 581.6 0 721.4 0 862.8s19.7 281.2 58.5 416.5c50.8 167.6 174.2 299.6 339.6 362 162.2 56.2 331.5 84.7 502.9 84.7 172 0 341.3-28.4 504-85.2 164.9-62.4 288.3-193.8 338-362 39.4-135.8 59-275.6 59-416s-19.7-280.6-59-416.5z" />
+            </svg>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

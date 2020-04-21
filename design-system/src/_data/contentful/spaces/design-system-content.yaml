@@ -801,11 +801,13 @@ designPattern:
 - sys:
     id: 2VJK6b6AvX9bXLBtGt8hjT
     created_at: !ruby/object:DateTime 2020-04-03 16:22:11.609000000 Z
-    updated_at: !ruby/object:DateTime 2020-04-04 14:52:56.922000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-21 10:07:57.036000000 Z
     content_type_id: designPattern
-    revision: 3
+    revision: 4
   title: Alert notification
   status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-notification--alert
+  npm_url: https://www.npmjs.com/package/@coopdigital/component-notification--alert
   introduction: Guidelines coming soon.
   design_and_content_documentation: Documentation coming soon.
   accessibility_documentation: Documentation coming soon.
@@ -813,11 +815,13 @@ designPattern:
 - sys:
     id: 3sHpp4UdZjYCXkvBLPIVqe
     created_at: !ruby/object:DateTime 2020-04-03 16:31:19.784000000 Z
-    updated_at: !ruby/object:DateTime 2020-04-04 14:53:59.657000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-21 10:09:21.910000000 Z
     content_type_id: designPattern
-    revision: 4
+    revision: 5
   title: Information notification
   status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-notification
+  npm_url: https://www.npmjs.com/package/@coopdigital/component-notification
   introduction: Guidelines coming soon.
   design_and_content_documentation: Documentation coming soon.
   accessibility_documentation: Documentation coming soon.

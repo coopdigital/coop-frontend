@@ -1,5 +1,7 @@
 /* Buttons  */
 
+@import "@coopdigital/foundations-vars";
+
 .coop-btn {
   display: inline-block;
   padding: var(--spacing-base--1-4) calc(var(--spacing-base--1-2) * 1.25);
@@ -32,6 +34,8 @@
 
 .coop-btn:focus {
   transition: none;
+  outline: 2px solid var(--color-link--focus);
+  outline-offset: 3px;
 }
 
 .coop-btn:active {

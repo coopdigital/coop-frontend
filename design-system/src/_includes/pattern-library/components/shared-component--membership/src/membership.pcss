@@ -1,0 +1,328 @@
+/* Link list */
+
+@import "@coopdigital/foundations-vars"; 
+
+  .coop-c-membershipmodule {
+    padding: 1.5rem;
+    background-color:#d5eaf0;
+    margin-bottom: var(--spacing-base);
+
+    @media (--mq-large) {
+      padding: 2rem 2rem 1.5rem 2rem;
+    }
+
+    &__header {
+      grid-area: auto;
+      margin-bottom: var(--spacing-medium--1-2);
+
+      @media (--mq-medium) {
+        grid-area: header;
+        max-width: 30rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &__title {
+      padding-top: 0;
+
+      @media (--mq-medium) {
+        margin: 0;
+      }
+    }
+
+    &__lead {
+      grid-area: lead;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      margin-bottom: 0;
+      padding-right: 1rem;
+      display: none;
+
+      @media (--mq-medium) {
+        display: block;
+        margin-bottom: var(--spacing-medium--1-2);
+        max-width: 30rem;
+      }
+      
+      @media (--mq-xlarge) {
+        font-size: var(--type-medium--body);
+        line-height: 2rem;
+      }
+    }
+
+    &__body {
+      grid-area: body;
+      padding-right: 1rem;
+
+      @media (--mq-medium) {
+        max-width: 30rem;
+      }
+    }
+
+    &__cta {
+      margin-bottom: 0.75rem;
+
+      &__link {
+        padding: calc(var(--spacing-base--1-4)*1.75) calc(var(--spacing-base--1-2)*1.5);
+        color: var(--color-white);
+        background: var(--color-button-primary);
+        font-size: 1rem;
+        font-family: var(--font-family);
+        font-weight: 500;
+        text-align: center;
+        border: 0;
+        border-radius: 0.4375rem;
+        transition: all 0.15s linear;
+        outline: none;
+        text-decoration: none;
+        display: inline-block;
+        line-height: normal;
+
+          @media (--mq-medium) {
+            font-size: 1.125rem;
+            padding: var(--spacing-base--1-2) calc(var(--spacing-base--1-2) * 1.5);
+            line-height: 1.125rem;
+          }
+  
+        &:hover,
+        &:focus {
+          background: var(--color-button-primary--hover);
+          color: var(--color-white);
+        }
+  
+        &:active {
+          background: var(--color-button-primary--active);
+          color: var(--color-white);
+          outline: 0;
+        }
+      }
+    }
+
+    &--full &__cta {
+
+      @media (--mq-xlarge) {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+
+    &__sign-in {
+      display: block;
+      margin-bottom: 0;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+
+      /* required to overwrite foundation CSS */
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (--mq-xlarge) {
+        font-size: var(--type-medium--body);
+        line-height: 2rem;
+      }
+
+      &__link {
+        color: var(--color-text);
+        border-color: var(--color-text);
+      }
+    }
+
+    &--full &__sign-in {
+
+      @media (--mq-xlarge) {
+        margin: 0;
+      }
+    }
+
+    &__media {
+      margin: -2rem 0 0 0;
+      margin-bottom: calc(var(--spacing-medium--1-4)*1.25);
+      padding: 0;
+      grid-column: 2;
+      grid-row: 3;
+      grid-area: header;
+
+      @media (--mq-medium) {
+        grid-area: media;
+        margin: 0 0 -1.5rem;
+        padding: 2rem 0 0;
+        align-self: end;
+      }
+
+      @media (--mq-large) {
+        padding: 0;
+        margin: -4.5rem 0 -1.5rem;
+      }
+
+      @media (--mq-xlarge) {
+        padding: 0 0 0 2rem;
+      }
+
+      img {
+        display: block;
+        height: auto;
+        max-width: 8.0625rem;
+
+        @media (--mq-medium) {
+          max-width: 9.75rem;
+        }
+
+        @media (--mq-large) {
+          max-width: 14.0625rem;
+        }
+
+        @media (--mq-xlarge) {
+          max-width: 15.0625rem;
+        }
+      }
+    }
+
+    &--full &__media {
+
+      @media (--mq-medium) {
+        padding: 0;
+      }
+
+      @media (--mq-large) {
+        padding: 0 1rem;
+      }
+
+      @media (--mq-xlarge) {
+        padding: 0 0 0 2rem;
+      }
+    }
+
+    &__links {
+      margin: 0;
+      padding: 2rem 1rem 0 0;
+      list-style: none;
+      grid-area: links;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+      display: none;
+
+      @media (--mq-medium) {
+        dipslay: block;
+      }
+
+      @media (--mq-xlarge) {
+        font-size: var(--type-medium--body);
+        line-height: 2rem;
+      }
+
+      &__link {
+        color: var(--color-text);
+        border-color: var(--color-text);
+      }
+    }
+
+    &--full &__links {
+
+      @media (--mq-large) {
+        padding: 0 0 0 1rem;
+        align-self: center;
+      }
+
+      @media (--mq-xlarge) {
+        padding: 0 0 0 3.5rem;
+      }
+    }
+
+    /*
+    CSS grid templating:
+    Mix of @custom-media and grid means PostCSS autoprefixer requires these adding last for correct IE prefixing
+    */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header" "lead" "body" "links" "media";
+
+    @media (--mq-large) {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "header header header header header header header header header header header header"
+        "lead lead lead lead lead lead lead lead lead lead lead lead"
+        "body body body body body body body body media media media media";
+    }
+
+    &--links {
+
+      @media (--mq-large) {
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+          "header header header header header header header header header header header header"
+          "lead lead lead lead lead lead lead lead lead lead lead lead"
+          "body body body body body body body body body body body body"
+          "links links links links links links links links media media media media";
+      }
+
+      @media (--mq-xlarge) {
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+          "header header header header header header header header header header header header"
+          "lead lead lead lead lead lead lead lead lead lead lead lead"
+          "body body body body body body body body media media media media"
+          "links links links links links links links links media media media media";
+      }
+    }
+
+    &--full {
+
+      @media (--mq-medium) {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+          "header header header header header header header header header media media media"
+          "lead lead lead lead lead lead lead lead lead media media media"
+          "body body body body body body body body body media media media"
+          "body body body body body body body body body media media media";
+      }
+
+     @media (--mq-large) {
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "header header header header header header media media media links links links"
+          "lead lead lead lead lead lead media media media links links links"
+          "body body body body body body media media media links links links";
+      }
+
+      @media (--mq-xlarge) {
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "header header header header header header media media links links links links"
+          "lead lead lead lead lead lead media media links links links links"
+          "body body body body body body media media links links links links";
+      }
+    }
+
+    &--full&--links {
+
+      @media (--mq-medium) {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+          "header header header header header header header header header media media media"
+          "lead lead lead lead lead lead lead lead lead media media media"
+          "body body body body body body body body body media media media"
+          "links links links links links links links links links media media media";
+      }
+
+      @media (--mq-large) {
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "header header header header header header media media media links links links"
+          "lead lead lead lead lead lead media media media links links links"
+          "body body body body body body media media media links links links";
+      }
+
+      @media (--mq-xlarge) {
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "header header header header header header media media links links links links"
+          "lead lead lead lead lead lead media media links links links links"
+          "body body body body body body media media links links links links";
+      }
+    }
+  }
