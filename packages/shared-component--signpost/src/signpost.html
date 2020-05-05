@@ -17,7 +17,7 @@
           {% endif %}
         {% elif entryLink.fields.url.data %}
           <a
-            href="{{tenant_url_path}}{{ entryLink.fields.url.data }}"
+            href="{{tenant_url_path}}{{ internalLink.full_url_path }}"
             class="coop-c-signpost__link"
             data-contenttype="Signpost"
             data-contentparent="{{ config.contentParent|safe }}"
