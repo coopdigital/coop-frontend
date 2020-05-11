@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--hero",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Co-op Shared Component: Hero",
   "main": "dist/hero.css",
   "style": "src/hero.pcss",
