@@ -1010,8 +1010,8 @@ a:active,
   .coop-t-link-white:focus {
     -webkit-transition: none;
     transition: none;
-    outline: 2px dotted #ffffff;
-    outline: 2px dotted var(--color-white);
+    outline: 2px solid #ffffff;
+    outline: 2px solid var(--color-white);
     outline-offset: 3px;
   }
 
@@ -1031,8 +1031,8 @@ a:active,
   .coop-t-link-black:focus {
     -webkit-transition: none;
     transition: none;
-    outline: 2px dotted #000000;
-    outline: 2px dotted var(--color-black);
+    outline: 2px solid #000000;
+    outline: 2px solid var(--color-black);
     outline-offset: 3px;
   }
 
@@ -1878,8 +1878,8 @@ input:focus, .coop-form__input:focus, textarea:focus, .coop-form__textarea:focus
     border-color: #000000;
     border-color: var(--color-black);
     outline-offset: 3px;
-    outline: 2px dotted #eb5f1e;
-    outline: 2px dotted var(--color-link--focus);
+    outline: 2px solid #eb5f1e;
+    outline: 2px solid var(--color-link--focus);
     -webkit-transition: none;
     transition: none;
   }
@@ -1935,8 +1935,8 @@ select:focus, .coop-form__select:focus {
     border-color: #000000;
     border-color: var(--color-black);
     outline-offset: 3px;
-    outline: 2px dotted #eb5f1e;
-    outline: 2px dotted var(--color-link--focus);
+    outline: 2px solid #eb5f1e;
+    outline: 2px solid var(--color-link--focus);
     -webkit-transition: none;
     transition: none;
   }
@@ -2064,7 +2064,7 @@ input[type="radio"],
   background: #ffffff;
   border-color: #000000;
   outline-offset: 3px;
-  outline: 2px dotted #eec300;
+  outline: 2px solid #eec300;
   -webkit-transition: none;
   transition: none;
 }
