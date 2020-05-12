@@ -117,8 +117,7 @@
 
     .tabs-container__title[aria-selected="true"]:active,
     .tabs-container__title[aria-selected="true"]:focus {
-        outline: 2px dotted #eec300;
-        outline: 2px dotted var(--color-link--focus);
+        outline: 2px solid var(--color-link--focus);
         outline-offset: 3px;
     }
   

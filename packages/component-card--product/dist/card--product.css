@@ -286,6 +286,7 @@
   text-decoration: underline;
 }
 .coop-c-card--product .coop-c-card__link:hover .coop-c-card__image {
+  -webkit-transform: none;
   transform: none;
 }
 .coop-c-card--product .coop-c-card__link .coop-c-card__title {
@@ -302,7 +303,9 @@
   overflow: hidden;
   float: none;
   width: 100%;
+  transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
   text-align: center;
 }
 .coop-c-card--product .coop-c-card__link .coop-c-card__image picture {

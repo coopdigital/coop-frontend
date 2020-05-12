@@ -826,6 +826,14 @@ designPattern:
   design_and_content_documentation: Documentation coming soon.
   accessibility_documentation: Documentation coming soon.
   variations: "[Alert notification](https://coop-design-system.herokuapp.com/pattern-library/components/notifications/alert-notification.html)"
+- sys:
+    id: 3RPIv8qWqt4ZztDFhmEcg7
+    created_at: !ruby/object:DateTime 2020-04-28 15:53:31.732000000 Z
+    updated_at: !ruby/object:DateTime 2020-04-28 15:53:31.732000000 Z
+    content_type_id: designPattern
+    revision: 1
+  title: Date input
+  status: alpha
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
@@ -2134,9 +2142,9 @@ page:
 - sys:
     id: 7kofk9MtaxOfFOwxfcGvjj
     created_at: !ruby/object:DateTime 2019-05-23 10:07:52.788000000 Z
-    updated_at: !ruby/object:DateTime 2020-02-13 13:55:57.266000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-05 14:18:47.121000000 Z
     content_type_id: page
-    revision: 16
+    revision: 17
   title: Digital content glossary
   status: live
   introduction: |
@@ -2608,10 +2616,10 @@ page:
     full, so ‘half’ or ‘three quarters’, except in recipes where you should use numbers
     such as ‘½ tsp’.\n\nWrite out first, second and so on.\nSpell out ‘first’ to ‘ninth’.
     After that use 10th, 11th and so on.\nBut, write dates as 10 January 2017.\n \n###
-    Phone numbers\nUse the BT code and split numbers as follows 0161 123 4567. For
-    London numbers the split is 020 7123 4567.\n \nMobile numbers are split 07765
-    123 456. You must include information about call charges and opening times if
-    you mention a mobile number.\n \n\n## [O](#o)\n \n### Oven temperatures\nListed
+    Phone numbers\nSplit numbers into chunks so that they're easier to read and remember.
+    For example:\n\n- 0161 123 4567\n- 020 7123 4567\n- 01204 123 456\n- 07765 123
+    456\n\nInclude:\n\n- the area code for land lines \n- information about call charges
+    and opening times for mobile numbers\n \n\n## [O](#o)\n \n### Oven temperatures\nListed
     as follows:\n180°C/fan 160°C/Gas 4\nNo need to convert to Fahrenheit, except on
     food packaging where it can be shown if a supplier provides it.\n \n\n## [P](#p)\n
     \n### %\nUse % instead of ‘percent’ or ‘per cent’, it’s easier to read and understand.\n
