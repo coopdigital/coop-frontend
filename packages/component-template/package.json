@@ -1,0 +1,44 @@
+{
+  "name": "@coopdigital/component-template",
+  "version": "1.0.7",
+  "description": "Co-op Component/CSS Module Template",
+  "main": "src/component.html",
+  "style": "src/component.css",
+  "author": "Matt Tyas (matt.tyas@coop.co.uk)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
+    "build": "node_modules/.bin/postcss src/*.css --dir dist/ --ext css",
+    "dist": "npm run build && npm run lint",
+    "init": "rm -rf ./.git && git init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/component-template.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.7",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.0.0",
+    "precss": "^3.1.2",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.7.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-prettier": "^1.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/component-template/issues"
+  },
+  "homepage": "https://github.com/coopdigital/component-template#readme",
+  "keywords": [
+    "templates"
+  ],
+  "gitHead": "f4ba3d0d4f2f4e5c7f25c6ad7e6c921c72c8d077"
+}

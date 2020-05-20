@@ -1,0 +1,2 @@
+# Component card
+Image component 

@@ -7,7 +7,6 @@
   height: 114px;
   width: 118px;
   z-index: 10;
-  -webkit-transform: scale(0.66);
   transform: scale(0.66);
 }
 .coop-c-squircle__media {
@@ -88,7 +87,6 @@
   padding: 0.875rem 0 0;
   top: -38px;
   right: -32px;
-  -webkit-transform: scale(0.7);
   transform: scale(0.7);
 }
 .coop-c-squircle--super_saver_squircle {

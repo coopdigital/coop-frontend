@@ -6,20 +6,15 @@
   padding-right: 1rem;
 }
 .coop-l-grid {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
   flex-wrap: nowrap;
-  -webkit-box-pack: justify;
   justify-content: space-between;
   margin-top: -2rem;
   margin-left: -1rem;
   margin-right: -1rem;
 }
 .coop-l-grid-item {
-  -webkit-box-flex: 1;
   flex: 1 0 auto;
   max-width: 100%;
   padding-left: 1rem;
@@ -27,13 +22,10 @@
   padding-top: 2rem;
 }
 .coop-l-grid--fluid .coop-l-grid-item {
-  -webkit-box-flex: 1;
   flex: 1;
 }
 @media (min-width: 480px) {
   .coop-l-grid {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -55,7 +47,6 @@
   }
 }
 .coop-u-flex {
-  display: -webkit-box;
   display: flex;
 }
 .coop-u-flex-wrap {
@@ -65,40 +56,27 @@
   flex-wrap: nowrap;
 }
 .coop-u-flex-row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   flex-direction: row;
 }
 .coop-u-flex-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
 }
 .coop-u-flex-row-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
   flex-direction: row-reverse;
 }
 .coop-u-flex-column-reverse {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
   flex-direction: column-reverse;
 }
 .coop-u-flex-start {
-  -webkit-box-pack: start;
   justify-content: flex-start;
 }
 .coop-u-flex-center {
-  -webkit-box-pack: center;
   justify-content: center;
 }
 .coop-u-flex-end {
-  -webkit-box-pack: end;
   justify-content: flex-end;
 }
 .coop-u-flex-centered {
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
 }

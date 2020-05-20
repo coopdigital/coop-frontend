@@ -88,6 +88,12 @@
   --color-orange-mid: #f8642c;
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
+  --color-blue-notification: #326bb7;
+  --color-blue-notification-light: #d4eaf5;
+  --color-orange-alert: #ff9d34;
+  --color-orange-alert-light: #ffebe3;
+  --color-red-error: #d63118;
+  --color-red-error-light: #fef3f4;
 }
 .coop-c-signpost {
   flex-grow: 1;
@@ -264,16 +270,13 @@
   display: block;
   flex-basis: 0.75rem;
   max-width: 0.75rem;
-  transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   width: 0.75rem;
   height: 1.375rem;
   overflow: hidden;
 }
 .coop-c-signpost a:focus .coop-c-signpost__icon,
 .coop-c-signpost a:hover .coop-c-signpost__icon {
-  -webkit-transform: translateX(0.25rem);
   transform: translateX(0.25rem);
 }
 .coop-c-signpost__icon__svg {
