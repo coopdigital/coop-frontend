@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-global",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "author": "@coopdigital",
   "description": "CSS Foundations: Global",
   "main": "dist/global.css",
@@ -22,7 +22,7 @@
     "directory": "packages/foundations-global"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.1.2",
+    "@coopdigital/foundations-vars": "^2.2.0",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
