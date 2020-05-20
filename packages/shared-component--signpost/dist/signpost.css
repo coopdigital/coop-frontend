@@ -96,24 +96,27 @@
   --color-red-error-light: #fef3f4;
 }
 .coop-c-signpost {
-  flex-grow: 1;
-  display: flex;
   background-color: #fff;
   background-color: var(--color-white);
-  width: 100%;
   margin-bottom: 4rem;
   margin-bottom: var(--spacing-64);
 }
+.coop-c-signpost,
 .coop-c-signpost__link {
   flex-grow: 1;
   display: flex;
+  width: 100%;
+  border-radius: 8px;
+}
+.coop-c-signpost__link {
   flex-direction: row;
   border-bottom: none;
-  width: 100%;
-  box-shadow: 0 0.3125rem 0 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.2s ease-in;
   color: #282828;
   color: var(--color-text);
+  text-decoration: none;
+  overflow: hidden;
 }
 @media (min-width: 46.875em) {
   .coop-c-signpost__link {
@@ -127,7 +130,7 @@
 }
 .coop-c-signpost__link:focus,
 .coop-c-signpost__link:hover {
-  box-shadow: 0 0.3125rem 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .coop-c-signpost__deal {
   color: #fff;
@@ -244,15 +247,13 @@
 }
 @media (min-width: 46.875em) {
   .coop-c-signpost__title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
     padding-right: 1rem;
   }
 }
 @media (min-width: 60em) {
   .coop-c-signpost__title {
-    font-size: 1.375rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 a:focus .coop-c-signpost__title,
