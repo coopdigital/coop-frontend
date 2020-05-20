@@ -254,8 +254,8 @@ textarea:focus,
   border-color: #000000;
   border-color: var(--color-black);
   outline-offset: 3px;
-  outline: 2px dotted #eb5f1e;
-  outline: 2px dotted var(--color-link--focus);
+  outline: 2px solid #eb5f1e;
+  outline: 2px solid var(--color-link--focus);
   transition: none;
 }
 
@@ -318,8 +318,8 @@ select:focus,
   border-color: #000000;
   border-color: var(--color-black);
   outline-offset: 3px;
-  outline: 2px dotted #eb5f1e;
-  outline: 2px dotted var(--color-link--focus);
+  outline: 2px solid #eb5f1e;
+  outline: 2px solid var(--color-link--focus);
   transition: none;
 }
 
@@ -447,7 +447,7 @@ input[type="radio"],
   background: #ffffff;
   border-color: #000000;
   outline-offset: 3px;
-  outline: 2px dotted #eec300;
+  outline: 2px solid #eec300;
   transition: none;
 }
 
