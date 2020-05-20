@@ -27,6 +27,8 @@
 @import 'component-notification/src/notification.css'; 
 @import 'component-notification--alert/src/notification--alert.css'; 
 
+@import 'shared-component--statement/dist/statement.css';  
+
 /* Design system */
 @import "design-system/skipnav.css";
 @import "design-system/header.css";
