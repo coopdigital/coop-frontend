@@ -115,7 +115,7 @@
     flex-direction: row;
     text-decoration: none;
     width: 100%;
-    box-shadow: 0 10px 50px 0 rgba(#000000, 0.15);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     border: 0;
     transition: box-shadow .2s ease-in;
@@ -137,7 +137,7 @@
 
 .ds-c-signpost__link:hover,
 .ds-c-signpost__link:focus {
-    box-shadow: 0 10px 50px 0 rgba(#000000, 0.25);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .ds-c-signpost__status {
