@@ -4,7 +4,7 @@
 
 /* Foundations */
 @import "normalize.css/normalize.css";
-@import "foundations-vars/src/vars.pcss";
+@import "foundations-vars/src/vars.pcss";  
 @import "foundations-global/src/global.pcss";
 @import "foundations-typography/src/typography.pcss";
 @import "foundations-grid/src/grid.pcss";
