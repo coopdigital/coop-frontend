@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--statement",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Co-op Shared Component: Statement",
   "main": "dist/statement.css",
   "style": "src/statement.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/shared-component--statement.git"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.2.0",
+    "@coopdigital/foundations-vars": "^2.2.1",
     "autoprefixer": "^9.3.1",
     "cssnano": "^4.1.7",
     "postcss": "^7.0.5",
