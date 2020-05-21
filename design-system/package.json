@@ -22,7 +22,7 @@
     "@coopdigital/component-squircles": "^1.0.8",
     "@coopdigital/component-notification": "^1.0.2",
     "@coopdigital/component-notification--alert": "^1.0.2",
-    "@coopdigital/shared-component--editorialcard": "^0.0.6",
+    "@coopdigital/shared-component--editorialcard": "^0.0.7",
     "@coopdigital/shared-component--featurecard": "^0.0.9",
     "@coopdigital/shared-component--hero": "^0.0.7",
     "@coopdigital/shared-component--linklist": "^0.0.9",
