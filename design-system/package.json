@@ -14,7 +14,7 @@
   "homepage": "https://github.com/coopdigital/design-manual#readme",
   "dependencies": {
     "@coopdigital/component-card": "^2.0.7",
-    "@coopdigital/component-card--product": "^1.1.7",
+    "@coopdigital/component-card--product": "^1.2.0",
     "@coopdigital/component-search": "^1.0.13",
     "@coopdigital/component-signpost": "^2.0.9",
     "@coopdigital/component-skipnav": "^1.0.11",
