@@ -29,6 +29,7 @@
 
 @import 'shared-component--editorialCard/dist/editorialCard.css';
 @import 'shared-component--signpost/dist/signpost.css'; 
+@import 'shared-component--statement/dist/statement.css'; 
 
 
 /* Design system */
