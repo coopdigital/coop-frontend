@@ -21,7 +21,7 @@
 @import "component-card/src/card.pcss";
 @import "component-card--product/src/card--product.pcss";
 @import "component-skipnav/src/skipnav.pcss";
-/* @import "component-signpost/src/signpost.pcss"; */
+
 @import 'component-tags/src/tags.pcss';
 @import 'component-squircles/src/squircles.pcss'; 
 @import 'component-notification/src/notification.css'; 
@@ -29,7 +29,6 @@
 
 @import 'shared-component--editorialCard/dist/editorialCard.css';
 @import 'shared-component--signpost/dist/signpost.css'; 
-
 
 /* Design system */
 @import "design-system/skipnav.css";
