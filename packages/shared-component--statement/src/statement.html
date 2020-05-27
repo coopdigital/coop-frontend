@@ -11,44 +11,44 @@
 {% set quoteFill = 'black' %}
 {% endif %}
 
-<div class="coop-c-statement-block" {{backgroundColour}}>
-  {% if content.quote and content.quote == True %}
-  <?xml version="1.0" encoding="UTF-8"?>
-  <svg class="coop-c-statement-block__quote coop-c-statement-block__quote--{{quoteFill}}" version="1.1"
-    viewBox="0 0 40 32" xmlns="http://www.w3.org/2000/svg">
-    <g fill="#fff" fill-opacity=".75" fill-rule="evenodd">
-      <g transform="translate(-352 -326)" fill="#fff">
-        <g transform="translate(-102 217)">
-          <g transform="translate(454.08 109)">
-            <path
-              d="m39.423 32h-15.69v-16.035c0-9.419 5.2325-14.739 15.69-15.965v8.0176c-5.0562 0.1757-7.6837 2.8258-7.8794 7.9472h7.8794v16.035zm-23.569 0h-15.69v-16.035c0-9.419 5.2329-14.739 15.69-15.965v8.0176c-5.0562 0.1757-7.6842 2.8258-7.8794 7.9472h7.8794v16.035z" />
-          </g>
+<div class="coop-c-statement-block {{backgroundColour}}"></div>
+{% if content.quote and content.quote == True %}
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="coop-c-statement-block__quote coop-c-statement-block__quote--{{quoteFill}}" version="1.1"
+  viewBox="0 0 40 32" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#fff" fill-opacity=".75" fill-rule="evenodd">
+    <g transform="translate(-352 -326)" fill="#fff">
+      <g transform="translate(-102 217)">
+        <g transform="translate(454.08 109)">
+          <path
+            d="m39.423 32h-15.69v-16.035c0-9.419 5.2325-14.739 15.69-15.965v8.0176c-5.0562 0.1757-7.6837 2.8258-7.8794 7.9472h7.8794v16.035zm-23.569 0h-15.69v-16.035c0-9.419 5.2329-14.739 15.69-15.965v8.0176c-5.0562 0.1757-7.6842 2.8258-7.8794 7.9472h7.8794v16.035z" />
         </g>
       </g>
     </g>
-  </svg>
-  {% endif %}
-  <div class="coop-c-statement__inner">
-    <div class="coop-c-statement-block__statement">
-      {{ content.statement | markdown | safe }}
-    </div>
-    {% if content.link and content.link.sys.id %}
-    {% with link = cms.get_entry(content.link.sys.id) %}
-    {% if link.type == 'internalLink' %}
-    {% if link.fields.page.data %}
-    {% with internalLink = cms.get_entry(link.fields.page.data.sys.id) %}
-    <a href="/{{ internalLink.full_url_path }}"
-      class="coop-c-statement-block__link coop-l-all-12">{{ link.fields.title.data }}</a>
-    {% endwith %}
-    {% endif %}
-    {% elif link.type == 'externalLink' %}
-    {% if link.fields.url.data %}
-    <a href="{{ link.fields.url.data }}"
-      class="coop-c-statement-block__link coop-l-all-12">{{ link.fields.title.data }}</a>
-    {% endif %}
-    {% endif %}
-    {% endwith %}
-    {% endif %}
+  </g>
+</svg>
+{% endif %}
+<div class="coop-c-statement__inner">
+  <div class="coop-c-statement-block__statement">
+    {{ content.statement | markdown | safe }}
   </div>
+  {% if content.link and content.link.sys.id %}
+  {% with link = cms.get_entry(content.link.sys.id) %}
+  {% if link.type == 'internalLink' %}
+  {% if link.fields.page.data %}
+  {% with internalLink = cms.get_entry(link.fields.page.data.sys.id) %}
+  <a href="/{{ internalLink.full_url_path }}"
+    class="coop-c-statement-block__link coop-l-all-12">{{ link.fields.title.data }}</a>
+  {% endwith %}
+  {% endif %}
+  {% elif link.type == 'externalLink' %}
+  {% if link.fields.url.data %}
+  <a href="{{ link.fields.url.data }}"
+    class="coop-c-statement-block__link coop-l-all-12">{{ link.fields.title.data }}</a>
+  {% endif %}
+  {% endif %}
+  {% endwith %}
+  {% endif %}
+</div>
 </div>
 {% endmacro %}
