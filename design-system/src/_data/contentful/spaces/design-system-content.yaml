@@ -614,9 +614,9 @@ designPattern:
 - sys:
     id: 2g6EqBgo8kCi8IYwkgy8Gk
     created_at: !ruby/object:DateTime 2018-11-20 11:49:01.719000000 Z
-    updated_at: !ruby/object:DateTime 2019-01-14 12:02:25.314000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-27 12:21:52.705000000 Z
     content_type_id: designPattern
-    revision: 13
+    revision: 14
   title: Product card
   status: beta
   abstract_url: https://share.goabstract.com/61dadd77-ab64-4ac8-806d-e072ccf960d7
@@ -646,8 +646,9 @@ designPattern:
     \"see our general guide on accessibility.\")"
   variations: |2
 
-    - [Card](https://coop-design-system.herokuapp.com/pattern-library/components/cards/editorial-card.html)
+    - [Editorial card](https://coop-design-system.herokuapp.com/pattern-library/components/cards/editorial-card.html)
     - [Tags](https://coop-design-system.herokuapp.com/pattern-library/components/navigation/tags.html)
+    - [Country flags](https://coop-design-system.herokuapp.com/pattern-library/components/navigation/tags-flags.html)
 - sys:
     id: 6IIXRPgCWWmy6iIKK4Mqyq
     created_at: !ruby/object:DateTime 2018-11-21 08:36:05.869000000 Z
@@ -840,6 +841,24 @@ designPattern:
     Heading (legend), hint text, form fields and labels should match the foundational design system styles on forms. For all states - such as hover and focus.
 
     The individual form fields should be sized to match the expected input.
+- sys:
+    id: 4VGUJPw0PARRSsVo5DDxhY
+    created_at: !ruby/object:DateTime 2020-05-27 16:45:14.367000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-27 17:11:55.962000000 Z
+    content_type_id: designPattern
+    revision: 2
+  title: Feature card
+  status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--featureCard
+  npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--featurecard
+  introduction: Feature cards are like [Editorial cards](https://coop-design-system.herokuapp.com/pattern-library/components/cards/editorial-card.html)
+    but are combined with a [squircle](https://coop-design-system.herokuapp.com/pattern-library/components/supporting-information/squircles.html)
+    to highlight a deal.
+  design_and_content_documentation: |-
+    A feature card can use any of the [squircle](https://coop-design-system.herokuapp.com/pattern-library/components/supporting-information/squircles.html) types.
+
+    You can see feature cards in use on [coop.co.uk](https://coop.co.uk).
+  variations: "[Editorial cards](https://coop-design-system.herokuapp.com/pattern-library/components/cards/editorial-card.html)"
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
