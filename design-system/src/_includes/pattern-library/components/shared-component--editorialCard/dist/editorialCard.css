@@ -111,10 +111,10 @@
   display: block;
   overflow: hidden;
   height: 100%;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: var(--ui-shadow);
   border-radius: 8px;
   border-radius: var(--ui-border-radius);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: var(--ui-shadow);
   transition: box-shadow 0.2s ease-in;
   flex: 1;
 }

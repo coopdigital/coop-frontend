@@ -2686,9 +2686,9 @@ page:
 - sys:
     id: 6ylf54HomNWckGFG2WP9ju
     created_at: !ruby/object:DateTime 2019-06-24 10:37:46.725000000 Z
-    updated_at: !ruby/object:DateTime 2019-10-18 14:19:37.427000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-27 06:22:23.404000000 Z
     content_type_id: page
-    revision: 7
+    revision: 8
   title: Getting started
   introduction: Use our guides to get set up with our design files, prototyping kit
     and front-end code
@@ -2717,31 +2717,19 @@ page:
       revision: 1
     url_text: Front-end
     section_id: front-end
-  content: "## [Design](#design)\nAll the design <a href=\"https://coop-design-system.herokuapp.com/pattern-library/\">foundations
-    and components</a> are available as <a href=\"https://www.sketch.com/\">Sketch</a>
-    symbols you can use in your service. \n\n<p>We use <a href=\"https://www.abstract.com/\">Abstract</a>
-    to distribute and collaborate on our design files.</p> You should get set up with
-    this when you start.\n\n<p>For access email <a href=\"mailto:design@coopdigital.co.uk\">design@coopdigital.co.uk</a>.</p>\n\n\n##
-    [Prototyping](#prototyping)\nOur prototyping kit comes with 2 main options. A
-    <a href=\"https://parceljs.org/\">parcel.js</a> installation with zero configuration
-    and all the <a href=\"https://coop-design-system.herokuapp.com/pattern-library/\">foundations
-    and components</a> as code snippets to allow you to build a prototype, publish
-    it to the internet and learn quickly.\n\nWe also offer a webpack version for more
-    advanced users that can be customised more easily for your needs.\n\nWe have created
-    a series of video guides (for Parcel.js) to get you up and running quickly.\n\n###
-    1. Installing the prototyping kit\n<style>.embed-container { position: relative;
-    padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom:
-    32px; } .embed-container iframe, .embed-container object, .embed-container embed
-    { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div
-    class='embed-container'><iframe src='https://www.youtube.com/embed/kRl0Nx66bcw'
-    frameborder='0' allowfullscreen></iframe></div>\n\n### 2. Creating a basic page\nComing
-    soon.\n\n### 3. Publishing to the internet and password protecting\nComing soon.\n\n###
-    Gulp prototyping kit\nIf you don't want to download Docker, we still support our
-    older Gulp prototyping kit based on the <a href=\"https://jekyllrb.com/\">static
-    site generator Jekyll</a>.\n\n<a href=\"https://github.com/coopdigital/coop-prototyping-kit\">Download
-    the Gulp prototyping kit</a>.\n\n## [Front-end](#front-end)\nFor a deeper dive
-    into the code resources we offer visit the <a href=\"https://coop-design-system.herokuapp.com/code.html\">code
-    resources page</a>.\n"
+  content: |
+    ## [Design](#design)
+    All the design <a href="https://coop-design-system.herokuapp.com/pattern-library/">foundations</a> are available as a <a href="https://www.figma.com/">Figma</a> library you can use in your service. YOu should get set up with this when you start with Co-op.
+
+    <p>For access email <a href="mailto:design@coopdigital.co.uk">design@coopdigital.co.uk</a>.</p>
+
+    ## [Prototyping](#prototyping)
+    Our prototyping kit is based on the <a href="https://jekyllrb.com/">static site generator Jekyll</a>.
+
+    <a href="https://github.com/coopdigital/coop-prototyping-kit">Download the Gulp prototyping kit</a>.
+
+    ## [Front-end](#front-end)
+    For a deeper dive into the code resources we offer visit the <a href="https://coop-design-system.herokuapp.com/code.html">code resources page</a>.
 - sys:
     id: 3RaY0OnMiFLoXWSONJ8GzM
     created_at: !ruby/object:DateTime 2020-02-12 14:28:43.773000000 Z
