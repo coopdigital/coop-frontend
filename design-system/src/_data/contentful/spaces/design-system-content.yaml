@@ -2011,9 +2011,9 @@ page:
 - sys:
     id: 3JcC1cQTjEdq6Pvo3dJGAc
     created_at: !ruby/object:DateTime 2019-05-10 09:21:00.051000000 Z
-    updated_at: !ruby/object:DateTime 2019-12-20 13:33:12.064000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-27 06:30:44.451000000 Z
     content_type_id: page
-    revision: 11
+    revision: 12
   title: Front-end resources
   introduction: |-
     Our front-end foundations and components are a collection of CSS and HTML files that Co-op's Digital services use.
@@ -2036,14 +2036,6 @@ page:
       revision: 2
     url_text: Front-end components
     section_id: front-end-components
-  - sys:
-      id: 3f9A0UcG6Y8XhiIylByYLX
-      created_at: !ruby/object:DateTime 2019-05-10 09:42:17.948000000 Z
-      updated_at: !ruby/object:DateTime 2019-05-10 09:42:17.948000000 Z
-      content_type_id: inPageNavigationLink
-      revision: 1
-    url_text: Webpack build pipeline
-    section_id: webpack-build-pipeline
   - sys:
       id: 7hC8BnSI6LE7FsABJw4usc
       created_at: !ruby/object:DateTime 2019-05-10 09:27:24.544000000 Z
@@ -2068,28 +2060,40 @@ page:
       revision: 2
     url_text: Pattern library
     section_id: pattern-library
-  content: "## [Co-op front-end](#foundations)\nThe front-end are the base styles
-    (for things like layout and typography) that all Co-op services use.\n\nYou can
-    install individual foundations packages or the foundations CSS that brings them
-    all together - depending on your needs.\n\nThen you can pick and choose whcih
-    components you need on top of the base styles.\n\nSee the:\n\n<ul>\n  <li><a href=\"https://github.com/coopdigital/coop-frontend\">Co-op
-    front-end - a mono repo coantaing all the front-end foundations and components</a></li>\n
-    \ <li><a href=\"https://www.npmjs.com/settings/coopdigital/packages\">Indivdual
-    foundations packages on NPM</a></li>\n  <li><a href=\"https://coop-design-system.herokuapp.com/pattern-library/\">Examples
-    of the foundations in the pattern library</a></li>\n</ul>\n\n## [Webpack build
-    pipeline](#webpack)\nComing soon. A default webpack set-up for your service. \n\n<p>If
-    you need more information on setting this up now email <a href=\"mailto:design@coopdigital.co.uk\">design@coopdigital.co.uk</a></p>\n\n##
-    [Prototyping kit](#prototyping)\nThe prototyping kit brings together all the foundations
-    and components in one package that allows you to build early versions of services
-    and publish them to the internet quickly.\n\nGet the:\n\n<ul>\n  <li><a href=\"/getting-started.html\">See
-    the getting started guide</a></li>\n  <li><a href=\"https://github.com/coopdigital/prototyping-kit\">Download
-    the prototyping kit</a></li>\n  <li><a href=\"https://github.com/coopdigital/coop-prototyping-kit\">Download
-    the Gulp prototyping kit</a></li>\n</ul>\n\n## [Email templates](#email)\nA basic
-    Co-op branded responsive email template for service messages.\n<p><a href=\"https://github.com/coopdigital/email-templates\">See
-    the email templates</a></p>\n\n## [Pattern library](#patternlibrary)\nA collection
-    of our design patterns as code snippets with guidance. Use in conjunction with
-    the front-end toolkit and/or prototyping kit.\n<p><a href=\"/pattern-library/\">Visit
-    the pattern libary</a></p>\n"
+  content: |
+    ## [Co-op front-end](#foundations)
+    The front-end are the base styles (for things like layout and typography) that all Co-op services use.
+
+    You can install individual foundations packages or the foundations CSS that brings them all together - depending on your needs.
+
+    Then you can pick and choose whcih components you need on top of the base styles.
+
+    See the:
+
+    <ul>
+      <li><a href="https://github.com/coopdigital/coop-frontend">Co-op front-end - a mono repo coantaing all the front-end foundations and components</a></li>
+      <li><a href="https://www.npmjs.com/settings/coopdigital/packages">Indivdual foundations packages on NPM</a></li>
+      <li><a href="https://coop-design-system.herokuapp.com/pattern-library/">Examples of the foundations in the pattern library</a></li>
+    </ul>
+
+    ## [Prototyping kit](#prototyping)
+    The prototyping kit brings together all the foundations and components in one package that allows you to build early versions of services and publish them to the internet quickly.
+
+    Get the:
+
+    <ul>
+      <li><a href="/getting-started.html">See the getting started guide</a></li>
+      <li><a href="https://github.com/coopdigital/prototyping-kit">Download the prototyping kit</a></li>
+      <li><a href="https://github.com/coopdigital/coop-prototyping-kit">Download the Gulp prototyping kit</a></li>
+    </ul>
+
+    ## [Email templates](#email)
+    A basic Co-op branded responsive email template for service messages.
+    <p><a href="https://github.com/coopdigital/email-templates">See the email templates</a></p>
+
+    ## [Pattern library](#patternlibrary)
+    A collection of our design patterns as code snippets with guidance. Use in conjunction with the front-end toolkit and/or prototyping kit.
+    <p><a href="/pattern-library/">Visit the pattern libary</a></p>
 - sys:
     id: r2Zw1EZmLRt9NCpAHYwlH
     created_at: !ruby/object:DateTime 2019-05-10 09:50:57.732000000 Z
@@ -3543,9 +3547,9 @@ landingPage:
 - sys:
     id: 4vQeNl83y8WyeGAcU60wOU
     created_at: !ruby/object:DateTime 2018-12-05 12:51:56.179000000 Z
-    updated_at: !ruby/object:DateTime 2020-03-23 10:59:23.085000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-27 06:31:36.740000000 Z
     content_type_id: landingPage
-    revision: 10
+    revision: 11
   title: Brand assets
   introduction: We [design in the open](https://coop-design-system.herokuapp.com/principles.html#we-design-in-the-open),
     so our design assets — the logos, sketching sheets and guidelines — that you might
@@ -3559,7 +3563,7 @@ landingPage:
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/logo/logo.ai">logo AI (76kb)</a></li>
                         <li><a href="https://github.com/coopdigital/coop-design-assets/raw/master/logo/logo-white.ai">logo white AI (40kb)</a></li>
                     </ul>
-                  <p>We use <a href="https://www.abstract.com/">Abstract</a> to distribute and collaborate on our design files. For access email <a href="mailto:design@coopdigital.co.uk">design@coopdigital.co.uk</a>.</p>
+                  <p>We use <a href="https://www.figma.com/">Figma</a> to distribute and collaborate on our design files. For access email <a href="mailto:design@coopdigital.co.uk">design@coopdigital.co.uk</a>.</p>
                 </div>
                 <div class="coop-l-column coop-l-small-12 coop-l-large-6">
                     <h2>Principles and guidelines</h2>
