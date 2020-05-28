@@ -4,16 +4,17 @@
 
 
 .coop-c-card--product {
-  padding-bottom: 0;
-  box-shadow: 0 5px 0 0 rgba(0,0,0,0.05);
-  transition: box-shadow 200ms ease-in;
   margin-bottom: var(--spacing-32);
+  padding-bottom: 0;
+  border-radius: var(--ui-border-radius);
+  box-shadow: var(--ui-shadow);
+  transition: box-shadow 200ms ease-in;
 }
 
 .coop-c-card--product:hover {
-  box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
+  box-shadow: var(--ui-shadow--hover);
 }
-  
+
 .coop-c-card--product:hover .coop-c-card__content {
   box-shadow: none;
 }

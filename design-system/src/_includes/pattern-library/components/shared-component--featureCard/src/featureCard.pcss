@@ -9,14 +9,14 @@
   margin-bottom: var(--spacing-64);
 
   &__link {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
     color: black;
-    border: 1px solid transparent;
-    border-bottom: none;
-    box-shadow: 0 5px 0 0 rgba(0, 0 ,0 , 0.05);
-    transition: box-shadow .2s ease-in, border-color .2s ease-in;
+    border-radius: var(--ui-border-radius);
+    box-shadow: var(--ui-shadow);
+    transition: box-shadow .2s ease-in;
     text-decoration: none;
   }
 
@@ -28,8 +28,7 @@
     }
 
     .coop-c-featureCard__link {
-      border: 1px solid transparent;
-      box-shadow: 0 5px 0 0 rgba(0, 0 ,0 , .15);
+      box-shadow: var(--ui-shadow--hover);
       color: transparent;
     }
   }
@@ -150,7 +149,7 @@
       max-width: 100px; 
       color: var(--color-white);
       font-weight: 600;
-      font-size: var(--type-base--h-mega);
+      font-size: 2.25rem;
       display: block;
       text-align: center;
       line-height: 1.4;
@@ -216,11 +215,7 @@
 /* horizontal modifier styles */
   &--horizontal &__link {
     @media (--mq-small) {
-      border: 1px solid rgba(0, 0 ,0 , 0.05);
       flex-direction: row-reverse;
-      &:hover {
-        border: 1px solid rgba(0, 0 ,0 , 0.15);
-      }
     }
   }
 
