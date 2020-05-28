@@ -1,14 +1,14 @@
 ---
 layout: default
 body-page-class: dm-dark
-title: Feature card
+title: Membership banner
 id: pattern-library
 ---
 <article>
     <div class="coop-l-wrap">
     {% include breadcrumbs.html %}
     {% for designPattern in site.data.contentful.spaces.design-system-content.designPattern %}
-        {% if designPattern.sys.id == '4VGUJPw0PARRSsVo5DDxhY' %}
+        {% if designPattern.sys.id == 'QNzkA1aMxOl9Wz7XXQHKM' %}
         <header>
             <div class="coop-l-row">
                 <div class="coop-l-column coop-l-medium-7 coop-l-small-12 intro-box">
@@ -46,21 +46,21 @@ id: pattern-library
                                 <h3 class="tabs-container__title" id="TabPanelTitle-Tab1">Example</h3>
                                 <div class="tabs-container__panel" id="Tab1">
                                     <div class="coop-l-row">
-                                        <div class="coop-l-column coop-l-large-4 coop-l-medium-6 coop-l-small-12">
-                                            {% include pattern-library/components/shared-component--featureCard/dist/featureCard.html %}
-                                        </div>
+                                        <div class="coop-l-column coop-l-large-12 coop-l-medium-12 coop-l-small-12">
+                                            {% include pattern-library/components/shared-component--membership/dist/membership.html %}
+                                        </div> 
                                     </div>
                                     <div class="coop-l-row">
-                                        <div class="coop-l-column coop-l-large-8 coop-l-medium-8 coop-l-small-12">
-                                            {% include pattern-library/components/shared-component--featureCard/dist/featureCard--horizontal.html %}
+                                        <div class="coop-l-column coop-l-large-12 coop-l-medium-12 coop-l-small-12 coop-u-margin-t-64">
+                                            {% include pattern-library/components/shared-component--membership/dist/membership-signedin.html %}
                                         </div>
                                     </div> 
                                 </div>
                                 <h3 class="tabs-container__title" id="TabPanelTitle-Tab2">HTML</h3>
                                 <div class="tabs-container__panel" id="Tab2">
                                     {% highlight html %}
-                                    {% include pattern-library/components/shared-component--featureCard/dist/featureCard.html %}
-                                    {% include pattern-library/components/shared-component--featureCard/dist/featureCard--horizontal.html %}
+                                    {% include pattern-library/components/shared-component--membership/dist/membership.html %}
+                                    {% include pattern-library/components/shared-component--membership/dist/membership-signedin.html %}
                                     {% endhighlight %}
                                 </div>
                             </div>

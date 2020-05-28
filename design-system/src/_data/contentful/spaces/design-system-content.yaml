@@ -859,6 +859,18 @@ designPattern:
 
     You can see feature cards in use on [coop.co.uk](https://coop.co.uk).
   variations: "[Editorial cards](https://coop-design-system.herokuapp.com/pattern-library/components/cards/editorial-card.html)"
+- sys:
+    id: QNzkA1aMxOl9Wz7XXQHKM
+    created_at: !ruby/object:DateTime 2020-05-28 11:09:36.907000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-28 11:09:36.907000000 Z
+    content_type_id: designPattern
+    revision: 1
+  title: Membership banner
+  status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--membership
+  npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--membership
+  introduction: The Co-op membership banner is used as a call to action to attact
+    new members. It has a signed in version that displays commonly used links.
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
