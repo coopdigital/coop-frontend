@@ -15,7 +15,7 @@
 @import "foundations-layout/src/layout.pcss";
 @import "foundations-grid/dist/legacy-grid.css";
  
-           
+             
 /* Components */
 @import "component-search/src/component.pcss";
 @import "component-card/src/card.pcss";
@@ -31,6 +31,7 @@
 @import 'shared-component--featureCard/dist/featureCard.css';  
 @import 'shared-component--signpost/dist/signpost.css'; 
 @import 'shared-component--membership/dist/membership.css';
+@import 'shared-component--offers/dist/offers.css';
        
 /* Design system */ 
 @import "design-system/skipnav.css";

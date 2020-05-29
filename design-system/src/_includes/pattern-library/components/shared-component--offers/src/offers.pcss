@@ -113,7 +113,7 @@
     &__link {
       padding: calc(var(--spacing-base--1-4)*1.75) calc(var(--spacing-base--1-2)*1.5);
       color: var(--color-white);
-      background: var(--offers-button--1a-bg);
+      background: rgb(46, 99, 169);
       font-size: 1rem;
       font-family: var(--font-family);
       font-weight: 500;
@@ -133,14 +133,13 @@
       }
 
       &:hover,
-      &:focus {
-        background: var(--offers-button--1b-bg);
+      &:focus,
+      &:active {
+        background: rgb(44, 82, 137);
         color: var(--color-white);
       }
 
       &:active {
-        background: var(--offers-button--1b-bg);
-        color: var(--color-white);
         outline: 0;
       }
     }
