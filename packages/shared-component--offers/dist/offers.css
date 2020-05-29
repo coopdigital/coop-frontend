@@ -215,7 +215,7 @@
     calc(var(--spacing-base--1-2) * 1.5);
   color: #fff;
   color: var(--color-white);
-  background: var(--offers-button--1a-bg);
+  background: #2e63a9;
   font-size: 1rem;
   font-family: Avenir-Next, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-family: var(--font-family);
@@ -240,7 +240,7 @@
 .coop-c-offersmodule__cta__link:active,
 .coop-c-offersmodule__cta__link:focus,
 .coop-c-offersmodule__cta__link:hover {
-  background: var(--offers-button--1b-bg);
+  background: #2c5289;
   color: #fff;
   color: var(--color-white);
 }
