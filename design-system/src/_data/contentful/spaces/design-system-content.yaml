@@ -862,15 +862,29 @@ designPattern:
 - sys:
     id: QNzkA1aMxOl9Wz7XXQHKM
     created_at: !ruby/object:DateTime 2020-05-28 11:09:36.907000000 Z
-    updated_at: !ruby/object:DateTime 2020-05-28 11:09:36.907000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-28 12:41:15.272000000 Z
     content_type_id: designPattern
-    revision: 1
+    revision: 2
   title: Membership banner
   status: live
   github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--membership
   npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--membership
   introduction: The Co-op membership banner is used as a call to action to attact
     new members. It has a signed in version that displays commonly used links.
+  design_and_content_documentation: Coming soon.
+- sys:
+    id: 3KjWEXV8FxymxHbKdaov7l
+    created_at: !ruby/object:DateTime 2020-05-29 15:11:37.548000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-29 15:11:37.548000000 Z
+    content_type_id: designPattern
+    revision: 1
+  title: Offers banner
+  status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--offers
+  npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--offers
+  introduction: Coming soon.
+  design_and_content_documentation: Coming soon.
+  variations: "[Membership banner](https://coop-design-system.herokuapp.com/pattern-library/components/calls-to-action/membership.html)"
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
