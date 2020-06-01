@@ -875,15 +875,17 @@ designPattern:
 - sys:
     id: 3KjWEXV8FxymxHbKdaov7l
     created_at: !ruby/object:DateTime 2020-05-29 15:11:37.548000000 Z
-    updated_at: !ruby/object:DateTime 2020-05-29 15:11:37.548000000 Z
+    updated_at: !ruby/object:DateTime 2020-06-01 07:39:38.770000000 Z
     content_type_id: designPattern
-    revision: 1
+    revision: 2
   title: Offers banner
   status: live
   github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--offers
   npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--offers
-  introduction: Coming soon.
-  design_and_content_documentation: Coming soon.
+  introduction: The Co-op offers banner is used as a call to action to nudge people
+    to sign in and redeem their personalised offers.
+  design_and_content_documentation: The offers banner should only be used once per
+    page in areas where a user's intent to purchases food or drink products is hightest.
   variations: "[Membership banner](https://coop-design-system.herokuapp.com/pattern-library/components/calls-to-action/membership.html)"
 page:
 - sys:
