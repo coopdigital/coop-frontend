@@ -1,6 +1,5 @@
-/* Offers */
 
-@import "@coopdigital/foundations-vars"; 
+@import "@coopdigital/foundations-vars";
 
 .coop-offers-module-container {
   position: relative;
@@ -13,24 +12,15 @@
   top: 0;
   bottom: 0;
 
-  &__v1 {
-    display: none;
-
-    @media (--mq-medium) {
-      display: block;
-    }
-  }
-
-  &__v2 {
-    display: block;
-
-    @media (--mq-medium) {
-      display: none;
-    }
-  }
-
   svg {
-    transform: translate(-10%, -10%);
+    transform: translate(-3%, -8%);
+    
+    @media (--mq-small) {
+      transform: translate(-4%, -10%);
+    }
+    @media(--mq-large) {
+      transform: translate(-10%, -10%);
+    }
   }
 }
 
@@ -38,8 +28,8 @@
   padding: 1.5rem;
   background-color:#fff;
   margin-bottom: var(--spacing-base);
-  box-shadow: 0 2px 50px 0 rgba(0,0,0,0.17);
-  border-radius: 15px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.15);
+  border-radius: 1rem;
   position: relative;
   z-index: 2;
 
@@ -48,73 +38,46 @@
   }
 
   &__header {
-    grid-area: auto;
-    margin-bottom: var(--spacing-medium--1-2);
+    margin-bottom: 1rem;
 
     @media (--mq-medium) {
-      grid-area: header;
       margin-bottom: 0.5rem;
     }
   }
 
   &__title {
     padding-top: 0;
-    font-size: 1.25rem;
-    line-height: 1.9375rem;
+
+    @media (--mq-small) {
+      font-size: 1.625rem;
+      line-height: 2.25rem;
+    }
 
     @media (--mq-medium) {
       margin: 0;
-      font-size: 1.625rem;
-      line-height: 2.875rem;
-    }
-  }
-
-  &__offset-underline {
-    background-image: url(/assets/static/images/css/offset-underline.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    padding: 0 0 0.75rem;
-  }
-
-  &__lead {
-    grid-area: lead;
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-    margin-bottom: 0;
-    padding-right: 1rem;
-    display: none;
-
-    @media (--mq-medium) {
-      display: block;
-      margin-bottom: calc(var(--spacing-medium--1-2) * 1.25);
-    }
-    
-    @media (--mq-xlarge) {
-      font-size: var(--type-medium--body);
-      line-height: 2rem;
-    }
-  }
-
-  &__body {
-    grid-area: body;
-
-    @media (--mq-medium) {
-      padding-right: 1rem;
     }
   }
 
   &__cta {
-    margin-bottom: var(--spacing-medium--1-2);
+    margin: 0 0 1rem 0;
+
+    @media (--mq-medium) {
+      margin: 0 0 1rem 1rem;
+    }
 
     @media (--mq-medium) {
       display: flex;
     }
 
+    @media (--mq-xlarge) {
+      display: inline-block;
+    }
+
     &__link {
       padding: calc(var(--spacing-base--1-4)*1.75) calc(var(--spacing-base--1-2)*1.5);
       color: var(--color-white);
-      background: rgb(46, 99, 169);
-      font-size: 1rem;
+      background: var(--color-button-primary);
+      font-size: 1.125rem;
       font-family: var(--font-family);
       font-weight: 500;
       text-align: center;
@@ -123,33 +86,31 @@
       transition: all 0.15s linear;
       outline: none;
       text-decoration: none;
-      display: inline-block;
       line-height: normal;
+      margin: 0 auto;
+      display: block;
 
       @media (--mq-medium) {
-        font-size: 1.125rem;
         padding: var(--spacing-base--1-2) calc(var(--spacing-base--1-2)*1.5);
         line-height: 1.125rem;
       }
 
+      @media (--mq-small) {
+        margin: 0;
+        display: inline-block;
+      }
+
       &:hover,
-      &:focus,
-      &:active {
-        background: rgb(44, 82, 137);
+      &:focus {
+        background: var(--color-button-primary--hover);
         color: var(--color-white);
       }
 
       &:active {
+        background: var(--color-button-primary--active);
+        color: var(--color-white);
         outline: 0;
       }
-    }
-  }
-
-  &--full &__cta {
-
-    @media (--mq-xlarge) {
-      display: inline-block;
-      margin-right: 1rem;
     }
   }
 
@@ -158,6 +119,7 @@
     margin-bottom: 0;
     font-size: 1.125rem;
     line-height: 1.625rem;
+    text-align: center;
 
     /* required to overwrite foundation CSS */
     &:last-child {
@@ -165,73 +127,57 @@
     }
 
     @media (--mq-xlarge) {
-      font-size: var(--type-medium--body);
       line-height: 2rem;
     }
 
+    @media (--mq-medium) {
+      margin-left: 1rem;
+    }
+
+    @media (--mq-small) {
+      text-align: left;
+    }
+
     &__link {
-      color: var(--offers-button--1a-bg);
-      border-color: var(--offers-button--1a-bg);
+      font-weight: 500;
     }
   }
 
-  &--full &__sign-in {
+  &__media-container {
+    display: none;
 
-    @media (--mq-xlarge) {
-      margin: 0;
+    @media (--mq-large) {
+      display: inherit;
     }
   }
 
   &__media {
     margin: 0;
-    margin-bottom: calc(var(--spacing-medium--1-4)*1.25);
     padding: 0;
-    grid-column: none !important;
-    grid-row: 1 !important;
-    grid-area: header;
-
+    
     @media (--mq-medium) {
-      grid-area: media;
-      align-self: end;
-    }
-
-    img {
-      display: block;
-      width: 2.1875rem;
-      height: auto;
-    }
-  }
-
-  &--full &__media {
-
-    @media (--mq-medium) {
-      padding: 0;
-    }
-
-    @media (--mq-large) {
-      padding: 0 1rem;
-    }
-
-    @media (--mq-xlarge) {
-      padding: 0 0 0 2rem;
+      position: relative;
+      left: 20px;
     }
   }
 
   &__links {
     margin: 0;
     padding: 0;
-    grid-area: links;
     font-size: 1.125rem;
     line-height: 1.625rem;
+    padding: 0.27rem 0 0 2rem;
     display: none;
-    padding: 0 0 0 2rem;
 
     @media (--mq-medium) {
       display: block;
     }
 
+    @media (--mq-large) {
+      align-self: center;
+    }
+
     @media (--mq-xlarge) {
-      font-size: var(--type-medium--body);
       line-height: 2rem;
     }
 
@@ -241,112 +187,12 @@
     }
   }
 
-  &--full &__links {
-
-    @media (--mq-large) {
-      padding: 0 0 0 1rem;
-      align-self: center;
-    }
-
-    @media (--mq-xlarge) {
-      padding: 0 0 0 3.5rem;
+  &__actions, &__links {
+    @media (--mq-medium) {
+      display: flex;
+      align-self: flex-end;
+      flex-direction: column;
     }
   }
-
-/*
-CSS grid templating:
-Mix of @custom-media and grid means PostCSS autoprefixer requires these adding last for correct IE prefixing
-*/
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: auto auto auto auto auto;
-grid-template-areas: "header" "lead" "body" "links" "media";
-
-@media (--mq-large) {
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "header header header header header header header header header header header header"
-    "lead lead lead lead lead lead lead lead lead lead lead lead"
-    "body body body body body body body body body media media media";
 }
 
-&--links {
-
-  @media (--mq-large) {
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "header header header header header header header header header header header header"
-      "lead lead lead lead lead lead lead lead lead lead lead lead"
-      "body body body body body body body body body body body body"
-      "links links links links links links links links media media media media";
-  }
-
-  @media (--mq-xlarge) {
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "header header header header header header header header header header header header"
-      "lead lead lead lead lead lead lead lead lead lead lead lead"
-      "body body body body body body body body body media media media"
-      "links links links links links links links links media media media media";
-  }
-}
-
-&--full {
-
-  @media (--mq-medium) {
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-      "header header header header header header header header header media media media"
-      "lead lead lead lead lead lead lead lead lead media media media"
-      "body body body body body body body body body media media media"
-      "body body body body body body body body body media media media";
-  }
-
-  @media (--mq-large) {
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "header header header header header header media media media links links links"
-      "lead lead lead lead lead lead media media media links links links"
-      "body body body body body body body media media links links links";
-  }
-
-  @media (--mq-xlarge) {
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "header header header header header header media media links links links links"
-      "lead lead lead lead lead lead media media links links links links"
-      "body body body body body body body media links links links links";
-  }
-}
-
-&--full&--links {
-
-  @media (--mq-medium) {
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-      "header header header header header header header header header media media media"
-      "lead lead lead lead lead lead lead lead lead media media media"
-      "body body body body body body body body body media media media"
-      "links links links links links links links links links media media media";
-  }
-
-  @media (--mq-large) {
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "header header header header header header media media media links links links"
-      "lead lead lead lead lead lead media media media links links links"
-      "body body body body body body media media media links links links";
-  }
-
-  @media (--mq-xlarge) {
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "header header header header header header media media links links links links"
-      "lead lead lead lead lead lead media media links links links links"
-      "body body body body body body media media links links links links";
-  }
-}
-}
