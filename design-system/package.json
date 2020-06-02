@@ -24,7 +24,7 @@
     "@coopdigital/component-notification--alert": "^1.0.2",
     "@coopdigital/shared-component--editorialcard": "^0.0.8",
     "@coopdigital/shared-component--featurecard": "^0.1.0",
-    "@coopdigital/shared-component--hero": "^0.0.7",
+    "@coopdigital/shared-component--hero": "^0.0.8",
     "@coopdigital/shared-component--linklist": "^0.0.9",
     "@coopdigital/shared-component--membership": "^0.1.0",
     "@coopdigital/shared-component--offers": "^0.1.1",
