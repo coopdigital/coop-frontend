@@ -890,10 +890,10 @@ designPattern:
 - sys:
     id: 2NLBD0uZCLwwoL1se5R76r
     created_at: !ruby/object:DateTime 2020-06-02 15:42:29.273000000 Z
-    updated_at: !ruby/object:DateTime 2020-06-02 15:45:34.574000000 Z
+    updated_at: !ruby/object:DateTime 2020-06-02 15:42:29.273000000 Z
     content_type_id: designPattern
-    revision: 2
-  title: Hero banner
+    revision: 1
+  title: Hero
   status: live
   github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--hero
   npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--hero
