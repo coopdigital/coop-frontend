@@ -14,7 +14,7 @@
 @import "foundations-tables/src/tables.pcss"; 
 @import "foundations-layout/src/layout.pcss";
 @import "foundations-grid/dist/legacy-grid.css";
-            
+                
 /* Components */
 @import "component-search/src/component.pcss";
 @import "component-card/src/card.pcss";
