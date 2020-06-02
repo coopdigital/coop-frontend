@@ -27,7 +27,7 @@
     "@coopdigital/shared-component--hero": "^0.0.7",
     "@coopdigital/shared-component--linklist": "^0.0.9",
     "@coopdigital/shared-component--membership": "^0.1.0",
-    "@coopdigital/shared-component--offers": "^0.1.0",
+    "@coopdigital/shared-component--offers": "^0.1.1",
     "@coopdigital/shared-component--signpost": "^0.0.10",
     "@coopdigital/shared-component--statement": "^0.0.8",
     "@coopdigital/shared-component--video": "^0.0.7",
