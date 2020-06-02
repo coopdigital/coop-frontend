@@ -42,13 +42,16 @@
   --spacing-medium--1-4: calc(var(--spacing-medium) / 4);
   --spacing-medium--1-8: 0.5rem;
   --spacing-medium--1-8: calc(var(--spacing-medium) / 8);
+  --ui-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  --ui-shadow--hover: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+  --ui-border-radius: 8px;
   --color-brand: #00b1e7;
   --color-text: #282828;
   --color-white: #fff;
   --color-black: #000;
   --color-link: #00729a;
   --color-link--hover: #000102;
-  --color-link--focus: #eec300;
+  --color-link--focus: #eb5f1e;
   --color-link--active: #005981;
   --color-link--visited: #004c67;
   --color-button-primary: #0f8482;
@@ -88,6 +91,12 @@
   --color-orange-mid: #f8642c;
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
+  --color-blue-notification: #326bb7;
+  --color-blue-notification-light: #d4eaf5;
+  --color-orange-alert: #ff9d34;
+  --color-orange-alert-light: #ffebe3;
+  --color-red-error: #d63118;
+  --color-red-error-light: #fef3f4;
 }
 .coop-c-editorialcard {
   background-color: #fff;
@@ -102,13 +111,16 @@
   display: block;
   overflow: hidden;
   height: 100%;
+  border-radius: 8px;
   border-radius: var(--ui-border-radius);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
   box-shadow: var(--ui-shadow);
   transition: box-shadow 0.2s ease-in;
   flex: 1;
 }
 .coop-c-editorialcard__inner:focus,
 .coop-c-editorialcard__inner:hover {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
   box-shadow: var(--ui-shadow--hover);
 }
 @media (min-width: 60em) {
