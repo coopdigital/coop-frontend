@@ -890,15 +890,27 @@ designPattern:
 - sys:
     id: 2NLBD0uZCLwwoL1se5R76r
     created_at: !ruby/object:DateTime 2020-06-02 15:42:29.273000000 Z
-    updated_at: !ruby/object:DateTime 2020-06-02 15:42:29.273000000 Z
+    updated_at: !ruby/object:DateTime 2020-06-02 16:37:05.976000000 Z
     content_type_id: designPattern
-    revision: 1
-  title: Hero
+    revision: 4
+  title: Hero banner
   status: live
   github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--hero
   npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--hero
-  introduction: Coming soon.
-  design_and_content_documentation: Coming soon.
+  introduction: Use the hero banner as the first component on the page. It should
+    contain the page title and give an overview of what the page is about.
+  design_and_content_documentation: "The page title (H1) and lead paragraph are mandatory
+    parts of the hero banner. \n\nOptional elements are:\n- supporting image\n- squircle
+    background shape\n- link\n- button\n- 'content pull'\n\nThe supporting image must
+    relate to the content and help a user understand the content more quickly. It
+    must have an alt tag.\n\nThe squircle background can have a ranage of colours
+    applied to it. These are not currently shown - but will be added soon. \n\nIf
+    you want to change the colour of the squircle you can hard code the value taking
+    inspiration from [https://coop.co.uk](coop.co.uk) and always making sure the colour
+    contrast is at least WCAG 2.0 AA.\n\nThe content pull brings the content below
+    the hero up so it overlaps the bottom of the squirlce to bring the page elements
+    together and create depth. We recommend when using this technique the content
+    in the hero and the content on the row below are related."
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
