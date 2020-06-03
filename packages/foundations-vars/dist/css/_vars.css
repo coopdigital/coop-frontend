@@ -1,16 +1,16 @@
 /**
  * Do not edit directly
- * Generated on Wed, 03 Jun 2020 19:45:05 GMT
+ * Generated on Wed, 03 Jun 2020 20:04:42 GMT
  */
 
 :root {
-  --11: #00b1e7;
-  --10: #282828;
-  --11: #ffffff;
-  --11: #000000;
-  --15: #00729a;
-  --16: #000102;
-  --16: #eb5f1e;
-  --17: #005981;
-  --18: #005981;
+  --color-brand,n,--brand: #00b1e7;
+  --color-text,x,--text: #282828;
+  --color-white,t,--white: #ffffff;
+  --color-black,c,--black: #000000;
+  --color-link-link,n,--link: #00729a;
+  --color-link-hover,e,--hover: #000102;
+  --color-link-focus,u,--focus: #eb5f1e;
+  --color-link-active,v,--active: #005981;
+  --color-link-visited,e,--visited: #005981;
 }
