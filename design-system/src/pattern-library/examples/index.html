@@ -603,13 +603,21 @@ id: examples
     <h2>Forms</h2>
     <div class="coop-u-margin-b-32">
         <h3>Text input</h3>
-        <label for="full-name" class="">Full name</label>
-        <input type="text" name="full-name" id="full-name">
+        <div class="coop-l-row">
+            <div class="coop-l-column coop-l-large-6 coop-l-small-12">
+                <label for="full-name" class="">Full name</label>
+                <input type="text" name="full-name" id="full-name">
+            </div>
+        </div>
     </div>
     <div class="coop-u-margin-b-32">
         <h3>Text area</h3>
-        <label for="feedback">Tell us what you liked or what we can improve</label>	
-        <textarea id="feedback" cols="30" rows="4"></textarea>
+        <div class="coop-l-row">
+            <div class="coop-l-column coop-l-large-6 coop-l-small-12">
+                <label for="feedback">Tell us what you liked or what we can improve</label>	
+                <textarea id="feedback" cols="30" rows="4"></textarea>
+            </div>
+        </div>
     </div>
     <div class="coop-u-margin-b-32">
         <h3>Checkboxes and radios</h3>
@@ -649,6 +657,21 @@ id: examples
         </fieldset>
     </div>
     <div class="coop-u-margin-b-32">
+        <h3>Select</h3>
+        <p>We do not advise the use of select because research shows that some users find selects very difficult to use.</p>
+        <p>Watch a video about how some <a href="https://www.youtube.com/watch?v=CUkMCQR4TpY">users struggle with selects</a>.</p>
+        <div class="coop-l-row">
+            <div class="coop-l-column coop-l-large-6 coop-l-small-12">
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy">
+                    <option data-contenttype="Price Sort" data-contentparent="Sort" data-linktext="Relevancy" value="live_global_product_search">Relevancy</option>
+                    <option data-contenttype="Price Sort" data-contentparent="Sort" data-linktext="Price: Low to high" value="live_global_product_search_price_asc">Price: Low to high</option>
+                    <option data-contenttype="Price Sort" data-contentparent="Sort" data-linktext="Price: High to low" value="live_global_product_search_price_desc">Price: High to low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="coop-u-margin-b-32">
         <h3>Buttons</h3>
         <button class="coop-btn coop-btn--primary">Primary button</button>
         <button class="coop-btn">Button</button>
@@ -661,7 +684,11 @@ id: examples
 </div>
 <div class="coop-u-margin-b-64">
     <h2>Validation</h2>
-    {% include pattern-library/foundations/foundations-validation/validation.html %}
+    <div class="coop-l-row">
+        <div class="coop-l-column coop-l-large-6 coop-l-small-12">
+            {% include pattern-library/foundations/foundations-validation/validation.html %}
+        </div>
+    </div>
 </div>
 <div class="coop-u-margin-b-32">
     <h2>Tables</h2>

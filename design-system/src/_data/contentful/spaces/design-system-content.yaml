@@ -911,6 +911,22 @@ designPattern:
     the hero up so it overlaps the bottom of the squirlce to bring the page elements
     together and create depth. We recommend when using this technique the content
     in the hero and the content on the row below are related."
+- sys:
+    id: 6XM2UKAaHg1bc45PC9KIhV
+    created_at: !ruby/object:DateTime 2020-06-03 14:51:10.676000000 Z
+    updated_at: !ruby/object:DateTime 2020-06-03 14:51:10.676000000 Z
+    content_type_id: designPattern
+    revision: 1
+  title: Select dropdown
+  status: live
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/foundations-forms
+  npm_url: https://www.npmjs.com/package/@coopdigital/foundations-forms
+  introduction: The select component allows users to choose an option from a long
+    list.
+  design_and_content_documentation: We do not advise the use of select because research
+    shows that some users find selects very difficult to use. We follow the [same
+    guidelines as Gov.uk](https://design-system.service.gov.uk/components/select/).
+  accessibility_documentation: Watch a video about how some [users struggle with selects](https://www.youtube.com/watch?v=CUkMCQR4TpY).
 page:
 - sys:
     id: 3YTlC0pezKMGMsSEq4gkAu
