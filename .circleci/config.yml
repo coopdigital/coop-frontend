@@ -1,26 +1,43 @@
-version: 2.0
+version: 2.1
+
+parameters:
+  is-content-update:
+    type: boolean
+    default: false
+  entryID:
+    type: string
+    default: "unknown"
 
 jobs:
   build_packages:
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout
-      - run:
-          name: 'Update NPM'
-          command: 'sudo npm install -g npm@latest'
-      - restore_cache:
-          key: build-cache-{{ checksum "package.json" }}
-      - run:
-          name: 'Install NPM dependencies'
-          command: npm install
-      - save_cache:
-          key: build-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run:
-          name: 'Build all packages'
-          command: npm run build:all
+      - when:
+          condition: << pipeline.parameters.is-content-update >>
+          steps:
+            - run:
+                name: 'Skip package build'
+                command: echo "Content update, no need to build packages :)"
+      - unless:
+          condition: << pipeline.parameters.is-content-update >>
+          steps:
+            - checkout
+            - run:
+                name: 'Update NPM'
+                command: 'sudo npm install -g npm@latest'
+            - restore_cache:
+                key: build-cache-{{ checksum "package.json" }}
+            - run:
+                name: 'Install NPM dependencies'
+                command: npm install
+            - save_cache:
+                key: build-cache-{{ checksum "package.json" }}
+                paths:
+                  - ./node_modules
+            - run:
+                name: 'Build all packages'
+                command: npm run build:all
 
 
   build:
@@ -66,6 +83,15 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
+      - when:
+            condition: << pipeline.parameters.is-content-update >>
+            steps:
+              - run:
+                  name: 'Add commit with latest updated entry to force deploy'
+                  command: |
+                    echo 'Last updated entry: << pipeline.parameters.entryID >>' >> design-system/last-updated-entry.txt
+                    git add design-system/last-updated-entry.txt
+                    git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
       - run:
           name: 'Deploy to Heroku'
           command: git subtree push --prefix design-system https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
