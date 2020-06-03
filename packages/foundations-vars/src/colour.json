@@ -1,0 +1,15 @@
+{
+    "color": {
+        "brand" : { "value": "#00b1e7" },
+        "text"  : { "value": "#282828" },
+        "white" : { "value": "#ffffff" },
+        "black" : { "value": "#000000" },
+        "link": {
+            "link"    : { "value": "#00729a" },
+            "hover"   : { "value": "#000102" },
+            "focus"   : { "value": "#eb5f1e" },
+            "active"  : { "value": "#005981" },
+            "visited" : { "value": "#005981" }
+        }
+    }
+  }

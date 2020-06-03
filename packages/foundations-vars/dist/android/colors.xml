@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Do not edit directly
+  Generated on Wed, 03 Jun 2020 19:45:05 GMT
+-->
+<resources>
+  <color name="color_brand">#ff00b1e7</color>
+  <color name="color_text">#ff282828</color>
+  <color name="color_white">#ffffffff</color>
+  <color name="color_black">#ff000000</color>
+  <color name="color_link_link">#ff00729a</color>
+  <color name="color_link_hover">#ff000102</color>
+  <color name="color_link_focus">#ffeb5f1e</color>
+  <color name="color_link_active">#ff005981</color>
+  <color name="color_link_visited">#ff005981</color>
+  
+</resources>

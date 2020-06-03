@@ -17,7 +17,9 @@
     "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
     "lint:dist": "stylelint 'dist/*.css' --fix",
     "build": "postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run lint:src && npm run build && npm run lint:dist"
+    "dist": "npm run lint:src && npm run build && npm run lint:dist",
+    "tokensInit": "style-dictionary init basic",
+    "tokensBuild": "node ./build.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
     "postcss-load-config": "^2.1.0",
     "precss": "^4.0.0",
     "prettier": "^1.18.2",
+    "style-dictionary": "^2.10.0",
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
