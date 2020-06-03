@@ -13,7 +13,7 @@ StyleDictionary.registerTransform({
       return [
           // Will need to see if lodash can help us add te extra -- we use in vars...
         _.kebabCase([options.prefix].concat(prop.path).join('-')),
-        _.nth(prop.name, -2),
+        .splice(prop.name, 1)
         _.replace(prop.name, prop.name, '--' + prop.name)
       ]
     }
