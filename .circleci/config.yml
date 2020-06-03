@@ -86,8 +86,12 @@ jobs:
       - when:
             condition: << pipeline.parameters.is-content-update >>
             steps:
-              - run: |
-                     git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit --allow-empty -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
+              - run:
+                  name: 'Add commit with latest updated entry to force deploy'
+                  command: |
+                    echo 'Last updated entry: << pipeline.parameters.entryID >>' >> design-system/last-updated-entry.txt
+                    git add design-system/last-updated-entry.txt
+                    git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
       - run:
           name: 'Deploy to Heroku'
           command: git subtree push --prefix design-system https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
