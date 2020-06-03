@@ -1615,9 +1615,9 @@ page:
 - sys:
     id: 5dQUGlO83uSKGcwiGMQc6I
     created_at: !ruby/object:DateTime 2018-12-05 08:48:05.369000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-19 14:13:23.960000000 Z
+    updated_at: !ruby/object:DateTime 2020-06-03 09:08:22.076000000 Z
     content_type_id: page
-    revision: 2
+    revision: 3
   title: Design principles
   status: live
   introduction: "Our digital design principles reflect how we think about design.
@@ -1701,8 +1701,8 @@ page:
     We do this by:
 
     - communicating in a clear, simple way; opening up our services to everyone
-    - designing for people irrespective of their background, circumstance, digital skills or subject knowledge - removing any barriers to our services
-    - recognising that people come to our services with their own needs, insecurities and struggles – they deserve our consideration and thoughtfulness
+    - designing for people irrespective of their background, circumstance, digital skills or subject knowledge — removing any barriers to our services
+    - recognising that people come to our services with their own needs, insecurities and struggles — they deserve our consideration and thoughtfulness
 
 
     ## [We design with honesty](#honesty)
@@ -1934,9 +1934,9 @@ page:
 - sys:
     id: 6pZ7nCcL9mQoE0SEO8QW6
     created_at: !ruby/object:DateTime 2018-12-05 11:37:14.380000000 Z
-    updated_at: !ruby/object:DateTime 2020-01-24 09:27:20.463000000 Z
+    updated_at: !ruby/object:DateTime 2020-06-03 09:58:55.093000000 Z
     content_type_id: page
-    revision: 14
+    revision: 16
   title: Content design principles
   status: live
   introduction: "We design content that meets people’s needs. \n\nPeople come to us
@@ -2032,27 +2032,27 @@ page:
     on.  \n\n### Examples \n__Good:__ \nBook a holiday \nCheck your payslip \nBuy
     a funeral plan \n \n__Bad:__ \nMore information \nFurther help \n \n### Be consistent
     \nChoose what you’re going to call things and stick to it. Calling the same thing
-    by different names can confuse people. \n\n__An example__\nAt Co-op we use “log
-    in” and not “sign in”. If we used both of these terms then people might think
-    they are different things.  \n\n### Make weak verbs strong \nIt’s clearer and
-    more direct to say ‘decide’ not ‘make a decision’. Or ‘test’ rather than ‘perform
-    a test’. \n\n### Tell people where they are in a process \nPeople should know
-    where they are and what is going on throughout their journey. This gives them
-    confidence and creates trust in the service. \n\nResearch where in their journey
-    people need to be communicated with and do it in a way that suits them.\n\n\n##
-    [Be considerate](considerate)\n\n### Don’t tell people how they should feel \n\nAvoid
-    words like ‘quick’, ‘easy’ and ‘convenient’ - we don’t know whether that is true
-    for them and we shouldn’t make assumptions.  \n\n### Reflect how people see things
-    \nWe often have an in-depth knowledge of the subject we are writing about. This
-    can be at odds with what the person reading knows or believes.  \n \nDesign content
-    to reflect how people see things by:  \n- answering their questions  \n- using
-    the language that they use  \n- being clear about what they need to do next \n\n###
-    Be friendly but not over familiar  \nBe friendly when communicating, it makes
-    the content more human so it’s easier for people to interact with us. Don’t allow
-    that to get in the way of being clear, simple and to the point.  People who come
-    to our content may: \n\n- have English as a second language \n- be from different
-    cultures  \n- have their own insecurities and struggles \n\nPuns, humour or over-familiarity
-    can lose credibility, be confusing to some people and be insensitive to your audience’s
+    by different names can confuse people. \n\n__An example__\nAt Co-op we use “sign
+    in” and not “log in”. If we used both of these terms then people might think they
+    are different things.\n\n### Make weak verbs strong \nIt’s clearer and more direct
+    to say ‘decide’ not ‘make a decision’. Or ‘test’ rather than ‘perform a test’.\n\n###
+    Tell people where they are in a process \nPeople should know where they are and
+    what is going on throughout their journey. This gives them confidence and creates
+    trust in the service. \n\nResearch where in their journey people need to be communicated
+    with and do it in a way that suits them.\n\n\n## [Be considerate](considerate)\n\n###
+    Don’t tell people how they should feel \n\nAvoid words like ‘quick’, ‘easy’ and
+    ‘convenient’ - we don’t know whether that is true for them and we shouldn’t make
+    assumptions.\n\n### Reflect how people see things \nWe often have an in-depth
+    knowledge of the subject we are writing about. This can be at odds with what the
+    person reading knows or believes.  \n \nDesign content to reflect how people see
+    things by:  \n- answering their questions  \n- using the language that they use
+    \ \n- being clear about what they need to do next \n\n### Be friendly but not
+    over familiar  \nBe friendly when communicating, it makes the content more human
+    so it’s easier for people to interact with us. Don’t allow that to get in the
+    way of being clear, simple and to the point.  People who come to our content may:
+    \n\n- have English as a second language \n- be from different cultures  \n- have
+    their own insecurities and struggles \n\nPuns, humour or over-familiarity can
+    lose credibility, be confusing to some people and be insensitive to your audience’s
     personal circumstances. \n\n\n## [Be inclusive](inclusive)\n\n### Use plain English,
     including with specialists  \n\nUsing familiar and clear language makes things
     easier for people to understand and increases the likelihood of them interacting
