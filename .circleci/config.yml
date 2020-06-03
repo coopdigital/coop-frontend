@@ -16,7 +16,9 @@ jobs:
       - when:
           condition: << pipeline.parameters.is-content-update >>
           steps:
-            - run: echo "Content update, no need to build packages :)"
+            - run:
+                name: 'Skip package build'
+                command: echo "Content update, no need to build packages :)"
       - unless:
           condition: << pipeline.parameters.is-content-update >>
           steps:
@@ -85,7 +87,7 @@ jobs:
             condition: << pipeline.parameters.is-content-update >>
             steps:
               - run: |
-                     git commit --allow-empty -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
+                     git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit --allow-empty -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
       - run:
           name: 'Deploy to Heroku'
           command: git subtree push --prefix design-system https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
