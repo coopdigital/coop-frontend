@@ -78,7 +78,7 @@ jobs:
     steps:
       - checkout
       - when:
-            condition: << parameters.is-content-update >>
+            condition: << pipeline.parameters.is-content-update >>
             steps:
               - run: |
                      git commit --allow-empty -m "Content update: << pipeline.parameters.edited-entry >> by << pipeline.parameters.author >>"
