@@ -94,7 +94,7 @@ jobs:
                     git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
       - run:
           name: 'Deploy to Heroku'
-          command: git subtree push --prefix design-system https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git `git subtree split --prefix design-system master`:master --force
 
 workflows:
   version: 2
