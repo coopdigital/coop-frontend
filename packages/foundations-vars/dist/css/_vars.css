@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 04 Jun 2020 12:38:39 GMT
+ * Generated on Thu, 04 Jun 2020 16:15:32 GMT
  */
 
 :root {
@@ -57,4 +57,20 @@
   --type-body-l: 1.2499999rem;
   --type-body-s: 1.125rem;
   --type-line-height: 1.5;
+  --type-type-h1-mega-l: 3.5rem;
+  --type-type-h1-mega-s: 3rem;
+  --type-type-h1-l: 2.875rem;
+  --type-type-h1-s: 1.875rem;
+  --type-type-h2-l: 2rem;
+  --type-type-h2-s: 1.625rem;
+  --type-type-h3-l: 1.625rem;
+  --type-type-h3-s: 1.375rem;
+  --type-type-h456-l: 1.375rem;
+  --type-type-h456-s: 1.125rem;
+  --spacing-2: 0.125rem;
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+  --spacing-32: 2rem;
+  --spacing-64: 4rem;
 }

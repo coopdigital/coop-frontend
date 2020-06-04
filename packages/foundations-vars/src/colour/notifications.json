@@ -1,0 +1,37 @@
+{
+    "color": {
+        "blue" : { 
+            "notification" : { 
+                "base"  : { 
+                    "value": "#326bb7",
+                    "base" : true
+                },
+                "light"  : { 
+                    "value": "#d4eaf5"
+                }
+            }
+        },
+        "orange" : { 
+            "alert" : { 
+                "base"  : { 
+                    "value": "#ff9d34",
+                    "base" : true
+                },
+                "light"  : { 
+                    "value": "#ffebe3"
+                }
+            }
+        },
+        "red" : { 
+            "error" : { 
+                "base"  : { 
+                    "value": "#d63118",
+                    "base" : true
+                },
+                "light"  : { 
+                    "value": "#fef3f4"
+                }
+            }
+        }
+    }
+}

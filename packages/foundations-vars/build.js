@@ -4,7 +4,7 @@ var _ = require('lodash');
 console.log('Building Co-op design tokens...');
 
 StyleDictionary.registerTransform({ 
-  name: 'cti/hyphen',
+  name: 'name/cti/hyphen',
   type: 'name',
     transformer: function(prop, options) {
 
@@ -38,6 +38,21 @@ StyleDictionary.registerTransform({
 
 				returnedTokenBase = tokenPathJoin.concat(tokenEnd);
 
+				return [
+					returnedTokenBase
+				] 
+
+			} if ('letterNumber' in prop === true) {
+
+				let tokenPath = prop.path;
+
+				tokenFirst = _.first(tokenPath);
+				tokenLast = _.last(tokenPath);
+				tokenSize = _.nth(tokenPath, -2);
+				tokenNo = _.nth(tokenPath, -3);
+
+        returnedTokenBase = _.concat([tokenFirst, '-' + tokenNo, '-' + tokenSize, '-' + tokenLast]).join('');
+				
 				return [
 					returnedTokenBase
 				]

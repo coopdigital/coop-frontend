@@ -1,0 +1,63 @@
+{
+	"type": {
+		"line": {
+			"height" : { 
+					"value" : "1.5"
+			}
+		},
+		"body": {
+			"l" : { "value" : "1.2499999rem" },
+			"s" : { "value" : "1.125rem" }
+		},
+		"h1-mega": {
+			"l" : { 
+				"value" : "3.5rem",
+				"letterNumber" : true
+			},
+			"s" : { 
+				"value" : "3rem",
+				"letterNumber" : true
+			}
+		},
+		"h1": {
+			"l" : { 
+				"value" : "2.875rem",
+				"letterNumber" : true
+			},
+			"s" : { 
+				"value" : "1.875rem",
+				"letterNumber" : true
+			}
+		},
+		"h2": {
+			"l" : { 
+				"value" : "2rem",
+				"letterNumber" : true
+			},
+			"s" : { 
+				"value" : "1.625rem",
+				"letterNumber" : true
+			}
+		},
+		"h3": {
+			"l" : { 
+				"value" : "1.625rem",
+				"letterNumber" : true
+			},
+			"s" : { 
+				"value" : "1.375rem",
+				"letterNumber" : true
+			}
+		},
+		"h456": {
+			"l" : { 
+				"value" : "1.375rem",
+				"letterNumber" : true
+			},
+			"s" : { 
+				"value" : "1.125rem",
+				"letterNumber" : true
+			}
+		}
+	}
+}	

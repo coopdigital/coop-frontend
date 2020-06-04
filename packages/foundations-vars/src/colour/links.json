@@ -1,0 +1,26 @@
+{
+    "color": {
+        "link" : { 
+            "base"  : { 
+                "value": "#00729a",
+                "base" : true
+            },
+            "hover"   : { 
+                "value"    : "#000102",
+                "modifier" : true
+            },
+            "focus"   : { 
+                "value"    : "#eb5f1e",
+                "modifier" : true
+            },
+            "active"  : { 
+                "value"    : "#005981",
+                "modifier" : true 
+            },
+            "visited" : { 
+                "value"    : "#005981",
+                "modifier" : true 
+            }
+        }
+    }
+}

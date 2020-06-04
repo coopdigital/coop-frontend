@@ -1,0 +1,97 @@
+{
+    "color": {
+        "grey" : { 
+            "light"  : { 
+                "value": "#f3f3f3"
+            },
+            "mid"  : { 
+                "value": "#c4c4c4"
+            },
+            "dark"  : { 
+                "value": "#6e6e6e"
+            }
+        },
+        "yellow" : {
+            "bright"  : { 
+                "value": "#ffff00"
+            },
+            "light"  : { 
+                "value": "#ffec00"
+            },
+            "mid"  : { 
+                "value": "#ffd308"
+            }
+        },
+        "green" : {
+            "bright"  : { 
+                "value": "#edfb3c"
+            },
+            "light"  : { 
+                "value": "#bad303"
+            },
+            "mid"  : { 
+                "value": "#4f820d"
+            },
+            "dark"  : { 
+                "value": "#385c0a"
+            }
+        },
+        "turquoise" : {
+            "bright"  : { 
+                "value": "#0afbfb"
+            },
+            "light"  : { 
+                "value": "#72dcdb"
+            },
+            "mid"  : { 
+                "value": "#0f8482"
+            },
+            "dark"  : { 
+                "value": "#166d66"
+            }
+        },
+        "blue" : {
+            "bright"  : { 
+                "value": "#418cfc"
+            },
+            "light"  : { 
+                "value": "#92d8fe"
+            },
+            "mid"  : { 
+                "value": "#326bb7"
+            },
+            "dark"  : { 
+                "value": "#334c89"
+            }
+        },
+        "pink" : {
+            "bright"  : { 
+                "value": "#fc43d3"
+            },
+            "light"  : { 
+                "value": "#ff80d3"
+            }
+        },
+        "purple" : {
+            "mid"  : { 
+                "value": "#ad208e"
+            },
+            "dark"  : { 
+                "value": "#61307d"
+            }
+        },
+        "orange" : {
+            "mid"  : { 
+                "value": "#f8642c"
+            }
+        },
+        "red" : {
+            "mid"  : { 
+                "value": "#d63118"
+            },
+            "dark"  : { 
+                "value": "#9f2a00"
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
   "source": ["src/**/*.json"],
   "platforms": {
     "css": {
-      "transforms": ["cti/hyphen"],
+      "transforms": ["name/cti/hyphen"],
       "transformGroup": "css",
       "buildPath": "dist/css/",
       "files": [{

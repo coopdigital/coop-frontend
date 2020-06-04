@@ -1,0 +1,16 @@
+{
+    "font": {
+        "family": { 
+            "value": "'Avenir-Next', 'Helvetica Neue', Helvetica, Arial, sans-serif" 
+        }
+    },
+    "type": {
+        "body": {
+            "l": "1.2499999rem",
+            "s": "1.125rem"
+        },
+        "line" : {
+            "height": "1.5"
+        }
+    }
+}

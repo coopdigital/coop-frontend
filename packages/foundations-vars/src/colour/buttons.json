@@ -1,0 +1,46 @@
+{
+    "color": {
+        "button" : { 
+            "base"    : { 
+                "value"    : "{color.button.dark.base.value}",
+                "base"     : true
+            },
+            "hover"   : { 
+                "value"    : "{color.button.dark.hover.value}",
+                "modifier" : true
+            },
+            "active"  : { 
+                "value"    : "{color.button.dark.active.value}",
+                "modifier" : true 
+            },
+            "primary" : {
+                "base"    : { 
+                    "value"    : "#0f8482",
+                    "base"     : true
+                },
+                "hover"   : { 
+                    "value"    : "#2b9e9c",
+                    "modifier" : true
+                },
+                "active"  : { 
+                    "value"    : "#0c6d6b",
+                    "modifier" : true 
+                }
+            },
+            "dark" : {
+                "base"    : { 
+                    "value"    : "#374c63",
+                    "base"     : true
+                },
+                "hover"   : { 
+                    "value"    : "#4a6683",
+                    "modifier" : true
+                },
+                "active"  : { 
+                    "value"    : "#2e3f53",
+                    "modifier" : true 
+                }
+            }
+        }
+    }
+}

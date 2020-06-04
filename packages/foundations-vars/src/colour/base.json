@@ -1,0 +1,8 @@
+{
+    "color": {
+        "brand" : { "value": "#00b1e7" },
+        "text"  : { "value": "#282828" },
+        "white" : { "value": "#ffffff" },
+        "black" : { "value": "#000000" }
+    }
+}
