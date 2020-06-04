@@ -3,7 +3,7 @@
 // StyleDictionaryColor.h
 //
 // Do not edit directly
-// Generated on Thu, 04 Jun 2020 09:59:25 GMT
+// Generated on Thu, 04 Jun 2020 12:38:39 GMT
 //
 
 #import <UIKit/UIKit.h>
@@ -14,11 +14,51 @@ ColorBrand,
 ColorText,
 ColorWhite,
 ColorBlack,
-ColorLinkLink,
+ColorButtonBase,
+ColorButtonHover,
+ColorButtonActive,
+ColorButtonPrimaryBase,
+ColorButtonPrimaryHover,
+ColorButtonPrimaryActive,
+ColorButtonDarkBase,
+ColorButtonDarkHover,
+ColorButtonDarkActive,
+ColorLinkBase,
 ColorLinkHover,
 ColorLinkFocus,
 ColorLinkActive,
-ColorLinkVisited
+ColorLinkVisited,
+ColorBlueNotificationBase,
+ColorBlueNotificationLight,
+ColorBlueBright,
+ColorBlueLight,
+ColorBlueMid,
+ColorBlueDark,
+ColorOrangeAlertBase,
+ColorOrangeAlertLight,
+ColorOrangeMid,
+ColorRedErrorBase,
+ColorRedErrorLight,
+ColorRedMid,
+ColorRedDark,
+ColorGreyLight,
+ColorGreyMid,
+ColorGreyDark,
+ColorYellowBright,
+ColorYellowLight,
+ColorYellowMid,
+ColorGreenBright,
+ColorGreenLight,
+ColorGreenMid,
+ColorGreenDark,
+ColorTurquoiseBright,
+ColorTurquoiseLight,
+ColorTurquoiseMid,
+ColorTurquoiseDark,
+ColorPinkBright,
+ColorPinkLight,
+ColorPurpleMid,
+ColorPurpleDark
 };
 
 @interface StyleDictionaryColor : NSObject

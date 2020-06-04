@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 04 Jun 2020 09:59:25 GMT
+ * Generated on Thu, 04 Jun 2020 12:38:39 GMT
  */
 
 :root {
@@ -8,9 +8,53 @@
   --color-text: #282828;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-link-link: #00729a;
+  --color-button: #374c63;
+  --color-button--hover: #4a6683;
+  --color-button--active: #2e3f53;
+  --color-button-primary: #0f8482;
+  --color-button-primary--hover: #2b9e9c;
+  --color-button-primary--active: #0c6d6b;
+  --color-button-dark: #374c63;
+  --color-button-dark--hover: #4a6683;
+  --color-button-dark--active: #2e3f53;
+  --color-link: #00729a;
   --color-link--hover: #000102;
   --color-link--focus: #eb5f1e;
   --color-link--active: #005981;
   --color-link--visited: #005981;
+  --color-blue-notification: #326bb7;
+  --color-blue-notification-light: #d4eaf5;
+  --color-blue-bright: #418cfc;
+  --color-blue-light: #92d8fe;
+  --color-blue-mid: #326bb7;
+  --color-blue-dark: #334c89;
+  --color-orange-alert: #ff9d34;
+  --color-orange-alert-light: #ffebe3;
+  --color-orange-mid: #f8642c;
+  --color-red-error: #d63118;
+  --color-red-error-light: #fef3f4;
+  --color-red-mid: #d63118;
+  --color-red-dark: #9f2a00;
+  --color-grey-light: #f3f3f3;
+  --color-grey-mid: #c4c4c4;
+  --color-grey-dark: #6e6e6e;
+  --color-yellow-bright: #ffff00;
+  --color-yellow-light: #ffec00;
+  --color-yellow-mid: #ffd308;
+  --color-green-bright: #edfb3c;
+  --color-green-light: #bad303;
+  --color-green-mid: #4f820d;
+  --color-green-dark: #385c0a;
+  --color-turquoise-bright: #0afbfb;
+  --color-turquoise-light: #72dcdb;
+  --color-turquoise-mid: #0f8482;
+  --color-turquoise-dark: #166d66;
+  --color-pink-bright: #fc43d3;
+  --color-pink-light: #ff80d3;
+  --color-purple-mid: #ad208e;
+  --color-purple-dark: #61307d;
+  --font-family: 'Avenir-Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --type-body-l: 1.2499999rem;
+  --type-body-s: 1.125rem;
+  --type-line-height: 1.5;
 }

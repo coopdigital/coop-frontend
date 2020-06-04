@@ -2,17 +2,57 @@
 
 <!--
   Do not edit directly
-  Generated on Thu, 04 Jun 2020 09:59:25 GMT
+  Generated on Thu, 04 Jun 2020 12:38:39 GMT
 -->
 <resources>
   <color name="color_brand">#ff00b1e7</color>
   <color name="color_text">#ff282828</color>
   <color name="color_white">#ffffffff</color>
   <color name="color_black">#ff000000</color>
-  <color name="color_link_link">#ff00729a</color>
+  <color name="color_button_base">#ff374c63</color>
+  <color name="color_button_hover">#ff4a6683</color>
+  <color name="color_button_active">#ff2e3f53</color>
+  <color name="color_button_primary_base">#ff0f8482</color>
+  <color name="color_button_primary_hover">#ff2b9e9c</color>
+  <color name="color_button_primary_active">#ff0c6d6b</color>
+  <color name="color_button_dark_base">#ff374c63</color>
+  <color name="color_button_dark_hover">#ff4a6683</color>
+  <color name="color_button_dark_active">#ff2e3f53</color>
+  <color name="color_link_base">#ff00729a</color>
   <color name="color_link_hover">#ff000102</color>
   <color name="color_link_focus">#ffeb5f1e</color>
   <color name="color_link_active">#ff005981</color>
   <color name="color_link_visited">#ff005981</color>
+  <color name="color_blue_notification_base">#ff326bb7</color>
+  <color name="color_blue_notification_light">#ffd4eaf5</color>
+  <color name="color_blue_bright">#ff418cfc</color>
+  <color name="color_blue_light">#ff92d8fe</color>
+  <color name="color_blue_mid">#ff326bb7</color>
+  <color name="color_blue_dark">#ff334c89</color>
+  <color name="color_orange_alert_base">#ffff9d34</color>
+  <color name="color_orange_alert_light">#ffffebe3</color>
+  <color name="color_orange_mid">#fff8642c</color>
+  <color name="color_red_error_base">#ffd63118</color>
+  <color name="color_red_error_light">#fffef3f4</color>
+  <color name="color_red_mid">#ffd63118</color>
+  <color name="color_red_dark">#ff9f2a00</color>
+  <color name="color_grey_light">#fff3f3f3</color>
+  <color name="color_grey_mid">#ffc4c4c4</color>
+  <color name="color_grey_dark">#ff6e6e6e</color>
+  <color name="color_yellow_bright">#ffffff00</color>
+  <color name="color_yellow_light">#ffffec00</color>
+  <color name="color_yellow_mid">#ffffd308</color>
+  <color name="color_green_bright">#ffedfb3c</color>
+  <color name="color_green_light">#ffbad303</color>
+  <color name="color_green_mid">#ff4f820d</color>
+  <color name="color_green_dark">#ff385c0a</color>
+  <color name="color_turquoise_bright">#ff0afbfb</color>
+  <color name="color_turquoise_light">#ff72dcdb</color>
+  <color name="color_turquoise_mid">#ff0f8482</color>
+  <color name="color_turquoise_dark">#ff166d66</color>
+  <color name="color_pink_bright">#fffc43d3</color>
+  <color name="color_pink_light">#ffff80d3</color>
+  <color name="color_purple_mid">#ffad208e</color>
+  <color name="color_purple_dark">#ff61307d</color>
   
 </resources>
