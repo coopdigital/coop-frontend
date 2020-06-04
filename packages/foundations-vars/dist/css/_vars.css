@@ -1,22 +1,16 @@
 /**
  * Do not edit directly
- * Generated on Thu, 04 Jun 2020 07:05:42 GMT
+ * Generated on Thu, 04 Jun 2020 09:59:25 GMT
  */
 
 :root {
-  --color--d: #00b1e7;
-  --color--t: #282828;
-  --color--e: #ffffff;
-  --color--k: #000000;
-  --color-link--k: #00729a;
-  --color-link--r: #000102;
-  --color-link--s: #eb5f1e;
-  --color-link--e: #005981;
-  --color-link--d: #005981;
-  --color-button-primary--e: #0f8482;
-  --color-button-primary--r: #2b9e9c;
-  --color-button-primary--e: #0c6d6b;
-  --color-button-dark--e: #374c63;
-  --color-button-dark--r: #4a6683;
-  --color-button-dark--e: #2e3f53;
+  --color-brand: #00b1e7;
+  --color-text: #282828;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-link-link: #00729a;
+  --color-link--hover: #000102;
+  --color-link--focus: #eb5f1e;
+  --color-link--active: #005981;
+  --color-link--visited: #005981;
 }

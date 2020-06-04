@@ -6,22 +6,22 @@
         "black" : { "value": "#000000" },
         "link": {
             "link"    : { "value": "#00729a" },
-            "hover"   : { "value": "#000102" },
-            "focus"   : { "value": "#eb5f1e" },
-            "active"  : { "value": "#005981" },
-            "visited" : { "value": "#005981" }
-        },
-        "button": {
-            "primary": {
-                "base"   : { "value": "#0f8482" },
-                "hover"  : { "value": "#2b9e9c" },
-                "active" : { "value": "#0c6d6b" }
+            "hover"   : { 
+                "value"    : "#000102",
+                "modifier" : true
             },
-            "dark": {
-                "base"   : { "value": "#374c63" },
-                "hover"  : { "value": "#4a6683" },
-                "active" : { "value": "#2e3f53" }
+            "focus"   : { 
+                "value"    : "#eb5f1e",
+                "modifier" : true
+            },
+            "active"  : { 
+                "value"    : "#005981",
+                "modifier" : true 
+            },
+            "visited" : { 
+                "value"    : "#005981",
+                "modifier" : true 
             }
         }
     }
-  }
+}
