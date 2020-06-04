@@ -10,6 +10,18 @@
             "focus"   : { "value": "#eb5f1e" },
             "active"  : { "value": "#005981" },
             "visited" : { "value": "#005981" }
+        },
+        "button": {
+            "primary": {
+                "base"   : { "value": "#0f8482" },
+                "hover"  : { "value": "#2b9e9c" },
+                "active" : { "value": "#0c6d6b" }
+            },
+            "dark": {
+                "base"   : { "value": "#374c63" },
+                "hover"  : { "value": "#4a6683" },
+                "active" : { "value": "#2e3f53" }
+            }
         }
     }
   }

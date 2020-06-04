@@ -3,7 +3,7 @@
 // StyleDictionaryColor.h
 //
 // Do not edit directly
-// Generated on Wed, 03 Jun 2020 20:04:42 GMT
+// Generated on Thu, 04 Jun 2020 07:05:42 GMT
 //
 
 #import <UIKit/UIKit.h>
@@ -18,7 +18,13 @@ ColorLinkLink,
 ColorLinkHover,
 ColorLinkFocus,
 ColorLinkActive,
-ColorLinkVisited
+ColorLinkVisited,
+ColorButtonPrimaryBase,
+ColorButtonPrimaryHover,
+ColorButtonPrimaryActive,
+ColorButtonDarkBase,
+ColorButtonDarkHover,
+ColorButtonDarkActive
 };
 
 @interface StyleDictionaryColor : NSObject

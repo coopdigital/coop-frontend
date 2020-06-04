@@ -2,7 +2,7 @@
 
 <!--
   Do not edit directly
-  Generated on Wed, 03 Jun 2020 20:04:42 GMT
+  Generated on Thu, 04 Jun 2020 07:05:42 GMT
 -->
 <resources>
   <color name="color_brand">#ff00b1e7</color>
@@ -14,5 +14,11 @@
   <color name="color_link_focus">#ffeb5f1e</color>
   <color name="color_link_active">#ff005981</color>
   <color name="color_link_visited">#ff005981</color>
+  <color name="color_button_primary_base">#ff0f8482</color>
+  <color name="color_button_primary_hover">#ff2b9e9c</color>
+  <color name="color_button_primary_active">#ff0c6d6b</color>
+  <color name="color_button_dark_base">#ff374c63</color>
+  <color name="color_button_dark_hover">#ff4a6683</color>
+  <color name="color_button_dark_active">#ff2e3f53</color>
   
 </resources>
