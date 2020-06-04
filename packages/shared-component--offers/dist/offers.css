@@ -271,7 +271,7 @@
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.625rem;
-  padding: 0.27rem 0 0 2rem;
+  padding: 0.27rem 0 0 1.25rem;
   display: none;
 }
 @media (min-width: 46.875em) {
