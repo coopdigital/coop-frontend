@@ -1,5 +1,5 @@
-import { $ } from './bling';
-import { validatePostcode, showError } from './helpers';
+import { $ } from './modules/bling';
+import { validatePostcode, showError } from './modules/helpers';
 
 function postcode(form) {
   if (!form) { return }
