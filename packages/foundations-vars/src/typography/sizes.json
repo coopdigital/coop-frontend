@@ -58,6 +58,25 @@
 				"value" : "1.125rem",
 				"letterNumber" : true
 			}
+		},
+		"blockquote": {
+			"value" : "1.2499999rem"
+		},
+		"lp": {
+			"l" : { 
+				"value" : "1.625rem"
+			},
+			"s" : { 
+				"value" : "1.375rem"
+			}
+		},
+		"sp": {
+			"l" : { 
+				"value" : "1.2499999rem"
+			},
+			"s" : { 
+				"value" : "1rem"
+			}
 		}
 	}
 }	

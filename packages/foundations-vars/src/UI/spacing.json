@@ -1,10 +1,20 @@
 {
     "spacing": {
-        "64" : { "value"  : "4rem"    },
-        "32" : { "value"  : "2rem"    },
-        "16" : { "value"  : "1rem"    },
-        "8"  : { "value"  : "0.5rem"  },
-        "4"  : { "value"  : "0.25rem" },
-        "2"  : { "value"  : "0.125rem"}
+        "64": { "value"  : "4rem"    },
+        "32": { "value"  : "2rem"    },
+        "16": { "value"  : "1rem"    },
+        "8" : { "value"  : "0.5rem"  },
+        "4" : { "value"  : "0.25rem" },
+        "2" : { "value"  : "0.125rem"},
+        "base"    : { 
+            "value"    : "2rem"
+        },
+        "3": {
+            "4": { 
+                "value"    : "calc(var(--spacing-base) / 4 * 3)",
+                "spacingModifier" : true,
+                "comment"  : "Do not use - legacy spacing for older projects only"
+            }
+        }
     }
 }

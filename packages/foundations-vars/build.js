@@ -51,13 +51,28 @@ StyleDictionary.registerTransform({
 				tokenSize = _.nth(tokenPath, -2);
 				tokenNo = _.nth(tokenPath, -3);
 
-        returnedTokenBase = _.concat([tokenFirst, '-' + tokenNo, '-' + tokenSize, '-' + tokenLast]).join('');
+        returnedTokenBase = _.concat([`${tokenFirst}-${tokenNo}-${tokenSize}-${tokenLast}`])
 				
 				return [
 					returnedTokenBase
 				]
 
-			} else {
+			} if ('spacingModifier' in prop === true) {
+
+				let tokenPath = prop.path;
+
+				tokenFirst = _.first(tokenPath);
+				tokenLast = _.last(tokenPath);
+				tokenSize = _.nth(tokenPath, -2);
+				tokenNo = _.nth(tokenPath, -3);
+
+        returnedTokenBase = _.concat([`${tokenFirst}-base--${tokenSize}-${tokenLast}`]);
+				
+				return [
+					returnedTokenBase
+				]
+
+			}else {
 
 				return [
 					_.kebabCase([options.prefix].concat(prop.path).join('-'))
