@@ -61,7 +61,7 @@
 			href="{{href.data}}"
 			data-contenttype="Card|FeatureCard"
 			data-contentparent="{{ config.contentParent|safe }}"
-			data-linktext="{{ content.fields.heading|safe }}">
+			data-linktext="{{ content.fields.bodyText|safe }}">
 	{% endwith %}
 {% endif %}
 
@@ -192,10 +192,7 @@
     {% endwith %}
   {% endif %}
     <div class="coop-c-featureCard__content">
-      <h3 class="coop-c-featureCard__title">{{content.fields.name}}</h3>
-    {% if content.fields.bodyText %}
-      <p class="coop-c-featureCard__linkText">{{content.fields.bodyText}}</p>
-    {% endif %}
+        <h3 class="coop-c-featureCard__title">{{content.fields.bodyText}}</h3>
     </div>
 {% if content.fields.link and content.fields.link.sys.id %}
   </a>
