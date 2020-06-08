@@ -1,24 +1,22 @@
 
-<div class="coop-c-message coop-c-message--error" role="alert">
-    <h2>There's a problem</h2>
+<div class="coop-c-message coop-c-message--error" aria-labelledby="error-message-heading" tabindex="-1" role="alert">
+    <h2 id="error-message-heading">There’s a problem</h2>
     <p>Check the form. You must:</p>
     <ul>
-        <li>Enter your full name</li>
-        <li>Enter an email address</li>
+        <li><a class="coop-c-message__link" href="#client-name">enter your full name</a></li>
+        <li><a class="coop-c-message__link" href="#client-email-address">enter an email address</a></li>
     </ul>
 </div>
 <fieldset>
     <div class="coop-form__row coop-c-form-error">
-        <label for="client_name">Your full name</label>
-        <p class="coop-c-form-error__text" aria-live="polite">Enter your full name</p>
-        <input class="coop-form__input coop-form__invalid" type="text" value="" name="client[name]" id="client_name">
+        <label class="coop-form__label" for="client-name">Your full name</label>
+        <p id="client-name-error" class="coop-c-form-error__text">Enter your full name</p>
+        <input class="coop-form__input coop-form__invalid" type="text" value="" name="client[name]" id="client-name" aria-describedby="client-name-error">
     </div>
     <div class="coop-form__row coop-c-form-error">
-        <label for="client_email_address">
-            Your email address
-            <span class="coop-label__hint">We'll only use this to contact you about your will.</span>
-        </label>
-        <p class="coop-c-form-error__text" aria-live="polite">Enter an email address</p>
-        <input class="coop-form__input coop-form__invalid" type="email" value="" name="client[email_address]" id="client_email_address">
+        <label class="coop-form__label" for="client-email-address">Your email address</label>
+        <p id="client-email-address-hint" class="coop-label__hint">We’ll only use this to contact you about your will.</p>
+        <p id="client-email-address-error" class="coop-c-form-error__text">Enter an email address</p>
+        <input class="coop-form__input coop-form__invalid" type="email" value="" name="client[email_address]" id="client-email-address" aria-describedby="client-email-address-hint client-email-address-error">
     </div>
 </fieldset>
