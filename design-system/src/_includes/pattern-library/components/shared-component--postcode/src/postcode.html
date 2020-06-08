@@ -1,0 +1,28 @@
+{% macro render(content, cms, config) -%}
+  <div class="coop-c-postcode">
+    <div class="coop-c-postcode__inner coop-l-grid-item col-sm-12 col-lg-5">
+      <h2>{{content.heading}}</h2>
+        <form class="col-sm-12 coop-c-postcode__form">
+          <label for="coop-c-postcode__search" class="coop-c-postcode__label coop-t-regular">{{content.bodyText}}</label>
+          <div class="coop-c-postcode__searchbox">
+            <span class="coop-c-postcode__searchbox-input">
+              <input name="coop-c-postcode__search" id="coop-c-postcode__search" type="search" placeholder="{{content.formPlaceholder}}" />
+            </span>
+            <button class="coop-c-postcode__submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><title>Location pin icon</title><path d="M12 19.661c4.688-4.229 7-7.594 7-9.947C19 6.014 15.874 3 12 3S5 6.014 5 9.714c0 2.353 2.312 5.718 7 9.947z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </button>
+          </div>
+        </form>
+        
+        <div class="col-sm-12 coop-c-postcode__alt">
+          <p>Shop online and get delivery in as little as 2 hours.</p>
+          <p>Available in selected areas around the UK.</p>
+          <p>Please switch to another browser to <a href="{{options.SHOP_URL}}">Order online</a></p>
+        </div>
+    </div>
+  </div>
+  </div>
+  <script>
+      window.SHOP_URL = "{{options.SHOP_URL}}"
+  </script>
+{%- endmacro -%}
