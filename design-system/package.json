@@ -39,7 +39,7 @@
     "@coopdigital/foundations-grid": "^1.0.14",
     "@coopdigital/foundations-layout": "^2.0.10",
     "@coopdigital/foundations-tables": "^1.1.10",
-    "@coopdigital/foundations-typography": "^3.0.13",
+    "@coopdigital/foundations-typography": "^3.1.0",
     "@coopdigital/foundations-vars": "^2.2.2",
     "contentful-migration": "^1.0.1",
     "gulp": "^4.0.2",
