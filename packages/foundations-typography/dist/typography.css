@@ -524,6 +524,19 @@ a:focus,
   outline-offset: 3px;
 }
 
+button.coop-t-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
 .coop-t-link-white {
   color: #ffffff;
   color: var(--color-white);

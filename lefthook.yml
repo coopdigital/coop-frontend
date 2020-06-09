@@ -9,4 +9,4 @@ pre-commit:
     build-tokens:
       tags: frontend css tokens
       glob: "packages/foundations-vars/**/*.{js}"
-      run: node ./packages/foundations-vars/build.js && node ./packages/foundations-vars/merge.js
+      run: node ./packages/foundations-vars/build.js && node ./packages/foundations-vars/merge.js && git add {staged_files}
