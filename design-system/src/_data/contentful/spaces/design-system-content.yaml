@@ -451,16 +451,16 @@ designPattern:
 - sys:
     id: 60XDcMEd68iowm6k8S624U
     created_at: !ruby/object:DateTime 2018-11-08 23:04:00.305000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-18 15:19:12.680000000 Z
+    updated_at: !ruby/object:DateTime 2020-06-08 15:56:53.976000000 Z
     content_type_id: designPattern
-    revision: 2
+    revision: 3
   title: Validation
   status: live
   github_url: https://github.com/coopdigital/foundations-forms
   npm_url: https://github.com/coopdigital/foundations-forms
-  introduction: Validation lets a user know that they need to amend the information
+  introduction: 'Validation lets a user know that they need to amend the information
     they have entered. It should be flexible - allowing a person to enter information
-    in the way they natuarally would.
+    in the way they naturally would. '
   design_and_content_documentation: |-
     Build services that are flexible enough to allow users to give data in a way that they would naturally. For example we should allow users to enter a postcode in upper or lower case, with or without a space.
 
