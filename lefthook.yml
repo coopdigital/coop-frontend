@@ -3,10 +3,10 @@ pre-commit:
   commands:
     build-packages:
       tags: frontend css
+      exclude: ./packages/foundations-vars/**
       glob: "*.{css,pcss}"
-      exclude: packages/foundations-vars/**
       run: lerna run dist && git add {staged_files}
-    build-tokens:
-      tags: frontend css
-      glob: "packages/foundations-vars/*.{js}"
+    cd ..:
+      tags: frontend css tokens
+      glob: "packages/foundations-vars/**/*.{js}"
       run: node ./packages/foundations-vars/build.js && node ./packages/foundations-vars/merge.js
