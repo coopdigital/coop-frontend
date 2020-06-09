@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-typography",
-  "version": "3.0.13",
+  "version": "3.1.0",
   "author": "@coopdigital",
   "description": "Co-op Foundations: Typography",
   "main": "dist/typography.css",
