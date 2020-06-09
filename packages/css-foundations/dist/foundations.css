@@ -998,6 +998,19 @@ a:active,
     outline-offset: 3px;
   }
 
+button.coop-t-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
 .coop-t-link-white {
   color: #ffffff;
   color: var(--color-white);
@@ -1789,6 +1802,8 @@ label,
 
 .coop-label__hint {
   display: block;
+  margin: 0 0 calc(calc(2rem / 4) / 2);
+  margin: 0 0 calc(var(--spacing-base--1-4) / 2);
   color: #6e6e6e;
   color: var(--color-grey-dark);
   font-size: 1rem;
@@ -1796,6 +1811,12 @@ label,
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
+}
+
+label + .coop-label__hint,
+.coop-form__label + .coop-label__hint {
+  margin-top: calc(calc(2rem / 4) / -2);
+  margin-top: calc(var(--spacing-base--1-4) / -2);
 }
 
 .coop-form__label--inline {
@@ -2096,6 +2117,12 @@ input[type="radio"],
   margin-bottom: var(--spacing-16)
 }
 
+.coop-c-message:focus {
+    outline-offset: 3px;
+    outline: 2px solid #eb5f1e;
+    outline: 2px solid var(--color-link--focus);
+  }
+
 @media (min-width: 46.875em) {
 
 .coop-c-message {
@@ -2106,13 +2133,21 @@ input[type="radio"],
 }
   }
 
+.coop-c-message__link {
+  color: #d63118;
+  color: var(--color-red-error);
+}
+
 .coop-c-message--error {
   background: #fef3f4;
+  background: var(--color-red-error-light);
   border: 1px solid #d63118;
+  border: 1px solid var(--color-red-error);
 }
 
 .coop-c-form-error__text {
   color: #d63118;
+  color: var(--color-red-error);
   margin-bottom: 0;
 }
 
