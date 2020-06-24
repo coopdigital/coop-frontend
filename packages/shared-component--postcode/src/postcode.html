@@ -1,5 +1,8 @@
 {% macro render(content, cms, config) -%}
-  <div class="coop-c-postcode">
+{% if config.isContained %}
+  {% set isContained = 'coop-c-postcode--isContained' %}
+{% endif %}
+  <div class="coop-c-postcode {{isContained}}">
     <div class="coop-c-postcode__inner coop-l-grid-item col-sm-12 col-lg-5">
       <h2>{{content.heading}}</h2>
         <form class="col-sm-12 coop-c-postcode__form">
