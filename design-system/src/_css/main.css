@@ -1,4 +1,3 @@
-
 /* Synced with coop.co.uk - remove later */
 @import "design-system/temp-vars.css";
 
@@ -20,17 +19,16 @@
 @import "component-card--product/src/card--product.pcss";
 @import "component-skipnav/src/skipnav.pcss";
 
-@import 'component-tags/src/tags.pcss';
-@import 'component-squircles/src/squircles.pcss';
-@import 'component-notification/src/notification.css';
-@import 'component-notification--alert/src/notification--alert.css';
+@import "component-tags/src/tags.pcss";
+@import "component-squircles/src/squircles.pcss";
+@import "component-notification/src/notification.css";
 
-@import 'shared-component--editorialCard/dist/editorialCard.css';
-@import 'shared-component--featureCard/dist/featureCard.css';
-@import 'shared-component--signpost/dist/signpost.css';
-@import 'shared-component--membership/dist/membership.css';
-@import 'shared-component--offers/dist/offers.css';
-@import 'shared-component--hero/dist/hero.css';
+@import "shared-component--editorialCard/dist/editorialCard.css";
+@import "shared-component--featureCard/dist/featureCard.css";
+@import "shared-component--signpost/dist/signpost.css";
+@import "shared-component--membership/dist/membership.css";
+@import "shared-component--offers/dist/offers.css";
+@import "shared-component--hero/dist/hero.css";
 
 /* Design system */
 @import "design-system/skipnav.css";
