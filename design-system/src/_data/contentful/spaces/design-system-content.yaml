@@ -384,7 +384,7 @@ designPattern:
   variations: 'As in the example above - you can use larger text for the quotation
     if the text is shorter.
 
-'
+    '
 - sys:
     id: C66rMoN0gCCek2QCcygak
     created_at: !ruby/object:DateTime 2018-11-08 22:25:26.053000000 Z

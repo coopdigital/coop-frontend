@@ -180,7 +180,7 @@
 
         <pre><code class="language-scss">$grid-include-center-classes: false;
     $grid-include-pull-classes: false;
-    $grid-include-push-classes: false;
+    $grid-include-offset-classes: false;
     $grid-include-offset-classes: false;</code></pre>
 
         <p>These helpers can be applied to specific breakpoints only.</p>
@@ -233,19 +233,19 @@
 
     <div class="example grid-example">
         <div class="row">
-            <div class="column small-6 small-push-6">
-                <code>.small-6 .small-push-6 (first in markup)</code>
+            <div class="column small-6 small-offset-6">
+                <code>.small-6 .small-offset-6 (first in markup)</code>
             </div>
             <div class="column small-6 small-pull-6">
                 <code>.small-6 .small-pull-6 (last in markup)</code>
             </div>
         </div>
         <div class="row">
-            <div class="column small-4 small-push-4">
-                <code>.small-4 .small-push-4 (first in markup)</code>
+            <div class="column small-4 small-offset-4">
+                <code>.small-4 .small-offset-4 (first in markup)</code>
             </div>
-            <div class="column small-4 small-push-4">
-                <code>.small-4 .small-push-4 (second in markup)</code>
+            <div class="column small-4 small-offset-4">
+                <code>.small-4 .small-offset-4 (second in markup)</code>
             </div>
             <div class="column small-4 small-pull-8">
                 <code>.small-4 .small-pull-8 (last in markup)</code>
