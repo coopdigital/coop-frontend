@@ -11,7 +11,7 @@ id: pattern-library
         {% if designPattern.sys.id == '2Sf5HLM2ooWSAU2UIS0AQg' %}
         <header>
             <div class="coop-l-grid">
-                <div class="coop-l-grid-item col-md-7 col-sm-12 intro-box">
+                <div class="coop-l-grid-item coop-l-grid__item--md-7 coop-l-grid__item--sm-12 intro-box">
                     <h1>{{ designPattern.title }}
                         <span class="status status--{{ designPattern.status }}">
                             <a href="/process.html" class="status__link">{{ designPattern.status }}</a>
@@ -37,7 +37,7 @@ id: pattern-library
     <div class="coop-u-grey-light-bg m-bh-med-b">
         <div class="coop-l-container">
             <div class="coop-l-grid">
-                <div class="coop-l-grid-item col-12">
+                <div class="coop-l-grid-item coop-l-grid__item--12">
                     <section id="example" class="coop-ds-example">
                         <header class="ds-pen-example__header">
                             <h2 class="Pen-panel-title pull-left">Example</h2>
@@ -47,7 +47,7 @@ id: pattern-library
                                 <h3 class="tabs-container__title" id="TabPanelTitle-Tab1">Example</h3>
                                 <div class="tabs-container__panel" id="Tab1">
                                     <div class="coop-l-grid">
-                                        <div class="coop-l-grid-item col-sm-12 col-md-6 col-lg-3">
+                                        <div class="coop-l-grid-item coop-l-grid__item--sm-12 coop-l-grid__item--md-6 coop-l-grid__item--lg-3">
                                             {% include pattern-library/components/shared-component--signpost/dist/signpost.html %}
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@ id: pattern-library
     </div>
     <div class="coop-l-container">
         <div class="coop-l-grid">
-            <div class="coop-l-grid-item col-md-7 col-sm-12">
+            <div class="coop-l-grid-item coop-l-grid__item--md-7 coop-l-grid__item--sm-12">
                 <!-- <section id="design-and-content" class="coop-u-margin-resp-b-32-16">
                     <h2>Design and content</h2>
                     <p>{{ designPattern.design_and_content_documentation | markdownify }}</p>
