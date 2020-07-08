@@ -143,6 +143,12 @@
   clear: both;
   display: table;
 }
+.coop-c-hero.coop-c-hero__squircle--color-1a,
+.coop-c-hero.coop-c-hero__squircle--color-1b,
+.coop-c-hero.coop-c-hero__squircle--color-3a,
+.coop-c-hero.coop-c-hero__squircle--color-3b {
+  color: #fff;
+}
 .coop-c-hero--squircle .coop-c-hero__inner {
   padding-bottom: 3rem;
 }
@@ -301,6 +307,45 @@
     font-size: 1.375rem;
     line-height: 2.375rem;
   }
+}
+.coop-c-hero .coop-c-hero__squircle--color-1 {
+  fill: #ba2327;
+}
+.coop-c-hero .coop-c-hero__squircle--color-1a {
+  fill: #cd491c;
+}
+.coop-c-hero .coop-c-hero__squircle--color-1b {
+  fill: #3a6002;
+}
+.coop-c-hero .coop-c-hero__squircle--color-2 {
+  fill: #cd491c;
+}
+.coop-c-hero .coop-c-hero__squircle--color-2a {
+  fill: #ffe53b;
+}
+.coop-c-hero .coop-c-hero__squircle--color-2b {
+  fill: #4f820d;
+}
+.coop-c-hero .coop-c-hero__squircle--color-3 {
+  fill: #d395fe;
+}
+.coop-c-hero .coop-c-hero__squircle--color-3a {
+  fill: #046062;
+}
+.coop-c-hero .coop-c-hero__squircle--color-3b {
+  fill: #51178c;
+}
+.coop-c-hero .coop-c-hero__squircle--color-4 {
+  fill: #fee7c1;
+}
+.coop-c-hero .coop-c-hero__squircle--color-4a {
+  fill: #e7f7cb;
+}
+.coop-c-hero .coop-c-hero__squircle--color-4b {
+  fill: #ccf2f7;
+}
+.coop-c-hero .coop-c-hero__squircle--color-5 {
+  fill: #dee8fd;
 }
 .coop-c-hero__squircle {
   position: absolute;
