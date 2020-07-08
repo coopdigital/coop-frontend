@@ -8,11 +8,13 @@
  * Max content width: 1264px
  * Max width: 1296px
  */
+
 :root {
   --container: 81rem;
   --gutter: 1rem;
   --gutter-compensation: -1rem;
 }
+
 .coop-l-container {
   max-width: 81rem;
   max-width: var(--container);
@@ -21,17 +23,20 @@
   padding-right: 1rem;
   padding-right: var(--gutter);
 }
+
 @media (--mq-large) {
   .coop-l-container {
     margin: 0 calc(1rem / 2);
     margin: 0 calc(var(--gutter) / 2);
   }
 }
+
 @media (--mq-xlarge) {
   .coop-l-container {
     margin: 0 auto;
   }
 }
+
 .coop-l-grid {
   width: calc(100% + 1rem);
   width: calc(100% + var(--gutter));
@@ -41,6 +46,7 @@
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
+
 @media (--mq-xlarge) {
   .coop-l-grid {
     width: calc(100% + (1rem * 2));
@@ -51,6 +57,7 @@
     margin-right: var(--gutter-compensation);
   }
 }
+
 .coop-l-grid__item {
   flex: 1 0 100%;
   flex-basis: 100%;
@@ -60,6 +67,7 @@
   padding-right: calc(1rem / 2);
   padding-right: calc(var(--gutter) / 2);
 }
+
 @media (--mq-xlarge) {
   .coop-l-grid__item {
     padding-left: 1rem;
@@ -68,55 +76,68 @@
     padding-right: var(--gutter);
   }
 }
+
 .coop-l-grid--collapse .coop-l-grid__item,
 .coop-l-grid__item--collapse {
   padding-left: 0;
   padding-right: 0;
 }
+
 .coop-l-grid__item--1 {
   flex-basis: 8.33333333%;
   max-width: 8.33333333%;
 }
+
 .coop-l-grid__item--2 {
   flex-basis: 16.66666667%;
   max-width: 16.66666667%;
 }
+
 .coop-l-grid__item--3 {
   flex-basis: 25%;
   max-width: 25%;
 }
+
 .coop-l-grid__item--4 {
   flex-basis: 33.33333333%;
   max-width: 33.33333333%;
 }
+
 .coop-l-grid__item--5 {
   flex-basis: 41.66666667%;
   max-width: 41.66666667%;
 }
+
 .coop-l-grid__item--6 {
   flex-basis: 50%;
   max-width: 50%;
 }
+
 .coop-l-grid__item--7 {
   flex-basis: 58.33333333%;
   max-width: 58.33333333%;
 }
+
 .coop-l-grid__item--8 {
   flex-basis: 66.66666667%;
   max-width: 66.66666667%;
 }
+
 .coop-l-grid__item--9 {
   flex-basis: 75%;
   max-width: 75%;
 }
+
 .coop-l-grid__item--10 {
   flex-basis: 83.33333333%;
   max-width: 83.33333333%;
 }
+
 .coop-l-grid__item--11 {
   flex-basis: 91.66666667%;
   max-width: 91.66666667%;
 }
+
 /*
 For reference only, as this duplicates .coop-l-grid__item:
 .coop-l-grid__item--12 {
@@ -124,42 +145,55 @@ For reference only, as this duplicates .coop-l-grid__item:
   max-width: 100%;
 }
 */
+
 .coop-l-grid__item--offset-0 {
   margin-left: 0;
 }
+
 .coop-l-grid__item--offset-1 {
   margin-left: 8.33333333%;
 }
+
 .coop-l-grid__item--offset-2 {
   margin-left: 16.66666667%;
 }
+
 .coop-l-grid__item--offset-3 {
   margin-left: 25%;
 }
+
 .coop-l-grid__item--offset-4 {
   margin-left: 33.33333333%;
 }
+
 .coop-l-grid__item--offset-5 {
   margin-left: 41.66666667%;
 }
+
 .coop-l-grid__item--offset-6 {
   margin-left: 50%;
 }
+
 .coop-l-grid__item--offset-7 {
   margin-left: 58.33333333%;
 }
+
 .coop-l-grid__item--offset-8 {
   margin-left: 66.66666667%;
 }
+
 .coop-l-grid__item--offset-9 {
   margin-left: 75%;
 }
+
 .coop-l-grid__item--offset-10 {
   margin-left: 83.33333333%;
 }
+
 .coop-l-grid__item--offset-11 {
   margin-left: 91.66666667%;
 }
+
 @media (--mq-xsmall) {
   .coop-l-grid__item--xs {
     flex-grow: 1;
@@ -251,6 +285,7 @@ For reference only, as this duplicates .coop-l-grid__item:
     margin-left: 91.66666667%;
   }
 }
+
 @media (--mq-small) {
   .coop-l-grid__item--sm {
     flex-grow: 1;
@@ -342,6 +377,7 @@ For reference only, as this duplicates .coop-l-grid__item:
     margin-left: 91.66666667%;
   }
 }
+
 @media (--mq-medium) {
   .coop-l-grid__item--md {
     flex-grow: 1;
@@ -433,6 +469,7 @@ For reference only, as this duplicates .coop-l-grid__item:
     margin-left: 91.66666667%;
   }
 }
+
 @media (--mq-large) {
   .coop-l-grid__item--lg {
     flex-grow: 1;
@@ -524,6 +561,7 @@ For reference only, as this duplicates .coop-l-grid__item:
     margin-left: 91.66666667%;
   }
 }
+
 @media (--mq-xlarge) {
   .coop-l-grid__item--xl {
     flex-grow: 1;
@@ -615,39 +653,51 @@ For reference only, as this duplicates .coop-l-grid__item:
     margin-left: 91.66666667%;
   }
 }
+
 /**
 * Utility classes
 */
+
 .coop-u-flex {
   display: flex;
 }
+
 .coop-u-flex-wrap {
   flex-wrap: wrap;
 }
+
 .coop-u-flex-nowrap {
   flex-wrap: nowrap;
 }
+
 .coop-u-flex-row {
   flex-direction: row;
 }
+
 .coop-u-flex-column {
   flex-direction: column;
 }
+
 .coop-u-flex-row-reverse {
   flex-direction: row-reverse;
 }
+
 .coop-u-flex-column-reverse {
   flex-direction: column-reverse;
 }
+
 .coop-u-flex-start {
   justify-content: flex-start;
 }
+
 .coop-u-flex-center {
   justify-content: center;
 }
+
 .coop-u-flex-end {
   justify-content: flex-end;
 }
+
 .coop-u-flex-centered {
   justify-content: center;
   align-items: center;
