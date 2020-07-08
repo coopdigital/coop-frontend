@@ -1,8 +1,8 @@
 {% macro render(content, cms, config) -%}
   <div class="coop-c-postcode">
-    <div class="coop-l-grid__item coop-l-grid__item--lg-5 coop-c-postcode__inner">
+    <div class="coop-c-postcode__inner">
       <h2>{{content.heading}}</h2>
-        <form class="coop-l-grid__item--sm-12 coop-c-postcode__form">
+        <form class="coop-c-postcode__form">
           <label for="coop-c-postcode__search" class="coop-c-postcode__label coop-t-regular">{{content.bodyText}}</label>
           <div class="coop-c-postcode__searchbox">
             <span class="coop-c-postcode__searchbox-input">
@@ -14,13 +14,12 @@
           </div>
         </form>
 
-        <div class="coop-l-grid__item--sm-12 coop-c-postcode__alt">
+        <div class="coop-c-postcode__alt">
           <p>Shop online and get delivery in as little as 2 hours.</p>
           <p>Available in selected areas around the UK.</p>
           <p>Please switch to another browser to <a href="{{options.SHOP_URL}}">Order online</a></p>
         </div>
     </div>
-  </div>
   </div>
   <script>
       window.SHOP_URL = "{{options.SHOP_URL}}"
