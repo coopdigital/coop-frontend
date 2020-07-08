@@ -40,13 +40,13 @@
   {% if link.fields.page.data %}
   {% with internalLink = cms.get_entry(link.fields.page.data.sys.id) %}
   <a href="/{{ internalLink.full_url_path }}"
-    class="coop-c-statement-block__link coop-l-grid__item--12">{{ link.fields.title.data }}</a>
+    class="coop-c-statement-block__link">{{ link.fields.title.data }}</a>
   {% endwith %}
   {% endif %}
   {% elif link.type == 'externalLink' %}
   {% if link.fields.url.data %}
   <a href="{{ link.fields.url.data }}"
-    class="coop-c-statement-block__link coop-l-grid__item--12">{{ link.fields.title.data }}</a>
+    class="coop-c-statement-block__link">{{ link.fields.title.data }}</a>
   {% endif %}
   {% endif %}
   {% endwith %}
