@@ -5,10 +5,10 @@
 
   {% with image = cms.get_asset(content.image.sys.id) %}
     {% if config and config.isContained %}
-    <div class="coop-l-grid__item--sm-10 coop-l-grid__item--md-9 coop-l-grid__item--lg-7">
+    <div class="col-sm-10 col-md-9 col-lg-7">
       <figure class="coop-c-image">
         <picture class="coop-c-image__media">
-
+          
           <source
             media="(min-width: 1024px)"
             srcset="{{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ imageWidthLarge }} 1x,
@@ -20,7 +20,7 @@
                     {{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ imageWidthSmall * 2 }} 2x"
             type="image/webp"
           />
-
+          
           <source
             media="(min-width: 1024px)"
             srcset="{{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthLarge }} 1x,
@@ -32,7 +32,7 @@
                     {{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthSmall * 2 }} 2x"
             type="image/jpeg"
           />
-
+          
           <img
             src="{{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthLarge }}"
             alt="{% if image.description %}{{ image.description }}{% endif %}"
@@ -43,21 +43,21 @@
     {% else %}
       <figure class="coop-c-image">
         <picture class="coop-c-image__media">
-
+      
           <source media="(min-width: 1024px)" srcset="{{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ imageWidthLarge }} 1x,
                           {{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ imageWidthLarge * 2 }} 2x"
             type="image/webp" />
           <source srcset="{{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ imageWidthSmall }} 1x,
                           {{ image.data.fields.file.url }}?fm=webp&amp;q=60&amp;w={{ imageWidthSmall * 2 }} 2x"
             type="image/webp" />
-
+      
           <source media="(min-width: 1024px)" srcset="{{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthLarge }} 1x,
                           {{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthLarge * 2 }} 2x"
             type="image/jpeg" />
           <source srcset="{{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthSmall }} 1x,
                           {{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthSmall * 2 }} 2x"
             type="image/jpeg" />
-
+      
           <img src="{{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthLarge }}"
             alt="{% if image.description %}{{ image.description }}{% endif %}" />
         </picture>

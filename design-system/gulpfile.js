@@ -51,7 +51,7 @@ const settings = {
       __dirname + '/node_modules',
       '../node_modules/@coopdigital',
       __dirname + '/node_modules/@coopdigital',
-      'src/_includes/pattern-library/components'  
+      'src/_includes/pattern-library/components'
     ],
   },
   include: {
@@ -69,7 +69,7 @@ const importOptions = {
       __dirname + '/node_modules',
       '../node_modules/@coopdigital',
       __dirname + '/node_modules/@coopdigital',
-      'src/_includes/pattern-library/components' 
+      'src/_includes/pattern-library/components'
     ]
 };
 
@@ -93,9 +93,10 @@ function lintjs() {
 // Copy Co-op components
 function copyComponents() {
   return gulp.src([
-    '../packages/**/!(node_modules)*.{pcss,css,html}'
+    '../packages/**/*.html',
+    '!../packages/**/node_modules/**'
   ])
-  .pipe(gulp.dest('src/_includes/pattern-library/components'))
+    .pipe(gulp.dest('src/_includes/pattern-library/components'))
 }
 
 // Jekyll
