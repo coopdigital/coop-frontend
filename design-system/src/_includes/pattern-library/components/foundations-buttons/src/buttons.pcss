@@ -1,0 +1,92 @@
+/* Buttons  */
+
+@import "@coopdigital/foundations-vars";
+
+.coop-btn {
+  display: inline-block;
+  padding: var(--spacing-base--1-4) calc(var(--spacing-base--1-2) * 1.25);
+  color: var(--color-white);
+  background: var(--color-button-dark);
+  font-size: var(--type-base--body);
+  font-family: var(--font-family);
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  border: 0;
+  border-radius: 7px;
+  transition: all 0.15s linear;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  @media (--mq-medium) {
+    font-size: var(--type-medium--body);
+    padding: var(--spacing-medium--1-4) calc(var(--spacing-medium--1-2) * 1.25);
+  }
+}
+
+.coop-btn:hover,
+.coop-btn:focus {
+  background: var(--color-button-dark--hover);
+  color: var(--color-white);
+  border: 0;
+}
+
+.coop-btn:focus {
+  transition: none;
+  outline: 2px solid var(--color-link--focus);
+  outline-offset: 3px;
+}
+
+.coop-btn:active {
+  background: var(--color-button-dark--active);
+  color: var(--color-white);
+  outline: 0;
+}
+
+.coop-btn--primary {
+  background: var(--color-button-primary);
+  color: var(--color-white);
+}
+
+.coop-btn--primary:hover,
+.coop-btn--primary:focus {
+  background: var(--color-button-primary--hover);
+  color: var(--color-white);
+}
+
+.coop-btn--active:active {
+  background: var(--color-button-primary--active);
+  color: var(--color-white);
+}
+
+.coop-btn--full {
+  width: 100%;
+}
+
+.coop-btn--small {
+  padding: var(--spacing-base--1-8) var(--spacing-base--1-4);
+  font-size: 0.8rem;
+
+  @media (--mq-medium) {
+    padding: var(--spacing-medium--1-8) var(--spacing-medium--1-4);
+  }
+}
+
+.coop-btn--medium {
+  padding: calc(var(--spacing-base--1-4) / 2) var(--spacing-base--1-4);
+
+  @media (--mq-medium) {
+    font-size: var(--type-base--body);
+    padding: calc(var(--spacing-medium--1-4) / 2) var(--spacing-medium--1-4);
+  }
+}
+
+.coop-btn--large {
+  padding: var(--spacing-base--1-2) var(--spacing-base--1-2);
+  font-size: var(--type-medium--body);
+
+  @media (--mq-medium) {
+    padding: var(--spacing-medium--1-4) var(--spacing-medium--1-2);
+  }
+}
