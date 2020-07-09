@@ -11,8 +11,8 @@
     "src"
   ],
   "scripts": {
-    "lint": "node_modules/.bin/stylelint 'dist/*.css' --config '../../.stylelintrc' --fix",
-    "build": "node_modules/.bin/postcss src/*.css --dir dist/ --config '../../.postcssrc' --ext css",
+    "lint": "stylelint 'dist/*.css' --config '../../.stylelintrc' --fix",
+    "build": "postcss src/*.css --dir dist/ --config '../../.postcssrc' --ext css",
     "dist": "npm run build && npm run lint",
     "init": "rm -rf ./.git && git init"
   },
