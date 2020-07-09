@@ -75,7 +75,7 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        linkContentType: ['-- External link', '-- Internal link']
+        linkContentType: ['-- External link', '-- Internal link', '-- Signpost link']
       }
     ]);
 
@@ -141,4 +141,3 @@ module.exports = function (migration) {
     }
   )
 }
-
