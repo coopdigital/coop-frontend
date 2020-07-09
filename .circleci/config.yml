@@ -63,7 +63,7 @@ jobs:
           working_directory: ~/project/design-system
       - run:
           name: Install node modules
-          command: npm install
+          command: npm ci
           working_directory: ~/project/design-system
       - run:
           name: Build site

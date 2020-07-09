@@ -6,7 +6,7 @@ This project uses [Jekyll](http://jekyllrb.com/) to compile the pages, and NPM p
 
 ```
 bundle install
-npm install
+npm ci
 ```
 
 ## Local development
