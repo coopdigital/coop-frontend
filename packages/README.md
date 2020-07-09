@@ -4,7 +4,7 @@
 This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. Install dependencies in the root of the repo:
 
  ```shell script
-$ npm install
+$ npm ci
 ```
 
 This will install lerna, then [bootstrap the local packages](https://github.com/lerna/lerna/tree/master/commands/bootstrap#readme).

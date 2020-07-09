@@ -123,6 +123,7 @@ function html() {
 function css() {
   return gulp
     .src(src_paths.css)
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(cssimport(importOptions))
     .pipe(
       postcss(
@@ -135,6 +136,7 @@ function css() {
       )
     )
     .pipe(autoprefixer())
+    .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.styles))
     .pipe(connect.reload());
 }
@@ -142,7 +144,7 @@ function css() {
 // Scripts
 function js() {
   return gulp.src(src_paths.scripts)
-    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(include(settings.include))
       .pipe(concat('main.js'))
       .pipe(uglify())
