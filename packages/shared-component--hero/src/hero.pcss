@@ -1,6 +1,6 @@
 /* Hero */
 
-@import "@coopdigital/foundations-vars"; 
+@import "@coopdigital/foundations-vars";
 
 .coop-c-hero {
   overflow: hidden;
@@ -233,7 +233,7 @@
   .coop-c-hero__squircle--color-1 {
     fill: #BA2327;
   }
-  
+
   .coop-c-hero__squircle--color-1a {
     fill: #CD491C;
   }
@@ -281,7 +281,7 @@
   .coop-c-hero__squircle--color-5 {
     fill: #DEE8FD;
   }
-  
+
   &__squircle {
     position: absolute;
     bottom: 0;
@@ -330,6 +330,23 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+
+  .coop-c-signpost {
+    display: inline-block;
+    width: auto;
+
+    &__content {
+      min-height: 3.3rem;
+    }
+
+    &__icon {
+      margin-left: var(--spacing-16);
+    }
+
+    a {
+      color: var(--color-text);
     }
   }
 }
