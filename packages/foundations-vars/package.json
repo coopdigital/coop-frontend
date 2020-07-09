@@ -16,7 +16,7 @@
   "scripts": {
     "lint:src": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc' --fix",
     "lint:dist": "stylelint 'dist/*.css' --config '../../.stylelintrc' --fix",
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "build": "postcss src/*.pcss --dir dist/ --config '../../.postcssrc' --ext css",
     "dist": "npm run lint:src && npm run build && npm run lint:dist"
   },
   "repository": {
