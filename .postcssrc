@@ -1,5 +1,7 @@
 {
-  "map": false,
+  "map": {
+    "inline": false
+  },
   "plugins": {
     "postcss-import": {},
     "precss": {
