@@ -5,6 +5,7 @@
   "main": "src/component.html",
   "style": "src/component.css",
   "author": "Matt Tyas (matt.tyas@coop.co.uk)",
+  "private": true,
   "license": "MIT",
   "files": [
     "dist",
@@ -40,5 +41,5 @@
   "keywords": [
     "templates"
   ],
-  "gitHead": "f4ba3d0d4f2f4e5c7f25c6ad7e6c921c72c8d077"
+  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }
