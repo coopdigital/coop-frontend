@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-template",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Co-op Component/CSS Module Template",
   "main": "src/component.html",
   "style": "src/component.css",

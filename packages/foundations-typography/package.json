@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-typography",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "author": "@coopdigital",
   "description": "Co-op Foundations: Typography",
   "main": "dist/typography.css",
@@ -22,7 +22,7 @@
     "directory": "packages/foundations-typography"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.2.3",
+    "@coopdigital/foundations-vars": "^2.2.4",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
