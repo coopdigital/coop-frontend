@@ -8,8 +8,8 @@ LABEL maintainer="matt.tyas@coop.co.uk"
 RUN sudo curl -sSL https://rvm.io/mpapis.asc | gpg --import --no-tty
 RUN sudo curl -sSL https://get.rvm.io | bash -s stable
 
-RUN sudo rvm install ruby-2.5.1
-RUN sudo rvm --default use 2.5.1
+RUN sudo rvm install ruby-2.6.3
+RUN sudo rvm --default use 2.6.3
 
 
 # Install Bundler.
