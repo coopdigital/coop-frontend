@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-vars",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Variables",
   "style": "src/vars.pcss",

@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--video",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Co-op Shared Component: Video",
   "main": "dist/video.css",
   "style": "src/video.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/shared-component--video.git"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.2.4",
+    "@coopdigital/foundations-vars": "^2.2.5",
     "autoprefixer": "^9.3.1",
     "cssnano": "^4.1.7",
     "postcss": "^7.0.5",
