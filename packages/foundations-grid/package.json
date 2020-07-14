@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-grid",
-  "version": "1.0.15",
+  "version": "1.0.18",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Grid.",
   "main": "dist/grid.html",
@@ -17,9 +17,9 @@
     "src"
   ],
   "scripts": {
-    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
-    "lint:dist": "stylelint 'dist/*.css' --fix",
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "lint:src": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --config '../../.stylelintrc.dist.js' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --config '../../.postcssrc' --ext css",
     "dist": "npm run lint:src && npm run build && npm run lint:dist"
   },
   "repository": {
@@ -39,5 +39,5 @@
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
   },
-  "gitHead": "0191dfad9f0d8d85de1be6d7c067c4c1af23ae57"
+  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }

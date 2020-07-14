@@ -1,13 +1,15 @@
 {
-  "map": false,
+  "map": {
+    "inline": false
+  },
   "plugins": {
     "postcss-import": {},
     "precss": {
       "postcss-preset-env": {
-        "stage": 1,
-        "preserve": true
+        "stage": 1
       }
     },
-    "autoprefixer": {}
+    "autoprefixer": {},
+    "cssnano": {}
   }
 }

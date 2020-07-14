@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/css-foundations",
-  "version": "2.1.2",
+  "version": "2.1.5",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations",
   "main": "dist/foundations.css",
@@ -11,9 +11,9 @@
     "src"
   ],
   "scripts": {
-    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
-    "lint:dist": "stylelint 'dist/*.css'",
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "lint:src": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --config '../../.stylelintrc.dist.js' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --config '../../.postcssrc' --ext css",
     "dist": "npm run lint:src && npm run build"
   },
   "repository": {
@@ -22,15 +22,15 @@
     "directory": "packages/css-foundations"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^1.3.6",
-    "@coopdigital/foundations-colors": "^1.1.5",
-    "@coopdigital/foundations-forms": "^2.0.15",
-    "@coopdigital/foundations-global": "^2.0.10",
-    "@coopdigital/foundations-grid": "^1.0.15",
-    "@coopdigital/foundations-layout": "^2.0.10",
-    "@coopdigital/foundations-tables": "^1.1.10",
-    "@coopdigital/foundations-typography": "^3.1.0",
-    "@coopdigital/foundations-vars": "^2.2.2",
+    "@coopdigital/foundations-buttons": "^1.3.9",
+    "@coopdigital/foundations-colors": "^1.1.8",
+    "@coopdigital/foundations-forms": "^2.0.18",
+    "@coopdigital/foundations-global": "^2.0.13",
+    "@coopdigital/foundations-grid": "^1.0.18",
+    "@coopdigital/foundations-layout": "^2.0.13",
+    "@coopdigital/foundations-tables": "^1.1.13",
+    "@coopdigital/foundations-typography": "^3.1.3",
+    "@coopdigital/foundations-vars": "^2.2.5",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
@@ -42,5 +42,5 @@
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
   },
-  "gitHead": "8e55e09a549cdea9f2a233d76a8e7d034216fbae"
+  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }

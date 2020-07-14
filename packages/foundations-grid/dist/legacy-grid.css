@@ -1,7 +1,3 @@
-/**
-* Legacy Grid System.
-* As there will be a transition period this grid system will be made available.
-*/
 .coop-l-wrap {
   position: relative;
   display: block;
@@ -21,12 +17,12 @@
   margin-left: -8px;
   margin-right: -8px;
 }
-.coop-l-row::after,
-.coop-l-row::before {
+.coop-l-row:after,
+.coop-l-row:before {
   content: " ";
   display: table;
 }
-.coop-l-row::after {
+.coop-l-row:after {
   clear: both;
 }
 .coop-l-column,
@@ -1080,3 +1076,4 @@
     flex-direction: row-reverse;
   }
 }
+/*# sourceMappingURL=legacy-grid.css.map */

@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-tables",
-  "version": "1.1.10",
+  "version": "1.1.13",
   "author": "@coopdigital",
   "description": "CSS Foundations: Tables",
   "main": "dist/tables.css",
@@ -11,9 +11,9 @@
     "src"
   ],
   "scripts": {
-    "lint:src": "stylelint 'src/*.{css,pcss}' --fix",
-    "lint:dist": "stylelint 'dist/*.css' --fix",
-    "build": "postcss src/*.pcss --dir dist/ --ext css",
+    "lint:src": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
+    "lint:dist": "stylelint 'dist/*.css' --config '../../.stylelintrc.dist.js' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --config '../../.postcssrc' --ext css",
     "dist": "npm run lint:src && npm run build && npm run lint:dist"
   },
   "repository": {
@@ -22,7 +22,7 @@
     "directory": "packages/foundations-tables"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.2.2",
+    "@coopdigital/foundations-vars": "^2.2.5",
     "autoprefixer": "^9.6.0",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
@@ -34,5 +34,5 @@
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-prettier": "^1.1.1"
   },
-  "gitHead": "8e55e09a549cdea9f2a233d76a8e7d034216fbae"
+  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }

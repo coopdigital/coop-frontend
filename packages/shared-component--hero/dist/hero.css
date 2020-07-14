@@ -390,3 +390,19 @@
   top: 0;
   left: 0;
 }
+.coop-c-hero .coop-c-signpost {
+  display: inline-block;
+  width: auto;
+}
+.coop-c-hero .coop-c-signpost__content {
+  min-height: 3.3rem;
+}
+.coop-c-hero .coop-c-signpost__icon {
+  margin-left: 1rem;
+  margin-left: var(--spacing-16);
+}
+.coop-c-hero .coop-c-signpost__link {
+  color: #282828;
+  color: var(--color-text);
+}
+/*# sourceMappingURL=hero.css.map */

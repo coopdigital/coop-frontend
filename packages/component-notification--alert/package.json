@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-notification--alert",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Co-op Components: Notification - alert",
   "main": "dist/notification--alert.css",
   "style": "src/notification--alert.css",
@@ -11,8 +11,8 @@
     "src"
   ],
   "scripts": {
-    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
-    "build": "node_modules/.bin/postcss src/*.css --dir dist/ --ext css",
+    "lint": "stylelint 'dist/*.css' --config '../../.stylelintrc.dist.js' --fix",
+    "build": "postcss src/*.css --dir dist/ --config '../../.postcssrc' --ext css",
     "dist": "npm run build && npm run lint",
     "init": "rm -rf ./.git && git init"
   },
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/coop-frontend/packages/notification--alert.git"
   },
   "devDependencies": {
-    "@coopdigital/component-notification": "^1.0.2",
+    "@coopdigital/component-notification": "^1.0.4",
     "autoprefixer": "^9.3.1",
     "cssnano": "^4.1.7",
     "postcss": "^7.0.5",
@@ -41,5 +41,5 @@
   "keywords": [
     "alert"
   ],
-  "gitHead": "d3640920b8c6cb4b67aeb7d8e685a5ff8dfe00c6"
+  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }
