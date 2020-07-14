@@ -224,7 +224,7 @@
   }
 }
 .coop-c-editorialcard__subtitle {
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
@@ -251,6 +251,7 @@ a:hover .coop-c-editorialcard__title {
   font-size: inherit;
   line-height: inherit;
   margin-bottom: 1rem;
+  margin-top: 1.5rem;
 }
 .coop-c-editorialcard__body p:last-child {
   margin-bottom: 0;

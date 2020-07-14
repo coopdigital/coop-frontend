@@ -4,20 +4,20 @@ id: guidance
 body-page-class: dm-dark
 ---
 
-<article class="coop-l-wrap">
+<article class="coop-l-container">
 {% include breadcrumbs.html %}
     <header>
-        <div class="coop-l-row">
-            <div class="coop-l-column coop-l-medium-8 coop-l-small-12 intro-box">
+        <div class="coop-l-grid">
+            <div class="coop-l-grid__item coop-l-grid__item--medium-8 intro-box">
                 <h1>This page has moved</h1>
                 <div class="highlight-banner m-bh-med-b">
                     {{ page.introduction | markdownify }}
                 </div>
             </div>
         </div>
-    </header>  
-    <div class="coop-l-row">
-        <!-- <div class="coop-l-column coop-l-medium-4 coop-l-small-12 fixedsticky">
+    </header>
+    <div class="coop-l-grid">
+        <!-- <div class="coop-l-grid__item coop-l-grid__item--medium-4 fixedsticky">
             <nav>
                 <ul class="coop-list-bare in-page-nav">
                     {% for item in page.in_page_navigation %}
@@ -26,7 +26,7 @@ body-page-class: dm-dark
                 </ul>
             </nav>
         </div> -->
-        <div class="coop-l-column coop-l-medium-8 coop-l-small-12">
+        <div class="coop-l-grid__item coop-l-grid__item--medium-8">
             <section class="ds-section">
                 <p><a href="/content/index.html">The content design guidelines are now here</a>.</p>
             </section>
