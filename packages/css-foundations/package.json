@@ -11,10 +11,9 @@
     "src"
   ],
   "scripts": {
-    "lint:src": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
-    "lint:dist": "stylelint 'dist/*.css' --config '../../.stylelintrc.dist.js' --fix",
+    "lint": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
     "build": "postcss src/*.pcss --dir dist/ --config '../../.postcssrc' --ext css",
-    "dist": "npm run lint:src && npm run build"
+    "dist": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
