@@ -1,6 +1,6 @@
 /* Editorial Card */
 
-@import "@coopdigital/foundations-vars"; 
+@import "@coopdigital/foundations-vars";
 
 .coop-c-editorialcard {
   background-color: var(--color-white);
@@ -15,7 +15,7 @@
     height: 100%;
     border-radius: var(--ui-border-radius);
     box-shadow: var(--ui-shadow);
-    transition: box-shadow .2s ease-in;
+    transition: box-shadow 0.2s ease-in;
     flex: 1;
 
     &:hover,
@@ -40,7 +40,7 @@
   &--flip &__inner {
     @media (--mq-medium) {
       flex-direction: row-reverse;
-    }  
+    }
   }
 
   &__link {
@@ -79,19 +79,17 @@
   }
 
   &--horizontal &__image {
-
     @media (--mq-medium) {
       height: 100%;
       width: 100%;
     }
 
     /* IE 10/11 */
-    @media all and (-ms-high-contrast:none) {
+    @media all and (-ms-high-contrast: none) {
       height: auto;
     }
 
     img {
-
       @media (--mq-medium) {
         height: 100%;
         width: 100%;
@@ -99,7 +97,7 @@
       }
 
       /* IE 10/11 */
-      @media all and (-ms-high-contrast:none) {
+      @media all and (-ms-high-contrast: none) {
         height: auto;
       }
     }
@@ -110,7 +108,7 @@
     position: relative;
     z-index: 1;
     flex: 1;
-    color: #534F4F;
+    color: #534f4f;
 
     @media (--mq-large) {
       padding: 1.75rem 1.25rem;
@@ -118,7 +116,6 @@
   }
 
   &--horizontal &__media + &__content {
-
     @media (--mq-large) {
       padding-left: 1.5rem;
       padding-right: 11.25rem;
@@ -130,7 +127,6 @@
   }
 
   &--flip &__media + &__content {
-
     @media (--mq-large) {
       padding-left: 1.25rem;
     }
