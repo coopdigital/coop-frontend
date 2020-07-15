@@ -12,8 +12,8 @@
 .coop-c-editorialcard__inner {
   display: block;
   height: 100%;
-  box-shadow: 0 0.3125rem 0 0 rgba(0, 0 ,0 , .05);
-  transition: box-shadow .2s ease-in;
+  box-shadow: 0 0.3125rem 0 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in;
   flex: 1;
 }
 
@@ -26,7 +26,7 @@
 
 .coop-c-editorialcard__inner:hover,
 .coop-c-editorialcard__inner:focus {
-  box-shadow: 0 0.3125rem 0 0 rgba(0, 0 ,0 , .15);
+  box-shadow: 0 0.3125rem 0 0 rgba(0, 0, 0, 0.15);
 }
 
 .coop-c-editorialcard__link {
@@ -71,7 +71,7 @@
   }
 
   /* IE 10/11 */
-  @media all and (-ms-high-contrast:none) {
+  @media all and (-ms-high-contrast: none) {
     height: auto;
   }
 }
@@ -84,7 +84,7 @@
   }
 
   /* IE 10/11 */
-  @media all and (-ms-high-contrast:none) {
+  @media all and (-ms-high-contrast: none) {
     height: auto;
   }
 }
@@ -94,15 +94,16 @@
   position: relative;
   z-index: 1;
   flex: 1;
-  color: #534F4F;
+  color: #534f4f;
 
   @media (--mq-large) {
     padding: 1.25rem;
   }
 }
 
-.coop-c-editorialcard--horizontal .coop-c-editorialcard__media + .coop-c-editorialcard__content {
-
+.coop-c-editorialcard--horizontal
+  .coop-c-editorialcard__media
+  + .coop-c-editorialcard__content {
   @media (--mq-medium) {
     padding-left: 1.5rem;
   }
