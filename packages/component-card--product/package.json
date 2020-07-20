@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-card--product",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Co-op Components: Card - product",
   "main": "dust/card--product.css",
   "style": "src/card--product.pcss",

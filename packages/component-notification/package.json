@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-notification",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Co-op Components: Notification",
   "main": "dist/notification.css",
   "style": "src/notification.css",
