@@ -27,16 +27,16 @@
     "directory": "packages/foundations-grid"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
-    "postcss": "^7.0.17",
-    "postcss-cli": "^6.1.2",
+    "autoprefixer": "^9.8.5",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "postcss-load-config": "^2.1.0",
     "precss": "^4.0.0",
-    "prettier": "^1.18.2",
-    "stylelint": "^10.1.0",
-    "stylelint-config-prettier": "^5.2.0",
-    "stylelint-prettier": "^1.1.1"
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2"
   },
   "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }
