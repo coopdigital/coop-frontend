@@ -179,7 +179,7 @@
     font-size: 1.125rem;
     line-height: 1.875rem;
   }
-  @media (min-width: 46.875em) {
+  @media (min-width: 48em) {
     &--contrained {
       width: 66.6666%;
     }
@@ -187,7 +187,7 @@
   .section & {
     margin: 0 0 1rem;
   }
-  @media (min-width: 46.875em) {
+  @media (min-width: 48em) {
     .section & {
       margin-bottom: 2rem;
     }
