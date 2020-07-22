@@ -23,7 +23,7 @@
     "@coopdigital/component-squircles": "^2.0.0",
     "@coopdigital/component-tags": "^3.0.0",
     "@coopdigital/foundations-buttons": "^2.0.0",
-    "@coopdigital/foundations-colors": "^2.0.0",
+    "@coopdigital/foundations-colors": "^2.0.1",
     "@coopdigital/foundations-forms": "^3.0.0",
     "@coopdigital/foundations-global": "^3.0.0",
     "@coopdigital/foundations-grid": "^2.0.2",
