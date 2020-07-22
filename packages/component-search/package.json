@@ -2,8 +2,8 @@
   "name": "@coopdigital/component-search",
   "version": "1.0.18",
   "description": "Co-op Component Search",
-  "main": "src/component.html",
-  "style": "src/component.css",
+  "main": "dist/component.css",
+  "style": "src/component.pcss",
   "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
   "license": "MIT",
   "files": [
