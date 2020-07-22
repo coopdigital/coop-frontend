@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/css-foundations",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations",
   "main": "dist/foundations.css",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@coopdigital/foundations-buttons": "^2.0.0",
-    "@coopdigital/foundations-colors": "^2.0.0",
+    "@coopdigital/foundations-colors": "^2.0.1",
     "@coopdigital/foundations-forms": "^3.0.0",
     "@coopdigital/foundations-global": "^3.0.0",
     "@coopdigital/foundations-grid": "^2.0.2",
