@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-signpost",
-  "version": "2.0.15",
+  "version": "3.0.0",
   "description": "Co-op Component: signpost",
   "main": "dist/signpost.css",
   "style": "src/signpost.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/component-signpost.git"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^2.2.7",
+    "@coopdigital/foundations-vars": "^3.0.0",
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
     "postcss": "^7.0.32",
