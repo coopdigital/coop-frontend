@@ -65,42 +65,86 @@
 
   /* UI */
   --ui-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
-  --ui-shadow--hover: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+  --ui-shadow-hover: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+  --ui-shadow--hover: var(--ui-shadow-hover);
   --ui-border-radius: 8px;
 
   /* Colours */
+  /* Brand */
   --color-brand: #00b1e7;
-  --color-text: #282828;
+  --color-deal-red: #d12430;
 
   --color-white: #ffffff;
   --color-black: #000000;
 
+  /* Dark greys */
+  --color-text: #282828;
+  --color-text-alt: #595959;
+  --color-grey-dark: #6e6e6e;
+
+  /* Mid greys */
+  --color-grey-mid: #c4c4c4;
+  --color-grey-mid-light: #d8d8d8;
+
+  /* Neutral greys */
+  --color-grey-neutral-light: #f3f3f3;
+  --color-grey-light: var(--color-grey-neutral-light);
+  --color-grey-neutral-warm: #f5f5f0;
+  --color-grey-neutral-cool: #dde9ed;
+  --color-grey-neutral-cool-light: #f2f4f7;
+
   /* Links */
   --color-link: #00729a;
-  --color-link--hover: #000102;
-  --color-link--focus: #eb5f1e;
-  --color-link--active: #005981;
-  --color-link--visited: #004c67;
+  --color-link-hover: #00394e;
+  --color-link-focus: #8d44d8;
+  --color-link-active: #002c3d;
+  --color-link-visited: var(--color-link-active);
+  /* Phasing out the '--' for modifiers as it causes issues with design token processing (EG lodash) */
+  --color-link--hover: var(--color-link-hover);
+  --color-link--focus: var(--color-link-focus);
+  --color-link--active: var(--color-link-active);
+  --color-link--visited: var(--color-link-active);
 
   /* Buttons */
-  --color-button-primary: #0f8482;
-  --color-button-primary--hover: #2b9e9c;
-  --color-button-primary--active: #0c6d6b;
+  /* Primary green */
+  --color-button-green-primary: #0f8482;
+  --color-button-green-primary-hover: #2b9e9c;
+  --color-button-green-primary-active: #0c6f6d;
+  --color-button-primary: var(--color-button-green-primary);
+  --color-button-primary--hover: var(--color-button-green-primary-hover);
+  --color-button-primary--active: var(--color-button-green-primary-active);
 
-  --color-button-dark: #374c63;
-  --color-button-dark--hover: #4a6683;
-  --color-button-dark--active: #2e3f53;
+  /* Primary blue */
+  --color-button-blue-primary: #00394e;
+  --color-button-blue-primary-hover: #4a6683;
+  --color-button-blue-primary-active: #2e4052;
+  --color-button-dark: var(--color-button-blue-primary);
+  --color-button-dark--hover: var(--color-button-blue-primary-hover);
+  --color-button-dark--active: var(--color-button-blue-primary-active);
+
+  /* White button */
+  --color-button-white: var(--color-white);
+  --color-button-white-hover: #efefef;
+  --color-button-white-active: var(--color-grey-mid-light);
 
   /* default button */
-  --color-button: var(--color-button-dark);
-  --color-button--hover: var(--color-button-dark--hover);
-  --color-button--active: var(--color-button-dark--active);
+  --color-button: var(--color-button-blue-primary);
+  --color-button--hover: var(--color-button-blue-primary-hover);
+  --color-button--active: var(--color-button-blue-primary-active);
+
+  /* Notifications */
+  --color-red-error: #d12430;
+  --color-red-error-light: #f7d4d5;
+  --color-orange-alert: #f8d156;
+  --color-orange-alert-light: #f8eec7;
+  --color-green-success: #50811b;
+  --color-green-success-light: #d7e3c6;
+  --color-blue-inform: #0761c2;
+  --color-blue-inform-light: #eef3fc;
+  --color-blue-notification: var(--color-blue-inform);
+  --color-blue-notification-light: var(--color-blue-inform-light);
 
   /* Colour palette */
-  /* Greyscale */
-  --color-grey-light: #f3f3f3;
-  --color-grey-mid: #c4c4c4;
-  --color-grey-dark: #6e6e6e;
 
   /* Yellowscale */
   --color-yellow-bright: #ffff00;
@@ -139,12 +183,4 @@
   /* Redscale */
   --color-red-mid: #d63118;
   --color-red-dark: #9f2a00;
-
-  /* Notifications */
-  --color-blue-notification: #326bb7;
-  --color-blue-notification-light: #d4eaf5;
-  --color-orange-alert: #ff9d34;
-  --color-orange-alert-light: #ffebe3;
-  --color-red-error: #d63118;
-  --color-red-error-light: #fef3f4;
 }
