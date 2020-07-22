@@ -5,7 +5,7 @@
 }
 
 .ds-section-bg--dark {
-    background: var(--color-woodsmoke);
+    background: var(--color-link-hover);
 }
 
 .ds-section-bg--light,

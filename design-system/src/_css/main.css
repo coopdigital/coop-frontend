@@ -12,7 +12,6 @@
 @import "@coopdigital/foundations-buttons";
 @import "@coopdigital/foundations-forms";
 @import "@coopdigital/foundations-tables";
-@import "@coopdigital/foundations-layout";
 
 /* Components */
 @import "@coopdigital/component-search";
@@ -48,3 +47,5 @@
 @import "design-system/swatches.css";
 @import "design-system/states.css";
 @import "design-system/footer.css";
+
+@import "@coopdigital/foundations-layout";

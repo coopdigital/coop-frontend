@@ -4,60 +4,93 @@
 
 .coop-btn {
   display: inline-block;
-  padding: var(--spacing-base--1-4) calc(var(--spacing-base--1-2) * 1.25);
+  padding: calc(var(--spacing-8) * 1.25) calc(var(--spacing-16) * 1.25);
   color: var(--color-white);
-  background: var(--color-button-dark);
-  font-size: var(--type-base--body);
+  background: var(--color-button-blue);
+  font-size: var(--type-body-s);
   font-family: var(--font-family);
   font-weight: 500;
   line-height: 1.2;
   text-align: center;
   border: 0;
-  border-radius: 7px;
-  transition: all 0.15s linear;
+  border-radius: var(--ui-border-radius);
+  transition: var(--ui-transition-hover);
   outline: none;
   text-decoration: none;
   cursor: pointer;
 
   @media (--mq-medium) {
-    font-size: var(--type-medium--body);
-    padding: var(--spacing-medium--1-4) calc(var(--spacing-medium--1-2) * 1.25);
+    font-size: var(--type-body-l);
+    padding: var(--spacing-16) calc(var(--spacing-32) * 1.25);
   }
 }
 
 .coop-btn:hover,
 .coop-btn:focus {
-  background: var(--color-button-dark--hover);
+  background: var(--color-button-blue-hover);
   color: var(--color-white);
   border: 0;
+  text-decoration: underline;
 }
 
 .coop-btn:focus {
   transition: none;
-  outline: 2px solid var(--color-link--focus);
+  outline: 2px solid var(--color-link-focus);
   outline-offset: 3px;
 }
 
 .coop-btn:active {
-  background: var(--color-button-dark--active);
+  background: var(--color-button-blue-active);
   color: var(--color-white);
   outline: 0;
 }
 
 .coop-btn--primary {
-  background: var(--color-button-primary);
+  background: var(--color-button-green-primary);
   color: var(--color-white);
 }
 
 .coop-btn--primary:hover,
 .coop-btn--primary:focus {
-  background: var(--color-button-primary--hover);
+  background: var(--color-button-green-primary-hover);
   color: var(--color-white);
 }
 
-.coop-btn--active:active {
-  background: var(--color-button-primary--active);
+.coop-btn--primary:active {
+  background: var(--color-button-green-primary-active);
   color: var(--color-white);
+}
+
+.coop-btn--white {
+  background: var(--color-button-white);
+  color: var(--color-black);
+}
+
+.coop-btn--white:hover,
+.coop-btn--white:focus {
+  background: var(--color-button-white-hover);
+  color: var(--color-black);
+}
+
+.coop-btn--white:active {
+  background: var(--color-button-white-active);
+  color: var(--color-black);
+}
+
+.coop-btn--grey {
+  background: var(--color-button-grey);
+  color: var(--color-black);
+}
+
+.coop-btn--grey:hover,
+.coop-btn--grey:focus {
+  background: var(--color-button-grey-hover);
+  color: var(--color-black);
+}
+
+.coop-btn--grey:active {
+  background: var(--color-button-grey-active);
+  color: var(--color-black);
 }
 
 .coop-btn--full {
@@ -65,28 +98,12 @@
 }
 
 .coop-btn--small {
-  padding: var(--spacing-base--1-8) var(--spacing-base--1-4);
-  font-size: 0.8rem;
-
-  @media (--mq-medium) {
-    padding: var(--spacing-medium--1-8) var(--spacing-medium--1-4);
-  }
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: 1rem;
 }
 
 .coop-btn--medium {
-  padding: calc(var(--spacing-base--1-4) / 2) var(--spacing-base--1-4);
-
   @media (--mq-medium) {
-    font-size: var(--type-base--body);
-    padding: calc(var(--spacing-medium--1-4) / 2) var(--spacing-medium--1-4);
-  }
-}
-
-.coop-btn--large {
-  padding: var(--spacing-base--1-2) var(--spacing-base--1-2);
-  font-size: var(--type-medium--body);
-
-  @media (--mq-medium) {
-    padding: var(--spacing-medium--1-4) var(--spacing-medium--1-2);
+    padding: 0.75rem 1.3rem;
   }
 }
