@@ -14,8 +14,11 @@
 @import "@coopdigital/foundations-tables";
 @import "@coopdigital/foundations-layout";
 
+/* TODO: Fix components with typos in published path */
+@import "../../node_modules/@coopdigital/component-search/src/component.pcss";
+@import '../../node_modules/@coopdigital/shared-component--editorialcard/src/editorialCard.pcss';
+
 /* Components */
-@import "@coopdigital/component-search";
 @import "@coopdigital/component-card";
 @import "@coopdigital/component-card--product";
 @import "@coopdigital/component-skipnav";
@@ -25,7 +28,6 @@
 @import '@coopdigital/component-notification';
 @import '@coopdigital/component-notification--alert';
 
-@import '@coopdigital/shared-component--editorialcard';
 @import '@coopdigital/shared-component--featurecard';
 @import '@coopdigital/shared-component--signpost';
 @import '@coopdigital/shared-component--membership';
