@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-tables",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "@coopdigital",
   "description": "CSS Foundations: Tables",
   "main": "dist/tables.css",
@@ -21,7 +21,7 @@
     "directory": "packages/foundations-tables"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.1.0",
+    "@coopdigital/foundations-vars": "^3.1.1",
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
     "postcss": "^7.0.32",
