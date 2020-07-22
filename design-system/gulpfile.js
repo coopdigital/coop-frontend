@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const connect = require('gulp-connect');
 const concat = require('gulp-concat');
