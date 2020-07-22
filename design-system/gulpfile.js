@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const connect = require('gulp-connect');
 const concat = require('gulp-concat');
@@ -10,12 +9,7 @@ const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
-const cssimport = require('gulp-cssimport');
 const postcss = require('gulp-postcss');
-const postcssCustomMedia = require('postcss-custom-media');
-const postcssCustomProperties = require('postcss-custom-properties');
-const postcssNesting = require('postcss-nesting');
-const postcssCalc = require('postcss-calc');
 const spawn = require('child_process').spawn;
 
 /**
@@ -25,7 +19,7 @@ const src = 'src/';
 const dest = 'build/';
 
 const src_paths = {
-  css: src + '_css/**/*.{pcss,css}',
+  css: src + '_css/*.{pcss,css}',
   temp: src + 'temp/**/*',
   scripts: src + '_js/*.js',
   assets: [
@@ -44,15 +38,6 @@ const dest_paths = {
 const settings = {
   css: {
     outputStyle: 'compressed',
-    includePaths: [
-      'node_modules',
-      '../node_modules',
-      src + 'src/css/main.css',
-      __dirname + '/node_modules',
-      '../node_modules/@coopdigital',
-      __dirname + '/node_modules/@coopdigital',
-      'src/_includes/pattern-library/components'
-    ],
   },
   include: {
     includePaths: [
@@ -60,17 +45,6 @@ const settings = {
       __dirname + '/src/_js',
     ]
   }
-};
-
-const importOptions = {
-    matchPattern: "*.{pcss,css}",
-    includePaths: [
-      '../node_modules',
-      __dirname + '/node_modules',
-      '../node_modules/@coopdigital',
-      __dirname + '/node_modules/@coopdigital',
-      'src/_includes/pattern-library/components'
-    ]
 };
 
 
@@ -125,18 +99,7 @@ function css() {
   return gulp
     .src(src_paths.css)
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(cssimport(importOptions))
-    .pipe(
-      postcss(
-        [
-          postcssCustomMedia(),
-          postcssCustomProperties(),
-          postcssNesting(),
-          postcssCalc()
-        ]
-      )
-    )
-    .pipe(autoprefixer())
+    .pipe(postcss())
     .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.styles))
     .pipe(connect.reload());

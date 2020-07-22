@@ -3,34 +3,36 @@
 @import "design-system/temp-vars.css";
 
 /* Foundations */
-@import "normalize.css/normalize.css";
-@import "foundations-vars/src/vars.pcss";
-@import "foundations-global/src/global.pcss";
-@import "foundations-typography/src/typography.pcss";
-@import "foundations-grid/src/grid.pcss";
-@import "foundations-colors/src/colors.pcss";
-@import "foundations-buttons/src/buttons.pcss";
-@import "foundations-forms/src/forms.pcss";
-@import "foundations-tables/src/tables.pcss";
-@import "foundations-layout/src/layout.pcss";
+@import "normalize.css";
+@import "@coopdigital/foundations-vars";
+@import "@coopdigital/foundations-global";
+@import "@coopdigital/foundations-typography";
+@import "@coopdigital/foundations-grid";
+@import "@coopdigital/foundations-colors";
+@import "@coopdigital/foundations-buttons";
+@import "@coopdigital/foundations-forms";
+@import "@coopdigital/foundations-tables";
+@import "@coopdigital/foundations-layout";
+
+/* TODO: Fix components with typos in published path */
+@import "../../node_modules/@coopdigital/component-search/src/component.pcss";
+@import '../../node_modules/@coopdigital/shared-component--editorialcard/src/editorialCard.pcss';
 
 /* Components */
-@import "component-search/src/component.pcss";
-@import "component-card/src/card.pcss";
-@import "component-card--product/src/card--product.pcss";
-@import "component-skipnav/src/skipnav.pcss";
+@import "@coopdigital/component-card";
+@import "@coopdigital/component-card--product";
+@import "@coopdigital/component-skipnav";
 
-@import 'component-tags/src/tags.pcss';
-@import 'component-squircles/src/squircles.pcss';
-@import 'component-notification/src/notification.css';
-@import 'component-notification--alert/src/notification--alert.css';
+@import '@coopdigital/component-tags';
+@import '@coopdigital/component-squircles';
+@import '@coopdigital/component-notification';
+@import '@coopdigital/component-notification--alert';
 
-@import 'shared-component--editorialCard/dist/editorialCard.css';
-@import 'shared-component--featureCard/dist/featureCard.css';
-@import 'shared-component--signpost/dist/signpost.css';
-@import 'shared-component--membership/dist/membership.css';
-@import 'shared-component--offers/dist/offers.css';
-@import 'shared-component--hero/dist/hero.css';
+@import '@coopdigital/shared-component--featurecard';
+@import '@coopdigital/shared-component--signpost';
+@import '@coopdigital/shared-component--membership';
+@import '@coopdigital/shared-component--offers';
+@import '@coopdigital/shared-component--hero';
 
 /* Design system */
 @import "design-system/skipnav.css";
