@@ -144,20 +144,52 @@
   --color-blue-notification: var(--color-blue-inform);
   --color-blue-notification-light: var(--color-blue-inform-light);
 
+  /* The numeric value at the end tallies to the lightness value of the colours in HSL to give some granularity to the system */
   /* Reds */
-  --color-red-dark: #ba2327;
-  --color-red-mid: #e20f14;
+  --color-red-dark-43: #ba2327;
+  --color-red-mid-47: #e20f14;
+  --color-red-light-71: #ff6a6d;
+  --color-red-light-88: #ffc1c3;
+  --color-red-light-93: #ffdbdb;
+  --color-red-light-97: #fcf1f1;
+  --color-red-dark: var(--color-red-dark-43);
+  --color-red-mid: var(--color-red-mid-47);
+
+  /* Oranges */
+  --color-orange-dark-40: #be4015;
+  --color-orange-mid-56: #fc5724;
+  --color-orange-mid-61: #fd7b3b;
+  --color-orange-mid-67: #fd9c59;
+  --color-orange-light-73: #fdb979;
+  --color-orange-light-88: #fee7c1;
+  --color-orange-light-95: #fff8e7;
+  --color-orange-mid: var(--color-orange-mid-56);
 
   /* Yellows */
-  --color-yellow-bright: #ffff00;
-  --color-yellow-light: #ffec00;
-  --color-yellow-mid: #ffd308;
+  --color-yellow-dark-45: #cfb214;
+  --color-yellow-mid-52: #ffd309;
+  --color-yellow-mid-62: #ffe53b;
+  --color-yellow-mid-72: #fff372;
+  --color-yellow-light-83: #fffca9;
+  --color-yellow-light-90: #fffbcd;
+  --color-yellow-light-96: #fcf9ee;
+  --color-yellow-mid: var(--color-yellow-mid-52);
+  --color-yellow-light: var(--color-yellow-mid-72);
+  --color-yellow-bright: var(--color-yellow-mid-62);
 
-  /* Greenscale */
-  --color-green-bright: #edfb3c;
-  --color-green-light: #bad303;
-  --color-green-mid: #4f820d;
-  --color-green-dark: #385c0a;
+  /* Greens */
+  --color-green-dark-19: #3a6002;
+  --color-green-mid-28: #4f820d;
+  --color-green-mid-40: #72aa24;
+  --color-green-mid-54: #96cb48;
+  --color-green-light-68: #b9e277;
+  --color-green-light-88: #e7f7cb;
+  --color-green-light-95: #f6fce9;
+
+  --color-green-dark: var(--color-green-dark-19);
+  --color-green-mid: var(--color-green-mid-28);
+  --color-green-light: var(--color-green-mid-54);
+  --color-green-bright: var(--color-green-light-68);
 
   /* Turquoisescale - previously GreenBlue */
   --color-turquoise-bright: #0afbfb;
@@ -178,9 +210,4 @@
   /* Purplescale */
   --color-purple-mid: #ad208e;
   --color-purple-dark: #61307d;
-
-  /* Orangescale */
-  --color-orange-mid: #f8642c;
-
-  /* Redscale */
 }
