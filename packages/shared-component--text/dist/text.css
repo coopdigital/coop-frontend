@@ -80,9 +80,9 @@
   --color-button-white: var(--color-white);
   --color-button-white-hover: var(--color-button-grey);
   --color-button-white-active: var(--color-grey-mid-light);
-  --color-button: var(--color-button-blue-primary);
-  --color-button--hover: var(--color-button-blue-primary-hover);
-  --color-button--active: var(--color-button-blue-primary-active);
+  --color-button: var(--color-button-blue);
+  --color-button--hover: var(--color-button-blue-hover);
+  --color-button--active: var(--color-button-blue-active);
   --color-red-error: #d12430;
   --color-red-error-light: #f7d4d5;
   --color-orange-alert: #f8d156;
