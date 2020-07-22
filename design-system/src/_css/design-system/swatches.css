@@ -1,14 +1,11 @@
 .dm-colour__swatch--wide {
     padding: 10px 16px;
-    margin-bottom: 32px;
-    float: right;
-    width: 100%;
-    height: auto;
 }
 
 .dm-colour__swatch {
-    min-height: 200px;
+    min-height: 220px;
     width: 100%;
+    border-radius: var(--ui-border-radius);
 }
 
 .dm-colour__swatch.coop-u-grey-light-bg {

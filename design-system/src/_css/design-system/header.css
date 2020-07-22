@@ -12,7 +12,7 @@
 
 .ds-header--inner {
     margin-bottom: 16px;
-    background: var(--color-woodsmoke);
+    background: var(--color-link-hover);
 }
 
 .ds-header--inner .coop-logo path {
