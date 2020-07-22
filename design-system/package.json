@@ -46,7 +46,6 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
-    "gulp-cssimport": "^7.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-include": "^2.4.1",
     "gulp-jshint": "^2.1.0",
@@ -55,24 +54,20 @@
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.11.1",
     "jshint-stylish": "^2.2.1",
-    "normalize.css": "^8.0.1",
-    "postcss-calc": "^7.0.2",
-    "postcss-custom-media": "^7.0.8",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.3",
-    "postcss-plugin": "^1.0.0"
+    "normalize.css": "^8.0.1"
   },
   "scripts": {
     "build": "gulp build",
     "dist": "echo Design System - no need to build",
     "server": "gulp server"
   },
-  "browserslist": [
-    "> 5%",
-    "last 2 versions"
-  ],
   "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "cssnano": "^4.1.10",
+    "postcss-calc": "^7.0.2",
+    "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1"
   }
 }
