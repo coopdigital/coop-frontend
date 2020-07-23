@@ -6,7 +6,15 @@ This project uses [Jekyll](http://jekyllrb.com/) to compile the pages, and NPM p
 
 ```
 bundle install
+```
+
+Note: Don't run `npm install` or `npm ci` within the Design System. Instead, use Lerna to ensure all packages are symlinked ready to go, then you can preview your local package changes:
+
+```
+cd ../
+npx lerna clean
 npm ci
+cd ./design-system
 ```
 
 ## Local development

@@ -6,90 +6,106 @@
   background-size: contain;
   background-color: var(--theme--1-bg);
   padding: 10px;
+
   @media (--mq-large) {
     background-size: cover;
     background-position: 0 -24px;
   }
-  &.error {
-    & .coop-c-postcode__searchbox {
-      border: 1px solid var(--color-red-mid);
-    }
+}
+
+.coop-c-postcode.error .coop-c-postcode__searchbox {
+  border: 1px solid var(--color-red-mid);
+}
+
+.coop-c-postcode__inner {
+  background: var(--color-white);
+  margin: 36px 10px 10px;
+  padding: var(--spacing-16);
+  border-radius: 6px;
+
+  & h2 {
+    font-size: var(--type-h2-s);
+    margin-bottom: 0;
   }
-  &__inner {
-    background: var(--color-white);
-    margin: 36px 10px 10px;
-    padding: var(--spacing-16);
-    border-radius: 6px;
-    h2 {
-      font-size: var(--type-h2-s);
-      margin-bottom: 0;
-    }
-    @media (--mq-large) {
-      margin: 10px;
-    }
+
+  @media (--mq-large) {
+    margin: 10px;
   }
-  &__label {
-    font-size: 1.125rem;
-    margin-bottom: 8px;
-  }
-  &__searchbox {
-    position: relative;
-    display: flex;
-    width: 240px;
-    border: 1px solid var(--color-grey-mid);
-    padding: 2px;
+}
+
+.coop-c-postcode__label {
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+
+.coop-c-postcode__searchbox {
+  position: relative;
+  display: flex;
+  width: 240px;
+  border: 1px solid var(--color-grey-mid);
+  padding: 2px;
+  flex: 1 1;
+  border-radius: 2px;
+
+  & input {
+    font-size: var(--type-sp-s);
+    border: 0;
+    padding: 6px;
     flex: 1 1;
-    border-radius: 2px;
-    &-input {
-      display: flex;
-      flex: 1 1;
-    }
-    input {
-      font-size: var(--type-sp-s);
-      border: 0;
-      padding: 6px;
-      flex: 1 1;
-      &:focus {
-        outline-offset: -2px;
-      }
+
+    &:focus {
+      outline-offset: -2px;
     }
   }
-  &__submit {
-    background-color: var(--color-turquoise-mid);
-    border: none;
-    padding: 0 3px;
-    svg {
+}
+
+.coop-c-postcode__searchbox-input {
+  display: flex;
+  flex: 1 1;
+}
+
+.coop-c-postcode__submit {
+  background-color: var(--color-turquoise-mid);
+  border: none;
+  padding: 0 3px;
+
+  & svg {
+    fill: var(--color-white);
+    vertical-align: bottom;
+
+    & path {
       fill: var(--color-white);
-      vertical-align: bottom;
-      path {
-        fill: var(--color-white);
-      }
-      circle {
-        fill: var(--color-turquoise-mid);
-      }
+    }
+
+    & circle {
+      fill: var(--color-turquoise-mid);
     }
   }
-  &__error {
-    &:last-child {
-      margin: 6px 0 0;
-      font-size: 1.125rem;
-      .coop-u-red-mid {
-        font-weight: 500;
-      }
-    }
-  }
-  &__alt {
+}
+
+.coop-c-postcode__error:last-child {
+  margin: 6px 0 0;
+  font-size: 1.125rem;
+}
+
+.coop-c-postcode__error:last-child .coop-u-red-mid {
+  font-weight: 500;
+}
+
+.coop-c-postcode__alt {
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .coop-c-postcode__form {
     display: none;
   }
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    &__form {
-      display: none;
-    }
-    &__alt {
-      display: block;
-      p {
-        margin-bottom: 8px;
-      }
+
+  .coop-c-postcode__alt {
+    display: block;
+
+    & p {
+      margin-bottom: 8px;
     }
   }
 }

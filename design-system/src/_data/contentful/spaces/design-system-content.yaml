@@ -487,9 +487,9 @@ designPattern:
 - sys:
     id: 7hxfZ01mU0Sw6ceA06oOki
     created_at: !ruby/object:DateTime 2018-11-08 23:35:43.059000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-18 14:29:57.023000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-22 18:18:29.362000000 Z
     content_type_id: designPattern
-    revision: 2
+    revision: 3
   title: Page layout
   status: live
   github_url: https://github.com/coopdigital/foundations-grid
@@ -502,12 +502,13 @@ designPattern:
 
     The default widths (breakpoints) we use are:
 
-    - All: 0px and up — (all-{column-span})
-    - Extra small: 320px and up — (.xsmall-{column-span})
-    - Small: 480px and up — ((.small-{column-span})
-    - Medium: 750px and up — ((.medium-{column-span})
-    - Large: 960px and up — ((.large-{column-span})
-    - Extra large: 1300px and up — ((.xlarge-{column-span})
+    - Extra extra small (xxsmall): 320px and up (.coop-l-grid__item--xxsmall-{col-span})
+    - Extra small (xsmall): 414px and up (.coop-l-grid__item--xsmall-{col-span})
+    - Small (small): 600px and up (.coop-l-grid__item--small-{col-span})
+    - Medium: 768px and up (.coop-l-grid__item--medium-{col-span})
+    - Large: 1024px and up (.coop-l-grid__item--large-{col-span})
+    - Extra large: 1300px and up (.coop-l-grid__item--xlarge-{col-span})
+    - Extra extra large: 1440px and up (.coop-l-grid__item--xxlarge-{col-span})
 - sys:
     id: 1KYnuYZmqsMMe0uuO88uQo
     created_at: !ruby/object:DateTime 2018-11-08 23:55:43.065000000 Z
@@ -2098,9 +2099,9 @@ page:
 - sys:
     id: 3JcC1cQTjEdq6Pvo3dJGAc
     created_at: !ruby/object:DateTime 2019-05-10 09:21:00.051000000 Z
-    updated_at: !ruby/object:DateTime 2020-05-27 06:30:44.451000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-22 18:21:31.662000000 Z
     content_type_id: page
-    revision: 12
+    revision: 13
   title: Front-end resources
   introduction: |-
     Our front-end foundations and components are a collection of CSS and HTML files that Co-op's Digital services use.
@@ -2110,19 +2111,11 @@ page:
   - sys:
       id: 1nQ7OypmxYxQ4Ypm0c3tU6
       created_at: !ruby/object:DateTime 2019-05-10 09:23:35.007000000 Z
-      updated_at: !ruby/object:DateTime 2019-05-10 09:25:57.733000000 Z
+      updated_at: !ruby/object:DateTime 2020-07-22 18:20:45.037000000 Z
       content_type_id: inPageNavigationLink
-      revision: 2
-    url_text: Front-end foundations
+      revision: 3
+    url_text: Co-op front-end
     section_id: front-end-foundations
-  - sys:
-      id: 3q7IYbWfEWJzgSsLRXm0Cd
-      created_at: !ruby/object:DateTime 2019-05-10 09:26:47.745000000 Z
-      updated_at: !ruby/object:DateTime 2019-05-10 09:29:18.085000000 Z
-      content_type_id: inPageNavigationLink
-      revision: 2
-    url_text: Front-end components
-    section_id: front-end-components
   - sys:
       id: 7hC8BnSI6LE7FsABJw4usc
       created_at: !ruby/object:DateTime 2019-05-10 09:27:24.544000000 Z
@@ -2158,7 +2151,7 @@ page:
     See the:
 
     <ul>
-      <li><a href="https://github.com/coopdigital/coop-frontend">Co-op front-end - a mono repo coantaing all the front-end foundations and components</a></li>
+      <li><a href="https://github.com/coopdigital/coop-frontend">Co-op front-end - a mono repo containing all the front-end foundations and components</a></li>
       <li><a href="https://www.npmjs.com/settings/coopdigital/packages">Indivdual foundations packages on NPM</a></li>
       <li><a href="https://coop-design-system.herokuapp.com/pattern-library/">Examples of the foundations in the pattern library</a></li>
     </ul>
@@ -3187,10 +3180,10 @@ inPageNavigationLink:
 - sys:
     id: 1nQ7OypmxYxQ4Ypm0c3tU6
     created_at: !ruby/object:DateTime 2019-05-10 09:23:35.007000000 Z
-    updated_at: !ruby/object:DateTime 2019-05-10 09:25:57.733000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-22 18:20:45.037000000 Z
     content_type_id: inPageNavigationLink
-    revision: 2
-  url_text: Front-end foundations
+    revision: 3
+  url_text: Co-op front-end
   section_id: front-end-foundations
 - sys:
     id: 3q7IYbWfEWJzgSsLRXm0Cd

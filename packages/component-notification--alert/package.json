@@ -3,7 +3,7 @@
   "version": "1.0.7",
   "description": "Co-op Components: Notification - alert",
   "main": "dist/notification--alert.css",
-  "style": "src/notification--alert.css",
+  "style": "src/notification--alert.pcss",
   "author": "Matt Tyas (matt.tyas@coop.co.uk)",
   "license": "MIT",
   "files": [
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "lint": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
-    "build": "postcss src/*.css --dir dist/ --config '../../postcss.config.js' --ext css",
+    "build": "postcss src/*.pcss --dir dist/ --config '../../postcss.config.js' --ext css",
     "dist": "npm run build && npm run lint",
     "init": "rm -rf ./.git && git init"
   },
