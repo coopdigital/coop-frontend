@@ -5,16 +5,16 @@
 .coop-c-image {
   margin: 0 0 var(--spacing-base--1-4) 0;
 
-  img {
+  & img {
     width: 100%;
     display: block;
   }
+}
 
-  .section & {
-    margin: 0 0 1rem 0;
+.section .coop-c-image {
+  margin: 0 0 1rem 0;
 
-    @media (--mq-medium) {
-      margin-bottom: 2rem;
-    }
+  @media (--mq-medium) {
+    margin-bottom: 2rem;
   }
 }
