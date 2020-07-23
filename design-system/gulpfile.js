@@ -26,7 +26,10 @@ const src_paths = {
     src + '_assets/**/*',
     'node_modules/coop-frontend-toolkit/static/**/*'
   ],
-  html: src + '**/*.html'
+  html: [
+    src + '_includes/pattern-library/foundations/**/*.html',
+    src + '**/*.html'
+  ]
 };
 
 const dest_paths = {
@@ -144,6 +147,7 @@ function optimiseImages() {
  */
 function watch(done) {
   gulp.watch(['src/_css/**/**.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
+  gulp.watch(['../packages/**/*.{pcss,css,html}', '!../packages/**/node_modules/**'], copyComponents);
   gulp.watch(src_paths.scripts, gulp.series(lintjs, js));
   gulp.watch(src_paths.assets, optimiseImages);
   gulp.watch(src_paths.html, gulp.series(jekyll, html));
