@@ -174,26 +174,24 @@
   --color-pink-light: var(--color-magenta-mid-7);
   --color-pink-bright: var(--color-magenta-light-9);
 }
-.coop-c-text {
-  p {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
+.coop-c-text p {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}
+.coop-c-text h2:first-child {
+  padding-top: 0;
+}
+@media (min-width: 48em) {
+  .coop-c-text--contrained {
+    width: 66.6666%;
   }
-  @media (min-width: 48em) {
-    &--contrained {
-      width: 66.6666%;
-    }
-  }
-  .section & {
-    margin: 0 0 1rem;
-  }
-  @media (min-width: 48em) {
-    .section & {
-      margin-bottom: 2rem;
-    }
-  }
-  h2:first-child {
-    padding-top: 0;
+}
+.section .coop-c-text {
+  margin: 0 0 1rem;
+}
+@media (min-width: 48em) {
+  .section .coop-c-text {
+    margin-bottom: 2rem;
   }
 }
 /*# sourceMappingURL=text.css.map */
