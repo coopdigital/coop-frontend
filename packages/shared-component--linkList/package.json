@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--linklist",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Co-op Shared Component: Feature Card",
   "main": "dist/linkList.css",
   "style": "src/linkList.pcss",
