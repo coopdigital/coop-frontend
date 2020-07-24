@@ -78,3 +78,7 @@
         font-size: 25px;
     }
 }
+
+.coop-u-space-between {
+    justify-content: space-between;
+}
