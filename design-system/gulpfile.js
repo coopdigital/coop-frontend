@@ -58,7 +58,7 @@ function lintjs() {
   return gulp.src([
     src_paths.scripts,
     '!' + src + '_js/vendor'
-  ])
+  ], { follow: true })
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
 }
@@ -69,7 +69,9 @@ function lintjs() {
  */
 // Copy Co-op components
 function copyComponents() {
-  return gulp.src(['node_modules/@coopdigital/**/*.{pcss,css,html}'])
+  return gulp.src([
+    'node_modules/@coopdigital/**/*.{pcss,css,html}'
+  ], { follow: true })
     .pipe(gulp.dest('src/_includes/pattern-library/components'))
 }
 
@@ -89,15 +91,13 @@ function jekyll(gulpCallBack) {
 }
 
 function html() {
-  return gulp
-    .src(dest + '**/*.html')
+  return gulp.src(dest + '**/*.html', { follow: true })
     .pipe(connect.reload());
 }
 
 // Styles
 function css() {
-  return gulp
-    .src(src_paths.css)
+  return gulp.src(src_paths.css, { follow: true })
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(postcss())
     .pipe(sourcemaps.write('maps/'))
@@ -107,7 +107,7 @@ function css() {
 
 // Scripts
 function js() {
-  return gulp.src(src_paths.scripts)
+  return gulp.src(src_paths.scripts, { follow: true })
     .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(include(settings.include))
       .pipe(concat('main.js'))
@@ -118,22 +118,22 @@ function js() {
 }
 
 function vendorjs() {
-  return gulp
-    .src(['node_modules/coop-frontend-toolkit/scripts/vendor/**/*', src + '_js/vendor/**/*'])
+  return gulp.src([
+    'node_modules/coop-frontend-toolkit/scripts/vendor/**/*',
+    src + '_js/vendor/**/*'
+  ], { follow: true })
     .pipe(gulp.dest(dest_paths.scripts + '/vendor'));
 }
 
 // Static assets
 function assets() {
-  return gulp
-    .src(src_paths.assets)
+  return gulp.src(src_paths.assets, { follow: true })
     .pipe(gulp.dest(dest_paths.assets))
     .pipe(connect.reload());
 }
 
 function optimiseImages() {
-  return gulp
-    .src(dest_paths.assets + '/images/**/*')
+  return gulp.src(dest_paths.assets + '/images/**/*', { follow: true })
     .pipe(imagemin())
     .pipe(gulp.dest(dest_paths.assets + '/images'));
 }
