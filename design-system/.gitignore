@@ -18,5 +18,8 @@ npm-debug.log
 # Editor caches
 .idea/
 
+# Updates from Contentful
+src/_data/
+
 # Components copied from node_modules
 src/_includes/pattern-library/components/
