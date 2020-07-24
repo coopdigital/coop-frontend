@@ -17,9 +17,9 @@ designPattern:
 - sys:
     id: lAvhQFgf60gYgaGeSyS2k
     created_at: !ruby/object:DateTime 2018-11-08 19:53:47.846000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-18 14:55:53.989000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-23 15:33:32.741000000 Z
     content_type_id: designPattern
-    revision: 4
+    revision: 5
   title: Logo
   status: live
   github_url: https://www.npmjs.com/package/@coopdigital/foundations-global
@@ -34,17 +34,7 @@ designPattern:
     - only be used once per page
     - be the only thing that uses the brand blue
 
-    <div class="coop-l-row coop-u-margin-th">
-        <div class="coop-l-column coop-l-small-6 coop-l-medium-4">
-            <div class="dm-colour__swatch dm-colour__swatch--wide coop-u-brand-bg coop-u-padding-q coop-u-margin-bh">
-                <ul class="list-bare dm-colour__definition coop-u-white">
-                    <li class="coop-bold">Co-op blue</li>
-                    <li>var(--color-brand)</li>
-                    <li>#00B1E7</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    [See the brand colour](https://coop-design-system.herokuapp.com/pattern-library/foundations/colour.html).
   accessibility_documentation: |-
     The Co-op blue should only be used for the logo. It is not accessible for text. The logo should always be in the top left hand corner of the website as this a consistent signpost home for users.
 
@@ -52,9 +42,9 @@ designPattern:
 - sys:
     id: 6wmK1ZxEeAAC2iuuYqgiui
     created_at: !ruby/object:DateTime 2018-11-08 20:53:34.160000000 Z
-    updated_at: !ruby/object:DateTime 2020-04-03 15:49:51.636000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-23 15:32:53.651000000 Z
     content_type_id: designPattern
-    revision: 7
+    revision: 9
   title: Links
   status: live
   github_url: https://github.com/coopdigital/foundations-typography
@@ -63,40 +53,10 @@ designPattern:
     example: “Start making your will”.'
   design_and_content_documentation: "A link should always be displayed as above unless
     it's used on a background colour, in which case is can be black or white.\n\nLinks
-    that are in context, for example within a header or footer — can be styled differently.\n\n<div
-    class=\"coop-l-row\">\n    <div class=\"coop-l-column coop-l-small-6 coop-l-medium-4\">\n
-    \       <div class=\"dm-colour\">\n            <div class=\"dm-colour__swatch
-    dm-colour__swatch--wide coop-u-link-blue-bg coop-u-padding-q coop-u-margin-bh\">\n
-    \             <ul class=\"list-bare dm-colour__definition coop-u-white\">\n                  <li
-    class=\"coop-bold\">Link</li>\n                  <li>var(--color-link)</li>\n
-    \                 <li>#00729A</li>\n              </ul>\n            </div>\n
-    \       </div>\n    </div>\n    <div class=\"coop-l-column coop-l-small-6 coop-l-medium-4\">\n
-    \       <div class=\"dm-colour\">\n            <div class=\"dm-colour__swatch
-    dm-colour__swatch--wide coop-u-link-hover-blue-bg coop-u-padding-q coop-u-margin-bh\">\n
-    \             <ul class=\"list-bare dm-colour__definition coop-u-white\">\n                  <li
-    class=\"coop-bold\">Link hover</li>\n                  <li>var(--color-link--hover)</li>\n
-    \                 <li>#00394E</li>\n              </ul>\n            </div>\n
-    \       </div>\n    </div>\n    <div class=\"coop-l-column coop-l-small-6 coop-l-medium-4\">\n
-    \       <div class=\"dm-colour\">\n            <div class=\"dm-colour__swatch
-    dm-colour__swatch--wide coop-u-link-focus-bg coop-u-padding-q coop-u-margin-bh\">\n
-    \             <ul class=\"list-bare dm-colour__definition coop-u-white\">\n                  <li
-    class=\"coop-bold\">Link focus</li>\n                  <li>var(--color-link--focus)</li>\n
-    \                 <li>#EB5F1E</li>\n              </ul>\n            </div>\n
-    \       </div>\n    </div>\n    <div class=\"coop-l-column coop-l-small-6 coop-l-medium-4\">\n
-    \       <div class=\"dm-colour\">\n            <div class=\"dm-colour__swatch
-    dm-colour__swatch--wide coop-u-link-active-bg coop-u-padding-q coop-u-margin-bh\">\n
-    \             <ul class=\"list-bare dm-colour__definition coop-u-white\">\n                  <li
-    class=\"coop-bold\">Link visited</li>\n                  <li>var(--color-link--visited)</li>\n
-    \                 <li>#002C3D</li>\n              </ul>\n            </div>\n
-    \       </div>\n    </div>\n  <div class=\"coop-l-column coop-l-small-6 coop-l-medium-4\">\n
-    \       <div class=\"dm-colour\">\n            <div class=\"dm-colour__swatch
-    dm-colour__swatch--wide coop-u-link-active-bg coop-u-padding-q coop-u-margin-bh\">\n
-    \             <ul class=\"list-bare dm-colour__definition coop-u-white\">\n                  <li
-    class=\"coop-bold\">Link active</li>\n                  <li>var(--color-link--visited)</li>\n
-    \                 <li>#002C3D</li>\n              </ul>\n            </div>\n
-    \       </div>\n    </div>\n</div>\n\nLinks should: \n- be colour contrast checked.\n-
-    be underlined regardless of what colour they are.\n- use the hand/pointer to indicate
-    that the link is clickable.\n\n"
+    that are in context, for example within a header or footer — can be styled differently.\n\n[See
+    the link colours](https://coop-design-system.herokuapp.com/pattern-library/foundations/colour.html).\n\nLinks
+    should: \n- be colour contrast checked.\n- be underlined regardless of what colour
+    they are.\n- use the hand/pointer to indicate that the link is clickable.\n\n"
   accessibility_documentation: "Link text can be read out of context and should always
     tell the user where it’s taking them — never use ‘click here’. Find out how we
     write link text. \n\nFind out [how we write link text](https://coop-design-manual.herokuapp.com/content.html#links).\n\n[For
@@ -104,9 +64,9 @@ designPattern:
 - sys:
     id: 1B1xHli8eMAe2emCygaQ8K
     created_at: !ruby/object:DateTime 2018-11-08 20:59:21.831000000 Z
-    updated_at: !ruby/object:DateTime 2019-04-26 08:26:51.231000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-23 15:32:20.737000000 Z
     content_type_id: designPattern
-    revision: 10
+    revision: 12
   title: Buttons
   status: live
   introduction: Buttons are functional. They should allow a user to complete a task
@@ -116,53 +76,7 @@ designPattern:
 
     The primary button should only be used once per page.
 
-
-    <div class="coop-l-row coop-u-margin-th">
-        <div class="coop-l-column coop-l-small-6 coop-l-medium-4">
-            <div class="dm-colour">
-                <div class="dm-colour__swatch dm-colour__swatch--wide coop-u-button-primary-bg coop-u-padding-q coop-u-margin-bh">
-                  <ul class="list-bare dm-colour__definition coop-u-white coop-u-margin-x">
-                      <li class="coop-bold">Primary button</li>
-                      <li>var(--color-button-primary)</li>
-                      <li>#0F8482</li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-        <div class="coop-l-column coop-l-small-6 coop-l-medium-4">
-            <div class="dm-colour">
-                <div class="dm-colour__swatch dm-colour__swatch--wide coop-u-button-primary-hover-bg coop-u-padding-q coop-u-margin-bh">
-                  <ul class="list-bare dm-colour__definition coop-u-white coop-u-margin-x">
-                      <li class="coop-bold">Primary button hover</li>
-                      <li>var(--color-button-primary--hover)</li>
-                      <li>#2B9E9C</li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-        <div class="coop-l-column coop-l-small-6 coop-l-medium-4">
-            <div class="dm-colour">
-                <div class="dm-colour__swatch dm-colour__swatch--wide coop-u-button-dark-bg coop-u-padding-q coop-u-margin-bh">
-                  <ul class="list-bare dm-colour__definition coop-u-white coop-u-margin-x">
-                      <li class="coop-bold">Button dark</li>
-                      <li>var(--color-button-dark)</li>
-                      <li>#00394E</li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-        <div class="coop-l-column coop-l-small-6 coop-l-medium-4">
-            <div class="dm-colour">
-                <div class="dm-colour__swatch dm-colour__swatch--wide coop-u-button-dark-hover-bg coop-u-padding-q coop-u-margin-bh">
-                  <ul class="list-bare dm-colour__definition coop-u-white  coop-u-margin-x">
-                      <li class="coop-bold">Button dark hover</li>
-                      <li>var(--color-button-dark--hover)</li>
-                      <li>#4A6683</li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    [See the button colours](https://coop-design-system.herokuapp.com/pattern-library/foundations/colour.html).
   accessibility_documentation: |-
     The area for clicking and tapping buttons must be large enough for people to activate them. Small buttons, and buttons that are placed too close to each other, are difficult for many people to use.
 
@@ -332,9 +246,9 @@ designPattern:
 - sys:
     id: 3ji7octqKIAK6M64O4C4UW
     created_at: !ruby/object:DateTime 2018-11-08 21:46:45.858000000 Z
-    updated_at: !ruby/object:DateTime 2019-06-18 14:47:41.840000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-24 09:04:19.799000000 Z
     content_type_id: designPattern
-    revision: 2
+    revision: 3
   title: Bullet list
   status: live
   github_url: https://github.com/coopdigital/foundations-typography
@@ -342,15 +256,21 @@ designPattern:
   introduction: Lists are an effective way of breaking up content — they make it easier
     for users to scan and find information. Use bullet points to break up a list of
     items.
+  design_and_content_documentation: "[Find out how we write bullet lists](https://coop-design-system.herokuapp.com/content/digital-content-guidelines.html#l)"
+  variations: "[Numbered lists](https://coop-design-system.herokuapp.com/pattern-library/foundations/numbered-list.html)"
 - sys:
     id: 5JoR23Ulbi8CisOuQ6g02c
     created_at: !ruby/object:DateTime 2018-11-08 21:57:28.235000000 Z
-    updated_at: !ruby/object:DateTime 2018-11-08 21:57:28.235000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-24 09:23:09.480000000 Z
     content_type_id: designPattern
-    revision: 1
+    revision: 3
   title: Numbered list
   status: live
+  github_url: https://github.com/coopdigital/foundations-typography
+  npm_url: https://www.npmjs.com/package/@coopdigital/foundations-typography
   introduction: Numbered lists are used to indicate a logical sequence.
+  design_and_content_documentation: "[Find out how we write numbered lists](https://coop-design-system.herokuapp.com/content/digital-content-guidelines.html#l)"
+  variations: "[Bullet list](https://coop-design-system.herokuapp.com/pattern-library/foundations/bullet-list.html)"
 - sys:
     id: tP1aGA2t5AEG42aquge0y
     created_at: !ruby/object:DateTime 2018-11-08 22:04:36.898000000 Z
@@ -384,7 +304,7 @@ designPattern:
   variations: 'As in the example above - you can use larger text for the quotation
     if the text is shorter.
 
-'
+    '
 - sys:
     id: C66rMoN0gCCek2QCcygak
     created_at: !ruby/object:DateTime 2018-11-08 22:25:26.053000000 Z
@@ -1286,9 +1206,9 @@ page:
 - sys:
     id: 2dwjl9DDVOEK8WEkwss0Mc
     created_at: !ruby/object:DateTime 2018-10-24 13:37:19.171000000 Z
-    updated_at: !ruby/object:DateTime 2018-11-19 14:09:59.089000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-24 07:12:13.068000000 Z
     content_type_id: page
-    revision: 2
+    revision: 3
   title: Accessibility guidelines
   introduction: |-
     Do not design for difference, design so that no one feels different.
@@ -1362,6 +1282,8 @@ page:
     - who are not confident using digital channels
 
     [We design services for everyone](https://coop-design-system.herokuapp.com/principles.html#everyone).
+
+    [Read Co-op's accessibility policy](https://coop.co.uk/accessibility).
 
     ## Accessibility means no barriers
     We believe in removing barriers. No one should be prevented from interacting with us or using our services.
