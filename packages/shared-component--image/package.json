@@ -36,6 +36,9 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-prettier": "^1.1.2"
   },
+  "peerDependencies": {
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+  },
   "bugs": {
     "url": "https://github.com/coopdigital/shared-component--image/issues"
   },
