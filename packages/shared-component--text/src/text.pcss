@@ -1,28 +1,28 @@
 /* Text */
 
-@import "@coopdigital/foundations-vars"; 
+@import "@coopdigital/foundations-vars";
 
 .coop-c-text {
-  p {
+  & p {
     font-size: 1.125rem;
     line-height: 1.875rem;
   }
 
-  &--contrained {
-    @media (--mq-medium) {
-      width: 66.6666%;
-    }
-  }
-
-  .section & {
-    margin: 0 0 1rem 0;
-
-    @media (--mq-medium) {
-      margin-bottom: 2rem;
-    }
-  }
-
-  h2:first-child {
+  & h2:first-child {
     padding-top: 0;
+  }
+}
+
+.coop-c-text--contrained {
+  @media (--mq-medium) {
+    width: 66.6666%;
+  }
+}
+
+.section .coop-c-text {
+  margin: 0 0 1rem 0;
+
+  @media (--mq-medium) {
+    margin-bottom: 2rem;
   }
 }

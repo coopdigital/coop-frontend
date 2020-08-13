@@ -17,3 +17,6 @@ npm-debug.log
 
 # Editor caches
 .idea/
+
+# Components copied from node_modules
+src/_includes/pattern-library/components/

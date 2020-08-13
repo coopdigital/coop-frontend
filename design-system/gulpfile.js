@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const connect = require('gulp-connect');
 const concat = require('gulp-concat');
@@ -10,12 +9,7 @@ const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
-const cssimport = require('gulp-cssimport');
 const postcss = require('gulp-postcss');
-const postcssCustomMedia = require('postcss-custom-media');
-const postcssCustomProperties = require('postcss-custom-properties');
-const postcssNesting = require('postcss-nesting');
-const postcssCalc = require('postcss-calc');
 const spawn = require('child_process').spawn;
 
 /**
@@ -25,14 +19,17 @@ const src = 'src/';
 const dest = 'build/';
 
 const src_paths = {
-  css: src + '_css/**/*.{pcss,css}',
+  css: src + '_css/*.{pcss,css}',
   temp: src + 'temp/**/*',
   scripts: src + '_js/*.js',
   assets: [
     src + '_assets/**/*',
     'node_modules/coop-frontend-toolkit/static/**/*'
   ],
-  html: src + '**/*.html'
+  html: [
+    src + '_includes/pattern-library/foundations/**/*.html',
+    src + '**/*.html'
+  ]
 };
 
 const dest_paths = {
@@ -44,15 +41,6 @@ const dest_paths = {
 const settings = {
   css: {
     outputStyle: 'compressed',
-    includePaths: [
-      'node_modules',
-      '../node_modules',
-      src + 'src/css/main.css',
-      __dirname + '/node_modules',
-      '../node_modules/@coopdigital',
-      __dirname + '/node_modules/@coopdigital',
-      'src/_includes/pattern-library/components'
-    ],
   },
   include: {
     includePaths: [
@@ -60,17 +48,6 @@ const settings = {
       __dirname + '/src/_js',
     ]
   }
-};
-
-const importOptions = {
-    matchPattern: "*.{pcss,css}",
-    includePaths: [
-      '../node_modules',
-      __dirname + '/node_modules',
-      '../node_modules/@coopdigital',
-      __dirname + '/node_modules/@coopdigital',
-      'src/_includes/pattern-library/components'
-    ]
 };
 
 
@@ -81,7 +58,7 @@ function lintjs() {
   return gulp.src([
     src_paths.scripts,
     '!' + src + '_js/vendor'
-  ])
+  ], { follow: true })
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
 }
@@ -93,9 +70,8 @@ function lintjs() {
 // Copy Co-op components
 function copyComponents() {
   return gulp.src([
-    '../packages/**/*.{pcss,css,html}',
-    '!../packages/**/node_modules/**'
-  ])
+    'node_modules/@coopdigital/**/*.{pcss,css,html}'
+  ], { follow: true })
     .pipe(gulp.dest('src/_includes/pattern-library/components'))
 }
 
@@ -115,28 +91,15 @@ function jekyll(gulpCallBack) {
 }
 
 function html() {
-  return gulp
-    .src(dest + '**/*.html')
+  return gulp.src(dest + '**/*.html', { follow: true })
     .pipe(connect.reload());
 }
 
 // Styles
 function css() {
-  return gulp
-    .src(src_paths.css)
+  return gulp.src(src_paths.css, { follow: true })
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(cssimport(importOptions))
-    .pipe(
-      postcss(
-        [
-          postcssCustomMedia(),
-          postcssCustomProperties(),
-          postcssNesting(),
-          postcssCalc()
-        ]
-      )
-    )
-    .pipe(autoprefixer())
+    .pipe(postcss())
     .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.styles))
     .pipe(connect.reload());
@@ -144,7 +107,7 @@ function css() {
 
 // Scripts
 function js() {
-  return gulp.src(src_paths.scripts)
+  return gulp.src(src_paths.scripts, { follow: true })
     .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(include(settings.include))
       .pipe(concat('main.js'))
@@ -155,22 +118,22 @@ function js() {
 }
 
 function vendorjs() {
-  return gulp
-    .src(['node_modules/coop-frontend-toolkit/scripts/vendor/**/*', src + '_js/vendor/**/*'])
+  return gulp.src([
+    'node_modules/coop-frontend-toolkit/scripts/vendor/**/*',
+    src + '_js/vendor/**/*'
+  ], { follow: true })
     .pipe(gulp.dest(dest_paths.scripts + '/vendor'));
 }
 
 // Static assets
 function assets() {
-  return gulp
-    .src(src_paths.assets)
+  return gulp.src(src_paths.assets, { follow: true })
     .pipe(gulp.dest(dest_paths.assets))
     .pipe(connect.reload());
 }
 
 function optimiseImages() {
-  return gulp
-    .src(dest_paths.assets + '/images/**/*')
+  return gulp.src(dest_paths.assets + '/images/**/*', { follow: true })
     .pipe(imagemin())
     .pipe(gulp.dest(dest_paths.assets + '/images'));
 }
@@ -181,6 +144,7 @@ function optimiseImages() {
  */
 function watch(done) {
   gulp.watch(['src/_css/**/**.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
+  gulp.watch(['../packages/**/*.{pcss,css,html}', '!../packages/**/node_modules/**'], copyComponents);
   gulp.watch(src_paths.scripts, gulp.series(lintjs, js));
   gulp.watch(src_paths.assets, optimiseImages);
   gulp.watch(src_paths.html, gulp.series(jekyll, html));
