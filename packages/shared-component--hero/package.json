@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--hero",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Co-op Shared Component: Hero",
   "main": "dist/hero.css",
   "style": "src/hero.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/shared-component--hero.git"
   },
   "dependencies": {
-    "@coopdigital/foundations-vars": "^3.1.4"
+    "@coopdigital/foundations-vars": "^3.1.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

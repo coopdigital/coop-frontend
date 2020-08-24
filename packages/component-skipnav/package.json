@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-skipnav",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Co-op Component: Skipnav",
   "main": "dist/skipnav.css",
   "style": "src/skipnav.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/component-skipnav.git"
   },
   "dependencies": {
-    "@coopdigital/foundations-vars": "^3.1.4"
+    "@coopdigital/foundations-vars": "^3.1.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

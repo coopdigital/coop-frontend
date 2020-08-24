@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-card--product",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Co-op Components: Card - product",
   "main": "dust/card--product.css",
   "style": "src/card--product.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/component-card--product.git"
   },
   "dependencies": {
-    "@coopdigital/foundations-vars": "^3.1.4"
+    "@coopdigital/foundations-vars": "^3.1.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

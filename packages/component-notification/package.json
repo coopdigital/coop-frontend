@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-notification",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Co-op Components: Notification",
   "main": "dist/notification.css",
   "style": "src/notification.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/coop-frontend/packages/component-notification.git"
   },
   "dependencies": {
-    "@coopdigital/foundations-vars": "^3.1.4"
+    "@coopdigital/foundations-vars": "^3.1.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

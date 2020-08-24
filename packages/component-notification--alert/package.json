@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-notification--alert",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Co-op Components: Notification - alert",
   "main": "dist/notification--alert.css",
   "style": "src/notification--alert.pcss",
@@ -21,8 +21,8 @@
     "url": "git+https://github.com/coopdigital/coop-frontend/packages/notification--alert.git"
   },
   "dependencies": {
-    "@coopdigital/component-notification": "^1.0.12",
-    "@coopdigital/foundations-vars": "^3.1.4"
+    "@coopdigital/component-notification": "^1.0.13",
+    "@coopdigital/foundations-vars": "^3.1.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

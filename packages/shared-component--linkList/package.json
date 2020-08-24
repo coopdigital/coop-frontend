@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--linklist",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "Co-op Shared Component: Feature Card",
   "main": "dist/linkList.css",
   "style": "src/linkList.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/shared-component--linkList.git"
   },
   "dependencies": {
-    "@coopdigital/foundations-vars": "^3.1.4"
+    "@coopdigital/foundations-vars": "^3.1.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

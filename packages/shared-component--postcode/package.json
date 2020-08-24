@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--postcode",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Co-op Shared Component: Postcode",
   "main": "dist/postcode.css",
   "style": "src/postcode.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--postcode.git"
   },
   "dependencies": {
-    "@coopdigital/foundations-vars": "^3.1.4"
+    "@coopdigital/foundations-vars": "^3.1.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
