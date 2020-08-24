@@ -20,9 +20,6 @@
     "type": "git",
     "url": "git+https://github.com/coopdigital/coop-frontend/packages/notification--alert.git"
   },
-  "dependencies": {
-    "@coopdigital/component-notification": "^1.0.11"
-  },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^3.1.3",
     "autoprefixer": "^9.8.6",
@@ -40,6 +37,7 @@
     "stylelint-prettier": "^1.1.2"
   },
   "peerDependencies": {
+    "@coopdigital/component-notification": ">= 1.0.11 < 2",
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
   },
   "bugs": {
