@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-tables",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "author": "@coopdigital",
   "description": "CSS Foundations: Tables",
   "main": "dist/tables.css",
