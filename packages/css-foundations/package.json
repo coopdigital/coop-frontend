@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/css-foundations",
-  "version": "4.1.11",
+  "version": "4.1.12",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations",
   "main": "dist/foundations.css",

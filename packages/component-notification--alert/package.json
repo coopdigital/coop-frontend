@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-notification--alert",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Co-op Components: Notification - alert",
   "main": "dist/notification--alert.css",
   "style": "src/notification--alert.pcss",
