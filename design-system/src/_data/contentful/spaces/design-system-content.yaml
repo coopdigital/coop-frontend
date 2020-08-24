@@ -261,16 +261,16 @@ designPattern:
 - sys:
     id: 5JoR23Ulbi8CisOuQ6g02c
     created_at: !ruby/object:DateTime 2018-11-08 21:57:28.235000000 Z
-    updated_at: !ruby/object:DateTime 2020-07-24 09:23:09.480000000 Z
+    updated_at: !ruby/object:DateTime 2020-07-24 12:26:54.927000000 Z
     content_type_id: designPattern
-    revision: 3
+    revision: 4
   title: Numbered list
   status: live
   github_url: https://github.com/coopdigital/foundations-typography
   npm_url: https://www.npmjs.com/package/@coopdigital/foundations-typography
   introduction: Numbered lists are used to indicate a logical sequence.
   design_and_content_documentation: "[Find out how we write numbered lists](https://coop-design-system.herokuapp.com/content/digital-content-guidelines.html#l)"
-  variations: "[Bullet list](https://coop-design-system.herokuapp.com/pattern-library/foundations/bullet-list.html)"
+  variations: "[Bullet list](https://coop-design-system.herokuapp.com/pattern-library/foundations/bullet-list.html) "
 - sys:
     id: tP1aGA2t5AEG42aquge0y
     created_at: !ruby/object:DateTime 2018-11-08 22:04:36.898000000 Z
@@ -304,7 +304,7 @@ designPattern:
   variations: 'As in the example above - you can use larger text for the quotation
     if the text is shorter.
 
-    '
+'
 - sys:
     id: C66rMoN0gCCek2QCcygak
     created_at: !ruby/object:DateTime 2018-11-08 22:25:26.053000000 Z
@@ -1206,14 +1206,14 @@ page:
 - sys:
     id: 2dwjl9DDVOEK8WEkwss0Mc
     created_at: !ruby/object:DateTime 2018-10-24 13:37:19.171000000 Z
-    updated_at: !ruby/object:DateTime 2020-07-24 07:12:13.068000000 Z
+    updated_at: !ruby/object:DateTime 2020-08-12 08:27:46.068000000 Z
     content_type_id: page
-    revision: 3
+    revision: 4
   title: Accessibility guidelines
   introduction: |-
     Do not design for difference, design so that no one feels different.
 
-    Write in a consistently clear, simple way; this is how we open up our services to everyone.
+    Write in a clear, consistent, simple way. This is how we open up our services to everyone.
   in_page_navigation:
   - sys:
       id: 5DhfNoq1m8isM8uEWkqcm6
@@ -1422,7 +1422,7 @@ page:
     ### Presentation/no context
     This role is used when there is no context to an element and the screen reader (or other assistive technology) does not need to ‘talk’ about it. For example, a decorative image.
 
-    <pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>decorative-image.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">aria-role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span></code></pre>
+    <pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>decorative-image.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span></code></pre>
 
     ### Visibility
     Use 'aria-hidden' to hide content from screen readers. Most screen readers will ignore display:none so use this to hide subfields until a user action. If you do not use this, some screenreaders may still read out these hidden fields which could be confusing to the user.
