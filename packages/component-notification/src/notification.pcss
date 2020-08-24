@@ -1,4 +1,4 @@
-/* Card - notification */
+/* Card - notification (info) */
 
 @import "@coopdigital/foundations-vars";
 
@@ -18,8 +18,14 @@
   color: var(--color-text);
   border: none;
   text-decoration: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
 }
 
+/* Full banner clickable area */
 .coop-c-notification__link::after {
   content: "";
   position: absolute;
@@ -27,6 +33,13 @@
   top: 0;
   right: 0;
   bottom: 0;
+}
+
+/* Full banner clickable area (focus outline) */
+.coop-c-notification__link:active::after,
+.coop-c-notification__link:focus::after {
+  outline: 2px solid var(--color-link--focus);
+  outline-offset: 3px;
 }
 
 .coop-c-notification__heading {
@@ -56,6 +69,7 @@
   + .coop-c-notification__p
   .coop-c-notification__link {
   text-decoration: none;
+  color: var(--color-text);
 }
 
 .coop-c-notification__p {
