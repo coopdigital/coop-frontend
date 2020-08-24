@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-tags",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "description": "Co-op Component: Tags",
   "main": "dist/tags.css",
   "style": "src/tags.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/component-tags.git"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.1.2",
+    "@coopdigital/foundations-vars": "^3.1.3",
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
     "postcss": "^7.0.32",
