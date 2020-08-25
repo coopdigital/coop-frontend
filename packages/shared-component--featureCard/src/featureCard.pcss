@@ -75,12 +75,15 @@
   height: 114px;
   width: 118px;
   z-index: 10;
-  transform: scale(0.66);
+  transform: scale(0.88);
 
   @media (--mq-large) {
     transform: none;
     top: -21px;
     right: -8px;
+  }
+  @media (--mq-medium) {
+    transform: scale(0.78);
   }
 }
 
@@ -131,6 +134,7 @@
   align-items: center;
   position: relative;
   z-index: 2;
+  margin-top: -8px;
 }
 
 .coop-c-featureCard__squircle__small-text {
@@ -153,6 +157,10 @@
   display: block;
   text-align: center;
   line-height: 1.4;
+
+  @media (--mq-medium) {
+    font-size: 2rem;
+  }
 }
 
 .coop-c-featureCard__squircle__large-text,
