@@ -75,8 +75,19 @@
 .coop-c-notification__p {
   width: 100%;
   margin-top: 0;
-  margin-bottom: 0;
   font-size: 1rem;
+
+  &,
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (--mq-medium) {
+    &,
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   @media (--mq-large) {
     width: 65%;
