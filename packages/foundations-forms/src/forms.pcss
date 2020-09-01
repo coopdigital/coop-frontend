@@ -86,7 +86,6 @@ textarea,
 .coop-form__textarea {
   display: block;
   width: 100%;
-  padding: var(--spacing-base--1-4);
   background: var(--color-white);
   border: 1px solid;
   border-color: var(--color-grey-dark);
@@ -123,9 +122,25 @@ textarea,
   }
 }
 
+input,
+.coop-form__input {
+  height: 3.25rem; /* 52px / 16 */
+  padding: var(--spacing-8) calc(var(--spacing-8) * 1.5);
+
+  @media (--mq-medium) {
+    height: 3.75rem; /* 60px / 16 */
+  }
+}
+
 textarea,
 .coop-form__textarea {
+  min-height: 3.25rem; /* 52px / 16 */
+  padding: calc(var(--spacing-8) * 1.75) calc(var(--spacing-8) * 1.5);
   resize: vertical;
+
+  @media (--mq-medium) {
+    min-height: 3.75rem; /* 60px / 16 */
+  }
 }
 
 select,
