@@ -157,6 +157,7 @@ function watch(done) {
  */
 function serve(done) {
   connect.server({
+    host: '0.0.0.0',
     port: 9000,
     root: 'build',
     livereload: true
