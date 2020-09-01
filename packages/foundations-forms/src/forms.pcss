@@ -285,17 +285,15 @@ input[type="radio"],
 }
 
 .coop-c-form-choice__input:focus + .coop-c-form-choice__label::before {
-  background: #ffffff;
-  border-color: #000000;
   outline-offset: 3px;
   outline: 2px solid var(--color-link--focus);
-  -webkit-transition: none;
   transition: none;
 }
 
 .coop-c-form-choice__input + .coop-c-form-choice__label::before {
   content: "";
   border: 2px solid;
+  border-color: var(--color-black);
   background: transparent;
   width: 25px;
   height: 25px;
