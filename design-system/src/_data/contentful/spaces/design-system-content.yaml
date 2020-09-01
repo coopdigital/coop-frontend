@@ -17,16 +17,16 @@ designPattern:
 - sys:
     id: lAvhQFgf60gYgaGeSyS2k
     created_at: !ruby/object:DateTime 2018-11-08 19:53:47.846000000 Z
-    updated_at: !ruby/object:DateTime 2020-07-23 15:33:32.741000000 Z
+    updated_at: !ruby/object:DateTime 2020-08-27 09:28:13.309000000 Z
     content_type_id: designPattern
-    revision: 5
+    revision: 6
   title: Logo
   status: live
   github_url: https://www.npmjs.com/package/@coopdigital/foundations-global
   npm_url: https://github.com/coopdigital/foundations-global
   introduction: The Cloverleaf Symbol was created in 1968 for project facelift, when
     all the Co-op societies united under one banner. We now use a modernised version
-    that optimised for modern production methods.
+    that optimised for modern production methods
   design_and_content_documentation: |-
     The logo should:
 
@@ -481,13 +481,13 @@ designPattern:
 - sys:
     id: 59IgUOk2tyqWmQeEAuEu8C
     created_at: !ruby/object:DateTime 2018-11-16 20:55:59.171000000 Z
-    updated_at: !ruby/object:DateTime 2019-10-14 11:03:13.759000000 Z
+    updated_at: !ruby/object:DateTime 2020-08-27 14:58:33.032000000 Z
     content_type_id: designPattern
-    revision: 8
+    revision: 9
   title: Editorial card
   status: live
-  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/component-card
-  npm_url: https://www.npmjs.com/package/@coopdigital/component-card
+  github_url: https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--editorialCard
+  npm_url: https://www.npmjs.com/package/@coopdigital/shared-component--editorialcard
   introduction: 'An editorial card contains a small piece of prose information on
     one subject that people can get more information about by tapping or clicking
     on the card.   '
@@ -1206,9 +1206,9 @@ page:
 - sys:
     id: 2dwjl9DDVOEK8WEkwss0Mc
     created_at: !ruby/object:DateTime 2018-10-24 13:37:19.171000000 Z
-    updated_at: !ruby/object:DateTime 2020-08-12 08:27:46.068000000 Z
+    updated_at: !ruby/object:DateTime 2020-08-26 08:05:08.719000000 Z
     content_type_id: page
-    revision: 4
+    revision: 5
   title: Accessibility guidelines
   introduction: |-
     Do not design for difference, design so that no one feels different.
@@ -1313,7 +1313,8 @@ page:
     - have little or no knowledge about the subject you're writing about
     - not be confident using a computer or mobile device
     - have their own situation, insecurities and struggles
-    - All users deserve our consideration.
+
+    All users deserve our consideration.
 
     There's guidance on writing clear, understandable, accessible content in our [content guidelines](https://coop-design-system.herokuapp.com/content.html).
 
