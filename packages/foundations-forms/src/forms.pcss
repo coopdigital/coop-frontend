@@ -340,8 +340,8 @@ label + .coop-form__error,
 }
 
 .coop-c-message {
-  padding: var(--spacing-8) var(--spacing-16);
-  margin-bottom: var(--spacing-16);
+  padding: var(--spacing-16);
+  margin-bottom: var(--spacing-32);
 
   &:focus {
     outline-offset: 3px;
@@ -350,15 +350,24 @@ label + .coop-form__error,
 
   @media (--mq-medium) {
     padding: var(--spacing-16) var(--spacing-32);
-    margin-bottom: var(--spacing-32);
+    margin-bottom: calc(var(--spacing-32) * 1.25);
   }
 }
 
-.coop-c-message__link {
-  color: var(--color-red-error);
+.coop-c-message__heading,
+.coop-c-message__list {
+  margin-bottom: var(--spacing-4);
+
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-8);
+  }
 }
 
 .coop-c-message--error {
   background: var(--color-red-error-light);
-  border: 1px solid var(--color-red-error);
+  border-left: 4px solid var(--color-red-error);
+}
+
+.coop-c-message--error .coop-c-message__link {
+  color: var(--color-red-error);
 }
