@@ -7,7 +7,7 @@
 }
 
 .coop-form__row {
-  margin-bottom: var(--spacing-base--1-2);
+  margin-bottom: var(--spacing-base--3-4);
 
   &::before,
   &::after {
@@ -27,16 +27,17 @@ label,
   line-height: var(--type-line-height);
   font-weight: 500;
   display: block;
-  margin: 0 0 calc(var(--spacing-base--1-4) / 2);
+  margin: 0 0 var(--spacing-8);
 
   @media (--mq-medium) {
     font-size: var(--type-body-l);
   }
 }
 
-.coop-label__hint {
+.coop-label__hint,
+.coop-form__hint {
   display: block;
-  margin: 0 0 calc(var(--spacing-base--1-4) / 2);
+  margin: 0 0 var(--spacing-8);
   color: var(--color-grey-dark);
   font-family: var(--font-family);
   font-style: normal;
@@ -50,7 +51,8 @@ label,
 }
 
 label + .coop-label__hint,
-.coop-form__label + .coop-label__hint {
+.coop-form__label + .coop-label__hint,
+.coop-form__label + .coop-form__hint {
   margin-top: calc(var(--spacing-base--1-4) / -2);
 }
 
@@ -86,13 +88,13 @@ textarea,
 .coop-form__textarea {
   display: block;
   width: 100%;
-  padding: var(--spacing-base--1-4);
   background: var(--color-white);
-  border: 1px solid;
+  border: 2px solid;
   border-color: var(--color-grey-dark);
+  border-radius: 5px;
   color: var(--color-text);
   outline: 0;
-  transition: all 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
   font-size: var(--type-body-s);
   line-height: var(--type-line-height);
 
@@ -123,25 +125,42 @@ textarea,
   }
 }
 
+input,
+.coop-form__input {
+  height: 3.25rem; /* 52px / 16 */
+  padding: var(--spacing-8) calc(var(--spacing-8) * 1.5);
+
+  @media (--mq-medium) {
+    height: 3.75rem; /* 60px / 16 */
+  }
+}
+
 textarea,
 .coop-form__textarea {
+  min-height: 3.25rem; /* 52px / 16 */
+  padding: calc(var(--spacing-8) * 1.75) calc(var(--spacing-8) * 1.5);
   resize: vertical;
+
+  @media (--mq-medium) {
+    min-height: 3.75rem; /* 60px / 16 */
+  }
 }
 
 select,
 .coop-form__select {
   appearance: menulist;
-  height: 2.8175em;
+  height: 3.25rem; /* 52px / 16 */
   cursor: pointer;
   display: block;
   width: 100%;
-  padding: var(--spacing-base--1-6) var(--spacing-base--1-8);
+  padding: var(--spacing-8) calc(var(--spacing-8) * 1.5);
   background: var(--color-white);
-  border: 1px solid;
+  border: 2px solid;
+  border-radius: 5px;
   border-color: var(--color-grey-dark);
   color: var(--color-text);
   outline: 0;
-  transition: all 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
   font-size: var(--type-body-s);
 
   &:focus {
@@ -168,6 +187,7 @@ select,
 
   @media (--mq-medium) {
     font-size: var(--type-body-l);
+    height: 3.75rem; /* 60px / 16 */
   }
 }
 
@@ -213,20 +233,18 @@ input[type="radio"],
 }
 
 .coop-form__error {
-  position: relative;
-  margin: 0.5rem 0;
-  padding-left: 2rem;
+  margin: 0 0 var(--spacing-8);
   color: var(--color-red-mid);
+}
 
-  &::before {
-    position: absolute;
-    left: 0;
-    font-size: 1.5rem;
-  }
+label + .coop-form__error,
+.coop-form__label + .coop-form__error {
+  margin-top: calc(var(--spacing-8) * -1);
+}
 
-  &:last-child {
-    margin-bottom: 0.5rem;
-  }
+.coop-label__hint + .coop-form__error,
+.coop-form__hint + .coop-form__error {
+  margin-top: var(--spacing-16);
 }
 
 .coop-c-form-choice {
@@ -266,18 +284,25 @@ input[type="radio"],
   touch-action: manipulation;
 }
 
+.coop-c-form-choice__hint,
+.coop-c-form-choice__error {
+  margin-bottom: var(--spacing-4);
+
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-8);
+  }
+}
+
 .coop-c-form-choice__input:focus + .coop-c-form-choice__label::before {
-  background: #ffffff;
-  border-color: #000000;
   outline-offset: 3px;
   outline: 2px solid var(--color-link--focus);
-  -webkit-transition: none;
   transition: none;
 }
 
 .coop-c-form-choice__input + .coop-c-form-choice__label::before {
   content: "";
   border: 2px solid;
+  border-color: var(--color-black);
   background: transparent;
   width: 25px;
   height: 25px;
@@ -349,5 +374,4 @@ input[type="radio"],
 
 .coop-c-form-error__text {
   color: var(--color-red-error);
-  margin-bottom: 0;
 }
