@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-skipnav",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "description": "Co-op Component: Skipnav",
   "main": "dist/skipnav.css",
   "style": "src/skipnav.pcss",

@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-squircles",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "description": "Co-op Component: Squircles",
   "main": "dist/squircles.css",
   "style": "src/squircles.pcss",

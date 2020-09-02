@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--offers",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "description": "Co-op Shared Component: Offers",
   "main": "dist/offers.css",
   "style": "src/offers.pcss",
