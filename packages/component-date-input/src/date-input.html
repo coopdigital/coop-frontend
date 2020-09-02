@@ -3,10 +3,10 @@
   <h3>Date input</h3>
 
   <div class="coop-form__row">
-    <fieldset class="coop-c-form-date" aria-describedby="dob-1-hint">
+    <fieldset aria-describedby="dob-1-hint">
       <legend class="coop-form__label">What is your date of birth?</legend>
       <p id="dob-1-hint" class="coop-form__hint">For example 21 12 2020</p>
-      <div class="coop-c-form-date__group">
+      <div class="coop-form__column">
         <label class="coop-form__label" for="dob-1-day">Day</label>
         <input
           id="dob-1-day"
@@ -16,10 +16,10 @@
           maxlength="2"
           minlength="2"
           autocomplete="bday-day"
-          class="coop-form__field coop-form__input coop-form__input--width-2 coop-c-form-date__input"
+          class="coop-form__field coop-form__input coop-form__input--width-2"
         >
       </div>
-      <div class="coop-c-form-date__group">
+      <div class="coop-form__column">
         <label class="coop-form__label" for="dob-1-month">Month</label>
         <input
           id="dob-1-month"
@@ -29,10 +29,10 @@
           maxlength="2"
           minlength="2"
           autocomplete="bday-month"
-          class="coop-form__field coop-form__input coop-form__input--width-2 coop-c-form-date__input"
+          class="coop-form__field coop-form__input coop-form__input--width-2"
         >
       </div>
-      <div class="coop-c-form-date__group">
+      <div class="coop-form__column">
         <label class="coop-form__label" for="dob-1-year">Year</label>
         <input
           id="dob-1-year"
@@ -42,7 +42,7 @@
           maxlength="4"
           minlength="4"
           autocomplete="bday-year"
-          class="coop-form__field coop-form__input coop-form__input--width-4 coop-c-form-date__input"
+          class="coop-form__field coop-form__input coop-form__input--width-4"
         >
       </div>
     </fieldset>
@@ -54,11 +54,11 @@
   <h3>Date input with error message</h3>
 
   <div class="coop-form__row coop-c-form-error">
-    <fieldset class="coop-c-form-date" aria-describedby="dob-2-hint dob-2-error">
+    <fieldset aria-describedby="dob-2-hint dob-2-error">
       <legend class="coop-form__label">What is your date of birth?</legend>
       <p id="dob-2-hint" class="coop-form__hint">For example 21 12 2020</p>
       <p id="dob-2-error" class="coop-form__error coop-c-form-error__text">The month you entered is invalid</p>
-      <div class="coop-c-form-date__group">
+      <div class="coop-form__column">
         <label class="coop-form__label" for="dob-2-day">Day</label>
         <input
           id="dob-2-day"
@@ -68,10 +68,10 @@
           maxlength="2"
           minlength="2"
           autocomplete="bday-day"
-          class="coop-form__field coop-form__input coop-form__input--width-2 coop-form__invalid coop-c-form-date__input"
+          class="coop-form__field coop-form__input coop-form__input--width-2 coop-form__invalid"
         >
       </div>
-      <div class="coop-c-form-date__group">
+      <div class="coop-form__column">
         <label class="coop-form__label" for="dob-2-month">Month</label>
         <input
           id="dob-2-month"
@@ -81,10 +81,10 @@
           maxlength="2"
           minlength="2"
           autocomplete="bday-month"
-          class="coop-form__field coop-form__input coop-form__input--width-2 coop-form__invalid coop-c-form-date__input"
+          class="coop-form__field coop-form__input coop-form__input--width-2 coop-form__invalid"
         >
       </div>
-      <div class="coop-c-form-date__group">
+      <div class="coop-form__column">
         <label class="coop-form__label" for="dob-2-year">Year</label>
         <input
           id="dob-2-year"
@@ -94,7 +94,7 @@
           maxlength="4"
           minlength="4"
           autocomplete="bday-year"
-          class="coop-form__field coop-form__input coop-form__input--width-4 coop-form__invalid coop-c-form-date__input"
+          class="coop-form__field coop-form__input coop-form__input--width-4 coop-form__invalid"
         >
       </div>
     </fieldset>
