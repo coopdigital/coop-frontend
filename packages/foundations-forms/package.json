@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-forms",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "author": "@coopdigital",
   "description": "CSS Foundations: Forms",
   "main": "dist/forms.css",
