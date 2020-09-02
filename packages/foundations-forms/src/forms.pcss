@@ -284,15 +284,6 @@ label + .coop-form__error,
   touch-action: manipulation;
 }
 
-.coop-c-form-choice__hint,
-.coop-c-form-choice__error {
-  margin-bottom: var(--spacing-4);
-
-  @media (--mq-medium) {
-    margin-bottom: var(--spacing-8);
-  }
-}
-
 .coop-c-form-choice__input:focus + .coop-c-form-choice__label::before {
   outline-offset: 3px;
   outline: 2px solid var(--color-link--focus);
@@ -370,8 +361,4 @@ label + .coop-form__error,
 .coop-c-message--error {
   background: var(--color-red-error-light);
   border: 1px solid var(--color-red-error);
-}
-
-.coop-c-form-error__text {
-  color: var(--color-red-error);
 }
