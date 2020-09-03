@@ -135,6 +135,22 @@ input,
   }
 }
 
+.coop-form__input--width-2 {
+  width: 3rem; /* (24 + 12 + 12) / 16 */
+
+  @media (--mq-medium) {
+    width: 3.5rem; /* (32 + 12 + 12) / 16 */
+  }
+}
+
+.coop-form__input--width-4 {
+  width: 4.5rem; /* (48 + 12 + 12) / 16 */
+
+  @media (--mq-medium) {
+    width: 5.5rem; /* (32 + 12 + 12) / 16 */
+  }
+}
+
 textarea,
 .coop-form__textarea {
   min-height: 3.25rem; /* 52px / 16 */
@@ -199,6 +215,11 @@ input[type="radio"],
   cursor: pointer;
 }
 
+.coop-form__field--inline {
+  display: inline-block;
+  width: auto;
+}
+
 .coop-form__indented {
   border-left: 3px solid var(--color-brand);
   padding-top: var(--spacing--base--1-4);
@@ -235,6 +256,7 @@ input[type="radio"],
 .coop-form__error {
   margin: 0 0 var(--spacing-8);
   color: var(--color-red-mid);
+  /* border-left: 3px solid var(--color-red-mid); */
 }
 
 label + .coop-form__error,
