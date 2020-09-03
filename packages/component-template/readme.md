@@ -20,7 +20,7 @@ You can include `component-[name]` in your project by referencing it from your e
 
 If you use PostCSS in your build pipeline, you can reference the sources directly:
 ```css
-@import "node_modules/@coopdigital/component-[name]/src/[name].css";
+@import "node_modules/@coopdigital/component-[name]/src/[name].pcss";
 ```
 
 If you use a `postcss-import` plugin:

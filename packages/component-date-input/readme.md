@@ -14,7 +14,7 @@ You can include `component-date-input` in your project by referencing it from yo
 
 If you use PostCSS in your build pipeline, you can reference the sources directly like so:
 ```css
-@import "node_modules/@coopdigital/component-date-input/src/date-input.css";
+@import "node_modules/@coopdigital/component-date-input/src/date-input.pcss";
 ```
 
 If you use a `postcss-import` plugin, it gets even easier:
