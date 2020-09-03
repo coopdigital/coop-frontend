@@ -8,6 +8,7 @@
   "contributors": [
     "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)"
   ],
+  "private": false,
   "license": "MIT",
   "files": [
     "dist",
@@ -51,5 +52,8 @@
   "keywords": [
     "date input"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "05fcf4b39a8c807d5bf86f1da1f51db297d44a6b"
 }
