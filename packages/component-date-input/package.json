@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-date-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Co-op Components: Date input",
   "main": "dist/date-input.css",
   "style": "src/date-input.pcss",
@@ -24,7 +24,7 @@
     "url": "git+https://github.com/coopdigital/coop-frontend/packages/component-date-input.git"
   },
   "devDependencies": {
-    "@coopdigital/foundations-forms": "^4.0.3",
+    "@coopdigital/foundations-forms": "^4.0.4",
     "@coopdigital/foundations-vars": "^3.1.6",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
@@ -41,8 +41,8 @@
     "stylelint-prettier": "^1.1.2"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
-    "@coopdigital/foundations-forms": ">= 4.0.3 < 5"
+    "@coopdigital/foundations-forms": ">= 4.0.3 < 5",
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/packages/component-date-input/issues"
