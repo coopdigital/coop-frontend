@@ -145,20 +145,48 @@ input,
   }
 }
 
-.coop-form__input--width-2 {
-  width: 3rem; /* (24 + 12 + 12) / 16 */
+/*
+  Fixed width text inputs
+  1x Avenir Next "W" character = 2ch
 
-  @media (--mq-medium) {
-    width: 3.5rem; /* (32 + 12 + 12) / 16 */
-  }
+  Support: IE9+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/length
+*/
+
+.coop-form__input--width-1 {
+  max-width: calc((1 * 2ch) + 1.5rem);
+}
+
+.coop-form__input--width-2 {
+  max-width: calc((2 * 2ch) + 1.5rem);
+}
+
+.coop-form__input--width-3 {
+  max-width: calc((3 * 2ch) + 1.5rem);
 }
 
 .coop-form__input--width-4 {
-  width: 4.5rem; /* (48 + 12 + 12) / 16 */
+  max-width: calc((4 * 2ch) + 1.5rem);
+}
 
-  @media (--mq-medium) {
-    width: 5.5rem; /* (32 + 12 + 12) / 16 */
-  }
+.coop-form__input--width-5 {
+  max-width: calc((5 * 2ch) + 1.5rem);
+}
+
+.coop-form__input--width-10 {
+  max-width: calc(10 * 2ch);
+}
+
+.coop-form__input--width-15 {
+  max-width: calc(15 * 2ch);
+}
+
+.coop-form__input--width-20 {
+  max-width: calc(20 * 2ch);
+}
+
+.coop-form__input--width-30 {
+  max-width: calc(30 * 2ch);
 }
 
 textarea,
