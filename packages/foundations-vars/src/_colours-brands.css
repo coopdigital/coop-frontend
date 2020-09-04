@@ -1,0 +1,9 @@
+:root {
+  /* Core brands */
+  --color-brand-coop: #00b1e7;
+  --color-brand-deals: #d12430;
+
+  /* Core brands (backwards compatibility) */
+  --color-brand: var(--color-brand-coop);
+  --color-deal-red: var(--color-brand-deals);
+}
