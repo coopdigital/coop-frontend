@@ -12,8 +12,11 @@
 }
 
 .tabs-container__panel {
-    padding: 20px;
     background: var(--color-white);
+}
+
+.tabs-container__panel--preview {
+  padding: 20px;
 }
 
 .coop-ds-example {
