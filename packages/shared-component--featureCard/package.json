@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--featurecard",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "description": "Co-op Shared Component: Feature Card",
   "main": "dist/featureCard.css",
   "style": "src/featureCard.pcss",
@@ -21,7 +21,7 @@
     "url": "git+https://github.com/coopdigital/shared-component--featureCard.git"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.1.6",
+    "@coopdigital/foundations-vars": "^3.1.7",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
     "postcss": "^7.0.32",
