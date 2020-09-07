@@ -16,10 +16,18 @@
   --color-brand-membership-purple-light-8: #b2aece;
   --color-brand-membership-purple-light-9: #d3d1e4;
   --color-brand-membership-purple-light-10: #eae8f4;
-  --color-brand-membership-purple-dark: var(--color-brand-membership-purple-dark-3);
-  --color-brand-membership-purple-mid: var(--color-brand-membership-purple-mid-5);
-  --color-brand-membership-purple-bright: var(--color-brand-membership-purple-mid-6);
-  --color-brand-membership-purple-light: var(--color-brand-membership-purple-light-10);
+  --color-brand-membership-purple-dark: var(
+    --color-brand-membership-purple-dark-3
+  );
+  --color-brand-membership-purple-mid: var(
+    --color-brand-membership-purple-mid-5
+  );
+  --color-brand-membership-purple-bright: var(
+    --color-brand-membership-purple-mid-6
+  );
+  --color-brand-membership-purple-light: var(
+    --color-brand-membership-purple-light-10
+  );
 
   /* Membership (Lilac) */
   --color-brand-membership-lilac-dark-1: #52355e;
@@ -30,10 +38,16 @@
   --color-brand-membership-lilac-light-8: #bba2c6;
   --color-brand-membership-lilac-light-9: #ccbad4;
   --color-brand-membership-lilac-light-10: #e6dde9;
-  --color-brand-membership-lilac-dark: var(--color-brand-membership-lilac-dark-3);
+  --color-brand-membership-lilac-dark: var(
+    --color-brand-membership-lilac-dark-3
+  );
   --color-brand-membership-lilac-mid: var(--color-brand-membership-lilac-mid-5);
-  --color-brand-membership-lilac-bright: var(--color-brand-membership-lilac-mid-6);
-  --color-brand-membership-lilac-light: var(--color-brand-membership-lilac-light-10);
+  --color-brand-membership-lilac-bright: var(
+    --color-brand-membership-lilac-mid-6
+  );
+  --color-brand-membership-lilac-light: var(
+    --color-brand-membership-lilac-light-10
+  );
 
   /* Membership (Pink) */
   --color-brand-membership-pink-dark-1: #6c3e53;
@@ -46,8 +60,12 @@
   --color-brand-membership-pink-light-10: #f0e5eb;
   --color-brand-membership-pink-dark: var(--color-brand-membership-pink-dark-3);
   --color-brand-membership-pink-mid: var(--color-brand-membership-pink-mid-5);
-  --color-brand-membership-pink-bright: var(--color-brand-membership-pink-mid-6);
-  --color-brand-membership-pink-light: var(--color-brand-membership-pink-light-10);
+  --color-brand-membership-pink-bright: var(
+    --color-brand-membership-pink-mid-6
+  );
+  --color-brand-membership-pink-light: var(
+    --color-brand-membership-pink-light-10
+  );
 
   /* Membership (Orange) */
   --color-brand-membership-orange-dark-1: #783620;
@@ -58,10 +76,18 @@
   --color-brand-membership-orange-light-8: #e6bb8f;
   --color-brand-membership-orange-light-9: #f0ddd1;
   --color-brand-membership-orange-light-10: #f7eeeb;
-  --color-brand-membership-orange-dark: var(--color-brand-membership-orange-dark-3);
-  --color-brand-membership-orange-mid: var(--color-brand-membership-orange-mid-5);
-  --color-brand-membership-orange-bright: var(--color-brand-membership-orange-mid-6);
-  --color-brand-membership-orange-light: var(--color-brand-membership-orange-light-10);
+  --color-brand-membership-orange-dark: var(
+    --color-brand-membership-orange-dark-3
+  );
+  --color-brand-membership-orange-mid: var(
+    --color-brand-membership-orange-mid-5
+  );
+  --color-brand-membership-orange-bright: var(
+    --color-brand-membership-orange-mid-6
+  );
+  --color-brand-membership-orange-light: var(
+    --color-brand-membership-orange-light-10
+  );
 
   /* Membership (Yellow/Brown) */
   --color-brand-membership-yellow-brown-dark-1: #704e24;
@@ -72,10 +98,18 @@
   --color-brand-membership-yellow-brown-light-8: #edd273;
   --color-brand-membership-yellow-brown-light-9: #f3e2a4;
   --color-brand-membership-yellow-brown-light-10: #f9f1d1;
-  --color-brand-membership-yellow-brown-dark: var(--color-brand-membership-yellow-brown-dark-3);
-  --color-brand-membership-yellow-brown-mid: var(--color-brand-membership-yellow-brown-mid-5);
-  --color-brand-membership-yellow-brown-bright: var(--color-brand-membership-yellow-brown-mid-6);
-  --color-brand-membership-yellow-brown-light: var(--color-brand-membership-yellow-brown-light-10);
+  --color-brand-membership-yellow-brown-dark: var(
+    --color-brand-membership-yellow-brown-dark-3
+  );
+  --color-brand-membership-yellow-brown-mid: var(
+    --color-brand-membership-yellow-brown-mid-5
+  );
+  --color-brand-membership-yellow-brown-bright: var(
+    --color-brand-membership-yellow-brown-mid-6
+  );
+  --color-brand-membership-yellow-brown-light: var(
+    --color-brand-membership-yellow-brown-light-10
+  );
 
   /* Membership (Green) */
   --color-brand-membership-green-dark-1: #3b3f25;
@@ -86,10 +120,16 @@
   --color-brand-membership-green-light-8: #d1d4a5;
   --color-brand-membership-green-light-9: #e4e5c6;
   --color-brand-membership-green-light-10: #f6f6eb;
-  --color-brand-membership-green-dark: var(--color-brand-membership-green-dark-3);
+  --color-brand-membership-green-dark: var(
+    --color-brand-membership-green-dark-3
+  );
   --color-brand-membership-green-mid: var(--color-brand-membership-green-mid-5);
-  --color-brand-membership-green-bright: var(--color-brand-membership-green-mid-6);
-  --color-brand-membership-green-light: var(--color-brand-membership-green-light-10);
+  --color-brand-membership-green-bright: var(
+    --color-brand-membership-green-mid-6
+  );
+  --color-brand-membership-green-light: var(
+    --color-brand-membership-green-light-10
+  );
 
   /* Membership (Turquoise) */
   --color-brand-membership-turquoise-dark-1: #2b4946;
@@ -100,10 +140,18 @@
   --color-brand-membership-turquoise-light-8: #b9dad9;
   --color-brand-membership-turquoise-light-9: #d3e7e5;
   --color-brand-membership-turquoise-light-10: #ecf5f7;
-  --color-brand-membership-turquoise-dark: var(--color-brand-membership-turquoise-dark-3);
-  --color-brand-membership-turquoise-mid: var(--color-brand-membership-turquoise-mid-5);
-  --color-brand-membership-turquoise-bright: var(--color-brand-membership-turquoise-mid-6);
-  --color-brand-membership-turquoise-light: var(--color-brand-membership-turquoise-light-10);
+  --color-brand-membership-turquoise-dark: var(
+    --color-brand-membership-turquoise-dark-3
+  );
+  --color-brand-membership-turquoise-mid: var(
+    --color-brand-membership-turquoise-mid-5
+  );
+  --color-brand-membership-turquoise-bright: var(
+    --color-brand-membership-turquoise-mid-6
+  );
+  --color-brand-membership-turquoise-light: var(
+    --color-brand-membership-turquoise-light-10
+  );
 
   /* Membership (Blue) */
   --color-brand-membership-blue-dark-1: #2c4258;
@@ -116,6 +164,10 @@
   --color-brand-membership-blue-light-10: #f0f6fd;
   --color-brand-membership-blue-dark: var(--color-brand-membership-blue-dark-3);
   --color-brand-membership-blue-mid: var(--color-brand-membership-blue-mid-5);
-  --color-brand-membership-blue-bright: var(--color-brand-membership-blue-mid-6);
-  --color-brand-membership-blue-light: var(--color-brand-membership-blue-light-10);
+  --color-brand-membership-blue-bright: var(
+    --color-brand-membership-blue-mid-6
+  );
+  --color-brand-membership-blue-light: var(
+    --color-brand-membership-blue-light-10
+  );
 }
