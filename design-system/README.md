@@ -8,9 +8,16 @@ The [design system](http://coop.co.uk/designsystem) provides guidance on designi
 
 If this is the first time you are running a Co-op project, of if you're on a new Mac/Catalina, then please check you have any/all of the following:
 
+- Install [Homebrew](https://brew.sh) 
+- Install [Node](https://nodejs.org/en/download/)
+- Install [RVM](https://rvm.io/rvm/install)
+
+Then:
+
+- GNUPG: `brew install gnupg gnupg2` via command line
 - RVM: `rvm install "ruby-2.6.3"` via command line
 - XCode can be downloaded from the App store
-- Check `$PATH` is pointing to the correct version of Ruby ie. the one RVM has installed and not the system version
+- Check `$PATH` is pointing to the correct version of Ruby ie. the one RVM has installed and not the system version. Double check with `echo $PATH` (see below)
 - `rvm get stable --auto-dotfiles` seemed to fix some issues with regards to PATH settings
 - You may also need `sudo` rights in non-admin account
 
