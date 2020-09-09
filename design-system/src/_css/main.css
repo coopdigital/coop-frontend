@@ -32,6 +32,7 @@
 @import '@coopdigital/shared-component--membershiphero';
 @import '@coopdigital/shared-component--offers';
 @import '@coopdigital/shared-component--hero';
+@import '@coopdigital/shared-component--statement';
 
 /* Design system */
 @import "design-system/skipnav.css";
