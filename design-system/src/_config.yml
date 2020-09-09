@@ -9,7 +9,7 @@ url: "http://coop-design-manual.herokuapp.com"
 # Build settings
 source: ./
 destination: ../build
-keep_files: ['css', 'js', 'assets']
+keep_files: ['css', 'js', 'assets', 'pattern-library/components/packages']
 markdown: kramdown
 
 # Collections

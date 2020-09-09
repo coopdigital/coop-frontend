@@ -70,9 +70,11 @@ function lintjs() {
 // Copy Co-op components
 function copyComponents() {
   return gulp.src([
-    'node_modules/@coopdigital/**/*.{pcss,css,html}'
+    'node_modules/@coopdigital/**/*.{pcss,css,html,jpeg,gif,png,webp,svg}',
+    '!node_modules/@coopdigital/**/node_modules/**',
   ], { follow: true })
     .pipe(gulp.dest('src/_includes/pattern-library/components'))
+    .pipe(gulp.dest('build/pattern-library/components/packages'))
 }
 
 // Jekyll
@@ -144,7 +146,7 @@ function optimiseImages() {
  */
 function watch(done) {
   gulp.watch(['src/_css/**/**.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
-  gulp.watch(['../packages/**/*.{pcss,css,html}', '!../packages/**/node_modules/**'], copyComponents);
+  gulp.watch(['../packages/**/*.{pcss,css,html,jpeg,gif,png,webp,svg}', '!../packages/**/node_modules/**'], copyComponents);
   gulp.watch(src_paths.scripts, gulp.series(lintjs, js));
   gulp.watch(src_paths.assets, optimiseImages);
   gulp.watch(src_paths.html, gulp.series(jekyll, html));

@@ -1,0 +1,332 @@
+/* Membership hero */
+
+@import "@coopdigital/foundations-vars";
+
+:root {
+  /* Connector curved line */
+  --background-small-width: 800px;
+  --background-small-height: 265px;
+  --background-small-origin-x: 50%;
+  --background-small-offset-x: 90px 0 0
+    calc((var(--background-small-width) / -2) - 125px);
+  --background-medium-width: 1440px;
+  --background-medium-height: 476px;
+  --background-medium-origin-x: 50%;
+  --background-medium-offset-x: 108px 0 0
+    calc((var(--background-medium-width) / -2) - 120px);
+  --background-large-width: 1732px;
+  --background-large-height: 573px;
+  --background-large-origin-x: 50%;
+  --background-large-offset-x: -110px 0 0
+    calc((var(--background-large-width) / -2) + 90px);
+  --background-xlarge-offset-x: 108px 0 0
+    calc((var(--background-medium-width) / -2) - 400px);
+
+  /* Connector full-width repeater (left) */
+  --connector-left-offset-x: 0;
+  --connector-left-offset-y: calc(var(--spacing-32) - 8px);
+  --connector-left-origin-x: 0;
+  --connector-left-large-offset-x: 0;
+  --connector-left-large-offset-y: calc((var(--spacing-32) * 1.5) - 8px);
+  --connector-left-large-origin-x: 0;
+  --connector-left-xlarge-offset-x: -100px;
+  --connector-left-xlarge-offset-y: calc((var(--spacing-32) * 1.5) - 8px);
+  --connector-left-xlarge-origin-x: 0;
+
+  /* Connector full-width repeater (right) */
+  --connector-right-offset-x: 0;
+  --connector-right-offset-y: 267px;
+  --connector-right-origin-x: 50%;
+  --connector-right-xsmall-offset-x: 0;
+  --connector-right-xsmall-offset-y: 282px;
+  --connector-right-xsmall-origin-x: 50%;
+  --connector-right-xlarge-offset-x: 100px;
+  --connector-right-xlarge-offset-y: 313px;
+  --connector-right-xlarge-origin-x: 50%;
+
+  /* Digital card promo picture (at small viewport) */
+  /* packages/shared-component--membershipHero/src/images/digital-card-medium.png */
+  --image-small-width: 337px;
+  --image-small-height: 424px;
+  --image-small-offset-x: -12px;
+
+  /* Digital card promo picture (at medium viewport) */
+  /* packages/shared-component--membershipHero/src/images/digital-card-small.png */
+  --image-medium-width: 267px;
+  --image-medium-height: 336px;
+  --image-medium-offset-x: 0;
+
+  /* Digital card promo picture (at large viewport) */
+  /* packages/shared-component--membershipHero/src/images/digital-card-large.png */
+  --image-large-width: 393px;
+  --image-large-height: 494px;
+  --image-large-offset-x: 0;
+}
+
+.coop-c-membership-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: var(--color-brand-membership-turquoise-bright);
+
+  /* required to overwrite foundation CSS */
+  & p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.coop-c-membership-hero__inner {
+  position: relative;
+  z-index: 1;
+
+  max-width: 81rem;
+  margin: 0 auto;
+  padding: calc(var(--spacing-16) * 1.5) var(--spacing-16) var(--spacing-32);
+
+  @media (--mq-medium) {
+    padding-top: var(--spacing-32);
+  }
+
+  @media (--mq-large) {
+    padding: var(--spacing-32) calc(var(--spacing-16) * 1.5);
+  }
+
+  @media (--mq-xlarge) {
+    padding: calc(var(--spacing-32) * 1.5) var(--spacing-16);
+  }
+
+  /* clearfix */
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.coop-c-membership-hero__content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 21.875rem; /* 350px */
+
+  @media (--mq-medium) {
+    max-width: 33rem; /* 528px */
+  }
+}
+
+.coop-c-membership-hero__body {
+  margin-bottom: var(--spacing-32);
+
+  @media (--mq-small) {
+    max-width: 85%;
+  }
+
+  @media (--mq-large) {
+    margin-bottom: calc(var(--spacing-32) * 1.5);
+  }
+
+  @media (--mq-xlarge) {
+    margin-bottom: var(--spacing-32);
+  }
+}
+
+.coop-c-membership-hero__title {
+  margin-bottom: calc(var(--spacing-16) * 1.5);
+
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-16);
+  }
+}
+
+.coop-c-membership-hero__cta {
+  margin-top: calc(var(--spacing-16) * 1.5);
+  font-size: var(--type-body-s);
+
+  & .coop-t-link {
+    color: var(--color-text);
+  }
+}
+
+.coop-c-membership-hero__button {
+  margin-bottom: calc(var(--spacing-16) * 1.5);
+}
+
+.coop-c-membership-hero__caption {
+  margin-bottom: 0;
+}
+
+.coop-c-membership-hero__media {
+  position: relative;
+  z-index: 0;
+  margin-top: -75px;
+  height: 385px;
+
+  @media (--mq-xsmall) {
+    height: 400px;
+  }
+
+  @media (--mq-small) {
+    position: absolute;
+    z-index: 0;
+    right: 5%;
+    bottom: var(--spacing-32);
+
+    height: auto;
+    margin-top: 0;
+  }
+
+  @media (--mq-medium) {
+    right: 60px;
+  }
+
+  @media (--mq-large) {
+    right: 5%;
+  }
+}
+
+.coop-c-membership-hero__picture,
+.coop-c-membership-hero__image {
+  display: block;
+}
+
+/* Digital card promo picture */
+.coop-c-membership-hero__picture {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+
+  width: var(--image-small-width);
+  height: var(--image-small-height);
+  margin-left: calc(
+    (var(--image-small-width) / -2) + var(--image-small-offset-x)
+  );
+
+  @media (--mq-small) {
+    position: relative;
+    left: var(--image-medium-offset-x);
+    width: var(--image-medium-width);
+    height: var(--image-medium-height);
+    margin-left: 0;
+  }
+
+  @media (--mq-large) {
+    left: var(--image-large-offset-x);
+    width: var(--image-large-width);
+    height: var(--image-large-height);
+    margin-left: calc(
+      (var(--image-large-width) / -2) + var(--image-large-offset-x)
+    );
+  }
+}
+
+.coop-c-membership-hero__image {
+  display: block;
+  width: 100%;
+}
+
+/* Connector curved line */
+.coop-c-membership-hero__connector {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+
+  /* Small connector */
+  left: var(--background-small-origin-x);
+  width: var(--background-small-width);
+  height: var(--background-small-height);
+  margin: var(--background-small-offset-x);
+
+  /* Large connector (at small viewport) */
+  @media (--mq-small) {
+    left: var(--background-large-origin-x);
+    width: var(--background-large-width);
+    height: var(--background-large-height);
+    margin: var(--background-large-offset-x);
+  }
+
+  /* Medium connector (at large viewport) */
+  @media (--mq-large) {
+    left: var(--background-medium-origin-x);
+    width: var(--background-medium-width);
+    height: var(--background-medium-height);
+    margin: var(--background-medium-offset-x);
+  }
+
+  /* Medium connector (at xlarge viewport) */
+  @media (--mq-xlarge) {
+    margin: var(--background-xlarge-offset-x);
+  }
+}
+
+/* Connector full-width repeater */
+.coop-c-membership-hero:before,
+.coop-c-membership-hero:after {
+  position: absolute;
+  z-index: 0;
+  width: 50%;
+  height: 8px;
+  background: white;
+  content: "";
+}
+
+/* Connector full-width repeater (left) */
+.coop-c-membership-hero:before {
+  bottom: var(--connector-left-offset-y);
+  left: var(--connector-left-origin-x);
+  margin-left: var(--connector-left-offset-x);
+  display: none;
+
+  @media (--mq-small) {
+    display: block;
+  }
+
+  @media (--mq-large) {
+    left: var(--connector-left-large-origin-x);
+
+    /* Offset connector from origin */
+    bottom: var(--connector-left-large-offset-y);
+    margin-left: var(--connector-left-large-offset-x);
+  }
+
+  @media (--mq-xlarge) {
+    left: var(--connector-left-xlarge-origin-x);
+
+    /* Offset connector from origin */
+    bottom: var(--connector-left-xlarge-offset-y);
+    margin-left: var(--connector-left-xlarge-offset-x);
+  }
+}
+
+/* Connector full-width repeater (right) */
+.coop-c-membership-hero:after {
+  bottom: var(--connector-right-offset-y);
+  left: var(--connector-right-origin-x);
+  display: block;
+
+  @media (--mq-xsmall) {
+    left: var(--connector-right-xsmall-origin-x);
+
+    /* Offset connector from origin */
+    bottom: var(--connector-right-xsmall-offset-y);
+    margin-left: var(--connector-right-xsmall-offset-x);
+  }
+
+  @media (--mq-small) {
+    display: none;
+  }
+
+  @media (--mq-xlarge) {
+    left: var(--connector-right-xlarge-origin-x);
+    display: block;
+
+    /* Offset connector from origin */
+    bottom: var(--connector-right-xlarge-offset-y);
+    margin-left: var(--connector-right-xlarge-offset-x);
+  }
+}
+
+.coop-c-membership-hero__path {
+  fill: none;
+  stroke: var(--color-white);
+}
