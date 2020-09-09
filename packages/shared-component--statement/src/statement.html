@@ -3,6 +3,8 @@
 {% set backgroundColour = '' %}
 {% if content.background and content.background %}
 {% set backgroundColour = 'coop-c-statement-block--' + content.background.id %}
+{% else % }
+{% set backgroundColour = 'coop-c-statement-block--white' %}
 {% endif %}
 
 {% if content.quoteColourWhite %}
@@ -27,7 +29,6 @@
         </g>
       </g>
     </g>
-  </g>
 </svg>
 {% endif %}
 <div class="coop-c-statement__inner">
