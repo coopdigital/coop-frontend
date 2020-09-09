@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-signpost",
-  "version": "3.1.12",
+  "version": "3.1.13",
   "description": "Co-op Component: signpost",
   "main": "dist/signpost.css",
   "style": "src/signpost.pcss",

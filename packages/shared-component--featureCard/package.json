@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--featurecard",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "description": "Co-op Shared Component: Feature Card",
   "main": "dist/featureCard.css",
   "style": "src/featureCard.pcss",

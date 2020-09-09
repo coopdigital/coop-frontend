@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--video",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "description": "Co-op Shared Component: Video",
   "main": "dist/video.css",
   "style": "src/video.pcss",

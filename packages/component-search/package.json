@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-search",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "description": "Co-op Component Search",
   "main": "dist/component.css",
   "style": "src/component.pcss",

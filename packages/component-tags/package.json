@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-tags",
-  "version": "3.1.12",
+  "version": "3.1.13",
   "description": "Co-op Component: Tags",
   "main": "dist/tags.css",
   "style": "src/tags.pcss",
