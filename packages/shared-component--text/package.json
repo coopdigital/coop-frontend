@@ -13,12 +13,12 @@
   "scripts": {
     "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
     "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint",
-    "init": "rm -rf ./.git && git init"
+    "dist": "npm run build && npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/shared-component--text.git"
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/shared-component--text"
   },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^3.1.7",
