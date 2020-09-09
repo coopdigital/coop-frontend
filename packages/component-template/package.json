@@ -37,9 +37,9 @@
     "stylelint-prettier": "^1.1.2"
   },
   "bugs": {
-    "url": "https://github.com/coopdigital/component-template/issues"
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/component-template#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template#readme",
   "keywords": [
     "templates"
   ],

@@ -40,9 +40,9 @@
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
   },
   "bugs": {
-    "url": "https://github.com/coopdigital/component-card/issues"
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/component-card#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-card#readme",
   "keywords": [
     "card",
     "content"

@@ -40,9 +40,9 @@
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
   },
   "bugs": {
-    "url": "https://github.com/coopdigital/shared-component--membership/issues"
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/shared-component--membership#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--membership#readme",
   "keywords": [
     "content",
     "membership",

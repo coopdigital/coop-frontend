@@ -6,12 +6,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coopdigital/design-manual.git"
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "design-system"
   },
   "bugs": {
-    "url": "https://github.com/coopdigital/design-manual/issues"
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/design-manual#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/design-system#readme",
   "dependencies": {
     "@coopdigital/component-card": "^3.1.12",
     "@coopdigital/component-card--product": "^2.1.12",

@@ -42,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/coop-frontend#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/coop-frontend#readme",
   "keywords": [
     "meta data"
   ],
