@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--membershiphero",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Co-op Shared Component: Hero",
   "main": "dist/membership-hero.css",
   "style": "src/membership-hero.pcss",
@@ -24,7 +24,7 @@
     "directory": "packages/shared-component--membershipHero"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.1.6",
+    "@coopdigital/foundations-vars": "^3.1.8",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
     "postcss": "^7.0.32",
