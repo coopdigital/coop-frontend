@@ -16,7 +16,7 @@ Here's a bunch of examples, showing how you can integrate this CSS module in you
 In Vue, you can just reference it from a global component like so:
 ```css
 <style>
-@import "~@coopdigital/foundations-global/src/global.css";
+@import "~@coopdigital/foundations-global/src/global.pcss";
 </style>
 ```
 

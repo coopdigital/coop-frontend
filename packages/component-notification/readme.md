@@ -3,7 +3,7 @@
 ## Installation
 Install via `npm`:
 ```bash
-$ npm install @coopdigital/component-card --save
+$ npm install @coopdigital/component-notification --save
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ You can include `component-notification` in your project by referencing it from 
 
 If you use PostCSS in your build pipeline, you can reference the sources directly like so:
 ```css
-@import "node_modules/@coopdigital/component-notification/src/notification.css";
+@import "node_modules/@coopdigital/component-notification/src/notification.pcss";
 ```
 
 If you use a `postcss-import` plugin, it gets even easier:

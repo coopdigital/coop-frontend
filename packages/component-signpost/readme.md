@@ -17,7 +17,7 @@ You can include `component-signpost` in your project by referencing it from your
 
 If you use PostCSS in your build pipeline, you can reference the sources directly like so:
 ```css
-@import "node_modules/@coopdigital/component-[name]/src/signpost.pcss";
+@import "node_modules/@coopdigital/component-signpost/src/signpost.pcss";
 ```
 
 If you use a `postcss-import` plugin, it gets even easier:

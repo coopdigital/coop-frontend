@@ -4,25 +4,25 @@ Card component used on colleagues.coop.co.uk and coop.co.uk/recipes
 ## Installation
 Install via `npm` or Yarn:
 ```bash
-$ npm install @coopdigital/component-card --save
+$ npm install @coopdigital/component-notification--alert --save
 # OR
-$ yarn add @coopdigital/component-card
+$ yarn add @coopdigital/component-notification--alert
 ```
 
 ## Usage
-You can include `component-card` in your project by referencing it from your existing CSS via `@import` statement, i.e.:
+You can include `component-notification--alert` in your project by referencing it from your existing CSS via `@import` statement, i.e.:
 ```css
-@import "node_modules/@coopdigital/component-[name]/dist/card.css";
+@import "node_modules/@coopdigital/component-notification--alert/dist/card.css";
 ```
 
 If you use PostCSS in your build pipeline, you can reference the sources directly like so:
 ```css
-@import "node_modules/@coopdigital/component-[name]/src/card.pcss";
+@import "node_modules/@coopdigital/component-notification--alert/src/card.pcss";
 ```
 
 If you use a `postcss-import` plugin, it gets even easier:
 ```css
-@import "@coopdigital/component-card";
+@import "@coopdigital/component-notification--alert";
 ```
 
 ## Examples

@@ -12,12 +12,12 @@ $ yarn add @coopdigital/component-card
 ## Usage
 You can include `component-card` in your project by referencing it from your existing CSS via `@import` statement, i.e.:
 ```css
-@import "node_modules/@coopdigital/component-[name]/dist/card.css";
+@import "node_modules/@coopdigital/component-card/dist/card.css";
 ```
 
 If you use PostCSS in your build pipeline, you can reference the sources directly like so:
 ```css
-@import "node_modules/@coopdigital/component-[name]/src/card.pcss";
+@import "node_modules/@coopdigital/component-card/src/card.pcss";
 ```
 
 If you use a `postcss-import` plugin, it gets even easier:

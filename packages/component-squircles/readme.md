@@ -10,7 +10,7 @@ $ yarn add @coopdigital/component-squircles
 ```
 
 ## Usage
-You can include `component-[name]` in your project by referencing it from your existing CSS via `@import` statement, i.e.:
+You can include `component-squircles` in your project by referencing it from your existing CSS via `@import` statement, i.e.:
 ```css
 @import "node_modules/@coopdigital/component-squircles/dist/squircles.css";
 ```
