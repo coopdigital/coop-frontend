@@ -38,6 +38,7 @@
     "@coopdigital/shared-component--image": "^2.1.12",
     "@coopdigital/shared-component--linklist": "^2.1.14",
     "@coopdigital/shared-component--membership": "^2.1.12",
+    "@coopdigital/shared-component--membershiphero": "^1.0.2",
     "@coopdigital/shared-component--offers": "^2.1.12",
     "@coopdigital/shared-component--signpost": "^2.1.12",
     "@coopdigital/shared-component--statement": "^2.1.12",
