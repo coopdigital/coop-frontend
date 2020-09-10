@@ -1,5 +1,5 @@
 {
-  "name": "@coopdigital/component-app-download",
+  "name": "@coopdigital/shared-component--app",
   "version": "0.1.0",
   "description": "Co-op Component: App download",
   "main": "dist/app-download.css",
