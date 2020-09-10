@@ -2,6 +2,16 @@
 
 @import "@coopdigital/foundations-vars";
 
+@keyframes coop-btn-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .coop-btn {
   display: inline-block;
   display: inline-flex;
@@ -49,6 +59,10 @@
   background: var(--color-button-blue-active);
   color: var(--color-white);
   outline: 0;
+}
+
+.coop-btn--full-width {
+  width: 100%;
 }
 
 .coop-btn--primary {
@@ -109,5 +123,72 @@
 
   @media (--mq-medium) {
     height: 3.125rem; /* 50px / 16 */
+  }
+}
+
+/* Button (variable) with reserved space for spinner */
+.coop-btn--loading {
+  position: relative;
+  padding-right: calc((var(--spacing-16) * 1.25) + 38px);
+
+  @media (--mq-medium) {
+    padding-right: calc((var(--spacing-32) * 1.25) + 38px);
+  }
+}
+
+/* Button (small) with reserved space for spinner */
+.coop-btn--loading.coop-btn--small {
+  padding-right: calc((var(--spacing-16) * 1.25) + 38px);
+
+  @media (--mq-medium) {
+    padding-right: calc((var(--spacing-16) * 1.25) + 38px);
+  }
+}
+
+/* Button (full width) with reserved space for spinner */
+.coop-btn--loading.coop-btn--full-width {
+  padding-left: calc((var(--spacing-16) * 1.25) + 20px);
+  padding-right: calc((var(--spacing-16) * 1.25) + 20px);
+
+  @media (--mq-medium) {
+    padding-left: calc((var(--spacing-32) * 1.25) + 20px);
+    padding-right: calc((var(--spacing-32) * 1.25) + 20px);
+  }
+}
+
+/* Loading spinner */
+.coop-btn--loading:after {
+  position: absolute;
+  top: 1rem;
+  right: 20px;
+  content: "";
+  animation: coop-btn-spinner 1250ms infinite linear;
+  border: 2px solid;
+  border-right-color: transparent !important;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: color 0s;
+
+  @media (--mq-medium) {
+    top: 1.25rem;
+    right: 40px;
+  }
+}
+
+/* Loading spinner (small button) */
+.coop-btn--loading.coop-btn--small:after {
+  top: 0.75rem;
+
+  @media (--mq-medium) {
+    top: 0.9375rem;
+    right: 20px;
+  }
+}
+
+/* Loading spinner (small button, full width ) */
+.coop-btn--loading.coop-btn--full-width.coop-btn--small:after {
+  @media (--mq-medium) {
+    right: 40px;
   }
 }
