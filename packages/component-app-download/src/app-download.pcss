@@ -171,6 +171,7 @@
 .coop-c-app-download__media {
   margin: var(--spacing-64) 0 var(--spacing-16);
   padding: var(--spacing-8) 0;
+  text-align: center;
 
   @media (--mq-small) {
     width: 38%;
@@ -218,18 +219,19 @@
   }
 }
 
-.coop-c-app-download__picture,
-.coop-c-app-download__image {
-  display: block;
-}
-
 .coop-c-app-download__picture {
   position: relative;
   z-index: 1;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* iPhone handset with shadow */
+.coop-c-app-download__picture--handset {
+  overflow: hidden;
   width: 120px;
   height: 260px;
-  margin: 0 auto;
-  overflow: hidden;
+
   border-radius: 8px;
   box-shadow: 0 4px 16px 0 rgba(40, 40, 40, 0.15);
 
@@ -237,4 +239,9 @@
     width: 210px;
     height: 455px;
   }
+}
+
+.coop-c-app-download__image {
+  display: block;
+  width: 100%;
 }
