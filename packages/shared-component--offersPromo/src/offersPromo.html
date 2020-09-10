@@ -1,0 +1,68 @@
+
+{% import 'macros/elements/images.html' as images %}
+{% macro render(content, cms) -%}
+<article class="coop-c-offerspromo">
+    {% set offerLink = {} %}
+    {% with link = cms.get_entry(content.offerLink.sys.id) %}
+        {%- set _ = offerLink.update({
+            "url" : link.fields.url.data
+        }) -%}
+    {% endwith %}
+
+    <div class="coop-c-offerspromo__inner">     
+      
+      <div class="coop-c-offerspromo__content">
+        <a
+            href="{{offerLink.url}}"
+            class="coop-c-offerspromo__link"
+            data-contenttype="Card|offerspromo"
+            data-contentparent=""
+            data-linktext=""
+        >
+          <header class="coop-c-offerspromo__header">
+              <h3 class="coop-c-offerspromo__title">{{content.heading}}</h3>
+          </header>
+          <div class="coop-c-offerspromo__body">
+              <p>{{content.bodyText}}</p>
+          </div>
+        </a>
+        <div class="coop-c-offerspromo__terms">
+          {% with legalLink = cms.get_entry(content.legalLink.sys.id) %}
+              <p><a href="{{legalLink.fields.url.data}}">{{legalLink.fields.title.data}}</a></p>
+          {% endwith %}
+        </div>
+      </div>  
+
+      <div class="coop-c-offerspromo__card">
+        <a 
+          href="{{offerLink.url}}" 
+          class="coop-c-offerspromo__link" 
+          data-contenttype="Card|offerspromo" 
+          data-contentparent="" 
+          data-linktext="">
+          {% with card = cms.get_entry(content.offerCard.sys.id) %}
+            {% with image = cms.get_asset(card.fields.image.data) %}
+              {%
+                set imageDimensions = {
+                  'width': 346,
+                  'height': 346
+                }
+              %}
+                <figure class="coop-c-offerspromo__card-media">
+                    <picture class="coop-c-offerspromo__image">
+                        {{ images.render(image, imageDimensions) }}
+                    </picture>
+                </figure>
+            {% endwith %}   
+              <header class="coop-c-offerspromo__card-header">
+                  <h3 class="coop-c-offerspromo__card-title" >
+                      {{card.fields.heading.data}}
+                  </h3>
+                  <p>{{card.fields.description.data}}</p>
+              </header>
+            {% endwith %}
+        </a>
+      </div> 
+  </div>
+</article>
+{%- endmacro -%}
