@@ -22,7 +22,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
-    "directory": "packages/component-app-download"
+    "directory": "packages/shared-component--app"
   },
   "devDependencies": {
     "@coopdigital/foundations-buttons": "^2.1.4",
@@ -50,7 +50,7 @@
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-app-download#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--app#readme",
   "keywords": [
     "app",
     "download",

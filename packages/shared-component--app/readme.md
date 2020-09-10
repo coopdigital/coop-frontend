@@ -1,4 +1,4 @@
-# `component-app-download`
+# `shared-component--app`
 Co-op app download component with Apple App Store and Google Play Store buttons
 
 ## Installation
@@ -8,7 +8,7 @@ $ npm install @coopdigital/shared-component--app --save
 ```
 
 ## Usage
-You can include `component-app-download` in your project by referencing it from your existing CSS via `@import` statement:
+You can include `shared-component--app` in your project by referencing it from your existing CSS via `@import` statement:
 ```css
 @import "node_modules/@coopdigital/shared-component--app/dist/app-download.css";
 ```
