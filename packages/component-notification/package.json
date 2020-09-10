@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-notification",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Co-op Components: Notification",
   "main": "dist/notification.css",
   "style": "src/notification.pcss",
@@ -21,7 +21,7 @@
     "directory": "packages/component-notification"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.1.8",
+    "@coopdigital/foundations-vars": "^3.2.0",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
     "postcss": "^7.0.32",
