@@ -7,20 +7,20 @@
   --background-small-width: 800px;
   --background-small-height: 265px;
   --background-small-origin-x: 50%;
-  --background-small-offset-x: 90px 0 0
-    calc((var(--background-small-width) / -2) - 125px);
+  --background-small-offset-x: calc((var(--background-small-width) / -2) - 125px);
+  --background-small-offset-y: 90px;
   --background-medium-width: 1440px;
   --background-medium-height: 476px;
   --background-medium-origin-x: 50%;
-  --background-medium-offset-x: 108px 0 0
-    calc((var(--background-medium-width) / -2) - 120px);
+  --background-medium-offset-x: calc((var(--background-medium-width) / -2) - 120px);
+  --background-medium-offset-y: 84px;
   --background-large-width: 1732px;
   --background-large-height: 573px;
   --background-large-origin-x: 50%;
-  --background-large-offset-x: -110px 0 0
-    calc((var(--background-large-width) / -2) + 90px);
-  --background-xlarge-offset-x: 108px 0 0
-    calc((var(--background-medium-width) / -2) - 400px);
+  --background-large-offset-x: calc((var(--background-large-width) / -2) + 50px);
+  --background-large-offset-y: -110px;
+  --background-xlarge-offset-x: calc((var(--background-medium-width) / -2) - 400px);
+  --background-xlarge-offset-y: 68px;
 
   /* Connector full-width repeater (left) */
   --connector-left-offset-x: 0;
@@ -30,18 +30,15 @@
   --connector-left-large-offset-y: calc((var(--spacing-32) * 1.5) - 8px);
   --connector-left-large-origin-x: 0;
   --connector-left-xlarge-offset-x: -100px;
-  --connector-left-xlarge-offset-y: calc((var(--spacing-32) * 1.5) - 8px);
+  --connector-left-xlarge-offset-y: calc(var(--spacing-64) - 8px);
   --connector-left-xlarge-origin-x: 0;
 
   /* Connector full-width repeater (right) */
   --connector-right-offset-x: 0;
-  --connector-right-offset-y: 267px;
+  --connector-right-offset-y: 282px;
   --connector-right-origin-x: 50%;
-  --connector-right-xsmall-offset-x: 0;
-  --connector-right-xsmall-offset-y: 282px;
-  --connector-right-xsmall-origin-x: 50%;
   --connector-right-xlarge-offset-x: 100px;
-  --connector-right-xlarge-offset-y: 313px;
+  --connector-right-xlarge-offset-y: 329px;
   --connector-right-xlarge-origin-x: 50%;
 
   /* Digital card promo picture (at small viewport) */
@@ -92,7 +89,7 @@
   }
 
   @media (--mq-xlarge) {
-    padding: calc(var(--spacing-32) * 1.5) var(--spacing-16);
+    padding: calc(var(--spacing-32) * 1.5) var(--spacing-16) calc(var(--spacing-64) + var(--spacing-8));
   }
 
   /* clearfix */
@@ -158,12 +155,8 @@
 .coop-c-membership-hero__media {
   position: relative;
   z-index: 0;
-  margin-top: -75px;
-  height: 385px;
-
-  @media (--mq-xsmall) {
-    height: 400px;
-  }
+  margin-top: -50px;
+  height: 400px;
 
   @media (--mq-small) {
     position: absolute;
@@ -181,6 +174,7 @@
 
   @media (--mq-large) {
     right: 5%;
+    bottom: var(--spacing-8);
   }
 }
 
@@ -235,14 +229,16 @@
   left: var(--background-small-origin-x);
   width: var(--background-small-width);
   height: var(--background-small-height);
-  margin: var(--background-small-offset-x);
+  margin-left: var(--background-small-offset-x);
+  margin-top: var(--background-small-offset-y);
 
   /* Large connector (at small viewport) */
   @media (--mq-small) {
     left: var(--background-large-origin-x);
     width: var(--background-large-width);
     height: var(--background-large-height);
-    margin: var(--background-large-offset-x);
+    margin-left: var(--background-large-offset-x);
+    margin-top: var(--background-large-offset-y);
   }
 
   /* Medium connector (at large viewport) */
@@ -250,12 +246,14 @@
     left: var(--background-medium-origin-x);
     width: var(--background-medium-width);
     height: var(--background-medium-height);
-    margin: var(--background-medium-offset-x);
+    margin-left: var(--background-medium-offset-x);
+    margin-top: var(--background-medium-offset-y);
   }
 
   /* Medium connector (at xlarge viewport) */
   @media (--mq-xlarge) {
-    margin: var(--background-xlarge-offset-x);
+    margin-left: var(--background-xlarge-offset-x);
+    margin-top: var(--background-xlarge-offset-y);
   }
 }
 
@@ -303,14 +301,6 @@
   bottom: var(--connector-right-offset-y);
   left: var(--connector-right-origin-x);
   display: block;
-
-  @media (--mq-xsmall) {
-    left: var(--connector-right-xsmall-origin-x);
-
-    /* Offset connector from origin */
-    bottom: var(--connector-right-xsmall-offset-y);
-    margin-left: var(--connector-right-xsmall-offset-x);
-  }
 
   @media (--mq-small) {
     display: none;
