@@ -4,60 +4,60 @@
 
 :root {
   /* Connector curved line */
-  --background-small-width: 800px;
-  --background-small-height: 265px;
-  --background-small-origin-x: 50%;
-  --background-small-offset-x: calc((var(--background-small-width) / -2) - 125px);
-  --background-small-offset-y: 90px;
-  --background-medium-width: 1440px;
-  --background-medium-height: 476px;
-  --background-medium-origin-x: 50%;
-  --background-medium-offset-x: calc((var(--background-medium-width) / -2) - 120px);
-  --background-medium-offset-y: 84px;
-  --background-large-width: 1732px;
-  --background-large-height: 573px;
-  --background-large-origin-x: 50%;
-  --background-large-offset-x: calc((var(--background-large-width) / -2) + 50px);
-  --background-large-offset-y: -110px;
-  --background-xlarge-offset-x: calc((var(--background-medium-width) / -2) - 400px);
-  --background-xlarge-offset-y: 68px;
+  --membership-hero-background-small-width: 800px;
+  --membership-hero-background-small-height: 265px;
+  --membership-hero-background-small-origin-x: 50%;
+  --membership-hero-background-small-offset-x: calc((var(--membership-hero-background-small-width) / -2) - 125px);
+  --membership-hero-background-small-offset-y: 90px;
+  --membership-hero-background-medium-width: 1440px;
+  --membership-hero-background-medium-height: 476px;
+  --membership-hero-background-medium-origin-x: 50%;
+  --membership-hero-background-medium-offset-x: calc((var(--membership-hero-background-medium-width) / -2) - 120px);
+  --membership-hero-background-medium-offset-y: 84px;
+  --membership-hero-background-large-width: 1732px;
+  --membership-hero-background-large-height: 573px;
+  --membership-hero-background-large-origin-x: 50%;
+  --membership-hero-background-large-offset-x: calc((var(--membership-hero-background-large-width) / -2) + 50px);
+  --membership-hero-background-large-offset-y: -110px;
+  --membership-hero-background-xlarge-offset-x: calc((var(--membership-hero-background-medium-width) / -2) - 400px);
+  --membership-hero-background-xlarge-offset-y: 68px;
 
   /* Connector full-width repeater (left) */
-  --connector-left-offset-x: 0;
-  --connector-left-offset-y: calc(var(--spacing-32) - 8px);
-  --connector-left-origin-x: 0;
-  --connector-left-large-offset-x: 0;
-  --connector-left-large-offset-y: calc((var(--spacing-32) * 1.5) - 8px);
-  --connector-left-large-origin-x: 0;
-  --connector-left-xlarge-offset-x: -100px;
-  --connector-left-xlarge-offset-y: calc(var(--spacing-64) - 8px);
-  --connector-left-xlarge-origin-x: 0;
+  --membership-hero-connector-left-offset-x: 0;
+  --membership-hero-connector-left-offset-y: calc(var(--spacing-32) - 8px);
+  --membership-hero-connector-left-origin-x: 0;
+  --membership-hero-connector-left-large-offset-x: 0;
+  --membership-hero-connector-left-large-offset-y: calc((var(--spacing-32) * 1.5) - 8px);
+  --membership-hero-connector-left-large-origin-x: 0;
+  --membership-hero-connector-left-xlarge-offset-x: -100px;
+  --membership-hero-connector-left-xlarge-offset-y: calc(var(--spacing-64) - 8px);
+  --membership-hero-connector-left-xlarge-origin-x: 0;
 
   /* Connector full-width repeater (right) */
-  --connector-right-offset-x: 0;
-  --connector-right-offset-y: 282px;
-  --connector-right-origin-x: 50%;
-  --connector-right-xlarge-offset-x: 100px;
-  --connector-right-xlarge-offset-y: 329px;
-  --connector-right-xlarge-origin-x: 50%;
+  --membership-hero-connector-right-offset-x: 0;
+  --membership-hero-connector-right-offset-y: 282px;
+  --membership-hero-connector-right-origin-x: 50%;
+  --membership-hero-connector-right-xlarge-offset-x: 100px;
+  --membership-hero-connector-right-xlarge-offset-y: 329px;
+  --membership-hero-connector-right-xlarge-origin-x: 50%;
 
   /* Digital card promo picture (at small viewport) */
   /* packages/shared-component--membershipHero/src/images/digital-card-medium.png */
-  --image-small-width: 337px;
-  --image-small-height: 424px;
-  --image-small-offset-x: -12px;
+  --membership-hero-image-small-width: 337px;
+  --membership-hero-image-small-height: 424px;
+  --membership-hero-image-small-offset-x: -12px;
 
   /* Digital card promo picture (at medium viewport) */
   /* packages/shared-component--membershipHero/src/images/digital-card-small.png */
-  --image-medium-width: 267px;
-  --image-medium-height: 336px;
-  --image-medium-offset-x: 0;
+  --membership-hero-image-medium-width: 267px;
+  --membership-hero-image-medium-height: 336px;
+  --membership-hero-image-medium-offset-x: 0;
 
   /* Digital card promo picture (at large viewport) */
   /* packages/shared-component--membershipHero/src/images/digital-card-large.png */
-  --image-large-width: 393px;
-  --image-large-height: 494px;
-  --image-large-offset-x: 0;
+  --membership-hero-image-large-width: 393px;
+  --membership-hero-image-large-height: 494px;
+  --membership-hero-image-large-offset-x: 0;
 }
 
 .coop-c-membership-hero {
@@ -190,26 +190,26 @@
   top: 0;
   left: 50%;
 
-  width: var(--image-small-width);
-  height: var(--image-small-height);
+  width: var(--membership-hero-image-small-width);
+  height: var(--membership-hero-image-small-height);
   margin-left: calc(
-    (var(--image-small-width) / -2) + var(--image-small-offset-x)
+    (var(--membership-hero-image-small-width) / -2) + var(--membership-hero-image-small-offset-x)
   );
 
   @media (--mq-small) {
     position: relative;
-    left: var(--image-medium-offset-x);
-    width: var(--image-medium-width);
-    height: var(--image-medium-height);
+    left: var(--membership-hero-image-medium-offset-x);
+    width: var(--membership-hero-image-medium-width);
+    height: var(--membership-hero-image-medium-height);
     margin-left: 0;
   }
 
   @media (--mq-large) {
-    left: var(--image-large-offset-x);
-    width: var(--image-large-width);
-    height: var(--image-large-height);
+    left: var(--membership-hero-image-large-offset-x);
+    width: var(--membership-hero-image-large-width);
+    height: var(--membership-hero-image-large-height);
     margin-left: calc(
-      (var(--image-large-width) / -2) + var(--image-large-offset-x)
+      (var(--membership-hero-image-large-width) / -2) + var(--membership-hero-image-large-offset-x)
     );
   }
 }
@@ -226,34 +226,34 @@
   top: 0;
 
   /* Small connector */
-  left: var(--background-small-origin-x);
-  width: var(--background-small-width);
-  height: var(--background-small-height);
-  margin-left: var(--background-small-offset-x);
-  margin-top: var(--background-small-offset-y);
+  left: var(--membership-hero-background-small-origin-x);
+  width: var(--membership-hero-background-small-width);
+  height: var(--membership-hero-background-small-height);
+  margin-left: var(--membership-hero-background-small-offset-x);
+  margin-top: var(--membership-hero-background-small-offset-y);
 
   /* Large connector (at small viewport) */
   @media (--mq-small) {
-    left: var(--background-large-origin-x);
-    width: var(--background-large-width);
-    height: var(--background-large-height);
-    margin-left: var(--background-large-offset-x);
-    margin-top: var(--background-large-offset-y);
+    left: var(--membership-hero-background-large-origin-x);
+    width: var(--membership-hero-background-large-width);
+    height: var(--membership-hero-background-large-height);
+    margin-left: var(--membership-hero-background-large-offset-x);
+    margin-top: var(--membership-hero-background-large-offset-y);
   }
 
   /* Medium connector (at large viewport) */
   @media (--mq-large) {
-    left: var(--background-medium-origin-x);
-    width: var(--background-medium-width);
-    height: var(--background-medium-height);
-    margin-left: var(--background-medium-offset-x);
-    margin-top: var(--background-medium-offset-y);
+    left: var(--membership-hero-background-medium-origin-x);
+    width: var(--membership-hero-background-medium-width);
+    height: var(--membership-hero-background-medium-height);
+    margin-left: var(--membership-hero-background-medium-offset-x);
+    margin-top: var(--membership-hero-background-medium-offset-y);
   }
 
   /* Medium connector (at xlarge viewport) */
   @media (--mq-xlarge) {
-    margin-left: var(--background-xlarge-offset-x);
-    margin-top: var(--background-xlarge-offset-y);
+    margin-left: var(--membership-hero-background-xlarge-offset-x);
+    margin-top: var(--membership-hero-background-xlarge-offset-y);
   }
 }
 
@@ -270,9 +270,9 @@
 
 /* Connector full-width repeater (left) */
 .coop-c-membership-hero:before {
-  bottom: var(--connector-left-offset-y);
-  left: var(--connector-left-origin-x);
-  margin-left: var(--connector-left-offset-x);
+  bottom: var(--membership-hero-connector-left-offset-y);
+  left: var(--membership-hero-connector-left-origin-x);
+  margin-left: var(--membership-hero-connector-left-offset-x);
   display: none;
 
   @media (--mq-small) {
@@ -280,26 +280,26 @@
   }
 
   @media (--mq-large) {
-    left: var(--connector-left-large-origin-x);
+    left: var(--membership-hero-connector-left-large-origin-x);
 
     /* Offset connector from origin */
-    bottom: var(--connector-left-large-offset-y);
-    margin-left: var(--connector-left-large-offset-x);
+    bottom: var(--membership-hero-connector-left-large-offset-y);
+    margin-left: var(--membership-hero-connector-left-large-offset-x);
   }
 
   @media (--mq-xlarge) {
-    left: var(--connector-left-xlarge-origin-x);
+    left: var(--membership-hero-connector-left-xlarge-origin-x);
 
     /* Offset connector from origin */
-    bottom: var(--connector-left-xlarge-offset-y);
-    margin-left: var(--connector-left-xlarge-offset-x);
+    bottom: var(--membership-hero-connector-left-xlarge-offset-y);
+    margin-left: var(--membership-hero-connector-left-xlarge-offset-x);
   }
 }
 
 /* Connector full-width repeater (right) */
 .coop-c-membership-hero:after {
-  bottom: var(--connector-right-offset-y);
-  left: var(--connector-right-origin-x);
+  bottom: var(--membership-hero-connector-right-offset-y);
+  left: var(--membership-hero-connector-right-origin-x);
   display: block;
 
   @media (--mq-small) {
@@ -307,12 +307,12 @@
   }
 
   @media (--mq-xlarge) {
-    left: var(--connector-right-xlarge-origin-x);
+    left: var(--membership-hero-connector-right-xlarge-origin-x);
     display: block;
 
     /* Offset connector from origin */
-    bottom: var(--connector-right-xlarge-offset-y);
-    margin-left: var(--connector-right-xlarge-offset-x);
+    bottom: var(--membership-hero-connector-right-xlarge-offset-y);
+    margin-left: var(--membership-hero-connector-right-xlarge-offset-x);
   }
 }
 
