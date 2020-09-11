@@ -1,0 +1,247 @@
+@import "@coopdigital/foundations-vars";
+
+:root {
+  --app-download-button: #000000;
+  --app-download-button-hover: #595959;
+}
+
+.coop-c-app-download {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background: var(--color-brand-membership-blue-light-10);
+}
+
+.coop-c-app-download__inner {
+  position: relative;
+  z-index: 1;
+
+  max-width: 81rem;
+  margin: 0 auto;
+  padding: var(--spacing-32) var(--spacing-16);
+
+  @media (--mq-small) {
+    padding-bottom: var(--spacing-48);
+  }
+
+  @media (--mq-medium) {
+    padding: var(--spacing-48) var(--spacing-16);
+  }
+
+  @media (--mq-large) {
+    padding: var(--spacing-48) var(--spacing-24);
+  }
+
+  @media (--mq-xlarge) {
+    padding: var(--spacing-64) var(--spacing-16)
+      calc(var(--spacing-64) + var(--spacing-8));
+  }
+}
+
+.coop-c-app-download__content {
+  & p + p {
+    margin-top: var(--spacing-24);
+  }
+
+  @media (--mq-small) {
+    width: 62%;
+    float: left;
+  }
+
+  @media (--mq-large) {
+    width: 50%;
+    max-width: 43.75rem; /* 700px */
+  }
+}
+
+.coop-c-app-download__body {
+  max-width: 90%;
+
+  @media (--mq-medium) {
+    max-width: 85%;
+  }
+
+  @media (--mq-large) {
+    max-width: none;
+  }
+}
+
+.coop-c-app-download__title {
+  margin-bottom: var(--spacing-24);
+}
+
+.coop-c-app-download__btns {
+  margin: var(--spacing-32) 0 var(--spacing-16);
+
+  @media (--mq-small) {
+    margin: var(--spacing-48) 0 var(--spacing-24);
+  }
+}
+
+.coop-c-app-download__btn {
+  position: relative;
+  display: block;
+  display: flex;
+  float: left;
+  margin: 0 var(--spacing-16) var(--spacing-16) 0;
+  padding: 0;
+  background: var(--app-download-button);
+
+  &:hover,
+  &:focus {
+    background: var(--app-download-button-hover);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  & svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  & svg > path {
+    fill: var(--color-white);
+  }
+
+  @media (--mq-medium) {
+    padding: 0;
+  }
+}
+
+.coop-c-app-download__btn--apple {
+  width: 9.75rem; /* 156px / 16 */
+
+  @media (--mq-medium) {
+    width: 11.25rem; /* 180px / 16 */
+  }
+}
+
+.coop-c-app-download__btn--google {
+  width: 10.5625rem; /* 169px / 16 */
+
+  @media (--mq-medium) {
+    width: 12.1875rem; /* 195px / 16 */
+  }
+}
+
+.coop-c-app-download__about {
+  font-size: var(--type-body-s);
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.coop-c-app-download__link {
+  color: var(--color-text);
+
+  & svg {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    margin: 0 0 0 var(--spacing-12);
+    vertical-align: middle;
+    transition: transform 0.15s ease-in;
+    transform: translateX(-2px);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-brand-membership-turquoise-dark-2);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    transform: translateX(0);
+  }
+
+  & svg > path {
+    fill: var(--color-brand-membership-turquoise-bright);
+  }
+}
+
+.coop-c-app-download__media {
+  margin: var(--spacing-64) 0 var(--spacing-16);
+  padding: var(--spacing-8) 0;
+  text-align: center;
+
+  @media (--mq-small) {
+    width: 38%;
+    float: right;
+    margin: 0;
+  }
+
+  @media (--mq-large) {
+    width: 50%;
+  }
+}
+
+/* Connector full-width repeater */
+.coop-c-app-download:after {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: 205px;
+  width: 50%;
+  height: 8px;
+  background: var(--color-brand-membership-turquoise-bright);
+  content: "";
+
+  @media (--mq-small) {
+    top: 142px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 25%;
+  }
+
+  @media (--mq-medium) {
+    top: 245px;
+  }
+
+  @media (--mq-xlarge) {
+    right: auto;
+    left: 50%;
+    width: 50%;
+    margin-left: 320px;
+  }
+
+  @media (--mq-xlarge) {
+    top: 261px;
+  }
+}
+
+.coop-c-app-download__picture {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* iPhone handset with shadow */
+.coop-c-app-download__picture--handset {
+  overflow: hidden;
+  width: 120px;
+  height: 260px;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 rgba(40, 40, 40, 0.15);
+
+  @media (--mq-medium) {
+    width: 210px;
+    height: 455px;
+  }
+}
+
+.coop-c-app-download__image {
+  display: block;
+  width: 100%;
+}
