@@ -34,14 +34,6 @@
     width: 50%;
     background-color: var(--color-white);
   }
-
-  @media (--mq-large) {
-    width: 40%;
-  }
-
-  @media (--mq-xlarge) {
-    width: 50%;
-  }
 }
 
 .coop-c-offerspromo__title {
@@ -84,11 +76,7 @@
   }
 
   & p {
-    margin-top: 1.25rem;
-
-    @media (--mq-medium) {
-      margin-top: var(--spacing-16);
-    }
+    margin-top: var(--spacing-16);
 
     &:hover,
     &:focus {
@@ -142,16 +130,16 @@
   @media (--mq-medium) {
     float: right;
     width: 50%;
+    padding: calc(var(--spacing-16) + var(--spacing-4));
     background: none;
   }
 
-  @media (--mq-large) {
-    width: 60%;
-    padding: var(--spacing-24) var(--spacing-32) calc(var(--spacing-16) + var(--spacing-4));
+  @media (--mq-medium) {
+    padding: var(--spacing-24);
   }
 
   @media (--mq-xlarge) {
-    width: 50%;
+    padding: var(--spacing-24) var(--spacing-32) calc(var(--spacing-16) + var(--spacing-4));
   }
 }
 
@@ -172,15 +160,12 @@
 }
 
 .coop-c-offerspromo__content .coop-c-offerspromo__link {
-  padding: var(--spacing-24) var(--spacing-16) calc(var(--spacing-48) + var(--spacing-24));
-
-  @media (--mq-large) {
-    padding-left: var(--spacing-24);
-    padding-right: var(--spacing-24);
-  }
+  padding: var(--spacing-24) var(--spacing-16) calc(var(--spacing-48) + var(--spacing-16));
 
   @media (--mq-large) {
     min-height: 252px;
+    padding-left: var(--spacing-24);
+    padding-right: var(--spacing-24);
   }
 }
 
@@ -188,11 +173,11 @@
   margin: 0 0 var(--spacing-4);
   font-size: var(--type-h3-l);
 
-  @media (--mq-medium) {
-    font-size: var(--type-h3-l);
+  @media (--mq-large) {
+    font-size: var(--type-h2-l);
   }
 
-  @media (--mq-large) {
+  @media (--mq-xlarge) {
     font-size: var(--type-h1-l);
   }
 }
@@ -203,6 +188,10 @@
   padding: 0;
 
   @media (--mq-large) {
+    margin-right: calc(var(--spacing-16) + var(--spacing-2));
+  }
+
+  @media (--mq-xlarge) {
     margin-right: var(--spacing-24);
   }
 }
@@ -213,6 +202,11 @@
   height: 90px;
 
   @media (--mq-large) {
+    width: 142px;
+    height: 142px;
+  }
+
+  @media (--mq-xlarge) {
     width: 174px;
     height: 174px;
   }
@@ -227,6 +221,10 @@
   }
 
   @media (--mq-large) {
+    padding-left: calc(142px + var(--spacing-16) + var(--spacing-2));
+  }
+
+  @media (--mq-xlarge) {
     padding-left: calc(174px + var(--spacing-24));
 
     & p {
