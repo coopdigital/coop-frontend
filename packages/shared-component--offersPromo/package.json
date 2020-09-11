@@ -1,0 +1,60 @@
+{
+  "name": "@coopdigital/shared-component--offerspromo",
+  "version": "2.1.17",
+  "description": "Co-op Shared Component: Offers promo",
+  "main": "dist/offersPromo.css",
+  "style": "src/offersPromo.pcss",
+  "author": "@coopdigital",
+  "contributors": [
+    "Gup Badyal (gupreet.baydal@coop.co.uk)"
+  ],
+  "private": false,
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --config '../../postcss.config.js' --ext css",
+    "dist": "npm run build && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/shared-component--offersPromo"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-layout": "^3.2.0",
+    "@coopdigital/foundations-vars": "^3.2.0",
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.32",
+    "postcss-calc": "^7.0.3",
+    "postcss-cli": "^7.1.1",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.1",
+    "prettier": "^2.1.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-layout": ">= 3.2.0 < 4",
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--offersPromo#readme",
+  "keywords": [
+    "card",
+    "content",
+    "offersPromo"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
