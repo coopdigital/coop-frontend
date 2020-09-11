@@ -6,7 +6,6 @@ build/
 
 # dependencies
 .bundle/
-./vendor/
 vendor/
 
 # nmp linux stuff
