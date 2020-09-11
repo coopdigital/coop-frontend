@@ -140,6 +140,40 @@
   }
 }
 
+/* Fake connectors used at 'small' size */
+.coop-c-totaliser__content:before,
+.coop-c-totaliser__content:after {
+  position: absolute;
+  top: 73px;
+
+  display: none;
+  width: 32px;
+  height: 8px;
+  background: var(--color-brand-membership-pink-bright);
+  content: "";
+
+  @media (--mq-small) {
+    display: block;
+  }
+
+  @media (--mq-large) {
+    display: none;
+  }
+}
+
+.coop-c-totaliser__content:before {
+  left: 0;
+}
+
+.coop-c-totaliser__content:after {
+  right: 0;
+
+  @media (--mq-medium) {
+    width: 64px;
+  }
+}
+
+/* Real SVG connectors used at 'large' size */
 .coop-c-totaliser__connector {
   display: none;
   fill: none;
@@ -148,7 +182,7 @@
     stroke: var(--color-brand-membership-pink-bright);
   }
 
-  @media (--mq-small) {
+  @media (--mq-large) {
     position: absolute;
     z-index: 2;
     display: block;
@@ -156,18 +190,10 @@
 }
 
 .coop-c-totaliser__connector--left {
-  top: 72px;
-  left: -183px;
-
   width: 205px;
   height: 130px;
 
-  @media (--mq-medium) {
-    top: 78px;
-  }
-
   @media (--mq-large) {
-    top: auto;
     bottom: 0;
     left: -115px;
   }
@@ -178,22 +204,12 @@
 }
 
 .coop-c-totaliser__connector--right {
-  top: -78px;
-  right: -384px;
-
-  width: 406px;
-  height: 162px;
-
-  @media (--mq-medium) {
-    top: -72px;
-  }
+  width: 203px;
+  height: 81px;
 
   @media (--mq-large) {
     top: 0;
     right: -110px;
-
-    width: 203px;
-    height: 81px;
   }
 
   @media (--mq-xlarge) {
