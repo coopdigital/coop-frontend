@@ -1,5 +1,5 @@
-# Component: Feature card
-Feature cards are like Editorial cards but are combined with a squircle to highlight a deal. 
+# Component: Offers promo
+The Offers promo is used to promote a generic offer to non members
 
 The `scr` folder contains the unprocessed `.pcss` and Jinja2 template needed for use as a shared component in contentful.
 
