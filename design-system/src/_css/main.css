@@ -33,6 +33,7 @@
 @import '@coopdigital/shared-component--offers';
 @import '@coopdigital/shared-component--offerspromo';
 @import '@coopdigital/shared-component--hero';
+@import '@coopdigital/shared-component--totaliser';
 
 /* Design system */
 @import "design-system/skipnav.css";
