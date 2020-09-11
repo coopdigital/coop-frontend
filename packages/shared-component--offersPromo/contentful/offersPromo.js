@@ -1,127 +1,109 @@
 module.exports = function (migration) {
-  const featureCard = migration.createContentType('featureCard');
-  featureCard.name('-- Feature card')
-    .description('A text box with image that can be displayed with or without a squircle. Use to highlight and link to featured content.')
+  const offersPromo = migration.createContentType('offersPromo');
+  offersPromo.name('-- Offers promo')
+    .description('Promo banner for Offers with an example of an offer. Use to promote Offers.')
 
-  featureCard.createField('name')
+  offersPromo.createField('name')
     .name('Name')
     .type('Symbol')
     .required(true)
 
-  featureCard.createField('image')
-    .name("Image")
-    .type("Link")
-    .required(true)
-    .linkType("Asset")
-    .validations([
-      {
-        linkMimetypeGroup: ["image"]
-      }
-    ]);
-
-
-  featureCard.createField('squirclePicker')
-    .name('Squircle picker')
-    .type('Symbol')
-    .required(true)
-    .validations([
-      {
-        "in": [
-          "No squircle",
-          "Large text top squircle",
-          "Large text bottom squircle",
-          "Large text only squircle",
-          "Super saver squircle",
-          "New squircle",
-          "New recipe squircle",
-          "Fresh 3"
-        ]
-      }
-    ]);
-
-  featureCard.createField('squircleTop')
-    .name('Squircle text top')
-    .type('Text')
-    .validations([
-      {
-        size: { max: 10 },
-        message: "Text in this field must be less than 10 characters."
-      }
-    ]);
-
-  featureCard.createField('squircleBottom')
-    .name('Squircle text bottom')
-    .type('Text')
-    .validations([
-      {
-        size: { max: 10 },
-        message: "Text in this field must be less than 10 characters."
-      }
-    ]);
-
-  featureCard.createField('bodyText')
-    .name('Body text')
-    .type('Symbol')
-    .required(true)
-    .validations([
-      {
-        size: { max: 60 },
-        message: "Text in this field must be less than 60 characters."
-      }
-    ]);
-
-  featureCard.createField('link')
-    .name('Link')
+  offersPromo.createField('offerLink')
+    .name('Offers link')
     .type('Link')
     .linkType('Entry')
     .required(true)
     .validations([
       {
-        linkContentType: ['-- External link', '-- Internal link']
+        linkContentType: ['externalLink', 'internalLink']
       }
     ]);
 
-  featureCard.displayField('name');
+  offersPromo.createField('heading')
+    .name('Heading')
+    .type('Symbol')
+    .required(true)
+    .validations([
+      {
+        size: { max: 90 },
+        message: "Text in this field must be less than 90 characters."
+      }
+    ]);
 
-  featureCard.changeFieldControl(
+  offersPromo.createField('bodyText')
+    .name('Body text')
+    .type('Text')
+    .required(true)
+    .validations([
+      {
+        size: { max: 125 },
+        message: "Text in this field must be less than 125 characters."
+      }
+    ]);
+
+  offersPromo.createField('offerCard')
+    .name('Offer Card')
+    .required(true)
+    .type('Link')
+    .linkType('Entry')
+    .validations([
+      {
+        linkContentType: ['offerCard']
+      }
+    ]);
+
+  offersPromo.createField('legalLink')
+    .name('Legal link')
+    .required(true)
+    .type('Link')
+    .linkType('Entry')
+    .validations([
+      {
+        linkContentType: ['externalLink', 'internalLink']
+      }
+    ]);
+
+  offersPromo.displayField('name');
+
+  offersPromo.changeFieldControl(
     'name',
     'builtin',
     'singleLine',
     { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
   )
 
-  featureCard.changeFieldControl(
-    'squirclePicker',
-    'extension',
-    '1IKETYxUIyGWuINpBooJFA'
+  offersPromo.changeFieldControl(
+    'offerLink',
+    'builtin',
+    'entryLinkEditor',
+    { helpText: 'Add a link to the page you want to send the user to when they click the banner. For this component this should be a link to Offers.' }
   )
 
-  featureCard.changeFieldControl(
-    'squircleTop',
+  offersPromo.changeFieldControl(
+    'heading',
     'builtin',
     'singleLine',
-    { helpText: 'This text will appear on the top line inside the squircle.' }
+    { helpText: 'This text will be heading of the banner. Use to introduce the main action, for example "Join Co-op and get personalised offers".' }
   )
 
-  featureCard.changeFieldControl(
-    'squircleBottom',
-    'builtin',
-    'singleLine',
-    { helpText: 'This text will appear on the bottom line inside the squircle.' }
-  )
-
-  featureCard.changeFieldControl(
+  offersPromo.changeFieldControl(
     'bodyText',
     'builtin',
     'singleLine',
-    { helpText: 'This text should briefly tell people what the featured content is about.' }
+    { helpText: 'This text should give a brief supporting description.' }
   )
 
-  featureCard.changeFieldControl(
-    'link',
+  offersPromo.changeFieldControl(
+    'legalLink',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'Link to the page you want people to go to when they click the card.' }
+    { helpText: 'This should be a clear link to the terms and conditions.' }
+  )
+
+  offersPromo.changeFieldControl(
+    'offerCard',
+    'builtin',
+    'entryLinkEditor',
+    { helpText: 'Add the card for the example offer that will appear on the banner.' }
   )
 }
-
