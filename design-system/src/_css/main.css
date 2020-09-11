@@ -8,7 +8,6 @@
 @import "@coopdigital/foundations-global";
 @import "@coopdigital/foundations-typography";
 @import "@coopdigital/foundations-grid";
-@import "@coopdigital/foundations-colors";
 @import "@coopdigital/foundations-buttons";
 @import "@coopdigital/foundations-forms";
 @import "@coopdigital/foundations-tables";
@@ -31,7 +30,10 @@
 @import '@coopdigital/shared-component--membership';
 @import '@coopdigital/shared-component--membershiphero';
 @import '@coopdigital/shared-component--offers';
+@import '@coopdigital/shared-component--offerspromo';
 @import '@coopdigital/shared-component--hero';
+@import '@coopdigital/shared-component--app';
+@import '@coopdigital/shared-component--totaliser';
 
 /* Design system */
 @import "design-system/skipnav.css";
@@ -50,4 +52,5 @@
 @import "design-system/states.css";
 @import "design-system/footer.css";
 
+@import "@coopdigital/foundations-colors";
 @import "@coopdigital/foundations-layout";
