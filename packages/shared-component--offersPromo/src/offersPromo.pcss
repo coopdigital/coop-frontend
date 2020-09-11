@@ -4,57 +4,43 @@
 
 .coop-c-offerspromo {
   background-color: var(--color-white);
-  display: flex;
-  flex: 1;
   margin-bottom: var(--spacing-64);
 }
 
 .coop-c-offerspromo__inner {
-  display: flex;
-  flex-direction: column-reverse;
-  overflow: hidden;
-  height: 100%;
   background: var(--color-white);
   border-radius: var(--ui-border-radius);
   box-shadow: var(--ui-shadow);
-  transition: box-shadow 0.2s ease-in;
-  flex: 1;
+
   @media (--mq-medium) {
-    flex-direction: row;
+    background: var(--color-brand-membership-pink-light);
   }
 }
 
 .coop-c-offerspromo__link {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: block;
   text-decoration: none;
   color: inherit;
   border: 0;
 }
 
 .coop-c-offerspromo__content {
-  align-self: center;
-  padding: var(--spacing-base--3-4) var(--spacing-16);
-  flex: 1;
+  position: relative;
   color: var(--color-text);
-  @media (--mq-medium) {
-    padding: 1.475rem 1rem 1rem;
-    width: 50%;
-  }
-  @media (--mq-large) {
-    padding: var(--spacing-base--3-4);
-  }
-}
+  transition: width 0.15s ease-out;
 
-.coop-c-offerspromo__content .coop-c-offerspromo__link {
-  flex-direction: column;
-  max-width: 90%;
   @media (--mq-medium) {
-    max-width: 100%;
+    float: left;
+    width: 50%;
+    background-color: var(--color-white);
   }
+
+  @media (--mq-large) {
+    width: 40%;
+  }
+
   @media (--mq-xlarge) {
-    max-width: 80%;
+    width: 50%;
   }
 }
 
@@ -65,37 +51,50 @@
   margin: 0;
   padding: 0;
   color: var(--color-text);
+
   @media (--mq-medium) {
     font-size: var(--type-h3-s);
   }
+
   @media (--mq-large) {
     font-size: var(--type-h3-l);
   }
 }
 
-a:hover .coop-c-offerspromo__title,
-a:focus .coop-c-offerspromo__title {
-  text-decoration: underline;
+.coop-c-offerspromo__header {
+  max-width: 25rem; /* 400px */
+
+  @media (--mq-large) {
+    max-width: 31.25rem; /* 500px */
+  }
 }
 
 .coop-c-offerspromo__body {
+  max-width: 18.75rem; /* 300px */
   font-size: var(--type-sp-s);
   line-height: 1.75rem;
+
   @media (--mq-medium) {
     font-size: var(--type-sp-s);
   }
+
   @media (--mq-large) {
+    max-width: 30rem; /* 480px */
     font-size: var(--type-sp-l);
   }
-  p {
+
+  & p {
     margin-top: 1.25rem;
+
     @media (--mq-medium) {
       margin-top: var(--spacing-16);
     }
+
     &:hover,
     &:focus {
       color: var(--color-text);
     }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -103,143 +102,149 @@ a:focus .coop-c-offerspromo__title {
 }
 
 .coop-c-offerspromo__terms {
-  p {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 var(--spacing-16) var(--spacing-24);
+
+  & p {
     font-size: var(--type-sp-s);
     margin-bottom: var(--spacing-16);
-    margin-top: 1.25rem;
+
     &:last-child {
       margin-bottom: 0;
     }
-    @media (--mq-medium) {
+  }
+
+  @media (--mq-medium) {
+    & p {
       font-size: var(--type-sp-s);
     }
-    @media (--mq-large) {
+  }
+
+  @media (--mq-large) {
+    padding-left: var(--spacing-24);
+    padding-right: var(--spacing-24);
+
+    & p {
       font-size: var(--type-body-s);
     }
   }
 }
 
 .coop-c-offerspromo__card {
-  display: flex;
-  flex-direction: row;
+  padding: calc(var(--spacing-16) + var(--spacing-2)) var(--spacing-16);
   background: var(--color-brand-membership-pink-light);
-  a:hover .coop-c-offerspromo__card-title,
-  a:focus .coop-c-offerspromo__card-title {
-    text-decoration: underline;
-  }
+  transition: width 0.15s ease-out;
+
   @media (--mq-medium) {
+    float: right;
     width: 50%;
-    padding: var(--spacing-8);
+    background: none;
+  }
+
+  @media (--mq-large) {
+    width: 60%;
+    padding: var(--spacing-24) var(--spacing-32) calc(var(--spacing-16) + var(--spacing-4));
+  }
+
+  @media (--mq-xlarge) {
+    width: 50%;
   }
 }
 
 .coop-c-offerspromo__card .coop-c-offerspromo__link {
+  padding: var(--spacing-8);
   background-color: var(--color-white);
-  border-radius: var(--ui-border-radius);
-  box-shadow: var(--ui-shadow);
-  transition: box-shadow 0.2s ease-in;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-  margin: var(--spacing-16);
-  padding-right: var(--spacing-16);
-  align-items: center;
 
-  @media (--mq-medium) {
-    align-items: normal;
-  }
-  @media (--mq-medium) {
-    max-height: 60%;
-  }
-  @media (--mq-large) {
-    max-height: 80%;
-  }
-  @media (--mq-xlarge) {
-    max-height: 100%;
-  }
   &:hover,
   &:focus {
     color: var(--color-text);
   }
+
+  @media (--mq-large) {
+    padding: var(--spacing-16);
+  }
 }
 
-.coop-c-offerspromo__card-header {
-  margin-left: var(--spacing-4);
-  width: 70%;
-  p {
-    font-size: var(--type-sp-s);
-    margin-bottom: 0;
+.coop-c-offerspromo__content .coop-c-offerspromo__link {
+  padding: var(--spacing-24) var(--spacing-16) calc(var(--spacing-48) + var(--spacing-24));
+
+  @media (--mq-large) {
+    padding-left: var(--spacing-24);
+    padding-right: var(--spacing-24);
   }
-  .coop-c-offerspromo__card-title {
+
+  @media (--mq-large) {
+    min-height: 252px;
+  }
+}
+
+.coop-c-offerspromo__card-title {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--type-h3-l);
+
+  @media (--mq-medium) {
     font-size: var(--type-h3-l);
   }
-  .coop-c-offerspromo__card-title {
-    margin: 0;
-  }
-  @media (--mq-xsmall) {
-    margin-left: 0;
-  }
-  @media (--mq-small) {
-    .coop-c-offerspromo__card-title {
-      margin-top: var(--spacing-16);
-    }
-  }
-  @media (--mq-medium) {
-    .coop-c-offerspromo__card-title {
-      font-size: var(--type-h3-l);
-    }
-    p {
-      font-size: var(--type-sp-s);
-    }
-  }
+
   @media (--mq-large) {
-    .coop-c-offerspromo__card-title {
-      font-size: var(--type-h2-l);
-    }
-    p {
-      font-size: var(--type-lp-s);
-    }
-  }
-  @media (--mq-xlarge) {
-    .coop-c-offerspromo__card-title {
-      font-size: var(--type-h1-l);
-    }
-    p {
-      font-size: var(--type-h3-s);
-    }
+    font-size: var(--type-h1-l);
   }
 }
 
 .coop-c-offerspromo__card-media {
-  display: flex;
-  border-radius: 4px;
-  overflow: hidden;
-  margin: var(--spacing-8);
-  width: 50%;
-  @media (--mq-small) {
-    width: 30%;
-    margin: var(--spacing-16);
+  float: left;
+  margin: 0 var(--spacing-16) 0 0;
+  padding: 0;
+
+  @media (--mq-large) {
+    margin-right: var(--spacing-24);
   }
 }
 
+.coop-c-offerspromo__card-media,
 .coop-c-offerspromo__image {
-  display: block;
-  img {
-    display: block;
-    width: 100%;
-    border: 0;
-    @media (--mq-medium) {
-      object-fit: cover;
+  width: 90px;
+  height: 90px;
+
+  @media (--mq-large) {
+    width: 174px;
+    height: 174px;
+  }
+}
+
+.coop-c-offerspromo__card-header {
+  padding-left: calc(90px + var(--spacing-16));
+
+  & p {
+    font-size: var(--type-sp-s);
+    margin-bottom: 0;
+  }
+
+  @media (--mq-large) {
+    padding-left: calc(174px + var(--spacing-24));
+
+    & p {
+      font-size: var(--type-h3-s);
     }
   }
 }
 
 .coop-c-offerspromo__image,
 .coop-c-offerspromo__image img {
-  @media (--mq-medium) {
-    height: 100%;
-    width: 100%;
-  }
-  /* IE 10/11 */
-  @media all and (-ms-high-contrast: none) {
-    height: auto;
-  }
+  display: block;
+}
+
+.coop-c-offerspromo__image {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.coop-c-offerspromo__image img {
+  width: 100%;
 }
