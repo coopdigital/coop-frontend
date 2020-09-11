@@ -4,6 +4,12 @@
 .jekyll-metadata
 build/
 
+# dependencies
+node_modules/
+.bundle/
+./vendor/
+vendor/
+
 # nmp linux stuff
 npm-debug.log
 
