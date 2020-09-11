@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--totaliser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Co-op Component: Money raised totaliser",
   "main": "dist/totaliser.css",
   "style": "src/totaliser.pcss",
