@@ -9,14 +9,13 @@
         }) -%}
     {% endwith %}
 
-    <div class="coop-c-offerspromo__inner coop-u-clearfix">
-
+    <div class="coop-c-offerspromo__inner coop-u-clearfix">    
       <div class="coop-c-offerspromo__card">
-        <a
-          href="{{offerLink.url}}"
-          class="coop-c-offerspromo__link coop-u-clearfix"
-          data-contenttype="Card|offerspromo"
-          data-contentparent=""
+        <a 
+          href="{{offerLink.url}}" 
+          class="coop-c-offerspromo__link coop-u-clearfix" 
+          data-contenttype="Card|offerspromo" 
+          data-contentparent="" 
           data-linktext="">
           {% with card = cms.get_entry(content.offerCard.sys.id) %}
             {% with image = cms.get_asset(card.fields.image.data) %}
@@ -31,7 +30,7 @@
                         {{ images.render(image, imageDimensions) }}
                     </picture>
                 </figure>
-            {% endwith %}
+            {% endwith %}   
               <header class="coop-c-offerspromo__card-header">
                   <h3 class="coop-c-offerspromo__card-title" >
                       {{card.fields.heading.data}}
@@ -40,8 +39,8 @@
               </header>
             {% endwith %}
         </a>
-      </div>
-
+      </div> 
+ 
       <div class="coop-c-offerspromo__content">
         <a
             href="{{offerLink.url}}"
@@ -63,7 +62,6 @@
           {% endwith %}
         </div>
       </div>
-
   </div>
 </article>
 {%- endmacro -%}
