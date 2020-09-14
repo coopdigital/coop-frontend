@@ -245,3 +245,79 @@
   display: block;
   width: 100%;
 }
+
+/* Adjust for "mini" (no image) variant */
+.coop-c-app-download--mini .coop-c-app-download__inner {
+  @media (--mq-medium) {
+    padding: var(--spacing-32) var(--spacing-16);
+  }
+
+  @media (--mq-large) {
+    padding: var(--spacing-32) var(--spacing-24) calc(var(--spacing-32) + var(--spacing-8));
+  }
+
+  @media (--mq-xlarge) {
+    padding: var(--spacing-32) var(--spacing-16) calc(var(--spacing-32) + var(--spacing-8));
+  }
+}
+
+.coop-c-app-download--mini .coop-c-app-download__content {
+  @media (--mq-small) {
+    float: none;
+    width: auto;
+    max-width: none;
+  }
+}
+
+.coop-c-app-download--mini .coop-c-app-download__body {
+  max-width: 70%;
+
+  @media (--mq-xsmall) {
+    max-width: 90%;
+  }
+
+  @media (--mq-body) {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  @media (--mq-large) {
+    width: 50%;
+    float: left;
+    max-width: 28.875rem; /* 462px */
+    padding-right: var(--spacing-48);
+  }
+}
+
+.coop-c-app-download--mini .coop-c-app-download__title {
+  margin-bottom: var(--spacing-16);
+
+  @media (--mq-large) {
+    width: 50%;
+    max-width: 28.875rem; /* 462px */
+    padding-right: var(--spacing-48);
+  }
+}
+
+.coop-c-app-download--mini .coop-c-app-download__btns {
+  margin: 0;
+
+  @media (--mq-large) {
+    width: 50%;
+    float: left;
+    max-width: 28.875rem; /* 462px */
+    margin-top: -36px;
+  }
+}
+
+.coop-c-app-download--mini .coop-c-app-download__btn {
+  margin-top: var(--spacing-12);
+  margin-bottom: 0;
+
+  @media (--mq-large) {
+    margin-top: 0;
+  }
+}
+
+.coop-c-app-download--mini:after {
+  display: none;
+}
