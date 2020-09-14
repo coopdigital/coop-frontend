@@ -44,6 +44,7 @@
     "@coopdigital/shared-component--offers": "^2.1.15",
     "@coopdigital/shared-component--offerspromo": "^1.0.1",
     "@coopdigital/shared-component--signpost": "^2.1.15",
+    "@coopdigital/shared-component--signpostlist": "^1.0.1",
     "@coopdigital/shared-component--statement": "^2.2.1",
     "@coopdigital/shared-component--totaliser": "^1.0.3",
     "@coopdigital/shared-component--video": "^2.1.15",
