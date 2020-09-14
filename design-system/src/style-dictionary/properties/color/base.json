@@ -1,4 +1,5 @@
 {
+
   "color": {
     "white": { "value": "#FFFFFF" },
     "black": { "value": "#000000" },
@@ -18,67 +19,6 @@
 
     },
 
-    "text": {
-      
-      "base": {"value": "#282828"},
-      " ":    {"value": "{color.text.base.value}"},
-      "alt":  {"value": "#595959"}
-
-    },
-
-    "link": {
-      "base":     {"value": "#00729a"},
-      " ":        {"value": "{color.link.base.value"},
-
-      "hover":    {"value": "#00394e"},
-      "focus":    {"value": "#8d44d8"},
-      "active":   {"value": "#002c3d"},
-      "visited":  {"value": "{color.link.active.value}"}
-
-    },
-
-    "button": {
-
-      "green": {
-
-        "primary":        {"value": "#0f8482"},
-        "primary-hover":  {"value": "#2b9e9c"},
-        "primary-active": {"value": "#0c6f6d"}
-      },
-
-      "blue": {
-        "base":   {"value": "#00394e"},
-
-        " ":      {"value": "{color.button.blue.base.value}"},
-        "hover":  {"value": "#4a6683"},
-        "active": {"value": "#2e4052"}
-      },
-
-      "grey": {
-        "base":   {"value": "#efefef"},
-
-        " ":      {"value": "{color.button.grey.base.value}"},
-        "hover":  {"value": "{color.grey.mid-light.value}"},
-        "active": {"value": "{color.grey.mid.value}"}
-
-      },
-
-      "white": {
-
-        "base":   {"value": "{color.white.value}"},
-
-        " ":      {"value": "{color.button.white.base.value}"},
-        "hover":  {"value": "{color.button.grey.base.value}"},
-        "active": {"value": "{color.grey.mid-light.value}"}
-
-      },
-
-
-      " ":      {"value": "{color.button.blue.base.value}" },
-      "hover":  {"value": "{color.button.blue.hover.value}" },
-      "active": {"value": "{color.button.blue.active.value}" }
-
-    },
 
 
     "red": {
