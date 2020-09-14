@@ -1,0 +1,60 @@
+{
+  "name": "@coopdigital/shared-component--signpostlist",
+  "version": "0.1.0",
+  "description": "Co-op Shared Component: Signpost list",
+  "main": "dist/signpost-list.css",
+  "style": "src/signpost-list.pcss",
+  "author": "@coopdigital",
+  "contributors": [
+    "Colin Rotherham (work@colinr.com)"
+  ],
+  "private": false,
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "lint": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
+    "build": "postcss src/*.pcss --dir dist/ --config '../../postcss.config.js' --ext css",
+    "dist": "npm run build && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/shared-component--signpostList"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^3.2.0",
+    "@coopdigital/shared-component--signpost": "^2.1.15",
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.32",
+    "postcss-calc": "^7.0.3",
+    "postcss-cli": "^7.1.1",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.1",
+    "prettier": "^2.1.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "@coopdigital/shared-component--signpost": ">= 2.1.15 < 3"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--signpostList#readme",
+  "keywords": [
+    "card",
+    "content",
+    "signpost"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
