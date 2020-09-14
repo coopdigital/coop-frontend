@@ -77,6 +77,16 @@ function copyComponents() {
     .pipe(gulp.dest('build/pattern-library/components/packages'))
 }
 
+// Style dictionary
+function copyStyleDictionary() {
+
+  return gulp.src([
+    'src/style-dictionary/**'
+  ], {follow: true})
+    .pipe(gulp.dest('build/style-dictionary'))
+
+}
+
 // Jekyll
 function contentful(gulpCallBack) {
   const contentful = spawn('jekyll', ['contentful'], {stdio: 'inherit'});
@@ -176,6 +186,7 @@ const server = gulp.series(build, serve, watch);
 
 module.exports = {
   copyComponents,
+  copyStyleDictionary,
   contentful,
   jekyll,
   css,
