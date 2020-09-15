@@ -9,7 +9,6 @@
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  background: var(--color-brand-membership-blue-light-10);
 }
 
 .coop-c-app-download__inner {
@@ -109,6 +108,10 @@
     fill: var(--color-white);
   }
 
+  & path {
+    stroke: none;
+  }
+
   @media (--mq-medium) {
     padding: 0;
   }
@@ -153,18 +156,14 @@
     transform: translateX(-2px);
   }
 
-  &:hover,
-  &:focus {
-    color: var(--color-brand-membership-turquoise-dark-2);
-  }
-
   &:hover svg,
   &:focus svg {
     transform: translateX(0);
   }
 
   & svg > path {
-    fill: var(--color-brand-membership-turquoise-bright);
+    fill: inherit;
+    stroke: none;
   }
 }
 
@@ -191,8 +190,9 @@
   left: 50%;
   bottom: 205px;
   width: 50%;
-  height: 8px;
-  background: var(--color-brand-membership-turquoise-bright);
+  height: 0;
+  border-top: 8px solid;
+  border-color: inherit;
   content: "";
 
   @media (--mq-small) {
