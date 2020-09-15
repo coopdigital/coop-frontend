@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "lint": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
-    "build": "postcss src/*.pcss --dir dist/ --config '../../postcss.config.js' --ext css",
+    "build": "postcss src/colors.pcss --dir dist/ --config '../../postcss.config.js' --ext css",
     "dist": "npm run lint && npm run build"
   },
   "repository": {
@@ -37,7 +37,7 @@
     "stylelint-prettier": "^1.1.2"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+    "@coopdigital/foundations-vars": ">= 3.2.0 < 4"
   },
   "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }

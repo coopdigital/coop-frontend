@@ -1,0 +1,248 @@
+.coop-u-brand {
+  color: var(--color-brand-coop);
+}
+.coop-u-brand-bg {
+  background: var(--color-brand-coop);
+}
+.coop-u-brand-fill {
+  fill: var(--color-brand-coop);
+}
+.coop-u-brand-stroke {
+  stroke: var(--color-brand-coop);
+  border-color: var(--color-brand-coop);
+}
+.coop-u-brand-deals-bg,
+.coop-u-deal-red-bg {
+  background: var(--color-brand-deals);
+}
+.coop-u-deal-red-fill {
+  fill: var(--color-brand-deals);
+}
+.coop-u-deal-red-stroke {
+  stroke: var(--color-brand-deals);
+  border-color: var(--color-brand-deals);
+}
+
+/* Membership (Purple) */
+.coop-u-brand-membership-purple-bright {
+  color: var(--color-brand-membership-purple-bright);
+}
+.coop-u-brand-membership-purple-bright-bg {
+  background: var(--color-brand-membership-purple-bright);
+}
+.coop-u-brand-membership-purple-bright-fill {
+  fill: var(--color-brand-membership-purple-bright);
+}
+.coop-u-brand-membership-purple-bright-stroke {
+  stroke: var(--color-brand-membership-purple-bright);
+  border-color: var(--color-brand-membership-purple-bright);
+}
+.coop-u-brand-membership-purple-light {
+  color: var(--color-brand-membership-purple-light);
+}
+.coop-u-brand-membership-purple-light-bg {
+  background: var(--color-brand-membership-purple-light);
+}
+.coop-u-brand-membership-purple-light-fill {
+  fill: var(--color-brand-membership-purple-light);
+}
+.coop-u-brand-membership-purple-light-stroke {
+  stroke: var(--color-brand-membership-purple-light);
+  border-color: var(--color-brand-membership-purple-light);
+}
+
+/* Membership (Lilac) */
+.coop-u-brand-membership-lilac-bright {
+  color: var(--color-brand-membership-lilac-bright);
+}
+.coop-u-brand-membership-lilac-bright-bg {
+  background: var(--color-brand-membership-lilac-bright);
+}
+.coop-u-brand-membership-lilac-bright-fill {
+  fill: var(--color-brand-membership-lilac-bright);
+}
+.coop-u-brand-membership-lilac-bright-stroke {
+  stroke: var(--color-brand-membership-lilac-bright);
+  border-color: var(--color-brand-membership-lilac-bright);
+}
+.coop-u-brand-membership-lilac-light {
+  color: var(--color-brand-membership-lilac-light);
+}
+.coop-u-brand-membership-lilac-light-bg {
+  background: var(--color-brand-membership-lilac-light);
+}
+.coop-u-brand-membership-lilac-light-fill {
+  fill: var(--color-brand-membership-lilac-light);
+}
+.coop-u-brand-membership-lilac-light-stroke {
+  stroke: var(--color-brand-membership-lilac-light);
+  border-color: var(--color-brand-membership-lilac-light);
+}
+
+/* Membership (Pink) */
+.coop-u-brand-membership-pink-bright {
+  color: var(--color-brand-membership-pink-bright);
+}
+.coop-u-brand-membership-pink-bright-bg {
+  background: var(--color-brand-membership-pink-bright);
+}
+.coop-u-brand-membership-pink-bright-fill {
+  fill: var(--color-brand-membership-pink-bright);
+}
+.coop-u-brand-membership-pink-bright-stroke {
+  stroke: var(--color-brand-membership-pink-bright);
+  border-color: var(--color-brand-membership-pink-bright);
+}
+.coop-u-brand-membership-pink-light {
+  color: var(--color-brand-membership-pink-light);
+}
+.coop-u-brand-membership-pink-light-bg {
+  background: var(--color-brand-membership-pink-light);
+}
+.coop-u-brand-membership-pink-light-fill {
+  fill: var(--color-brand-membership-pink-light);
+}
+.coop-u-brand-membership-pink-light-stroke {
+  stroke: var(--color-brand-membership-pink-light);
+  border-color: var(--color-brand-membership-pink-light);
+}
+
+/* Membership (Orange) */
+.coop-u-brand-membership-orange-bright {
+  color: var(--color-brand-membership-orange-bright);
+}
+.coop-u-brand-membership-orange-bright-bg {
+  background: var(--color-brand-membership-orange-bright);
+}
+.coop-u-brand-membership-orange-bright-fill {
+  fill: var(--color-brand-membership-orange-bright);
+}
+.coop-u-brand-membership-orange-bright-stroke {
+  stroke: var(--color-brand-membership-orange-bright);
+  border-color: var(--color-brand-membership-orange-bright);
+}
+.coop-u-brand-membership-orange-light {
+  color: var(--color-brand-membership-orange-light);
+}
+.coop-u-brand-membership-orange-light-bg {
+  background: var(--color-brand-membership-orange-light);
+}
+.coop-u-brand-membership-orange-light-fill {
+  fill: var(--color-brand-membership-orange-light);
+}
+.coop-u-brand-membership-orange-light-stroke {
+  stroke: var(--color-brand-membership-orange-light);
+  border-color: var(--color-brand-membership-orange-light);
+}
+
+/* Membership (Yellow/Brown) */
+.coop-u-brand-membership-yellow-brown-bright {
+  color: var(--color-brand-membership-yellow-brown-bright);
+}
+.coop-u-brand-membership-yellow-brown-bright-bg {
+  background: var(--color-brand-membership-yellow-brown-bright);
+}
+.coop-u-brand-membership-yellow-brown-bright-fill {
+  fill: var(--color-brand-membership-yellow-brown-bright);
+}
+.coop-u-brand-membership-yellow-brown-bright-stroke {
+  stroke: var(--color-brand-membership-yellow-brown-bright);
+  border-color: var(--color-brand-membership-yellow-brown-bright);
+}
+.coop-u-brand-membership-yellow-brown-light {
+  color: var(--color-brand-membership-yellow-brown-light);
+}
+.coop-u-brand-membership-yellow-brown-light-bg {
+  background: var(--color-brand-membership-yellow-brown-light);
+}
+.coop-u-brand-membership-yellow-brown-light-fill {
+  fill: var(--color-brand-membership-yellow-brown-light);
+}
+.coop-u-brand-membership-yellow-brown-light-stroke {
+  stroke: var(--color-brand-membership-yellow-brown-light);
+  border-color: var(--color-brand-membership-yellow-brown-light);
+}
+
+/* Membership (Green) */
+.coop-u-brand-membership-green-bright {
+  color: var(--color-brand-membership-green-bright);
+}
+.coop-u-brand-membership-green-bright-bg {
+  background: var(--color-brand-membership-green-bright);
+}
+.coop-u-brand-membership-green-bright-fill {
+  fill: var(--color-brand-membership-green-bright);
+}
+.coop-u-brand-membership-green-bright-stroke {
+  stroke: var(--color-brand-membership-green-bright);
+  border-color: var(--color-brand-membership-green-bright);
+}
+.coop-u-brand-membership-green-light {
+  color: var(--color-brand-membership-green-light);
+}
+.coop-u-brand-membership-green-light-bg {
+  background: var(--color-brand-membership-green-light);
+}
+.coop-u-brand-membership-green-light-fill {
+  fill: var(--color-brand-membership-green-light);
+}
+.coop-u-brand-membership-green-light-stroke {
+  stroke: var(--color-brand-membership-green-light);
+  border-color: var(--color-brand-membership-green-light);
+}
+
+/* Membership (Turquoise) */
+.coop-u-brand-membership-turquoise-bright {
+  color: var(--color-brand-membership-turquoise-bright);
+}
+.coop-u-brand-membership-turquoise-bright-bg {
+  background: var(--color-brand-membership-turquoise-bright);
+}
+.coop-u-brand-membership-turquoise-bright-fill {
+  fill: var(--color-brand-membership-turquoise-bright);
+}
+.coop-u-brand-membership-turquoise-bright-stroke {
+  stroke: var(--color-brand-membership-turquoise-bright);
+  border-color: var(--color-brand-membership-turquoise-bright);
+}
+.coop-u-brand-membership-turquoise-light {
+  color: var(--color-brand-membership-turquoise-light);
+}
+.coop-u-brand-membership-turquoise-light-bg {
+  background: var(--color-brand-membership-turquoise-light);
+}
+.coop-u-brand-membership-turquoise-light-fill {
+  fill: var(--color-brand-membership-turquoise-light);
+}
+.coop-u-brand-membership-turquoise-light-stroke {
+  stroke: var(--color-brand-membership-turquoise-light);
+  border-color: var(--color-brand-membership-turquoise-light);
+}
+
+/* Membership (Blue) */
+.coop-u-brand-membership-blue-bright {
+  color: var(--color-brand-membership-blue-bright);
+}
+.coop-u-brand-membership-blue-bright-bg {
+  background: var(--color-brand-membership-blue-bright);
+}
+.coop-u-brand-membership-blue-bright-fill {
+  fill: var(--color-brand-membership-blue-bright);
+}
+.coop-u-brand-membership-blue-bright-stroke {
+  stroke: var(--color-brand-membership-blue-bright);
+  border-color: var(--color-brand-membership-blue-bright);
+}
+.coop-u-brand-membership-blue-light {
+  color: var(--color-brand-membership-blue-light);
+}
+.coop-u-brand-membership-blue-light-bg {
+  background: var(--color-brand-membership-blue-light);
+}
+.coop-u-brand-membership-blue-light-fill {
+  fill: var(--color-brand-membership-blue-light);
+}
+.coop-u-brand-membership-blue-light-stroke {
+  stroke: var(--color-brand-membership-blue-light);
+  border-color: var(--color-brand-membership-blue-light);
+}
