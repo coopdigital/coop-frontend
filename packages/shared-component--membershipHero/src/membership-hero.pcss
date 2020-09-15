@@ -76,7 +76,6 @@
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  background-color: var(--color-brand-membership-turquoise-bright);
 
   /* required to overwrite foundation CSS */
   & p:last-child {
@@ -271,8 +270,9 @@
   position: absolute;
   z-index: 0;
   width: 50%;
-  height: 8px;
-  background: white;
+  height: 0;
+  border-top: 8px solid;
+  border-color: inherit;
   content: "";
 }
 
@@ -326,5 +326,5 @@
 
 .coop-c-membership-hero__path {
   fill: none;
-  stroke: var(--color-white);
+  stroke: inherit;
 }

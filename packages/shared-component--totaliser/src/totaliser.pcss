@@ -4,7 +4,6 @@
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  background: var(--color-brand-membership-pink-light-10);
 
   /* required to overwrite foundation CSS */
   & p:last-child {
@@ -21,6 +20,7 @@
 .coop-c-totaliser__card {
   position: relative;
   margin: var(--spacing-8) var(--spacing-2);
+  border-radius: 8px;
 }
 
 /* background blur effect */
@@ -33,8 +33,9 @@
   left: 18px;
   display: block;
 
-  background: var(--color-brand-membership-pink-light-8);
+  background: inherit;
   filter: blur(18px);
+  opacity: 0.4;
   content: "";
 }
 
@@ -72,7 +73,8 @@
   margin-bottom: var(--spacing-32);
   padding-bottom: var(--spacing-32);
 
-  border-bottom: 1px solid var(--color-brand-membership-pink-light-8);
+  border-bottom: 1px solid;
+  border-color: inherit;
   font-size: 2.5rem; /* 40px */
 
   @media (--mq-xsmall) {
@@ -148,21 +150,26 @@
 
   display: none;
   width: 32px;
-  height: 8px;
-  background: var(--color-brand-membership-pink-bright);
+  height: 0;
+  border-top: 8px solid;
+  border-color: inherit;
   content: "";
 
   @media (--mq-small) {
     display: block;
   }
-
-  @media (--mq-large) {
-    display: none;
-  }
 }
 
 .coop-c-totaliser__content:before {
   left: 0;
+
+  @media (--mq-large) {
+    width: 90px;
+  }
+
+  @media (--mq-xlarge) {
+    display: none;
+  }
 }
 
 .coop-c-totaliser__content:after {
@@ -171,6 +178,10 @@
   @media (--mq-medium) {
     width: 64px;
   }
+
+  @media (--mq-large) {
+    display: none;
+  }
 }
 
 /* Real SVG connectors used at 'large' size */
@@ -178,14 +189,9 @@
   display: none;
   fill: none;
 
-  & path {
-    stroke: var(--color-brand-membership-pink-bright);
-  }
-
   @media (--mq-large) {
     position: absolute;
     z-index: 2;
-    display: block;
   }
 }
 
@@ -193,13 +199,10 @@
   width: 205px;
   height: 130px;
 
-  @media (--mq-large) {
-    bottom: 0;
-    left: -115px;
-  }
-
   @media (--mq-xlarge) {
+    bottom: 0;
     left: -14px;
+    display: block;
   }
 }
 
@@ -210,6 +213,7 @@
   @media (--mq-large) {
     top: 0;
     right: -110px;
+    display: block;
   }
 
   @media (--mq-xlarge) {

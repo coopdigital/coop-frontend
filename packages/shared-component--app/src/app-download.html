@@ -3,7 +3,7 @@
   {% if content.miniVersion == true %}
     {% set appMiniVersion = true %}
   {% endif %}
-  <aside class="coop-c-app-download {% if appMiniVersion == true %} coop-c-app-download--mini {% endif %}">
+  <aside class="coop-c-app-download coop-u-brand-membership-blue-light-bg coop-u-brand-membership-turquoise-bright-stroke coop-u-brand-membership-turquoise-bright-fill{% if appMiniVersion == true %} coop-c-app-download--mini{% endif %}">
   <div class="coop-c-app-download__inner coop-u-clearfix">
     <div class="coop-c-app-download__content coop-u-clearfix">
       <h2 class="coop-c-app-download__title">{{content.heading|safe}}</h2>
@@ -16,7 +16,7 @@
         {% with appStoreLink = cms.get_entry(content.appStoreLink.sys.id) %}
           <a href="{{appStoreLink.fields.url.data}}" class="coop-c-app-download__btn coop-c-app-download__btn--apple coop-btn">
             <span class="coop-u-visuallyhidden">{{appStoreLink.fields.title.data}}</span>
-            
+
             <!-- Button graphic -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" aria-hidden="true" focusable="false">
               <path d="M37.43 29.01c-.04-4.1 3.36-6.09 3.51-6.19-1.92-2.8-4.9-3.19-5.95-3.22-2.5-.26-4.93 1.5-6.2 1.5-1.3 0-3.26-1.47-5.38-1.43-2.72.04-5.27 1.62-6.67 4.06-2.88 4.99-.73 12.32 2.03 16.36 1.38 1.97 3 4.18 5.11 4.1 2.07-.09 2.84-1.32 5.33-1.32 2.47 0 3.2 1.32 5.35 1.27 2.22-.04 3.62-1.98 4.95-3.98 1.6-2.26 2.24-4.49 2.26-4.61-.04 0-4.3-1.62-4.34-6.54z"/>
@@ -31,7 +31,7 @@
         {% with googlePlayLink = cms.get_entry(content.googlePlayLink.sys.id) %}
           <a href="{{googlePlayLink.fields.url.data}}" class="coop-c-app-download__btn coop-c-app-download__btn--google coop-btn">
             <span class="coop-u-visuallyhidden">{{googlePlayLink.fields.title.data}}</span>
-  
+
             <!-- Button graphic -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195 60" aria-hidden="true" focusable="false">
               <g>
@@ -53,12 +53,12 @@
       {% if content.link and appMiniVersion != true %}
         {% with link = cms.get_entry(content.link.sys.id) %}
           <div class="coop-c-app-download__about">
-            <p><a class="coop-c-app-download__link coop-t-link" href="{{link.fields.url.data}}">{{link.fields.title.data|safe}}<svg class="coop-c-app-download__link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-c-app-download__link-arrow__path" fill="#87cdcd" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z"/></svg></a></p>
+            <p><a class="coop-c-app-download__link coop-t-link" href="{{link.fields.url.data}}">{{link.fields.title.data|safe}}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-turquoise-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z"/></svg></a></p>
           </div>
         {% endwith %}
       {% endif %}
     </div>
-    
+
     {% if content.image and appMiniVersion != true %}
       {% with image = cms.get_asset(content.image.sys.id) %}
         {% if image.data.fields.description %}
@@ -73,7 +73,7 @@
           }
         %}
         <div class="coop-c-app-download__media">
-          
+
           <picture class="coop-c-app-download__picture {% if content.handsetImage == true %}coop-c-app-download__picture--handset{% endif %}">
             <!-- if browser supports webp image format, serve the webp format-->
             <source media="(min-width: 48em)" srcset="{{ image.fields.file.url }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ imageDimensions.width }}&amp;h={{ imageDimensions.height }} 1x, {{ image.fields.file.url }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ imageDimensions.width * 2}}&amp;h={{ imageDimensions.height *2 }} 2x" type="image/webp" />

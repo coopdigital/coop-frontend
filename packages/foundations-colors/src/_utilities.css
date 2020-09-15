@@ -26,6 +26,10 @@
 .coop-u-white-fill {
   fill: var(--color-white);
 }
+.coop-u-white-stroke {
+  stroke: var(--color-white);
+  border-color: var(--color-white);
+}
 .coop-u-black {
   color: var(--color-black);
 }
@@ -34,6 +38,10 @@
 }
 .coop-u-black-fill {
   fill: var(--color-black);
+}
+.coop-u-black-stroke {
+  stroke: var(--color-black);
+  border-color: var(--color-black);
 }
 
 .coop-u-grey-light {
