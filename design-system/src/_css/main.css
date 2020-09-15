@@ -27,6 +27,7 @@
 @import '@coopdigital/shared-component--editorialcard';
 @import '@coopdigital/shared-component--featurecard';
 @import '@coopdigital/shared-component--signpost';
+@import '@coopdigital/shared-component--signpostlist';
 @import '@coopdigital/shared-component--membership';
 @import '@coopdigital/shared-component--membershiphero';
 @import '@coopdigital/shared-component--offers';
