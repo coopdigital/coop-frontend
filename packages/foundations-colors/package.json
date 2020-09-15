@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-colors",
-  "version": "2.1.15",
+  "version": "2.1.16",
   "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Colors",
   "main": "dist/colors.css",
