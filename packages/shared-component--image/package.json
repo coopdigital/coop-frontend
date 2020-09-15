@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--image",
-  "version": "2.1.15",
+  "version": "2.1.16",
   "description": "Co-op Shared Component: Image",
   "main": "dist/image.css",
   "style": "src/image.pcss",
@@ -21,7 +21,7 @@
     "directory": "packages/shared-component--image"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.2.0",
+    "@coopdigital/foundations-vars": "^3.2.1",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
     "postcss": "^7.0.32",
