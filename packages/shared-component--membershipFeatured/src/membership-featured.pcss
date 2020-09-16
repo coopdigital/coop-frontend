@@ -1,0 +1,206 @@
+/* Membership featured */
+
+@import "@coopdigital/foundations-vars";
+
+.coop-c-membership-featured {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.coop-c-membership-featured__inner {
+  position: relative;
+  max-width: 81rem;
+  margin: 0 auto;
+  padding: var(--spacing-64) var(--spacing-16);
+  border-color: inherit;
+
+  @media (--mq-small) {
+    padding: var(--spacing-48) var(--spacing-16);
+  }
+
+  @media (--mq-large) {
+    padding: var(--spacing-48) var(--spacing-24) var(--spacing-48);
+  }
+
+  @media (--mq-xlarge) {
+    padding: var(--spacing-64) var(--spacing-16);
+  }
+}
+
+.coop-c-membership-featured__cards {
+  position: relative;
+  z-index: 1;
+  border-color: inherit;
+
+  @media (--mq-small) {
+    margin-bottom: var(--spacing-24);
+  }
+
+  @media (--mq-xlarge) {
+    margin-bottom: var(--spacing-48);
+  }
+}
+
+.coop-c-membership-featured__grid {
+  position: relative;
+  z-index: 2;
+}
+
+.coop-c-membership-featured__card {
+  height: calc(100% - var(--spacing-32));
+  margin-bottom: var(--spacing-32);
+}
+
+.coop-c-membership-featured__about {
+  position: relative;
+  z-index: 1;
+
+  font-size: var(--type-body-s);
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.coop-c-membership-featured__link {
+  color: var(--color-text);
+
+  & svg {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    margin: 0 0 0 var(--spacing-12);
+    vertical-align: middle;
+    transition: transform 0.15s ease-in;
+    transform: translateX(-2px);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    transform: translateX(0);
+  }
+
+  & svg > path {
+    stroke: none;
+  }
+}
+
+/* Fake connector repeating lines */
+.coop-c-membership-featured__inner:before,
+.coop-c-membership-featured__cards:before,
+.coop-c-membership-featured__cards:after {
+  position: absolute;
+  border: 8px solid;
+  border-color: inherit;
+  content: "";
+}
+
+/* Horizontal */
+.coop-c-membership-featured__inner:before,
+.coop-c-membership-featured__cards:before {
+  display: none;
+  height: 0;
+  border-width: 8px 0 0;
+}
+
+.coop-c-membership-featured__inner:before {
+  bottom: calc(var(--spacing-64) + 55px);
+  width: 100%;
+  right: 100%;
+
+  @media (--mq-xlarge) {
+    display: block;
+  }
+}
+
+.coop-c-membership-featured__cards:before {
+  right: 100px;
+  bottom: calc(50% - 4px);
+  left: 100px;
+  width: calc(100% - 200px);
+
+  @media (--mq-medium) {
+    display: block;
+  }
+}
+
+/* Vertical */
+.coop-c-membership-featured__cards:after {
+  top: 100px;
+  bottom: 100px;
+  right: 235px;
+
+  width: 0;
+  height: calc(100% - 200px);
+  border-width: 0 0 0 8px;
+
+  @media (--mq-small) {
+    right: auto;
+    left: 100px;
+  }
+
+  @media (--mq-medium) {
+    display: none;
+  }
+}
+
+.coop-c-membership-featured__connector {
+  position: absolute;
+  z-index: 0;
+  fill: none;
+}
+
+.coop-c-membership-featured__connector--left {
+  bottom: 0;
+  left: -392px;
+  display: none;
+
+  width: 500px;
+  height: 212px;
+
+  @media (--mq-small) {
+    display: block;
+  }
+
+  @media (--mq-medium) {
+    left: -330px;
+  }
+
+  @media (--mq-large) {
+    left: -290px;
+  }
+
+  @media (--mq-xlarge) {
+    bottom: -20px;
+  }
+}
+
+.coop-c-membership-featured__connector--right {
+  top: -125px;
+  right: 10px;
+
+  width: 233px;
+  height: 391px;
+
+  @media (--mq-small) {
+    right: auto;
+    left: 100px;
+  }
+
+  @media (--mq-medium) {
+    right: -109px;
+    left: auto;
+    top: -230px;
+  }
+
+  @media (--mq-large) {
+    right: -69px;
+  }
+
+  @media (--mq-xlarge) {
+    right: -23px;
+  }
+}
