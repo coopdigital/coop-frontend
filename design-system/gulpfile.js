@@ -126,12 +126,14 @@ function vendorjs() {
     'node_modules/coop-frontend-toolkit/scripts/vendor/**/*',
     src + '_js/vendor/**/*'
   ], { follow: true })
+    .pipe(changed(dest_paths.scripts + '/vendor'))
     .pipe(gulp.dest(dest_paths.scripts + '/vendor'));
 }
 
 // Static assets
 function assets() {
   return gulp.src(src_paths.assets, { follow: true })
+    .pipe(changed(dest_paths.assets))
     .pipe(gulp.dest(dest_paths.assets))
     .pipe(connect.reload());
 }
