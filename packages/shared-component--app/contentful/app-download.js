@@ -70,7 +70,6 @@ module.exports = function (migration) {
   appDownload.createField('image')
     .name("Image")
     .type("Link")
-    .required(true)
     .linkType("Asset")
     .validations([
       {
