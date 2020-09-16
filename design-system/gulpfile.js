@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
+const changed = require('gulp-changed');
 const connect = require('gulp-connect');
 const concat = require('gulp-concat');
 const include = require('gulp-include');
@@ -73,6 +74,7 @@ function copyComponents() {
     'node_modules/@coopdigital/**/*.{pcss,css,html,jpg,jpeg,gif,png,webp,svg}',
     '!node_modules/@coopdigital/**/node_modules/**',
   ], { follow: true })
+    .pipe(changed('src/_includes/pattern-library/components'))
     .pipe(gulp.dest('src/_includes/pattern-library/components'))
     .pipe(gulp.dest('build/pattern-library/components/packages'))
 }
@@ -124,12 +126,14 @@ function vendorjs() {
     'node_modules/coop-frontend-toolkit/scripts/vendor/**/*',
     src + '_js/vendor/**/*'
   ], { follow: true })
+    .pipe(changed(dest_paths.scripts + '/vendor'))
     .pipe(gulp.dest(dest_paths.scripts + '/vendor'));
 }
 
 // Static assets
 function assets() {
   return gulp.src(src_paths.assets, { follow: true })
+    .pipe(changed(dest_paths.assets))
     .pipe(gulp.dest(dest_paths.assets))
     .pipe(connect.reload());
 }
