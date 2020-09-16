@@ -26,11 +26,16 @@
   }
 }
 
-.coop-c-signpost-list__title {
-  margin-bottom: var(--spacing-24);
+.coop-c-signpost-list__title,
+.coop-c-signpost-list__body {
+  max-width: 40rem; /* 640px */
+}
+
+.coop-c-signpost-list__grid {
+  margin-top: var(--spacing-24);
 
   @media (--mq-medium) {
-    margin-bottom: var(--spacing-32);
+    margin-top: var(--spacing-32);
   }
 }
 
