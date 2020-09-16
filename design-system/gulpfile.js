@@ -27,7 +27,7 @@ const src_paths = {
     'node_modules/coop-frontend-toolkit/static/**/*'
   ],
   html: [
-    src + '_includes/pattern-library/foundations/**/*.html',
+    src + '_includes/pattern-library/**/*.html',
     src + '**/*.html'
   ]
 };
