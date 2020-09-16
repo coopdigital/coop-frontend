@@ -12,44 +12,40 @@
   position: relative;
   max-width: 81rem;
   margin: 0 auto;
-  padding: var(--spacing-64) var(--spacing-16);
+  padding: var(--spacing-64) var(--spacing-16) var(--spacing-48);
   border-color: inherit;
 
-  @media (--mq-small) {
-    padding: var(--spacing-48) var(--spacing-16);
-  }
-
   @media (--mq-large) {
-    padding: var(--spacing-48) var(--spacing-24) var(--spacing-48);
+    padding: var(--spacing-48) var(--spacing-24);
   }
 
   @media (--mq-xlarge) {
-    padding: var(--spacing-64) var(--spacing-16);
+    padding: var(--spacing-64) var(--spacing-16) var(--spacing-48);
+  }
+}
+
+.coop-c-membership-featured__title {
+  margin-bottom: var(--spacing-24);
+
+  @media (--mq-medium) {
+    max-width: 75%;
+    margin-bottom: var(--spacing-32);
   }
 }
 
 .coop-c-membership-featured__cards {
-  position: relative;
-  z-index: 1;
   border-color: inherit;
-
-  @media (--mq-small) {
-    margin-bottom: var(--spacing-24);
-  }
-
-  @media (--mq-xlarge) {
-    margin-bottom: var(--spacing-48);
-  }
 }
 
 .coop-c-membership-featured__grid {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .coop-c-membership-featured__card {
   height: calc(100% - var(--spacing-32));
   margin-bottom: var(--spacing-32);
+  border-radius: var(--ui-border-radius);
 }
 
 .coop-c-membership-featured__about {
@@ -60,6 +56,14 @@
 
   & :last-child {
     margin-bottom: 0;
+  }
+
+  @media (--mq-small) {
+    margin: var(--spacing-24) 0 var(--spacing-16);
+  }
+
+  @media (--mq-xlarge) {
+    margin: var(--spacing-48) 0 var(--spacing-32);
   }
 }
 
@@ -98,18 +102,19 @@
   content: "";
 }
 
-/* Horizontal */
+/* Straight line connectors */
 .coop-c-membership-featured__inner:before,
-.coop-c-membership-featured__cards:before {
+.coop-c-membership-featured__cards:after {
   display: none;
-  height: 0;
-  border-width: 8px 0 0;
 }
 
 .coop-c-membership-featured__inner:before {
-  bottom: calc(var(--spacing-64) + 55px);
+  bottom: calc(var(--spacing-64) + 71px);
   width: 100%;
   right: 100%;
+
+  height: 0;
+  border-width: 8px 0 0;
 
   @media (--mq-xlarge) {
     display: block;
@@ -117,24 +122,12 @@
 }
 
 .coop-c-membership-featured__cards:before {
-  right: 100px;
-  bottom: calc(50% - 4px);
-  left: 100px;
-  width: calc(100% - 200px);
-
-  @media (--mq-medium) {
-    display: block;
-  }
-}
-
-/* Vertical */
-.coop-c-membership-featured__cards:after {
-  top: 100px;
-  bottom: 100px;
-  right: 235px;
+  top: 350px;
+  bottom: 350px;
+  right: 251px;
 
   width: 0;
-  height: calc(100% - 200px);
+  height: calc(100% - 350px - 350px);
   border-width: 0 0 0 8px;
 
   @media (--mq-small) {
@@ -143,7 +136,27 @@
   }
 
   @media (--mq-medium) {
-    display: none;
+    top: auto;
+    right: 100px;
+    bottom: calc(50% - 4px);
+    left: 100px;
+
+    display: block;
+    width: calc(100% - 200px);
+    height: 0;
+    border-width: 8px 0 0;
+  }
+
+  @media (--mq-large) {
+    bottom: calc(45% - 4px);
+  }
+}
+
+.coop-c-membership-featured__title + .coop-c-membership-featured__cards:before {
+  bottom: calc(50% + 70px);
+
+  @media (--mq-large) {
+    bottom: calc(45% + 70px);
   }
 }
 
@@ -154,7 +167,7 @@
 }
 
 .coop-c-membership-featured__connector--left {
-  bottom: 0;
+  bottom: 110px;
   left: -392px;
   display: none;
 
@@ -174,13 +187,13 @@
   }
 
   @media (--mq-xlarge) {
-    bottom: -20px;
+    bottom: 135px;
   }
 }
 
 .coop-c-membership-featured__connector--right {
-  top: -125px;
-  right: 10px;
+  top: -62px;
+  right: 26px;
 
   width: 233px;
   height: 391px;
@@ -191,16 +204,25 @@
   }
 
   @media (--mq-medium) {
-    right: -109px;
+    right: -77px;
     left: auto;
     top: -230px;
   }
 
   @media (--mq-large) {
-    right: -69px;
+    right: -37px;
   }
 
   @media (--mq-xlarge) {
-    right: -23px;
+    right: -7px;
+  }
+}
+
+/* Avoid overlapping title */
+.coop-c-membership-featured__title + * .coop-c-membership-featured__connector--right {
+  display: none;
+
+  @media (--mq-medium) {
+    display: block;
   }
 }
