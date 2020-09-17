@@ -12,6 +12,11 @@
   }
 }
 
+:root {
+  --app-button: #000000;
+  --app-button-hover: #595959;
+}
+
 .coop-btn {
   display: inline-block;
   display: inline-flex;
@@ -190,5 +195,46 @@
 .coop-btn--loading.coop-btn--full-width.coop-btn--small:after {
   @media (--mq-medium) {
     right: 40px;
+  }
+}
+
+/* App download buttons */
+.coop-btn--app {
+  position: relative;
+  padding: 0;
+  background: var(--app-button);
+
+  &:hover,
+  &:focus {
+    background: var(--app-button-hover);
+  }
+
+  & .coop-btn__graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (--mq-medium) {
+    padding: 0;
+  }
+}
+
+.coop-btn--app-google {
+  width: 10.5625rem; /* 169px / 16 */
+
+  @media (--mq-medium) {
+    width: 12.1875rem; /* 195px / 16 */
+  }
+}
+
+.coop-btn--app-apple {
+  width: 9.75rem; /* 156px / 16 */
+
+  @media (--mq-medium) {
+    width: 11.25rem; /* 180px / 16 */
   }
 }
