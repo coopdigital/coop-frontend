@@ -4,37 +4,23 @@
   "description": "Co-op Shared Component: Text",
   "main": "dist/text.css",
   "style": "src/text.pcss",
-  "author": "Gup Badyal (gupreet.baydal@coop.co.uk)",
-  "license": "MIT",
+  "author": "@coopdigital",
+  "contributors": [
+    "Gup Badyal <gupreet.baydal@coop.co.uk> (https://github.com/Gup-B)"
+  ],
+  "private": false,
   "files": [
     "dist",
     "src"
   ],
-  "scripts": {
-    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
-    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint"
-  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
     "directory": "packages/shared-component--text"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.2.1",
-    "autoprefixer": "^9.8.6",
-    "cssnano": "^4.1.10",
-    "postcss": "^7.0.32",
-    "postcss-calc": "^7.0.3",
-    "postcss-cli": "^7.1.1",
-    "postcss-custom-media": "^7.0.8",
-    "postcss-custom-properties": "^9.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-nesting": "^7.0.1",
-    "prettier": "^2.1.0",
-    "stylelint": "^13.6.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-prettier": "^1.1.2"
+    "@coopdigital/foundations-vars": "^3.2.1"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
@@ -47,5 +33,8 @@
     "content",
     "text"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "c3449f7036280a93688ed0097b9f01d988013f51"
 }

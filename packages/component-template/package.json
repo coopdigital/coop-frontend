@@ -1,40 +1,23 @@
 {
   "name": "@coopdigital/component-template",
-  "version": "1.0.16",
+  "version": "0.1.0",
   "description": "Co-op Component/CSS Module Template",
   "main": "dist/component.css",
   "style": "src/component.pcss",
-  "author": "Matt Tyas (matt.tyas@coop.co.uk)",
+  "author": "@coopdigital",
+  "contributors": [
+    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"
+  ],
   "private": true,
-  "license": "MIT",
   "files": [
     "dist",
     "src"
   ],
-  "scripts": {
-    "lint": "stylelint 'src/*.{css,pcss}' --config '../../.stylelintrc.js' --fix",
-    "build": "postcss src/*.pcss --dir dist/ --config '../../postcss.config.js' --ext css",
-    "dist": "npm run build && npm run lint"
-  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
     "directory": "packages/component-template"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "cssnano": "^4.1.10",
-    "postcss": "^7.0.32",
-    "postcss-calc": "^7.0.3",
-    "postcss-cli": "^7.1.1",
-    "postcss-custom-media": "^7.0.8",
-    "postcss-custom-properties": "^9.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-nesting": "^7.0.1",
-    "prettier": "^2.1.0",
-    "stylelint": "^13.6.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-prettier": "^1.1.2"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
@@ -42,6 +25,5 @@
   "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template#readme",
   "keywords": [
     "templates"
-  ],
-  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
+  ]
 }

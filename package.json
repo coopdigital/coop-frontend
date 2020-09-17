@@ -6,11 +6,26 @@
   "private": true,
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.2",
-    "lerna": "^3.22.1"
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
+    "lerna": "^3.22.1",
+    "postcss": "^7.0.34",
+    "postcss-calc": "^7.0.4",
+    "postcss-cli": "^7.1.2",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.1",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2"
   },
   "scripts": {
     "publish": "lerna publish",
     "postinstall": "lerna bootstrap --hoist",
-    "build:all": "lerna run dist"
+    "lint": "lerna exec --ignore design-system --stream -- 'stylelint 'src/**/*.{css,pcss}' --fix'",
+    "build": "lerna exec --ignore design-system --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
+    "build:all": "npm run lint && npm run build"
   }
 }

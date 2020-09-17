@@ -1,12 +1,13 @@
 module.exports = {
   extends: 'stylelint-prettier/recommended',
   rule: {
-    'at-rule-no-unknown': true,
+    'at-rule-no-unknown': [ true, {
+      ignoreAtRules: ['custom-media']
+    }],
     'color-no-invalid-hex': true,
     'declaration-block-no-duplicate-properties': [ true, {
       ignore: ['consecutive-duplicates-with-different-values']
-      }
-    ],
+    }],
     'declaration-block-no-shorthand-property-overrides': true,
     'font-family-no-duplicate-names': true,
     'function-calc-no-unspaced-operator': true,
