@@ -1,16 +1,19 @@
 {
   "name": "@coopdigital/component-template",
-  "version": "1.0.16",
+  "version": "0.1.0",
   "description": "Co-op Component/CSS Module Template",
   "main": "dist/component.css",
   "style": "src/component.pcss",
-  "author": "Matt Tyas (matt.tyas@coop.co.uk)",
+  "author": "@coopdigital",
+  "contributors": [
+    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"
+  ],
   "private": true,
-  "license": "MIT",
   "files": [
     "dist",
     "src"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
@@ -22,6 +25,5 @@
   "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template#readme",
   "keywords": [
     "templates"
-  ],
-  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
+  ]
 }
