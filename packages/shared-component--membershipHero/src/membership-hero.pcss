@@ -8,9 +8,9 @@
   --membership-hero-background-small-height: 265px;
   --membership-hero-background-small-origin-x: 50%;
   --membership-hero-background-small-offset-x: calc(
-    (var(--membership-hero-background-small-width) / -2) - 125px
+    (var(--membership-hero-background-small-width) / -2) - 100px
   );
-  --membership-hero-background-small-offset-y: 90px;
+  --membership-hero-background-small-offset-y: 60px;
 
   /* Connector curved line (medium) */
   --membership-hero-background-medium-width: 1440px;
@@ -28,7 +28,7 @@
   --membership-hero-background-large-offset-x: calc(
     (var(--membership-hero-background-large-width) / -2) + 50px
   );
-  --membership-hero-background-large-offset-y: -126px;
+  --membership-hero-background-large-offset-y: -174px;
 
   /* Connector curved line (xlarge) */
   --membership-hero-background-xlarge-offset-x: calc(
@@ -57,7 +57,7 @@
 
   /* Connector full-width repeater (right) */
   --membership-hero-connector-right-offset-x: 0;
-  --membership-hero-connector-right-offset-y: 234px;
+  --membership-hero-connector-right-offset-y: 264px;
   --membership-hero-connector-right-origin-x: 50%;
 
   /* Connector full-width repeater (right, xlarge) */
@@ -97,6 +97,7 @@
   z-index: 1;
 
   max-width: 81rem;
+  min-height: 410px;
   margin: 0 auto;
   padding: var(--spacing-24) var(--spacing-16) 0;
 
@@ -107,17 +108,16 @@
 
   @media (--mq-medium) {
     min-height: 440px;
-    padding: var(--spacing-32) var(--spacing-16) 0;
+    padding: var(--spacing-32) var(--spacing-16) var(--spacing-48);
   }
 
   @media (--mq-large) {
-    min-height: 460px;
-    padding: var(--spacing-32) var(--spacing-24) 0;
+    min-height: 500px;
+    padding: var(--spacing-32) var(--spacing-24) var(--spacing-48);
   }
 
   @media (--mq-xlarge) {
-    min-height: 500px;
-    padding: var(--spacing-48) var(--spacing-16) 0;
+    padding: var(--spacing-48) var(--spacing-16) var(--spacing-48);
   }
 }
 
@@ -138,7 +138,7 @@
   }
 
   @media (--mq-medium) {
-    max-width: 85%;
+    max-width: 90%;
   }
 }
 
@@ -188,7 +188,7 @@
     z-index: 0;
     right: 0;
     right: -5%;
-    bottom: var(--spacing-48);
+    bottom: 0;
 
     height: auto;
     margin-top: 0;
@@ -196,10 +196,6 @@
 
   @media (--mq-medium) {
     right: 0;
-  }
-
-  @media (--mq-large) {
-    bottom: 0;
   }
 }
 
