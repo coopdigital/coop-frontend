@@ -3,7 +3,7 @@
 @import "@coopdigital/foundations-vars";
 
 :root {
-  /* Connector curved line */
+  /* Connector curved line (small) */
   --membership-hero-background-small-width: 800px;
   --membership-hero-background-small-height: 265px;
   --membership-hero-background-small-origin-x: 50%;
@@ -11,34 +11,44 @@
     (var(--membership-hero-background-small-width) / -2) - 125px
   );
   --membership-hero-background-small-offset-y: 90px;
+
+  /* Connector curved line (medium) */
   --membership-hero-background-medium-width: 1440px;
   --membership-hero-background-medium-height: 476px;
   --membership-hero-background-medium-origin-x: 50%;
   --membership-hero-background-medium-offset-x: calc(
     (var(--membership-hero-background-medium-width) / -2) - 120px
   );
-  --membership-hero-background-medium-offset-y: 84px;
+  --membership-hero-background-medium-offset-y: 62px;
+
+  /* Connector curved line (large) */
   --membership-hero-background-large-width: 1732px;
   --membership-hero-background-large-height: 573px;
   --membership-hero-background-large-origin-x: 50%;
   --membership-hero-background-large-offset-x: calc(
     (var(--membership-hero-background-large-width) / -2) + 50px
   );
-  --membership-hero-background-large-offset-y: -110px;
+  --membership-hero-background-large-offset-y: -126px;
+
+  /* Connector curved line (xlarge) */
   --membership-hero-background-xlarge-offset-x: calc(
-    (var(--membership-hero-background-medium-width) / -2) - 400px
+    (var(--membership-hero-background-medium-width) / -2) - 340px
   );
-  --membership-hero-background-xlarge-offset-y: 68px;
+  --membership-hero-background-xlarge-offset-y: 46px;
 
   /* Connector full-width repeater (left) */
   --membership-hero-connector-left-offset-x: 0;
-  --membership-hero-connector-left-offset-y: calc(var(--spacing-32) - 8px);
+  --membership-hero-connector-left-offset-y: calc(var(--spacing-32) - 12px);
   --membership-hero-connector-left-origin-x: 0;
+
+  /* Connector full-width repeater (left, large) */
   --membership-hero-connector-left-large-offset-x: 0;
   --membership-hero-connector-left-large-offset-y: calc(
     var(--spacing-48) - 8px
   );
   --membership-hero-connector-left-large-origin-x: 0;
+
+  /* Connector full-width repeater (left, xlarge) */
   --membership-hero-connector-left-xlarge-offset-x: -100px;
   --membership-hero-connector-left-xlarge-offset-y: calc(
     var(--spacing-64) - 8px
@@ -47,29 +57,28 @@
 
   /* Connector full-width repeater (right) */
   --membership-hero-connector-right-offset-x: 0;
-  --membership-hero-connector-right-offset-y: 282px;
+  --membership-hero-connector-right-offset-y: 234px;
   --membership-hero-connector-right-origin-x: 50%;
+
+  /* Connector full-width repeater (right, xlarge) */
   --membership-hero-connector-right-xlarge-offset-x: 100px;
   --membership-hero-connector-right-xlarge-offset-y: 329px;
   --membership-hero-connector-right-xlarge-origin-x: 50%;
 
-  /* Digital card promo picture (at small viewport) */
-  /* packages/shared-component--membershipHero/src/images/digital-card-medium.png */
-  --membership-hero-image-small-width: 337px;
-  --membership-hero-image-small-height: 424px;
-  --membership-hero-image-small-offset-x: -12px;
-
-  /* Digital card promo picture (at medium viewport) */
+  /* Digital card promo picture */
   /* packages/shared-component--membershipHero/src/images/digital-card-small.png */
-  --membership-hero-image-medium-width: 267px;
-  --membership-hero-image-medium-height: 336px;
-  --membership-hero-image-medium-offset-x: 0;
+  --membership-hero-image-small-width: 400px;
+  --membership-hero-image-small-height: 300px;
+
+  /* Digital card promo picture */
+  /* packages/shared-component--membershipHero/src/images/digital-card-medium.png */
+  --membership-hero-image-medium-width: 512px;
+  --membership-hero-image-medium-height: 384px;
 
   /* Digital card promo picture (at large viewport) */
   /* packages/shared-component--membershipHero/src/images/digital-card-large.png */
-  --membership-hero-image-large-width: 393px;
-  --membership-hero-image-large-height: 494px;
-  --membership-hero-image-large-offset-x: 0;
+  --membership-hero-image-large-width: 640px;
+  --membership-hero-image-large-height: 480px;
 }
 
 .coop-c-membership-hero {
@@ -89,19 +98,24 @@
 
   max-width: 81rem;
   margin: 0 auto;
-  padding: var(--spacing-24) var(--spacing-16) var(--spacing-32);
+  padding: var(--spacing-24) var(--spacing-16) 0;
+
+  @media (--mq-small) {
+    padding: var(--spacing-24) var(--spacing-16) var(--spacing-64);
+  }
 
   @media (--mq-medium) {
-    padding: var(--spacing-32) var(--spacing-16);
+    padding: var(--spacing-32) var(--spacing-16) var(--spacing-64);
   }
 
   @media (--mq-large) {
-    padding: var(--spacing-32) var(--spacing-24);
+    padding: var(--spacing-32) var(--spacing-24)
+      calc(var(--spacing-64) + var(--spacing-16));
   }
 
   @media (--mq-xlarge) {
     padding: var(--spacing-48) var(--spacing-16)
-      calc(var(--spacing-64) + var(--spacing-8));
+      calc(var(--spacing-64) + var(--spacing-16) + var(--spacing-24));
   }
 }
 
@@ -117,18 +131,12 @@
 }
 
 .coop-c-membership-hero__body {
-  margin-bottom: var(--spacing-32);
-
   @media (--mq-small) {
+    max-width: 80%;
+  }
+
+  @media (--mq-medium) {
     max-width: 85%;
-  }
-
-  @media (--mq-large) {
-    margin-bottom: var(--spacing-48);
-  }
-
-  @media (--mq-xlarge) {
-    margin-bottom: var(--spacing-32);
   }
 }
 
@@ -160,26 +168,26 @@
 .coop-c-membership-hero__media {
   position: relative;
   z-index: 0;
-  margin-top: -50px;
-  height: 400px;
+  margin-top: 0;
+  height: var(--membership-hero-image-medium-height);
 
   @media (--mq-small) {
     position: absolute;
     z-index: 0;
-    right: 5%;
-    bottom: var(--spacing-32);
+    right: 0;
+    right: -5%;
+    bottom: var(--spacing-48);
 
     height: auto;
     margin-top: 0;
   }
 
   @media (--mq-medium) {
-    right: 60px;
+    right: 0;
   }
 
   @media (--mq-large) {
-    right: 5%;
-    bottom: var(--spacing-8);
+    bottom: 0;
   }
 }
 
@@ -195,29 +203,22 @@
   top: 0;
   left: 50%;
 
-  width: var(--membership-hero-image-small-width);
-  height: var(--membership-hero-image-small-height);
-  margin-left: calc(
-    (var(--membership-hero-image-small-width) / -2) +
-      var(--membership-hero-image-small-offset-x)
-  );
+  width: var(--membership-hero-image-medium-width);
+  height: var(--membership-hero-image-medium-height);
+  margin-left: calc(var(--membership-hero-image-medium-width) / -2);
 
   @media (--mq-small) {
     position: relative;
-    left: var(--membership-hero-image-medium-offset-x);
-    width: var(--membership-hero-image-medium-width);
-    height: var(--membership-hero-image-medium-height);
+    top: auto;
+    left: auto;
+    width: var(--membership-hero-image-small-width);
+    height: var(--membership-hero-image-small-height);
     margin-left: 0;
   }
 
   @media (--mq-large) {
-    left: var(--membership-hero-image-large-offset-x);
     width: var(--membership-hero-image-large-width);
     height: var(--membership-hero-image-large-height);
-    margin-left: calc(
-      (var(--membership-hero-image-large-width) / -2) +
-        var(--membership-hero-image-large-offset-x)
-    );
   }
 }
 
