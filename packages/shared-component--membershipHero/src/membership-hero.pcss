@@ -161,6 +161,16 @@
 
 .coop-c-membership-hero__btns {
   margin-bottom: var(--spacing-24);
+  /* removes whitespace caused by inline-block */
+  font-size: 0;
+}
+
+.coop-c-membership-hero__btns .coop-btn--app {
+  margin: 0 var(--spacing-16) var(--spacing-16) 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .coop-c-membership-hero__caption {
