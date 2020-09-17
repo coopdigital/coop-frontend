@@ -10,11 +10,6 @@
     "dist",
     "src"
   ],
-  "scripts": {
-    "lint": "node_modules/.bin/stylelint 'dist/*.css' --fix",
-    "build": "node_modules/.bin/postcss src/*.pcss --dir dist/ --ext css",
-    "dist": "npm run build && npm run lint"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
