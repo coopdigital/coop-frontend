@@ -22,9 +22,11 @@
     "directory": "packages/foundations-buttons"
   },
   "devDependencies": {
+    "@coopdigital/foundations-layout": "^3.2.1",
     "@coopdigital/foundations-vars": "^3.2.1"
   },
   "peerDependencies": {
+    "@coopdigital/foundations-layout": ">= 3.2.0 < 4",
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
   },
   "publishConfig": {
