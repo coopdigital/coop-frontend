@@ -4,7 +4,6 @@
 This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. Install dependencies in the root of the repo:
 
  ```shell script
-$ npx lerna clean
 $ npm ci
 ```
 

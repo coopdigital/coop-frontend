@@ -37,7 +37,6 @@ Note: Don't run `npm install` or `npm ci` within the Design System. Instead, use
 
 ```
 cd ../
-npx lerna clean
 npm ci
 cd ./design-system
 ```
