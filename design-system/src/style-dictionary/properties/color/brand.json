@@ -1,0 +1,164 @@
+{
+  "color": {
+
+    "brand": {
+
+      "base":   {"value": "#00b1e7"},
+      " ":      {"value": "{color.brand.base.value}"},
+      "coop" :  {"value": "{color.brand.base.value}"},
+      "deals":  {"value": "#d12430"},
+
+
+      "membership": {
+
+        "purple": {
+
+          "dark-1":   {"value": "#483965"},
+          "dark-2":   {"value": "#635385"},
+          "dark-3":   {"value": "#776ca7"},
+          "mid-5":    {"value": "#8e88ba"},
+          "mid-6":    {"value": "#847db5"},
+          "light-8":  {"value": "#b2aece"},
+          "light-9":  {"value": "#d3d1e4"},
+          "light-10": {"value": "#eae8f4"},
+
+          "dark":     {"value": "{color.brand.membership.purple.dark-3.value}"},
+          "mid":      {"value": "{color.brand.membership.purple.mid-5.value}"},
+          "bright":   {"value": "{color.brand.membership.purple.mid-6.value}"},
+          "light":    {"value": "{color.brand.membership.purple.light-10.value}"}
+
+        },
+
+        "lilac": {
+
+          "dark-1":   {"value": "#52355e"},
+          "dark-2":   {"value": "#715287"},
+          "dark-3":   {"value": "#806697"},
+          "mid-5":    {"value": "#9976a8"},
+          "mid-6":    {"value": "#a976bb"},
+          "light-8":  {"value": "#bba2c6"},
+          "light-9":  {"value": "#ccbad4"},
+          "light-10": {"value": "#e6dde9"},
+
+          "dark":     {"value": "{color.brand.membership.lilac.dark-3.value}"},
+          "mid":      {"value": "{color.brand.membership.lilac.mid-5.value}"},
+          "bright":   {"value": "{color.brand.membership.lilac.mid-6.value}"},
+          "light":    {"value": "{color.brand.membership.lilac.light-10.value}"}
+        },
+
+        "pink": {
+
+          "dark-1":     {"value": "#6c3e53"},
+          "dark-2":     {"value": "#864e68"},
+          "dark-3":     {"value": "#9d5b7b"},
+          "mid-5":      {"value": "#bc7190"},
+          "mid-6":      {"value": "#d15c8c"},
+          "light-8":    {"value": "#d19fb4"},
+          "light-9":    {"value": "#e3cbd4"},
+          "light-10":   {"value": "#f0e5eb"},
+
+          "dark":       {"value": "{color.brand.membership.pink.dark-3.value}"},
+          "mid":        {"value": "{color.brand.membership.pink.mid-5.value}"},
+          "bright":     {"value": "{color.brand.membership.pink.mid-6.value}"},
+          "light":      {"value": "{color.brand.membership.pink.light-10.value}"}
+
+        },
+
+        "orange": {
+
+          "dark-1":     {"value": "#783620"},
+          "dark-2":     {"value": "#9b462b"},
+          "dark-3":     {"value": "#b45d2b"},
+          "mid-5":      {"value": "#e69c39"},
+          "mid-6":      {"value": "#f5a74b"},
+          "light-8":    {"value": "#e6bb8f"},
+          "light-9":    {"value": "#f0ddd1"},
+          "light-10":   {"value": "#f7eeeb"},
+
+          "dark":       {"value": "{color.brand.membership.orange.dark-3.value}"},
+          "mid":        {"value": "{color.brand.membership.orange.mid-5.value}"},
+          "bright":     {"value": "{color.brand.membership.orange.mid-6.value}"},
+          "light":      {"value": "{color.brand.membership.orange.light-10.value}"}
+
+        },
+
+        "yellow-brown": {
+
+          "dark-1":     {"value": "#704e24"},
+          "dark-2":     {"value": "#916b3a"},
+          "dark-3":     {"value": "#bf843e"},
+          "mid-5":      {"value": "#ecd16d"},
+          "mid-6":      {"value": "#f8da6d"},
+          "light-8":    {"value": "#edd273"},
+          "light-9":    {"value": "#f3e2a4"},
+          "light-10":   {"value": "#f9f1d1"},
+
+          "dark":       {"value": "{color.brand.membership.yellow-brown.dark-3.value}"},
+          "mid":        {"value": "{color.brand.membership.yellow-brown.mid-5.value}"},
+          "bright":     {"value": "{color.brand.membership.yellow-brown.mid-6.value}"},
+          "light":      {"value": "{color.brand.membership.yellow-brown.light-10.value}"}
+
+        },
+
+        "green": {
+
+          "dark-1":     {"value": "#3b3f25"},
+          "dark-2":     {"value": "#565734"},
+          "dark-3":     {"value": "#6a7345"},
+          "mid-5":      {"value": "#c6c978"},
+          "mid-6":      {"value": "#b3ce7b"},
+          "light-8":    {"value": "#d1d4a5"},
+          "light-9":    {"value": "#e4e5c6"},
+          "light-10":   {"value": "#f6f6eb"},
+
+          "dark":       {"value": "{color.brand.membership.green.dark-3.value}"},
+          "mid":        {"value": "{color.brand.membership.green.mid-5.value}"},
+          "bright":     {"value": "{color.brand.membership.green.mid-6.value}"},
+          "light":      {"value": "{color.brand.membership.green.light-10.value}"}
+
+        },
+
+        "turquoise": {
+
+          "dark-1":     {"value": "#2b4946"},
+          "dark-2":     {"value": "#39615f"},
+          "dark-3":     {"value": "#487d7b"},
+          "mid-5":      {"value": "#81b8b8"},
+          "mid-6":      {"value": "#87cdcd"},
+          "light-8":    {"value": "#b9dad9"},
+          "light-9":    {"value": "#d3e7e5"},
+          "light-10":   {"value": "#ecf5f7"},
+
+          "dark":       {"value": "{color.brand.membership.turquoise.dark-3.value}"},
+          "mid":        {"value": "{color.brand.membership.turquoise.mid-5.value}"},
+          "bright":     {"value": "{color.brand.membership.turquoise.mid-6.value}"},
+          "light":      {"value": "{color.brand.membership.turquoise.light-10.value}"}
+
+        },
+
+        "blue": {
+
+          "dark-1":     {"value": "#2c4258"},
+          "dark-2":     {"value": "#456588"},
+          "dark-3":     {"value": "#5177a3"},
+          "mid-5":      {"value": "#8bb5e0"},
+          "mid-6":      {"value": "#8fbae6"},
+          "light-8":    {"value": "#c1d7ee"},
+          "light-9":    {"value": "#d8e6f4"},
+          "light-10":   {"value": "#f0f6fd"},
+
+          "dark":       {"value": "{color.brand.membership.blue.dark-3.value}"},
+          "mid":        {"value": "{color.brand.membership.blue.mid-5.value}"},
+          "bright":     {"value": "{color.brand.membership.blue.mid-6.value}"},
+          "light":      {"value": "{color.brand.membership.blue.light-10.value}"}
+
+        }
+      
+      }
+
+    },
+
+    "deal-red": {"value": "{color.brand.deals.value}"}
+
+  }
+}
