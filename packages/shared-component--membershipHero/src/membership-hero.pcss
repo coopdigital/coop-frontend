@@ -101,21 +101,23 @@
   padding: var(--spacing-24) var(--spacing-16) 0;
 
   @media (--mq-small) {
-    padding: var(--spacing-24) var(--spacing-16) var(--spacing-64);
+    min-height: 410px;
+    padding: var(--spacing-24) var(--spacing-16) 0;
   }
 
   @media (--mq-medium) {
-    padding: var(--spacing-32) var(--spacing-16) var(--spacing-64);
+    min-height: 440px;
+    padding: var(--spacing-32) var(--spacing-16) 0;
   }
 
   @media (--mq-large) {
-    padding: var(--spacing-32) var(--spacing-24)
-      calc(var(--spacing-64) + var(--spacing-16));
+    min-height: 460px;
+    padding: var(--spacing-32) var(--spacing-24) 0;
   }
 
   @media (--mq-xlarge) {
-    padding: var(--spacing-48) var(--spacing-16)
-      calc(var(--spacing-64) + var(--spacing-16) + var(--spacing-24));
+    min-height: 500px;
+    padding: var(--spacing-48) var(--spacing-16) 0;
   }
 }
 
