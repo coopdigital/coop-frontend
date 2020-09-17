@@ -1,25 +1,26 @@
 {
   "name": "@coopdigital/foundations-grid",
   "version": "2.0.7",
-  "author": "@coopdigital",
   "description": "Co-op CSS Foundations: Grid.",
-  "main": "dist/grid.html",
-  "style": "dist/grid.css",
+  "main": "dist/grid.css",
+  "style": "src/grid.pcss",
+  "author": "@coopdigital",
   "contributors": [
-    {
-      "name": "Michael Chadwick",
-      "email": "michael.chadwick@coopdigital.co.uk"
-    }
+    "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)"
   ],
-  "license": "MIT",
+  "private": false,
   "files": [
     "dist",
     "src"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
     "directory": "packages/foundations-grid"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }

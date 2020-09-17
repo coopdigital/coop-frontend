@@ -6,14 +6,14 @@
   "style": "src/offersPromo.pcss",
   "author": "@coopdigital",
   "contributors": [
-    "Gup Badyal (gupreet.baydal@coop.co.uk)"
+    "Gup Badyal <gupreet.baydal@coop.co.uk> (https://github.com/Gup-B)"
   ],
   "private": false,
-  "license": "MIT",
   "files": [
     "dist",
     "src"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",

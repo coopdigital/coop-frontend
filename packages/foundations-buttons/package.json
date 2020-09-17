@@ -1,20 +1,21 @@
 {
   "name": "@coopdigital/foundations-buttons",
   "version": "2.2.1",
-  "author": "@coopdigital",
   "description": "CSS Foundations: Buttons",
   "main": "dist/buttons.css",
   "style": "src/buttons.pcss",
+  "author": "@coopdigital",
   "contributors": [
     "Matthew Morek <matthew.morek@coopdigital.co.uk> (https://github.com/matthewmorek)",
     "Paul Welsh <paul@nonbreakingspace.co.uk> (https://github.com/spacedawwwg)",
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"
   ],
-  "license": "MIT",
+  "private": false,
   "files": [
     "dist",
     "src"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
@@ -25,6 +26,9 @@
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }

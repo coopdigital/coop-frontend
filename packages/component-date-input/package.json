@@ -9,11 +9,11 @@
     "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)"
   ],
   "private": false,
-  "license": "MIT",
   "files": [
     "dist",
     "src"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",

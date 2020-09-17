@@ -4,12 +4,16 @@
   "description": "Co-op Components: Card - product",
   "main": "dust/card--product.css",
   "style": "src/card--product.pcss",
-  "author": "Matt Tyas (matt.tyas@coopdigital.co.uk)",
-  "license": "MIT",
+  "author": "@coopdigital",
+  "contributors": [
+    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"
+  ],
+  "private": false,
   "files": [
     "dist",
     "src"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
@@ -32,5 +36,8 @@
     "product",
     "e-commerce"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }

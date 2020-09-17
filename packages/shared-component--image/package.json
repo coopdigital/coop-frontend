@@ -4,12 +4,16 @@
   "description": "Co-op Shared Component: Image",
   "main": "dist/image.css",
   "style": "src/image.pcss",
-  "author": "Gup Badyal (gupreet.baydal@coop.co.uk)",
-  "license": "MIT",
+  "author": "@coopdigital",
+  "contributors": [
+    "Gup Badyal <gupreet.baydal@coop.co.uk> (https://github.com/Gup-B)"
+  ],
+  "private": false,
   "files": [
     "dist",
     "src"
   ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
@@ -29,5 +33,8 @@
     "content",
     "image"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }
