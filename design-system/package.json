@@ -41,7 +41,7 @@
     "@coopdigital/shared-component--linklist": "^2.1.19",
     "@coopdigital/shared-component--membership": "^2.1.17",
     "@coopdigital/shared-component--membershipfeatured": "^1.0.1",
-    "@coopdigital/shared-component--membershiphero": "^1.0.9",
+    "@coopdigital/shared-component--membershiphero": "^1.0.10",
     "@coopdigital/shared-component--offers": "^2.1.17",
     "@coopdigital/shared-component--offerspromo": "^1.0.6",
     "@coopdigital/shared-component--signpost": "^2.1.17",
