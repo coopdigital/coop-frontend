@@ -296,8 +296,8 @@ button.coop-t-link {
   color: var(--color-text);
 
   & .coop-t-link__icon {
-    margin: 0 0 0 0.6em; /* 12px */
-    transform: translateX(-0.1em); /* -2px */
+    margin: 0 0 0 calc(12/18 * 1em);
+    transform: translateX(calc(-2/18 * 1em));
   }
 
   &:hover,
@@ -311,13 +311,14 @@ button.coop-t-link {
   }
 }
 
+/* 24px x 20px icon at 18px font size */
 .coop-t-link__icon {
   position: relative;
-  top: -0.05em; /* -1px */
+  top: calc(-1/18 * 1em);
   display: inline-block;
-  width: 1.2em; /* 24px */
-  height: 1em; /* 20px */
-  margin: 0 0.6em 0 0; /* 12px */
+  width: calc(24/18 * 1em);
+  height: calc(20/18 * 1em);
+  margin: 0 calc(12/18 * 1em) 0 0;
   vertical-align: middle;
   transition: transform 0.15s ease-in;
 }
