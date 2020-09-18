@@ -52,8 +52,16 @@
   }
 }
 
+.coop-c-app-download__media + .coop-c-app-download__content {
+  padding-bottom: var(--spacing-24);
+}
+
 .coop-c-app-download__body {
   max-width: 90%;
+
+  :last-child {
+    margin-bottom: 0;
+  }
 
   @media (--mq-medium) {
     max-width: 85%;
@@ -130,9 +138,12 @@
   }
 }
 
+/* All images */
 .coop-c-app-download__media {
   margin: var(--spacing-64) 0 var(--spacing-16);
   padding: var(--spacing-8) 0;
+  /* removes whitespace caused by inline-block */
+  font-size: 0;
   text-align: center;
 
   @media (--mq-small) {
@@ -146,7 +157,7 @@
   }
 }
 
-/* Connector full-width repeater (for left-hand image) */
+/* Connector full-width repeater */
 .coop-c-app-download__media:after {
   position: absolute;
   z-index: 0;
@@ -185,7 +196,7 @@
   }
 }
 
-/* Connector full-width repeater (for right-hand image) */
+/* Connector full-width repeater (right-hand image only) */
 .coop-c-app-download__content + .coop-c-app-download__media:after {
   top: auto;
   right: auto;
