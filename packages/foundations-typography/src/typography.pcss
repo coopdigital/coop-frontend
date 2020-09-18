@@ -291,6 +291,37 @@ button.coop-t-link {
   }
 }
 
+.coop-t-link--arrow {
+  display: inline-block;
+  color: var(--color-text);
+
+  & .coop-t-link__icon {
+    margin: 0 0 0 0.6em; /* 12px */
+    transform: translateX(-0.1em); /* -2px */
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-text);
+  }
+
+  &:hover .coop-t-link__icon,
+  &:focus .coop-t-link__icon {
+    transform: translateX(0);
+  }
+}
+
+.coop-t-link__icon {
+  position: relative;
+  top: -0.05em; /* -1px */
+  display: inline-block;
+  width: 1.2em; /* 24px */
+  height: 1em; /* 20px */
+  margin: 0 0.6em 0 0; /* 12px */
+  vertical-align: middle;
+  transition: transform 0.15s ease-in;
+}
+
 hr,
 .coop-t-hr {
   display: block;
