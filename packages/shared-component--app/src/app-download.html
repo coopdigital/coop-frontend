@@ -3,7 +3,7 @@
   {% if content.miniVersion == true %}
     {% set appMiniVersion = true %}
   {% endif %}
-  <aside class="coop-c-app-download coop-u-brand-membership-blue-light-bg coop-u-brand-membership-turquoise-bright-stroke coop-u-brand-membership-turquoise-bright-fill{% if appMiniVersion == true %} coop-c-app-download--mini{% endif %}">
+  <aside class="coop-c-app-download coop-u-brand-membership-blue-light-bg{% if appMiniVersion == true %} coop-c-app-download--mini{% endif %}">
   <div class="coop-c-app-download__inner coop-u-clearfix">
     <div class="coop-c-app-download__content coop-u-clearfix">
       <h2 class="coop-c-app-download__title">{{content.heading|safe}}</h2>
@@ -72,7 +72,7 @@
             'height': image.data.fields.file.details.image.height
           }
         %}
-        <div class="coop-c-app-download__media">
+        <div class="coop-c-app-download__media coop-u-brand-membership-turquoise-bright-stroke">
 
           <picture class="coop-c-app-download__picture {% if content.handsetImage == true %}coop-c-app-download__picture--handset{% endif %}">
             <!-- if browser supports webp image format, serve the webp format-->

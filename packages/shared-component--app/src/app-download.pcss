@@ -7,7 +7,6 @@
 }
 
 .coop-c-app-download__inner {
-  position: relative;
   z-index: 1;
 
   max-width: 81rem;
@@ -43,8 +42,13 @@
   }
 
   @media (--mq-large) {
-    width: 50%;
+    max-width: 38.75rem; /* 620px */
+    padding-right: var(--spacing-32);
+  }
+
+  @media (--mq-xlarge) {
     max-width: 43.75rem; /* 700px */
+    width: 50%;
   }
 }
 
@@ -77,16 +81,27 @@
 .coop-c-app-download__btns .coop-btn--app {
   margin: 0 var(--spacing-16) var(--spacing-16) 0;
 
+  @media (--mq-small) {
+    margin-bottom: 0;
+  }
+
   &:last-child {
     margin-right: 0;
   }
 }
 
 .coop-c-app-download__about {
+  margin-top: var(--spacing-32);
   font-size: var(--type-body-s);
 
   & :last-child {
     margin-bottom: 0;
+  }
+}
+
+.coop-c-app-download__body + .coop-c-app-download__about {
+  @media (--mq-medium) {
+    margin-top: var(--spacing-48);
   }
 }
 
@@ -122,21 +137,24 @@
 
   @media (--mq-small) {
     width: 38%;
-    float: right;
+    float: left;
     margin: 0;
   }
 
-  @media (--mq-large) {
+  @media (--mq-xlarge) {
     width: 50%;
   }
 }
 
-/* Connector full-width repeater */
-.coop-c-app-download:after {
+/* Connector full-width repeater (for left-hand image) */
+.coop-c-app-download__media:after {
   position: absolute;
   z-index: 0;
-  left: 50%;
-  bottom: 205px;
+  top: 205px;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+
   width: 50%;
   height: 0;
   border-top: 8px solid;
@@ -145,20 +163,49 @@
 
   @media (--mq-small) {
     top: 142px;
-    right: 0;
+    right: auto;
     bottom: auto;
-    left: auto;
+    left: 0;
     width: 25%;
   }
 
   @media (--mq-medium) {
-    top: 245px;
+    top: 205px;
+  }
+
+  @media (--mq-xlarge) {
+    right: 50%;
+    left: auto;
+    width: 50%;
+    margin-right: 320px;
+  }
+
+  @media (--mq-xlarge) {
+    top: 261px;
+  }
+}
+
+/* Connector full-width repeater (for right-hand image) */
+.coop-c-app-download__content + .coop-c-app-download__media:after {
+  top: auto;
+  right: auto;
+  bottom: 205px;
+  left: 50%;
+
+  @media (--mq-small) {
+    top: 142px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+
+  @media (--mq-medium) {
+    top: 205px;
   }
 
   @media (--mq-xlarge) {
     right: auto;
     left: 50%;
-    width: 50%;
     margin-left: 320px;
   }
 
@@ -266,8 +313,4 @@
   @media (--mq-large) {
     margin-top: 0;
   }
-}
-
-.coop-c-app-download--mini:after {
-  display: none;
 }
