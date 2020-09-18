@@ -31,7 +31,7 @@
     "@coopdigital/foundations-grid": "^2.0.8",
     "@coopdigital/foundations-layout": "^3.2.2",
     "@coopdigital/foundations-tables": "^2.1.16",
-    "@coopdigital/foundations-typography": "^4.1.16",
+    "@coopdigital/foundations-typography": "^4.1.17",
     "@coopdigital/foundations-vars": "^3.2.2",
     "@coopdigital/shared-component--app": "^1.0.7",
     "@coopdigital/shared-component--editorialcard": "^2.1.17",
