@@ -65,20 +65,20 @@
   --membership-hero-connector-right-xlarge-offset-y: 329px;
   --membership-hero-connector-right-xlarge-origin-x: 50%;
 
-  /* Digital card promo picture */
-  /* packages/shared-component--membershipHero/src/images/digital-card-small.png */
+  /* Hero image (small) */
   --membership-hero-image-small-width: 400px;
   --membership-hero-image-small-height: 300px;
+  --membership-hero-photo-small-width: 338px;
 
-  /* Digital card promo picture */
-  /* packages/shared-component--membershipHero/src/images/digital-card-medium.png */
+  /* Hero image (medium) */
   --membership-hero-image-medium-width: 512px;
   --membership-hero-image-medium-height: 384px;
+  --membership-hero-photo-medium-width: 440px;
 
-  /* Digital card promo picture (at large viewport) */
-  /* packages/shared-component--membershipHero/src/images/digital-card-large.png */
+  /* Hero image (large) */
   --membership-hero-image-large-width: 640px;
   --membership-hero-image-large-height: 480px;
+  --membership-hero-photo-large-width: 555px;
 }
 
 .coop-c-membership-hero {
@@ -113,23 +113,18 @@
 
   @media (--mq-large) {
     min-height: 500px;
-    padding: var(--spacing-32) var(--spacing-24) var(--spacing-48);
+    padding: var(--spacing-32) var(--spacing-24) var(--spacing-64);
   }
 
   @media (--mq-xlarge) {
-    padding: var(--spacing-48) var(--spacing-16) var(--spacing-48);
+    padding: var(--spacing-48) var(--spacing-16) var(--spacing-64);
   }
 }
 
 .coop-c-membership-hero__content {
   position: relative;
   z-index: 1;
-
-  max-width: 21.875rem; /* 350px */
-
-  @media (--mq-medium) {
-    max-width: 33rem; /* 528px */
-  }
+  max-width: 33rem; /* 528px */
 }
 
 .coop-c-membership-hero__body {
@@ -181,22 +176,6 @@
   position: relative;
   z-index: 0;
   margin-top: 0;
-  height: var(--membership-hero-image-medium-height);
-
-  @media (--mq-small) {
-    position: absolute;
-    z-index: 0;
-    right: 0;
-    right: -5%;
-    bottom: 0;
-
-    height: auto;
-    margin-top: 0;
-  }
-
-  @media (--mq-medium) {
-    right: 0;
-  }
 }
 
 .coop-c-membership-hero__picture,
@@ -206,28 +185,8 @@
 
 /* Digital card promo picture */
 .coop-c-membership-hero__picture {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  top: 0;
-  left: 50%;
-
-  width: var(--membership-hero-image-medium-width);
-  height: var(--membership-hero-image-medium-height);
-  margin-left: calc(var(--membership-hero-image-medium-width) / -2);
-
-  @media (--mq-small) {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: var(--membership-hero-image-small-width);
-    height: var(--membership-hero-image-small-height);
-    margin-left: 0;
-  }
-
-  @media (--mq-large) {
-    width: var(--membership-hero-image-large-width);
-    height: var(--membership-hero-image-large-height);
-  }
 }
 
 .coop-c-membership-hero__image {
@@ -255,21 +214,6 @@
     height: var(--membership-hero-background-large-height);
     margin-left: var(--membership-hero-background-large-offset-x);
     margin-top: var(--membership-hero-background-large-offset-y);
-  }
-
-  /* Medium connector (at large viewport) */
-  @media (--mq-large) {
-    left: var(--membership-hero-background-medium-origin-x);
-    width: var(--membership-hero-background-medium-width);
-    height: var(--membership-hero-background-medium-height);
-    margin-left: var(--membership-hero-background-medium-offset-x);
-    margin-top: var(--membership-hero-background-medium-offset-y);
-  }
-
-  /* Medium connector (at xlarge viewport) */
-  @media (--mq-xlarge) {
-    margin-left: var(--membership-hero-background-xlarge-offset-x);
-    margin-top: var(--membership-hero-background-xlarge-offset-y);
   }
 }
 
@@ -336,4 +280,189 @@
 .coop-c-membership-hero__path {
   fill: none;
   stroke: inherit;
+}
+
+/* Adjust for hero with handset image (4:3) */
+.coop-c-membership-hero--handset {
+  & .coop-c-membership-hero__content {
+    max-width: 21.875rem; /* 350px */
+
+    @media (--mq-medium) {
+      max-width: 33rem; /* 528px */
+    }
+  }
+
+  & .coop-c-membership-hero__media {
+    height: var(--membership-hero-image-medium-height);
+
+    @media (--mq-small) {
+      position: absolute;
+      z-index: 0;
+      right: 0;
+      right: -5%;
+      bottom: 0;
+      height: auto;
+      margin-top: 0;
+    }
+
+    @media (--mq-medium) {
+      right: 0;
+    }
+  }
+
+  & .coop-c-membership-hero__picture {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: var(--membership-hero-image-medium-width);
+    height: var(--membership-hero-image-medium-height);
+    margin-left: calc(var(--membership-hero-image-medium-width) / -2);
+
+    @media (--mq-small) {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: var(--membership-hero-image-small-width);
+      height: var(--membership-hero-image-small-height);
+      margin-left: 0;
+    }
+
+    @media (--mq-large) {
+      width: var(--membership-hero-image-large-width);
+      height: var(--membership-hero-image-large-height);
+    }
+  }
+
+  & .coop-c-membership-hero__connector {
+    /* Medium connector (at large viewport) */
+    @media (--mq-large) {
+      left: var(--membership-hero-background-medium-origin-x);
+      width: var(--membership-hero-background-medium-width);
+      height: var(--membership-hero-background-medium-height);
+      margin-left: var(--membership-hero-background-medium-offset-x);
+      margin-top: var(--membership-hero-background-medium-offset-y);
+    }
+
+    /* Medium connector (at xlarge viewport) */
+    @media (--mq-xlarge) {
+      margin-left: var(--membership-hero-background-xlarge-offset-x);
+      margin-top: var(--membership-hero-background-xlarge-offset-y);
+    }
+  }
+}
+
+/* Adjust for hero with photo (16:9) */
+.coop-c-membership-hero--photo {
+  & .coop-c-membership-hero__inner {
+    @media (--mq-xlarge) {
+      min-height: 580px;
+    }
+  }
+
+  & .coop-c-membership-hero__content {
+    @media (--mq-medium) {
+      max-width: 50%;
+    }
+  }
+
+  & .coop-c-membership-hero__media {
+    margin: var(--spacing-32) calc(var(--spacing-16) * -1) 0;
+
+    @media (--mq-medium) {
+      position: absolute;
+      right: var(--spacing-32);
+      bottom: 110px;
+
+      width: var(--membership-hero-photo-small-width);
+      margin: 0;
+    }
+
+    @media (--mq-large) {
+      right: var(--spacing-32);
+      bottom: 205px;
+      width: var(--membership-hero-photo-medium-width);
+    }
+
+    @media (--mq-xlarge) {
+      right: var(--spacing-16);
+      bottom: 205px;
+      width: var(--membership-hero-photo-large-width);
+    }
+  }
+
+  & .coop-c-membership-hero__connector {
+    @media (--mq-large) {
+      top: 132px;
+    }
+
+    @media (--mq-xlarge) {
+      top: 181px;
+    }
+  }
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  &:before {
+    @media (--mq-medium) {
+      display: block;
+    }
+
+    @media (--mq-xlarge) {
+      bottom: 56px;
+    }
+  }
+}
+
+/* Adjust for home page hero */
+.coop-c-membership-hero--home {
+  & .coop-c-membership-hero__title {
+    @media (--mq-medium) {
+      margin-bottom: var(--spacing-32);
+      font-size: 2.625rem; /* 42px */
+    }
+
+    @media (--mq-large) {
+      font-size: 2.875rem; /* 46px */
+    }
+
+    @media (--mq-xlarge) {
+      font-size: 4.25rem; /* 68px */
+    }
+  }
+
+  & .coop-c-membership-hero__body {
+    @media (--mq-large) {
+      font-size: 1.375rem; /* 22px */
+    }
+
+    @media (--mq-xlarge) {
+      font-size: 1.625rem; /* 26px */
+    }
+  }
+
+  & .coop-c-membership-hero__cta {
+    @media (--mq-xlarge) {
+      margin-top: var(--spacing-48);
+    }
+  }
+
+  & .coop-c-membership-hero__connector {
+    @media (--mq-large) {
+      top: 132px;
+    }
+
+    @media (--mq-xlarge) {
+      top: 101px;
+    }
+  }
+
+  &:before {
+    @media (--mq-xlarge) {
+      bottom: 136px;
+    }
+  }
 }
