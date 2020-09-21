@@ -22,7 +22,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3.25rem; /* 52px / 16 */
+  min-height: 3.25rem; /* 52px / 16 */
   padding: var(--spacing-16) calc(var(--spacing-16) * 1.25);
   color: var(--color-white);
   background: var(--color-button-blue);
@@ -40,7 +40,7 @@
   cursor: pointer;
 
   @media (--mq-medium) {
-    height: 3.75rem; /* 60px / 16 */
+    min-height: 3.75rem; /* 60px / 16 */
     padding: var(--spacing-16) calc(var(--spacing-32) * 1.25);
     font-size: var(--type-body-l);
   }
@@ -123,11 +123,11 @@
 }
 
 .coop-btn--small {
-  height: 2.75rem; /* 44px / 16 */
+  min-height: 2.75rem; /* 44px / 16 */
   padding: var(--spacing-8) calc(var(--spacing-16) * 1.25);
 
   @media (--mq-medium) {
-    height: 3.125rem; /* 50px / 16 */
+    min-height: 3.125rem; /* 50px / 16 */
   }
 }
 
