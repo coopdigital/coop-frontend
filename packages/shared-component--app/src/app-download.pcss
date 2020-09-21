@@ -7,12 +7,11 @@
 }
 
 .coop-c-app-download__inner {
-  position: relative;
   z-index: 1;
 
   max-width: 81rem;
   margin: 0 auto;
-  padding: var(--spacing-32) var(--spacing-16);
+  padding: var(--spacing-32) var(--spacing-16) 0;
 
   @media (--mq-small) {
     padding-bottom: var(--spacing-48);
@@ -43,13 +42,26 @@
   }
 
   @media (--mq-large) {
-    width: 50%;
-    max-width: 43.75rem; /* 700px */
+    max-width: 38.75rem; /* 620px */
+    padding-right: var(--spacing-32);
   }
+
+  @media (--mq-xlarge) {
+    max-width: 43.75rem; /* 700px */
+    width: 50%;
+  }
+}
+
+.coop-c-app-download__media + .coop-c-app-download__content {
+  padding-bottom: var(--spacing-24);
 }
 
 .coop-c-app-download__body {
   max-width: 90%;
+
+  :last-child {
+    margin-bottom: 0;
+  }
 
   @media (--mq-medium) {
     max-width: 85%;
@@ -77,66 +89,89 @@
 .coop-c-app-download__btns .coop-btn--app {
   margin: 0 var(--spacing-16) var(--spacing-16) 0;
 
+  @media (--mq-small) {
+    margin-bottom: 0;
+  }
+
   &:last-child {
     margin-right: 0;
   }
 }
 
 .coop-c-app-download__about {
+  margin: var(--spacing-24) 0;
   font-size: var(--type-body-s);
+
+  @media (--mq-small) {
+    margin: var(--spacing-32) 0 0;
+  }
 
   & :last-child {
     margin-bottom: 0;
   }
 }
 
-.coop-c-app-download__link {
-  color: var(--color-text);
-
-  & svg {
-    position: relative;
-    top: -1px;
-    display: inline-block;
-    width: 24px;
-    height: 20px;
-    margin: 0 0 0 var(--spacing-12);
-    vertical-align: middle;
-    transition: transform 0.15s ease-in;
-    transform: translateX(-2px);
-  }
-
-  &:hover svg,
-  &:focus svg {
-    transform: translateX(0);
-  }
-
-  & svg > path {
-    stroke: none;
+.coop-c-app-download__body + .coop-c-app-download__about {
+  @media (--mq-medium) {
+    margin-top: var(--spacing-48);
   }
 }
 
+/* All images */
 .coop-c-app-download__media {
-  margin: var(--spacing-64) 0 var(--spacing-16);
-  padding: var(--spacing-8) 0;
+  margin: var(--spacing-32) 0 var(--spacing-64);
+  /* removes whitespace caused by inline-block */
+  font-size: 0;
   text-align: center;
 
   @media (--mq-small) {
     width: 38%;
-    float: right;
-    margin: 0;
+    float: left;
+    margin: var(--spacing-12) 0 0;
   }
 
-  @media (--mq-large) {
+  @media (--mq-xlarge) {
+    width: 50%;
+  }
+}
+
+/* Right-hand image only */
+.coop-c-app-download__content + .coop-c-app-download__media {
+  margin-top: var(--spacing-48);
+
+  @media (--mq-small) {
+    margin-top: var(--spacing-12);
+  }
+}
+
+/* Right-hand image only, aligned to bottom */
+.coop-c-app-download__content + .coop-c-app-download__media--align-bottom {
+  margin-bottom: 0;
+
+  @media (--mq-small) {
+    position: absolute;
+    bottom: 0;
+    left: 62%;
+    float: none;
+    width: 38%;
+    max-width: 648px;
+  }
+
+  @media (--mq-xlarge) {
+    left: 50%;
     width: 50%;
   }
 }
 
 /* Connector full-width repeater */
-.coop-c-app-download:after {
+.coop-c-app-download__media:after {
   position: absolute;
   z-index: 0;
-  left: 50%;
-  bottom: 205px;
+  top: 205px;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+
   width: 50%;
   height: 0;
   border-top: 8px solid;
@@ -145,25 +180,64 @@
 
   @media (--mq-small) {
     top: 142px;
-    right: 0;
+    right: auto;
     bottom: auto;
-    left: auto;
+    left: 0;
     width: 25%;
   }
 
   @media (--mq-medium) {
-    top: 245px;
+    top: 205px;
+  }
+
+  @media (--mq-xlarge) {
+    right: 50%;
+    left: auto;
+    width: 50%;
+    margin-right: 320px;
+  }
+
+  @media (--mq-xlarge) {
+    top: 261px;
+  }
+}
+
+/* Connector full-width repeater (right-hand image only) */
+.coop-c-app-download__content + .coop-c-app-download__media:after {
+  top: auto;
+  right: auto;
+  bottom: 205px;
+  left: 50%;
+
+  @media (--mq-small) {
+    top: 142px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+
+  @media (--mq-medium) {
+    top: 205px;
   }
 
   @media (--mq-xlarge) {
     right: auto;
     left: 50%;
-    width: 50%;
     margin-left: 320px;
   }
 
   @media (--mq-xlarge) {
     top: 261px;
+  }
+}
+
+/* Connector full-width repeater (right-hand image only, aligned to bottom) */
+.coop-c-app-download__content + .coop-c-app-download__media--align-bottom:after {
+  width: 50%;
+  bottom: 285px;
+
+  @media (--mq-xlarge) {
+    display: none;
   }
 }
 
@@ -183,6 +257,10 @@
   border-radius: 8px;
   box-shadow: 0 4px 16px 0 rgba(40, 40, 40, 0.15);
 
+  @media (--mq-small) {
+    margin-bottom: 0;
+  }
+
   @media (--mq-medium) {
     width: 210px;
     height: 455px;
@@ -196,6 +274,8 @@
 
 /* Adjust for "mini" (no image) variant */
 .coop-c-app-download--mini .coop-c-app-download__inner {
+  padding: var(--spacing-32) var(--spacing-16);
+
   @media (--mq-medium) {
     padding: var(--spacing-32) var(--spacing-16);
   }
@@ -266,8 +346,4 @@
   @media (--mq-large) {
     margin-top: 0;
   }
-}
-
-.coop-c-app-download--mini:after {
-  display: none;
 }
