@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--cooperate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Co-op Shared Component: Co-operate explainer",
   "main": "dist/cooperate.css",
   "style": "src/cooperate.pcss",
