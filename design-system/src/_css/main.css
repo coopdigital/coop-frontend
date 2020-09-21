@@ -24,6 +24,7 @@
 @import '@coopdigital/component-notification';
 @import '@coopdigital/component-notification--alert';
 
+@import '@coopdigital/shared-component--cooperate';
 @import '@coopdigital/shared-component--editorialcard';
 @import '@coopdigital/shared-component--featurecard';
 @import '@coopdigital/shared-component--signpost';
