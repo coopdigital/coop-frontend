@@ -9,10 +9,6 @@ module.exports = function (migration) {
         .type('Symbol')
         .required(true)
 
-    hero.createField('homeHero')
-        .name('Main homepage hero?')
-        .type('Boolean')
-
     hero.createField('heroBackground')
         .name('Background colour')
         .type('Object')
@@ -105,17 +101,6 @@ module.exports = function (migration) {
         'builtin',
         'singleLine',
         { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-    )
-
-    hero.changeFieldControl(
-        'homeHero',
-        'builtin',
-        'boolean',
-        {
-            helpText: "Set to yes if this hero appears at the top of the page",
-            trueLabel: "Yes",
-            falseLabel: "No"
-        }
     )
 
     hero.changeFieldControl(
