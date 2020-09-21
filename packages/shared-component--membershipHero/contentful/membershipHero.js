@@ -94,7 +94,7 @@ module.exports = function (migration) {
         .type('Symbol')
         .validations([
             {
-                in: ['Home', 'Handset', 'Photo']
+                in: ['Handset', 'Photo']
             }
         ]);
 
