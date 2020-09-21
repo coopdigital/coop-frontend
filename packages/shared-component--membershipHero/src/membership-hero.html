@@ -86,8 +86,8 @@
             'height': image.data.fields.file.details.image.height
           }
         %}
-        <div class="coop-c-membership-hero__media">
-            <picture class="coop-c-membership-hero__picture">
+        <figure class="coop-c-membership-hero__media">
+          <picture class="coop-c-membership-hero__picture">
             <!-- if browser supports webp image format, serve the webp format-->
             <source media="(min-width: 48em)" srcset="{{ image.fields.file.url }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ imageDimensions.width }}&amp;h={{ imageDimensions.height }} 1x, {{ image.fields.file.url }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ imageDimensions.width * 2}}&amp;h={{ imageDimensions.height *2 }} 2x" type="image/webp" />
             <source srcset="{{ image.fields.file.url }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ imageDimensions.width }}&amp;h={{ imageDimensions.height }} 1x, {{ image.fields.file.url }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ imageDimensions.width * 2}}&amp;h={{ imageDimensions.height *2 }} 2x" type="image/webp" />
@@ -103,10 +103,10 @@
               <path class="coop-c-membership-hero__path" d="M0 374h644.51c30.93 0 56-25.07 56-56V157c0-30.93 25.07-56 56-56H1440" stroke-width="8" vector-effect="non-scaling-stroke"/>
             </svg>
           </div>
-        </div>
+        </figure>
       {% endwith %}
     {% endif %}
-    
+
   </div>
 </div>
 {% endmacro %}
