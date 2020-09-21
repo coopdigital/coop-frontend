@@ -1,0 +1,27 @@
+/* Co-operate explainer */
+
+@import "@coopdigital/foundations-vars";
+
+.coop-c-cooperate-explainer__title {
+  font-size: var(--type-h3-s);
+
+  @media (--mq-medium) {
+    font-size: var(--type-h3-l);
+  }
+}
+
+.coop-c-cooperate-underlined {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--spacing-48);
+
+  & svg {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    /* 12px at 26px font-size */
+    bottom: calc(12 / 26 * -1em);
+    height: calc(12 / 26 * 1em);
+    width: 130%;
+  }
+}

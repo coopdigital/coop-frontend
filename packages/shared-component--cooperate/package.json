@@ -1,0 +1,47 @@
+{
+  "name": "@coopdigital/shared-component--cooperate",
+  "version": "1.0.4",
+  "description": "Co-op Shared Component: Co-operate explainer",
+  "main": "dist/cooperate.css",
+  "style": "src/cooperate.pcss",
+  "author": "@coopdigital",
+  "contributors": [
+    "Colin Rotherham <work@colinr.com> (https://github.com/colinrotherham)"
+  ],
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/shared-component--cooperate"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-grid": "^2.0.8",
+    "@coopdigital/foundations-vars": "^3.2.2",
+    "@coopdigital/shared-component--signpost": "^2.1.17",
+    "@coopdigital/shared-component--signpostlist": "^1.0.4"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-grid": ">= 2.0.7 < 3",
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "@coopdigital/shared-component--signpost": ">= 2.1.17 < 3",
+    "@coopdigital/shared-component--signpostlist": ">= 1.0.4 < 2"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--cooperate#readme",
+  "keywords": [
+    "card",
+    "content",
+    "signpost",
+    "co-operate"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
