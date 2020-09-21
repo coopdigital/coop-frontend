@@ -6,8 +6,8 @@
 {%- endif -%}
 
 {%- set homeHero = false -%}
-{%- if content.homeHero -%}
-    {%- set homeHero = content.homeHero -%}
+{%- if config.homeHero -%}
+    {%- set homeHero = config.homeHero -%}
 {%- endif -%}
 
 <div class="coop-c-membership-hero {% if homeHero == true %} coop-c-membership-hero--home {% endif %}  coop-c-membership-hero--{{content.imageType|lower}} {{backgroundColour}}">
