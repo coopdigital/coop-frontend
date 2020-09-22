@@ -40,7 +40,7 @@
     "@coopdigital/shared-component--hero": "^2.1.17",
     "@coopdigital/shared-component--image": "^2.1.17",
     "@coopdigital/shared-component--linklist": "^2.1.19",
-    "@coopdigital/shared-component--membership": "^3.0.0",
+    "@coopdigital/shared-component--membership": "^3.0.1",
     "@coopdigital/shared-component--membershipfeatured": "^1.0.2",
     "@coopdigital/shared-component--membershiphero": "^1.1.2",
     "@coopdigital/shared-component--offers": "^2.1.17",
