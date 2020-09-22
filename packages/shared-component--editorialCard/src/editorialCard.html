@@ -11,6 +11,10 @@
   }
 %}
 {% if config %}
+  {% if config.membershipFeature == true %}
+    {% set autoHeightClass = ' coop-c-editorialcard--auto-height' %}
+  {% endif %}
+
   {# Sets the card into its horizontal layout #}
   {% if config.isHorizontal %}
     {% set orientationClass = ' coop-c-editorialcard--horizontal' %}
@@ -32,7 +36,7 @@
     %}
   {% endif %}
 {% endif %}
-    <article class="coop-c-editorialcard{{ orientationClass }}{{ flipImage }}">
+    <article class="coop-c-editorialcard{{ autoHeightClass }}{{ orientationClass }}{{ flipImage }}">
         {% if content.link and content.link.sys.id %}
             {% with link = cms.get_entry(content.link.sys.id) %}
                 {% if link.type == 'internalLink' %}
