@@ -81,7 +81,6 @@
 
 .coop-c-membershipmodule__media {
   position: relative;
-  z-index: -1;
 
   height: 304px;
   margin: var(--spacing-48) 0 var(--spacing-16);
@@ -142,7 +141,7 @@
 
 .coop-c-membershipmodule__connector {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   left: 50%;
   margin-left: calc(288px / -2);
@@ -161,7 +160,7 @@
 .coop-c-membershipmodule__content:before,
 .coop-c-membershipmodule__content:after {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   bottom: 0;
   width: 50%;
 
