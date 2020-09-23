@@ -3,17 +3,22 @@
 @import "@coopdigital/foundations-vars";
 
 .coop-c-editorialcard {
-  background-color: var(--color-white);
   display: flex;
   flex: 1;
-  margin-bottom: var(--spacing-64);
+  margin-bottom: var(--spacing-32);
   position: relative;
+}
+
+.coop-c-editorialcard--auto-height {
+  height: calc(100% - var(--spacing-32));
+  margin-bottom: var(--spacing-32);
 }
 
 .coop-c-editorialcard__inner {
   display: block;
   overflow: hidden;
   height: 100%;
+  background-color: var(--color-white);
   border-radius: var(--ui-border-radius);
   box-shadow: var(--ui-shadow);
   transition: box-shadow 0.2s ease-in;
