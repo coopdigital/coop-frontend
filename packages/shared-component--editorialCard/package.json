@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--editorialcard",
-  "version": "2.1.17",
+  "version": "2.2.0",
   "description": "Co-op Shared Component: Editorial Card",
   "main": "dist/editorialCard.css",
   "style": "src/editorialCard.pcss",
