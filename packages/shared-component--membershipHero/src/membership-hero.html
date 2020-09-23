@@ -1,7 +1,7 @@
 {% macro render(content, cms, config='') %}
 
 {%- set backgroundColour = 'coop-u-brand-membership-turquoise-bright-bg coop-u-white-stroke' -%}
-{%- if content.heroBackground.class -%}
+{%- if content.heroBackground and content.heroBackground.class -%}
     {%- set backgroundColour = content.heroBackground.class -%}
 {%- endif -%}
 
@@ -13,9 +13,13 @@
 <div class="coop-c-membership-hero {% if homeHero == true %} coop-c-membership-hero--home {% endif %}  coop-c-membership-hero--{{content.imageType|lower}} {{backgroundColour}}">
   <div class="coop-c-membership-hero__inner coop-u-clearfix">
     <article class="coop-c-membership-hero__content">
-      <h1 class="coop-c-membership-hero__title">{{content.heading}}</h1>
+      {% if content.heading %}
+        <h1 class="coop-c-membership-hero__title">{{content.heading}}</h1>
+      {% endif %}
       <div class="coop-c-membership-hero__body">
-        <p>{{content.bodyText}}</p>
+        {% if content.bodyText %}
+          <p>{{content.bodyText}}</p>
+        {% endif %}
           <div class="coop-c-membership-hero__cta">
           <!-- App Store button -->
           {% if content.appStoreLink %}
