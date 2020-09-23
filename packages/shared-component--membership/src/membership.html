@@ -1,4 +1,3 @@
-{% import 'macros/elements/link.html' as link %}
 
 {% macro render(content, cms, config = {}) %}
 <aside class="coop-c-membershipmodule">
@@ -6,58 +5,52 @@
     <article class="coop-c-membershipmodule__content">
       <header class="coop-c-membershipmodule__header">
         <h3 class="coop-c-membershipmodule__title">
-          Become a Co-op Member
+          {{content.heading}}
         </h3>
       </header>
-      <p class="coop-c-membershipmodule__lead">
-        Join Co-op, earn rewards and help your community
-      </p>
       <div class="coop-c-membershipmodule__body">
-        <p>
-          <a href="https://membership.coop.co.uk/register" class="coop-btn coop-btn--primary" data-contenttype="Membership module" data-contentparent="Become a member" data-linktext="Become a Co-op Member">
-            Become a Co-op Member
-          </a>
-        </p>
+        {{content.bodyText|markdown}}
       </div>
-      <div class="coop-c-membershipmodule__links">
-        <p>
-          <a href="https://membership.coop.co.uk/sign-in?utm_source=coop.co.uk&utm_medium=referral" data-contenttype="Membership module" data-contentparent="Become a member" data-linktext="Sign into your Membership account">
-            Sign into your Membership account
-          </a>
-        </p>
-        {% if content.fields.links %}
-        <ul class="coop-c-membershipmodule__list">
-          {% for membershipLink in content.fields.links %}
-          {% if membershipLink and membershipLink.sys.id %}
-          {% with linkEntry = cms.get_entry(membershipLink.sys.id) %}
-          {% set linkConfig = {
-            'linkStyle': 'default',
-            'linkClasses': 'coop-c-membershipmodule__link',
-            'linkAttributes': [
-              {
-                "attr": "data-contenttype",
-                "value": "Membership module"
-              },
-              {
-                "attr": "data-contentparent",
-                "value": "Become a member"
-              },
-              {
-                "attr": "data-linktext",
-                "value": linkEntry.data.fields.title
-              }
-            ]
-          } %}
-          <li class="coop-c-membershipmodule__item">
-            {{ link.render(linkEntry.data, cms, linkConfig) }}
-          </li>
+      <div class="coop-c-membershipmodule__btns">
+        {% if content.button %}
+          {% with button = cms.get_entry(content.button.sys.id) %}
+            <p>
+              <a href="{{button.fields.url.data}}" class="coop-btn coop-btn--primary" data-contenttype="Membership module" data-contentparent="{{content.heading}}" data-linktext="{{button.fields.title.data|safe}}">
+                {{button.fields.title.data|safe}}
+              </a>
+            </p>
           {% endwith %}
-          {% endif %}
-          {% endfor %}
-        </ul>
         {% endif %}
       </div>
-    </article>
+      <div class="coop-c-membershipmodule__links">
+        {% if content.links|length == 1 %}
+          {% with linkEntry = cms.get_entry(content.links[0].sys.id) %}
+            <p>
+              <a href="{{linkEntry.fields.url.data}}" data-contenttype="Membership module" data-contentparent="{{content.heading}}" data-linktext="{{linkEntry.fields.title.data|safe}}">
+                {{linkEntry.fields.title.data|markdown}}
+              </a>
+            </p>
+          {% endwith %}
+        {% else %}
+          <ul class="coop-c-membershipmodule__list">
+            {% for membershipLink in content.links %}
+              {% with linkEntry = cms.get_entry(membershipLink.sys.id) %}
+                {% if linkEntry.data.fields.page %}
+                  {% set url = cms.get_entry(linkEntry.data.fields.page.sys.id).full_url_path %}
+                {% else %}
+                  {% set url = linkEntry.fields.url.data %}
+                {% endif %}
+                <li class="coop-c-membershipmodule__item">
+                  <a class="coop-c-membershipmodule__link" href="{{url}}" data-contenttype="Membership module" data-contentparent="{{content.heading}}" data-linktext="{{linkEntry.fields.title.data|safe}}">
+                    {{linkEntry.fields.title.data|safe}}
+                  </a>
+                </li>
+              {% endwith %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+  </article>
 
     <div class="coop-c-membershipmodule__media">
       <svg class="coop-c-membershipmodule__graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 224" aria-hidden="true" focusable="false">
