@@ -39,9 +39,9 @@
               {% with editorialCardEntry = cms.get_entry(getEditorialCard.sys.id) %}
                 {% set editorialCardConfig = {
                   'contentParent' : contentParent,
-                  'membershipFeature': true,
+                  'isAutoheight': true,
                   'isHorizontal' : isHorizontal
-                } %}   
+                } %}
                 <div class="coop-l-grid__item {{editorialCardClass}}">
                   {{ editorialCard.render(editorialCardEntry.data.fields, cms, editorialCardConfig) }}
                 </div>
