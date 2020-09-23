@@ -1,141 +1,71 @@
-<div class="coop-c-membership-featured coop-u-brand-membership-yellow-brown-bright-stroke">
-  <div class="coop-c-membership-featured__inner">
-    <div class="coop-c-membership-featured__cards">
+{% import '/shared-component--editorialcard/src/editorialCard.html' as editorialCard %}
 
-      <div class="coop-c-membership-featured__grid coop-l-grid">
-        <div class="coop-l-grid__item coop-l-grid__item--small-6 coop-l-grid__item--medium-4">
-          <article class="coop-c-editorialcard coop-c-editorialcard--auto-height">
-            <a
-              href="https://www.coop.co.uk"
-              class="coop-c-editorialcard__link"
-              data-contenttype="Card|Editorial"
-              data-contentparent=""
-              data-linktext=""
-            >
-              <div class="coop-c-editorialcard__inner">
-                <figure class="coop-c-editorialcard__media">
-                  <picture class="coop-c-editorialcard__image">
-                    <!-- if browser supports webp image format, serve the webp format-->
-                    <source media="(min-width: 64em)" srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-large.webp 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-large@2x.webp 2x" type="image/webp">
-                    <source srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-small.webp 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-small@2x.webp 2x" type="image/webp">
+{% macro render(content, cms, config='') %}
 
-                    <!-- if no webp supported then default to serve progressive jpeg -->
-                    <source media="(min-width: 64em)" srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-large.jpg 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-large@2x.jpg 2x" type="image/jpeg">
-                    <source srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-small.jpg 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-small@2x.jpg 2x" type="image/jpeg">
+{%- set backgroundColour = 'coop-u-brand-membership-yellow-brown-bright-stroke' -%}
+{%- if content.background.class -%}
+    {%- set backgroundColour = content.background.class -%}
+{%- endif -%}
 
-                    <!-- fallback -->
-                    <img src="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-1-small.jpg" alt="Featured image 1">
-                  </picture>
-                </figure>
-                <div class="coop-c-editorialcard__content">
-                  <header class="coop-c-editorialcard__header">
-                    <h3 class="coop-c-editorialcard__title">
-                      <span>
-                        Get rewards and discounts
-                      </span>
-                    </h3>
-                  </header>
-                  <div class="coop-c-editorialcard__body">
-                    <p>Earn rewards for you and your community and get personalised offers.</p>
-                  </div>
+{% if content.heading %}
+  {% set contentParent = content.heading %}
+{% else %}
+  {% set contentParent = content.name %}
+{% endif %}
+
+{% set isHorizontal = false %}
+{% if content.editorialCards %}
+  {% if content.editorialCards|length == 1 %}
+    {% set editorialCardClass = 'coop-l-grid__item--small-12 coop-l-grid__item--medium-12' %}
+    {% set isHorizontal = true %}
+  {% elif content.editorialCards|length == 2 %}
+    {% set editorialCardClass = 'coop-l-grid__item--small-6 coop-l-grid__item--medium-6' %}
+  {% else %}
+    {% set editorialCardClass = 'coop-l-grid__item--small-4 coop-l-grid__item--medium-4' %}
+  {% endif %}
+{% endif %}
+
+  <div class="coop-c-membership-featured {{backgroundColour}}">
+    <div class="coop-c-membership-featured__inner">
+      {% if content.heading %}
+        <h3 class="coop-c-membership-featured__title">
+          {{content.heading}}
+        </h3>
+      {% endif %}
+      {% if content.editorialCards %}
+        <div class="coop-c-membership-featured__cards">
+          <div class="coop-c-membership-featured__grid coop-l-grid">
+            {% for getEditorialCard in content.editorialCards %}
+              {% with editorialCardEntry = cms.get_entry(getEditorialCard.sys.id) %}
+                {% set editorialCardConfig = {
+                  'contentParent' : contentParent,
+                  'isAutoheight': true,
+                  'isHorizontal' : isHorizontal
+                } %}
+                <div class="coop-l-grid__item {{editorialCardClass}}">
+                  {{ editorialCard.render(editorialCardEntry.data.fields, cms, editorialCardConfig) }}
                 </div>
-              </div>
-            </a>
-          </article>
+              {% endwith %}
+            {% endfor %}
+          </div>
+          <svg class="coop-c-membership-featured__connector coop-c-membership-featured__connector--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 212" aria-hidden="true" focusable="false">
+            <path class="{{backgroundColour}}" d="M496 0v152c0 30.93-25.1 56-56.05 56H0" stroke-width="8" vector-effect="non-scaling-stroke"/>
+          </svg>
+
+          <svg class="coop-c-membership-featured__connector coop-c-membership-featured__connector--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233 391" aria-hidden="true" focusable="false">
+            <path class="{{backgroundColour}}" d="M229 0v50.74c0 30.93-25.07 56-56 56H60c-30.93 0-56 25.07-56 56V391" stroke-width="8" vector-effect="non-scaling-stroke"/>
+          </svg>
         </div>
-        <div class="coop-l-grid__item coop-l-grid__item--small-6 coop-l-grid__item--medium-4">
-          <article class="coop-c-editorialcard coop-c-editorialcard--auto-height">
-            <a
-              href="https://www.coop.co.uk"
-              class="coop-c-editorialcard__link"
-              data-contenttype="Card|Editorial"
-              data-contentparent=""
-              data-linktext=""
-            >
-              <div class="coop-c-editorialcard__inner">
-                <figure class="coop-c-editorialcard__media">
-                  <picture class="coop-c-editorialcard__image">
-                    <!-- if browser supports webp image format, serve the webp format-->
-                    <source media="(min-width: 64em)" srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-large.webp 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-large@2x.webp 2x" type="image/webp">
-                    <source srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-small.webp 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-small@2x.webp 2x" type="image/webp">
-
-                    <!-- if no webp supported then default to serve progressive jpeg -->
-                    <source media="(min-width: 64em)" srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-large.jpg 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-large@2x.jpg 2x" type="image/jpeg">
-                    <source srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-small.jpg 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-small@2x.jpg 2x" type="image/jpeg">
-
-                    <!-- fallback -->
-                    <img src="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-2-small.jpg" alt="Featured image 2">
-                  </picture>
-                </figure>
-                <div class="coop-c-editorialcard__content">
-                  <header class="coop-c-editorialcard__header">
-                    <h3 class="coop-c-editorialcard__title">
-                      <span>
-                        Support your community
-                      </span>
-                    </h3>
-                  </header>
-                  <div class="coop-c-editorialcard__body">
-                    <p>Help us give back to community organisations and local causes.</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="coop-l-grid__item coop-l-grid__item--small-6 coop-l-grid__item--medium-4">
-          <article class="coop-c-editorialcard coop-c-editorialcard--auto-height">
-            <a
-              href="https://www.coop.co.uk"
-              class="coop-c-editorialcard__link"
-              data-contenttype="Card|Editorial"
-              data-contentparent=""
-              data-linktext=""
-            >
-              <div class="coop-c-editorialcard__inner">
-                <figure class="coop-c-editorialcard__media">
-                  <picture class="coop-c-editorialcard__image">
-                    <!-- if browser supports webp image format, serve the webp format-->
-                    <source media="(min-width: 64em)" srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-large.webp 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-large@2x.webp 2x" type="image/webp">
-                    <source srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-small.webp 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-small@2x.webp 2x" type="image/webp">
-
-                    <!-- if no webp supported then default to serve progressive jpeg -->
-                    <source media="(min-width: 64em)" srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-large.jpg 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-large@2x.jpg 2x" type="image/jpeg">
-                    <source srcset="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-small.jpg 1x, /pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-small@2x.jpg 2x" type="image/jpeg">
-
-                    <!-- fallback -->
-                    <img src="/pattern-library/components/packages/shared-component--membershipfeatured/src/images/featured-3-small.jpg" alt="Featured image 3">
-                  </picture>
-                </figure>
-                <div class="coop-c-editorialcard__content">
-                  <header class="coop-c-editorialcard__header">
-                    <h3 class="coop-c-editorialcard__title">
-                      <span>
-                        Use the Co-op App
-                      </span>
-                    </h3>
-                  </header>
-                  <div class="coop-c-editorialcard__body">
-                    <p>Get the app and start scanning your digital card.</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </article>
-        </div>
-      </div>
-
-      <svg class="coop-c-membership-featured__connector coop-c-membership-featured__connector--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 212" aria-hidden="true" focusable="false">
-        <path class="coop-u-brand-membership-yellow-brown-bright-stroke" d="M496 0v152c0 30.93-25.1 56-56.05 56H0" stroke-width="8" vector-effect="non-scaling-stroke"/>
-      </svg>
-
-      <svg class="coop-c-membership-featured__connector coop-c-membership-featured__connector--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233 391" aria-hidden="true" focusable="false">
-        <path class="coop-u-brand-membership-yellow-brown-bright-stroke" d="M229 0v50.74c0 30.93-25.07 56-56 56H60c-30.93 0-56 25.07-56 56V391" stroke-width="8" vector-effect="non-scaling-stroke"/>
-      </svg>
-
-    </div>
-    <div class="coop-c-membership-featured__about">
-      <p><a class="coop-t-link coop-t-link--arrow" href="#">Find out more about membership<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-yellow-brown-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a></p>
+      {% endif %}
+      {% if content.link %}
+        {% with link = cms.get_entry(content.link.sys.id) %}
+          <div class="coop-c-membership-featured__about">
+            <p>
+              <a class="coop-t-link coop-t-link--arrow" href="{{link.fields.url.data}}"> {{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-yellow-brown-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
+            </p>
+          </div>
+        {% endwith %}
+      {% endif %}
     </div>
   </div>
-</div>
+{% endmacro %}
