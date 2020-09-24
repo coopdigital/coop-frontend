@@ -2,12 +2,31 @@ module.exports = function (migration) {
   const appDownload = migration.createContentType('appDownload');
 
   appDownload.name('-- App download')
-    .description('A component to promote app download.')
+    .description('A component that allows for app download. Choose a smaller version with text and download buttons or a larger version with longer text and image.')
 
   appDownload.createField('name')
     .name('Name')
     .type('Symbol')
     .required(true)
+
+  appDownload.createField('miniVersion')
+    .name('Mini version')
+    .type('Boolean')
+
+  appDownload.createField('handsetImage')
+    .name('Handset Image')
+    .type('Boolean')
+
+  appDownload.createField('image')
+    .name("Image")
+    .type("Link")
+    .required(true)
+    .linkType("Asset")
+    .validations([
+      {
+        linkMimetypeGroup: ["image"]
+      }
+    ]);
 
   appDownload.createField('heading')
     .name('Heading')
@@ -15,14 +34,10 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        size: { max: 90 },
-        message: "Text in this field must be less than 90 characters."
+        size: { max: 60 },
+        message: "Text in this field must be less than 60 characters."
       }
     ]);
-
-  appDownload.createField('miniVersion')
-    .name('Mini version')
-    .type('Boolean')
 
   appDownload.createField('bodyText')
     .name('Body text')
@@ -67,20 +82,6 @@ module.exports = function (migration) {
       }
     ]);
 
-  appDownload.createField('image')
-    .name("Image")
-    .type("Link")
-    .linkType("Asset")
-    .validations([
-      {
-        linkMimetypeGroup: ["image"]
-      }
-    ]);
-
-  appDownload.createField('handsetImage')
-    .name('Handset Image')
-    .type('Boolean')
-
   appDownload.displayField('name');
 
   appDownload.changeFieldControl(
@@ -91,21 +92,32 @@ module.exports = function (migration) {
   )
 
   appDownload.changeFieldControl(
-    'heading',
-    'builtin',
-    'singleLine',
-    { helpText: 'This text will be heading of the banner. Use to introduce the main action, for example "Join Co-op and get personalised offers".' }
-  )
-
-  appDownload.changeFieldControl(
     'miniVersion',
     'builtin',
     'boolean',
     {
-      helpText: "If set to 'Yes', the body text should only be 1 line long.",
+      helpText: "If set to 'Yes', a smaller version with no image will show. Body text for this version should be 1 line of no more than 50 characters.",
       trueLabel: "Yes",
       falseLabel: "No"
     }
+  )
+
+  appDownload.changeFieldControl(
+    'handsetImage',
+    'builtin',
+    'boolean',
+    {
+      helpText: "Select 'Yes' if you are going to add a handset image.",
+      trueLabel: "Yes",
+      falseLabel: "No"
+    }
+  )
+
+  appDownload.changeFieldControl(
+    'heading',
+    'builtin',
+    'singleLine',
+    { helpText: 'This text will be heading of the block. Use to introduce the main action, for example "Download the Co-op App".' }
   )
 
   appDownload.changeFieldControl(
@@ -119,31 +131,20 @@ module.exports = function (migration) {
     'appStoreLink',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'This should a link to download the app from the App store.' }
+    { helpText: 'This should be a link to download the app from the App store.' }
   )
 
   appDownload.changeFieldControl(
     'googlePlayLink',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'This should a link to download the app from Google play.' }
+    { helpText: 'This should be a link to download the app from Google play.' }
   )
 
   appDownload.changeFieldControl(
     'link',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'Use to add a link under the app download buttons. This should be link to give more information about the Co-op app.' }
-  )
-
-  appDownload.changeFieldControl(
-    'handsetImage',
-    'builtin',
-    'boolean',
-    {
-      helpText: "Select 'Yes' if using an image of a handset to promot app download.",
-      trueLabel: "Yes",
-      falseLabel: "No"
-    }
+    { helpText: 'Use to add a link under the app download buttons. This should be a link to the Co-op App landing page.' }
   )
 }
