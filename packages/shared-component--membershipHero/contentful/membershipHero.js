@@ -94,10 +94,6 @@ module.exports = function (migration) {
       }
     ]);
 
-
-
-
-
   hero.displayField('name');
 
   hero.changeFieldControl(
@@ -141,6 +137,4 @@ module.exports = function (migration) {
     'entryLinkEditor',
     { helpText: 'Use to add an additional link under the body text.' }
   )
-
-
 }
