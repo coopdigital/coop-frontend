@@ -52,13 +52,6 @@ module.exports = function (migration) {
   )
 
   totaliser.changeFieldControl(
-    'strapline',
-    'builtin',
-    'singleLine',
-    { helpText: 'This text sits under the amount raised number.' }
-  )
-
-  totaliser.changeFieldControl(
     'amount',
     'builtin',
     'numberEditor',
@@ -66,4 +59,12 @@ module.exports = function (migration) {
       helpText: "This is the amount raised."
     }
   );
+
+  totaliser.changeFieldControl(
+    'strapline',
+    'builtin',
+    'singleLine',
+    { helpText: 'This text sits under the amount raised number.' }
+  )
+
 }
