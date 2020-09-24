@@ -3,7 +3,7 @@
 {% macro render(content, cms, config='') %}
 
 {%- set backgroundColour = 'coop-u-brand-membership-yellow-brown-bright-stroke' -%}
-{%- if content.background.class -%}
+{%- if content.background and content.background.class -%}
     {%- set backgroundColour = content.background.class -%}
 {%- endif -%}
 
