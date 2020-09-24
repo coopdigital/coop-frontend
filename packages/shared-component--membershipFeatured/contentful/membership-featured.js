@@ -2,7 +2,7 @@ module.exports = function (migration) {
   const membershipFeatured = migration.createContentType('membershipFeatured');
 
   membershipFeatured.name('-- Membership Featured section')
-    .description('A section that can be used to promote membership.')
+    .description('A section that holds editorial cards promoting different parts of membership.')
 
   membershipFeatured.createField('name')
     .name('Name')
@@ -14,8 +14,8 @@ module.exports = function (migration) {
     .type('Symbol')
     .validations([
       {
-        size: { max: 90 },
-        message: "Text in this field must be less than 90 characters."
+        size: { max: 60 },
+        message: "Text in this field must be less than 60 characters."
       }
     ]);
 
@@ -65,14 +65,14 @@ module.exports = function (migration) {
     'heading',
     'builtin',
     'singleLine',
-    { helpText: 'This text will be the main heading of the page.' }
+    { helpText: 'This text will be the heading above the section.' }
   )
 
   membershipFeatured.changeFieldControl(
     'editorialCards',
     'builtin',
     'entryLinksEditor',
-    { helpText: 'Add editorial cards' }
+    { helpText: 'Add up to 3 editorial cards.' }
   )
 
   membershipFeatured.changeFieldControl(
