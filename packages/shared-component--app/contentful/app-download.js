@@ -45,8 +45,8 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        size: { max: 300 },
-        message: "Text in this field must be less than 300 characters."
+        size: { max: 500 },
+        message: "Text in this field must be less than 500 characters."
       }
     ]);
 
