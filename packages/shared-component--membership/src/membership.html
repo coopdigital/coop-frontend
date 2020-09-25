@@ -3,14 +3,18 @@
 <aside class="coop-c-membershipmodule">
   <div class="coop-c-membershipmodule__inner coop-u-clearfix">
     <article class="coop-c-membershipmodule__content">
-      <header class="coop-c-membershipmodule__header">
-        <h3 class="coop-c-membershipmodule__title">
-          {{content.heading}}
-        </h3>
-      </header>
-      <div class="coop-c-membershipmodule__body">
-        {{content.bodyText|markdown}}
-      </div>
+      {% if content.heading %}
+        <header class="coop-c-membershipmodule__header">
+          <h3 class="coop-c-membershipmodule__title">
+            {{content.heading}}
+          </h3>
+        </header>
+      {% endif %}
+      {% if content.bodyText %}
+        <div class="coop-c-membershipmodule__body">
+          {{content.bodyText|markdown}}
+        </div>
+      {% endif %}
       <div class="coop-c-membershipmodule__btns">
         {% if content.button %}
           {% with button = cms.get_entry(content.button.sys.id) %}
