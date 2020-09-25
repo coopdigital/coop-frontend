@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--app",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "Co-op Component: App download",
   "main": "dist/app-download.css",
   "style": "src/app-download.pcss",
