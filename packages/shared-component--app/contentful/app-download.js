@@ -52,7 +52,6 @@ module.exports = function (migration) {
 
   appDownload.createField('appStoreLink')
     .name('App store link')
-    .required(true)
     .type('Link')
     .linkType('Entry')
     .validations([
@@ -63,7 +62,6 @@ module.exports = function (migration) {
 
   appDownload.createField('googlePlayLink')
     .name('Google play link')
-    .required(true)
     .type('Link')
     .linkType('Entry')
     .validations([
