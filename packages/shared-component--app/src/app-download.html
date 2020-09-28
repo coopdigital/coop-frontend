@@ -1,9 +1,13 @@
 {% macro appContent(content, cms, config) %}
   <div class="coop-c-app-download__content coop-u-clearfix">
-    <h2 class="coop-c-app-download__title">{{content.heading|safe}}</h2>
+    {% if content.heading %}
+      <h2 class="coop-c-app-download__title">{{content.heading|safe}}</h2>
+    {% endif %}
+    {% if content.bodyText %}
     <div class="coop-c-app-download__body">
       {{content.bodyText|markdown}}
     </div>
+    {% endif %}
     
     {% if content.appStoreLink or content.googlePlayLink %}
       <div class="coop-c-app-download__btns coop-u-clearfix">
@@ -51,7 +55,6 @@
       </div>
     {% endif %}
     {% if content.link and config.appMiniVersion != true %}
-    
       {% with link = cms.get_entry(content.link.sys.id) %}
         {%- set href = {} -%}
         {% if link.type == 'internalLink' %}
@@ -64,16 +67,9 @@
           {%- set _ = href.update({"url" : link.fields.url.data }) -%}
         {% endif %}
         <div class="coop-c-app-download__about">
-          <p><a class="coop-t-link coop-t-link--arrow" href="{%- set href = {} -%}
-            {% if link.type == 'internalLink' %}
-              {% if link.data.fields.page %}
-                {% with internalLink = cms.get_entry(link.data.fields.page.sys.id) %}
-                  {%- set _ = href.update({"url" : tenant_url_path + internalLink.full_url_path}) -%}
-                {% endwith %}
-            {% endif %}
-            {% else %}
-              {%- set _ = href.update({"url" : link.fields.url.data }) -%}
-            {% endif %}">{{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-turquoise-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a></p>
+          <p>
+            <a class="coop-t-link coop-t-link--arrow" href="{{href.url}}">{{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-turquoise-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
+          </p>
         </div>
       {% endwith %}
     {% endif %}
@@ -89,8 +85,8 @@
   <figure class="coop-c-app-download__media {{imageAlignClass}}">
     <picture class="coop-c-app-download__picture {% if config.handsetImage == true %}coop-c-app-download__picture--handset{% endif %}">
       <!-- if browser supports webp image format, serve the webp format-->
-      <source media="(min-width: 48em)" srcset="{{ config.imageUrl }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ config.width }}&amp;h={{ config.height }} 1x, {{ config.imageUrl }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ config.width * 2}}&amp;h={{ config.height *2 }} 2x" type="image/webp" />
-      <source srcset="{{ config.imageUrl }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ config.width }}&amp;h={{ config.height }} 1x, {{ config.imageUrl }}?fm=webp&amp;q=60&amp;fit=thumb&amp;w={{ config.width * 2}}&amp;h={{ config.height *2 }} 2x" type="image/webp" />
+      <source media="(min-width: 48em)" srcset="{{ config.imageUrl }}?fm=webp&amp;q=60 1x, {{ config.imageUrl }}?fm=webp&amp;q=60 2x" type="image/webp" />
+      <source srcset="{{ config.imageUrl }}?fm=webp&amp;q=60 1x, {{ config.imageUrl }}?fm=webp&amp;q=60 2x" type="image/webp" />
       <!-- if no webp supported then default to transparent PNG -->
       <source media="(min-width: 48em)" srcset="{{config.imageUrl}}?fm=png&amp;q=60 1x, {{config.imageUrl}}?fm=png&amp;q=60 2x" type="image/png">
       <source srcset="{{config.imageUrl}}?fm=png&amp;q=60 1x, {{config.imageUrl}}?fm=png&amp;q=60 2x" type="image/png">
@@ -168,12 +164,16 @@
       {% endif %}
       <div class="coop-c-app-download__content coop-u-clearfix">
         <h2 class="coop-c-app-download__title">{{ content.title}}</h2>
-        <div class="coop-c-app-download__body">
-          {{ content.downloadbodytext|safe}}
-        </div>
-        <div class="coop-c-app-download__about">
-          {{ content.downloadabout|safe}}
-        </div>
+        {% if content.downloadbodytext %}
+          <div class="coop-c-app-download__body">
+            {{ content.downloadbodytext|safe}}
+          </div>
+        {% endif %}
+        {% if content.downloadabout %}
+          <div class="coop-c-app-download__about">
+            {{ content.downloadabout|safe}}
+          </div>
+        {% endif %}
       </div>
       {% if content.alignimageleft != true %}
         {{ appImage(imageConfig) }}
