@@ -14,11 +14,11 @@
   <div class="coop-c-membership-hero__inner coop-u-clearfix">
     <article class="coop-c-membership-hero__content">
       {% if content.heading %}
-        <h1 class="coop-c-membership-hero__title">{{content.heading}}</h1>
+        <h1 class="coop-c-membership-hero__title">{{content.heading|safe}}</h1>
       {% endif %}
       <div class="coop-c-membership-hero__body">
         {% if content.bodyText %}
-          <p>{{content.bodyText}}</p>
+          <p>{{content.bodyText|safe}}</p>
         {% endif %}
           <div class="coop-c-membership-hero__cta">
           <!-- App Store button -->
