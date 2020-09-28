@@ -2,7 +2,7 @@
 
 {% macro render(content, cms, config='') %}
 
-{%- set backgroundColour = 'coop-u-brand-membership-yellow-brown-bright-stroke' -%}
+{%- set backgroundColour = '' -%}
 {%- if content.background and content.background.class -%}
     {%- set backgroundColour = content.background.class -%}
 {%- endif -%}
@@ -38,7 +38,7 @@
             {% for getEditorialCard in content.editorialCards %}
               {% with editorialCardEntry = cms.get_entry(getEditorialCard.sys.id) %}
                 {% set editorialCardConfig = {
-                  'contentParent' : contentParent
+                  'contentParent' : contentParent,
                   'isHorizontal' : isHorizontal
                 } %}
                 <div class="coop-l-grid__item {{editorialCardClass}}">
@@ -58,9 +58,19 @@
       {% endif %}
       {% if content.link %}
         {% with link = cms.get_entry(content.link.sys.id) %}
+          {%- set href = {} -%}
+          {% if link.type == 'internalLink' %}
+            {% if link.data.fields.page %}
+              {% with internalLink = cms.get_entry(link.data.fields.page.sys.id) %}
+                {%- set _ = href.update({"url" : tenant_url_path + internalLink.full_url_path}) -%}
+              {% endwith %}
+          {% endif %}
+          {% else %}
+            {%- set _ = href.update({"url" : link.fields.url.data }) -%}
+          {% endif %}
           <div class="coop-c-membership-featured__about">
             <p>
-              <a class="coop-t-link coop-t-link--arrow" href="{{link.fields.url.data}}"> {{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-yellow-brown-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
+              <a class="coop-t-link coop-t-link--arrow" href="{{href.url}}"> {{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-yellow-brown-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
             </p>
           </div>
         {% endwith %}
