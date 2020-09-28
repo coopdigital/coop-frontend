@@ -17,6 +17,10 @@ module.exports = function (migration) {
     .name('Handset Image')
     .type('Boolean')
 
+  appDownload.createField('imagePositionRight')
+    .name('Place image on the right?')
+    .type('Boolean')
+
   appDownload.createField('image')
     .name("Image")
     .type("Link")
@@ -106,6 +110,17 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "Select 'Yes' if you are going to add a handset image.",
+      trueLabel: "Yes",
+      falseLabel: "No"
+    }
+  )
+
+  appDownload.changeFieldControl(
+    'imagePositionRight',
+    'builtin',
+    'boolean',
+    {
+      helpText: "If 'Yes' this will move the image to the right.",
       trueLabel: "Yes",
       falseLabel: "No"
     }
