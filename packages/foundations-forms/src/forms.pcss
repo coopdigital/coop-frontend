@@ -2,6 +2,18 @@
 
 @import "@coopdigital/foundations-vars";
 
+:root {
+  --form-choice-width: 25px;
+  --form-choice-offset-top-s: 2px;
+  --form-choice-offset-top-l: 4px;
+
+  --form-choice-button-width: 13px;
+  --form-choice-button-offset-top-s: calc(var(--form-choice-offset-top-s) + (var(--form-choice-width) - var(--form-choice-button-width)) / 2);
+  --form-choice-button-offset-top-l: calc(var(--form-choice-offset-top-l) + (var(--form-choice-width) - var(--form-choice-button-width)) / 2);
+
+  --form-choice-stroke-width: 2px;
+}
+
 .coop-form {
   margin-bottom: var(--spacing-base);
 }
@@ -252,12 +264,98 @@ select,
   }
 }
 
+/* Checkboxes and radios container */
+.coop-form__choice {
+  position: relative;
+  min-height: var(--form-choice-width);
+  margin-bottom: var(--spacing-8);
+}
+
 input[type="checkbox"],
 .coop-form__checkbox,
 input[type="radio"],
 .coop-form__radio {
   display: inline;
   cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Create room for fake checkbox/radio */
+.coop-form__choice .coop-form__label {
+  display: block;
+  margin: 0;
+  padding-right: var(--spacing-16);
+  padding-left: calc(var(--form-choice-width) - var(--form-choice-stroke-width) + var(--spacing-16));
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Fake checkbox/radio */
+.coop-form__choice .coop-form__label::before {
+  content: "";
+  border-style: solid;
+  border-width: var(--form-choice-stroke-width);
+  border-color: var(--color-black);
+  border-radius: 15%;
+  background: transparent;
+  width: var(--form-choice-width);
+  height: var(--form-choice-width);
+  position: absolute;
+  top: var(--form-choice-offset-top-s);
+  left: 0;
+
+  @media (--mq-medium) {
+    top: var(--form-choice-offset-top-l);
+  }
+}
+
+/* Fake pressed state */
+.coop-form__choice .coop-form__label::after {
+  position: absolute;
+  top: calc((var(--form-choice-width) - var(--form-choice-button-width)) / 2 + var(--form-choice-offset-top-s));
+  left: calc((var(--form-choice-width) - var(--form-choice-button-width)) / 2);
+  width: var(--form-choice-button-width);
+  height: var(--form-choice-button-width);
+  background: black;
+  opacity: 0;
+  content: "";
+
+  @media (--mq-medium) {
+    top: calc((var(--form-choice-width) - var(--form-choice-button-width)) / 2 + var(--form-choice-offset-top-l));
+  }
+}
+
+/* Fake pressed state (rotated for checkbox) */
+.coop-form__checkbox + .coop-form__label::after {
+  background: none;
+  border: solid;
+  border-width: 0 0 3px 3px;
+  transform: rotate(-45deg);
+  border-top-color: transparent;
+  height: calc(var(--form-choice-button-width) / 2);
+  margin-top: 2px;
+}
+
+.coop-form__radio + .coop-form__label::before,
+.coop-form__radio + .coop-form__label::after {
+  border-radius: 50%;
+}
+
+.coop-form__choice :focus + .coop-form__label::before {
+  outline-offset: 3px;
+  outline: 2px solid var(--color-link--focus);
+  transition: none;
+}
+
+.coop-form__choice :checked + .coop-form__label::after {
+  opacity: 1;
 }
 
 .coop-form__field--inline {
@@ -312,98 +410,6 @@ label + .coop-form__error,
 .coop-label__hint + .coop-form__error,
 .coop-form__hint + .coop-form__error {
   margin-top: var(--spacing-16);
-}
-
-.coop-c-form-choice {
-  position: relative;
-  margin: 0;
-}
-
-.coop-c-form-choice__legend {
-  margin-bottom: var(--spacing-4);
-  font-size: var(--type-body-s);
-
-  @media (--mq-medium) {
-    margin-bottom: var(--spacing-8);
-    font-size: var(--type-body-l);
-  }
-}
-
-.coop-c-form-choice__input {
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  opacity: 0;
-  z-index: 1;
-}
-
-.coop-c-form-choice__label {
-  cursor: pointer;
-  margin: 0;
-  padding: 0px 10px 10px 39px;
-  display: block;
-  line-height: 1.6;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-}
-
-.coop-c-form-choice__input:focus + .coop-c-form-choice__label::before {
-  outline-offset: 3px;
-  outline: 2px solid var(--color-link--focus);
-  transition: none;
-}
-
-.coop-c-form-choice__input + .coop-c-form-choice__label::before {
-  content: "";
-  border: 2px solid;
-  border-color: var(--color-black);
-  background: transparent;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 4px;
-  left: 0;
-}
-
-.coop-c-form-choice__input + .coop-c-form-choice__label::after {
-  content: "";
-  border: 1px solid #ddd;
-  background: black;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 9px;
-  left: 5px;
-  opacity: 0;
-}
-
-.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::before,
-.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::after {
-  border-radius: 15%;
-}
-.coop-c-form-choice__input--radio-button + .coop-c-form-choice__label::before,
-.coop-c-form-choice__input--radio-button + .coop-c-form-choice__label::after {
-  border-radius: 50%;
-}
-
-.coop-c-form-choice__input--checkbox + .coop-c-form-choice__label::after {
-  background: none;
-  border: solid;
-  border-width: 0 0 3px 3px;
-  transform: rotate(-45deg);
-  border-top-color: transparent;
-  width: 15px;
-  height: 8px;
-  left: 5px;
-  top: 11px;
-}
-
-.coop-c-form-choice__input:checked + .coop-c-form-choice__label::after {
-  opacity: 1;
 }
 
 .coop-c-message {
