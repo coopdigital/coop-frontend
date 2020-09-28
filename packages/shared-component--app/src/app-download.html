@@ -80,9 +80,9 @@
   {% if config.alignBottom %}
     {% set imageAlignClass = 'coop-c-app-download__media--align-bottom' %}
   {% else %}
-    {% set imageAlignClass = 'coop-c-app-download__media--align-top coop-u-brand-membership-turquoise-bright-stroke' %}
+    {% set imageAlignClass = 'coop-c-app-download__media--align-top' %}
   {% endif %}
-  <figure class="coop-c-app-download__media {{imageAlignClass}}">
+  <figure class="coop-c-app-download__media {{imageAlignClass}} coop-u-brand-membership-turquoise-bright-stroke">
     <picture class="coop-c-app-download__picture {% if config.handsetImage == true %}coop-c-app-download__picture--handset{% endif %}">
       <!-- if browser supports webp image format, serve the webp format-->
       <source media="(min-width: 48em)" srcset="{{ config.imageUrl }}?fm=webp&amp;q=60 1x, {{ config.imageUrl }}?fm=webp&amp;q=60 2x" type="image/webp" />
