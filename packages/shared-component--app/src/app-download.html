@@ -14,8 +14,8 @@
         {% if content.appStoreLink %}
           <!-- App Store button -->
           {% with appStoreLink = cms.get_entry(content.appStoreLink.sys.id) %}
-            <a href="{{appStoreLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-apple">
-              <span class="coop-u-visuallyhidden">{{appStoreLink.fields.title.data}}</span>
+            <a href="{{appStoreLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-apple" data-contenttype="App download" data-contentparent="{{content.heading}}" data-linktext="{{appStoreLink.fields.title.data|safe}}">
+              <span class="coop-u-visuallyhidden">{{appStoreLink.fields.title.data|safe}}</span>
 
               <!-- Button graphic -->
               <svg class="coop-btn__graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" aria-hidden="true" focusable="false">
@@ -31,8 +31,8 @@
         {% if content.googlePlayLink %}
           <!-- Google Play button -->
           {% with googlePlayLink = cms.get_entry(content.googlePlayLink.sys.id) %}
-            <a href="{{googlePlayLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-google">
-              <span class="coop-u-visuallyhidden">{{googlePlayLink.fields.title.data}}</span>
+            <a href="{{googlePlayLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-google" data-contenttype="App download" data-contentparent="{{content.heading}}" data-linktext="{{googlePlayLink.fields.title.data|safe}}">
+              <span class="coop-u-visuallyhidden">{{googlePlayLink.fields.title.data|safe}}</span>
 
               <!-- Button graphic -->
               <svg class="coop-btn__graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195 60" aria-hidden="true" focusable="false">
@@ -68,7 +68,8 @@
         {% endif %}
         <div class="coop-c-app-download__about">
           <p>
-            <a class="coop-t-link coop-t-link--arrow" href="{{href.url}}">{{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-turquoise-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
+            <a class="coop-t-link coop-t-link--arrow" href="{{href.url}}"  data-contenttype="App download" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">
+              {{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-turquoise-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
           </p>
         </div>
       {% endwith %}
