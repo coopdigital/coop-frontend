@@ -53,11 +53,11 @@
     {% if content.link and config.appMiniVersion != true %}
       {% with link = cms.get_entry(content.link.sys.id) %}
         {%- set href = {} -%}
-        {% if link.type == 'internalLink' %}
+        {% if link.data.fields.page %}
           {% with internalLink = cms.get_entry(link.data.fields.page.sys.id) %}
             {%- set _ = href.update({"url" : tenant_url_path + internalLink.full_url_path}) -%}
           {% endwith %}
-        {% else %}
+        {% endif %}
           {%- set _ = href.update({"url" : link.fields.url.data }) -%}
         {% endif %}
         <div class="coop-c-app-download__about">
