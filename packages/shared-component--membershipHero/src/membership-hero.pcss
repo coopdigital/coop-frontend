@@ -101,11 +101,6 @@
   margin: 0 auto;
   padding: var(--spacing-24) var(--spacing-16) 0;
 
-  @media (--mq-small) {
-    min-height: 410px;
-    padding: var(--spacing-24) var(--spacing-16) 0;
-  }
-
   @media (--mq-medium) {
     min-height: 440px;
     padding: var(--spacing-32) var(--spacing-16) var(--spacing-48);
@@ -125,6 +120,14 @@
   position: relative;
   z-index: 1;
   max-width: 33rem; /* 528px */
+
+  @media (--mq-small) {
+    padding-bottom: var(--spacing-64);
+  }
+
+  @media (--mq-medium) {
+    padding-bottom: var(--spacing-24);
+  }
 }
 
 .coop-c-membership-hero__body {
