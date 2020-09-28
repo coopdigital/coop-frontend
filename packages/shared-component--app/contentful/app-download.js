@@ -17,6 +17,10 @@ module.exports = function (migration) {
     .name('Handset Image')
     .type('Boolean')
 
+  appDownload.createField('imagePositionRight')
+    .name('Place image on the right?')
+    .type('Boolean')
+
   appDownload.createField('image')
     .name("Image")
     .type("Link")
@@ -45,14 +49,13 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        size: { max: 300 },
-        message: "Text in this field must be less than 300 characters."
+        size: { max: 500 },
+        message: "Text in this field must be less than 500 characters."
       }
     ]);
 
   appDownload.createField('appStoreLink')
     .name('App store link')
-    .required(true)
     .type('Link')
     .linkType('Entry')
     .validations([
@@ -63,7 +66,6 @@ module.exports = function (migration) {
 
   appDownload.createField('googlePlayLink')
     .name('Google play link')
-    .required(true)
     .type('Link')
     .linkType('Entry')
     .validations([
@@ -108,6 +110,17 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "Select 'Yes' if you are going to add a handset image.",
+      trueLabel: "Yes",
+      falseLabel: "No"
+    }
+  )
+
+  appDownload.changeFieldControl(
+    'imagePositionRight',
+    'builtin',
+    'boolean',
+    {
+      helpText: "If 'Yes' this will move the image to the right.",
       trueLabel: "Yes",
       falseLabel: "No"
     }
