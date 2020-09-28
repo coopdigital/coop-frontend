@@ -38,7 +38,7 @@
             {% for getEditorialCard in content.editorialCards %}
               {% with editorialCardEntry = cms.get_entry(getEditorialCard.sys.id) %}
                 {% set editorialCardConfig = {
-                  'contentParent' : contentParent
+                  'contentParent' : contentParent,
                   'isHorizontal' : isHorizontal
                 } %}
                 <div class="coop-l-grid__item {{editorialCardClass}}">
