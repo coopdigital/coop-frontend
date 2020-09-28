@@ -62,15 +62,35 @@
           {% endif %}
           {% if content.button %}
             {% with button = cms.get_entry(content.button.sys.id) %}
+                {%- set href = {} -%}
+                  {% if button.type == 'internalLink' %}
+                    {% if button.data.fields.page %}
+                      {% with internalLink = cms.get_entry(button.data.fields.page.sys.id) %}
+                        {%- set _ = href.update({"url" : tenant_url_path + internalLink.full_url_path}) -%}
+                      {% endwith %}
+                  {% endif %}
+                  {% else %}
+                    {%- set _ = href.update({"url" : button.fields.url.data }) -%}
+                  {% endif %}
               <p class="coop-c-membership-hero__btns coop-u-clearfix">
-                <a href="{{button.fields.url.data}}" class="coop-btn">{{button.fields.title.data|safe}}</a>
+                <a href="{{href.url}}" class="coop-btn">{{button.fields.title.data|safe}}</a>
               </p>
             {% endwith %}
           {% endif %}
           {% if content.link %}
             {% with link = cms.get_entry(content.link.sys.id) %}
+              {%- set href = {} -%}
+              {% if link.type == 'internalLink' %}
+                {% if link.data.fields.page %}
+                  {% with internalLink = cms.get_entry(link.data.fields.page.sys.id) %}
+                    {%- set _ = href.update({"url" : tenant_url_path + internalLink.full_url_path}) -%}
+                  {% endwith %}
+              {% endif %}
+              {% else %}
+                {%- set _ = href.update({"url" : link.fields.url.data }) -%}
+              {% endif %}
               <p class="coop-c-membership-hero__caption">
-                <a href="{{link.fields.url.data}}" class="coop-t-link">{{link.fields.title.data|safe}}</a>
+                <a href="{{href.url}}" class="coop-t-link">{{link.fields.title.data|safe}}</a>
               </p>
             {% endwith %}
           {% endif %}
