@@ -8,8 +8,14 @@
   --form-choice-offset-top-l: 4px;
 
   --form-choice-button-width: 13px;
-  --form-choice-button-offset-top-s: calc(var(--form-choice-offset-top-s) + (var(--form-choice-width) - var(--form-choice-button-width)) / 2);
-  --form-choice-button-offset-top-l: calc(var(--form-choice-offset-top-l) + (var(--form-choice-width) - var(--form-choice-button-width)) / 2);
+  --form-choice-button-offset-top-s: calc(
+    var(--form-choice-offset-top-s) +
+      (var(--form-choice-width) - var(--form-choice-button-width)) / 2
+  );
+  --form-choice-button-offset-top-l: calc(
+    var(--form-choice-offset-top-l) +
+      (var(--form-choice-width) - var(--form-choice-button-width)) / 2
+  );
 
   --form-choice-stroke-width: 2px;
 }
@@ -292,7 +298,10 @@ input[type="radio"],
   display: block;
   margin: 0;
   padding-right: var(--spacing-16);
-  padding-left: calc(var(--form-choice-width) - var(--form-choice-stroke-width) + var(--spacing-16));
+  padding-left: calc(
+    var(--form-choice-width) - var(--form-choice-stroke-width) +
+      var(--spacing-16)
+  );
   cursor: pointer;
   touch-action: manipulation;
 }
@@ -319,7 +328,10 @@ input[type="radio"],
 /* Fake pressed state */
 .coop-form__choice .coop-form__label::after {
   position: absolute;
-  top: calc((var(--form-choice-width) - var(--form-choice-button-width)) / 2 + var(--form-choice-offset-top-s));
+  top: calc(
+    (var(--form-choice-width) - var(--form-choice-button-width)) / 2 +
+      var(--form-choice-offset-top-s)
+  );
   left: calc((var(--form-choice-width) - var(--form-choice-button-width)) / 2);
   width: var(--form-choice-button-width);
   height: var(--form-choice-button-width);
@@ -328,7 +340,10 @@ input[type="radio"],
   content: "";
 
   @media (--mq-medium) {
-    top: calc((var(--form-choice-width) - var(--form-choice-button-width)) / 2 + var(--form-choice-offset-top-l));
+    top: calc(
+      (var(--form-choice-width) - var(--form-choice-button-width)) / 2 +
+        var(--form-choice-offset-top-l)
+    );
   }
 }
 
