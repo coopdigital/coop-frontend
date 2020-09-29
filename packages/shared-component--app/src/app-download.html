@@ -83,9 +83,9 @@
   {% else %}
     {% set imageAlignClass = 'coop-c-app-download__media--align-top' %}
   {% endif %}
-  {% set strokeClass = '' %}
-  {% if config.customHtml != true %}
-    {% set strokeClass = ' coop-u-brand-membership-turquoise-bright-stroke' %}
+  {% set strokeClass = ' coop-u-brand-membership-turquoise-bright-stroke' %}
+  {% if config.customHtml == true %}
+    {% set strokeClass = '' %}
   {% endif %}
   <figure class="coop-c-app-download__media {{imageAlignClass}}{{strokeClass}}">
     <picture class="coop-c-app-download__picture {% if config.handsetImage == true %}coop-c-app-download__picture--handset{% endif %}">
