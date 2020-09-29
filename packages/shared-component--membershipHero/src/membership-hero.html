@@ -25,7 +25,7 @@
               <!-- App Store button -->
               {% if content.appStoreLink %}
                 {% with appStoreLink = cms.get_entry(content.appStoreLink.sys.id) %}
-                  <a href="{{appStoreLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-apple">
+                  <a href="{{appStoreLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-apple" data-contenttype="Memership hero" data-contentparent="{{content.heading}}" data-linktext="{{appStoreLink.fields.title.data|safe}}">
                   <span class="coop-u-visuallyhidden">{{appStoreLink.fields.title.data}}</span>
                   <!-- Button graphic -->
                   <svg class="coop-btn__graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" aria-hidden="true" focusable="false">
@@ -40,7 +40,7 @@
               {% if content.googlePlayLink %}
                 <!-- Google Play button -->
                 {% with googlePlayLink = cms.get_entry(content.googlePlayLink.sys.id) %}
-                    <a href="{{googlePlayLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-google">
+                    <a href="{{googlePlayLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-google"  data-contenttype="Memership hero" data-contentparent="{{content.heading}}" data-linktext="{{googlePlayLink.fields.title.data|safe}}">
                     <span class="coop-u-visuallyhidden">{{googlePlayLink.fields.title.data}}</span>
 
                     <!-- Button graphic -->
@@ -73,7 +73,7 @@
                       {% else %}
                         {%- set _ = href.update({"url" : button.fields.url.data }) -%}
                       {% endif %}
-                    <a href="{{href.url}}" class="coop-btn">{{button.fields.title.data|safe}}</a>
+                      <a href="{{href.url}}" class="coop-btn" data-contenttype="Membership hero" data-contentparent="{{content.heading}}" data-linktext="{{button.fields.title.data}}">{{button.fields.title.data|safe}}</a>
                 {% endwith %}
               {% endif %}
               {% if content.link %}
@@ -89,7 +89,7 @@
                     {%- set _ = href.update({"url" : link.fields.url.data }) -%}
                   {% endif %}
                   <p class="coop-c-membership-hero__caption">
-                    <a href="{{href.url}}" class="coop-t-link">{{link.fields.title.data|safe}}</a>
+                    <a href="{{href.url}}" class="coop-t-link" data-contenttype="Membership hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
                   </p>
                 {% endwith %}
               {% endif %}

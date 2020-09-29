@@ -14,8 +14,8 @@
         {% if content.appStoreLink %}
           <!-- App Store button -->
           {% with appStoreLink = cms.get_entry(content.appStoreLink.sys.id) %}
-            <a href="{{appStoreLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-apple">
-              <span class="coop-u-visuallyhidden">{{appStoreLink.fields.title.data}}</span>
+            <a href="{{appStoreLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-apple" data-contenttype="App download" data-contentparent="{{content.heading}}" data-linktext="{{appStoreLink.fields.title.data|safe}}">
+              <span class="coop-u-visuallyhidden">{{appStoreLink.fields.title.data|safe}}</span>
 
               <!-- Button graphic -->
               <svg class="coop-btn__graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" aria-hidden="true" focusable="false">
@@ -31,8 +31,8 @@
         {% if content.googlePlayLink %}
           <!-- Google Play button -->
           {% with googlePlayLink = cms.get_entry(content.googlePlayLink.sys.id) %}
-            <a href="{{googlePlayLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-google">
-              <span class="coop-u-visuallyhidden">{{googlePlayLink.fields.title.data}}</span>
+            <a href="{{googlePlayLink.fields.url.data}}" class="coop-btn coop-btn--app coop-btn--app-google" data-contenttype="App download" data-contentparent="{{content.heading}}" data-linktext="{{googlePlayLink.fields.title.data|safe}}">
+              <span class="coop-u-visuallyhidden">{{googlePlayLink.fields.title.data|safe}}</span>
 
               <!-- Button graphic -->
               <svg class="coop-btn__graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195 60" aria-hidden="true" focusable="false">
@@ -68,7 +68,8 @@
         {% endif %}
         <div class="coop-c-app-download__about">
           <p>
-            <a class="coop-t-link coop-t-link--arrow" href="{{href.url}}">{{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-turquoise-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
+            <a class="coop-t-link coop-t-link--arrow" href="{{href.url}}" data-contenttype="App download" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">
+              {{link.fields.title.data|safe}}<svg class="coop-t-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20" aria-hidden="true" focusable="false"><path class="coop-u-brand-membership-turquoise-bright-fill" d="M13.89 0L11.4 2.46l5.87 5.8H0v3.48h17.28l-5.88 5.8L13.89 20 24 10z" stroke="none"/></svg></a>
           </p>
         </div>
       {% endwith %}
@@ -80,9 +81,13 @@
   {% if config.alignBottom %}
     {% set imageAlignClass = 'coop-c-app-download__media--align-bottom' %}
   {% else %}
-    {% set imageAlignClass = 'coop-c-app-download__media--align-top coop-u-brand-membership-turquoise-bright-stroke' %}
+    {% set imageAlignClass = 'coop-c-app-download__media--align-top' %}
   {% endif %}
-  <figure class="coop-c-app-download__media {{imageAlignClass}}">
+  {% set strokeClass = ' coop-u-brand-membership-turquoise-bright-stroke' %}
+  {% if config.customHtml == true %}
+    {% set strokeClass = '' %}
+  {% endif %}
+  <figure class="coop-c-app-download__media {{imageAlignClass}}{{strokeClass}}">
     <picture class="coop-c-app-download__picture {% if config.handsetImage == true %}coop-c-app-download__picture--handset{% endif %}">
       <!-- if browser supports webp image format, serve the webp format-->
       <source media="(min-width: 48em)" srcset="{{ config.imageUrl }}?fm=webp&amp;q=60 1x, {{ config.imageUrl }}?fm=webp&amp;q=60 2x" type="image/webp" />
@@ -154,7 +159,8 @@
     'altText'          : content.imagealttext,
     'width'            : content.imagewidth|int,
     'height'           : content.imageheight|int,
-    'alignBottom'      : content.alignimagebottom
+    'alignBottom'      : content.alignimagebottom,
+    'customHtml'       : true
   }  %}
 
   <aside class="coop-c-app-download {{ content.backgroundclass}}">

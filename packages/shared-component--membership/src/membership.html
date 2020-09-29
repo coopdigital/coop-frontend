@@ -29,8 +29,13 @@
       <div class="coop-c-membershipmodule__links">
         {% if content.links|length == 1 %}
           {% with linkEntry = cms.get_entry(content.links[0].sys.id) %}
+            {% if linkEntry.data.fields.page %}
+              {% set url = cms.get_entry(linkEntry.data.fields.page.sys.id).full_url_path %}
+            {% else %}
+              {% set url = linkEntry.fields.url.data %}
+            {% endif %}
             <p>
-              <a href="{{linkEntry.fields.url.data}}" data-contenttype="Membership module" data-contentparent="{{content.heading}}" data-linktext="{{linkEntry.fields.title.data|safe}}">
+              <a href="{{url}}" data-contenttype="Membership module" data-contentparent="{{content.heading}}" data-linktext="{{linkEntry.fields.title.data|safe}}">
                 {{linkEntry.fields.title.data|markdown}}
               </a>
             </p>
