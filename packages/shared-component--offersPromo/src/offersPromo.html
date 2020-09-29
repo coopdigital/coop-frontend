@@ -16,8 +16,8 @@
           href="{{offerLink.url}}"
           class="coop-c-offerspromo__link coop-u-clearfix"
           data-contenttype="Card|offerspromo"
-          data-contentparent=""
-          data-linktext="">
+          data-contentparent="Deals"
+          data-linktext="{{content.heading}}">
           {% with card = cms.get_entry(content.offerCard.sys.id) %}
             {% with image = cms.get_asset(card.fields.image.data) %}
               {%
@@ -47,8 +47,8 @@
             href="{{offerLink.url}}"
             class="coop-c-offerspromo__link"
             data-contenttype="Card|offerspromo"
-            data-contentparent=""
-            data-linktext=""
+            data-contentparent="Deals"
+            data-linktext="{{content.heading}}"
         >
           <header class="coop-c-offerspromo__header">
               <h3 class="coop-c-offerspromo__title">{{content.heading}}</h3>
