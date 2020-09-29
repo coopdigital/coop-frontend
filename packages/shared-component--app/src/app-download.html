@@ -83,7 +83,11 @@
   {% else %}
     {% set imageAlignClass = 'coop-c-app-download__media--align-top' %}
   {% endif %}
-  <figure class="coop-c-app-download__media {{imageAlignClass}} coop-u-brand-membership-turquoise-bright-stroke">
+  {% set strokeClass = '' %}
+  {% if config.customHtml != true %}
+    {% set strokeClass = ' coop-u-brand-membership-turquoise-bright-stroke' %}
+  {% endif %}
+  <figure class="coop-c-app-download__media {{imageAlignClass}}{{strokeClass}}">
     <picture class="coop-c-app-download__picture {% if config.handsetImage == true %}coop-c-app-download__picture--handset{% endif %}">
       <!-- if browser supports webp image format, serve the webp format-->
       <source media="(min-width: 48em)" srcset="{{ config.imageUrl }}?fm=webp&amp;q=60 1x, {{ config.imageUrl }}?fm=webp&amp;q=60 2x" type="image/webp" />
@@ -155,7 +159,8 @@
     'altText'          : content.imagealttext,
     'width'            : content.imagewidth|int,
     'height'           : content.imageheight|int,
-    'alignBottom'      : content.alignimagebottom
+    'alignBottom'      : content.alignimagebottom,
+    'customHtml'       : true
   }  %}
 
   <aside class="coop-c-app-download {{ content.backgroundclass}}">
