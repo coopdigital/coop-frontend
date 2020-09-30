@@ -135,32 +135,32 @@
   border-color: var(--color-brand-membership-orange-light);
 }
 
-/* Membership (Yellow/Brown) */
-.coop-u-brand-membership-yellow-brown-bright {
-  color: var(--color-brand-membership-yellow-brown-bright);
+/* Membership (Yellow) */
+.coop-u-brand-membership-yellow-bright {
+  color: var(--color-brand-membership-yellow-bright);
 }
-.coop-u-brand-membership-yellow-brown-bright-bg {
-  background: var(--color-brand-membership-yellow-brown-bright);
+.coop-u-brand-membership-yellow-bright-bg {
+  background: var(--color-brand-membership-yellow-bright);
 }
-.coop-u-brand-membership-yellow-brown-bright-fill {
-  fill: var(--color-brand-membership-yellow-brown-bright);
+.coop-u-brand-membership-yellow-bright-fill {
+  fill: var(--color-brand-membership-yellow-bright);
 }
-.coop-u-brand-membership-yellow-brown-bright-stroke {
-  stroke: var(--color-brand-membership-yellow-brown-bright);
-  border-color: var(--color-brand-membership-yellow-brown-bright);
+.coop-u-brand-membership-yellow-bright-stroke {
+  stroke: var(--color-brand-membership-yellow-bright);
+  border-color: var(--color-brand-membership-yellow-bright);
 }
-.coop-u-brand-membership-yellow-brown-light {
-  color: var(--color-brand-membership-yellow-brown-light);
+.coop-u-brand-membership-yellow-light {
+  color: var(--color-brand-membership-yellow-light);
 }
-.coop-u-brand-membership-yellow-brown-light-bg {
-  background: var(--color-brand-membership-yellow-brown-light);
+.coop-u-brand-membership-yellow-light-bg {
+  background: var(--color-brand-membership-yellow-light);
 }
-.coop-u-brand-membership-yellow-brown-light-fill {
-  fill: var(--color-brand-membership-yellow-brown-light);
+.coop-u-brand-membership-yellow-light-fill {
+  fill: var(--color-brand-membership-yellow-light);
 }
-.coop-u-brand-membership-yellow-brown-light-stroke {
-  stroke: var(--color-brand-membership-yellow-brown-light);
-  border-color: var(--color-brand-membership-yellow-brown-light);
+.coop-u-brand-membership-yellow-light-stroke {
+  stroke: var(--color-brand-membership-yellow-light);
+  border-color: var(--color-brand-membership-yellow-light);
 }
 
 /* Membership (Green) */
