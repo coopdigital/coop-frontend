@@ -1,5 +1,9 @@
 @import "@coopdigital/foundations-vars";
 
+.coop-l-section + .coop-c-totaliser {
+  margin-top: 1.5rem;
+}
+
 .coop-c-totaliser {
   position: relative;
   overflow: hidden;
@@ -8,6 +12,20 @@
   /* required to overwrite foundation CSS */
   & p:last-child {
     margin-bottom: 0;
+  }
+}
+
+/* Reduce padding on pink sections following totaliser */
+.coop-c-totaliser
+  + .coop-l-section--padding-default.coop-u-brand-membership-pink-light-bg {
+  padding-top: 0;
+
+  @media (--mq-small) {
+    padding-top: var(--spacing-8);
+  }
+
+  @media (--mq-large) {
+    padding-top: var(--spacing-16);
   }
 }
 

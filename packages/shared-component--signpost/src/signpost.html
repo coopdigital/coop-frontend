@@ -1,5 +1,5 @@
 {% macro render(content, cms, config) %}
-  <div class="coop-c-signpost">
+  <div class="coop-c-signpost-list__item coop-c-signpost">
     {% if content.fields.link and content.fields.link.sys.id %}
       {% with entryLink = cms.get_entry(content.fields.link.sys.id) %}
 
