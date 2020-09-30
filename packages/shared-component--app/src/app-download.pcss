@@ -2,7 +2,6 @@
 
 .coop-c-app-download {
   position: relative;
-  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -28,6 +27,20 @@
   @media (--mq-xlarge) {
     padding: var(--spacing-64) var(--spacing-16)
       calc(var(--spacing-64) + var(--spacing-8));
+  }
+}
+
+/* Remove padding when components (same colour) follow each other */
+.coop-c-app-download.coop-u-brand-membership-turquoise-light-bg
+  + .coop-c-app-download.coop-u-brand-membership-turquoise-light-bg
+  .coop-c-app-download__inner,
+.coop-c-app-download.coop-u-brand-membership-blue-light-bg
+  + .coop-c-app-download.coop-u-brand-membership-blue-light-bg
+  .coop-c-app-download__inner {
+  padding-top: 0;
+
+  @media (--mq-medium) {
+    padding-top: var(--spacing-24);
   }
 }
 
