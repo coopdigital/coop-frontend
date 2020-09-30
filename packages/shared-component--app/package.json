@@ -22,11 +22,13 @@
   "devDependencies": {
     "@coopdigital/foundations-buttons": "^2.2.3",
     "@coopdigital/foundations-layout": "^3.2.2",
+    "@coopdigital/foundations-typography": "^4.1.18",
     "@coopdigital/foundations-vars": "^3.2.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-buttons": ">= 2.1.14 < 3",
     "@coopdigital/foundations-layout": ">= 3.1.13 < 4",
+    "@coopdigital/foundations-typography": ">= 4.0.0 < 5",
     "@coopdigital/foundations-vars": ">= 3.1.8 < 4"
   },
   "bugs": {
