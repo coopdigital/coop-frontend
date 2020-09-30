@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--membershipfeatured",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Co-op Shared Component: Membership featured",
   "main": "dist/membership-featured.css",
   "style": "src/membership-featured.pcss",

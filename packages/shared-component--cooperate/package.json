@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--cooperate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Co-op Shared Component: Co-operate explainer",
   "main": "dist/cooperate.css",
   "style": "src/cooperate.pcss",
@@ -23,7 +23,7 @@
     "@coopdigital/foundations-grid": "^2.0.8",
     "@coopdigital/foundations-vars": "^3.3.0",
     "@coopdigital/shared-component--signpost": "^2.1.18",
-    "@coopdigital/shared-component--signpostlist": "^1.0.5"
+    "@coopdigital/shared-component--signpostlist": "^1.0.6"
   },
   "peerDependencies": {
     "@coopdigital/foundations-grid": ">= 2.0.7 < 3",
