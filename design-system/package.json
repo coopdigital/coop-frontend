@@ -33,7 +33,7 @@
     "@coopdigital/foundations-tables": "^2.1.17",
     "@coopdigital/foundations-typography": "^4.1.19",
     "@coopdigital/foundations-vars": "^3.3.0",
-    "@coopdigital/shared-component--app": "^1.2.5",
+    "@coopdigital/shared-component--app": "^1.2.6",
     "@coopdigital/shared-component--cooperate": "^1.0.4",
     "@coopdigital/shared-component--editorialcard": "^2.3.2",
     "@coopdigital/shared-component--featurecard": "^2.1.21",
