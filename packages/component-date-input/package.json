@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-date-input",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Co-op Components: Date input",
   "main": "dist/date-input.css",
   "style": "src/date-input.pcss",
@@ -20,8 +20,8 @@
     "directory": "packages/component-date-input"
   },
   "devDependencies": {
-    "@coopdigital/foundations-forms": "^5.0.0",
-    "@coopdigital/foundations-vars": "^3.2.2"
+    "@coopdigital/foundations-forms": "^5.0.1",
+    "@coopdigital/foundations-vars": "^3.3.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-forms": ">= 4.0.3 < 6",
