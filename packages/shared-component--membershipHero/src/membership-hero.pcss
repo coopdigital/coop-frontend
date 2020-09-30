@@ -69,16 +69,19 @@
   --membership-hero-image-small-width: 400px;
   --membership-hero-image-small-height: 300px;
   --membership-hero-photo-small-width: 338px;
+  --membership-hero-photo-small-height: 390px;
 
   /* Hero image (medium) */
   --membership-hero-image-medium-width: 512px;
   --membership-hero-image-medium-height: 384px;
   --membership-hero-photo-medium-width: 440px;
+  --membership-hero-photo-medium-height: 247px;
 
   /* Hero image (large) */
   --membership-hero-image-large-width: 640px;
   --membership-hero-image-large-height: 480px;
   --membership-hero-photo-large-width: 555px;
+  --membership-hero-photo-large-height: 312px;
 }
 
 .coop-c-membership-hero {
@@ -379,6 +382,7 @@
       bottom: 110px;
 
       width: var(--membership-hero-photo-small-width);
+      height: var(--membership-hero-photo-small-height);
       margin: 0;
     }
 
@@ -386,12 +390,14 @@
       right: var(--spacing-32);
       bottom: 205px;
       width: var(--membership-hero-photo-medium-width);
+      height: var(--membership-hero-photo-medium-height);
     }
 
     @media (--mq-xlarge) {
       right: var(--spacing-16);
       bottom: 205px;
       width: var(--membership-hero-photo-large-width);
+      height: var(--membership-hero-photo-large-height);
     }
   }
 
