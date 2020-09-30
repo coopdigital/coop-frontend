@@ -26,6 +26,12 @@
     --color-brand-membership-purple-mid-6
   );
   --color-brand-membership-purple-light: var(
+    --color-brand-membership-purple-light-8
+  );
+  --color-brand-membership-purple-lighter: var(
+    --color-brand-membership-purple-light-9
+  );
+  --color-brand-membership-purple-lightest: var(
     --color-brand-membership-purple-light-10
   );
 
@@ -46,6 +52,12 @@
     --color-brand-membership-lilac-mid-6
   );
   --color-brand-membership-lilac-light: var(
+    --color-brand-membership-lilac-light-8
+  );
+  --color-brand-membership-lilac-lighter: var(
+    --color-brand-membership-lilac-light-9
+  );
+  --color-brand-membership-lilac-lightest: var(
     --color-brand-membership-lilac-light-10
   );
 
@@ -64,6 +76,12 @@
     --color-brand-membership-pink-mid-6
   );
   --color-brand-membership-pink-light: var(
+    --color-brand-membership-pink-light-8
+  );
+  --color-brand-membership-pink-lighter: var(
+    --color-brand-membership-pink-light-9
+  );
+  --color-brand-membership-pink-lightest: var(
     --color-brand-membership-pink-light-10
   );
 
@@ -86,6 +104,12 @@
     --color-brand-membership-orange-mid-6
   );
   --color-brand-membership-orange-light: var(
+    --color-brand-membership-orange-light-8
+  );
+  --color-brand-membership-orange-lighter: var(
+    --color-brand-membership-orange-light-9
+  );
+  --color-brand-membership-orange-lightest: var(
     --color-brand-membership-orange-light-10
   );
 
@@ -108,6 +132,12 @@
     --color-brand-membership-yellow-mid-6
   );
   --color-brand-membership-yellow-light: var(
+    --color-brand-membership-yellow-light-8
+  );
+  --color-brand-membership-yellow-lighter: var(
+    --color-brand-membership-yellow-light-9
+  );
+  --color-brand-membership-yellow-lightest: var(
     --color-brand-membership-yellow-light-10
   );
 
@@ -128,6 +158,12 @@
     --color-brand-membership-green-mid-6
   );
   --color-brand-membership-green-light: var(
+    --color-brand-membership-green-light-8
+  );
+  --color-brand-membership-green-lighter: var(
+    --color-brand-membership-green-light-9
+  );
+  --color-brand-membership-green-lightest: var(
     --color-brand-membership-green-light-10
   );
 
@@ -150,6 +186,12 @@
     --color-brand-membership-turquoise-mid-6
   );
   --color-brand-membership-turquoise-light: var(
+    --color-brand-membership-turquoise-light-8
+  );
+  --color-brand-membership-turquoise-lighter: var(
+    --color-brand-membership-turquoise-light-9
+  );
+  --color-brand-membership-turquoise-lightest: var(
     --color-brand-membership-turquoise-light-10
   );
 
@@ -168,6 +210,12 @@
     --color-brand-membership-blue-mid-6
   );
   --color-brand-membership-blue-light: var(
+    --color-brand-membership-blue-light-8
+  );
+  --color-brand-membership-blue-lighter: var(
+    --color-brand-membership-blue-light-9
+  );
+  --color-brand-membership-blue-lightest: var(
     --color-brand-membership-blue-light-10
   );
 }
