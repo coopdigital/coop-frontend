@@ -27,7 +27,7 @@
   "peerDependencies": {
     "@coopdigital/foundations-buttons": ">= 2.1.14 < 3",
     "@coopdigital/foundations-layout": ">= 3.1.13 < 4",
-    "@coopdigital/foundations-vars": ">= 3.1.8 < 4"
+    "@coopdigital/foundations-vars": ">= 3.3.0 < 4"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
