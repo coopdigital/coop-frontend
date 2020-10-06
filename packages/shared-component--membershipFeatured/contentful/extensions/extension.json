@@ -1,6 +1,6 @@
 {
   "id": "membership-feature-colour-picker",
-  "name": "Membership feature Colour Picker",
+  "name": "Membership feature colour picker",
   "srcdoc": "./index.html",
   "fieldTypes": ["Object"]
 }
