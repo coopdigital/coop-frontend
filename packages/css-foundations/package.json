@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/css-foundations",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "Co-op CSS Foundations",
   "main": "dist/foundations.css",
   "style": "src/foundations.pcss",
@@ -24,7 +24,7 @@
     "@coopdigital/foundations-colors": "^2.2.0",
     "@coopdigital/foundations-forms": "^5.0.1",
     "@coopdigital/foundations-global": "^3.1.17",
-    "@coopdigital/foundations-grid": "^2.0.8",
+    "@coopdigital/foundations-grid": "^2.0.9",
     "@coopdigital/foundations-layout": "^3.2.3",
     "@coopdigital/foundations-tables": "^2.1.17",
     "@coopdigital/foundations-typography": "^4.1.19",
