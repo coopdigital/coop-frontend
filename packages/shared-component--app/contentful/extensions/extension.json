@@ -1,6 +1,6 @@
 {
-  "id": "membership-hero-colour-picker",
-  "name": "Membership Hero Colour Picker",
+  "id": "app-download-colour-picker",
+  "name": "App download background colour picker",
   "srcdoc": "./index.html",
   "fieldTypes": ["Object"]
 }
