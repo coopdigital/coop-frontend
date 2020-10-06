@@ -1,0 +1,6 @@
+{
+  "id": "membership-hero-colour-picker",
+  "name": "Membership Hero Colour Picker",
+  "srcdoc": "./index.html",
+  "fieldTypes": ["Object"]
+}
