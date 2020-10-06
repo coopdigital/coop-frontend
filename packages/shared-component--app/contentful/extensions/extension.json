@@ -1,0 +1,6 @@
+{
+  "id": "app-download-colour-picker",
+  "name": "App download background colour picker",
+  "srcdoc": "./index.html",
+  "fieldTypes": ["Object"]
+}
