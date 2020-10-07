@@ -277,6 +277,10 @@ select,
   margin-bottom: var(--spacing-8);
 }
 
+.coop-form__choice:last-child {
+  margin-bottom: 0;
+}
+
 input[type="checkbox"],
 .coop-form__checkbox,
 input[type="radio"],
@@ -304,6 +308,18 @@ input[type="radio"],
   );
   cursor: pointer;
   touch-action: manipulation;
+}
+
+.coop-form__choice .coop-form__hint {
+  margin-top: 0;
+  padding-left: calc(
+    var(--form-choice-width) - var(--form-choice-stroke-width) +
+      var(--spacing-16)
+  );
+}
+
+.coop-form__choice .coop-form__hint:last-child {
+  margin-bottom: 0;
 }
 
 /* Fake checkbox/radio */
