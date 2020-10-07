@@ -13,8 +13,8 @@ module.exports = function (migration) {
     .name('Show squircle?')
     .type('Boolean')
 
-  hero.createField('heroBackground')
-    .name('Use a background colour?')
+  hero.createField('background')
+    .name('Change squircle background colour?')
     .type('Object')
 
   hero.displayField('name');
