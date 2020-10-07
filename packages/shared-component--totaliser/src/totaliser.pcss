@@ -61,7 +61,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding: var(--spacing-32) var(--spacing-24) var(--spacing-48);
+  padding: var(--spacing-48) var(--spacing-24);
   background: var(--color-white);
   border-radius: 8px;
 
@@ -88,10 +88,10 @@
 
 .coop-c-totaliser__total {
   display: block;
-  margin-bottom: var(--spacing-32);
-  padding-bottom: var(--spacing-32);
+  margin: var(--spacing-32) 0 0;
+  padding-top: var(--spacing-24);
 
-  border-bottom: 1px solid;
+  border-top: 1px solid;
   border-color: inherit;
   font-size: 2.5rem; /* 40px */
 
@@ -167,7 +167,7 @@
   top: 73px;
 
   display: none;
-  width: 32px;
+  width: var(--spacing-24);
   height: 0;
   border-top: 8px solid;
   border-color: inherit;
@@ -176,6 +176,10 @@
   @media (--mq-small) {
     display: block;
   }
+}
+
+.coop-c-totaliser__content:after {
+  width: var(--spacing-32);
 }
 
 .coop-c-totaliser__content:before {
