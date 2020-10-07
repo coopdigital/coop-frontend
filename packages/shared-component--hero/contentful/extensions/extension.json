@@ -1,0 +1,6 @@
+{
+  "id": "hero-squircle-colour-picker",
+  "name": "Hero squircle colour picker",
+  "srcdoc": "./index.html",
+  "fieldTypes": ["Object"]
+}
