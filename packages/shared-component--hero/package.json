@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--hero",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Co-op Shared Component: Hero",
   "main": "dist/hero.css",
   "style": "src/hero.pcss",
@@ -19,7 +19,7 @@
     "directory": "packages/shared-component--hero"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.3.0"
+    "@coopdigital/foundations-vars": "^3.3.1"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
