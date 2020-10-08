@@ -131,6 +131,15 @@
         </span>
     </span>
     {% endif %}
+    {% if content.fields.squirclePicker == 'Member deal' %}
+      <span class="coop-c-featureCard__squircle__label">
+        <span class="coop-c-featureCard__squircle__small-text">Member deal</span>
+      </span>
+      <span class="coop-c-featureCard__squircle__media coop-u-flex coop-u-flex-centered" aria-hidden="true">
+        <svg width="119" height="115" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M114.172 29.9742c-3.225-10.8835-11.276-19.4516-22.0509-23.50075-21.0235-7.30413-44.1054-7.30413-65.3445.03728C16.104 10.5226 8.08947 19.0907 4.79519 30.0077 2.27603 38.7585 1 47.8337 1 57.017s1.27603 18.2585 3.79519 27.0428C8.09312 94.9433 16.104 103.511 26.846 107.561c10.53 3.65 21.5207 5.495 32.654 5.495 11.1698 0 22.1605-1.845 32.7234-5.533 10.7096-4.049 18.7196-12.5834 21.9446-23.5005C116.724 75.2046 118 66.1294 118 57.017c0-9.1125-1.276-18.2212-3.828-27.0428z" fill="#D3212A" stroke="#F8DA6D" stroke-width="2"/></svg>
+      </span>
+    {% endif %}
     {% if content.fields.squirclePicker == 'Large text top squircle' %}
     <span class=" coop-c-featureCard__squircle__label">
       {% if content.fields.squircleTop %}
