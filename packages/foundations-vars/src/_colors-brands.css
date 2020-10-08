@@ -7,6 +7,9 @@
   --color-brand: var(--color-brand-coop);
   --color-deal-red: var(--color-brand-deals);
 
+  /* Coop colours */
+  --color-brand-coop-light-blue: #f3f9fd;
+
   /* Membership (Purple) */
   --color-brand-membership-purple-dark-1: #483965;
   --color-brand-membership-purple-dark-2: #635385;
