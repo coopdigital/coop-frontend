@@ -86,7 +86,7 @@
             {%- set _ = href.update({"url" : link.fields.url.data }) -%}
           {% endif %}
           <div class="coop-c-hero__link">
-            <a href="{{href.url}}" class="coop-t-link" data-contenttype="Membership hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
+            <a href="{{href.url}}" class="coop-t-link" data-contenttype="Hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
           </div>
         {% endwith %}
       {% endif %}
