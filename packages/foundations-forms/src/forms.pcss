@@ -4,8 +4,8 @@
 
 :root {
   --form-choice-width: 25px;
-  --form-choice-offset-top-s: 2px;
-  --form-choice-offset-top-l: 4px;
+  --form-choice-offset-top-s: 1px;
+  --form-choice-offset-top-l: 3px;
 
   --form-choice-button-width: 13px;
   --form-choice-button-offset-top-s: calc(
@@ -277,6 +277,10 @@ select,
   margin-bottom: var(--spacing-8);
 }
 
+.coop-form__choice:last-child {
+  margin-bottom: 0;
+}
+
 input[type="checkbox"],
 .coop-form__checkbox,
 input[type="radio"],
@@ -304,6 +308,18 @@ input[type="radio"],
   );
   cursor: pointer;
   touch-action: manipulation;
+}
+
+.coop-form__choice .coop-form__hint {
+  margin-top: 0;
+  padding-left: calc(
+    var(--form-choice-width) - var(--form-choice-stroke-width) +
+      var(--spacing-16)
+  );
+}
+
+.coop-form__choice .coop-form__hint:last-child {
+  margin-bottom: 0;
 }
 
 /* Fake checkbox/radio */

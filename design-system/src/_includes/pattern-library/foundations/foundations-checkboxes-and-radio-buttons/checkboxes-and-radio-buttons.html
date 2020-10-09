@@ -150,3 +150,55 @@
         </div>
     </fieldset>
 </form>
+
+<!-- Single checkbox -->
+<form class="coop-form">
+    <h3>Single checkbox</h3>
+
+    <div class="coop-form__row">
+        <div class="coop-form__choice">
+            <input type="checkbox" name="checkbox-5" id="checkbox-5-1" value="1" class="coop-form__field coop-form__checkbox">
+            <label for="checkbox-5-1" class="coop-form__label">I agree to the terms and conditions</label>
+        </div>
+    </div>
+</form>
+
+<!-- Single checkbox with hint -->
+<form class="coop-form">
+    <h3>Single checkbox with hint</h3>
+
+    <div class="coop-form__row">
+        <div class="coop-form__choice">
+            <input type="checkbox" name="checkbox-6" id="checkbox-6-1" value="1" class="coop-form__field coop-form__checkbox" aria-describedby="checkbox-6-hint">
+            <label for="checkbox-6-1" class="coop-form__label">I agree to the terms and conditions</label>
+            <p id="checkbox-6-hint" class="coop-form__hint">Descriptive hint goes here</p>
+        </div>
+      </div>
+</form>
+
+<!-- Single checkbox with error message -->
+<form class="coop-form">
+    <h3>Single checkbox with error message</h3>
+
+    <div class="coop-form__row">
+        <p id="checkbox-7-error" class="coop-form__error">Please accept the terms and conditions</p>
+        <div class="coop-form__choice">
+            <input type="checkbox" name="checkbox-7" id="checkbox-7-1" value="1" class="coop-form__field coop-form__checkbox" aria-describedby="checkbox-7-error">
+            <label for="checkbox-7-1" class="coop-form__label">I agree to the terms and conditions</label>
+        </div>
+    </div>
+</form>
+
+<!-- Single checkbox with hint and error message -->
+<form class="coop-form">
+    <h3>Single checkbox with hint and error message</h3>
+
+    <div class="coop-form__row">
+        <p id="checkbox-8-error" class="coop-form__error">Please accept the terms and conditions</p>
+        <div class="coop-form__choice">
+            <input type="checkbox" name="checkbox-8" id="checkbox-8-1" value="1" class="coop-form__field coop-form__checkbox" aria-describedby="checkbox-8-hint checkbox-8-error">
+            <label for="checkbox-8-1" class="coop-form__label">I agree to the terms and conditions</label>
+            <p id="checkbox-8-hint" class="coop-form__hint">Descriptive hint goes here</p>
+        </div>
+    </div>
+</form>
