@@ -64,5 +64,20 @@ module.exports = function (migration) {
       ]),
       linkType: "Entry"
     });
+
+    postcode.createField('utmSource')
+        .name('UTM source')
+        .type('Symbol')
+        .required(true)
+
+    postcode.createField('utmMedium')
+        .name('UTM medium')
+        .type('Symbol')
+        .required(true)
+
+    postcode.createField('utmCampaign')
+        .name('UTM campaign')
+        .type('Symbol')
+        .required(true)
 };
 
