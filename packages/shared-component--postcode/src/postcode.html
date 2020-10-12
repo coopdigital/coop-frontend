@@ -6,7 +6,13 @@
           <label for="coop-c-postcode__search" class="coop-c-postcode__label coop-t-regular">{{content.bodyText}}</label>
           <div class="coop-c-postcode__searchbox">
             <span class="coop-c-postcode__searchbox-input">
-              <input name="coop-c-postcode__search" id="coop-c-postcode__search" type="search" placeholder="{{content.formPlaceholder}}" />
+              <input name="coop-c-postcode__search"
+                     id="coop-c-postcode__search"
+                     type="search"
+                     placeholder="{{content.formPlaceholder}}"
+                     data-utm-source="{% if 'utmSource' in content %}{{content.utmSource }}{% endif %}"
+                     data-utm-medium="{% if 'utmMedium' in content %}{{content.utmMedium}}{% endif %}"
+                     data-utm-campaign="{% if 'utmCampaign' in content %}{{content.utmCampaign}}{% endif %}" />
             </span>
             <button class="coop-c-postcode__submit">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><title>Location pin icon</title><path d="M12 19.661c4.688-4.229 7-7.594 7-9.947C19 6.014 15.874 3 12 3S5 6.014 5 9.714c0 2.353 2.312 5.718 7 9.947z"/><circle cx="12" cy="10" r="2.5"/></svg>

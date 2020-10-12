@@ -1,21 +1,23 @@
 import { $ } from './modules/bling';
-import { validatePostcode, showError } from './modules/helpers';
+import { validatePostcode, showError } from './helpers';
 
-function postcode(form) {
-  if (!form) { return }
 
-  form.addEventListener('submit', function (e) {
+function submitPostcode(e) {
     e.preventDefault();
-    const getPostcode = $('input#coop-c-postcode__search').value;
-    const check = validatePostcode(getPostcode)
+    const postcodeInput = $('input#coop-c-postcode__search');
+    const check = validatePostcode(postcodeInput.value)
     if (check) {
-      window.location.replace(window.SHOP_URL + "?postcode=" + getPostcode + "&utm_source=Coop&utm_medium=referral&utm_campaign=PostcodeLookup");
+      window.location.replace(window.SHOP_URL + "?postcode=" + postcodeInput.value + "&utm_source="+postcodeInput.dataset.utmSource+"&utm_medium="+postcodeInput.dataset.utmMedium+"&utm_campaign="+postcodeInput.dataset.utmCampaign);
     } else {
       $('div.coop-c-postcode').classList.add('error');
       const selector = 'coop-c-postcode';
       const parentElement = '.coop-c-postcode__form';
       showError(selector, '<span class="coop-u-red-mid">Please enter a valid postcode format</span> <br /> For example  M4 4BE', parentElement);
     }
-  })
+  }
+function postcode(form) {
+  if (!form) { return }
+  form.addEventListener('submit', submitPostcode)
+
 }
 export default postcode;
