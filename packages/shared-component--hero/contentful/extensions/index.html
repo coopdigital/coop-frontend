@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="utf-8" />
@@ -17,24 +16,19 @@
         padding: 0;
         margin: 0;
       }
-
       .bg-picker * {
         box-sizing: border-box;
       }
-
       .bg-picker a {
         text-decoration: none;
         color: inherit;
       }
-
       .bg-picker .ce-colorpalette {
         padding-top: 16px;
       }
-
       .bg-picker .ce-colorpalette__palette {
         display: flex;
       }
-
       .bg-picker .ce-colorpalette__color {
         width: 23%;
         margin: 0 1% 16px 1%;
@@ -45,29 +39,23 @@
         font-size: 13px;
         line-height: 16px;
       }
-
       .bg-picker .ce-colorpalette__color span {
         display: block;
         font-weight: bold;
         pointer-events: none;
       }
-      
       .bg-picker .ce-colorpalette__color span.stroke {
         height: 10px;
         margin-left: -12px;
         margin-right: -12px;
       }
-
       .bg-picker .ce-colorpalette__color span + span {
         margin-top: 8px;
       }
-
       .bg-picker .ce-colorpalette__color.active {
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
       }
-
       /* match contentful styles */
-
       .radio-editor__options {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -79,7 +67,6 @@
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
       }
-
       .bg-picker .radio-editor__option {
         cursor: pointer;
         display: block;
@@ -90,7 +77,6 @@
       }
     </style>
   </head>
-
   <body class="bg-picker-body">
     <div id="app">
       <div class="bg-picker">
@@ -122,9 +108,12 @@
           <div class="cf-form-field ce-colorpalette">
             <h3>Colour Backgrounds</h3>
             <div
-              class="ce-colorpalette__palette"
               v-for="bg in colorBackgrounds"
             >
+            <div v-if="bg.color">
+              <h3>{{bg.color}}</h3>
+            </div>
+            <div class="ce-colorpalette__palette">
               <template v-for="variant in bg.variants">
                 <a
                   href="#"
@@ -138,12 +127,12 @@
                   <span>Background: {{ variant.background }}</span>
                 </a>
               </template>
+              </div>
             </div>
           </div>
         </template>
       </div>
     </div>
-
     <script type="text/javascript">
       window.contentfulExtension.init(function(api) {
         api.window.startAutoResizer();
@@ -158,31 +147,32 @@
                   id: 'set-1',
                   name: 'Set 1',
                   type: 'color',
+                  color: 'Neutrals',
                   variants: [
                     {
                       id: 'color-1a',
-                      name: 'Neutral (Light)',
+                      name: 'Light',
                       class: 'coop-u-grey-neutral-light-fill',
                       type: 'color',
                       background: '#F3F3F3'
                     },
                     {
                       id: 'color-1b',
-                      name: 'Neutral (Warm)',
+                      name: 'Warm',
                       class: 'coop-u-grey-neutral-warm-fill',
                       type: 'color',
                       background: '#F5F5F0'
                     },
                     {
                       id: 'color-1c',
-                      name: 'Neutral (Cool)',
+                      name: 'Cool',
                       class: 'coop-u-grey-neutral-cool-fill',
                       type: 'color',
                       background: '#DDE9ED'
                     },
                     {
                       id: 'color-1d',
-                      name: 'Neutral (Cool light)',
+                      name: 'Cool light',
                       class: 'coop-u-grey-neutral-cool-light-fill',
                       type: 'color',
                       background: '#F2F4F7'
@@ -193,24 +183,32 @@
                   id: 'set-2',
                   name: 'Set 2',
                   type: 'color',
+                  color: 'Reds',
                   variants: [
                     {
                       id: 'color-2a',
-                      name: 'Dark red',
+                      name: 'Dark 4',
                       class: 'coop-u-red-dark-fill',
+                      text: '#fff',
+                      fontColour: 'coop-u-white',
+                      clockColour: 'coop-u-white-fill',
+                      text: '#fff',
                       type: 'color',
                       background: '#BA2327'
                     },
                     {
                       id: 'color-2b',
-                      name: 'Mid red',
+                      name: 'Mid 5',
                       class: 'coop-u-red-mid-fill',
+                      fontColour: 'coop-u-white',
+                      clockColour: 'coop-u-white-fill',
+                      text: '#fff',
                       type: 'color',
                       background: '#E20F14'
                     },
                     {
                       id: 'color-2c',
-                      name: 'Light red',
+                      name: 'Light 7',
                       class: 'coop-u-red-light-7-fill',
                       type: 'color',
                       background: '#FF6A6D'
@@ -218,27 +216,97 @@
                   ]
                 },
                 {
-                  id: 'set-3',
-                  name: 'Set 3',
+                  id: 'set-2a',
+                  name: 'Set 2a',
                   type: 'color',
                   variants: [
                     {
-                      id: 'color-3',
-                      name: 'Primary',
+                      id: 'color-2d',
+                      name: 'Light 8',
+                      class: 'coop-u-red-light-8-fill',
                       type: 'color',
-                      background: '#F7D002'
+                      background: '#FFC1C3'
                     },
                     {
-                      id: 'color-3a',
-                      name: 'Seconday',
+                      id: 'color-2e',
+                      name: 'Light 9',
+                      class: 'coop-u-red-light-9-fill',
                       type: 'color',
-                      background: '#496005'
+                      background: '#FFDBDB'
+                    },
+                    {
+                      id: 'color-2e',
+                      name: 'Light 10',
+                      class: 'coop-u-red-light-10-fill',
+                      type: 'color',
+                      background: '#FCF1F1'
+                    }
+                  ]
+                },
+                {
+                  id: 'set-3',
+                  name: 'Set 3',
+                  type: 'color',
+                  color: 'Oranges',
+                  variants: [
+                    {
+                      id: 'color-3a',
+                      name: 'Dark 4',
+                      class: 'coop-u-orange-dark-4-fill',
+                      fontColour: 'coop-u-white',
+                      clockColour: 'coop-u-white-fill',
+                      text: '#fff',
+                      type: 'color',
+                      background: '#BE4015'
                     },
                     {
                       id: 'color-3b',
-                      name: 'Tint',
+                      name: 'Mid 5',
+                      class: 'coop-u-orange-mid-5-fill',
                       type: 'color',
-                      background: '#FFFCEE'
+                      background: '#FC5724'
+                    },
+                    {
+                      id: 'color-3c',
+                      name: 'Mid 6',
+                      class: 'coop-u-orange-mid-6-fill',
+                      type: 'color',
+                      background: '#FD7B3B'
+                    },
+                    {
+                      id: 'color-3d',
+                      name: 'Mid 7',
+                      class: 'coop-u-orange-mid-7-fill',
+                      type: 'color',
+                      background: '#FD9C59'
+                    }
+                  ]
+                },
+                {
+                  id: 'set-3a',
+                  name: 'Set 3a',
+                  type: 'color',
+                  variants: [
+                    {
+                      id: 'color-3e',
+                      name: 'Light 8',
+                      class: 'coop-u-orange-light-8-fill',
+                      type: 'color',
+                      background: '#FDB979'
+                    },
+                    {
+                      id: 'color-3f',
+                      name: 'Light 9',
+                      class: 'coop-u-orange-light-9-fill',
+                      type: 'color',
+                      background: '#FEE7C1'
+                    },
+                    {
+                      id: 'color-3g',
+                      name: 'Light 10',
+                      class: 'coop-u-orange-light-10-fill',
+                      type: 'color',
+                      background: '#FFF8E7'
                     }
                   ]
                 },
@@ -246,77 +314,262 @@
                   id: 'set-4',
                   name: 'Set 4',
                   type: 'color',
+                  color: 'Yellows',
                   variants: [
                     {
-                      id: 'color-4',
-                      name: 'Primary',
-                      type: 'color',
-                      background: '#FF9D34'
-                    },
-                    {
                       id: 'color-4a',
-                      name: 'Seconday',
+                      name: 'Dark 4',
+                      class: 'coop-u-yellow-dark-4-fill',
                       type: 'color',
-                      background: '#8B2400'
+                      background: '#CFB214'
                     },
                     {
                       id: 'color-4b',
-                      name: 'Tint',
+                      name: 'Mid 5',
+                      class: 'coop-u-yellow-mid-5-fill',
                       type: 'color',
-                      background: '#FFF2E5'
-                    }
-                  ]
-                },
-                {
-                  id: 'squircle-single',
-                  name: 'Squircle',
-                  type: 'pattern',
-                  variants: [
+                      background: '#FFD309'
+                    },
                     {
-                      id: 'squircle-single-0',
-                      name: 'Neutral (Top)',
-                      type: 'squircle-single'
-                    }
-                  ]
-                },
-                {
-                  id: 'squircle-multiple',
-                  name: 'Squircles',
-                  type: 'pattern',
-                  variants: [
+                      id: 'color-4c',
+                      name: 'Mid 6',
+                      class: 'coop-u-yellow-mid-6-fill',
+                      type: 'color',
+                      background: '#FFE53B'
+                    },
                     {
-                      id: 'squircle-multiple-0',
-                      name: "It's what we do",
-                      type: 'squircle-multiple'
+                      id: 'color-4d',
+                      name: 'Mid 7',
+                      class: 'coop-u-yellow-mid-7-fill',
+                      type: 'color',
+                      background: '#FFF372'
                     }
                   ]
                 },
                 {
-                  id: 'dots',
-                  name: 'Dots',
-                  type: 'pattern',
-                  variants: [
-                    {
-                      id: 'dots-0',
-                      name: 'Neutral',
-                      type: 'dots'
-                    }
-                  ]
-                },
-                {
-                  id: 'set-5',
-                  name: 'Set 5',
+                  id: 'set-4a',
+                  name: 'Set 4a',
                   type: 'color',
                   variants: [
                     {
-                      id: 'color-5',
-                      name: 'Health',
+                      id: 'color-4e',
+                      name: 'Light 8',
+                      class: 'coop-u-yellow-light-8-fill',
                       type: 'color',
-                      background: '#274E97',
-                      text: '#FFFFFF'
+                      background: '#FFFCA9'
+                    },
+                    {
+                      id: 'color-4f',
+                      name: 'Light 9',
+                      class: 'coop-u-yellow-light-9-fill',
+                      type: 'color',
+                      background: '#FFFBCD'
+                    },
+                    {
+                      id: 'color-4g',
+                      name: 'Light 10',
+                      class: 'coop-u-yellow-light-10-fill',
+                      type: 'color',
+                      background: '#FCF9EE'
                     }
                   ]
-                }   
+                },
+                  {
+                    id: 'set-5',
+                    name: 'Set 5',
+                    type: 'color',
+                    color: 'Greens',
+                    variants: [
+                      {
+                        id: 'color-5a',
+                        name: 'Dark 2',
+                        class: 'coop-u-green-dark-2-fill',
+                        fontColour: 'coop-u-white',
+                        clockColour: 'coop-u-white-fill',
+                        text: '#fff',
+                        type: 'color',
+                        background: '#3A6002'
+                      },
+                      {
+                        id: 'color-5b',
+                        name: 'Mid 3',
+                        class: 'coop-u-green-mid-3-fill',
+                        fontColour: 'coop-u-white',
+                        clockColour: 'coop-u-white-fill',
+                        text: '#fff',
+                        type: 'color',
+                        background: '#4F820D'
+                      },
+                      {
+                        id: 'color-5c',
+                        name: 'Mid 4',
+                        class: 'coop-u-green-mid-4-fill',
+                        type: 'color',
+                        background: '#72AA24'
+                      },
+                      {
+                        id: 'color-5d',
+                        name: 'Mid 5',
+                        class: 'coop-u-green-mid-5-fill',
+                        type: 'color',
+                        background: '#96CB48'
+                      }
+                    ]
+                  },
+                  {
+                    id: 'set-5a',
+                    name: 'Set 5a',
+                    type: 'color',
+                    variants: [
+                      {
+                        id: 'color-5e',
+                        name: 'Light 6',
+                        class: 'coop-u-green-light-6-fill',
+                        type: 'color',
+                        background: '#B9E277'
+                      },
+                      {
+                        id: 'color-5f',
+                        name: 'Light 8',
+                        class: 'coop-u-green-light-8-fill',
+                        type: 'color',
+                        background: '#E7F7CB'
+                      },
+                      {
+                        id: 'color-5g',
+                        name: 'Light 10',
+                        class: 'coop-u-green-light-10-fill',
+                        type: 'color',
+                        background: '#F6FCE9'
+                      }
+                    ]
+                  },
+                  {
+                    id: 'set-6',
+                    name: 'Set 6',
+                    type: 'color',
+                    color: 'Blues',
+                    variants: [
+                      {
+                        id: 'color-6a',
+                        name: 'Dark 3',
+                        class: 'coop-u-blue-dark-3-fill',
+                        fontColour: 'coop-u-white',
+                        clockColour: 'coop-u-white-fill',
+                        text: '#fff',
+                        type: 'color',
+                        background: '#114D94'
+                      },
+                      {
+                        id: 'color-6b',
+                        name: 'Mid 4',
+                        class: 'coop-u-blue-mid-4-fill',
+                        fontColour: 'coop-u-white',
+                        clockColour: 'coop-u-white-fill',
+                        text: '#fff',
+                        type: 'color',
+                        background: '#0761C2'
+                      },
+                      {
+                        id: 'color-6c',
+                        name: 'Mid 6',
+                        class: 'coop-u-blue-mid-6-fill',
+                        type: 'color',
+                        background: '#519AF5'
+                      }
+                    ]
+                  },
+                  {
+                    id: 'set-6a',
+                    name: 'Set 6a',
+                    type: 'color',
+                    variants: [
+                      {
+                        id: 'color-6d',
+                        name: 'Light 8',
+                        class: 'coop-u-blue-light-8-fill',
+                        type: 'color',
+                        background: '#80B7FF'
+                      },
+                      {
+                        id: 'color-6e',
+                        name: 'Mid 9',
+                        class: 'coop-u-blue-light-9-fill',
+                        type: 'color',
+                        background: '#CFE3FF'
+                      },
+                      {
+                        id: 'color-6f',
+                        name: 'Mid 10',
+                        class: 'coop-u-blue-light-10-fill',
+                        type: 'color',
+                        background: '#EEF3FC'
+                      }
+                    ]
+                  },
+                {
+                  id: 'set-7',
+                  name: 'Set 7',
+                  type: 'color',
+                  color: 'Magentas',
+                  variants: [
+                    {
+                      id: 'color-7a',
+                      name: 'Dark 3',
+                      class: 'coop-u-magenta-dark-3-fill',
+                      fontColour: 'coop-u-white',
+                      clockColour: 'coop-u-white-fill',
+                      text: '#fff',
+                      type: 'color',
+                      background: '#812373'
+                    },
+                    {
+                      id: 'color-7b',
+                      name: 'Mid 4',
+                      class: 'coop-u-magenta-mid-4-fill',
+                      fontColour: 'coop-u-white',
+                      clockColour: 'coop-u-white-fill',
+                      text: '#fff',
+                      type: 'color',
+                      background: '#AB278D'
+                    },
+                    {
+                      id: 'color-7c',
+                      name: 'Mid 7',
+                      class: 'coop-u-magenta-mid-7-fill',
+                      type: 'color',
+                      background: '#F690F1'
+                    }
+                  ]
+                },
+                {
+                  id: 'set-7a',
+                  name: 'Set 7a',
+                  type: 'color',
+                  variants: [
+                    {
+                      id: 'color-7d',
+                      name: 'Light 8',
+                      class: 'coop-u-magenta-light-8-fill',
+                      type: 'color',
+                      background: '#FEB8FF'
+                    },
+                    {
+                      id: 'color-7e',
+                      name: 'Light 10',
+                      class: 'coop-u-magenta-light-10-fill',
+                      type: 'color',
+                      background: '#FAD1FE'
+                    },
+                    {
+                      id: 'color-7f',
+                      name: 'Light 10',
+                      class: 'coop-u-magenta-light-10-fill',
+                      type: 'color',
+                      background: '#FAEAFC'
+                    }
+                  ]
+                },
               ]
             };
           },
