@@ -6,6 +6,7 @@
 {% set squircleBgColour = '' %}
 {% set fontColour = '' %}
 {% set clockColour = '' %}
+{% set linkColour = '' %}
 
 {% if content.image %}
   {% set mediaClass = 'coop-c-hero--media' %}
@@ -29,6 +30,10 @@
 
 {% if content.background and content.background.clockColour  %}
   {% set clockColour = content.background.clockColour %}
+{% endif %}
+
+{% if content.background and content.background.linkColour  %}
+  {% set linkColour = content.background.linkColour %}
 {% endif %}
 
 <div class="coop-c-hero {{ squircleClass }} {{ mediaClass }} {{ contentPullClass }} {{fontColour}}">
@@ -96,7 +101,7 @@
             {%- set _ = href.update({"url" : link.fields.url.data }) -%}
           {% endif %}
           <div class="coop-c-hero__link">
-            <a href="{{href.url}}" class="coop-t-link" data-contenttype="Hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
+            <a href="{{href.url}}" class="coop-t-link {{linkColour}}" data-contenttype="Hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
           </div>
         {% endwith %}
       {% endif %}
