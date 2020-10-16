@@ -37,7 +37,7 @@
     "@coopdigital/shared-component--cooperate": "^1.0.8",
     "@coopdigital/shared-component--editorialcard": "^2.3.3",
     "@coopdigital/shared-component--featurecard": "^2.2.0",
-    "@coopdigital/shared-component--hero": "^3.1.1",
+    "@coopdigital/shared-component--hero": "^3.1.2",
     "@coopdigital/shared-component--image": "^2.1.19",
     "@coopdigital/shared-component--linklist": "^2.1.21",
     "@coopdigital/shared-component--membership": "^3.0.7",
