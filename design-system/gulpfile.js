@@ -190,5 +190,5 @@ module.exports = {
   optimiseImages,
   build,
   server,
-  default: build
+  default: server
 };
