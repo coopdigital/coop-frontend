@@ -2,7 +2,8 @@
 
 .coop-c-postcode {
   background: url("https://images.ctfassets.net/6jpeaipefazr/2oHuFOFgaPu540mDLZVRyC/bddf4e0ce16e2fdb01d27738df74627f/food-instore-2.jpeg?fm=jpg&fl=progressive&q=80&h=300&fit=crop")
-    no-repeat var(--color-grey-neutral-warm) 0 -10px;
+    no-repeat 0 -10px;
+  background-color: var(--color-grey-neutral-warm);
   background-size: contain;
   padding: 10px;
 
@@ -21,10 +22,15 @@
   margin: 36px 10px 10px;
   padding: var(--spacing-16);
   border-radius: 6px;
+  max-width: 100%;
 
   & h2 {
     font-size: var(--type-h2-s);
     margin-bottom: 0;
+  }
+
+  @media (--mq-medium) {
+    margin: 45%;
   }
 
   @media (--mq-large) {
