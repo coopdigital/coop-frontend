@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-grid",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "Co-op CSS Foundations: Grid.",
   "main": "dist/grid.css",
   "style": "src/grid.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/foundations-grid"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.3.1"
+    "@coopdigital/foundations-vars": "^3.4.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"

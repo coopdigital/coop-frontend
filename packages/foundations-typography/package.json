@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-typography",
-  "version": "4.1.21",
+  "version": "4.1.22",
   "description": "Co-op Foundations: Typography",
   "main": "dist/typography.css",
   "style": "src/typography.pcss",
@@ -20,8 +20,8 @@
     "directory": "packages/foundations-typography"
   },
   "devDependencies": {
-    "@coopdigital/foundations-colors": "^2.2.1",
-    "@coopdigital/foundations-vars": "^3.3.1"
+    "@coopdigital/foundations-colors": "^2.3.0",
+    "@coopdigital/foundations-vars": "^3.4.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-colors": ">= 2.1.17 < 3",
