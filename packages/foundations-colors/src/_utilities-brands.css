@@ -23,6 +23,24 @@
   border-color: var(--color-brand-deals);
 }
 
+/* Bereavement Advice Centre (Purple) */
+.coop-u-brand-bac-purple {
+  color: var(--color-brand-bac-purple);
+}
+
+.coop-u-brand-bac-purple-bg {
+  background: var(--color-brand-bac-purple);
+}
+
+.coop-u-brand-bac-purple-fill {
+  fill: var(--color-brand-bac-purple);
+}
+
+.coop-u-brand-bac-purple-stroke {
+  stroke: var(--color-brand-bac-purple);
+  border-color: var(--color-brand-bac-purple);
+}
+
 /* Membership (Purple) */
 .coop-u-brand-membership-purple-dark {
   color: var(--color-brand-membership-purple-dark);
