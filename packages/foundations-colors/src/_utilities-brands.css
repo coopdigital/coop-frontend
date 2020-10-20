@@ -28,6 +28,10 @@
   color: var(--color-brand-bac-purple);
 }
 
+.coop-u-brand-bac-purple-bg {
+  background: var(--color-brand-bac-purple);
+}
+
 .coop-u-brand-bac-purple-fill {
   fill: var(--color-brand-bac-purple);
 }
