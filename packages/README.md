@@ -84,7 +84,11 @@ You can then reference this in your component page as an include to render the c
 ```
 If your component is ready to publish commit your files and open a pull request.
 
-Once your pull request is merged you'll need to switch to master and pull.
+## To complete the process you'll have to open 2 pull requests
+
+### PR 1
+
+
 
 
 ## Publishing new versions
@@ -97,6 +101,7 @@ $ npm run publish
 If you need permissions email matt.tyas@coop.co.uk
 
 This should provide a prompt to update the version according to [semantic versioning](https://semver.org/) - note that cross-linked dependencies within the local packages will be updated automatically.
+
 
 ## To see changes in the live design system
 As the package versions are updated by Lerna you'll need to also update the [design system package.json file](https://github.com/coopdigital/coop-frontend/blob/master/design-system/package.json) file - making sure the packages upadated have been upated to the corresponding version numbers - to make sure the changes are reflected in the live site.
