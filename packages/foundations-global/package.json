@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-global",
-  "version": "3.1.19",
+  "version": "3.1.20",
   "description": "CSS Foundations: Global",
   "main": "dist/global.css",
   "style": "src/global.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/foundations-global"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.4.0"
+    "@coopdigital/foundations-vars": "^3.4.1"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"

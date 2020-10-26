@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--totaliser",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Co-op Component: Money raised totaliser",
   "main": "dist/totaliser.css",
   "style": "src/totaliser.pcss",
@@ -20,9 +20,9 @@
     "directory": "packages/shared-component--totaliser"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^2.2.6",
-    "@coopdigital/foundations-layout": "^3.2.5",
-    "@coopdigital/foundations-vars": "^3.4.0"
+    "@coopdigital/foundations-buttons": "^2.2.7",
+    "@coopdigital/foundations-layout": "^3.2.6",
+    "@coopdigital/foundations-vars": "^3.4.1"
   },
   "peerDependencies": {
     "@coopdigital/foundations-buttons": ">= 2.1.14 < 3",
