@@ -84,12 +84,6 @@ You can then reference this in your component page as an include to render the c
 ```
 If your component is ready to publish commit your files and open a pull request.
 
-## To complete the process you'll have to open 2 pull requests
-
-### PR 1
-
-
-
 
 ## Publishing new versions
 Creating and publishing new versions is only enabled on the master branch. To create and publish new versions, the following needs to be run by a user with write permissions to the @coopdigital npm registry.
@@ -104,8 +98,14 @@ This should provide a prompt to update the version according to [semantic versio
 
 
 ## To see changes in the live design system
-As the package versions are updated by Lerna you'll need to also update the [design system package.json file](https://github.com/coopdigital/coop-frontend/blob/master/design-system/package.json) file - making sure the packages upadated have been upated to the corresponding version numbers - to make sure the changes are reflected in the live site.
+As the package versions are updated by Lerna you'll need to also update the design system site to pull in the new changes to do this run:
 
+```shell script
+$ cd design-system
+$ npm ci && npm update
+```
+
+Then commit and push to master. The Circle CI build will run and publish the updated design syetem website.
 
 ## Lefthook git hooks pre commit
 [Lefthook](https://github.com/Arkweid/lefthook) is used to manage git hooks in the repo.  [Intro article to lefthook](https://evilmartians.com/chronicles/lefthook-knock-your-teams-code-back-into-shape?utm_source=lefthook).
