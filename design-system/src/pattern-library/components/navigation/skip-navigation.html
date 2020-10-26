@@ -1,7 +1,7 @@
 ---
 layout: default
 body-page-class: dm-dark
-title: {{ designPattern.title }}
+title: Skip navigation
 id: pattern-library
 ---
 <article>
@@ -47,14 +47,14 @@ id: pattern-library
                                 <div class="tabs-container__panel tabs-container__panel--preview" id="Tab1">
                                     <div class="coop-l-grid">
                                         <div class="coop-l-grid__item coop-l-grid__item--large-4 coop-l-grid__item--medium-6">
-                                            {% include pattern-library/components/component-skipnav/src/skipnav.html %}
+                                            {% include pattern-library/components/component-skipnav/dist/skipnav.html %}
                                         </div>
                                     </div>
                                 </div>
                                 <h3 class="tabs-container__title" id="TabPanelTitle-Tab2">HTML</h3>
                                 <div class="tabs-container__panel tabs-container__panel--code" id="Tab2">
                                     {% highlight html %}
-                                    {% include pattern-library/components/component-skipnav/src/skipnav.html %}
+                                    {% include pattern-library/components/component-skipnav/dist/skipnav.html %}
                                     {% endhighlight %}
                                 </div>
                             </div>
@@ -71,10 +71,10 @@ id: pattern-library
     <div class="coop-l-container">
         <div class="coop-l-grid">
             <div class="coop-l-grid__item coop-l-grid__item--medium-7">
-                <!-- <section id="design-and-content" class="coop-u-margin-resp-b-32-16">
+                <section id="design-and-content" class="coop-u-margin-resp-b-32-16">
                     <h2>Design and content</h2>
                     <p>{{ designPattern.design_and_content_documentation | markdownify }}</p>
-                </section> -->
+                </section>
                 <!-- <section id="accessibility" class="coop-u-margin-resp-b-32-16">
                     <h2>Accessibility</h2>
                     <p>{{ designPattern.accessibility_documentation | markdownify }}</p>
