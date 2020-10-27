@@ -52,7 +52,7 @@ Switching to the design system directory you can then run
 ```
 $ npm run server
 ```
-Changes will be made to the curretn pacages will then be picked up.
+Changes will be made to the current packages will then be picked up.
 
 ## Troubleshooting
 If you are getting errors go to the root of the coop-frontend repo and run:
@@ -82,10 +82,10 @@ You can then reference this in your component page as an include to render the c
 ```HTML
 {% include pattern-library/components/[my-component]/dist/[my-component].html %}
 ```
-If your component is ready to publish commit your files and open a pull request.
-
 
 ## Publishing new versions
+If your component is ready to publish commit your files and open a pull request.
+
 Creating and publishing new versions is only enabled on the master branch. To create and publish new versions, the following needs to be run by a user with write permissions to the @coopdigital npm registry.
 
 ```shell script
