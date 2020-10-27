@@ -2,7 +2,7 @@
 Skip navigation links to create efficient access for users who navigate using a keyboard.
 
 ## Installation
-Install via `npm` or Yarn:
+Install with NPM:
 ```bash
 $ npm install @coopdigital/component-skipnav --save
 ```
@@ -25,7 +25,7 @@ If you use a `postcss-import` plugin, it gets even easier:
 HTML can be copied from the example on the design system website or can be found in the `/dist` folder in the package.
 
 ## Development
-For information on how to develop this package see the (developing foundations and components forthe design system documentation)[https://github.com/coopdigital/coop-frontend/blob/master/packages/README.md].
+For information on how to develop this package see the [developing foundations and components forthe design system documentation](https://github.com/coopdigital/coop-frontend/blob/master/packages/README.md).
 
 ## Changelog
 
