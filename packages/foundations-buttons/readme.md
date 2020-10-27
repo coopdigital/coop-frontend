@@ -2,11 +2,9 @@
 This CSS module provides helper and utility classes that allow you to apply Co-op's buttons to your frontend applications and websites.
 
 ## Installation
-Install via `npm` or Yarn:
+Install via NPM:
 ```bash
 $ npm install @coopdigital/foundations-buttons --save
-# OR
-$ yarn add @coopdigital/foundations-buttons
 ```
 
 ## Usage
@@ -25,16 +23,17 @@ If you use a `postcss-import` plugin, it gets even easier:
 @import "@coopdigital/foundations-buttons";
 ```
 
-## Examples
-Here's a bunch of examples, showing how you can integrate this CSS module in your project, based on most popular stacks of project. You can either use a post-processed and pre-built CSS form the `dist` directory, ot use PostCSS sources from the `src` dir.
-
-The latter have certain dependencies, which should be consumed by your frontend toolkit to postprocess the CSS correctly.
-
-### Vue.js
-TBD
-
-### React.js
-TBD
+HTML can be copied from the example on the design system website or can be found in the `/dist` folder in the package.
 
 ## Development
-TBD
+For information on how to develop this package see the [developing foundations and components forthe design system documentation](https://github.com/coopdigital/coop-frontend/blob/master/packages/README.md).
+
+## Changelog
+
+### 2.3.0 (Fix release)
+Fixes
+We’ve made fixes to the buttons
+
+Fix hover background colour not passing colour contrast guidelines.
+
+_Previous releases did not have notes_
