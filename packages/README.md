@@ -105,7 +105,7 @@ $ cd design-system
 $ npm ci && npm update
 ```
 
-Then commit and push to master. The Circle CI build will run and publish the updated design syetem website.
+Then commit and push to the main (master) branch. The Circle CI build will run and publish the updated design syetem website.
 
 ## Lefthook git hooks pre commit
 [Lefthook](https://github.com/Arkweid/lefthook) is used to manage git hooks in the repo.  [Intro article to lefthook](https://evilmartians.com/chronicles/lefthook-knock-your-teams-code-back-into-shape?utm_source=lefthook).
