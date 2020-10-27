@@ -86,6 +86,8 @@ You can then reference this in your component page as an include to render the c
 ## Publishing new versions
 If your component is ready to publish commit your files and open a pull request.
 
+Once approved - switch to master and pull the changes down.
+
 Creating and publishing new versions is only enabled on the master branch. To create and publish new versions, the following needs to be run by a user with write permissions to the @coopdigital npm registry.
 
 ```shell script
