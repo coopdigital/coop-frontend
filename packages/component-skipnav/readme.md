@@ -33,6 +33,6 @@ For information on how to develop this package see the (developing foundations a
 Fixes
 We’ve made fixes the skip navigation.
 
-Fix background colour and hover not passing coulur contrast guidelines.
+Fix background colour and hover not passing colour contrast guidelines.
 
 _Previous releases did not have notes_
