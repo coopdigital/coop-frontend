@@ -58,7 +58,7 @@ Changes will be made to the current packages will then be picked up.
 If you are getting errors go to the root of the coop-frontend repo and run:
 
 ```shell script
-$ npx lerna clean && npm ci && npm run build:all
+$ npm ci && npm run build:all
 ```
 
 ## Creating a Contentful page for your component
