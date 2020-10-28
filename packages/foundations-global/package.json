@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-global",
-  "version": "3.1.21",
+  "version": "3.2.0",
   "description": "CSS Foundations: Global",
   "main": "dist/global.css",
   "style": "src/global.pcss",
