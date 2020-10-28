@@ -3,11 +3,29 @@ layout: blank
 id: examples
 ---
 <div class="coop-l-grid coop-u-margin-b-64 coop-u-margin-t-64">
-    <div class="coop-l-grid__item coop-l-grid__item--large-6">
-        <h1>Co-op foundations</h1>
-        <p>This is every foundation on one page. It is used as the source of truth when developing the design system.</p>
-        <p>There is also a page per component:</p>
-        <ul>
+    <div class="coop-l-grid__item coop-l-grid__item--large-12 coop-u-margin-resp-b-32-16">  
+        <h1>Co-op front-end foundations</h1>
+        <p class="coop-t-lead-p">These example pages are used to develop the design system.</p>
+    </div>
+    <div class="coop-l-grid__item coop-l-grid__item--large-4">     
+        <h2>Foundations</h2>
+        <ul class="coop-u-margin-resp-b-32-16">
+            <li><a href="foundations/logo.html">Logo</a></li>
+            <li><a href="foundations/typography.html">Typography</a></li>
+            <li><a href="foundations/typography-example.html">Typography example</a></li>
+            <li><a href="foundations/colour-palette.html">Colour palette</a></li>
+            <li><a href="foundations/grid.html">Grid</a></li>
+            <li><a href="foundations/grid-examples.html">Grid examples</a></li>
+            <li><a href="foundations/vertical-spacing.html">Vertical spacing</a></li>
+            <li><a href="foundations/form-elements.html">Form elements</a></li>
+            <li><a href="foundations/form-validation.html">Form validation</a></li>
+            <li><a href="foundations/buttons.html">Buttons</a></li>
+            <li><a href="foundations/tables.html">Tables</a></li>
+        </ul>
+    </div>
+    <div class="coop-l-grid__item coop-l-grid__item--large-4">
+        <h2>Components</h2>
+        <ul class="coop-u-margin-resp-b-64-32">
             <li><a href="components/editorial-card.html">Editorial card</a></li>
             <li><a href="components/feature-card.html">Feature card</a></li>
             <li><a href="components/product-card.html">Product card</a></li>
@@ -28,362 +46,11 @@ id: examples
             <li><a href="components/skip-navigation.html">Skip navigtion</a></li>
         </ul>
     </div>
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Logo</h2>
-    {% include pattern-library/foundations/foundations-logo/logo.html %}
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Typography</h2>
-    <p><a href="/pattern-library/examples/typography.html">Typography example.</a></p>
-    <h1 class="coop-t-h-mega">Heading mega</h1>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-    <p class="coop-t-lead-p">Intro paragraph</p>
-    <p>Paragraph</p>
-    <a href="">Link</a>
-    <h2>Typography utilities</h2>
-    <p class="coop-t-font-size-14">Size 14</p>
-    <p class="coop-t-font-size-16">Size 16</p>
-    <p class="coop-t-font-size-18">Size 18</p>
-    <p class="coop-t-font-size-20">Size 20</p>
-    <p class="coop-t-font-size-22">Size 22</p>
-    <p class="coop-t-font-size-24">Size 24</p>
-    <p class="coop-t-font-size-26">Size 26</p>
-    <p class="coop-t-font-size-28">Size 28</p>
-    <p class="coop-t-font-size-30">Size 30</p>
-    <p class="coop-t-font-size-32">Size 32</p>
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Bullet list</h2>
-    <p>The meeting agenda will be:</p>
-    <ul>
-        <li>an overview of the last month</li>
-        <li>a presentation</li>
-        <li>a special announcement</li>
-    </ul>
-    <h2>Numbered list</h2>
-    <p>Before leaving the house:</p>
-    <ol>
-        <li>Put on socks.</li>
-        <li>Put on shoes.</li>
-        <li>Tie laces.</li>
-    </ol>
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Quotation</h2>
-    <blockquote>
-        <p>&lsquo;Use hanging punctuation to style a quotation. A &#8220;quote within a quote&#8221; should use double quotation&nbsp;marks.&rsquo;</p>
-        <cite>The design team</cite>
-    </blockquote>
-    <blockquote>
-        <p class="coop-t-h2">‘Or you can have a bigger&nbsp;one.’</p>
-        <cite>The design team</cite>
-    </blockquote>
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Colour palette</h2>
-    <div class="coop-l-grid">
-        <div class="coop-l-grid__item">
-            <section>
-                {% include pattern-library/foundations/foundations-color/color.html %}
-            </section>
-        </div>
+    <div class="coop-l-grid__item coop-l-grid__item--large-4">
+        <h2>Page examples</h2>
+        <ul class="coop-u-margin-resp-b-64-32">
+            <li>Coming soon&hellip;</li>
+        </ul>
     </div>
 </div>
-<div class="coop-u-margin-b-64">
-    <h2>Grid</h2>
-    <div class="coop-u-margin-b-32">
-        <h3>Grid columns</h3>
-        {% include pattern-library/foundations/foundations-page-layout/page-layout.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Column offset</h3>
-        {% include pattern-library/foundations/foundations-offset/offset.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Column collapse</h3>
-        {% include pattern-library/foundations/foundations-collapse/collapse.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Centring columns</h3>
-        {% include pattern-library/foundations/foundations-centring/centring.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Reversing columns order</h3>
-        {% include pattern-library/foundations/foundations-reverse-order/reverse-order.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Common layouts</h3>
-        <div class="coop-l-grid">
-            <div class="coop-l-grid__item">
-                <h4>3 up</h4>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-4">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-4">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-4 coop-u-margin-b-32">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-        </div>
-        <div class="coop-l-grid">
-            <div class="coop-l-grid__item">
-                <h4>4 up</h4>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-3">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-3">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-3">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-3 coop-u-margin-b-32">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-        </div>
-        <div class="coop-l-grid">
-            <div class="coop-l-grid__item">
-                <h4>1/3 - 2/3</h4>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-4">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-8 coop-u-margin-b-32">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-        </div>
-        <div class="coop-l-grid">
-            <div class="coop-l-grid__item">
-                <h4>2/3 - 1/3</h4>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-8">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-            <div class="coop-l-grid__item coop-l-grid__item--large-4 coop-u-margin-b-32">
-                <span class="ds-demo-block">
-                    <span></span>
-                </span>
-            </div>
-        </div>
-        <div class="coop-l-grid">
-            <div class="coop-l-grid__item">
-                <h4>Content centred</h4>
-            </div>
-        </div>
-        <div class="coop-l-grid coop-u-flex-centered">
-            <div class="coop-l-grid__item coop-l-grid__item--8">
-                <span class="ds-demo-block"></span>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Forms</h2>
-    <div class="coop-u-margin-b-32">
-        {% include pattern-library/foundations/foundations-input/input.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        <form class="coop-form">
-            <h3>Input with fixed width</h3>
 
-            <div class="coop-form__row">
-                <label for="fixed-width-1" class="coop-form__label">1 character width</label>
-                <input type="text" name="fixed-width-1" id="fixed-width-1" class="coop-form__field coop-form__input coop-form__input--width-1">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-2" class="coop-form__label">2 character width</label>
-                <input type="text" name="fixed-width-2" id="fixed-width-2" class="coop-form__field coop-form__input coop-form__input--width-2">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-3" class="coop-form__label">3 character width</label>
-                <input type="text" name="fixed-width-3" id="fixed-width-3" class="coop-form__field coop-form__input coop-form__input--width-3">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-4" class="coop-form__label">4 character width</label>
-                <input type="text" name="fixed-width-4" id="fixed-width-4" class="coop-form__field coop-form__input coop-form__input--width-4">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-5" class="coop-form__label">5 character width</label>
-                <input type="text" name="fixed-width-5" id="fixed-width-5" class="coop-form__field coop-form__input coop-form__input--width-5">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-10" class="coop-form__label">10 character width</label>
-                <input type="text" name="fixed-width-10" id="fixed-width-10" class="coop-form__field coop-form__input coop-form__input--width-10">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-15" class="coop-form__label">15 character width</label>
-                <input type="text" name="fixed-width-15" id="fixed-width-15" class="coop-form__field coop-form__input coop-form__input--width-15">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-20" class="coop-form__label">20 character width</label>
-                <input type="text" name="fixed-width-20" id="fixed-width-20" class="coop-form__field coop-form__input coop-form__input--width-20">
-            </div>
-
-            <div class="coop-form__row">
-                <label for="fixed-width-30" class="coop-form__label">30 character width</label>
-                <input type="text" name="fixed-width-30" id="fixed-width-30" class="coop-form__field coop-form__input coop-form__input--width-30">
-            </div>
-        </form>
-    </div>
-    <div class="coop-u-margin-b-32">
-        <div class="coop-l-grid">
-            <div class="coop-l-grid__item coop-l-grid__item--large-6">
-                {% include pattern-library/foundations/foundations-textarea/textarea.html %}
-            </div>
-        </div>
-    </div>
-    <div class="coop-u-margin-b-32">
-        {% include pattern-library/foundations/foundations-checkboxes-and-radio-buttons/checkboxes-and-radio-buttons.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        {% include pattern-library/foundations/foundations-select/select.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        {% include pattern-library/components/component-date-input/src/date-input.html %}
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Buttons</h3>
-        <button class="coop-btn coop-btn--primary">Primary button</button>
-        <button class="coop-btn">Button</button>
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Buttons as links</h3>
-        <a href="" class="coop-btn coop-btn--primary">Primary button</a>
-        <a href="" class="coop-btn">Button</a>
-    </div>
-    <div class="coop-u-margin-b-32">
-        <h3>Links as buttons</h3>
-        <button class="coop-t-link">Link button</button>
-        <button class="coop-t-link">Link button</button>
-    </div>
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Validation</h2>
-    <div class="coop-l-grid">
-        <div class="coop-l-grid__item coop-l-grid__item--large-6">
-            {% include pattern-library/foundations/foundations-validation/validation.html %}
-        </div>
-    </div>
-</div>
-<div class="coop-u-margin-b-32">
-    <h2>Tables</h2>
-    <table class="coop-table">
-        <caption>This table compares our Classic and Select Plus pet insurance</caption>
-        <thead>
-            <tr>
-                <th scope="col">Compare Pet Insurance</th>
-                <th scope="col">Classic</th>
-                <th scope="col">Select Plus</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Vet fees cover</th>
-                <td>&pound;2000</td>
-                <td>&pound;5000</td>
-            </tr>
-            <tr>
-                <th scope="row">Extra treatments</th>
-                <td>Not included</td>
-                <td>&pound;750</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="coop-u-margin-b-64">
-    <h3>Responsive table</h3>
-    <table class="coop-table coop-table-smallscreen--stacked">
-        <caption>This table compares our Classic and Select Plus pet insurance</caption>
-        <thead>
-            <tr>
-                <th scope="col">Compare Pet Insurance</th>
-                <th scope="col">Classic</th>
-                <th scope="col">Select Plus</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Vet fees cover</th>
-                <td data-th="Classic">&pound;2000</td>
-                <td data-th="Select Plus">&pound;5000</td>
-            </tr>
-            <tr>
-                <th scope="row">Extra treatments</th>
-                <td data-th="Classic">Not included</td>
-                <td data-th="Select Plus">&pound;750</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="coop-u-margin-b-64">
-    <h2>Spacing utilities</h2>
-    <h3>Margin</h3>
-    <div class="ds-demo-block coop-u-margin-0">Margin 0px</div>
-    <div class="ds-demo-block coop-u-margin-b-0">Margin bottom 0px</div>
-    <div class="ds-demo-block coop-u-margin-2">Margin 2px</div>
-    <div class="ds-demo-block coop-u-margin-b-2">Margin bottom 2px</div>
-    <div class="ds-demo-block coop-u-margin-4">Margin 4px</div>
-    <div class="ds-demo-block coop-u-margin-b-4">Margin bottom 4px</div>
-    <div class="ds-demo-block coop-u-margin-8">Margin 8px</div>
-    <div class="ds-demo-block coop-u-margin-b-8">Margin bottom 8px</div>
-    <div class="ds-demo-block coop-u-margin-16">Margin 16px</div>
-    <div class="ds-demo-block coop-u-margin-b-16">Margin bottom 16px</div>
-    <div class="ds-demo-block coop-u-margin-32">Margin 32px</div>
-    <div class="ds-demo-block coop-u-margin-b-32">Margin bottom 32px</div>
-    <div class="ds-demo-block coop-u-margin-64">Margin 64px</div>
-    <div class="ds-demo-block coop-u-margin-b-64">Margin bottom 64px</div>
-    <div class="ds-demo-block coop-u-margin-resp-b-4-2">Margin bottom: 4px medium breakpoint > 2px small breakpoint</div>
-    <div class="ds-demo-block coop-u-margin-resp-b-8-4">Margin bottom: 8px medium breakpoint > 4px small breakpoint</div>
-    <div class="ds-demo-block coop-u-margin-resp-b-16-8">Margin bottom: 16px medium breakpoint > 8px small breakpoint</div>
-    <div class="ds-demo-block coop-u-margin-resp-b-32-16">Margin bottom: 32px medium breakpoint > 16px small breakpoint</div>
-    <div class="ds-demo-block coop-u-margin-resp-b-64-32">Margin bottom: 64px medium breakpoint > 32px small breakpoint</div>
-    <h2>Padding</h2>
-    <div class="ds-demo-block coop-u-padding-0">Padding 0px</div>
-    <div class="ds-demo-block coop-u-padding-2">Padding 2px</div>
-    <div class="ds-demo-block coop-u-padding-4">Padding 4px</div>
-    <div class="ds-demo-block coop-u-padding-8">Padding 8px</div>
-    <div class="ds-demo-block coop-u-padding-16">Padding 16px</div>
-    <div class="ds-demo-block coop-u-padding-32">Padding 32px</div>
-    <div class="ds-demo-block coop-u-padding-64">Padding 64px</div>
-    <div class="ds-demo-block coop-u-padding-resp-4-2">Padding: 4px medium breakpoint > 2px small breakpoint</div>
-    <div class="ds-demo-block coop-u-padding-resp-8-4">Padding: 8px medium breakpoint > 4px small breakpoint</div>
-    <div class="ds-demo-block coop-u-padding-resp-16-8">Padding: 16px medium breakpoint > 8px small breakpoint</div>
-    <div class="ds-demo-block coop-u-padding-resp-32-16">Padding: 32px medium breakpoint > 16px small breakpoint</div>
-    <div class="ds-demo-block coop-u-padding-resp-64-32">Padding: 64px medium breakpoint > 32px small breakpoint</div>
-</div>
