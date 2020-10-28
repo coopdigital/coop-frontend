@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Assets
-id: assets
-body-page-class: dm-dark
+title: Contributing to the design system
+id: Contributing to the design system
 ---
+
 <article class="coop-l-container">
     {% include breadcrumbs.html %}
-    {% for page in site.data.contentful.spaces.design-system-content.landingPage %}
-        {% if page.sys.id == '4vQeNl83y8WyeGAcU60wOU' %}
+    {% for page in site.data.contentful.spaces.design-system-content.page %}
+        {% if page.sys.id == '3bG3ueHNOWMg8RO7NRlBnD' %}
         <header>
             <div class="coop-l-grid">
                 <div class="coop-l-grid__item coop-l-grid__item--medium-8 intro-box">
@@ -18,9 +18,13 @@ body-page-class: dm-dark
                 </div>
             </div>
         </header>
-        <section class="ds-section">
-            {{ page.content | markdownify }}
-        </section>
+        <div class="coop-l-grid">
+            <div class="coop-l-grid__item coop-l-grid__item--medium-7">
+                <section class="ds-section">
+                    {{ page.content | markdownify }}
+                </section>
+            </div>
+        </div>
         {% endif %}
     {% endfor %}
     </article>
