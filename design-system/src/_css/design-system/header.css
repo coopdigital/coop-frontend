@@ -104,3 +104,17 @@
 .ds-nav__list-link.is--active {
     text-decoration: underline;
 }
+
+
+.ds-header-example {
+    padding: 16px 0 10px 0;
+    margin-bottom: 32px;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,.1);
+    background-color: var(--color-white);
+}
+
+@media (--mq-large) {
+    .ds-header-example {
+        padding: 32px 0 28px 0;
+    }
+}
