@@ -9,6 +9,11 @@
 
   /* Coop colours */
   --color-brand-coop-light-blue: #f3f9fd;
+
+  /* Co-op Legal Services (Blue) */
+  --color-brand-cls-blue-dark: #114D94;
+  --color-brand-cls-blue-mid: #0761C2;
+  --color-brand-cls-blue-light: #287CDF;
   
   /* Bereavement Advice Centre (Purple) */
   --color-brand-bac-purple: #674170;
