@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-layout",
-  "version": "3.2.7",
+  "version": "3.2.8",
   "description": "CSS Foundations: Layout",
   "main": "dist/layout.css",
   "style": "src/layout.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/foundations-layout"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.5.0"
+    "@coopdigital/foundations-vars": "^3.6.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
