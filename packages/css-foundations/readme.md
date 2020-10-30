@@ -4,11 +4,9 @@ Co-op CSS Foundations contains all the core CSS styles needed to build Co-op bra
 The foundations set the basic Co-op look and feel - they should be included in all Co-op services.
 
 ## Installation
-Install via `npm` or Yarn:
+Install via NPM:
 ```bash
 $ npm install @coopdigital/css-foundations --save
-# OR
-$ yarn add @coopdigital/css-foundations
 ```
 
 ## Usage
@@ -60,3 +58,11 @@ CSS Foundations follows a modular architecture and as such is composed out of se
 
 ### How to develop?
 This package only serves as a master package for all individual CSS modules. Development should be done within individual package repositories, following general guidelines.
+
+## Changelog
+
+### 6.2.1 (Feature release)
+Feature
+Foundations-global - We’ve added a padding class so logo meets minimum tap target size.
+
+_Previous releases did not have notes_

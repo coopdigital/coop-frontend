@@ -1,12 +1,10 @@
 # component-skipnav
-Sskip navigation link to create efficient access for users with certain disabilities.
+Skip navigation links to create efficient access for users who navigate using a keyboard.
 
 ## Installation
-Install via `npm` or Yarn:
+Install with NPM:
 ```bash
 $ npm install @coopdigital/component-skipnav --save
-# OR
-$ yarn add @coopdigital/component-skipnav
 ```
 
 ## Usage
@@ -24,17 +22,17 @@ If you use a `postcss-import` plugin, it gets even easier:
 ```css
 @import "@coopdigital/component-skipnav";
 ```
-
-## Examples
-Here's a bunch of examples, showing how you can integrate this CSS module in your project, based on most popular stacks of project. You can either use a post-processed and pre-built CSS form the `dist` directory, to use PostCSS sources from the `src` dir.
-
-The latter have certain dependencies, which should be consumed by your frontend toolkit to postprocess the CSS correctly.
-
-### Vue.js
-TBD
-
-### React.js
-TBD
+HTML can be copied from the example on the design system website or can be found in the `/dist` folder in the package.
 
 ## Development
-TBD
+For information on how to develop this package see the [developing foundations and components forthe design system documentation](https://github.com/coopdigital/coop-frontend/blob/master/packages/README.md).
+
+## Changelog
+
+### 2.2.0 (Fix release)
+Fixes
+We’ve made fixes the skip navigation.
+
+Fix background colour and hover not passing colour contrast guidelines.
+
+_Previous releases did not have notes_

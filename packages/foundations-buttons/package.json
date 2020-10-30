@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-buttons",
-  "version": "2.2.6",
+  "version": "2.3.0",
   "description": "CSS Foundations: Buttons",
   "main": "dist/buttons.css",
   "style": "src/buttons.pcss",
@@ -22,8 +22,8 @@
     "directory": "packages/foundations-buttons"
   },
   "devDependencies": {
-    "@coopdigital/foundations-layout": "^3.2.5",
-    "@coopdigital/foundations-vars": "^3.4.0"
+    "@coopdigital/foundations-layout": "^3.2.7",
+    "@coopdigital/foundations-vars": "^3.5.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-layout": ">= 3.2.0 < 4",

@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--membership",
-  "version": "3.0.8",
+  "version": "3.0.10",
   "description": "Co-op Shared Component: Membership",
   "main": "dist/membership.css",
   "style": "src/membership.pcss",
@@ -20,9 +20,9 @@
     "directory": "packages/shared-component--membership"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^2.2.6",
-    "@coopdigital/foundations-layout": "^3.2.5",
-    "@coopdigital/foundations-vars": "^3.4.0"
+    "@coopdigital/foundations-buttons": "^2.3.0",
+    "@coopdigital/foundations-layout": "^3.2.7",
+    "@coopdigital/foundations-vars": "^3.5.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-buttons": ">= 2.2.3 < 3",
