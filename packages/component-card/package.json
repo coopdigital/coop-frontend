@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-card",
-  "version": "3.2.6",
+  "version": "3.2.7",
   "description": "Co-op Components: Card",
   "main": "dist/card.css",
   "style": "src/card.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/component-card"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.6.0"
+    "@coopdigital/foundations-vars": "^3.6.1"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
