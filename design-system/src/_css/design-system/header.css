@@ -37,10 +37,6 @@
     text-decoration: none;
 }
 
-.ds-header .coop-l-container {
-    max-height: 40px;
-}
-
 .coop-logo svg {
     display: inline-block;
 }
@@ -59,3 +55,66 @@
     vertical-align: top;
 }
 
+.ds-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (--mq-medium) {
+    .ds-nav {
+        flex-direction: row;
+    }
+}
+
+.ds-nav__list {
+    margin: 16px 0 0 0;
+}
+
+@media (--mq-medium) {
+    .ds-nav__list {
+        margin-top: 4px;
+        margin-left: auto;
+    }
+}
+
+.ds-nav__list-link {
+    margin-left: 0;
+    margin-right: 16px;
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+@media (--mq-medium) {
+    .ds-nav__list-link {
+        margin-left: 32px;
+        margin-right: 0;
+    }
+}
+
+.ds-nav__list-link:hover {
+    color: var(--color-black);
+    text-decoration: underline;
+}
+
+.ds-header--inner .ds-nav__list-link,
+.ds-header--inner .ds-nav__list-link:hover {
+    color: var(--color-white);
+}
+
+.ds-nav__list-link.is--active {
+    text-decoration: underline;
+}
+
+
+.ds-header-example {
+    padding: 16px 0 10px 0;
+    margin-bottom: 32px;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,.1);
+    background-color: var(--color-white);
+}
+
+@media (--mq-large) {
+    .ds-header-example {
+        padding: 32px 0 28px 0;
+    }
+}
