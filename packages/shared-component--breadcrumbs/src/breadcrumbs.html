@@ -1,0 +1,72 @@
+{% macro render(ancestorPage, parentPage, page, request) %}
+
+  <nav class="coop-c-breadcrumbs" aria-label="Breadcrumb">
+    <div class="coop-l-container">
+      <ul class="coop-u-list-bare coop-u-list-inline coop-u-margin-0">
+
+        {# --------------------------------------
+          # If grandchild page, load three breadcrumbs
+        -------------------------------------- #}
+        {% if ancestorPage.fields.url.data == '/' %}
+
+          <li class="coop-c-breadcrumbs__list-item">
+            <a data-contenttype="Header" data-contentparent="Breadcrumb" data-linktext="Home" class="coop-c-breadcrumbs__link" href="/">Home</a>
+            <span class="coop-c-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="-7 -5 22 22">
+                <path d="M1 1a.996.996 0 000 1.41l3.88 3.88L1 10.17a.996.996 0 101.41 1.41L7 6.99a.996.996 0 000-1.41L2.41.99C2.03.61 1.39.61 1 1z" fill="currentColor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+          </li>
+          <li class="coop-c-breadcrumbs__list-item">
+            <a data-contenttype="Header" data-contentparent="Breadcrumb" data-linktext="{{ parentPage.fields.title.data }}" class="coop-c-breadcrumbs__link" href="https://{{ request.META['HTTP_HOST'] }}/{{ parentPage.fields.url.data }}/">{{ parentPage.fields.title.data }}</a>
+            <span class="coop-c-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="-7 -5 22 22">
+                <path d="M1 1a.996.996 0 000 1.41l3.88 3.88L1 10.17a.996.996 0 101.41 1.41L7 6.99a.996.996 0 000-1.41L2.41.99C2.03.61 1.39.61 1 1z" fill="currentColor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+          </li>
+          <li class="coop-c-breadcrumbs__list-item">
+            {{ page.fields.title.data }}
+          </li>
+
+        {% else %}
+
+          {# --------------------------------------
+            # If great-grandchild page, load four breadcrumbs
+          -------------------------------------- #}
+
+          <li class="coop-c-breadcrumbs__list-item">
+            <a data-contenttype="Header" data-contentparent="Breadcrumb" data-linktext="Home" class="coop-c-breadcrumbs__link" href="/">Home</a>
+            <span class="coop-c-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="-7 -5 22 22">
+                <path d="M1 1a.996.996 0 000 1.41l3.88 3.88L1 10.17a.996.996 0 101.41 1.41L7 6.99a.996.996 0 000-1.41L2.41.99C2.03.61 1.39.61 1 1z" fill="currentColor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+          </li>
+          <li class="coop-c-breadcrumbs__list-item">
+            <a data-contenttype="Header" data-contentparent="Breadcrumb" data-linktext="{{ ancestorPage.fields.title.data }}" class="coop-c-breadcrumbs__link" href="https://{{ request.META['HTTP_HOST'] }}/{{ ancestorPage.fields.url.data }}/">{{ ancestorPage.fields.title.data }}</a>
+            <span class="coop-c-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="-7 -5 22 22">
+                <path d="M1 1a.996.996 0 000 1.41l3.88 3.88L1 10.17a.996.996 0 101.41 1.41L7 6.99a.996.996 0 000-1.41L2.41.99C2.03.61 1.39.61 1 1z" fill="currentColor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+          </li>
+          <li class="coop-c-breadcrumbs__list-item">
+            <a data-contenttype="Header" data-contentparent="Breadcrumb" data-linktext="{{ parentPage.fields.title.data }}" class="coop-c-breadcrumbs__link" href="https://{{ request.META['HTTP_HOST'] }}/{{ ancestorPage.fields.url.data }}/{{ parentPage.fields.url.data }}/">{{ parentPage.fields.title.data }}</a>
+            <span class="coop-c-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="-7 -5 22 22">
+                <path d="M1 1a.996.996 0 000 1.41l3.88 3.88L1 10.17a.996.996 0 101.41 1.41L7 6.99a.996.996 0 000-1.41L2.41.99C2.03.61 1.39.61 1 1z" fill="currentColor" fill-rule="evenodd"></path>
+              </svg>
+            </span>
+          </li>
+          <li class="coop-c-breadcrumbs__list-item">
+            {{ page.fields.title.data }}
+          </li>
+
+        {% endif %}
+
+      </ul>
+    </div>
+  </nav>
+
+{% endmacro %}
