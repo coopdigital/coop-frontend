@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--breadcrumbs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Co-op Shared Component: Breadcrumbs",
   "main": "dist/breadcrumbs.css",
   "style": "src/breadcrumbs.pcss",
