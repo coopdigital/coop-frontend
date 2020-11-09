@@ -37,6 +37,7 @@
 @import '@coopdigital/shared-component--hero';
 @import '@coopdigital/shared-component--app';
 @import '@coopdigital/shared-component--totaliser';
+@import '@coopdigital/shared-component--postcode';
 
 /* Design system */
 @import "design-system/header.css";
