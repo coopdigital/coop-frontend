@@ -1,7 +1,7 @@
 {% macro render(content, cms, config) %}
 
 {% set backgroundColour = '' %}
-{% if content.statementBackground.class %}
+{% if content.background.class %}
   {% set backgroundColour = content.background.class %}
 {% endif %}
 
