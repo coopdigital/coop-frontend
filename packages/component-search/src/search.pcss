@@ -1,24 +1,29 @@
 @import "@coopdigital/foundations-vars";
+@import "@coopdigital/foundations-forms";
 
 .coop-c-search {
   position: relative;
 }
 
 .coop-c-search__input {
+  position: relative;
   width: calc(100% - 60px);
+  margin-right: 5px;
   border-right: 0;
+  border-right-color: transparent;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;  
+}
+
+.coop-c-search__input:focus,
+.coop-c-search__button:focus { 
+  z-index: 1;
 }
 
 .coop-c-search__input--small {
   width: calc(100% - 44px);
   height: 2.76rem;
   padding: var(--spacing-4) calc(var(--spacing-4) * 2.5);
-
-  @media (--mq-medium) {
-    padding: var(--spacing-4) calc(var(--spacing-4) * 2.5);
-  }
 }
 
 .coop-c-search__button {
