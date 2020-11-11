@@ -38,6 +38,10 @@ module.exports = function (migration) {
       }
     ]);
 
+  statement.createField('background')
+    .name('Choose a background colour')
+    .type('Object')
+
   statement.displayField('name');
 
   statement.changeFieldControl(
