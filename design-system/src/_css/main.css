@@ -37,7 +37,7 @@
 @import '@coopdigital/shared-component--hero';
 @import '@coopdigital/shared-component--app';
 @import '@coopdigital/shared-component--totaliser';
-@import '@coopdigital/shared-component--linkList';
+@import '@coopdigital/shared-component--linklist';
 
 /* Design system */
 @import "design-system/header.css";
