@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--offers",
-  "version": "2.1.24",
+  "version": "2.1.25",
   "description": "Co-op Shared Component: Offers",
   "main": "dist/offers.css",
   "style": "src/offers.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--offers"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.6.1"
+    "@coopdigital/foundations-vars": "^3.6.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
