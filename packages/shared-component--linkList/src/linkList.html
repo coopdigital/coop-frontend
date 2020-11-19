@@ -1,6 +1,6 @@
 {% macro render(content, cms, config) -%}
 <div class="coop-c-list-container">
-  <h3 class="coop-c-list-container__title coop-c-list-container__title--underline">{{content.heading|safe}}</h3>
+  <h3 class="coop-c-list-container__title coop-t-h3">{{content.heading|safe}}</h3>
   <ul class="coop-c-list-container__list">
 		{% for link in content.links %}
 			{% set linkDetails = {} %}
@@ -21,7 +21,7 @@
 					})-%}
 				{%- endif -%}
 			<li>
-				<a class="coop-c-list-container__list__link" href="{% if p.type != 'externalLink' %}{{tenant_url_path}}{% endif %}{{linkDetails.url}}" data-contenttype="Link list" data-contentparent="{{content.heading}}" data-linktext="{{ linkDetails.title }}" >
+				<a class="coop-c-list-container__list-list-link" href="{% if p.type != 'externalLink' %}{{tenant_url_path}}{% endif %}{{linkDetails.url}}" data-contenttype="Link list" data-contentparent="{{content.heading}}" data-linktext="{{ linkDetails.title }}" >
 					{{linkDetails.title}}
 				</a>
 			</li>	

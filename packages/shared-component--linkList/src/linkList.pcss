@@ -1,15 +1,15 @@
-/* Link list */
-
 @import "@coopdigital/foundations-vars";
 
-.coop-c-list-container__title {
-  font-size: 28px;
-  margin-bottom: 8px;
-  padding-bottom: 8px;
+.coop-c-list-container {
+  margin-bottom: var(--spacing-32);
+
+  @media (--mq-large) {
+    margin-bottom: var(--spacing-64);
+  }
 }
 
-.coop-c-list-container__title--underline {
-  border-bottom: 1px solid #c4c4c4;
+.coop-c-list-container__title {
+  border-bottom: 1px solid var(--color-grey-mid);
 }
 
 .coop-c-list-container__list {
@@ -18,24 +18,16 @@
   margin-top: 0;
 
   & li {
-    font-size: 20px;
-    margin: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-
-    @media (--mq-xsmall) {
-      font-size: 24px;
-    }
+    margin-bottom: var(--spacing-8);
   }
 }
 
-.coop-c-list-container__list__link {
-  color: black;
-  font-size: var(--type-body-l);
+.coop-c-list-container__list-link {
+  color: var(--color-text);
+}
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: black;
-  }
+.coop-c-list-container__list-link:hover,
+.coop-c-list-container__list-link:focus,
+.coop-c-list-container__list-link:active {
+  color: var(--color-text);
 }
