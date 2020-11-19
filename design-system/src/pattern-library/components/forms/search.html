@@ -28,7 +28,7 @@ id: pattern-library
         <nav class="coop-l-container">
             <ul class="in-page-nav in-page-nav--horz">
                 <li><a href="#example">Example</a></li>
-                <!-- <li><a href="#design-and-content">Design and content</a></li> -->
+                <li><a href="#design-and-content">Design and content</a></li>
                 <!-- <li><a href="#accessibility">Accessibility</a></li> -->
             </ul>
         </nav>
@@ -47,14 +47,14 @@ id: pattern-library
                                 <div class="tabs-container__panel tabs-container__panel--preview" id="Tab1">
                                     <div class="coop-l-grid">
                                         <div class="coop-l-grid__item coop-l-grid__item--medium-8 coop-l-grid__item--large-6">
-                                            {% include pattern-library/components/component-search/src/component.html %}
+                                            {% include pattern-library/components/component-search/dist/search.html %}
                                         </div>
                                     </div>
                                 </div>
                                 <h3 class="tabs-container__title" id="TabPanelTitle-Tab2">HTML</h3>
                                 <div class="tabs-container__panel tabs-container__panel--code" id="Tab2">
                                     {% highlight html %}
-                                    {% include pattern-library/components/component-search/src/component.html %}
+                                    {% include pattern-library/components/component-search/dist/search.html %}
                                     {% endhighlight %}
                                 </div>
                             </div>
@@ -71,10 +71,10 @@ id: pattern-library
     <div class="coop-l-container">
         <div class="coop-l-grid">
             <div class="coop-l-grid__item coop-l-grid__item--medium-7">
-                <!-- <section id="design-and-content" class="m-tb-med-x margin-bb padding-bh">
+                <section id="design-and-content" class="m-tb-med-x margin-bb padding-bh">
                     <h2>Design and content</h2>
                     <p>{{ designPattern.design_and_content_documentation | markdownify }}</p>
-                </section> -->
+                </section>
                 <!-- <section id="accessibility" class="m-tb-med-x margin-bb padding-bh">
                     <h2>Accessibility</h2>
                     <p>{{ designPattern.accessibility_documentation | markdownify }}</p>

@@ -628,3 +628,16 @@
   stroke: var(--color-brand-membership-blue-lightest);
   border-color: var(--color-brand-membership-blue-lightest);
 }
+
+/* Health (Blue) */ 
+.coop-u-brand-health-blue-dark-bg {
+  background: var( --color-brand-health-blue-dark);
+}
+
+.coop-u-brand-health-blue-dark-fill {
+  fill: var(--color-brand-health-blue-dark);
+}
+.coop-u-brand-health-blue-dark-stroke {
+  stroke: var(--color-brand-health-blue-dark);
+  border-color: var(--color-brand-health-blue-dark);
+}
