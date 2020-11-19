@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-search",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Co-op Component Search",
   "main": "dist/search.css",
   "style": "src/search.pcss",
@@ -20,8 +20,8 @@
     "directory": "packages/component-template"
   },
   "devDependencies": {
-    "@coopdigital/foundations-forms": "^5.0.10",
-    "@coopdigital/foundations-vars": "^3.6.2"
+    "@coopdigital/foundations-forms": "^5.1.0",
+    "@coopdigital/foundations-vars": "^3.7.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-forms": ">= 4.0.3 < 6",

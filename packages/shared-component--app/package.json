@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--app",
-  "version": "1.2.16",
+  "version": "1.3.0",
   "description": "Co-op Component: App download",
   "main": "dist/app-download.css",
   "style": "src/app-download.pcss",
@@ -20,10 +20,10 @@
     "directory": "packages/shared-component--app"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^2.3.3",
-    "@coopdigital/foundations-layout": "^3.2.10",
-    "@coopdigital/foundations-typography": "^4.1.27",
-    "@coopdigital/foundations-vars": "^3.6.2"
+    "@coopdigital/foundations-buttons": "^2.4.0",
+    "@coopdigital/foundations-layout": "^3.3.0",
+    "@coopdigital/foundations-typography": "^4.2.0",
+    "@coopdigital/foundations-vars": "^3.7.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-buttons": ">= 2.1.14 < 3",
