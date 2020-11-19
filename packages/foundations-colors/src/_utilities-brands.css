@@ -629,9 +629,9 @@
   border-color: var(--color-brand-membership-blue-lightest);
 }
 
-/* Health (Blue) */ 
+/* Health (Blue) */
 .coop-u-brand-health-blue-dark-bg {
-  background: var( --color-brand-health-blue-dark);
+  background: var(--color-brand-health-blue-dark);
 }
 
 .coop-u-brand-health-blue-dark-fill {
