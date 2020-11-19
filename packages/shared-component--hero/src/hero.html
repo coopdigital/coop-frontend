@@ -90,6 +90,20 @@
       {% endif %}
       {% if content.link %}
         {% with link = cms.get_entry(content.link.sys.id) %}
+          {%- set buttonClass = 'coop-btn coop-btn--small coop-u-margin-tq' -%}
+          {%- if link.fields.linkStyle.data == 'Link - black' -%}
+            {%- set linkClass = 'coop-t-link-black' -%}
+          {%- elif link.fields.linkStyle.data == 'Link - white' -%}
+            {%- set linkClass = 'coop-t-link-white' -%}
+          {%- elif link.fields.linkStyle.data == 'Button - primary' -%}
+            {%- set linkClass = buttonClass + ' coop-btn--primary' -%}
+          {%- elif link.fields.linkStyle.data == 'Button - secondary' -%}
+            {%- set linkClass = buttonClass + ' coop-btn--blue' -%}
+          {%- elif link.fields.linkStyle.data == 'Button - white' -%}
+            {%- set linkClass = buttonClass + ' coop-btn--white ' -%}
+          {%- else -%}
+            {%- set linkClass = '' -%}
+          {%- endif -%}
           {%- set href = {} -%}
           {% if link.type == 'internalLink' %}
             {% if link.data.fields.page %}
@@ -101,7 +115,7 @@
             {%- set _ = href.update({"url" : link.fields.url.data }) -%}
           {% endif %}
           <div class="coop-c-hero__link">
-            <a href="{{href.url}}" class="coop-t-link {{linkColour}}" data-contenttype="Hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
+            <a href="{{href.url}}" class="{{linkClass}}" data-contenttype="Hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
           </div>
         {% endwith %}
       {% endif %}

@@ -1,0 +1,6 @@
+{
+  "id": "statement-colour-picker",
+  "name": "Statement colour picker",
+  "srcdoc": "./index.html",
+  "fieldTypes": ["Object"]
+}

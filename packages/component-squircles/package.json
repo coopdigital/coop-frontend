@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-squircles",
-  "version": "2.1.24",
+  "version": "2.1.25",
   "description": "Co-op Component: Squircles",
   "main": "dist/squircles.css",
   "style": "src/squircles.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/component-squircles"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.6.1"
+    "@coopdigital/foundations-vars": "^3.6.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"

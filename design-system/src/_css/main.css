@@ -18,7 +18,6 @@
 @import "@coopdigital/component-card--product";
 @import "@coopdigital/component-date-input";
 @import "@coopdigital/component-skipnav";
-
 @import '@coopdigital/component-tags';
 @import '@coopdigital/component-squircles';
 @import '@coopdigital/component-notification';
@@ -37,6 +36,7 @@
 @import '@coopdigital/shared-component--hero';
 @import '@coopdigital/shared-component--app';
 @import '@coopdigital/shared-component--totaliser';
+@import '@coopdigital/shared-component--postcode';
 
 /* Design system */
 @import "design-system/header.css";
