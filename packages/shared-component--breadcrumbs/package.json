@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--breadcrumbs",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Co-op Shared Component: Breadcrumbs",
   "main": "dist/breadcrumbs.css",
   "style": "src/breadcrumbs.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--breadcrumbs"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.6.2"
+    "@coopdigital/foundations-vars": "^3.7.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.8 < 4"
