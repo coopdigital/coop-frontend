@@ -2,8 +2,8 @@
   "name": "@coopdigital/shared-component--linklist",
   "version": "2.3.0",
   "description": "Co-op Shared Component: link list",
-  "main": "dist/linklist.css",
-  "style": "src/linklist.pcss",
+  "main": "dist/linkList.css",
+  "style": "src/linkList.pcss",
   "author": "@coopdigital",
   "contributors": [
     "Gup Badyal <gupreet.baydal@coop.co.uk> (https://github.com/Gup-B)"
