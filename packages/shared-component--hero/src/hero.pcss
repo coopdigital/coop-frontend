@@ -8,6 +8,24 @@
   margin-bottom: var(--spacing-32);
   position: relative;
   z-index: 0;
+
+  .coop-c-signpost {
+    display: inline-block;
+    width: auto;
+
+    &__content {
+      min-height: 3.3rem;
+    }
+
+    &__icon {
+      margin-left: var(--spacing-16);
+    }
+
+    a {
+      color: var(--color-text);
+    }
+  }
+
 }
 @media (--mq-medium) {
   .coop-c-hero {

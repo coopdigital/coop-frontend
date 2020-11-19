@@ -1,3 +1,5 @@
+{% import '/shared-component--signpost/src/signpost.html' as signpost %}
+
 {% macro render(content, cms) %}
 
 {% set mediaClass = '' %}
@@ -91,29 +93,47 @@
       {% if content.link %}
         {% with link = cms.get_entry(content.link.sys.id) %}
           {%- set buttonClass = 'coop-btn coop-btn--small coop-u-margin-tq' -%}
-          {%- if link.fields.linkStyle.data == 'Link - black' -%}
-            {%- set linkClass = 'coop-t-link-black' -%}
-          {%- elif link.fields.linkStyle.data == 'Link - white' -%}
-            {%- set linkClass = 'coop-t-link-white' -%}
-          {%- elif link.fields.linkStyle.data == 'Button - primary' -%}
-            {%- set linkClass = buttonClass + ' coop-btn--primary' -%}
-          {%- elif link.fields.linkStyle.data == 'Button - secondary' -%}
-            {%- set linkClass = buttonClass + ' coop-btn--blue' -%}
-          {%- elif link.fields.linkStyle.data == 'Button - white' -%}
-            {%- set linkClass = buttonClass + ' coop-btn--white ' -%}
-          {%- else -%}
-            {%- set linkClass = '' -%}
-          {%- endif -%}
-          {%- set href = {} -%}
-          {% if link.type == 'internalLink' %}
-            {% if link.data.fields.page %}
-              {% with internalLink = cms.get_entry(link.data.fields.page.sys.id) %}
-                {%- set _ = href.update({"url" : tenant_url_path + internalLink.full_url_path}) -%}
-              {% endwith %}
+
+          {% if link.type == 'internalLink' or link.type == 'externalLink' %}
+            {%- if link.fields.linkStyle.data == 'Link - black' -%}
+              {%- set linkClass = 'coop-t-link-black' -%}
+            {%- elif link.fields.linkStyle.data == 'Link - white' -%}
+              {%- set linkClass = 'coop-t-link-white' -%}
+            {%- elif link.fields.linkStyle.data == 'Button - primary' -%}
+              {%- set linkClass = buttonClass + ' coop-btn--primary' -%}
+            {%- elif link.fields.linkStyle.data == 'Button - secondary' -%}
+              {%- set linkClass = buttonClass + ' coop-btn--blue' -%}
+            {%- elif link.fields.linkStyle.data == 'Button - white' -%}
+              {%- set linkClass = buttonClass + ' coop-btn--white ' -%}
+            {%- else -%}
+              {%- set linkClass = '' -%}
+            {%- endif -%}
           {% endif %}
+          
+          {%- set href = {} -%}
+
+          {# --------------------------------------
+          # Handle internal links
+          -------------------------------------- #}
+          {% if link.type == 'internalLink' and link.data.fields.page %}
+            {% with internalLink = cms.get_entry(link.data.fields.page.sys.id) %}
+              {%- set _ = href.update({"url" : tenant_url_path + internalLink.full_url_path}) -%}
+            {% endwith %}
+
+          {# --------------------------------------
+          # Handle signpost links
+          -------------------------------------- #}
+          {% elif link.type == 'signpost' %}
+            {% set signpostConfig = {'contentParent': 'Hero'} %}
+            {{ signpost.render(link.data, cms, signpostConfig) }}
+
+          {# --------------------------------------
+          # Handle external links
+          -------------------------------------- #}
           {% else %}
             {%- set _ = href.update({"url" : link.fields.url.data }) -%}
           {% endif %}
+
           <div class="coop-c-hero__link">
             <a href="{{href.url}}" class="{{linkClass}}" data-contenttype="Hero" data-contentparent="{{content.heading}}" data-linktext="{{link.fields.title.data}}">{{link.fields.title.data|safe}}</a>
           </div>
