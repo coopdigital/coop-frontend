@@ -93,6 +93,160 @@
   border-color: var(--color-brand-bac-purple);
 }
 
+/* Insurance */
+.coop-u-brand-insurance-blue {
+  color: var(--color-brand-insurance-blue);
+}
+
+.coop-u-brand-insurance-blue-bg {
+  background: var(--color-brand-insurance-blue);
+}
+
+.coop-u-brand-insurance-blue-fill {
+  fill: var(--color-brand-insurance-blue);
+}
+
+.coop-u-brand-insurance-blue-stroke {
+  stroke: var(--color-brand-insurance-blue);
+  border-color: var(--color-brand-insurance-blue);
+}
+
+.coop-u-brand-insurance-blue-mid {
+  color: var(--color-brand-insurance-blue-mid);
+}
+
+.coop-u-brand-insurance-blue-mid-bg {
+  background: var(--color-brand-insurance-blue-mid);
+}
+
+.coop-u-brand-insurance-blue-mid-fill {
+  fill: var(--color-brand-insurance-blue-mid);
+}
+
+.coop-u-brand-insurance-blue-mid-stroke {
+  stroke: var(--color-brand-insurance-blue-mid);
+  border-color: var(--color-brand-insurance-blue-mid);
+}
+
+.coop-u-brand-insurance-blue-light {
+  color: var(--color-brand-insurance-blue-light);
+}
+
+.coop-u-brand-insurance-blue-light-bg {
+  background: var(--color-brand-insurance-blue-light);
+}
+
+.coop-u-brand-insurance-blue-light-fill {
+  fill: var(--color-brand-insurance-blue-light);
+}
+
+.coop-u-brand-insurance-blue-light-stroke {
+  stroke: var(--color-brand-insurance-blue-light);
+  border-color: var(--color-brand-insurance-blue-light);
+}
+
+.coop-u-brand-insurance-orange {
+  color: var(--color-brand-insurance-orange);
+}
+
+.coop-u-brand-insurance-orange-bg {
+  background: var(--color-brand-insurance-orange);
+}
+
+.coop-u-brand-insurance-orange-fill {
+  fill: var(--color-brand-insurance-orange);
+}
+
+.coop-u-brand-insurance-orange-stroke {
+  stroke: var(--color-brand-insurance-orange);
+  border-color: var(--color-brand-insurance-orange);
+}
+
+.coop-u-brand-insurance-teal {
+  color: var(--color-brand-insurance-teal);
+}
+
+.coop-u-brand-insurance-teal-bg {
+  background: var(--color-brand-insurance-teal);
+}
+
+.coop-u-brand-insurance-teal-fill {
+  fill: var(--color-brand-insurance-teal);
+}
+
+.coop-u-brand-insurance-teal-stroke {
+  stroke: var(--color-brand-insurance-teal);
+  border-color: var(--color-brand-insurance-teal);
+}
+
+.coop-u-brand-insurance-green {
+  color: var(--color-brand-insurance-green);
+}
+
+.coop-u-brand-insurance-green-bg {
+  background: var(--color-brand-insurance-green);
+}
+
+.coop-u-brand-insurance-green-fill {
+  fill: var(--color-brand-insurance-green);
+}
+
+.coop-u-brand-insurance-green-stroke {
+  stroke: var(--color-brand-insurance-green);
+  border-color: var(--color-brand-insurance-green);
+}
+
+.coop-u-brand-insurance-green-light {
+  color: var(--color-brand-insurance-green-light);
+}
+
+.coop-u-brand-insurance-green-light-bg {
+  background: var(--color-brand-insurance-green-light);
+}
+
+.coop-u-brand-insurance-green-light-fill {
+  fill: var(--color-brand-insurance-green-light);
+}
+
+.coop-u-brand-insurance-green-light-stroke {
+  stroke: var(--color-brand-insurance-green-light);
+  border-color: var(--color-brand-insurance-green-light);
+}
+
+.coop-u-brand-insurance-grey {
+  color: var(--color-brand-insurance-grey);
+}
+
+.coop-u-brand-insurance-grey-bg {
+  background: var(--color-brand-insurance-grey);
+}
+
+.coop-u-brand-insurance-grey-fill {
+  fill: var(--color-brand-insurance-grey);
+}
+
+.coop-u-brand-insurance-grey-stroke {
+  stroke: var(--color-brand-insurance-grey);
+  border-color: var(--color-brand-insurance-grey);
+}
+
+.coop-u-brand-insurance-grey-light {
+  color: var(--color-brand-insurance-grey-light);
+}
+
+.coop-u-brand-insurance-grey-light-bg {
+  background: var(--color-brand-insurance-grey-light);
+}
+
+.coop-u-brand-insurance-grey-light-fill {
+  fill: var(--color-brand-insurance-grey-light);
+}
+
+.coop-u-brand-insurance-grey-light-stroke {
+  stroke: var(--color-brand-insurance-grey-light);
+  border-color: var(--color-brand-insurance-grey-light);
+}
+
 /* Membership (Purple) */
 .coop-u-brand-membership-purple-dark {
   color: var(--color-brand-membership-purple-dark);

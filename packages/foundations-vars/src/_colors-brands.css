@@ -18,6 +18,17 @@
   /* Bereavement Advice Centre (Purple) */
   --color-brand-bac-purple: #674170;
 
+  /* Insurance */
+  --color-brand-insurance-blue: var(--color-blue-light-8);
+  --color-brand-insurance-blue-mid: var(--color-blue-light-11);
+  --color-brand-insurance-blue-light: var(--color-blue-light-9);
+  --color-brand-insurance-orange: var(--color-orange-light-8);
+  --color-brand-insurance-teal: var(--color-teal-light-7);
+  --color-brand-insurance-green: var(--color-green-mid-5);
+  --color-brand-insurance-green-light: var(--color-green-light-8);
+  --color-brand-insurance-grey: var(--color-grey-mid-light);
+  --color-brand-insurance-grey-light: var(--color-grey-neutral-light);
+
   /* Membership (Purple) */
   --color-brand-membership-purple-dark-1: #483965;
   --color-brand-membership-purple-dark-2: #635385;
