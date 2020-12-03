@@ -18,11 +18,15 @@
   position: absolute;
   left: -9999px;
   top: 0;
-  font-size: var(--type-medium--body);
+  font-size: var(--type-body-s);
   padding: var(--spacing-medium--1-4);
   color: var(--color-black);
   background: var(--color-yellow-mid-5);
   white-space: nowrap;
+
+  @media (--mq-medium) {
+    font-size: var(--type-body-l);
+  }
 }
 
 .coop-c-skip-nav__link:hover {
