@@ -457,7 +457,7 @@
 }
 .coop-u-green-light-6,
 .coop-u-green-bright {
-  color: var(--color-green-light-68);
+  color: var(--color-green-light-6);
 }
 .coop-u-green-light-6-bg,
 .coop-u-green-bright-bg {
@@ -675,7 +675,7 @@
   fill: var(--color-indigo-light-9);
 }
 .coop-u-indigo-light-10 {
-  color: var(--color-indigo-light-96);
+  color: var(--color-indigo-light-10);
 }
 .coop-u-indigo-light-10-bg {
   background: var(--color-indigo-light-10);
