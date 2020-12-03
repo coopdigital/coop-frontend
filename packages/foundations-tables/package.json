@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-tables",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "CSS Foundations: Tables",
   "main": "dist/tables.css",
   "style": "src/tables.pcss",
