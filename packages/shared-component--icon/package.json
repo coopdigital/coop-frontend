@@ -1,0 +1,26 @@
+{
+  "name": "@coopdigital/shared-component--icon",
+  "version": "0.1.0",
+  "description": "Co-op Shared Component: Icon",
+  "main": "dist/icon.css",
+  "style": "src/icon.pcss",
+  "author": "@coopdigital",
+  "contributors": [
+    "John Peden <john.peden@coop.co.uk> (https://github.com/jcpeden)"
+  ],
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/component-template"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "df0751be843e1e1773637f2acee0956a9e8efa5e"
+}
