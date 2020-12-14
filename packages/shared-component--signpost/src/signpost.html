@@ -1,3 +1,5 @@
+{% import '/shared-component--icon/src/icon.html' as icon %}
+
 {% macro render(content, cms, config) %}
   <div class="coop-c-signpost-list__item coop-c-signpost">
     {% if content.fields.link and content.fields.link.sys.id %}
@@ -72,6 +74,19 @@
     {% endif %}
 
     <div class="coop-c-signpost__content">
+
+      {# --------------------------------------
+        # Render an icon if provided
+      -------------------------------------- #}
+      {% if content.fields.icon %}
+        <span class="coop-c-signpost__icon coop-c-signpost__icon--prefix" aria-hidden="true">
+          {%- set iconName = content.fields.icon | lower | replace(" ","_") -%}
+          {%- set iconClass = "coop-c-signpost__icon__svg" -%}
+
+          {{ icon.render(iconName, iconClass) }}
+        </span>
+      {% endif %}
+
       <h3 class="coop-c-signpost__title">
         {{ content.fields.title }}
       </h3>

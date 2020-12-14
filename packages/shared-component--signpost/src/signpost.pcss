@@ -177,9 +177,23 @@ a:focus .coop-c-signpost__title {
   overflow: hidden;
 }
 
+/* Option icon that prefixes signpost text */
+.coop-c-signpost__icon--prefix {
+  max-width: 2rem;
+  max-height: 2rem;
+  flex-basis: 2rem;
+  margin-right: 0.4rem;
+}
+
 a:hover .coop-c-signpost__icon,
 a:focus .coop-c-signpost__icon {
   transform: translateX(0.25rem);
+}
+
+/* Do not translate prefix icons on hover */
+a:hover .coop-c-signpost__icon--prefix,
+a:focus .coop-c-signpost__icon--prefix {
+  transform: none;
 }
 
 .coop-c-signpost__icon__svg {
