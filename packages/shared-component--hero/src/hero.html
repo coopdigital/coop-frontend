@@ -1,4 +1,4 @@
-{% import '/shared-component--signpost/src/signpost.html' as signpost %}
+
   
   {% macro render(content, cms) %}
   
@@ -94,6 +94,9 @@
           {% with link = cms.get_entry(content.link.sys.id) %}
             
             {% if link.type == 'signpost' %}
+
+              {% import '/shared-component--signpost/src/signpost.html' as signpost %}
+
               {% set signpostConfig = {'contentParent': 'Hero'} %}
               {{ signpost.render(link.data, cms, signpostConfig) }}
             {% elif link.type == 'internalLink' or link.type == 'externalLink' %}
