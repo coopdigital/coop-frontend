@@ -81,7 +81,7 @@
         {% import '/shared-component--icon/src/icon.html' as icon %}
 
         <span class="coop-c-signpost__icon coop-c-signpost__icon--prefix" aria-hidden="true">
-          {%- set iconName = content.fields.icon | lower | replace(" ","_") -%}
+          {%- set iconName = content.fields.icon | lower | replace(" ","-") -%}
           {%- set iconClass = "coop-c-signpost__icon__svg" -%}
 
           {{ icon.render(iconName, iconClass) }}
