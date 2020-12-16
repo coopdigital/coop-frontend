@@ -105,6 +105,15 @@
     text-decoration: underline;
 }
 
+.ds-nav__list li {
+    display: block;
+}
+
+@media (--mq-medium) {
+    .ds-nav__list li {
+        display: inline-block;
+    }
+}
 
 .ds-header-example {
     padding: 16px 0 10px 0;
