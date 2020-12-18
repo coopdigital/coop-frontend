@@ -1,0 +1,68 @@
+{
+  "color": {
+    "button": {
+      "green": {
+        "primary": {
+          "value": "#0f8482"
+        },
+        "primary-hover": {
+          "value": "#1c6b6a"
+        },
+        "primary-active": {
+          "value": "#124948"
+        }
+      },
+      "blue": {
+        "base": {
+          "value": "#005878"
+        },
+        " ": {
+          "value": "{color.button.blue.base.value}"
+        },
+        "hover": {
+          "value": "#003e55"
+        },
+        "active": {
+          "value": "#001f2b"
+        }
+      },
+      "grey": {
+        "base": {
+          "value": "#efefef"
+        },
+        " ": {
+          "value": "{color.button.grey.base.value}"
+        },
+        "hover": {
+          "value": "{color.grey.mid-light.value}"
+        },
+        "active": {
+          "value": "{color.grey.mid.value}"
+        }
+      },
+      "white": {
+        "base": {
+          "value": "{color.white.value}"
+        },
+        " ": {
+          "value": "{color.button.white.base.value}"
+        },
+        "hover": {
+          "value": "{color.button.grey.base.value}"
+        },
+        "active": {
+          "value": "{color.grey.mid-light.value}"
+        }
+      },
+      " ": {
+        "value": "{color.button.blue.base.value}"
+      },
+      "hover": {
+        "value": "{color.button.blue.hover.value}"
+      },
+      "active": {
+        "value": "{color.button.blue.active.value}"
+      }
+    }
+  }
+}

@@ -17,6 +17,7 @@
     "postcss-import": "^13.0.0",
     "postcss-nesting": "^7.0.1",
     "prettier": "^2.2.0",
+    "style-dictionary": "^2.10.2",
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-prettier": "^1.1.2"

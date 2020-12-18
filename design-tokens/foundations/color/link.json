@@ -1,0 +1,24 @@
+{
+  "color": {
+    "link": {
+      "base": {
+        "value": "#00729a"
+      },
+      " ": {
+        "value": "{color.link.base.value}"
+      },
+      "hover": {
+        "value": "#00394e"
+      },
+      "focus": {
+        "value": "#8d44d8"
+      },
+      "active": {
+        "value": "#002c3d"
+      },
+      "visited": {
+        "value": "{color.link.active.value}"
+      }
+    }
+  }
+}

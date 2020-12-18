@@ -1,0 +1,15 @@
+{
+  "color": {
+    "text": {
+      "base": {
+        "value": "#282828"
+      },
+      " ": {
+        "value": "{color.text.base.value}"
+      },
+      "alt": {
+        "value": "#595959"
+      }
+    }
+  }
+}
