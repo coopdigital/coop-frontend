@@ -11,6 +11,28 @@
 
     <div class="coop-c-offerspromo__inner coop-u-clearfix">
 
+      <div class="coop-c-offerspromo__content">
+        <a
+            href="{{offerLink.url}}"
+            class="coop-c-offerspromo__link"
+            data-contenttype="Card|offerspromo"
+            data-contentparent="Deals"
+            data-linktext="{{content.heading}}"
+        >
+          <header class="coop-c-offerspromo__header">
+              <h3 class="coop-c-offerspromo__title">{{content.heading}}</h3>
+          </header>
+          <div class="coop-c-offerspromo__body">
+              <p>{{content.bodyText}}</p>
+          </div>
+        </a>
+        <div class="coop-c-offerspromo__terms">
+          {% with legalLink = cms.get_entry(content.legalLink.sys.id) %}
+              <p><a href="{{legalLink.fields.url.data}}">{{legalLink.fields.title.data}}</a></p>
+          {% endwith %}
+        </div>
+      </div>
+
       <div class="coop-c-offerspromo__card">
         <a
           href="{{offerLink.url}}"
@@ -40,28 +62,6 @@
               </header>
             {% endwith %}
         </a>
-      </div>
-
-      <div class="coop-c-offerspromo__content">
-        <a
-            href="{{offerLink.url}}"
-            class="coop-c-offerspromo__link"
-            data-contenttype="Card|offerspromo"
-            data-contentparent="Deals"
-            data-linktext="{{content.heading}}"
-        >
-          <header class="coop-c-offerspromo__header">
-              <h3 class="coop-c-offerspromo__title">{{content.heading}}</h3>
-          </header>
-          <div class="coop-c-offerspromo__body">
-              <p>{{content.bodyText}}</p>
-          </div>
-        </a>
-        <div class="coop-c-offerspromo__terms">
-          {% with legalLink = cms.get_entry(content.legalLink.sys.id) %}
-              <p><a href="{{legalLink.fields.url.data}}">{{legalLink.fields.title.data}}</a></p>
-          {% endwith %}
-        </div>
       </div>
 
   </div>
