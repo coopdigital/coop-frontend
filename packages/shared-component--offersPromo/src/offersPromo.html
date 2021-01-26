@@ -1,7 +1,7 @@
 
 {% import 'macros/elements/images.html' as images %}
 {% macro render(content, cms) -%}
-<article class="coop-c-offerspromo coop-u-brand-membership-pink-lightest-bg">
+<aside class="coop-c-offerspromo coop-u-brand-membership-pink-lightest-bg">
     {% set offerLink = {} %}
     {% with link = cms.get_entry(content.offerLink.sys.id) %}
         {%- set _ = offerLink.update({
@@ -65,5 +65,5 @@
       </div>
 
   </div>
-</article>
+</aside>
 {%- endmacro -%}

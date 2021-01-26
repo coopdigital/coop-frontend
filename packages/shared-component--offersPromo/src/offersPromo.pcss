@@ -17,6 +17,15 @@
   text-decoration: none;
   color: inherit;
   border: 0;
+
+  &:hover,
+  &:focus {
+    color: var(--color-text);
+
+    & p {
+      text-decoration: underline;
+    }
+  }
 }
 
 .coop-c-offerspromo__content {
@@ -143,23 +152,17 @@
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 
-  &:hover,
-  &:focus {
-    color: var(--color-text);
-  }
-
   @media (--mq-large) {
     padding: var(--spacing-16);
   }
 }
 
 .coop-c-offerspromo__content .coop-c-offerspromo__link {
-  padding: var(--spacing-24) var(--spacing-16) var(--spacing-8);
+  padding: var(--spacing-16) var(--spacing-16) var(--spacing-8);
 
   @media (--mq-large) {
     min-height: 192px;
-    padding-left: var(--spacing-24);
-    padding-right: var(--spacing-24);
+    padding: var(--spacing-24) var(--spacing-24) var(--spacing-8);
   }
 }
 
