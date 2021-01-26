@@ -17,6 +17,15 @@
   text-decoration: none;
   color: inherit;
   border: 0;
+
+  &:hover,
+  &:focus {
+    color: var(--color-text);
+
+    & p {
+      text-decoration: underline;
+    }
+  }
 }
 
 .coop-c-offerspromo__content {
@@ -142,11 +151,6 @@
   background-color: var(--color-white);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-
-  &:hover,
-  &:focus {
-    color: var(--color-text);
-  }
 
   @media (--mq-large) {
     padding: var(--spacing-16);
