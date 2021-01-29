@@ -1,0 +1,52 @@
+{%- macro render(content, cms, contentType, contentParent) -%}
+
+	{# --------------------------------------
+	 # If data is valid, set link entry value
+	-------------------------------------- #}
+	{%- if content.data -%}
+
+		{%- set linkEntry = cms.get_entry(content.data.sys.id) -%}
+
+		{# --------------------------------------
+		 # If link entry is valid, render link
+		-------------------------------------- #}
+		{%- if linkEntry.fields.page.data -%}
+
+			{%- set linkTarget = cms.get_entry(linkEntry.fields.page.data.sys.id) -%}
+
+			{# --------------------------------------
+			# Append full path if not home page
+			-------------------------------------- #}
+			{%- if linkTarget.full_url_path == '/' -%}
+				{%- set href = tenant_url_path -%}
+			{%- else -%}
+				{%- set href = tenant_url_path + linkTarget.full_url_path -%}
+			{%- endif -%}
+
+			{# --------------------------------------
+			# Strip trailing slash
+			-------------------------------------- #}
+			{%- set href = href.rstrip("/") -%}
+
+			{# --------------------------------------
+			# Append anchor if available
+			-------------------------------------- #}
+			{%- if linkEntry.fields.anchor.data -%}
+				{%- set href = href + "#" + linkEntry.fields.anchor.data -%}
+			{%- endif -%}
+
+			<a
+				class="coop-t-link"
+				href="{{ href }}"
+				title="{{ linkEntry.fields.title.data }}"
+				data-contenttype="{{ contentType }}"
+				data-contentparent="{{ contentParent }}"
+				data-linktext="{{ linkEntry.fields.title.data }}">
+					{{ linkEntry.fields.title.data }}
+			</a>
+
+		{%- endif -%}
+
+	{%- endif -%}
+
+{%- endmacro -%}
