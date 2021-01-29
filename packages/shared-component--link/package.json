@@ -1,0 +1,43 @@
+{
+  "name": "@coopdigital/shared-component--link",
+  "version": "0.0.1",
+  "description": "Co-op Shared Component: Link",
+  "author": "@coopdigital",
+  "contributors": [
+    "John Peden <john.peden@coop.co.uk> (https://github.com/jcpeden)"
+  ],
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/shared-component--link"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-typography": "^4.2.2",
+    "@coopdigital/foundations-vars": "^3.7.1"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "@coopdigital/foundations-typography": ">= 4.2.2 < 5"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--linklink#readme",
+  "keywords": [
+    "content",
+    "link"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f",
+  "dependencies": {
+    "@coopdigital/foundations-colors": "^2.6.2"
+  }
+}
