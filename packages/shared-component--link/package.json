@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--link",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Co-op Shared Component: Link",
   "author": "@coopdigital",
   "contributors": [
@@ -22,8 +22,8 @@
     "@coopdigital/foundations-vars": "^3.7.1"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
-    "@coopdigital/foundations-typography": ">= 4.2.2 < 5"
+    "@coopdigital/foundations-typography": ">= 4.2.2 < 5",
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
