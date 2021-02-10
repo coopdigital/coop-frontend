@@ -45,7 +45,7 @@ Working on a current component does not need an NPM link. Once published we use 
 From the root of the coop-frontend run
 
 ```shell script
-$ npm run build:all
+$ npm run build
 ```
 Switching to the design system directory you can then run
 
@@ -58,7 +58,7 @@ Changes will be made to the current packages will then be picked up.
 If you are getting errors go to the root of the coop-frontend repo and run:
 
 ```shell script
-$ npm ci && npm run build:all
+$ npm ci && npm run build
 ```
 
 ## Creating a Contentful page for your component
