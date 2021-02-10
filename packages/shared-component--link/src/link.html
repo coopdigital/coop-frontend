@@ -1,4 +1,4 @@
-{%- macro render(content, cms, contentType, contentParent) -%}
+{%- macro render(content, cms, config) -%}
 
 	{# --------------------------------------
 	 # If data is valid, set link entry value
@@ -35,12 +35,24 @@
 				{%- set href = href + "#" + linkEntry.fields.anchor.data -%}
 			{%- endif -%}
 
+			{# --------------------------------------
+			# Set classnames
+			-------------------------------------- #}
+			{%- if config.classNames -%}
+				{%- set classNames = config.classNames -%}
+			{%- else -%}
+				{%- set classNames = 'coop-t-link' -%}
+			{%- endif -%}
+
+			{# --------------------------------------
+			# Render the link
+			-------------------------------------- #}
 			<a
-				class="coop-t-link"
+				class="{{ classNames }}"
 				href="{{ href }}"
 				title="{{ linkEntry.fields.title.data }}"
-				data-contenttype="{{ contentType }}"
-				data-contentparent="{{ contentParent }}"
+				data-contenttype="{{ config.contentType }}"
+				data-contentparent="{{ config.contentParent }}"
 				data-linktext="{{ linkEntry.fields.title.data }}">
 					{{ linkEntry.fields.title.data }}
 			</a>
