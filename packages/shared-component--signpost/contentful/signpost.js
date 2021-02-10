@@ -1,21 +1,21 @@
 module.exports = function (migration) {
   const signpost = migration.createContentType('signpost');
   signpost.name('-- Signpost link')
-    .description('A link card that can be displayed with or without an image.')
+    .description('A link card that can be displayed with or without an image.');
 
   signpost.createField('name')
     .name('Name')
     .type('Symbol')
-    .required(true)
+    .required(true);
 
   signpost.createField('image')
-    .name("Image")
-    .type("Link")
-    .linkType("Asset")
+    .name('Image')
+    .type('Link')
+    .linkType('Asset')
     .validations([
       {
-        linkMimetypeGroup: ["image"]
-      }
+        linkMimetypeGroup: ['image'],
+      },
     ]);
 
   signpost.createField('title')
@@ -25,8 +25,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 40 },
-        message: "Text in this field must be less than 40 characters."
-      }
+        message: 'Text in this field must be less than 40 characters.',
+      },
     ]);
 
   signpost.createField('link')
@@ -36,8 +36,8 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        linkContentType: ['-- External link', '-- Internal link']
-      }
+        linkContentType: ['-- External link', '-- Internal link'],
+      },
     ]);
 
   signpost.displayField('name');
@@ -46,21 +46,20 @@ module.exports = function (migration) {
     'name',
     'builtin',
     'singleLine',
-    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-  )
+    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' },
+  );
 
   signpost.changeFieldControl(
     'title',
     'builtin',
     'singleLine',
-    { helpText: 'This will be the text of the link.' }
-  )
+    { helpText: 'This will be the text of the link.' },
+  );
 
   signpost.changeFieldControl(
     'link',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'Add an internal or external link here.' }
-  )
-}
-
+    { helpText: 'Add an internal or external link here.' },
+  );
+};

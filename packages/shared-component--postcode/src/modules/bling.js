@@ -1,3 +1,6 @@
+/* eslint-disable func-names */
+/* eslint-disable no-multi-assign */
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -13,4 +16,4 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
   });
 };
 
-export { $, $$ };
+module.exports = { $, $$ };

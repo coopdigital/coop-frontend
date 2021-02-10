@@ -1,24 +1,23 @@
 module.exports = function (migration) {
   const featureCard = migration.createContentType('featureCard');
   featureCard.name('-- Feature card')
-    .description('A text box with image that can be displayed with or without a squircle. Use to highlight and link to featured content.')
+    .description('A text box with image that can be displayed with or without a squircle. Use to highlight and link to featured content.');
 
   featureCard.createField('name')
     .name('Name')
     .type('Symbol')
-    .required(true)
+    .required(true);
 
   featureCard.createField('image')
-    .name("Image")
-    .type("Link")
+    .name('Image')
+    .type('Link')
     .required(true)
-    .linkType("Asset")
+    .linkType('Asset')
     .validations([
       {
-        linkMimetypeGroup: ["image"]
-      }
+        linkMimetypeGroup: ['image'],
+      },
     ]);
-
 
   featureCard.createField('squirclePicker')
     .name('Squircle picker')
@@ -26,17 +25,17 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        "in": [
-          "No squircle",
-          "Large text top squircle",
-          "Large text bottom squircle",
-          "Large text only squircle",
-          "Super saver squircle",
-          "New squircle",
-          "New recipe squircle",
-          "Fresh 3"
-        ]
-      }
+        in: [
+          'No squircle',
+          'Large text top squircle',
+          'Large text bottom squircle',
+          'Large text only squircle',
+          'Super saver squircle',
+          'New squircle',
+          'New recipe squircle',
+          'Fresh 3',
+        ],
+      },
     ]);
 
   featureCard.createField('squircleTop')
@@ -45,8 +44,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 10 },
-        message: "Text in this field must be less than 10 characters."
-      }
+        message: 'Text in this field must be less than 10 characters.',
+      },
     ]);
 
   featureCard.createField('squircleBottom')
@@ -55,8 +54,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 10 },
-        message: "Text in this field must be less than 10 characters."
-      }
+        message: 'Text in this field must be less than 10 characters.',
+      },
     ]);
 
   featureCard.createField('bodyText')
@@ -66,8 +65,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 100 },
-        message: "Text in this field must be less than 100 characters."
-      }
+        message: 'Text in this field must be less than 100 characters.',
+      },
     ]);
 
   featureCard.createField('link')
@@ -77,8 +76,8 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        linkContentType: ['-- External link', '-- Internal link']
-      }
+        linkContentType: ['-- External link', '-- Internal link'],
+      },
     ]);
 
   featureCard.displayField('name');
@@ -87,41 +86,40 @@ module.exports = function (migration) {
     'name',
     'builtin',
     'singleLine',
-    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-  )
+    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' },
+  );
 
   featureCard.changeFieldControl(
     'squirclePicker',
     'extension',
-    '1IKETYxUIyGWuINpBooJFA'
-  )
+    '1IKETYxUIyGWuINpBooJFA',
+  );
 
   featureCard.changeFieldControl(
     'squircleTop',
     'builtin',
     'singleLine',
-    { helpText: 'This text will appear on the top line inside the squircle.' }
-  )
+    { helpText: 'This text will appear on the top line inside the squircle.' },
+  );
 
   featureCard.changeFieldControl(
     'squircleBottom',
     'builtin',
     'singleLine',
-    { helpText: 'This text will appear on the bottom line inside the squircle.' }
-  )
+    { helpText: 'This text will appear on the bottom line inside the squircle.' },
+  );
 
   featureCard.changeFieldControl(
     'bodyText',
     'builtin',
     'singleLine',
-    { helpText: 'This text should briefly tell people what the featured content is about.' }
-  )
+    { helpText: 'This text should briefly tell people what the featured content is about.' },
+  );
 
   featureCard.changeFieldControl(
     'link',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'Link to the page you want people to go to when they click the card.' }
-  )
-}
-
+    { helpText: 'Link to the page you want people to go to when they click the card.' },
+  );
+};

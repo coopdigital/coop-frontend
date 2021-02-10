@@ -2,20 +2,20 @@ module.exports = function (migration) {
   const hero = migration.createContentType('hero');
 
   hero.name('-- Hero')
-    .description('A page header that can be displayed with or without and image or background colour. Use to introduce the page and give it a clear, concise and meaningful title.')
+    .description('A page header that can be displayed with or without and image or background colour. Use to introduce the page and give it a clear, concise and meaningful title.');
 
   hero.createField('name')
     .name('Name')
     .type('Symbol')
-    .required(true)
+    .required(true);
 
   hero.createField('showSquircle')
     .name('Show squircle?')
-    .type('Boolean')
+    .type('Boolean');
 
   hero.createField('background')
     .name('Change squircle background colour?')
-    .type('Object')
+    .type('Object');
 
   hero.displayField('name');
 
@@ -23,17 +23,17 @@ module.exports = function (migration) {
     'name',
     'builtin',
     'singleLine',
-    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-  )
+    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' },
+  );
 
   hero.createField('image')
-    .name("Image")
-    .type("Link")
-    .linkType("Asset")
+    .name('Image')
+    .type('Link')
+    .linkType('Asset')
     .validations([
       {
-        linkMimetypeGroup: ["image"]
-      }
+        linkMimetypeGroup: ['image'],
+      },
     ]);
 
   hero.createField('imageCaption')
@@ -42,8 +42,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { min: 5, max: 80 },
-        message: "Text in this field must be less than 10 characters."
-      }
+        message: 'Text in this field must be less than 10 characters.',
+      },
     ]);
 
   hero.createField('heading')
@@ -53,8 +53,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 90 },
-        message: "Text in this field must be less than 90 characters."
-      }
+        message: 'Text in this field must be less than 90 characters.',
+      },
     ]);
 
   hero.createField('bodyText')
@@ -64,8 +64,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 170 },
-        message: "Text in this field must be less than 170 characters."
-      }
+        message: 'Text in this field must be less than 170 characters.',
+      },
     ]);
 
   hero.createField('link')
@@ -75,13 +75,13 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        linkContentType: ['-- External link', '-- Internal link', '-- Signpost link']
-      }
+        linkContentType: ['-- External link', '-- Internal link', '-- Signpost link'],
+      },
     ]);
 
   hero.createField('contentPull')
     .name('Content pull')
-    .type('Boolean')
+    .type('Boolean');
 
   hero.displayField('name');
 
@@ -91,44 +91,43 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "If set to 'Yes' a coloured squircle will appear behind the header.",
-      trueLabel: "Yes",
-      falseLabel: "No"
-    }
-  )
+      trueLabel: 'Yes',
+      falseLabel: 'No',
+    },
+  );
 
   hero.changeFieldControl(
     'heroBackground',
     'extension',
-    '69G1Od6HGaHOfOaqymoqaO'
-  )
+    '69G1Od6HGaHOfOaqymoqaO',
+  );
 
   hero.changeFieldControl(
     'imageCaption',
     'builtin',
     'singleLine',
-    { helpText: 'This field can be used to add a legal disclaimer or supporting caption where absolutely necessary.' }
-  )
+    { helpText: 'This field can be used to add a legal disclaimer or supporting caption where absolutely necessary.' },
+  );
   hero.changeFieldControl(
     'heading',
     'builtin',
     'singleLine',
-    { helpText: 'This text will be the main heading of the page.' }
-  )
+    { helpText: 'This text will be the main heading of the page.' },
+  );
 
   hero.changeFieldControl(
     'bodyText',
     'builtin',
     'multipleLine',
-    { helpText: 'This text should help people decide if they are in the right place for what they need to do.' }
-  )
-
+    { helpText: 'This text should help people decide if they are in the right place for what they need to do.' },
+  );
 
   hero.changeFieldControl(
     'link',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'Use to add a link under the body text. This should be a main call to action.' }
-  )
+    { helpText: 'Use to add a link under the body text. This should be a main call to action.' },
+  );
 
   hero.changeFieldControl(
     'contentPull',
@@ -136,8 +135,8 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "If 'Yes' the section under the hero will be pulled up to overlap.",
-      trueLabel: "Yes",
-      falseLabel: "No"
-    }
-  )
-}
+      trueLabel: 'Yes',
+      falseLabel: 'No',
+    },
+  );
+};

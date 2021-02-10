@@ -1,20 +1,20 @@
 module.exports = function (migration) {
   const statement = migration.createContentType('statement');
   statement.name('-- Statement block')
-    .description('Use to highlight quotes, testimonials, important statistics or significant statements.')
+    .description('Use to highlight quotes, testimonials, important statistics or significant statements.');
 
   statement.createField('name')
     .name('Name')
     .type('Symbol')
-    .required(true)
+    .required(true);
 
   statement.createField('quote')
     .name('Add speech mark?')
-    .type('Boolean')
+    .type('Boolean');
 
   statement.createField('quoteColourWhite')
     .name('Quote colour white')
-    .type('Boolean')
+    .type('Boolean');
 
   statement.createField('statement')
     .name('Statement')
@@ -23,8 +23,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 100 },
-        message: "Text in this field must be less than 100 characters."
-      }
+        message: 'Text in this field must be less than 100 characters.',
+      },
     ]);
 
   statement.createField('link')
@@ -34,13 +34,13 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        linkContentType: ['-- External link', '-- Internal link']
-      }
+        linkContentType: ['-- External link', '-- Internal link'],
+      },
     ]);
 
   statement.createField('background')
     .name('Choose a background colour')
-    .type('Object')
+    .type('Object');
 
   statement.displayField('name');
 
@@ -48,8 +48,8 @@ module.exports = function (migration) {
     'name',
     'builtin',
     'singleLine',
-    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-  )
+    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' },
+  );
 
   statement.changeFieldControl(
     'quote',
@@ -57,17 +57,15 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "Selecting 'yes' will show a speech mark above the quote.",
-      trueLabel: "Yes",
-      falseLabel: "No"
-    }
-  )
+      trueLabel: 'Yes',
+      falseLabel: 'No',
+    },
+  );
 
   statement.changeFieldControl(
     'link',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'This text should briefly tell people what the featured content is about.' }
-  )
-
-}
-
+    { helpText: 'This text should briefly tell people what the featured content is about.' },
+  );
+};
