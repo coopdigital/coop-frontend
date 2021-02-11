@@ -36,19 +36,10 @@
 			{%- endif -%}
 
 			{# --------------------------------------
-			# Set classnames
-			-------------------------------------- #}
-			{%- if config.classNames -%}
-				{%- set classNames = config.classNames -%}
-			{%- else -%}
-				{%- set classNames = 'coop-t-link' -%}
-			{%- endif -%}
-
-			{# --------------------------------------
 			# Render the link
 			-------------------------------------- #}
 			<a
-				class="{{ classNames }}"
+				class="{{ config.classNames or 'coop-t-link' }}"
 				href="{{ href }}"
 				title="{{ linkEntry.fields.title.data }}"
 				data-contenttype="{{ config.contentType }}"
