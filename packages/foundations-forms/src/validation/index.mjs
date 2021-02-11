@@ -4,6 +4,7 @@ import { isRadios } from '../radios.mjs';
 
 import {
   getValue,
+  hasValue,
   isValid,
   setInvalid,
   setValid,
@@ -40,23 +41,34 @@ export const validate = (field, { invalid, required } = {}, fieldset) => {
  * Validate form fieldset group
  * Automatically mark up as valid/invalid
  */
-export const validateGroup = (fields, fieldset, messages = {}) => {
-  setGroupValid(fields, fieldset);
+export const validateGroup = (fieldMap, fieldset, { required, invalid }) => {
+  const fields = Array.from(fieldMap.keys());
+  const isCheckable = isCheckboxes(fields) || isRadios(fields);
 
-  // Must have one field checked
-  if ((isCheckboxes(fields) || isRadios(fields)) && !isGroupValid(fields)) {
-    fields[0].setCustomValidity(messages.required);
-    setGroupInvalid([fields[0]], fieldset);
+  // Reset group
+  setGroupValid(fieldMap, fieldset);
+
+  // All fields empty or unchecked? Use group required message
+  if (!fields.some(hasValue) || (isCheckable && !isGroupValid(fieldMap))) {
+    fields.forEach((field) => field.setCustomValidity(required));
+    setGroupInvalid(fieldMap, fieldset);
+    return;
+  }
+
+  // All fields invalid? Use group invalid message
+  if (!fields.some(isValid)) {
+    fields.forEach((field) => field.setCustomValidity(invalid || required));
+    setGroupInvalid(fieldMap, fieldset);
     return;
   }
 
   // Mark up form field as valid/invalid (via [pattern])
-  Array.from(fields).reverse().forEach((field) => {
-    validate(field, messages, fieldset);
+  fields.reverse().forEach((field) => {
+    validate(field, fieldMap.get(field), fieldset);
 
     // Ensure fieldset displays error
     if (field.validity.customError) {
-      setGroupInvalid([field], fieldset);
+      setGroupInvalid(fieldMap, fieldset);
     }
   });
 };

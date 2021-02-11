@@ -7,7 +7,9 @@ import { hasSelected, isRadios } from '../../radios.mjs';
 /**
  * Check fieldset fields are valid
  */
-export const isGroupValid = (fields) => {
+export const isGroupValid = (fieldMap) => {
+  const fields = Array.from(fieldMap.keys());
+
   // Only one checkbox is required
   if (isCheckboxes(fields)) {
     return hasChecked(fields);
@@ -19,6 +21,5 @@ export const isGroupValid = (fields) => {
   }
 
   // For others, every field is required
-  return Array.from(fields)
-    .every(isValid);
+  return fields.every(isValid);
 };

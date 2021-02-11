@@ -3,10 +3,16 @@ import { setGroupInvalid } from '../fieldsets/validation.mjs';
 import { getValue } from './helpers.mjs';
 
 /**
+ * Check form field has value
+ * (e.g. via [value] attribute)
+ */
+export const hasValue = (field) => !!(field && !!getValue(field));
+
+/**
  * Check form field is valid
  * (e.g. via [pattern] attribute)
  */
-export const isValid = (field) => !!(field && !!getValue(field) && field.checkValidity());
+export const isValid = (field) => hasValue(field) && field.checkValidity();
 
 /**
  * Mark up form field as valid
@@ -45,6 +51,6 @@ export const setInvalid = (field, fieldset) => {
     // Attach error to field
     addAriaDescription(field, messageId);
   } else if (fieldset) {
-    setGroupInvalid([field], fieldset);
+    setGroupInvalid(new Map([[field]]), fieldset);
   }
 };

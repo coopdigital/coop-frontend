@@ -26,12 +26,28 @@ describe('Form fieldset validation', () => {
       let fieldset;
       let error;
       let inputs;
+      let fieldMap;
 
       beforeEach(async () => {
         document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/date-inputs.html');
         fieldset = document.querySelector('fieldset');
         error = document.getElementById('dob-error');
         inputs = document.querySelectorAll('[type="text"]');
+
+        fieldMap = new Map([
+          [inputs[0], {
+            required: 'Enter your day of birth',
+            invalid: 'Enter a valid day of birth',
+          }],
+          [inputs[1], {
+            required: 'Enter your month of birth',
+            invalid: 'Enter a valid month of birth',
+          }],
+          [inputs[2], {
+            required: 'Enter your year of birth',
+            invalid: 'Enter a valid year of birth',
+          }],
+        ]);
       });
 
       describe('Error messages', () => {
@@ -41,7 +57,7 @@ describe('Form fieldset validation', () => {
           inputs[2].value = '2021';
 
           inputs[0].setCustomValidity('Enter your day of birth');
-          setGroupInvalid(inputs, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
           expect(error.textContent).toBe('Enter your day of birth');
@@ -54,7 +70,7 @@ describe('Form fieldset validation', () => {
           inputs[2].value = '2021';
 
           inputs[1].setCustomValidity('Enter your month of birth');
-          setGroupInvalid(inputs, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
           expect(error.textContent).toBe('Enter your month of birth');
@@ -67,7 +83,7 @@ describe('Form fieldset validation', () => {
           inputs[2].value = '';
 
           inputs[2].setCustomValidity('Enter your year of birth');
-          setGroupInvalid(inputs, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
           expect(error.textContent).toBe('Enter your year of birth');
@@ -81,7 +97,7 @@ describe('Form fieldset validation', () => {
 
           inputs[0].setCustomValidity('Enter your day and month of birth');
           inputs[1].setCustomValidity('Enter your day and month of birth');
-          setGroupInvalid(inputs, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
           expect(error.textContent).toBe('Enter your day and month of birth');
@@ -95,7 +111,7 @@ describe('Form fieldset validation', () => {
 
           inputs[1].setCustomValidity('Enter your day and month of birth');
           inputs[2].setCustomValidity('Enter your day and month of birth');
-          setGroupInvalid(inputs, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
           expect(error.textContent).toBe('Enter your day and month of birth');
@@ -110,7 +126,7 @@ describe('Form fieldset validation', () => {
           inputs[0].setCustomValidity('Enter your date of birth');
           inputs[1].setCustomValidity('Enter your date of birth');
           inputs[2].setCustomValidity('Enter your date of birth');
-          setGroupInvalid(inputs, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
           expect(error.textContent).toBe('Enter your date of birth');
@@ -135,8 +151,8 @@ describe('Form fieldset validation', () => {
           inputs[1].value = '02';
           inputs[2].value = '2021';
 
-          setGroupInvalid(inputs, fieldset);
-          setGroupValid(inputs, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
+          setGroupValid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint');
           expect(error.textContent).toBe('');
@@ -151,6 +167,7 @@ describe('Form fieldset validation', () => {
       let error;
       let label;
       let checkboxes;
+      let fieldMap;
 
       beforeEach(async () => {
         document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/checkboxes.html');
@@ -159,6 +176,9 @@ describe('Form fieldset validation', () => {
         error = document.getElementById('checkbox-error');
         label = document.querySelector('[for="checkbox-1"]');
         checkboxes = document.querySelectorAll('[type="checkbox"]');
+
+        fieldMap = new Map(Array.from(checkboxes)
+          .map((checkbox) => [checkbox]));
       });
 
       describe('Defaults', () => {
@@ -175,28 +195,28 @@ describe('Form fieldset validation', () => {
         beforeEach(() => checkboxes[0].setCustomValidity('Select options owned by you'));
 
         test('Fieldset is marked as invalid', () => {
-          setGroupInvalid(checkboxes, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(error.textContent).toBe('Select options owned by you');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
 
         test('Fieldset is described by the error', () => {
-          setGroupInvalid(checkboxes, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
           expect(fieldset.getAttribute('aria-describedby')).toBe('checkbox-hint checkbox-error');
         });
 
         test('Fieldset is marked as valid', () => {
-          setGroupInvalid(checkboxes, fieldset);
-          setGroupValid(checkboxes, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
+          setGroupValid(fieldMap, fieldset);
 
           expect(error.textContent).toBe('');
           expect(error.hasAttribute('hidden')).toBe(true);
         });
 
         test('Fieldset is no longer described by the error', () => {
-          setGroupInvalid(checkboxes, fieldset);
-          setGroupValid(checkboxes, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
+          setGroupValid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('checkbox-hint');
         });
@@ -209,6 +229,7 @@ describe('Form fieldset validation', () => {
       let error;
       let label;
       let radios;
+      let fieldMap;
 
       beforeEach(async () => {
         document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/radios.html');
@@ -217,6 +238,9 @@ describe('Form fieldset validation', () => {
         error = document.getElementById('radio-error');
         label = document.querySelector('[for="radio-1"]');
         radios = document.querySelectorAll('[type="radio"]');
+
+        fieldMap = new Map(Array.from(radios)
+          .map((radio) => [radio]));
       });
 
       describe('Defaults', () => {
@@ -233,28 +257,28 @@ describe('Form fieldset validation', () => {
         beforeEach(() => radios[0].setCustomValidity('Select type of delivery'));
 
         test('Fieldset is marked as invalid', () => {
-          setGroupInvalid(radios, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
 
           expect(error.textContent).toBe('Select type of delivery');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
 
         test('Fieldset is described by the error', () => {
-          setGroupInvalid(radios, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
           expect(fieldset.getAttribute('aria-describedby')).toBe('radio-hint radio-error');
         });
 
         test('Fieldset is marked as valid', () => {
-          setGroupInvalid(radios, fieldset);
-          setGroupValid(radios, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
+          setGroupValid(fieldMap, fieldset);
 
           expect(error.textContent).toBe('');
           expect(error.hasAttribute('hidden')).toBe(true);
         });
 
         test('Fieldset is no longer described by the error', () => {
-          setGroupInvalid(radios, fieldset);
-          setGroupValid(radios, fieldset);
+          setGroupInvalid(fieldMap, fieldset);
+          setGroupValid(fieldMap, fieldset);
 
           expect(fieldset.getAttribute('aria-describedby')).toBe('radio-hint');
         });

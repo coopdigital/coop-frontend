@@ -116,19 +116,37 @@ describe('Form validation (automatic)', () => {
       let fieldset;
       let error;
       let inputs;
+      let fieldMap;
 
       beforeEach(async () => {
         document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/date-inputs.html');
         fieldset = document.querySelector('fieldset');
         error = document.getElementById('dob-error');
         inputs = document.querySelectorAll('[type="text"]');
+
+        fieldMap = new Map([
+          [inputs[0], {
+            required: 'Enter your day of birth',
+            invalid: 'Enter a valid day of birth',
+          }],
+          [inputs[1], {
+            required: 'Enter your month of birth',
+            invalid: 'Enter a valid month of birth',
+          }],
+          [inputs[2], {
+            required: 'Enter your year of birth',
+            invalid: 'Enter a valid year of birth',
+          }],
+        ]);
       });
 
       test('Marks up field group as required', () => {
-        validateGroup(inputs, fieldset, {
+        validateGroup(fieldMap, fieldset, {
           required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
         });
 
+        // Fieldset shows group "all empty" required message
         expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
         expect(error.textContent).toBe('Enter your date of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
@@ -139,12 +157,110 @@ describe('Form validation (automatic)', () => {
         inputs[1].value = '02';
         inputs[2].value = '2021';
 
-        validateGroup(inputs, fieldset, {
+        validateGroup(fieldMap, fieldset, {
           required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
         });
 
+        // Fieldset shows first error in group
+        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+        expect(error.textContent).toBe('Enter your day of birth');
+        expect(error.hasAttribute('hidden')).toBe(false);
+      });
+
+      test('Marks up field group as required (empty month)', () => {
+        inputs[0].value = '01';
+        inputs[1].value = '';
+        inputs[2].value = '2021';
+
+        validateGroup(fieldMap, fieldset, {
+          required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
+        });
+
+        // Fieldset shows first error in group
+        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+        expect(error.textContent).toBe('Enter your month of birth');
+        expect(error.hasAttribute('hidden')).toBe(false);
+      });
+
+      test('Marks up field group as required (empty year)', () => {
+        inputs[0].value = '01';
+        inputs[1].value = '02';
+        inputs[2].value = '';
+
+        validateGroup(fieldMap, fieldset, {
+          required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
+        });
+
+        // Fieldset shows first error in group
+        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+        expect(error.textContent).toBe('Enter your year of birth');
+        expect(error.hasAttribute('hidden')).toBe(false);
+      });
+
+      test('Marks up field group as required (empty day/month)', () => {
+        inputs[0].value = '';
+        inputs[1].value = '';
+        inputs[2].value = '2021';
+
+        validateGroup(fieldMap, fieldset, {
+          required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
+        });
+
+        // Fieldset shows first error in group
+        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+        expect(error.textContent).toBe('Enter your day of birth');
+        expect(error.hasAttribute('hidden')).toBe(false);
+      });
+
+      test('Marks up field group as required (empty month/year)', () => {
+        inputs[0].value = '01';
+        inputs[1].value = '';
+        inputs[2].value = '';
+
+        validateGroup(fieldMap, fieldset, {
+          required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
+        });
+
+        // Fieldset shows first error in group
+        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+        expect(error.textContent).toBe('Enter your month of birth');
+        expect(error.hasAttribute('hidden')).toBe(false);
+      });
+
+      test('Marks up field group as required (empty day/month/year)', () => {
+        inputs[0].value = '';
+        inputs[1].value = '';
+        inputs[2].value = '';
+
+        validateGroup(fieldMap, fieldset, {
+          required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
+        });
+
+        // Fieldset shows group "all empty" required message
         expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
         expect(error.textContent).toBe('Enter your date of birth');
+        expect(error.hasAttribute('hidden')).toBe(false);
+      });
+
+      test('Marks up field group as invalid (invalid day/month/year)', () => {
+        inputs[0].value = 'AA';
+        inputs[1].value = 'BB';
+        inputs[2].value = 'CC';
+
+        validateGroup(fieldMap, fieldset, {
+          required: 'Enter your date of birth',
+          invalid: 'Enter a valid date of birth',
+        });
+
+        // Fieldset shows group "all invalid" required message
+        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+        expect(error.textContent).toBe('Enter a valid date of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
     });
@@ -153,16 +269,20 @@ describe('Form validation (automatic)', () => {
       let fieldset;
       let error;
       let checkboxes;
+      let fieldMap;
 
       beforeEach(async () => {
         document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/checkboxes.html');
         fieldset = document.querySelector('fieldset');
         error = document.getElementById('checkbox-error');
         checkboxes = document.querySelectorAll('[type="checkbox"]');
+
+        fieldMap = new Map(Array.from(checkboxes)
+          .map((checkbox) => [checkbox]));
       });
 
       test('Marks up field group as required', () => {
-        validateGroup(checkboxes, fieldset, {
+        validateGroup(fieldMap, fieldset, {
           required: 'Select options owned by you',
         });
 
@@ -176,16 +296,20 @@ describe('Form validation (automatic)', () => {
       let fieldset;
       let error;
       let radios;
+      let fieldMap;
 
       beforeEach(async () => {
         document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/radios.html');
         fieldset = document.querySelector('fieldset');
         error = document.getElementById('radio-error');
         radios = document.querySelectorAll('[type="radio"]');
+
+        fieldMap = new Map(Array.from(radios)
+          .map((checkbox) => [checkbox]));
       });
 
       test('Marks up field group as required', () => {
-        validateGroup(radios, fieldset, {
+        validateGroup(fieldMap, fieldset, {
           required: 'Select type of delivery',
         });
 

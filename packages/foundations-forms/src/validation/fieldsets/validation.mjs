@@ -1,9 +1,9 @@
 import { addAriaDescription, removeAriaDescription } from '../utils/aria.mjs';
 
 /**
- * Mark up fieldset fields as valid
+ * Mark up fieldset as valid
  */
-export const setGroupValid = (fields, fieldset) => {
+export const setGroupValid = (fieldMap, fieldset) => {
   const messageId = `${fieldset.id}-error`;
   const message = document.getElementById(messageId);
 
@@ -16,9 +16,9 @@ export const setGroupValid = (fields, fieldset) => {
 };
 
 /**
- * Mark up fieldset fields as invalid
+ * Mark up fieldset as invalid
  */
-export const setGroupInvalid = (fields, fieldset) => {
+export const setGroupInvalid = (fieldMap, fieldset) => {
   const messageId = `${fieldset.id}-error`;
   const message = document.getElementById(messageId);
 
@@ -27,7 +27,7 @@ export const setGroupInvalid = (fields, fieldset) => {
   }
 
   // Find first custom field error
-  const validationMessage = Array.from(fields)
+  const validationMessage = Array.from(fieldMap.keys())
     .reduce((error, field) => error || (field.validity.customError && field.validationMessage), '');
 
   // Add first error message to fieldset, show
