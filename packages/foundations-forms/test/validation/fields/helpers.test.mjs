@@ -40,6 +40,25 @@ describe('Form field helpers', () => {
       });
     });
 
+    describe('Textarea', () => {
+      let input;
+
+      beforeEach(async () => {
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/textarea.html');
+        input = document.getElementById('feedback-1');
+      });
+
+      test('Field with empty value is invalid', () => {
+        input.value = '';
+        expect(isValid(input)).toStrictEqual(false);
+      });
+
+      test('Field with value is valid', () => {
+        input.value = 'Hello world';
+        expect(isValid(input)).toStrictEqual(true);
+      });
+    });
+
     describe('Select', () => {
       let select;
 

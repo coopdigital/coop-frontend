@@ -82,6 +82,70 @@ describe('Form field validation', () => {
       });
     });
 
+    describe('Textarea', () => {
+      let label;
+      let error;
+      let textarea;
+
+      beforeEach(async () => {
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/textarea.html');
+        label = document.querySelector('[for=feedback-1]');
+        error = document.getElementById('feedback-1-error');
+        textarea = document.getElementById('feedback-1');
+      });
+
+      describe('Defaults', () => {
+        test('Field has a label', () => {
+          expect(getLabel(textarea)).toStrictEqual(label);
+        });
+
+        test('Field is best labelled by a label', () => {
+          expect(getLabelOrLegend(textarea)).toStrictEqual(label);
+        });
+
+        test('Field error message is hidden', () => {
+          expect(error.hasAttribute('hidden')).toBe(true);
+        });
+
+        test('Field is not described by the error', () => {
+          expect(textarea.hasAttribute('aria-describedby')).toBe(false);
+        });
+      });
+
+      describe('Error messages', () => {
+        beforeEach(() => textarea.setCustomValidity('Enter your example field'));
+
+        test('Field is marked as invalid', () => {
+          setInvalid(textarea);
+
+          expect(textarea.classList).toContain('coop-form__invalid');
+          expect(error.textContent).toBe('Enter your example field');
+          expect(error.hasAttribute('hidden')).toBe(false);
+        });
+
+        test('Field is described by the error', () => {
+          setInvalid(textarea);
+          expect(textarea.getAttribute('aria-describedby')).toBe('feedback-1-error');
+        });
+
+        test('Field is marked as valid', () => {
+          setInvalid(textarea);
+          setValid(textarea);
+
+          expect(textarea.classList).not.toContain('coop-form__invalid');
+          expect(error.textContent).toBe('');
+          expect(error.hasAttribute('hidden')).toBe(true);
+        });
+
+        test('Field is no longer described by the error', () => {
+          setInvalid(textarea);
+          setValid(textarea);
+
+          expect(error.hasAttribute('aria-describedby')).toBe(false);
+        });
+      });
+    });
+
     describe('Select', () => {
       let label;
       let error;
