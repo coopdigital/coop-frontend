@@ -1,16 +1,19 @@
-
 .ds-section-bg {
-    margin-bottom: 32px;
-    padding: 32px 0;
+  margin-bottom: 32px;
+  padding: 32px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .ds-section-bg--dark {
-    background: var(--color-link-hover);
+  background: var(--color-link-hover);
 }
 
 .ds-section-bg--light,
 .coop-u-grey-light-bg {
-    background: var(--color-grey-light);
+  background: var(--color-grey-light);
 }
 
 .ds-feedback {
@@ -18,38 +21,38 @@
 }
 
 @media (--mq-large) {
-    .ds-feedback {
-        margin-top: 64px;
-    }
+  .ds-feedback {
+    margin-top: 64px;
+  }
 }
 
 .ds-c-definition-list {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .ds-c-definition-list dt {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .ds-c-definition-list dt .status {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 table {
-    font-size: 20px !important;
+  font-size: 20px !important;
 }
 
 .ds-demo-block {
-    display: block;
-    min-height: 100px;
-    border: 1px solid var(--color-grey-dark);
-    background: var(--color-grey-mid);
+  display: block;
+  min-height: 100px;
+  border: 1px solid var(--color-grey-dark);
+  background: var(--color-grey-mid);
 }
 
 .m-bh-med-b {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .coop-u-padding-tb {
-    padding-top: 32px;
+  padding-top: 32px;
 }
