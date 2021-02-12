@@ -1,8 +1,5 @@
 module.exports = {
-  rules: {
-    'func-names': [
-      'error',
-      'never',
-    ],
-  },
+  extends: [
+    '../../../.eslintrc.contentful.js',
+  ],
 };
