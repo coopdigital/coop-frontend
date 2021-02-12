@@ -3,8 +3,8 @@
  */
 
 import fs from 'fs';
-import { getValue, setValue } from '../src/validation/fields/helpers.mjs';
-import { isSelect } from '../src/selects.mjs';
+import { getValue, setValue } from '../../src/validation/fields/helpers.mjs';
+import { isSelect } from '../../src/fields/selects.mjs';
 
 const { readFile } = fs.promises;
 

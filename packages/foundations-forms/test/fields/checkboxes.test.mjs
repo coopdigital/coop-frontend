@@ -9,7 +9,7 @@ import {
   hasChecked,
   isCheckbox,
   isCheckboxes,
-} from '../src/checkboxes.mjs';
+} from '../../src/fields/checkboxes.mjs';
 
 const { readFile } = fs.promises;
 

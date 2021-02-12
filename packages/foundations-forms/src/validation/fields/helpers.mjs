@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 
-import { isSelect } from '../../selects.mjs';
+import { isSelect } from '../../fields/selects.mjs';
 
 /**
  * Find field's matching or closest label

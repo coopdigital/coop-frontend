@@ -1,6 +1,6 @@
 import { isGroupValid } from './fieldsets/helpers.mjs';
-import { isCheckboxes } from '../checkboxes.mjs';
-import { isRadios } from '../radios.mjs';
+import { isCheckboxes } from '../fields/checkboxes.mjs';
+import { isRadios } from '../fields/radios.mjs';
 
 import {
   getValue,

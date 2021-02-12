@@ -3,7 +3,7 @@
  */
 
 import fs from 'fs';
-import { getValue, setValue } from '../src/validation/fields/helpers.mjs';
+import { getValue, setValue } from '../../src/validation/fields/helpers.mjs';
 
 const { readFile } = fs.promises;
 

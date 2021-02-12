@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 
 import { isValid } from '../fields/validation.mjs';
-import { hasChecked, isCheckboxes } from '../../checkboxes.mjs';
-import { hasSelected, isRadios } from '../../radios.mjs';
+import { hasChecked, isCheckboxes } from '../../fields/checkboxes.mjs';
+import { hasSelected, isRadios } from '../../fields/radios.mjs';
 
 /**
  * Check fieldset fields are valid

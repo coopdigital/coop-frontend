@@ -9,7 +9,7 @@ import {
   hasSelected,
   isRadio,
   isRadios,
-} from '../src/radios.mjs';
+} from '../../src/fields/radios.mjs';
 
 const { readFile } = fs.promises;
 

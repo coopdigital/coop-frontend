@@ -8,7 +8,7 @@ import {
   unmask,
   toggleMaskUnmask,
   toggleAllMaskUnmask,
-} from '../src/passwords.mjs';
+} from '../../src/fields/passwords.mjs';
 
 const { readFile } = fs.promises;
 
