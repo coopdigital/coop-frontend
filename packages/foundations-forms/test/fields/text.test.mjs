@@ -12,8 +12,8 @@ describe('Form elements', () => {
     let input;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/text.html');
-      input = document.getElementById('example');
+      document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/text.html');
+      input = document.getElementById('full-name-1');
     });
 
     describe('Values', () => {

@@ -13,7 +13,7 @@ describe('Form utilities, focus', () => {
     let checkbox;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/checkboxes.html');
+      document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/checkboxes.html');
       legend = document.querySelector('legend');
       checkbox = document.querySelector('[type="checkbox"]');
 
@@ -39,9 +39,9 @@ describe('Form utilities, focus', () => {
     let input;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/text.html');
-      label = document.querySelector('[for=example]');
-      input = document.getElementById('example');
+      document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/text.html');
+      label = document.querySelector('[for=full-name-1]');
+      input = document.getElementById('full-name-1');
 
       label.scrollIntoView = jest.fn();
       input.focus = jest.fn();

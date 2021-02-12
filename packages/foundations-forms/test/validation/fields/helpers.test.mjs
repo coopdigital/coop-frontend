@@ -13,8 +13,8 @@ describe('Form field helpers', () => {
       let input;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/text.html');
-        input = document.getElementById('example');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/text.html');
+        input = document.getElementById('full-name-1');
       });
 
       test('Field with empty value is invalid', () => {
@@ -44,8 +44,8 @@ describe('Form field helpers', () => {
       let select;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/selects.html');
-        select = document.getElementById('example');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/selects.html');
+        select = document.getElementById('sort-by-1');
       });
 
       test('Field with empty value is invalid', () => {
@@ -54,7 +54,7 @@ describe('Form field helpers', () => {
       });
 
       test('Field with value is valid', () => {
-        select.selectedIndex = 1; // "Example"
+        select.selectedIndex = 1; // "Relevancy"
         expect(isValid(select)).toStrictEqual(true);
       });
     });

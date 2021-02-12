@@ -14,7 +14,7 @@ describe('Form fieldset helpers', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/date-inputs.html');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/date-inputs.html');
         inputs = document.querySelectorAll('[type="text"]');
         fieldMap = new Map(Array.from(inputs).map((input) => [input]));
       });
@@ -74,7 +74,7 @@ describe('Form fieldset helpers', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/checkboxes.html');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/checkboxes.html');
         checkboxes = document.querySelectorAll('[type="checkbox"]');
         fieldMap = new Map(Array.from(checkboxes).map((checkbox) => [checkbox]));
       });
@@ -95,7 +95,7 @@ describe('Form fieldset helpers', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/radios.html');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/radios.html');
         radios = document.querySelectorAll('[type="radio"]');
         fieldMap = new Map(Array.from(radios).map((radio) => [radio]));
       });

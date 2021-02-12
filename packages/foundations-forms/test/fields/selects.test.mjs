@@ -13,8 +13,8 @@ describe('Form elements', () => {
     let select;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/selects.html');
-      select = document.getElementById('example');
+      document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/selects.html');
+      select = document.getElementById('sort-by-1');
     });
 
     describe('Detection', () => {
@@ -44,8 +44,9 @@ describe('Form elements', () => {
 
     describe('Values', () => {
       test('Field with initial option selected', () => {
-        expect(select.selectedIndex).toBe(0);
-        expect(getValue(select)).toBe('');
+        // "Relevancy"
+        expect(select.selectedIndex).toBe(1);
+        expect(getValue(select)).toBe('relevancy');
       });
 
       test('Field with first option selected', () => {
@@ -55,9 +56,9 @@ describe('Form elements', () => {
       });
 
       test('Field with second option selected', () => {
-        setValue(select, '123'); // "Example"
-        expect(select.selectedIndex).toBe(1);
-        expect(getValue(select)).toBe('123');
+        setValue(select, 'price-desc'); // "Price: High to low<"
+        expect(select.selectedIndex).toBe(3);
+        expect(getValue(select)).toBe('price-desc');
       });
     });
   });

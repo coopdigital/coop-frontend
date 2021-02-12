@@ -18,7 +18,7 @@ describe('Form elements', () => {
     let password;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/passwords.html');
+      document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/passwords.html');
       passwords = document.querySelectorAll('[type=password]');
       password = document.getElementById('password');
     });

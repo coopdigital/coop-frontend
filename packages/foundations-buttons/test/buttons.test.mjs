@@ -13,7 +13,16 @@ describe('Form elements', () => {
     let buttonAnnounce;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-buttons/test/fixtures/buttons.html');
+      const [button1, button2] = await Promise.all([
+        readFile('./packages/foundations-buttons/src/examples/buttons.html'),
+        readFile('./packages/foundations-buttons/src/examples/buttons-loading.html'),
+      ]);
+
+      document.body.innerHTML = `
+        ${button1}
+        ${button2}
+      `;
+
       buttonDefault = document.getElementById('button-default');
       buttonAnnounce = document.getElementById('button-announce');
     });

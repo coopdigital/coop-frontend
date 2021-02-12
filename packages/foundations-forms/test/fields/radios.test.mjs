@@ -19,7 +19,7 @@ describe('Form elements', () => {
     let radio;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/radios.html');
+      document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/radios.html');
       radios = document.querySelectorAll('[type=radio]');
       radio = document.querySelector('[type=radio]');
     });

@@ -19,7 +19,7 @@ describe('Form elements', () => {
     let checkbox;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/checkboxes.html');
+      document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/checkboxes.html');
       checkboxes = document.querySelectorAll('[type=checkbox]');
       checkbox = document.querySelector('[type=checkbox]');
     });

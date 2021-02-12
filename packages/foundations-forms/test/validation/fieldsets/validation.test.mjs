@@ -29,9 +29,9 @@ describe('Form fieldset validation', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/date-inputs.html');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/date-inputs.html');
         fieldset = document.querySelector('fieldset');
-        error = document.getElementById('dob-error');
+        error = document.getElementById('dob-1-error');
         inputs = document.querySelectorAll('[type="text"]');
 
         fieldMap = new Map([
@@ -59,7 +59,7 @@ describe('Form fieldset validation', () => {
           inputs[0].setCustomValidity('Enter your day of birth');
           setGroupInvalid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
           expect(error.textContent).toBe('Enter your day of birth');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
@@ -72,7 +72,7 @@ describe('Form fieldset validation', () => {
           inputs[1].setCustomValidity('Enter your month of birth');
           setGroupInvalid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
           expect(error.textContent).toBe('Enter your month of birth');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
@@ -85,7 +85,7 @@ describe('Form fieldset validation', () => {
           inputs[2].setCustomValidity('Enter your year of birth');
           setGroupInvalid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
           expect(error.textContent).toBe('Enter your year of birth');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
@@ -99,7 +99,7 @@ describe('Form fieldset validation', () => {
           inputs[1].setCustomValidity('Enter your day and month of birth');
           setGroupInvalid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
           expect(error.textContent).toBe('Enter your day and month of birth');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
@@ -113,7 +113,7 @@ describe('Form fieldset validation', () => {
           inputs[2].setCustomValidity('Enter your day and month of birth');
           setGroupInvalid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
           expect(error.textContent).toBe('Enter your day and month of birth');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
@@ -128,7 +128,7 @@ describe('Form fieldset validation', () => {
           inputs[2].setCustomValidity('Enter your date of birth');
           setGroupInvalid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
           expect(error.textContent).toBe('Enter your date of birth');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
@@ -141,7 +141,7 @@ describe('Form fieldset validation', () => {
           inputs[2].setCustomValidity('Enter your year of birth');
           setInvalid(inputs[2], fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint dob-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
           expect(error.textContent).toBe('Enter your year of birth');
           expect(error.hasAttribute('hidden')).toBe(false);
         });
@@ -154,7 +154,7 @@ describe('Form fieldset validation', () => {
           setGroupInvalid(fieldMap, fieldset);
           setGroupValid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-hint');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint');
           expect(error.textContent).toBe('');
           expect(error.hasAttribute('hidden')).toBe(true);
         });
@@ -170,11 +170,11 @@ describe('Form fieldset validation', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/checkboxes.html');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/checkboxes-hint.html');
         fieldset = document.querySelector('fieldset');
         legend = document.querySelector('legend');
-        error = document.getElementById('checkbox-error');
-        label = document.querySelector('[for="checkbox-1"]');
+        error = document.getElementById('checkbox-2-error');
+        label = document.querySelector('[for="checkbox-2-1"]');
         checkboxes = document.querySelectorAll('[type="checkbox"]');
 
         fieldMap = new Map(Array.from(checkboxes)
@@ -203,7 +203,7 @@ describe('Form fieldset validation', () => {
 
         test('Fieldset is described by the error', () => {
           setGroupInvalid(fieldMap, fieldset);
-          expect(fieldset.getAttribute('aria-describedby')).toBe('checkbox-hint checkbox-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('checkbox-2-hint checkbox-2-error');
         });
 
         test('Fieldset is marked as valid', () => {
@@ -218,7 +218,7 @@ describe('Form fieldset validation', () => {
           setGroupInvalid(fieldMap, fieldset);
           setGroupValid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('checkbox-hint');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('checkbox-2-hint');
         });
       });
     });
@@ -232,11 +232,11 @@ describe('Form fieldset validation', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/radios.html');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/radios-hint.html');
         fieldset = document.querySelector('fieldset');
         legend = document.querySelector('legend');
-        error = document.getElementById('radio-error');
-        label = document.querySelector('[for="radio-1"]');
+        error = document.getElementById('radio-2-error');
+        label = document.querySelector('[for="radio-2-1"]');
         radios = document.querySelectorAll('[type="radio"]');
 
         fieldMap = new Map(Array.from(radios)
@@ -265,7 +265,7 @@ describe('Form fieldset validation', () => {
 
         test('Fieldset is described by the error', () => {
           setGroupInvalid(fieldMap, fieldset);
-          expect(fieldset.getAttribute('aria-describedby')).toBe('radio-hint radio-error');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('radio-2-hint radio-2-error');
         });
 
         test('Fieldset is marked as valid', () => {
@@ -280,7 +280,7 @@ describe('Form fieldset validation', () => {
           setGroupInvalid(fieldMap, fieldset);
           setGroupValid(fieldMap, fieldset);
 
-          expect(fieldset.getAttribute('aria-describedby')).toBe('radio-hint');
+          expect(fieldset.getAttribute('aria-describedby')).toBe('radio-2-hint');
         });
       });
     });

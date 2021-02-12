@@ -24,10 +24,10 @@ describe('Form field validation', () => {
       let input;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/text.html');
-        label = document.querySelector('[for=example]');
-        error = document.getElementById('example-error');
-        input = document.getElementById('example');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/text.html');
+        label = document.querySelector('[for=full-name-1]');
+        error = document.getElementById('full-name-1-error');
+        input = document.getElementById('full-name-1');
       });
 
       describe('Defaults', () => {
@@ -61,7 +61,7 @@ describe('Form field validation', () => {
 
         test('Field is described by the error', () => {
           setInvalid(input);
-          expect(input.getAttribute('aria-describedby')).toBe('example-error');
+          expect(input.getAttribute('aria-describedby')).toBe('full-name-1-error');
         });
 
         test('Field is marked as valid', () => {
@@ -88,10 +88,10 @@ describe('Form field validation', () => {
       let select;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/test/fixtures/selects.html');
-        label = document.querySelector('[for=example]');
-        error = document.getElementById('example-error');
-        select = document.getElementById('example');
+        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/selects.html');
+        label = document.querySelector('[for=sort-by-1]');
+        error = document.getElementById('sort-by-1-error');
+        select = document.getElementById('sort-by-1');
       });
 
       describe('Defaults', () => {
@@ -124,7 +124,7 @@ describe('Form field validation', () => {
 
         test('Field is described by the error', () => {
           setInvalid(select);
-          expect(select.getAttribute('aria-describedby')).toBe('example-error');
+          expect(select.getAttribute('aria-describedby')).toBe('sort-by-1-error');
         });
 
         test('Field is marked as valid', () => {

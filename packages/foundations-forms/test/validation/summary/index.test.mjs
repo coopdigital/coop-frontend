@@ -19,7 +19,7 @@ describe('Form validation', () => {
     // Example multiple errors
     const errorsMultiple = [
       {
-        id: 'example',
+        id: 'full-name-1',
         message: 'Enter an example input',
       },
       {
@@ -31,7 +31,7 @@ describe('Form validation', () => {
         message: 'Enter a missing input',
       },
       {
-        id: 'example-missing-2',
+        id: 'example-missing-3',
         messageHtml: 'Custom <a href="#">validation link</a> HTML',
       },
     ];
@@ -45,8 +45,8 @@ describe('Form validation', () => {
       jest.spyOn(HTMLInputElement.prototype, 'focus');
 
       const [summary, form] = await Promise.all([
-        readFile('./packages/foundations-forms/test/fixtures/summary.html'),
-        readFile('./packages/foundations-forms/test/fixtures/text.html'),
+        readFile('./packages/foundations-forms/src/examples/summary.html'),
+        readFile('./packages/foundations-forms/src/examples/text.html'),
       ]);
 
       document.body.innerHTML = `
@@ -54,9 +54,9 @@ describe('Form validation', () => {
         ${form}
       `;
 
-      container = document.getElementById('validation-summary');
+      container = document.getElementById('summary-box');
       label = document.querySelector('label');
-      input = document.getElementById('example');
+      input = document.getElementById('full-name-1');
 
       jest.spyOn(container, 'addEventListener');
     });
@@ -100,7 +100,7 @@ describe('Form validation', () => {
       summary.setErrors(errorsMultiple);
 
       // Find first link, click
-      document.querySelector('a[href="#example"]').click();
+      document.querySelector('a[href="#full-name-1"]').click();
       expect(label.scrollIntoView).toHaveBeenCalled();
     });
 
@@ -111,7 +111,7 @@ describe('Form validation', () => {
       summary.setErrors(errorsMultiple);
 
       // Find first link, click
-      document.querySelector('a[href="#example"]').click();
+      document.querySelector('a[href="#full-name-1"]').click();
       expect(input.focus).toHaveBeenCalledWith({
         preventScroll: true,
       });
