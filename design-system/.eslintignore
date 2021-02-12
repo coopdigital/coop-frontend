@@ -1,0 +1,4 @@
+build
+node_modules
+src/archive
+src/_includes/pattern-library/components
