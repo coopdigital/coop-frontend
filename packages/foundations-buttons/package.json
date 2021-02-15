@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-buttons",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "CSS Foundations: Buttons",
   "main": "dist/buttons.css",
   "style": "src/buttons.pcss",
