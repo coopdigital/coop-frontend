@@ -1,3 +1,5 @@
+const $ = require('jquery');
+
 /**
  * Toggles module
  *
@@ -13,21 +15,19 @@
 </a>
 <div id="target">Target content</div>
  */
-
-(function() {
-  'use strict';
-
+/* eslint-disable */
+(function () {
   window.Coop = window.Coop || { Modules: {} };
 
-  var selector = '[data-toggle], .toggle-trigger';
+  const selector = '[data-toggle], .toggle-trigger';
 
-  var Toggles = function($el, options) {
+  const Toggles = function ($el, options) {
     this.init($el, options);
     return this;
   };
 
   Toggles.prototype = {
-    init: function($el, options) {
+    init($el, options) {
       this.$trigger = $el;
       this.$target = $($el.attr('href'));
       this.$textContainer = $($el.data('toggle-text-selector') || $el).eq(0);
@@ -47,7 +47,7 @@
 
       $el.add(this.$target).addClass('init');
     },
-    addARIA: function() {
+    addARIA() {
       if (!this.$trigger.is('button')) {
         this.$trigger.attr('role', 'button');
       }
@@ -60,29 +60,28 @@
         .attr('tabindex', '-1')
         .attr('aria-live', 'polite');
     },
-    bindEvents: function() {
-      var self = this;
+    bindEvents() {
+      const self = this;
 
       this.$trigger
         .off('click.Toggles')
-        .on('click.Toggles', function(e) {
+        .on('click.Toggles', function (e) {
           e.preventDefault();
           self.toggle($(this));
         });
     },
-    getTarget: function($el) {
+    getTarget($el) {
       return $el.data('toggle-target');
     },
-    toggle: function() {
+    toggle() {
       if (this.$trigger.hasClass('is--open')) {
         this.close(this.$trigger);
-      }
-      else {
+      } else {
         this.open();
       }
     },
-    open: function() {
-      var self = this;
+    open() {
+      const self = this;
 
       this.$trigger.add(this.$target).addClass('is--open');
 
@@ -94,13 +93,13 @@
       }
 
       if (this.$trigger.parent().hasClass('accordion')) {
-        this.$trigger.siblings(selector).each(function() {
+        this.$trigger.siblings(selector).each(function () {
           self.close($(this));
         });
-      } 
+      }
     },
-    close: function($el) {
-      var $target = this.getTarget($el);
+    close($el) {
+      const $target = this.getTarget($el);
       $el.add($target).removeClass('is--open');
 
       $el.attr('aria-expanded', 'false');
@@ -109,16 +108,17 @@
       if ($el.data('toggle-text-closed')) {
         $el.data('toggle-text-container').text($el.data('toggle-text-closed'));
       }
-    }
+    },
   };
 
   Coop.Modules._Toggles = Toggles;
 
   Coop.Modules.Toggles = {
-    init: function() {
-      return $(selector).each(function() {
+    init() {
+      return $(selector).each(function () {
         $(this).data('Toggles', new Toggles($(this), $(this).data()));
       });
-    }
+    },
   };
 }());
+/* eslint-enable */

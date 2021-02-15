@@ -1,15 +1,16 @@
 'use strict';
 
-const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
+const babelify = require('babelify');
+const browserify = require('browserify');
+const buffer = require('gulp-buffer');
 const changed = require('gulp-changed');
 const connect = require('gulp-connect');
-const concat = require('gulp-concat');
-const include = require('gulp-include');
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
 const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
 const spawn = require('child_process').spawn;
+const tap = require('gulp-tap');
+const terser = require('gulp-terser');
 
 /**
  * Settings
@@ -35,12 +36,6 @@ const settings = {
   css: {
     outputStyle: 'compressed',
   },
-  include: {
-    includePaths: [
-      __dirname + '/node_modules',
-      __dirname + '/src/_js',
-    ]
-  }
 };
 
 /**
@@ -89,32 +84,27 @@ function css() {
 
 // Scripts
 function js() {
-  return gulp.src(src_paths.scripts, { follow: true })
+  return gulp.src(src_paths.scripts, { read: false })
+    .pipe(tap((file) => {
+      file.contents = browserify(file.path, { debug: true })
+        .transform(babelify)
+        .bundle();
+    }))
+    .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
-      .pipe(include(settings.include))
-      .pipe(concat('main.js'))
-      .pipe(uglify())
+    .pipe(terser())
     .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.scripts))
     .pipe(connect.reload());
 }
 
-function vendorjs() {
-  return gulp.src([
-    src + '_js/vendor/**/*'
-  ], { follow: true })
-    .pipe(changed(dest_paths.scripts + '/vendor'))
-    .pipe(gulp.dest(dest_paths.scripts + '/vendor'));
-}
-
-
 /**
  * Watch tasks
  */
 function watch(done) {
-  gulp.watch(['src/_css/**/**.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
+  gulp.watch(['src/_css/**/*.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
+  gulp.watch(['src/_js/**/*.js'], js);
   gulp.watch(['../packages/**/*.{pcss,css,html,jpg,jpeg,gif,png,webp,svg}', '!../packages/**/node_modules/**'], copyComponents);
-  gulp.watch(src_paths.scripts, js);
   gulp.watch(src_paths.html, gulp.series(jekyll, html));
   done();
 }
@@ -136,7 +126,7 @@ function serve(done) {
 /**
  * Run tasks
  */
-const build = gulp.parallel(gulp.series(copyComponents, contentful, jekyll), css, vendorjs, js);
+const build = gulp.parallel(gulp.series(copyComponents, contentful, jekyll), css, js);
 const server = gulp.series(build, serve, watch);
 
 
@@ -145,7 +135,6 @@ module.exports = {
   contentful,
   jekyll,
   css,
-  vendorjs,
   js,
   build,
   server,
