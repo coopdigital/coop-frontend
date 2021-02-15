@@ -1,17 +1,17 @@
 'use strict';
 
-const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
+const babelify = require('babelify');
+const browserify = require('browserify');
+const buffer = require('gulp-buffer');
 const changed = require('gulp-changed');
 const connect = require('gulp-connect');
-const concat = require('gulp-concat');
-const include = require('gulp-include');
-const jshint = require('gulp-jshint');
-const stylish = require('jshint-stylish');
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
+const gulp = require('gulp');
 const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
 const spawn = require('child_process').spawn;
+const tap = require('gulp-tap');
+const terser = require('gulp-terser');
 
 /**
  * Settings
@@ -21,12 +21,7 @@ const dest = 'build/';
 
 const src_paths = {
   css: src + '_css/*.{pcss,css}',
-  temp: src + 'temp/**/*',
-  scripts: src + '_js/*.js',
-  assets: [
-    src + '_assets/**/*',
-    'node_modules/coop-frontend-toolkit/static/**/*'
-  ],
+  scripts: src + '_js/*.mjs',
   html: [
     src + '_includes/pattern-library/**/*.html',
     src + '**/*.html'
@@ -36,34 +31,13 @@ const src_paths = {
 const dest_paths = {
   styles: dest + 'assets/css',
   scripts: dest + 'assets/js',
-  assets: dest + 'assets'
 };
 
 const settings = {
   css: {
     outputStyle: 'compressed',
   },
-  include: {
-    includePaths: [
-      __dirname + '/node_modules',
-      __dirname + '/src/_js',
-    ]
-  }
 };
-
-
-/**
- * Lint tasks
- */
-function lintjs() {
-  return gulp.src([
-    src_paths.scripts,
-    '!' + src + '_js/vendor'
-  ], { follow: true })
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-}
-
 
 /**
  * Build tasks
@@ -111,48 +85,40 @@ function css() {
 
 // Scripts
 function js() {
-  return gulp.src(src_paths.scripts, { follow: true })
+  return gulp.src(src_paths.scripts, { read: false })
+    .pipe(tap((file) => {
+      file.contents = browserify(file.path, {
+        debug: true,
+        extensions: [
+          '.cjs',
+          '.js',
+          '.mjs',
+        ],
+      })
+        .transform(babelify, {
+          global: true,
+          ignore: [
+            /\/node_modules\/(?!@coopdigital\/)/,
+          ],
+        })
+        .bundle();
+    }))
+    .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
-      .pipe(include(settings.include))
-      .pipe(concat('main.js'))
-      .pipe(uglify())
+    .pipe(terser())
+    .pipe(rename({ extname: '.js' }))
     .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.scripts))
     .pipe(connect.reload());
 }
 
-function vendorjs() {
-  return gulp.src([
-    'node_modules/coop-frontend-toolkit/scripts/vendor/**/*',
-    src + '_js/vendor/**/*'
-  ], { follow: true })
-    .pipe(changed(dest_paths.scripts + '/vendor'))
-    .pipe(gulp.dest(dest_paths.scripts + '/vendor'));
-}
-
-// Static assets
-function assets() {
-  return gulp.src(src_paths.assets, { follow: true })
-    .pipe(changed(dest_paths.assets))
-    .pipe(gulp.dest(dest_paths.assets))
-    .pipe(connect.reload());
-}
-
-function optimiseImages() {
-  return gulp.src(dest_paths.assets + '/images/**/*', { follow: true })
-    .pipe(imagemin())
-    .pipe(gulp.dest(dest_paths.assets + '/images'));
-}
-
-
 /**
  * Watch tasks
  */
 function watch(done) {
-  gulp.watch(['src/_css/**/**.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
+  gulp.watch(['src/_css/**/*.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
+  gulp.watch(['src/_js/**/*.{cjs,js,mjs}'], js);
   gulp.watch(['../packages/**/*.{pcss,css,html,jpg,jpeg,gif,png,webp,svg}', '!../packages/**/node_modules/**'], copyComponents);
-  gulp.watch(src_paths.scripts, gulp.series(lintjs, js));
-  gulp.watch(src_paths.assets, optimiseImages);
   gulp.watch(src_paths.html, gulp.series(jekyll, html));
   done();
 }
@@ -174,7 +140,7 @@ function serve(done) {
 /**
  * Run tasks
  */
-const build = gulp.parallel(gulp.series(copyComponents, contentful, jekyll), css, vendorjs, gulp.series(lintjs, js), gulp.series(assets, optimiseImages));
+const build = gulp.parallel(gulp.series(copyComponents, contentful, jekyll), css, js);
 const server = gulp.series(build, serve, watch);
 
 
@@ -183,11 +149,7 @@ module.exports = {
   contentful,
   jekyll,
   css,
-  vendorjs,
-  lintjs,
   js,
-  assets,
-  optimiseImages,
   build,
   server,
   default: server

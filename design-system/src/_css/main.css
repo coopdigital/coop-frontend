@@ -1,4 +1,3 @@
-
 /* Synced with coop.co.uk - remove later */
 @import "design-system/temp-vars.css";
 
@@ -18,26 +17,26 @@
 @import "@coopdigital/component-card--product";
 @import "@coopdigital/component-date-input";
 @import "@coopdigital/component-skipnav";
-@import '@coopdigital/component-tags';
-@import '@coopdigital/component-squircles';
-@import '@coopdigital/component-notification';
-@import '@coopdigital/component-notification--alert';
+@import "@coopdigital/component-tags";
+@import "@coopdigital/component-squircles";
+@import "@coopdigital/component-notification";
+@import "@coopdigital/component-notification--alert";
 
-@import '@coopdigital/shared-component--cooperate';
-@import '@coopdigital/shared-component--editorialcard';
-@import '@coopdigital/shared-component--featurecard';
-@import '@coopdigital/shared-component--signpost';
-@import '@coopdigital/shared-component--signpostlist';
-@import '@coopdigital/shared-component--membership';
-@import '@coopdigital/shared-component--membershiphero';
-@import '@coopdigital/shared-component--membershipfeatured';
-@import '@coopdigital/shared-component--offers';
-@import '@coopdigital/shared-component--offerspromo';
-@import '@coopdigital/shared-component--hero';
-@import '@coopdigital/shared-component--app';
-@import '@coopdigital/shared-component--totaliser';
-@import '@coopdigital/shared-component--linklist'; 
-@import '@coopdigital/shared-component--postcode';
+@import "@coopdigital/shared-component--cooperate";
+@import "@coopdigital/shared-component--editorialcard";
+@import "@coopdigital/shared-component--featurecard";
+@import "@coopdigital/shared-component--signpost";
+@import "@coopdigital/shared-component--signpostlist";
+@import "@coopdigital/shared-component--membership";
+@import "@coopdigital/shared-component--membershiphero";
+@import "@coopdigital/shared-component--membershipfeatured";
+@import "@coopdigital/shared-component--offers";
+@import "@coopdigital/shared-component--offerspromo";
+@import "@coopdigital/shared-component--hero";
+@import "@coopdigital/shared-component--app";
+@import "@coopdigital/shared-component--totaliser";
+@import "@coopdigital/shared-component--linklist";
+@import "@coopdigital/shared-component--postcode";
 
 /* Design system */
 @import "design-system/header.css";

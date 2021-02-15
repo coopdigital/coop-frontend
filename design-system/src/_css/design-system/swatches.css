@@ -1,18 +1,18 @@
 .dm-colour__swatch--wide {
-    padding: 10px 16px;
+  padding: 10px 16px;
 }
 
 .dm-colour__swatch {
-    min-height: 220px;
-    width: 100%;
-    border-radius: var(--ui-border-radius);
+  min-height: 220px;
+  width: 100%;
+  border-radius: var(--ui-border-radius);
 }
 
 .dm-colour__swatch.coop-u-grey-light-bg {
-    border: 1px solid #c4c4c4;
+  border: 1px solid #c4c4c4;
 }
 
 .list-bare {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }

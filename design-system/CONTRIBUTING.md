@@ -9,10 +9,6 @@ Please report issues in the [issue tracker](https://github.com/coopdigital/desig
 - **Browser and platform versions** the issue appears on
 - **Proposed fix** if any, with a link to the related Pull Request
 
-## Working with the Co-op Front-end Toolkit
-
-Some contributions may be more appropriately made in the Co-op Front-end Toolkit repository -- please view the [contribution guidelines](https://github.com/coopdigital/coop-frontend-toolkit/blob/master/CONTRIBUTING.md) info for that repository if necessary.
-
 ## Submitting a contribution
 
 Any contribution to this repository should be done through a Pull Request (PR).
