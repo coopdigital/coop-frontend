@@ -12,6 +12,10 @@ module.exports = (api) => {
 
   const plugins = [
     '@babel/plugin-transform-runtime',
+    ['module-extension', {
+      cjs: '',
+      mjs: '',
+    }],
   ];
 
   return {

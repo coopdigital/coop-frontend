@@ -7,6 +7,7 @@ const changed = require('gulp-changed');
 const connect = require('gulp-connect');
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const spawn = require('child_process').spawn;
 const tap = require('gulp-tap');
@@ -20,7 +21,7 @@ const dest = 'build/';
 
 const src_paths = {
   css: src + '_css/*.{pcss,css}',
-  scripts: src + '_js/*.js',
+  scripts: src + '_js/*.mjs',
   html: [
     src + '_includes/pattern-library/**/*.html',
     src + '**/*.html'
@@ -86,13 +87,26 @@ function css() {
 function js() {
   return gulp.src(src_paths.scripts, { read: false })
     .pipe(tap((file) => {
-      file.contents = browserify(file.path, { debug: true })
-        .transform(babelify)
+      file.contents = browserify(file.path, {
+        debug: true,
+        extensions: [
+          '.cjs',
+          '.js',
+          '.mjs',
+        ],
+      })
+        .transform(babelify, {
+          global: true,
+          ignore: [
+            /\/node_modules\/(?!@coopdigital\/)/,
+          ],
+        })
         .bundle();
     }))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(terser())
+    .pipe(rename({ extname: '.js' }))
     .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.scripts))
     .pipe(connect.reload());
@@ -103,7 +117,7 @@ function js() {
  */
 function watch(done) {
   gulp.watch(['src/_css/**/*.{pcss,css}', '../packages/**/*.{pcss,css}'], css);
-  gulp.watch(['src/_js/**/*.js'], js);
+  gulp.watch(['src/_js/**/*.{cjs,js,mjs}'], js);
   gulp.watch(['../packages/**/*.{pcss,css,html,jpg,jpeg,gif,png,webp,svg}', '!../packages/**/node_modules/**'], copyComponents);
   gulp.watch(src_paths.html, gulp.series(jekyll, html));
   done();
