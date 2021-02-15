@@ -1,6 +1,6 @@
 
 <!-- Validation -->
-<form id="validation-demo" class="coop-form">
+<form id="validation-demo" class="coop-form" novalidate>
 
   <!-- Validation summary (empty) -->
   <div id="validation-demo-box" class="coop-c-message coop-c-message--error" tabindex="-1" role="alert" hidden></div>
@@ -21,6 +21,9 @@
   </div>
 
   <div class="coop-form__row">
-    <button class="coop-btn coop-btn--primary">Update details</button>
+    <button class="coop-btn coop-btn--primary" aria-live="assertive" aria-relevant="additions text" aria-atomic="true">
+      <span class="coop-btn__text" role="status" hidden>Updating details…</span>
+      <span class="coop-btn__text">Update details</span>
+    </button>
   </div>
 </form>

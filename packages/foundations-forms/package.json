@@ -20,9 +20,11 @@
     "directory": "packages/foundations-forms"
   },
   "devDependencies": {
+    "@coopdigital/foundations-buttons": "^2.5.0",
     "@coopdigital/foundations-vars": "^3.7.2"
   },
   "peerDependencies": {
+    "@coopdigital/foundations-buttons": ">= 2.5.0 < 3",
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
   },
   "publishConfig": {

@@ -1,3 +1,4 @@
+import { reset as buttonReset, loading as buttonLoading } from '@coopdigital/foundations-buttons/dist/buttons.js';
 import { validate } from '../validation/index.mjs';
 import ValidationSummary from '../validation/summary/index.mjs';
 
@@ -5,13 +6,19 @@ import ValidationSummary from '../validation/summary/index.mjs';
 const form = document.getElementById('validation-demo');
 const fullName = document.getElementById('validation-demo-name');
 const emailAddress = document.getElementById('validation-demo-email');
+const button = form.querySelector('button');
 
 // Validation summary
 const summary = new ValidationSummary('validation-demo-box');
 
 // Validate on submit
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
   const errors = [];
+
+  // Prevent double submit
+  if (form.dataset.busy) {
+    return;
+  }
 
   // Full name, validate
   validate(fullName, {
@@ -29,8 +36,8 @@ form.addEventListener('submit', (event) => {
 
   // Email address, validate
   validate(emailAddress, {
-    required: 'Enter your full name',
-    invalid: 'Enter a valid full name',
+    required: 'Enter your email address',
+    invalid: 'Enter a valid email address',
   });
 
   // Email address, validation summary link
@@ -41,13 +48,23 @@ form.addEventListener('submit', (event) => {
     });
   }
 
+  // Don't submit example
+  event.preventDefault();
+
   // Show or clear errors
   if (errors.length) {
     summary.setErrors(errors);
   } else {
     summary.reset();
-  }
 
-  // Don't submit example
-  event.preventDefault();
+    // Pretend to submit
+    form.dataset.busy = true;
+    await buttonLoading(button);
+
+    // Reset button
+    setTimeout(async () => {
+      await buttonReset(button);
+      delete form.dataset.busy;
+    }, 3000);
+  }
 });
