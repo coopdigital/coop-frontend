@@ -2,12 +2,12 @@ module.exports = function (migration) {
   const totaliser = migration.createContentType('totaliser');
 
   totaliser.name('-- Totaliser')
-    .description('A component to show amount of money raised by Co-op members.')
+    .description('A component to show amount of money raised by Co-op members.');
 
   totaliser.createField('name')
     .name('Name')
     .type('Symbol')
-    .required(true)
+    .required(true);
 
   totaliser.createField('bodyText')
     .name('Body text')
@@ -16,14 +16,14 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 125 },
-        message: "Text in this field must be less than 125 characters."
-      }
+        message: 'Text in this field must be less than 125 characters.',
+      },
     ]);
 
   totaliser.createField('amount')
     .name('Amount raised')
     .type('Number')
-    .required(true)
+    .required(true);
 
   totaliser.createField('strapline')
     .name('Strapline')
@@ -31,8 +31,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 30 },
-        message: "Text in this field must be less than 30 characters."
-      }
+        message: 'Text in this field must be less than 30 characters.',
+      },
     ]);
 
   totaliser.displayField('name');
@@ -41,30 +41,29 @@ module.exports = function (migration) {
     'name',
     'builtin',
     'singleLine',
-    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-  )
+    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' },
+  );
 
   totaliser.changeFieldControl(
     'bodyText',
     'builtin',
     'singleLine',
-    { helpText: 'This text should give a brief supporting description.' }
-  )
+    { helpText: 'This text should give a brief supporting description.' },
+  );
 
   totaliser.changeFieldControl(
     'amount',
     'builtin',
     'numberEditor',
     {
-      helpText: "This is the amount raised."
-    }
+      helpText: 'This is the amount raised.',
+    },
   );
 
   totaliser.changeFieldControl(
     'strapline',
     'builtin',
     'singleLine',
-    { helpText: 'This text sits under the amount raised number.' }
-  )
-
-}
+    { helpText: 'This text sits under the amount raised number.' },
+  );
+};

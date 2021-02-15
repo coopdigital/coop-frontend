@@ -1,13 +1,12 @@
 module.exports = function (migration) {
   const offerCard = migration.createContentType('offerCard');
   offerCard.name('Offer card')
-    .description('Displays text and image to give an example of an offer in the Offers promo banner.')
+    .description('Displays text and image to give an example of an offer in the Offers promo banner.');
 
   offerCard.createField('name')
     .name('Name')
     .type('Symbol')
-    .required(true)
-
+    .required(true);
 
   offerCard.createField('heading')
     .name('Heading')
@@ -16,8 +15,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 25 },
-        message: "Text in this field must be less than 25 characters."
-      }
+        message: 'Text in this field must be less than 25 characters.',
+      },
     ]);
 
   offerCard.createField('description')
@@ -27,21 +26,20 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 60 },
-        message: "Text in this field must be less than 60 characters."
-      }
+        message: 'Text in this field must be less than 60 characters.',
+      },
     ]);
 
   offerCard.createField('image')
-    .name("Image")
-    .type("Link")
+    .name('Image')
+    .type('Link')
     .required(true)
-    .linkType("Asset")
+    .linkType('Asset')
     .validations([
       {
-        linkMimetypeGroup: ["image"]
-      }
+        linkMimetypeGroup: ['image'],
+      },
     ]);
-
 
   offerCard.displayField('name');
 
@@ -49,20 +47,20 @@ module.exports = function (migration) {
     'name',
     'builtin',
     'singleLine',
-    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-  )
+    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' },
+  );
 
   offerCard.changeFieldControl(
     'heading',
     'builtin',
     'singleLine',
-    { helpText: 'This text should be the main information of the offer. For example, "£1 off".' }
-  )
+    { helpText: 'This text should be the main information of the offer. For example, "£1 off".' },
+  );
 
   offerCard.changeFieldControl(
     'description',
     'builtin',
     'singleLine',
-    { helpText: 'This text should follow on from the heading and briefly describe the offer.' }
-  )
-}
+    { helpText: 'This text should follow on from the heading and briefly describe the offer.' },
+  );
+};

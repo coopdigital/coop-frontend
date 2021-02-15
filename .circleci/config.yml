@@ -37,7 +37,7 @@ jobs:
                   - ./node_modules
             - run:
                 name: 'Build all packages'
-                command: npm run build:all
+                command: npm run build
 
 
   build:

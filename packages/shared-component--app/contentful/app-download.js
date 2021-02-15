@@ -2,34 +2,34 @@ module.exports = function (migration) {
   const appDownload = migration.createContentType('appDownload');
 
   appDownload.name('-- App download')
-    .description('A component that allows for app download. Choose a smaller version with text and download buttons or a larger version with longer text and image.')
+    .description('A component that allows for app download. Choose a smaller version with text and download buttons or a larger version with longer text and image.');
 
   appDownload.createField('name')
     .name('Name')
     .type('Symbol')
-    .required(true)
+    .required(true);
 
   appDownload.createField('miniVersion')
     .name('Mini version')
-    .type('Boolean')
+    .type('Boolean');
 
   appDownload.createField('handsetImage')
     .name('Handset Image')
-    .type('Boolean')
+    .type('Boolean');
 
   appDownload.createField('imagePositionRight')
     .name('Place image on the right?')
-    .type('Boolean')
+    .type('Boolean');
 
   appDownload.createField('image')
-    .name("Image")
-    .type("Link")
+    .name('Image')
+    .type('Link')
     .required(true)
-    .linkType("Asset")
+    .linkType('Asset')
     .validations([
       {
-        linkMimetypeGroup: ["image"]
-      }
+        linkMimetypeGroup: ['image'],
+      },
     ]);
 
   appDownload.createField('heading')
@@ -39,8 +39,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 60 },
-        message: "Text in this field must be less than 60 characters."
-      }
+        message: 'Text in this field must be less than 60 characters.',
+      },
     ]);
 
   appDownload.createField('bodyText')
@@ -50,8 +50,8 @@ module.exports = function (migration) {
     .validations([
       {
         size: { max: 500 },
-        message: "Text in this field must be less than 500 characters."
-      }
+        message: 'Text in this field must be less than 500 characters.',
+      },
     ]);
 
   appDownload.createField('appStoreLink')
@@ -60,8 +60,8 @@ module.exports = function (migration) {
     .linkType('Entry')
     .validations([
       {
-        linkContentType: ['externalLink']
-      }
+        linkContentType: ['externalLink'],
+      },
     ]);
 
   appDownload.createField('googlePlayLink')
@@ -70,8 +70,8 @@ module.exports = function (migration) {
     .linkType('Entry')
     .validations([
       {
-        linkContentType: ['externalLink']
-      }
+        linkContentType: ['externalLink'],
+      },
     ]);
 
   appDownload.createField('link')
@@ -80,8 +80,8 @@ module.exports = function (migration) {
     .linkType('Entry')
     .validations([
       {
-        linkContentType: ['externalLink', 'internalLink']
-      }
+        linkContentType: ['externalLink', 'internalLink'],
+      },
     ]);
 
   appDownload.displayField('name');
@@ -90,8 +90,8 @@ module.exports = function (migration) {
     'name',
     'builtin',
     'singleLine',
-    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' }
-  )
+    { helpText: 'This is the name of the component in Contentful. It will not display on the website.' },
+  );
 
   appDownload.changeFieldControl(
     'miniVersion',
@@ -99,10 +99,10 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "If set to 'Yes', a smaller version with no image will show. Body text for this version should be 1 line of no more than 50 characters.",
-      trueLabel: "Yes",
-      falseLabel: "No"
-    }
-  )
+      trueLabel: 'Yes',
+      falseLabel: 'No',
+    },
+  );
 
   appDownload.changeFieldControl(
     'handsetImage',
@@ -110,10 +110,10 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "Select 'Yes' if you are going to add a handset image.",
-      trueLabel: "Yes",
-      falseLabel: "No"
-    }
-  )
+      trueLabel: 'Yes',
+      falseLabel: 'No',
+    },
+  );
 
   appDownload.changeFieldControl(
     'imagePositionRight',
@@ -121,43 +121,43 @@ module.exports = function (migration) {
     'boolean',
     {
       helpText: "If 'Yes' this will move the image to the right.",
-      trueLabel: "Yes",
-      falseLabel: "No"
-    }
-  )
+      trueLabel: 'Yes',
+      falseLabel: 'No',
+    },
+  );
 
   appDownload.changeFieldControl(
     'heading',
     'builtin',
     'singleLine',
-    { helpText: 'This text will be heading of the block. Use to introduce the main action, for example "Download the Co-op App".' }
-  )
+    { helpText: 'This text will be heading of the block. Use to introduce the main action, for example "Download the Co-op App".' },
+  );
 
   appDownload.changeFieldControl(
     'bodyText',
     'builtin',
     'multipleLine',
-    { helpText: 'This text should give a brief supporting description.' }
-  )
+    { helpText: 'This text should give a brief supporting description.' },
+  );
 
   appDownload.changeFieldControl(
     'appStoreLink',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'This should be a link to download the app from the App store.' }
-  )
+    { helpText: 'This should be a link to download the app from the App store.' },
+  );
 
   appDownload.changeFieldControl(
     'googlePlayLink',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'This should be a link to download the app from Google play.' }
-  )
+    { helpText: 'This should be a link to download the app from Google play.' },
+  );
 
   appDownload.changeFieldControl(
     'link',
     'builtin',
     'entryLinkEditor',
-    { helpText: 'Use to add a link under the app download buttons. This should be a link to the Co-op App landing page.' }
-  )
-}
+    { helpText: 'Use to add a link under the app download buttons. This should be a link to the Co-op App landing page.' },
+  );
+};

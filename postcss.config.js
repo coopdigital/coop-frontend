@@ -1,6 +1,9 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
+
 module.exports = {
   map: {
-    inline: false
+    inline: false,
   },
   plugins: [
     require('postcss-import'),
