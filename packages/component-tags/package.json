@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-tags",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Co-op Component: Tags",
   "main": "dist/tags.css",
   "style": "src/tags.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/component-tags"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.7.1"
+    "@coopdigital/foundations-vars": "^3.7.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"

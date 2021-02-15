@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--featurecard",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Co-op Shared Component: Feature Card",
   "main": "dist/featureCard.css",
   "style": "src/featureCard.pcss",
@@ -19,7 +19,7 @@
     "directory": "packages/shared-component--featureCard"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.7.1"
+    "@coopdigital/foundations-vars": "^3.7.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
