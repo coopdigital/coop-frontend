@@ -1,4 +1,4 @@
-import { reset as buttonReset, loading as buttonLoading } from '@coopdigital/foundations-buttons/dist/buttons.js';
+import { reset as buttonReset, loading as buttonLoading } from '@coopdigital/foundations-buttons/src/buttons.mjs';
 import { validate } from '../validation/index.mjs';
 import ValidationSummary from '../validation/summary/index.mjs';
 

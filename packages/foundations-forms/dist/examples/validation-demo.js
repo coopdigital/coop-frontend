@@ -8,7 +8,7 @@ require("regenerator-runtime/runtime.js");
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
-var _buttons = require("@coopdigital/foundations-buttons/dist/buttons.js");
+var _buttons = require("@coopdigital/foundations-buttons/src/buttons");
 
 var _index = require("../validation/index");
 
