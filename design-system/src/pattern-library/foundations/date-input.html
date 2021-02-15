@@ -46,14 +46,18 @@ id: pattern-library
                             <div class="tabs-container__panel tabs-container__panel--preview" id="Tab1">
                                 <div class="coop-l-grid">
                                     <div class="coop-l-grid__item coop-l-grid__item--medium-8 coop-l-grid__item--large-6">
-                                        {% include pattern-library/components/component-date-input/src/date-input.html %}
+                                        {% include pattern-library/components/component-date-input/src/examples/date-inputs.html %}
+                                        {% include pattern-library/components/component-date-input/src/examples/date-inputs-error.html %}
+                                        {% include pattern-library/components/component-date-input/src/examples/date-inputs-error-year.html %}
                                     </div>
                                 </div>
                             </div>
                             <h3 class="tabs-container__title" id="TabPanelTitle-Tab2">HTML</h3>
                             <div class="tabs-container__panel tabs-container__panel--code" id="Tab2">
                                 {% highlight html %}
-                                {% include pattern-library/components/component-date-input/src/date-input.html %}
+                                {% include pattern-library/components/component-date-input/src/examples/date-inputs.html %}
+                                {% include pattern-library/components/component-date-input/src/examples/date-inputs-error.html %}
+                                {% include pattern-library/components/component-date-input/src/examples/date-inputs-error-year.html %}
                                 {% endhighlight %}
                             </div>
                         </div>
