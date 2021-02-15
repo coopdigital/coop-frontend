@@ -13,12 +13,14 @@ const summary = new ValidationSummary('validation-demo-box');
 
 // Validate on submit
 form.addEventListener('submit', async (event) => {
-  const errors = [];
+  event.preventDefault();
 
   // Prevent double submit
   if (form.dataset.busy) {
     return;
   }
+
+  const errors = [];
 
   // Full name, validate
   validate(fullName, {
@@ -47,9 +49,6 @@ form.addEventListener('submit', async (event) => {
       message: emailAddress.validationMessage.toLowerCase(),
     });
   }
-
-  // Don't submit example
-  event.preventDefault();
 
   // Show or clear errors
   if (errors.length) {

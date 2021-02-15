@@ -29,7 +29,7 @@ form.addEventListener('submit', /*#__PURE__*/function () {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            errors = []; // Prevent double submit
+            event.preventDefault(); // Prevent double submit
 
             if (!form.dataset.busy) {
               _context2.next = 3;
@@ -39,7 +39,8 @@ form.addEventListener('submit', /*#__PURE__*/function () {
             return _context2.abrupt("return");
 
           case 3:
-            // Full name, validate
+            errors = []; // Full name, validate
+
             (0, _index.validate)(fullName, {
               required: 'Enter your full name',
               invalid: 'Enter a valid full name'
@@ -63,10 +64,8 @@ form.addEventListener('submit', /*#__PURE__*/function () {
                 id: emailAddress.id,
                 message: emailAddress.validationMessage.toLowerCase()
               });
-            } // Don't submit example
+            } // Show or clear errors
 
-
-            event.preventDefault(); // Show or clear errors
 
             if (!errors.length) {
               _context2.next = 12;
