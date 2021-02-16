@@ -43,6 +43,10 @@ describe('Date inputs', () => {
     });
 
     test('Marks up field group as required', () => {
+      inputs[0].value = '';
+      inputs[1].value = '';
+      inputs[2].value = '';
+
       validateGroup(fieldMap, fieldset, {
         required: 'Enter your date of birth',
         invalid: 'Enter a valid date of birth',
@@ -148,6 +152,53 @@ describe('Date inputs', () => {
       expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
       expect(error.textContent).toBe('Enter your date of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
+    });
+
+    test('Marks up field group as required (various) then valid', () => {
+      inputs[0].value = '';
+      inputs[1].value = '';
+      inputs[2].value = '';
+
+      // Validation attempt 1
+      validateGroup(fieldMap, fieldset, {
+        required: 'Enter your date of birth',
+        invalid: 'Enter a valid date of birth',
+      });
+
+      // Fieldset shows group "all empty" required message
+      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(error.textContent).toBe('Enter your date of birth');
+      expect(error.hasAttribute('hidden')).toBe(false);
+
+      inputs[0].value = '01';
+      inputs[1].value = '';
+      inputs[2].value = '';
+
+      // Validation attempt 2
+      validateGroup(fieldMap, fieldset, {
+        required: 'Enter your date of birth',
+        invalid: 'Enter a valid date of birth',
+      });
+
+      // Fieldset shows first error in group
+      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(error.textContent).toBe('Enter your month of birth');
+      expect(error.hasAttribute('hidden')).toBe(false);
+
+      inputs[0].value = '01';
+      inputs[1].value = '02';
+      inputs[2].value = '2021';
+
+      // Validation attempt 3
+      validateGroup(fieldMap, fieldset, {
+        required: 'Enter your date of birth',
+        invalid: 'Enter a valid date of birth',
+      });
+
+      // Fieldset shows no errors
+      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint');
+      expect(error.textContent).toBe('');
+      expect(error.hasAttribute('hidden')).toBe(true);
     });
 
     test('Marks up field group as invalid (invalid day/month/year)', () => {
