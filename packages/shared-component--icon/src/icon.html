@@ -1,6 +1,13 @@
 {% macro render(iconName, iconClass) %}
 
-<svg class="coop-c-icon {{ iconClass }}" viewBox="0 0 32 32">
+<svg
+  class="coop-c-icon {{ iconClass }}"
+  viewBox="0 0 32 32"
+  width="32"
+  height="32"
+  aria-hidden="true"
+  focusable="false"
+>
   {%- if iconName == 'breakdown' -%}
 
   <path
