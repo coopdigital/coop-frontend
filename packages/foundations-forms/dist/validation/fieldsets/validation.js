@@ -1,14 +1,18 @@
 "use strict";
 
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/es.array.for-each.js");
+
 require("core-js/modules/es.array.from.js");
 
 require("core-js/modules/es.array.iterator.js");
 
-require("core-js/modules/es.array.reduce.js");
-
 require("core-js/modules/es.object.to-string.js");
 
 require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/web.dom-collections.for-each.js");
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
@@ -22,13 +26,20 @@ var _aria = require("../utils/aria");
  */
 var setGroupValid = function setGroupValid(fieldMap, fieldset) {
   var messageId = fieldset.id + "-error";
-  var message = document.getElementById(messageId); // Un-link error message
+  var message = document.getElementById(messageId);
+  var fields = Array.from(fieldMap.keys()); // Un-link error message
 
   if (message) {
     (0, _aria.removeAriaDescription)(fieldset, messageId);
     message.setAttribute('hidden', true);
     message.innerHTML = '';
-  }
+  } // Mark up each form field as valid
+
+
+  fields.forEach(function (field) {
+    field.setCustomValidity('');
+    field.classList.remove('coop-form__invalid');
+  });
 };
 /**
  * Mark up fieldset as invalid
@@ -43,18 +54,22 @@ var setGroupInvalid = function setGroupInvalid(fieldMap, fieldset) {
 
   if (!message) {
     return;
-  } // Find first custom field error
+  } // Find all invalid fields
 
 
-  var validationMessage = Array.from(fieldMap.keys()).reduce(function (error, field) {
-    return error || field.validity.customError && field.validationMessage;
-  }, ''); // Add first error message to fieldset, show
+  var fieldsInvalid = Array.from(fieldMap.keys()).filter(function (field) {
+    return field.validity.customError && field.validationMessage;
+  }); // Add first error message to fieldset, show
 
-  if (validationMessage) {
-    message.innerHTML = validationMessage;
+  if (fieldsInvalid.length) {
+    message.innerHTML = fieldsInvalid[0].validationMessage;
     message.removeAttribute('hidden'); // Attach error to fieldset
 
-    (0, _aria.addAriaDescription)(fieldset, messageId);
+    (0, _aria.addAriaDescription)(fieldset, messageId); // Mark fields as invalid
+
+    fieldsInvalid.forEach(function (field) {
+      return field.classList.add('coop-form__invalid');
+    });
   }
 };
 
