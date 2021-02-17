@@ -17,7 +17,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
-    "directory": "packages/component-template"
+    "directory": "packages/shared-component--icon"
   },
   "publishConfig": {
     "access": "public"
