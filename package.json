@@ -1,6 +1,6 @@
 {
-  "name": "@coopdigital/foundations",
-  "description": "Co-op CSS Foundations libraries",
+  "name": "@coopdigital/coop-frontend",
+  "description": "Co-op Frontend",
   "author": "Co-op Digital",
   "license": "MIT",
   "private": true,
