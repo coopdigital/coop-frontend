@@ -1,166 +1,96 @@
 @import "@coopdigital/foundations-vars";
 
+.coop-table-wrapper {
+  overflow-x: auto;
+}
+
 table,
 .coop-table {
   width: 100%;
-  table-layout: fixed;
-  font-size: var(--type-body-s);
-  margin-bottom: var(--spacing-base--1-2);
+  margin-bottom: var(--spacing-16);
+  overflow: hidden;
+  border-collapse: separate;
+  text-align: left;
+}
 
-  @media (--mq-medium) {
-    font-size: var(--type-body-l);
-    margin-bottom: var(--spacing-medium--1-2);
-  }
+table + table,
+.coop-table + .coop-table,
+.coop-table-wrapper + .coop-table-wrapper {
+  margin-top: var(--spacing-24);
 }
 
 table caption,
-.coop-table caption {
-  font-weight: normal;
+.coop-table__caption {
+  margin: var(--spacing-16) 0 var(--spacing-8);
   text-align: left;
 }
 
-table th,
-.coop-table th {
-  font-family: var(--font-family);
-  font-weight: bold;
-}
-
-table th,
-.coop-table th,
-table td,
-.coop-table td {
-  padding: var(--spacing-base--1-4) var(--spacing-base--1-4)
-    var(--spacing-base--1-4) 0;
-  text-align: left;
-  vertical-align: top;
-}
-
-table thead,
-.coop-table thead {
-  border-bottom: 2px solid var(--color-grey-mid);
-}
-
-.coop-table--regular-th {
-  font-family: var(--font-family);
-}
-
-table tbody td,
-.coop-table thead td,
-table tbody th,
-.coop-table thead th {
+th,
+td,
+.coop-table__cell,
+.coop-table__header,
+.coop-table__footer {
   position: relative;
+  padding: var(--spacing-16) var(--spacing-32);
+  padding-left: 0;
+  vertical-align: top;
+  border: solid var(--color-grey-mid);
+  border-width: 0 0 1px;
+  text-align: left;
+}
+
+th,
+td,
+.coop-table__cell,
+.coop-table__header {
+  &:after {
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+    right: 0;
+    display: block;
+    width: var(--spacing-8);
+    height: 1px;
+    border-bottom: 1px solid var(--color-white);
+    content: "";
+  }
+
+  &:last-child:after {
+    right: calc(var(--spacing-8) * -1);
+  }
+}
+
+td[align="right"],
+th[align="right"],
+.coop-table__cell--numeric,
+.coop-table__header--numeric,
+.coop-table__footer--numeric {
+  padding-left: var(--spacing-32);
+  padding-right: 0;
+  text-align: right;
 
   &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 1px;
-    width: 95%;
-    border-bottom: 1px solid var(--color-grey-mid);
+    right: calc(var(--spacing-8) * -1);
   }
 }
 
-table tfoot td,
-.coop-table tfoot td {
-  font-family: var(--font-family);
+tbody th,
+.coop-table__cell {
+  font-weight: normal;
 }
 
-table ul,
-.coop-table ul {
-  margin-bottom: 0;
-}
-
-.coop-table-smallscreen--stacked th,
-.coop-table-smallscreen--stacked td {
-  @media (max-width: 46.875em) {
-    padding-top: var(--spacing-base--1-8);
-    padding-bottom: var(--spacing-base--1-8);
-    padding-right: 0;
-    padding-left: 0;
-    text-align: left;
-  }
-}
-
-.coop-table-smallscreen--stacked thead,
-.coop-table-smallscreen--stacked tfoot {
-  @media (max-width: 46.875em) {
-    border-bottom: 0;
-  }
-}
-
-.coop-table-smallscreen--stacked thead th,
-.coop-table-smallscreen--stacked thead td,
-.coop-table-smallscreen--stacked tfoot th,
-.coop-table-smallscreen--stacked tfoot td {
-  @media (max-width: 46.875em) {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 0;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 0;
-    opacity: 0;
-    letter-spacing: 0;
-  }
-}
-
-.coop-table-smallscreen--stacked tbody th {
-  @media (max-width: 46.875em) {
-    display: block;
-    border-top: 2px solid var(--color-grey-mid);
-    margin-top: var(--spacing-base--1-4);
-  }
-}
-
-.coop-table-smallscreen--stacked_hidden {
-  @media (max-width: 46.875em) {
-    display: none;
-  }
-}
-
-.coop-table-smallscreen--stacked tbody td {
-  @media (max-width: 46.875em) {
-    display: block;
-    border-bottom: 0;
-
-    &:before {
-      content: attr(data-th) "";
-      vertical-align: top;
-      font-family: var(--font-family);
-      font-weight: normal;
-      /* Should be amended with a custom value... */
-      width: 40%;
-      display: inline-block;
-    }
-  }
-}
-
-.coop-table-smallscreen--stacked tbody th::after {
-  @media (max-width: 46.875em) {
-    border-bottom: 0;
-  }
-}
-
-.coop-table-smallscreen--stacked tbody ul {
-  @media (max-width: 46.875em) {
-    display: inline-block;
-    margin-left: -5px;
-  }
-}
-
-.coop-table-smallscreen--stacked tbody a {
-  @media (max-width: 46.875em) {
-    margin-left: -5px;
-  }
-}
-
+thead th,
+thead td,
 .coop-table__header {
-  padding: 1rem 0 0 0;
-  margin-bottom: 0;
+  font-weight: bold;
+  padding-bottom: var(--spacing-24);
+  position: relative;
+}
 
-  @media (max-width: 46.875em) {
-    padding: 1rem 0.5rem 0.8rem 0.5rem;
-  }
+tfoot td,
+tfoot th,
+.coop-table__footer {
+  padding-top: var(--spacing-24);
+  border-bottom-width: 0;
+  font-weight: bold;
 }
