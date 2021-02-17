@@ -96,6 +96,11 @@ function js() {
         ],
       })
         .transform(babelify, {
+          extensions: [
+            '.cjs',
+            '.js',
+            '.mjs',
+          ],
           global: true,
           ignore: [
             /\/node_modules\/(?!@coopdigital\/)/,
