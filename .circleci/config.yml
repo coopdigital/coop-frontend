@@ -8,92 +8,87 @@ parameters:
     type: string
     default: "unknown"
 
-jobs:
-  build_packages:
+executors:
+  node:
     docker:
       - image: circleci/node:12
+  ruby:
+    docker:
+      - image: circleci/ruby:2.6.3-node
+
+jobs:
+  build_packages:
+    executor: node
     steps:
       - when:
           condition: << pipeline.parameters.is-content-update >>
           steps:
             - run:
-                name: 'Skip package build'
+                name: Skip package build
                 command: echo "Content update, no need to build packages :)"
       - unless:
           condition: << pipeline.parameters.is-content-update >>
           steps:
             - checkout
             - run:
-                name: 'Update NPM'
-                command: 'sudo npm install -g npm@latest'
-            - restore_cache:
-                key: build-cache-{{ checksum "package.json" }}
-            - run:
-                name: 'Install NPM dependencies'
+                name: Install dependencies
                 command: npm ci
             - save_cache:
-                key: build-cache-{{ checksum "package.json" }}
+                key: build-cache-{{ checksum "package-lock.json" }}
                 paths:
-                  - ./node_modules
+                  - ~/project/node_modules
             - run:
-                name: 'Build all packages'
+                name: Build all packages
                 command: npm run build
 
-
-  build:
-    docker:
-      - image: circleci/ruby:2.6.3-node
+  build_site:
+    executor: ruby
     steps:
       - checkout
-      - run:
-          name: update npm
-          command: 'sudo npm install -g npm@latest'
-          working_directory: ~/project/design-system
       - restore_cache:
           key: site-cache-{{ checksum "design-system/package.json" }}
+      - restore_cache:
+          key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
       - run:
           name: Install bundler
           command: gem install bundler
           working_directory: ~/project/design-system
-      - restore_cache:
-          key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
       - run:
-          name: Install gems
+          name: Install site gems
           command: bundle install
           working_directory: ~/project/design-system
+      - save_cache:
+          key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
+          paths:
+            - ~/project/design-system/vendor/bundle
       - run:
-          name: Install node modules
+          name: Install site dependencies
           command: npm install
           working_directory: ~/project/design-system
+      - save_cache:
+          key: site-cache-{{ checksum "design-system/package.json" }}
+          paths:
+            - ~/project/design-system/node_modules
       - run:
           name: Build site
           command: npm run build
           working_directory: ~/project/design-system
-      - save_cache:
-          key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-      - save_cache:
-          key: site-cache-{{ checksum "design-system/package.json" }}
-          paths:
-            - ./node_modules
 
   deploy:
-    docker:
-      - image: circleci/node:latest
+    executor: node
     steps:
       - checkout
       - when:
             condition: << pipeline.parameters.is-content-update >>
             steps:
               - run:
-                  name: 'Add commit with latest updated entry to force deploy'
+                  name: Add commit with latest updated entry to force deploy
                   command: |
                     echo 'Last updated entry: << pipeline.parameters.entryID >>' >> design-system/last-updated-entry.txt
                     git add design-system/last-updated-entry.txt
                     git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
       - run:
-          name: 'Deploy to Heroku'
+          name: Deploy to Heroku
           command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git `git subtree split --prefix design-system master`:master --force
 
 workflows:
@@ -101,12 +96,12 @@ workflows:
   build_packages_and_site:
     jobs:
       - build_packages
-      - build:
+      - build_site:
           requires:
             - build_packages
       - deploy:
           requires:
-            - build
+            - build_site
           filters:
             branches:
               only: master
