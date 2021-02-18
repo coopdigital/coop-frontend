@@ -2,32 +2,12 @@
 layout: blank
 id: examples
 ---
+
 <div class="coop-u-margin-resp-b-64-32 coop-u-margin-resp-t-64-32">
-    <h1>Tables</h1> 
-    {% include pattern-library/foundations/foundations-tables/tables.html %}
-    <div class="coop-u-margin-resp-t-64-32 coop-u-margin-b-64">
-        <h3>Responsive table</h3>
-        <table class="coop-table coop-table-smallscreen--stacked">
-            <caption>This table compares our Classic and Select Plus pet insurance</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Compare Pet Insurance</th>
-                    <th scope="col">Classic</th>
-                    <th scope="col">Select Plus</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Vet fees cover</th>
-                    <td data-th="Classic">&pound;2000</td>
-                    <td data-th="Select Plus">&pound;5000</td>
-                </tr>
-                <tr>
-                    <th scope="row">Extra treatments</th>
-                    <td data-th="Classic">Not included</td>
-                    <td data-th="Select Plus">&pound;750</td>
-                </tr>
-            </tbody>
-        </table>
+    <h1>Tables</h1>
+    <div class="coop-l-grid">
+        <div class="coop-l-grid__item coop-l-grid__item--large-6">
+          {% include pattern-library/components/foundations-tables/src/examples/tables.html %}
+        </div>
     </div>
 </div>
