@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--offerspromo",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Co-op Shared Component: Offers promo",
   "main": "dist/offersPromo.css",
   "style": "src/offersPromo.pcss",
@@ -20,8 +20,8 @@
     "directory": "packages/shared-component--offersPromo"
   },
   "devDependencies": {
-    "@coopdigital/foundations-layout": "^3.3.2",
-    "@coopdigital/foundations-vars": "^3.7.2"
+    "@coopdigital/foundations-layout": "^3.3.3",
+    "@coopdigital/foundations-vars": "^3.8.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-layout": ">= 3.2.0 < 4",
