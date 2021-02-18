@@ -32,22 +32,33 @@ jobs:
             - checkout
             - restore_cache:
                 name: Restoring cache for node_modules
-                key: lockfile-cache-{{ checksum "package-lock.json" }}
+                key: packages-{{ checksum "package-lock.json" }}
             - run:
                 name: Install npm dependencies
-                command: npm install
+                command: npm install --no-save
             - run:
                 name: Build all packages
                 command: npm run build
             - save_cache:
                 name: Saving cache for node_modules
-                key: lockfile-cache-{{ checksum "package-lock.json" }}
+                key: packages-{{ checksum "package-lock.json" }}
                 paths:
                   - ~/project/design-system/node_modules
-                  - ~/project/packages/component-date-input/node_modules
-                  - ~/project/packages/foundations-buttons/node_modules
-                  - ~/project/packages/foundations-forms/node_modules
                   - ~/project/node_modules
+
+                  # Cache foundations packages
+                  - ~/project/packages/foundations-buttons/node_modules
+                  - ~/project/packages/foundations-colors/node_modules
+                  - ~/project/packages/foundations-forms/node_modules
+                  - ~/project/packages/foundations-global/node_modules
+                  - ~/project/packages/foundations-grid/node_modules
+                  - ~/project/packages/foundations-layout/node_modules
+                  - ~/project/packages/foundations-tables/node_modules
+                  - ~/project/packages/foundations-typography/node_modules
+                  - ~/project/packages/foundations-vars/node_modules
+
+                  # Cache extra packages for @coopdigital require() resolution
+                  - ~/project/packages/component-date-input/node_modules
 
   build_site:
     executor: ruby
@@ -55,7 +66,7 @@ jobs:
       - checkout
       - restore_cache:
           name: Restoring cache for node_modules
-          key: lockfile-cache-{{ checksum "package-lock.json" }}
+          key: packages-{{ checksum "package-lock.json" }}
       - restore_cache:
           name: Restoring cache for site gems
           key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
