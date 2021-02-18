@@ -35,7 +35,10 @@ jobs:
                 key: lockfile-cache-{{ checksum "package-lock.json" }}
             - run:
                 name: Install npm dependencies
-                command: npm install --no-save
+                command: npm install
+            - run:
+                name: Build all packages
+                command: npm run build
             - save_cache:
                 name: Saving cache for node_modules
                 key: lockfile-cache-{{ checksum "package-lock.json" }}
@@ -45,9 +48,6 @@ jobs:
                   - ~/project/packages/foundations-buttons/node_modules
                   - ~/project/packages/foundations-forms/node_modules
                   - ~/project/node_modules
-            - run:
-                name: Build all packages
-                command: npm run build
 
   build_site:
     executor: ruby
