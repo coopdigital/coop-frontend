@@ -30,7 +30,7 @@
     "@coopdigital/foundations-global": "^3.3.2",
     "@coopdigital/foundations-grid": "^2.1.2",
     "@coopdigital/foundations-layout": "^3.3.2",
-    "@coopdigital/foundations-tables": "^2.2.3",
+    "@coopdigital/foundations-tables": "^3.0.0",
     "@coopdigital/foundations-typography": "^4.2.3",
     "@coopdigital/foundations-vars": "^3.7.2",
     "@coopdigital/shared-component--app": "^1.3.5",
