@@ -1,0 +1,37 @@
+@import "@coopdigital/foundations-vars";
+
+blockquote,
+.coop-t-blockquote {
+  margin-bottom: var(--spacing-32);
+  margin-left: var(--spacing-16);
+  padding-left: var(--spacing-16);
+
+  @media (--mq-medium) {
+    margin-bottom: var(--spacing-32);
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 6px;
+    margin: var(--spacing-16) 0;
+    background: var(--color-grey-light);
+  }
+}
+
+blockquote p,
+.coop-t-blockquote p {
+  margin-bottom: var(--spacing-16);
+  font-style: normal;
+  font-weight: normal;
+  text-indent: -0.25rem;
+}
+
+blockquote p cite,
+.coop-t-blockquote p cite {
+  font-size: var(--type-body-s);
+  font-style: normal;
+  margin-top: var(--spacing-16);
+}
