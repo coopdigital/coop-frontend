@@ -54,7 +54,12 @@
     "build:js": "lerna exec --ignore design-system --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
     "pretest": "npm run lint",
     "test": "jest --coverage",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@coopdigital/foundations-global": "^3.3.3",
+    "@coopdigital/foundations-typography": "^4.2.4",
+    "@coopdigital/foundations-vars": "^3.8.0"
   }
 }
