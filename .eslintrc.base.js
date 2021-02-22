@@ -11,14 +11,10 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 12,
-    ecmaFeatures: {
-      jsx: true,
-      modules: true,
-    },
   },
   settings: {
     react: {
-      version: 'latest',
+      version: 'detect',
     },
   },
   plugins: ['jest'],
