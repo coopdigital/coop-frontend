@@ -1,12 +1,10 @@
-/* eslint-disable */
+import React from 'react';
+import { mount } from 'enzyme';
+import renderer from 'react-test-renderer';
+import BlockQuote from '../index.mjs';
 
-import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
-import BlockQuote from "../index.js";
-
-describe("BlockQuote", () => {
-  it("should render default BlockQuote", () => {
+describe('BlockQuote', () => {
+  it('should render default BlockQuote', () => {
     const wrapper = mount(<BlockQuote />);
     expect(() => wrapper.unmount()).not.toThrow();
 
@@ -14,7 +12,7 @@ describe("BlockQuote", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("should work with all variants", () => {
+  it('should work with all variants', () => {
     const Variants = () => (
       <div>
         <BlockQuote className="newClass" citation="cite">
