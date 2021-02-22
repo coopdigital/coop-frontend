@@ -7,9 +7,21 @@ module.exports = {
   extends: [
     'airbnb-base',
     'plugin:jest/recommended',
+    'plugin:react/recommended',
   ],
   parserOptions: {
     ecmaVersion: 12,
+    ecmaFeatures: {
+      jsx: true,
+      modules: true,
+    },
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.json'],
+      },
+    },
   },
   plugins: ['jest'],
   rules: {
