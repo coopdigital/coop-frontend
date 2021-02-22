@@ -1,7 +1,9 @@
+/* eslint-disable */
+
 import React from "react";
 import { mount } from "enzyme";
 import renderer from "react-test-renderer";
-import BlockQuote from "../index";
+import BlockQuote from "../index.js";
 
 describe("BlockQuote", () => {
   it("should render default BlockQuote", () => {
