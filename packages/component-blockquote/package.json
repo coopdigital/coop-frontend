@@ -2,8 +2,8 @@
   "name": "@coopdigital/blockquote",
   "version": "1.2.10",
   "description": "Co-op Components: Blockquote",
-  "main": "dist/blockquote.css",
-  "style": "src/blockquote.pcss",
+  "main": "dist/index.js",
+  "style": "dist/blockquote.css",
   "author": "@coopdigital",
   "contributors": [
     "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)",
@@ -21,10 +21,16 @@
     "directory": "packages/component-blockquote"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.7.2"
+    "@coopdigital/foundations-vars": "^3.7.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "prop-types": "^15.5.4"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "prop-types": "^15.5.4"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
