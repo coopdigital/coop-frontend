@@ -1,2 +1,4 @@
 design-system
 node_modules
+storybook-static/**/*.js
+
