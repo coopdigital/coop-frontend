@@ -22,6 +22,9 @@ module.exports = {
         extensions: ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.json'],
       },
     },
+    react: {
+      version: 'latest',
+    },
   },
   plugins: ['jest'],
   rules: {
