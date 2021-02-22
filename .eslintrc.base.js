@@ -17,11 +17,6 @@ module.exports = {
     },
   },
   settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.json'],
-      },
-    },
     react: {
       version: 'latest',
     },
