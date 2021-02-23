@@ -1,7 +1,11 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
-import BlockQuote from '../index.mjs';
+import BlockQuote from '../src/index.mjs';
 
 describe('BlockQuote', () => {
   it('should render default BlockQuote', () => {
