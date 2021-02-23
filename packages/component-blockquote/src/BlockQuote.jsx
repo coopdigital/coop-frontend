@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './blockquote.css';
+import './blockquote.pcss';
 
 const BlockQuote = ({ className, citation, children }) => (
   <blockquote>
