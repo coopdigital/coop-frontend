@@ -1,8 +1,6 @@
 module.exports = {
   "stories": [
     "../packages/**/**/*.stories.mdx",
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
     {
@@ -17,5 +15,12 @@ module.exports = {
     '@storybook/addon-a11y',
     '@whitespace/storybook-addon-html',
     'storybook-addon-designs/register',
-  ]
+  ],
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.pcss$/,
+      use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+    });
+    return config;
+  },
 }
