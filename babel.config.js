@@ -1,21 +1,24 @@
 function isBabelCli(caller) {
-  console.log("CALLER::: ", caller);
   return !!(caller && caller.name === "@babel/cli");
 }
 
+/** remove pcss to stop storybook build breaking */
 const moduleExtensions = ['module-extension', {
   cjs: '',
   mjs: '',
   jsx: '',
 }];
 
+/**  when using the transform on pcss,
+ *   it breaks our storybook build due to src component
+ *  not being able to find .css extensions.
+ * Only add this extension transform on cli build  */
 const moduleExtensionsWithPcss = ['module-extension', {
   cjs: '',
   mjs: '',
   jsx: '',
   pcss: 'css',
 }];
-
 
 module.exports = (api) => {
   const plugins = [
