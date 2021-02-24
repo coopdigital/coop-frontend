@@ -1,13 +1,34 @@
-{% macro render(iconName, iconClass) %}
+{% macro render(iconName, iconClass, title) %}
 
-<svg
-  class="coop-c-icon {{ iconClass }}"
-  viewBox="0 0 32 32"
-  width="32"
-  height="32"
-  aria-hidden="true"
-  focusable="false"
->
+  {# If title is defined, make icon accessible to screen readers #}
+  {%- if title -%}
+    {%- set id = title | lower | replace(" ","-") -%}
+    
+    <svg
+      class="coop-c-icon {{ iconClass }}"
+      viewBox="0 0 32 32"
+      width="32"
+      height="32"
+      role="img"
+      aria-labelledby="coop-c-icon__{{ id }}"
+      focusable="true"
+    >
+    
+    {# Add title for screen readers #}
+    <title id="coop-c-icon__{{ id }}">{{ title }}</title>
+  {%- else -%}
+
+    <svg
+      class="coop-c-icon {{ iconClass }}"
+      viewBox="0 0 32 32"
+      width="32"
+      height="32"
+      aria-hidden="true"
+      focusable="false"
+    >
+
+  {%- endif -%}
+
   {%- if iconName == 'breakdown' -%}
 
   <path
