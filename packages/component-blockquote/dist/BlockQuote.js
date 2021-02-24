@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-require("./blockquote.pcss");
+require("./blockquote.css");
 
 var BlockQuote = function BlockQuote(_ref) {
   var className = _ref.className,
