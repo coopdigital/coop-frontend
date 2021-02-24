@@ -1,5 +1,6 @@
 import {ArgsTable,  Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import BlockQuote from "./BlockQuote";
+import BlockQuoteFromDist from "../dist";
 
 export const BaseBlockQuote = (args) => <BlockQuote {...args} />;
 
@@ -53,4 +54,16 @@ This will not change the citation styles
   }}
 >
   { BaseBlockQuote.bind({}) }
+</Story>
+
+
+### Test Blockquote component from dist
+<Story name="BlockQuoteFromDist"
+  args= {{
+    className: "coop-t-h2",
+    citation: "a new citation",
+    children: 'We use className to pass in "coop-t-h2" to increase the quote font size'
+  }}
+>
+  { BlockQuoteFromDist.bind({}) }
 </Story>
