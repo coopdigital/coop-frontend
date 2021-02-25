@@ -1,19 +1,17 @@
 "use strict";
 
-require("core-js/modules/es.array.every.js");
+exports.__esModule = true;
+exports.isGroupValid = void 0;
 
 require("core-js/modules/es.array.from.js");
 
-require("core-js/modules/es.array.iterator.js");
+require("core-js/modules/es.string.iterator.js");
 
 require("core-js/modules/es.object.to-string.js");
 
-require("core-js/modules/es.string.iterator.js");
+require("core-js/modules/es.array.iterator.js");
 
 require("core-js/modules/web.dom-collections.iterator.js");
-
-exports.__esModule = true;
-exports.isGroupValid = void 0;
 
 var _validation = require("../fields/validation");
 

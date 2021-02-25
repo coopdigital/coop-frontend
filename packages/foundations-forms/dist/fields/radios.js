@@ -1,17 +1,11 @@
 "use strict";
 
-require("core-js/modules/es.array.every.js");
+exports.__esModule = true;
+exports.getSelectedValue = exports.getSelected = exports.hasSelected = exports.isSelected = exports.isRadios = exports.isRadio = void 0;
 
 require("core-js/modules/es.array.from.js");
 
-require("core-js/modules/es.array.reduce.js");
-
-require("core-js/modules/es.array.some.js");
-
 require("core-js/modules/es.string.iterator.js");
-
-exports.__esModule = true;
-exports.getSelectedValue = exports.getSelected = exports.hasSelected = exports.isSelected = exports.isRadios = exports.isRadio = void 0;
 
 // Detect radio field
 var isRadio = function isRadio(field) {

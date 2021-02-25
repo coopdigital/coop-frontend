@@ -79,7 +79,7 @@ module.exports = function (migration) {
       },
     ]);
 
-    hero.createField('secondaryLink')
+  hero.createField('secondaryLink')
     .name('Secondary Link')
     .type('Link')
     .linkType('Entry')
