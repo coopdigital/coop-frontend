@@ -79,6 +79,17 @@ module.exports = function (migration) {
       },
     ]);
 
+    hero.createField('secondaryLink')
+    .name('Secondary Link')
+    .type('Link')
+    .linkType('Entry')
+    .required(false)
+    .validations([
+      {
+        linkContentType: ['-- External link', '-- Internal link', '-- Signpost link'],
+      },
+    ]);
+
   hero.createField('contentPull')
     .name('Content pull')
     .type('Boolean');
