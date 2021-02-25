@@ -1,17 +1,13 @@
 "use strict";
 
-require("core-js/modules/es.array.every.js");
-
-require("core-js/modules/es.array.for-each.js");
+exports.__esModule = true;
+exports.toggleAllMaskUnmask = exports.toggleMaskUnmask = exports.unmask = exports.mask = void 0;
 
 require("core-js/modules/es.array.from.js");
 
 require("core-js/modules/es.string.iterator.js");
 
 require("core-js/modules/web.dom-collections.for-each.js");
-
-exports.__esModule = true;
-exports.toggleAllMaskUnmask = exports.toggleMaskUnmask = exports.unmask = exports.mask = void 0;
 
 /**
  * Set field to type 'password'

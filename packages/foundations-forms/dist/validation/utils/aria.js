@@ -1,15 +1,15 @@
 "use strict";
 
-require("core-js/modules/es.regexp.exec.js");
+exports.__esModule = true;
+exports.removeAriaDescription = exports.addAriaDescription = void 0;
 
 require("core-js/modules/es.string.ends-with.js");
 
-require("core-js/modules/es.string.replace.js");
-
 require("core-js/modules/es.string.trim.js");
 
-exports.__esModule = true;
-exports.removeAriaDescription = exports.addAriaDescription = void 0;
+require("core-js/modules/es.string.replace.js");
+
+require("core-js/modules/es.regexp.exec.js");
 
 /**
  * Append ID to ARIA "described by" list
