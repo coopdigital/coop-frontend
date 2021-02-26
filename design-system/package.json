@@ -2,7 +2,7 @@
   "name": "design-system",
   "private": true,
   "engines": {
-    "node": ">=12.18.0 <15.0.0"
+    "node": "12.x"
   },
   "repository": {
     "type": "git",

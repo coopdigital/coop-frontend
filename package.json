@@ -1,9 +1,12 @@
 {
   "name": "@coopdigital/coop-frontend",
-  "description": "Co-op Frontend",
+  "description": "Co-op Frontend and Design System",
   "author": "Co-op Digital",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.2",
     "@babel/cli": "^7.12.13",
@@ -45,7 +48,10 @@
     "build": "npm-run-all build:*",
     "build:css": "lerna exec --ignore design-system --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
     "build:js": "lerna exec --ignore design-system --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
+    "heroku-prebuild": "cd design-system && bundle install",
+    "heroku-postbuild": "cd design-system && npm run build",
     "pretest": "npm run lint",
     "test": "jest --coverage"
-  }
+  },
+  "heroku-run-build-script": true
 }
