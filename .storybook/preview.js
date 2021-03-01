@@ -6,7 +6,7 @@ export const parameters = {
   options: {
     showRoots: true,
     storySort: {
-      order: ['Docs', ['Intro'], 'Foundations', 'Elements', 'Component', 'Patterns', 'Layout'],
+      order: ['Docs', ['Intro'], 'Foundations', 'Elements', 'Components', 'Patterns', 'Layout'],
     },
   },
   actions: { argTypesRegex: "^on[A-Z].*" },
