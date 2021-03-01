@@ -14,21 +14,21 @@ require("./blockquote.css");
 var BlockQuote = function BlockQuote(_ref) {
   var className = _ref.className,
       citation = _ref.citation,
-      children = _ref.children;
+      quote = _ref.quote;
   return /*#__PURE__*/_react.default.createElement("blockquote", null, /*#__PURE__*/_react.default.createElement("p", {
     className: className
-  }, children), /*#__PURE__*/_react.default.createElement("cite", null, citation));
+  }, quote), /*#__PURE__*/_react.default.createElement("cite", null, citation));
 };
 
 BlockQuote.defaultProps = {
   className: null,
   citation: null,
-  children: null
+  quote: null
 };
 BlockQuote.propTypes = {
   className: _propTypes.default.string,
   citation: _propTypes.default.string,
-  children: _propTypes.default.node
+  quote: _propTypes.default.string
 };
 var _default = BlockQuote;
 exports.default = _default;

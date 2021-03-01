@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './blockquote.pcss';
 
-const BlockQuote = ({ className, citation, children }) => (
+const BlockQuote = ({ className, citation, quote }) => (
   <blockquote>
-    <p className={className}>{children}</p>
+    <p className={className}>{quote}</p>
     <cite>{citation}</cite>
   </blockquote>
 );
@@ -12,13 +12,13 @@ const BlockQuote = ({ className, citation, children }) => (
 BlockQuote.defaultProps = {
   className: null,
   citation: null,
-  children: null,
+  quote: null,
 };
 
 BlockQuote.propTypes = {
   className: PropTypes.string,
   citation: PropTypes.string,
-  children: PropTypes.node,
+  quote: PropTypes.string,
 };
 
 export default BlockQuote;

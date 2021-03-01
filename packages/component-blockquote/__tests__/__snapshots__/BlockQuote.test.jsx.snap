@@ -14,9 +14,7 @@ exports[`BlockQuote should work with all variants 1`] = `
   <blockquote>
     <p
       className="newClass"
-    >
-      Quote
-    </p>
+    />
     <cite>
       cite
     </cite>
