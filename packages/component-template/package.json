@@ -1,12 +1,13 @@
 {
   "name": "@coopdigital/component-template",
   "version": "0.1.1",
-  "description": "Co-op Component/CSS Module Template",
-  "main": "dist/component.css",
+  "description": "Co-op Component/React and CSS Package Template",
+  "main": "dist/index.js",
   "style": "src/component.pcss",
   "author": "@coopdigital",
   "contributors": [
-    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"
+    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",
+    "Dale Hudson <dale.hudson@coop.co.uk> (https://github.com/dalecreativ)"
   ],
   "private": true,
   "files": [
@@ -18,6 +19,18 @@
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
     "directory": "packages/component-template"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^3.8.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "prop-types": "^15.5.4"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "prop-types": "^15.5.4"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"

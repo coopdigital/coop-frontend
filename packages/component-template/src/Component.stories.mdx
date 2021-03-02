@@ -1,0 +1,85 @@
+import {ArgsTable,  Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+<!-- import your component -->
+import Component from "./Component";
+
+<!--  -->
+export const BaseComponent = (args) => <Component {...args} />;
+
+<!-- Meta
+      docs: http://
+      Overview: Set up a number global story configurations within Meta, these can be overriden at story level
+      Description: Configure a number of properties on your stories at a global level.  Add decorators, parameters, args, controls
+      2 properties are required for your story in Meta.
+       - `title`, depending on your react component the title will start with either Foundations, Elements or Components.  Followed by your react component name e.g. title="Components/Blockquote"
+       - component:  The imported react component you are creating stories for.
+
+       optional 'decorators', 'parameters', 'args'
+-->
+<Meta title="Components/ExampleComponent"
+      component={Component}
+      parameters={{
+        design: {
+          type: 'figma',
+          url: 'https://www.figma.com/file/fxMzW1FsGlMluRHmawIr9r/Co-op-Foundations-and-Components?node-id=2499%3A110'
+        }
+      }} />
+
+# BlockQuotes
+Intro to blockquotes
+
+## Usage
+Usage guidelines for the blockquote component.
+
+## Default BlockQuote Example
+A test canvas to show the component and it's underlying code.
+A canvas can include stories or just plain components like the one below.
+<!-- Canvas -->
+<Canvas>
+  <Component heading="A heading" content="This is an example Component you can copy from to create your own components"></Component>
+</Canvas>
+
+## Stories for the Component component
+We can keep component stories at the bottom of the documentation pages, for better doc readability.
+
+### A default Component
+A default Component story looks like this....
+<!-- Story
+A canvas is created for each story,
+Each story "name" shows up within the storybook nav under our named Meta "title" nav item
+Stories can take args the same as the Meta tag, however Story args will override Meta args.
+Stories can also take decorators or parameters, adding these <Story> tag level will override <Meta>
+Create stories for each state, variant of your component.
+ -->
+<Story name="Basic ExampleComponent"
+  args= {{
+    heading: "Heading from args in story",
+    content: `<p>A paragraph tag with some descriptive text</p>`
+  }}
+>
+  { BaseComponent.bind({}) }
+</Story>
+
+
+<Story name="Another ExampleComponent"
+  args= {{
+    heading: "Starter component",
+    content: `Use this package as a starter for new foundation, element or component creation.`
+  }}
+>
+  { BaseComponent.bind({}) }
+</Story>
+
+
+
+<Story name="Yet Another ExampleComponent"
+  args= {{
+    className: "coop-t-h2",
+    heading: "An example with class name from foundations/typography",
+    content: "An example using class name `coop-t-h2` from foundations/typography css set globally in this project!",
+  }}
+>
+  { BaseComponent.bind({}) }
+</Story>
+
+
