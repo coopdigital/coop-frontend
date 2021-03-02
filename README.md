@@ -17,15 +17,7 @@ If you publish a new or amended component - create a release for the coop-fronte
 The Slack github integration will let everyone on the #frontend and #designsystem channels know that there has been an update.
 
 ## Storybook react UI library
-Storybook allows us to create and update react components within the `./packages` directory, using the existing css and utility packages.
-
-In storybook there are addons allowing you to view your component stories as raw html, have basic accessibility checks, link to the relevant designs within Figma, and more.
-
-Storybook components are broken into the following groups:
-- Foundations,
-- Elements,
-- Components
-- (tbc) Patterns.
+Storybook allows you to create and update react components within the `./packages` directory, using existing css and utility packages.
 ### **How to install, run and deploy the Co-op react storybook**
 To run storybook locally, run the following commands:
 - `npm ci`
@@ -45,12 +37,21 @@ The two most common ways you will create components for react are, adding a reac
 - Rename the copied directory and its contained files, to your component name.
 - Start adding tests and creating the component
 
+### Info and useful links for Storybook and react
+In storybook there are addons allowing you to view your component stories as raw html, have basic accessibility checks, link to the relevant designs within Figma, and more.
 
-### Useful links for Storybook and react
-- [Storybook docs](https://storybook.js.org/docs/react/get-started/introduction)
-- [Storybook mdx docs](https://storybook.js.org/docs/react/writing-docs/mdx)
-- [Storybook mdx api](https://storybook.js.org/docs/react/api/mdx)
-- [MDX](https://mdxjs.com/)
+<!-- Co-op Storybook stories are broken into the following groups:
+- Foundations - for foundation packages
+- Elements - for element react/html packages
+- Components - for component packages, (can be made from one or more element packages) -->
+<!-- - (tbc) Patterns -->
+
+#### Useful links
+- [Storybook react docs](https://storybook.js.org/docs/react/get-started/introduction)
+- [Component Story Format](https://storybook.js.org/docs/react/api/csf)
+- [Storybook react mdx docs](https://storybook.js.org/docs/react/writing-docs/mdx)
+- [Storybook react mdx api docs](https://storybook.js.org/docs/react/api/mdx)
+- [MDX - Official site and docs](https://mdxjs.com/)
 - [React - Getting Started](https://reactjs.org/docs/getting-started.html)
 - [Jest docs](https://jestjs.io/docs/en/getting-started)
 <!-- - [React testing library](https://testing-library.com/docs/react-testing-library/intro/) -->
