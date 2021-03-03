@@ -1,7 +1,7 @@
-{% macro render(iconName, iconClass) %}
+{% macro render(iconName, svgClass) %}
 
 <svg
-  class="coop-c-icon {{ iconClass }}"
+  class="{{ 'coop-c-icon ' ~ svgClass if svgClass else 'coop-c-icon' }}"
   viewBox="0 0 32 32"
   width="32"
   height="32"
