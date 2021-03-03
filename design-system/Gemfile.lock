@@ -71,13 +71,9 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     multi_json (1.15.0)
-    nio4r (2.5.5)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
-    puma (5.2.1)
-      nio4r (~> 2.0)
-    rack (2.2.3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -105,8 +101,6 @@ DEPENDENCIES
   jekyll-contentful-data-import
   kramdown
   kramdown-parser-gfm
-  puma
-  rack
   scss_lint
 
 RUBY VERSION

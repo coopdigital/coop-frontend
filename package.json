@@ -49,7 +49,9 @@
     "build": "npm-run-all build:*",
     "build:css": "lerna exec --ignore design-system --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
     "build:js": "lerna exec --ignore design-system --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
+    "heroku-postbuild": "npm run --prefix design-system build",
     "pretest": "npm run lint",
     "test": "jest --coverage"
-  }
+  },
+  "heroku-run-build-script": true
 }

@@ -1,6 +1,6 @@
 {
-  "name": "design-system",
-  "description": "",
+  "name": "coop-frontend",
+  "description": "Co-op Frontend and Design System",
   "scripts": {},
   "env": {},
   "formation": {
@@ -15,6 +15,9 @@
     },
     {
       "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku-community/static"
     }
   ]
 }
