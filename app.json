@@ -15,6 +15,9 @@
     },
     {
       "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku-community/static"
     }
   ]
 }
