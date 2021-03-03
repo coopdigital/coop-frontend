@@ -49,6 +49,19 @@
 			data-contenttype="{{ config.contentType }}"
 			data-contentparent="{{ config.contentParent }}"
 			data-linktext="{{ linkEntry.fields.title.data }}">
+
+			{# Display icon before anchor text if required #}
+			{%- if config.icon -%}
+
+				<span class="{{ config.iconClass if config.iconClass else 'coop-t-link__icon' }}" aria-hidden="true">
+					{%- set iconName = config.icon | lower | replace(" ","-") -%}
+					{%- set svgClass = config.svgClass if config.svgClass else 'coop-t-link__svg' -%}
+					
+					{{ icon.render(iconName, svgClass) }}
+				</span>
+			{%- endif -%}
+
+			{# Display anchor text #}
 			<span class="coop-t-link__anchor">{{ linkEntry.fields.title.data }}</span>
 
 			{# Display a chevron if required #}
