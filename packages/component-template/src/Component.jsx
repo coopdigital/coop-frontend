@@ -6,7 +6,7 @@ import './component.pcss';
 const Component = ({ className, heading, content }) => (
   <article>
     <h3 className={className}>{heading}</h3>
-    <div dangerouslySetInnerHTML={{__html: content }} />
+    <div dangerouslySetInnerHTML={{ __html: content }} />
   </article>
 );
 

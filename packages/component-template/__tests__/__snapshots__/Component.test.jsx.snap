@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component should render default Component 1`] = `
+<article>
+  <h3
+    className={null}
+  >
+    heading
+  </h3>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": null,
+      }
+    }
+  />
+</article>
+`;
