@@ -1,9 +1,12 @@
 {
   "name": "@coopdigital/coop-frontend",
-  "description": "Co-op Frontend",
+  "description": "Co-op Frontend and Design System",
   "author": "Co-op Digital",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.2",
     "@babel/cli": "^7.13.0",

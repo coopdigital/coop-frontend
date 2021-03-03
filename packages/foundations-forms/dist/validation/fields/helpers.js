@@ -1,15 +1,13 @@
 "use strict";
 
-require("core-js/modules/es.array.for-each.js");
+exports.__esModule = true;
+exports.setValue = exports.getValue = exports.getLabelOrLegend = exports.getLabel = void 0;
+
+require("core-js/modules/web.dom-collections.for-each.js");
 
 require("core-js/modules/es.array.from.js");
 
 require("core-js/modules/es.string.iterator.js");
-
-require("core-js/modules/web.dom-collections.for-each.js");
-
-exports.__esModule = true;
-exports.setValue = exports.getValue = exports.getLabelOrLegend = exports.getLabel = void 0;
 
 var _selects = require("../../fields/selects");
 

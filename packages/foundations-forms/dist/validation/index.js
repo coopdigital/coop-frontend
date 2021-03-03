@@ -1,20 +1,6 @@
 "use strict";
 
-require("core-js/modules/es.array.for-each.js");
-
-require("core-js/modules/es.array.from.js");
-
-require("core-js/modules/es.array.iterator.js");
-
-require("core-js/modules/es.array.some.js");
-
-require("core-js/modules/es.object.to-string.js");
-
-require("core-js/modules/es.string.iterator.js");
-
-require("core-js/modules/web.dom-collections.for-each.js");
-
-require("core-js/modules/web.dom-collections.iterator.js");
+require("core-js/modules/es.object.keys.js");
 
 exports.__esModule = true;
 var _exportNames = {
@@ -22,6 +8,18 @@ var _exportNames = {
   validateGroup: true
 };
 exports.validateGroup = exports.validate = void 0;
+
+require("core-js/modules/es.array.from.js");
+
+require("core-js/modules/es.string.iterator.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.array.iterator.js");
+
+require("core-js/modules/web.dom-collections.iterator.js");
+
+require("core-js/modules/web.dom-collections.for-each.js");
 
 var _helpers = require("./fieldsets/helpers");
 

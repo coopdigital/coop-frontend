@@ -4,6 +4,7 @@ gem 'rack'
 gem 'puma'
 gem 'jekyll'
 gem 'kramdown'
+gem 'kramdown-parser-gfm'
 gem 'scss_lint'
 gem 'contentful_bootstrap'
 

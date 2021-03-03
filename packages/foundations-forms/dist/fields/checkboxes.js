@@ -1,19 +1,15 @@
 "use strict";
 
-require("core-js/modules/es.array.every.js");
-
-require("core-js/modules/es.array.filter.js");
+exports.__esModule = true;
+exports.getCheckedValues = exports.getChecked = exports.hasChecked = exports.isChecked = exports.isCheckboxes = exports.isCheckbox = void 0;
 
 require("core-js/modules/es.array.from.js");
 
-require("core-js/modules/es.array.map.js");
-
-require("core-js/modules/es.array.some.js");
-
 require("core-js/modules/es.string.iterator.js");
 
-exports.__esModule = true;
-exports.getCheckedValues = exports.getChecked = exports.hasChecked = exports.isChecked = exports.isCheckboxes = exports.isCheckbox = void 0;
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/es.array.map.js");
 
 /**
  * Detect checkbox field
