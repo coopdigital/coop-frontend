@@ -9,6 +9,14 @@ module.exports = {
         configureJSX: true,
       },
     },
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      }
+    },
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     '@storybook/addon-storysource',
