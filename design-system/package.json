@@ -84,6 +84,7 @@
     "postcss-nesting": "^7.0.1"
   },
   "scripts": {
+    "prebuild": "bundle install --gemfile=Gemfile --path vendor/bundle",
     "build": "gulp build",
     "server": "gulp server"
   }
