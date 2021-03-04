@@ -75,18 +75,14 @@ jobs:
           command: gem install bundler
           working_directory: ~/project/design-system
       - run:
-          name: Install site gems
-          command: bundle install
+          name: Build site
+          command: npm run build
           working_directory: ~/project/design-system
       - save_cache:
           name: Saving cache for site gems
           key: gemfile-{{ checksum "design-system/Gemfile.lock" }}
           paths:
             - ~/project/design-system/vendor/bundle
-      - run:
-          name: Build site
-          command: npm run build
-          working_directory: ~/project/design-system
 
   deploy:
     executor: node
@@ -103,7 +99,7 @@ jobs:
                     git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
       - run:
           name: Deploy to Heroku
-          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git `git subtree split --prefix design-system master`:master --force
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git $CIRCLE_BRANCH:master --force
 
 workflows:
   version: 2
@@ -114,8 +110,6 @@ workflows:
           requires:
             - build_packages
       - deploy:
-          requires:
-            - build_site
           filters:
             branches:
               only: master
