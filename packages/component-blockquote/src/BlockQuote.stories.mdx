@@ -23,7 +23,7 @@ Usage guidelines for the blockquote component.
 A test canvas to show the component and it's underlying code.
 A canvas can include stories or just plain components like the one below.
 <Canvas>
-  <BlockQuote citation="citation">This is a quote</BlockQuote>
+  <BlockQuote citation="citation" quote="This is a quote"></BlockQuote>
 </Canvas>
 
 ## Stories for the BlockQuote component
@@ -35,7 +35,7 @@ A default BlockQuote looks like this....
 <Story name="Base/BlockQuote"
   args= {{
     citation: "citation",
-    children: "Here is a quote passed from args"
+    quote: "Here is a quote passed from args"
   }}
 >
   { BaseBlockQuote.bind({}) }
@@ -50,7 +50,7 @@ This will not change the citation styles
   args= {{
     className: "coop-t-h2",
     citation: "a new citation",
-    children: 'We use className to pass in "coop-t-h2" to increase the quote font size'
+    quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
   }}
 >
   { BaseBlockQuote.bind({}) }
@@ -62,7 +62,7 @@ This will not change the citation styles
   args= {{
     className: "coop-t-h2",
     citation: "a new citation",
-    children: 'We use className to pass in "coop-t-h2" to increase the quote font size'
+    quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
   }}
 >
   { BlockQuoteFromDist.bind({}) }
