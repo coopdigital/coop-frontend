@@ -8,9 +8,13 @@
 
 		{%- set linkEntry = cms.get_entry(content.data.sys.id) -%}
 
-    {%- set classNames = 'coop-t-link' -%}
+		{% if config.classNames %}
+			{%- set classNames = config.classNames -%}
+		{% else %}
+    	{%- set classNames = 'coop-t-link' -%}
+		{%- endif -%}
     
-    {# set class names #}
+    {# set class names based on link style data #}
     {% if content.data.fields.linkStyle %}
       {%- set classNames = 'coop-btn' -%}
 
