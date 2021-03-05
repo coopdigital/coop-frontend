@@ -3,10 +3,13 @@
 	{# If data is valid, set link entry value #}
 	{%- if content.data -%}
 
+		{# Set icon name to config attribute #}
+		{%- set iconName = config.icon -%}
+
 		{%- set linkEntry = cms.get_entry(content.data.sys.id) -%}
 
 		{# If link is internal get href from target page #}
-		{%- if linkEntry.type == 'internalLink' -%}
+		{%- if linkEntry.type == 'internalLink'  -%}
 			
 			{#  If link entry is valid, render link #}
 			{%- if linkEntry.fields.page.data -%}
@@ -30,6 +33,12 @@
 				{%- endif -%}
 			
 			{% endif %}
+
+		{# If link is download get href from content #}
+		{%- elif linkEntry.type == 'download' -%}
+			{%- set asset = cms.get_asset(linkEntry.fields.file.data) -%}
+			{%- set href = asset.data.fields.file.url -%}
+			{%- set iconName = 'download' -%}
 		
 		{# If link is external get href from content #}
 		{%- elif linkEntry.type == 'externalLink' -%}
@@ -50,13 +59,15 @@
 			data-linktext="{{ linkEntry.fields.title.data }}">
 
 			{# Display icon before anchor text if required #}
-			{%- if config.icon -%}
+			{%- if iconName -%}
+
+				{%- import '/shared-component--icon/src/icon.html' as icon -%}
 
 				<span class="{{ config.iconClass if config.iconClass else 'coop-t-link__icon' }}" aria-hidden="true">
-					{%- set iconName = config.icon | lower | replace(" ","-") -%}
+					{%- set iconId = iconName | lower | replace(" ","-") -%}
 					{%- set svgClass = config.svgClass if config.svgClass else 'coop-t-link__svg' -%}
 					
-					{{ icon.render(iconName, svgClass) }}
+					{{ icon.render(iconId, svgClass) }}
 				</span>
 			{%- endif -%}
 
