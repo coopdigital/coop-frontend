@@ -19,7 +19,8 @@
     "directory": "packages/shared-component--hero"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.8.1"
+    "@coopdigital/foundations-vars": "^3.8.1",
+    "@coopdigital/shared-component--signpost": "^2.3.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
