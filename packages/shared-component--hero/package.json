@@ -20,11 +20,13 @@
   },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^3.8.1",
+    "@coopdigital/shared-component--link": "^1.5.0",
     "@coopdigital/shared-component--signpost": "^2.6.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
-    "@coopdigital/shared-component--signpost": ">= 2.3.0 < 3"
+    "@coopdigital/shared-component--signpost": ">= 2.3.0 < 3",
+    "@coopdigital/shared-component--link": ">=1.5.0 < 2"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
