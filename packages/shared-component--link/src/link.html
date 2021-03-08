@@ -15,7 +15,7 @@
 		{%- endif -%}
     
     {# set class names based on link style data #}
-    {% if content.data.fields.linkStyle %}
+    {% if content.data.fields and content.data.fields.linkStyle %}
       {%- set classNames = 'coop-btn' -%}
 
       {%- if content.data.fields.linkStyle == 'Link - black' -%}
