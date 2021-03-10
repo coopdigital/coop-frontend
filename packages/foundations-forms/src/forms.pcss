@@ -474,12 +474,22 @@ label + .coop-form__error,
 }
 
 .coop-c-message__heading,
-.coop-c-message__list {
+.coop-c-message__list,
+.coop-c-message__message:last-child {
   margin-bottom: var(--spacing-4);
 
   @media (--mq-medium) {
     margin-bottom: var(--spacing-8);
   }
+}
+
+.coop-c-message__list {
+  color: var(--color-text);
+}
+
+.coop-c-message--alert {
+  background: var(--color-orange-alert-light);
+  border-left: 4px solid var(--color-orange-alert);
 }
 
 .coop-c-message--error {
