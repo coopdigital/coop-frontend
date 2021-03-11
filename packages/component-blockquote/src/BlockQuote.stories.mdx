@@ -1,11 +1,11 @@
 import {ArgsTable,  Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import BlockQuote from "./BlockQuote";
-import BlockQuoteFromDist from "../dist";
+import Blockquote from "./Blockquote";
+import BlockquoteFromDist from "../dist";
 
-export const BaseBlockQuote = (args) => <BlockQuote {...args} />;
+export const BaseBlockquote = (args) => <Blockquote {...args} />;
 
-<Meta title="Elements/BlockQuote"
-      component={BlockQuote}
+<Meta title="Elements/Blockquote"
+      component={Blockquote}
       parameters={{
         design: {
           type: 'figma',
@@ -13,57 +13,57 @@ export const BaseBlockQuote = (args) => <BlockQuote {...args} />;
         }
       }} />
 
-# BlockQuotes
+# Blockquotes
 Intro to blockquotes
 
 ## Usage
 Usage guidelines for the blockquote component.
 
-## Default BlockQuote Example
+## Default Blockquote Example
 A test canvas to show the component and it's underlying code.
 A canvas can include stories or just plain components like the one below.
 <Canvas>
-  <BlockQuote citation="citation" quote="This is a quote"></BlockQuote>
+  <Blockquote citation="citation" quote="This is a quote"></Blockquote>
 </Canvas>
 
-## Stories for the BlockQuote component
+## Stories for the Blockquote component
 We can keep component stories at the bottom of the documentation pages, for better doc readability.
 
-### A default BlockQuote
-A default BlockQuote looks like this....
+### A default Blockquote
+A default Blockquote looks like this....
 
-<Story name="Base/BlockQuote"
+<Story name="Base/Blockquote"
   args= {{
     citation: "citation",
     quote: "Here is a quote passed from args"
   }}
 >
-  { BaseBlockQuote.bind({}) }
+  { BaseBlockquote.bind({}) }
 </Story>
 
-### A BlockQuote with large quote text from class name.
+### A Blockquote with large quote text from class name.
 You can pass classes via the className prop which will modify styles of the quote body.
 
 This will not change the citation styles
 
-<Story name="Base/BlockQuoteClassName"
+<Story name="Base/BlockquoteClassName"
   args= {{
-    className: "coop-t-h2",
+    quoteLarge: true,
     citation: "a new citation",
     quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
   }}
 >
-  { BaseBlockQuote.bind({}) }
+  { BaseBlockquote.bind({}) }
 </Story>
 
 
 ### Test Blockquote component from dist
-<Story name="BlockQuoteFromDist"
+<Story name="BlockquoteFromDist"
   args= {{
-    className: "coop-t-h2",
+    quoteLarge: true,
     citation: "a new citation",
     quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
   }}
 >
-  { BlockQuoteFromDist.bind({}) }
+  { BlockquoteFromDist.bind({}) }
 </Story>

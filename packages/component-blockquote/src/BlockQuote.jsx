@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './blockquote.pcss';
 
-const BlockQuote = ({ className, citation, quote }) => (
-  <blockquote>
-    <p className={className}>{quote}</p>
-    <cite>{citation}</cite>
+const Blockquote = ({ citation, quote, quoteLarge }) => (
+  <blockquote className="coop-t-blockquote">
+    <p className={quoteLarge ? 'coop-t-blockquote__quote coop-t-blockquote__quote--large' : 'coop-t-blockquote__quote'}>{quote}</p>
+    <cite className="coop-t-blockquote__cite">{citation}</cite>
   </blockquote>
 );
 
-BlockQuote.defaultProps = {
-  className: null,
+Blockquote.defaultProps = {
+  quoteLarge: false,
   citation: null,
   quote: null,
 };
 
-BlockQuote.propTypes = {
-  className: PropTypes.string,
-  citation: PropTypes.string,
-  quote: PropTypes.string,
+Blockquote.propTypes = {
+  quoteLarge: PropTypes.bool,
+  citation: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
 };
 
-export default BlockQuote;
+export default Blockquote;

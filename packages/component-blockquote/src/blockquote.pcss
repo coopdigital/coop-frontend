@@ -1,6 +1,5 @@
 @import "@coopdigital/foundations-vars";
 
-/* blockquote css */
 blockquote,
 .coop-t-blockquote {
   margin-bottom: var(--spacing-32);
@@ -23,16 +22,29 @@ blockquote,
 }
 
 blockquote p,
-.coop-t-blockquote p {
+.coop-t-blockquote p,
+.coop-t-blockquote__quote {
   margin-bottom: var(--spacing-16);
   font-style: normal;
   font-weight: normal;
   text-indent: -0.25rem;
 }
 
-blockquote p cite,
 .coop-t-blockquote p cite {
   font-size: var(--type-body-s);
   font-style: normal;
   margin-top: var(--spacing-16);
+}
+
+blockquote p.coop-t-blockquote__quote--large,
+.coop-t-blockquote__quote--large {
+  font-size: var(--type-h2-s);
+  font-weight: bold;
+  margin-bottom: var(--spacing-8);
+
+  @media (--mq-medium) {
+    font-size: var(--type-h2-l);
+    font-weight: bold;
+    margin-bottom: var(--spacing-16);
+  }
 }

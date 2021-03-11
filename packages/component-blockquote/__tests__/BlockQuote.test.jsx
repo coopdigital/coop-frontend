@@ -5,27 +5,28 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
-import BlockQuote from '../src/index.mjs';
+import Blockquote from '../src/index.mjs';
 
-describe('BlockQuote', () => {
-  it('should render default BlockQuote', () => {
-    const wrapper = mount(<BlockQuote />);
+describe('Blockquote', () => {
+  it('should render default Blockquote', () => {
+    const wrapper = mount(<Blockquote />);
     expect(() => wrapper.unmount()).not.toThrow();
 
-    const tree = renderer.create(<BlockQuote />).toJSON();
+    const tree = renderer.create(<Blockquote />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('should work with all variants', () => {
     const Variants = () => (
       <div>
-        <BlockQuote className="newClass" citation="cite">
+        <Blockquote quoteLarge citation="cite">
           Quote
-        </BlockQuote>
+        </Blockquote>
       </div>
     );
 
     const wrapper = mount(<Variants />);
+    expect(wrapper.find('.coop-t-blockquote p').hasClass('coop-t-blockquote__quote--large')).toEqual(true);
     expect(() => wrapper.unmount()).not.toThrow();
 
     const tree = renderer.create(<Variants />).toJSON();

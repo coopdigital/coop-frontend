@@ -1,3 +1,3 @@
-import BlockQuote from './BlockQuote.jsx';
+import Blockquote from './Blockquote.jsx';
 
-export default BlockQuote;
+export default Blockquote;
