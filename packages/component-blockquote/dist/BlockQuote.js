@@ -11,25 +11,29 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 require("./blockquote.css");
 
-var BlockQuote = function BlockQuote(_ref) {
-  var className = _ref.className,
-      citation = _ref.citation,
-      quote = _ref.quote;
-  return /*#__PURE__*/_react.default.createElement("blockquote", null, /*#__PURE__*/_react.default.createElement("p", {
-    className: className
-  }, quote), /*#__PURE__*/_react.default.createElement("cite", null, citation));
+var Blockquote = function Blockquote(_ref) {
+  var citation = _ref.citation,
+      quote = _ref.quote,
+      quoteLarge = _ref.quoteLarge;
+  return /*#__PURE__*/_react.default.createElement("blockquote", {
+    className: "coop-t-blockquote"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: quoteLarge ? 'coop-t-blockquote__quote coop-t-blockquote__quote--large' : 'coop-t-blockquote__quote'
+  }, quote), /*#__PURE__*/_react.default.createElement("cite", {
+    className: "coop-t-blockquote__cite"
+  }, citation));
 };
 
-BlockQuote.defaultProps = {
-  className: null,
+Blockquote.defaultProps = {
+  quoteLarge: false,
   citation: null,
   quote: null
 };
-BlockQuote.propTypes = {
-  className: _propTypes.default.string,
+Blockquote.propTypes = {
+  quoteLarge: _propTypes.default.bool,
   citation: _propTypes.default.string,
   quote: _propTypes.default.string
 };
-var _default = BlockQuote;
+var _default = Blockquote;
 exports.default = _default;
-//# sourceMappingURL=BlockQuote.js.map
+//# sourceMappingURL=Blockquote.js.map
