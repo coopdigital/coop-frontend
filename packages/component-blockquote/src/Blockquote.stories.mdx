@@ -23,7 +23,7 @@ Usage guidelines for the blockquote component.
 A test canvas to show the component and it's underlying code.
 A canvas can include stories or just plain components like the one below.
 <Canvas>
-  <Blockquote citation="citation" quote="This is a quote"></Blockquote>
+  <Blockquote quote="This is a quote" citation="citation"></Blockquote>
 </Canvas>
 
 ## Stories for the Blockquote component
@@ -34,8 +34,8 @@ A default Blockquote looks like this....
 
 <Story name="Base/Blockquote"
   args= {{
-    citation: "citation",
     quote: "Here is a quote passed from args"
+    citation: "citation",
   }}
 >
   { BaseBlockquote.bind({}) }
@@ -48,9 +48,9 @@ This will not change the citation styles
 
 <Story name="Base/BlockquoteClassName"
   args= {{
-    quoteLarge: true,
-    citation: "a new citation",
     quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
+    citation: "a new citation",
+    quoteLarge: true,
   }}
 >
   { BaseBlockquote.bind({}) }
@@ -60,9 +60,9 @@ This will not change the citation styles
 ### Test Blockquote component from dist
 <Story name="BlockquoteFromDist"
   args= {{
-    quoteLarge: true,
-    citation: "a new citation",
     quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
+    citation: "a new citation",
+    quoteLarge: true,
   }}
 >
   { BlockquoteFromDist.bind({}) }
