@@ -9,7 +9,7 @@ import Blockquote from '../src/index.mjs';
 
 describe('Blockquote', () => {
   it('should render default Blockquote', () => {
-    const wrapper = mount(<Blockquote />);
+    const wrapper = mount(<Blockquote citation="citation one" quote="this is a quote and is required"/>);
     expect(() => wrapper.unmount()).not.toThrow();
 
     const tree = renderer.create(<Blockquote />).toJSON();
@@ -19,9 +19,7 @@ describe('Blockquote', () => {
   it('should work with all variants', () => {
     const Variants = () => (
       <div>
-        <Blockquote quoteLarge citation="cite">
-          Quote
-        </Blockquote>
+        <Blockquote quoteLarge citation="cite" quote="this is a quote and is required"/>
       </div>
     );
 

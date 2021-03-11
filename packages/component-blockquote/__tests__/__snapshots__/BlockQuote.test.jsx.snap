@@ -20,7 +20,9 @@ exports[`Blockquote should work with all variants 1`] = `
   >
     <p
       className="coop-t-blockquote__quote coop-t-blockquote__quote--large"
-    />
+    >
+      this is a quote and is required
+    </p>
     <cite
       className="coop-t-blockquote__cite"
     >
