@@ -36,6 +36,9 @@ jobs:
             - run:
                 name: Install npm dependencies
                 command: npm install --no-save
+             run:
+                name: Update snapshots
+                command: npm test -- -u
             - run:
                 name: Build all packages
                 command: npm run build
