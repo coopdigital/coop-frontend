@@ -47,7 +47,7 @@ module.exports = (api) => {
     '@babel/preset-typescript',
   ];
 
-  const ignore = ['design-system', '**/*.stories.(js|mdx)'];
+  const ignore = ['**/*.stories.(js|mdx)'];
 
   return {
     presets,
