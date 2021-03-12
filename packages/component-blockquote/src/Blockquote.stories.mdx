@@ -34,7 +34,7 @@ A default Blockquote looks like this....
 
 <Story name="Base/Blockquote"
   args= {{
-    quote: "Here is a quote passed from args"
+    quote: "Here is a quote passed from args",
     citation: "citation",
   }}
 >
@@ -48,9 +48,9 @@ This will not change the citation styles
 
 <Story name="Base/BlockquoteClassName"
   args= {{
-    quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
+    quote: 'We use className to pass in "coop-t-h2" to increase the quote font size',
     citation: "a new citation",
-    quoteLarge: true,
+    quoteLarge: true
   }}
 >
   { BaseBlockquote.bind({}) }
@@ -60,9 +60,9 @@ This will not change the citation styles
 ### Test Blockquote component from dist
 <Story name="BlockquoteFromDist"
   args= {{
-    quote: 'We use className to pass in "coop-t-h2" to increase the quote font size'
+    quote: 'We use className to pass in "coop-t-h2" to increase the quote font size',
     citation: "a new citation",
-    quoteLarge: true,
+    quoteLarge: true
   }}
 >
   { BlockquoteFromDist.bind({}) }
