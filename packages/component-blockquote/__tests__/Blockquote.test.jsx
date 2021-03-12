@@ -3,17 +3,19 @@
  */
 
 import React from 'react';
-import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
+// import { mount } from 'enzyme';
+// import renderer from 'react-test-renderer';
+import {render, screen, cleanup} from '@testing-library/react';
 import Blockquote from '../src/index.mjs';
+
+afterEach(cleanup);
 
 describe('Blockquote', () => {
   it('should render default Blockquote', () => {
-    const wrapper = mount(<Blockquote citation="citation one" quote="this is a quote and is required"/>);
+    const wrapper = render(<Blockquote citation="citation one" quote="this is a quote and is required"/>);
     expect(() => wrapper.unmount()).not.toThrow();
-
-    const tree = renderer.create(<Blockquote citation="citation one" quote="this is a quote and is required"/>).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Blockquote citation="citation one" quote="this is a quote and is required"/>)
+    expect(asFragment(<Blockquote citation="citation one" quote="this is a quote and is required"/>)).toMatchSnapshot();
   });
 
   it('should work with all variants', () => {
@@ -23,11 +25,10 @@ describe('Blockquote', () => {
       </div>
     );
 
-    const wrapper = mount(<Variants />);
-    expect(wrapper.find('.coop-t-blockquote p').hasClass('coop-t-blockquote__quote--large')).toEqual(true);
+    const wrapper = render(<Variants />);
     expect(() => wrapper.unmount()).not.toThrow();
 
-    const tree = renderer.create(<Variants />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Variants />);
+    expect(asFragment(<Variants />)).toMatchSnapshot();
   });
 });
