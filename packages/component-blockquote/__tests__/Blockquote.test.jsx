@@ -12,7 +12,7 @@ describe('Blockquote', () => {
     const wrapper = mount(<Blockquote citation="citation one" quote="this is a quote and is required"/>);
     expect(() => wrapper.unmount()).not.toThrow();
 
-    const tree = renderer.create(<Blockquote />).toJSON();
+    const tree = renderer.create(<Blockquote citation="citation one" quote="this is a quote and is required"/>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

@@ -6,10 +6,14 @@ exports[`Blockquote should render default Blockquote 1`] = `
 >
   <p
     className="coop-t-blockquote__quote"
-  />
+  >
+    this is a quote and is required
+  </p>
   <cite
     className="coop-t-blockquote__cite"
-  />
+  >
+    citation one
+  </cite>
 </blockquote>
 `;
 
