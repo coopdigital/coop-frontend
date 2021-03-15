@@ -1,11 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-
 import React from 'react';
-// import { mount } from 'enzyme';
-// import renderer from 'react-test-renderer';
-import {render, screen, cleanup} from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import Blockquote from '../src/index.mjs';
 
 afterEach(cleanup);

@@ -3,16 +3,17 @@
  */
 
 import React from 'react';
-import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { render, cleanup } from '@testing-library/react';
 import Component from '../src/index.mjs';
+
+afterEach(cleanup);
 
 describe('Component', () => {
   it('should render default Component', () => {
-    const wrapper = mount(<Component heading="heading" />);
+    const wrapper = render(<Component heading="heading" />);
     expect(() => wrapper.unmount()).not.toThrow();
 
-    const tree = renderer.create(<Component heading="heading" />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Component heading="heading" />);
+    expect(asFragment(<Component heading="heading" />)).toMatchSnapshot();
   });
 });
