@@ -22,17 +22,17 @@
   },
   "devDependencies": {
     "@coopdigital/foundations-vars": "^3.8.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
     "prop-types": "^15.5.4",
-    "enzyme": "^3.11.0",
-    "react-test-renderer": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "prop-types": "^15.5.4",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "prop-types": "^15.5.4"
+    "react-dom": "^16.14.0"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"

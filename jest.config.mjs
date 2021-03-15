@@ -10,7 +10,6 @@ export default {
   moduleNameMapper: {
     '\\.(css|pcss)$': '<rootDir>/__mocks__/styleMock.js',
   },
-  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
   roots: [
     './packages',
   ],
