@@ -15,18 +15,18 @@
 		{%- endif -%}
     
     {# set class names based on link style data #}
-    {% if content.data.fields and content.data.fields.linkStyle %}
+    {% if linkEntry.data.fields and linkEntry.data.fields.linkStyle %}
       {%- set classNames = 'coop-btn' -%}
 
-      {%- if content.data.fields.linkStyle == 'Link - black' -%}
+      {%- if linkEntry.data.fields.linkStyle == 'Link - black' -%}
         {%- set classNames = 'coop-t-link-black' -%}
-      {%- elif content.data.fields.linkStyle == 'Link - white' -%}
+      {%- elif linkEntry.data.fields.linkStyle == 'Link - white' -%}
         {%- set classNames = 'coop-t-link-white' -%}
-      {%- elif content.data.fields.linkStyle == 'Button - primary' -%}
+      {%- elif linkEntry.data.fields.linkStyle == 'Button - primary' -%}
         {%- set classNames = classNames ~ ' coop-btn--primary ' -%}
-      {%- elif content.data.fields.linkStyle == 'Button - secondary' -%}
+      {%- elif linkEntry.data.fields.linkStyle == 'Button - secondary' -%}
         {%- set classNames = classNames ~ ' coop-btn--blue ' -%}
-      {%- elif content.data.fields.linkStyle == 'Button - white' -%}
+      {%- elif linkEntry.data.fields.linkStyle == 'Button - white' -%}
         {%- set classNames = classNames ~ ' coop-btn--white ' -%}
       {%- endif -%}
     {%- endif -%}
