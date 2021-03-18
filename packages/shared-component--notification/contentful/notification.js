@@ -42,7 +42,7 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        in: ['alert', 'notification'],
+        in: ['alert', 'status'],
       }
     ]);
 
