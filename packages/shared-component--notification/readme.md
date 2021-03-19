@@ -1,6 +1,6 @@
 # Notification
 
-The Notification component can be used as either an alert or notification.
+The Notification component can be used as either an alert or status notification.
 
 The contentful properties available are:
 
