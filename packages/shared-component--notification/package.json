@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--notification",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Co-op Shared Component: Notification",
   "author": "@coopdigital",
   "contributors": [
@@ -37,6 +37,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {}
+  }
 }
