@@ -33,7 +33,7 @@ module.exports = function (migration) {
     .validations([
       {
         linkContentType: ['externalLink', 'internalLink'],
-      }
+      },
     ]);
 
   notification.createField('typeOfNotification')
@@ -43,12 +43,12 @@ module.exports = function (migration) {
     .validations([
       {
         in: ['alert', 'status'],
-      }
+      },
     ]);
 
   notification.changeFieldControl(
     'typeOfNotification',
     'builtin',
     'dropdown',
-  )
-}
+  );
+};

@@ -3,6 +3,8 @@
   "version": "1.0.2",
   "description": "Co-op Shared Component: Notification",
   "author": "@coopdigital",
+  "main": "dist/notification.css",
+  "style": "src/notification.pcss",
   "contributors": [
     "Mark Sampson <mark.sampson@coop.co.uk> (https://github.com/SampsonM)"
   ],
