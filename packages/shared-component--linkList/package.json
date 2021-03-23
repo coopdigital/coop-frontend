@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--linklist",
-  "version": "2.3.4",
+  "version": "3.1.0",
   "description": "Co-op Shared Component: link list",
   "main": "dist/linkList.css",
   "style": "src/linkList.pcss",
@@ -20,10 +20,12 @@
     "directory": "packages/shared-component--linklist"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.8.1"
+    "@coopdigital/foundations-vars": "^3.8.1",
+    "@coopdigital/shared-component--link": "^1.6.0"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "@coopdigital/shared-component--link": ">= 1.5.0"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
