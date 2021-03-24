@@ -1,0 +1,45 @@
+{
+  "name": "@coopdigital/shared-component--notification",
+  "version": "1.0.3",
+  "description": "Co-op Shared Component: Notification",
+  "author": "@coopdigital",
+  "main": "dist/notification.css",
+  "style": "src/notification.pcss",
+  "contributors": [
+    "Mark Sampson <mark.sampson@coop.co.uk> (https://github.com/SampsonM)"
+  ],
+  "private": false,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/shared-component--notification"
+  },
+  "devDependencies": {
+    "@coopdigital/component-notification": "^1.1.4",
+    "@coopdigital/component-notification--alert": "^1.1.5",
+    "@coopdigital/foundations-vars": "^3.8.1",
+    "@coopdigital/shared-component--link": "^1.6.2"
+  },
+  "peerDependencies": {
+    "@coopdigital/component-notification": ">= 1.0.11 < 2",
+    "@coopdigital/component-notification--alert": ">= 1.1.5 < 2",
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "@coopdigital/shared-component--link": " >= 1.6.2 < 2"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/shared-component--notification#readme",
+  "keywords": [
+    "content",
+    "notification"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
