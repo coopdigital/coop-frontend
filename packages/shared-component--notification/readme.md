@@ -9,3 +9,12 @@ The contentful properties available are:
 - Body text
 - Link (reference to another link)
 - Type of notification (alert or notification)
+
+#
+## Config options
+
+```TypeScript
+{
+  "id": String - required
+}
+```

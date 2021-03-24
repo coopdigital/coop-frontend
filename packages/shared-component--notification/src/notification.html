@@ -1,8 +1,8 @@
 {%- import '/shared-component--link/src/link.html' as link -%}
 
-{%- macro render(content, cms) -%}
+{%- macro render(config, cms) -%}
   
-  {%- set notificationData = cms.get_entry(content.data.sys.id) -%}
+  {%- set notificationData = cms.get_entry(config.id) -%}
   {%- set role = notificationData.fields.typeOfNotification.data -%}
   {%- set notificationTypeClass = '' -%}
 
