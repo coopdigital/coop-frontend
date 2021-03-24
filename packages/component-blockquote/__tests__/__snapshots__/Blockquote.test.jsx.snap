@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blockquote should render default Blockquote 1`] = `
+<DocumentFragment>
+  <blockquote
+    class="coop-t-blockquote"
+  >
+    <p
+      class="coop-t-blockquote__quote"
+    >
+      this is a quote and is required
+    </p>
+    <cite
+      class="coop-t-blockquote__cite"
+    >
+      citation one
+    </cite>
+  </blockquote>
+</DocumentFragment>
+`;
+
+exports[`Blockquote should work with all variants 1`] = `
+<DocumentFragment>
+  <div>
+    <blockquote
+      class="coop-t-blockquote"
+    >
+      <p
+        class="coop-t-blockquote__quote coop-t-blockquote__quote--large"
+      >
+        this is a quote and is required
+      </p>
+      <cite
+        class="coop-t-blockquote__cite"
+      >
+        cite
+      </cite>
+    </blockquote>
+  </div>
+</DocumentFragment>
+`;

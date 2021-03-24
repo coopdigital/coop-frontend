@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component should render default Component 1`] = `
+<DocumentFragment>
+  <article>
+    <h3>
+      heading
+    </h3>
+    <div />
+  </article>
+</DocumentFragment>
+`;

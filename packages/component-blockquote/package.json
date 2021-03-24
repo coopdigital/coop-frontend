@@ -1,15 +1,15 @@
 {
-  "name": "@coopdigital/component-template",
-  "version": "0.1.1",
-  "description": "Co-op Component/React and CSS Package Template",
+  "name": "@coopdigital/blockquote",
+  "version": "1.0.1",
+  "description": "Co-op Components: Blockquote",
   "main": "dist/index.js",
-  "style": "src/component.pcss",
+  "style": "dist/blockquote.css",
   "author": "@coopdigital",
   "contributors": [
-    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",
+    "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)",
     "Dale Hudson <dale.hudson@coop.co.uk> (https://github.com/dalecreativ)"
   ],
-  "private": true,
+  "private": false,
   "files": [
     "dist",
     "src"
@@ -18,10 +18,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/coopdigital/coop-frontend.git",
-    "directory": "packages/component-template"
+    "directory": "packages/component-blockquote"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.8.0",
+    "@coopdigital/foundations-vars": "^3.7.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "prop-types": "^15.5.4",
@@ -37,8 +37,12 @@
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-blockquote#readme",
   "keywords": [
-    "templates"
-  ]
+    "blockquote"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "f58fae660bb8240497376af98b0ed2bc9e0fd47d"
 }

@@ -7,6 +7,9 @@ export default {
   modulePathIgnorePatterns: [
     './node_modules/',
   ],
+  moduleNameMapper: {
+    '\\.(css|pcss)$': '<rootDir>/__mocks__/styleMock.js',
+  },
   roots: [
     './packages',
   ],

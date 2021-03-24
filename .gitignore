@@ -3,6 +3,7 @@ node_modules
 .sass-cache
 .DS_STORE
 *.log
+storybook-static
 
 # local env files
 .env.local
