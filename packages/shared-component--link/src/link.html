@@ -64,8 +64,13 @@
 
 		{# If link is download get href from content #}
 		{%- elif linkEntry.type == 'download' -%}
-			{%- set asset = cms.get_asset(linkEntry.fields.file.data) -%}
-			{%- set href = asset.data.fields.file.url -%}
+			{%- if linkEntry.fields.file.data -%}
+				{%- set asset = cms.get_asset(linkEntry.fields.file.data) -%}
+				{%- set href = asset.data.fields.file.url -%}
+			{%- elif linkEntry.fields.url and linkEntry.fields.url.data -%}
+				{%- set href = linkEntry.fields.url.data -%}
+			{% endif %}
+
 			{%- set iconName = 'download' -%}
 		
 		{# If link is external get href from content #}
