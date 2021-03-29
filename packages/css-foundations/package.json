@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/css-foundations",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "description": "Co-op CSS Foundations",
   "main": "dist/foundations.css",
   "style": "src/foundations.pcss",
@@ -20,12 +20,12 @@
     "directory": "packages/css-foundations"
   },
   "dependencies": {
-    "@coopdigital/foundations-buttons": "^2.5.5",
+    "@coopdigital/foundations-buttons": "^2.5.6",
     "@coopdigital/foundations-colors": "^2.6.5",
-    "@coopdigital/foundations-forms": "^5.3.0",
+    "@coopdigital/foundations-forms": "^5.3.1",
     "@coopdigital/foundations-global": "^3.3.4",
     "@coopdigital/foundations-grid": "^2.1.4",
-    "@coopdigital/foundations-layout": "^3.3.4",
+    "@coopdigital/foundations-layout": "^3.3.5",
     "@coopdigital/foundations-tables": "^3.0.1",
     "@coopdigital/foundations-typography": "^4.2.5",
     "@coopdigital/foundations-vars": "^3.8.1",
