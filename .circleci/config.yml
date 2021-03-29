@@ -94,7 +94,7 @@ jobs:
           key: packages-{{ checksum "package-lock.json" }}
           working_directory: ~/project/design-system
           paths:
-            - ~/project/node_modules
+            - ~/project/design-system/node_modules
 
 
   deploy:
