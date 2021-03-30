@@ -101,21 +101,21 @@ jobs:
           name: Deploy to Heroku
           command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git $CIRCLE_BRANCH:master --force
 
-  chromatic-deploy-review:
+  chromatic_deploy_review:
     executor: node
     working_directory: ~/repo
     steps:
       - checkout
       - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --exit-once-uploaded
 
-  chromatic-deploy-master:
+  chromatic_deploy_master:
     executor: node
     working_directory: ~/repo
     steps:
       - checkout
       - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --auto-accept-changes
 
-  chromatic-build-and-deploy:
+  chromatic_build_and_deploy:
     executor: node
     working_directory: ~/repo
     steps:
@@ -147,22 +147,22 @@ workflows:
             branches:
               only: master
 
-  chromatic-deploy-review:
+  chromatic_deploy_review:
     jobs:
+      - build_packages
       - ready:
           filters:
             branches:
               ignore: master
           type: approval
-      - chromatic-deploy-review:
+      - chromatic_deploy_review:
           requires:
             - ready
             - build_packages
 
-  chromatic-deploy-master:
+  chromatic_deploy_master:
     jobs:
-      - chromatic-deploy-master:
+      - chromatic_deploy_master:
           filters:
             branches:
               only: master
-
