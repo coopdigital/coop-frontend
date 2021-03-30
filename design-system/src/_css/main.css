@@ -11,6 +11,9 @@
 @import "@coopdigital/foundations-forms";
 @import "@coopdigital/foundations-tables";
 
+/* Elements */
+@import "@coopdigital/blockquote";
+
 /* Components */
 @import "@coopdigital/component-search";
 @import "@coopdigital/component-card";

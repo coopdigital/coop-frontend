@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/design-system#readme",
   "dependencies": {
+    "@coopdigital/blockquote": "^1.0.2",
     "@coopdigital/component-card": "^3.3.2",
     "@coopdigital/component-card--product": "^2.2.2",
     "@coopdigital/component-date-input": "^1.2.14",
