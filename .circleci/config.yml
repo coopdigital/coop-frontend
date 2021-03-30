@@ -106,6 +106,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - run: npm run build-storybook
       - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --exit-once-uploaded
 
   chromatic_deploy_master:
@@ -113,6 +114,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - run: npm run build-storybook
       - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --auto-accept-changes
 
   chromatic_build_and_deploy:
@@ -149,7 +151,6 @@ workflows:
 
   chromatic_deploy_review:
     jobs:
-      - build_packages
       - ready:
           filters:
             branches:
@@ -158,7 +159,6 @@ workflows:
       - chromatic_deploy_review:
           requires:
             - ready
-            - build_packages
 
   chromatic_deploy_master:
     jobs:
