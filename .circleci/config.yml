@@ -101,6 +101,39 @@ jobs:
           name: Deploy to Heroku
           command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git $CIRCLE_BRANCH:master --force
 
+  chromatic-deploy-review:
+    executor: node
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --exit-once-uploaded
+
+  chromatic-deploy-master:
+    executor: node
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --auto-accept-changes
+
+  chromatic-build-and-deploy:
+    executor: node
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - packages-v1-{ checksum "package.json" }}
+            - packages-v1
+      - run: npm install
+      - save_cache:
+          name: Saving cache for node_modules
+          key: packages-v1-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/project/node_modules
+      - run: npm run build:storybook
+        # 👇 Runs the Chromatic CLI
+      - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --exit-once-uploaded
+
 workflows:
   version: 2
   build_packages_and_site:
@@ -113,3 +146,23 @@ workflows:
           filters:
             branches:
               only: master
+
+  chromatic-deploy-review:
+    jobs:
+      - ready:
+          filters:
+            branches:
+              ignore: master
+          type: approval
+      - chromatic-deploy-review:
+          requires:
+            - ready
+            - build_packages
+
+  chromatic-deploy-master:
+    jobs:
+      - chromatic-deploy-master:
+          filters:
+            branches:
+              only: master
+
