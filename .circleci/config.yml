@@ -106,6 +106,9 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - restore_cache:
+          name: Restoring cache for node_modules
+          key: packages-v1-{{ checksum "package-lock.json" }}
       - run: npm run build-storybook
       - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --exit-once-uploaded
 
@@ -115,6 +118,9 @@ jobs:
     steps:
       - checkout
       - run: npm run build-storybook
+      - restore_cache:
+          name: Restoring cache for node_modules
+          key: packages-v1-{{ checksum "package-lock.json" }}
       - run: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --storybook-build-dir=storybook-static --auto-accept-changes
 
   chromatic_build_and_deploy:
