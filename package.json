@@ -69,7 +69,6 @@
     "build:css": "lerna exec --ignore design-system --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
     "build:js": "lerna exec --ignore design-system --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
     "heroku-postbuild": "npm run --prefix design-system build",
-    "heroku-cleanup": "npm prune --production",
     "pretest": "npm run lint",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
