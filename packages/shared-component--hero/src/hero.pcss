@@ -123,6 +123,14 @@
     width: 50%;
   }
 }
+.coop-c-hero__title--mega {
+  font-size: var(--type-h1-mega-s);
+}
+@media (--mq-large) {
+  .coop-c-hero__title--mega {
+    font-size: var(--type-h1-mega-l);
+  }
+}
 .coop-c-hero__media {
   margin: var(--spacing-16) -1rem 0;
   position: relative;
@@ -254,4 +262,18 @@
 .coop-c-hero__link {
   margin-right: 10px;
   margin-bottom: 10px;
+}
+
+.coop-c-hero__disclaimer {
+  margin-bottom: var(--spacing-16);
+}
+
+.coop-c-hero__disclaimer p {
+  font-size: var(--type-sp-s);
+}
+
+@media (--mq-large) {
+  .coop-c-hero__disclaimer p {
+    font-size: var(--type-sp-l);
+  }
 }

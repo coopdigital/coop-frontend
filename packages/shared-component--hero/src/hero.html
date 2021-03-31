@@ -35,9 +35,10 @@
     <div class="coop-c-hero__inner coop-u-clearfix">
   
       {% if content.heading %}
-        <h1 class="coop-c-hero__title">{{ content.heading }}</h1>
+        {# Conditionally enable mega heading #}
+        <h1 class="{{ 'coop-c-hero__title coop-c-hero__title--mega' if content.headingMega else 'coop-c-hero__title' }}">{{ content.heading }}</h1>
       {% endif %}
-  
+
       {% if content.image %}
         {% with image = cms.get_asset(content.image.sys.id) %}
   
@@ -82,6 +83,12 @@
       <div class="coop-c-hero__body">
         {% if content.bodyText %}
           {{ content.bodyText | markdown }}
+        {% endif %}
+
+        {% if content.disclaimer %}
+          <div class="coop-c-hero__disclaimer">
+            {{ content.disclaimer | markdown }}
+          </div>
         {% endif %}
 
         {% if content.link or content.secondaryLink %}
