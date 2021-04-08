@@ -60,17 +60,6 @@
 @import "@coopdigital/foundations-colors";
 @import "@coopdigital/foundations-layout";
 
-#mc_embed_signup div.mce_inline_error {
-    margin: 0.5rem 0 0 0;
-    padding: 0;
-    background-color: #fff;
-    font-weight: normal;
-    color: #e20f14;
-}
-#mc_embed_signup input.mce_inline_error {
-    border-color: #e20f14;
-}
-
 .coop-c-notification--success {
     background-color: var(--color-green-success-light);
     border-left-color: var(--color-green-success);
