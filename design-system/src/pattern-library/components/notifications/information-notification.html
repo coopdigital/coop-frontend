@@ -40,7 +40,7 @@ id: pattern-library
                 <div class="coop-l-grid__item">
                     <section id="example" class="coop-ds-example">
                         <header class="ds-pen-example__header">
-                            <h2 class="Pen-panel-title pull-left">Example</h2>
+                            <h2 class="Pen-panel-title pull-left">Examples</h2>
                         </header>
                         <div id="TabContainer">
                             <div class="accordion-wrapper">
@@ -49,6 +49,7 @@ id: pattern-library
                                     <div class="coop-l-grid">
                                         <div class="coop-l-grid__item">
                                             {% include pattern-library/components/component-notification/src/notification.html %}
+                                            {% include pattern-library/components/component-notification/src/notification--alert.html %}
                                         </div>
                                     </div>
                                 </div>
@@ -56,10 +57,12 @@ id: pattern-library
                                 <div class="tabs-container__panel tabs-container__panel--code" id="Tab2">
                                     {% highlight html %}
                                     {% include pattern-library/components/component-notification/src/notification.html %}
+                                    {% include pattern-library/components/component-notification/src/notification--alert.html %}
                                     {% endhighlight %}
                                 </div>
                             </div>
                         </div>
+
                         <ul class="coop-list-bare coop-list-inline dm-icon-list">
                             <li><img src="/images/icons/github.svg" class="coop-c-icon__left" alt="" /><a href="{{ designPattern.github_url }}" class="coop-u-link-black">Get the code from Github</a></li>
                             <li><img src="/images/icons/npm.svg" class="coop-c-icon__left coop-c-icon__left--npm" alt="" /><a href="{{ designPattern.npm_url }}" class="coop-u-link-black">Install code from NPM</a></li>
