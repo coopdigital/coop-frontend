@@ -1,7 +1,7 @@
 {%- import '/shared-component--link/src/link.html' as link -%}
 
 {%- macro render(config, cms) -%}
-  
+
   {%- set notificationData = cms.get_entry(config.id) -%}
   {%- set role = notificationData.fields.typeOfNotification.data -%}
   {%- set notificationTypeClass = '' -%}
@@ -10,19 +10,20 @@
     {%- set notificationTypeClass = 'coop-c-notification--alert' -%}
   {%- endif -%}
 
-  <div class="coop-c-notification {{ notificationTypeClass }}" role="{{ role }}"> 
+  <div class="coop-c-notification {{ notificationTypeClass }}" role="{{ role }}">
     <h3 class="coop-c-notification__heading">{{ notificationData.fields.header.data }}</h3>
 
     {%- if notificationData.fields.bodyText -%}
       <p class="coop-c-notification__p">{{ notificationData.fields.bodyText.data }}</p>
     {%- endif -%}
-    
+
     <p class="coop-c-notification__p">
       {%- set linkConfig = {
         'contentType': 'Notifcation',
-        'contentParent': notificationData.fields.name.data
+        'contentParent': notificationData.fields.name.data,
+        'classNames': 'coop-c-notification__link'
       } -%}
-      
+
       {{ link.render(notificationData.fields.link, cms, linkConfig) }}
     </p>
   </div>
