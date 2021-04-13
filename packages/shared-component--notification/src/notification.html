@@ -8,6 +8,10 @@
 
   {%- if notificationData.fields.typeOfNotification.data == 'alert' -%}
     {%- set notificationTypeClass = 'coop-c-notification--alert' -%}
+  {%- if notificationData.fields.typeOfNotification.data == 'alert--error' -%}
+    {%- set notificationTypeClass = 'coop-c-notification--error' -%}
+  {%- elif notificationData.fields.typeOfNotification.data == 'status--success' -%}
+    {%- set notificationTypeClass = 'coop-c-notification--success' -%}
   {%- endif -%}
 
   <div class="coop-c-notification {{ notificationTypeClass }}" role="{{ role }}">
