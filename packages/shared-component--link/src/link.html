@@ -111,7 +111,7 @@
 			{%- if linkEntry.fields.displayChevron and linkEntry.fields.displayChevron.data == True -%}
 				{%- import '/shared-component--icon/src/icon.html' as icon -%}
 
-				{{ icon.render('arrow-right', 'coop-t-link__icon') }}
+				<span class="coop-t-link__icon-wrapper">{{ icon.render('arrow-right', 'coop-t-link__icon') }}</span>
 			{%- endif -%}
 		</a>
 
