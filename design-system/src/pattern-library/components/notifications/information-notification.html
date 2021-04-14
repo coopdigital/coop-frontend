@@ -40,7 +40,7 @@ id: pattern-library
                 <div class="coop-l-grid__item">
                     <section id="example" class="coop-ds-example">
                         <header class="ds-pen-example__header">
-                            <h2 class="Pen-panel-title pull-left">Example</h2>
+                            <h2 class="Pen-panel-title pull-left">Examples</h2>
                         </header>
                         <div id="TabContainer">
                             <div class="accordion-wrapper">
@@ -48,18 +48,23 @@ id: pattern-library
                                 <div class="tabs-container__panel tabs-container__panel--preview" id="Tab1">
                                     <div class="coop-l-grid">
                                         <div class="coop-l-grid__item">
-                                            {% include pattern-library/components/component-notification/src/notification.html %}
+                                            {% include pattern-library/components/component-notification/src/notification--alert.html %}
+                                            {% include pattern-library/components/component-notification/src/notification--success.html %}
+                                            {% include pattern-library/components/component-notification/src/notification--error.html %}
                                         </div>
                                     </div>
                                 </div>
                                 <h3 class="tabs-container__title" id="TabPanelTitle-Tab2">HTML</h3>
                                 <div class="tabs-container__panel tabs-container__panel--code" id="Tab2">
                                     {% highlight html %}
-                                    {% include pattern-library/components/component-notification/src/notification.html %}
+                                    {% include pattern-library/components/component-notification/src/notification--alert.html %}
+                                    {% include pattern-library/components/component-notification/src/notification--success.html %}
+                                    {% include pattern-library/components/component-notification/src/notification--error.html %}
                                     {% endhighlight %}
                                 </div>
                             </div>
                         </div>
+
                         <ul class="coop-list-bare coop-list-inline dm-icon-list">
                             <li><img src="/images/icons/github.svg" class="coop-c-icon__left" alt="" /><a href="{{ designPattern.github_url }}" class="coop-u-link-black">Get the code from Github</a></li>
                             <li><img src="/images/icons/npm.svg" class="coop-c-icon__left coop-c-icon__left--npm" alt="" /><a href="{{ designPattern.npm_url }}" class="coop-u-link-black">Install code from NPM</a></li>
