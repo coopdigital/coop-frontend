@@ -6,10 +6,12 @@
   position: relative;
   padding: var(--spacing-16);
   margin-bottom: var(--spacing-16);
-  background-color: var(--color-blue-notification-light);
-  border-left: 4px solid var(--color-blue-notification);
+  background-color: var(--color-blue-inform-light);
+  border-left: 4px solid var(--color-blue-inform);
+}
 
-  @media (--mq-medium) {
+@media (--mq-medium) {
+  .coop-c-notification {
     margin-bottom: var(--spacing-32);
   }
 }
@@ -17,12 +19,12 @@
 .coop-c-notification__link {
   color: var(--color-text);
   border: none;
-  text-decoration: none;
+  text-decoration: underline;
+}
 
-  &:active,
-  &:focus {
-    outline: none;
-  }
+.coop-c-notification__link:active,
+.coop-c-notification__link:focus {
+  outline: none;
 }
 
 /* Full banner clickable area */
@@ -50,24 +52,9 @@
   font-weight: 500;
 }
 
-.coop-c-notification__heading
-  + .coop-c-notification__p
-  .coop-c-notification__link {
-  text-decoration: underline;
-}
-
-.coop-c-notification:hover
-  .coop-c-notification__heading
-  + .coop-c-notification__p
-  .coop-c-notification__link,
-.coop-c-notification:focus-within
-  .coop-c-notification__heading
-  + .coop-c-notification__p
-  .coop-c-notification__link,
-.coop-c-notification:focus
-  .coop-c-notification__heading
-  + .coop-c-notification__p
-  .coop-c-notification__link {
+.coop-c-notification:hover .coop-c-notification__link,
+.coop-c-notification:focus-within .coop-c-notification__link,
+.coop-c-notification:focus .coop-c-notification__link {
   text-decoration: none;
   color: var(--color-text);
 }
@@ -76,20 +63,36 @@
   width: 100%;
   margin-top: 0;
   font-size: 1rem;
+}
 
-  &,
-  &:last-child {
+.coop-c-notification__p:last-child {
+  margin-bottom: 0;
+}
+
+@media (--mq-medium) {
+  .coop-c-notification__p:last-child {
     margin-bottom: 0;
   }
+}
 
-  @media (--mq-medium) {
-    &,
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @media (--mq-large) {
+@media (--mq-large) {
+  .coop-c-notification__p {
     width: 65%;
   }
+}
+
+/* Notification variant modifiers */
+.coop-c-notification--alert {
+  background-color: var(--color-orange-alert-light);
+  border-left-color: var(--color-orange-alert);
+}
+
+.coop-c-notification--success {
+  background-color: var(--color-green-success-light);
+  border-left-color: var(--color-green-success);
+}
+
+.coop-c-notification--error {
+  background-color: var(--color-red-error-light);
+  border-left-color: var(--color-red-error);
 }

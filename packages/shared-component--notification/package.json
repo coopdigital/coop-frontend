@@ -21,13 +21,11 @@
   },
   "devDependencies": {
     "@coopdigital/component-notification": "^1.1.4",
-    "@coopdigital/component-notification--alert": "^1.1.5",
     "@coopdigital/foundations-vars": "^3.8.1",
     "@coopdigital/shared-component--link": "^1.8.0"
   },
   "peerDependencies": {
     "@coopdigital/component-notification": ">= 1.0.11 < 2",
-    "@coopdigital/component-notification--alert": ">= 1.1.5 < 2",
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
     "@coopdigital/shared-component--link": " >= 1.6.2 < 2"
   },
