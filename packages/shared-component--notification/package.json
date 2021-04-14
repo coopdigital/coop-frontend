@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--notification",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Co-op Shared Component: Notification",
   "author": "@coopdigital",
   "main": "dist/notification.css",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@coopdigital/component-notification": "^1.2.0",
     "@coopdigital/foundations-vars": "^3.8.1",
-    "@coopdigital/shared-component--link": "^1.8.0"
+    "@coopdigital/shared-component--link": "^1.8.1"
   },
   "peerDependencies": {
     "@coopdigital/component-notification": ">= 1.0.11 < 2",
