@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--notification",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Co-op Shared Component: Notification",
   "author": "@coopdigital",
   "main": "dist/notification.css",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--notification"
   },
   "devDependencies": {
-    "@coopdigital/component-notification": "^1.1.4",
+    "@coopdigital/component-notification": "^1.2.0",
     "@coopdigital/foundations-vars": "^3.8.1",
     "@coopdigital/shared-component--link": "^1.8.0"
   },
