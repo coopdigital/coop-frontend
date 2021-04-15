@@ -61,6 +61,6 @@
 @import "@coopdigital/foundations-layout";
 
 .coop-c-notification--success {
-    background-color: var(--color-green-success-light);
-    border-left-color: var(--color-green-success);
+  background-color: var(--color-green-success-light);
+  border-left-color: var(--color-green-success);
 }
