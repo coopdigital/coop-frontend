@@ -11,14 +11,23 @@
 		{% if config.classNames %}
 			{%- set classNames = config.classNames -%}
 		{% else %}
-    	{%- set classNames = 'coop-t-link' -%}
+    		{%- set classNames = 'coop-t-link' -%}
 		{%- endif -%}
-    
-    {# set class names based on link style data #}
-    {% if linkEntry.data.fields and linkEntry.data.fields.linkStyle %}
+
+    {# Set class names based on link style data and config
+
+	   If we pass in config.isComponentLink from the config,
+	   this will supersede any linkEntry.data.fields.linkStyle on the link.
+	   Allows for other shared-components to pass in relevant BEM styles
+	   for it's link using the link config.className.
+	   example found here: @coopdigital/shared-component--notification
+	#}
+	1111111::: {{config.isComponentLink}}
+    {% if linkEntry.data.fields and linkEntry.data.fields.linkStyle and config.isComponentLink != true %}
+       222222::::: {{config.isComponentLink != true}}
       {%- set classNames = 'coop-btn' -%}
 
-      {%- if linkEntry.data.fields.linkStyle == 'Link - black' -%}
+      {%- if linkEntry.data.fields.linkStyle == 'Link - black'  -%}
         {%- set classNames = 'coop-t-link-black' -%}
       {%- elif linkEntry.data.fields.linkStyle == 'Link - white' -%}
         {%- set classNames = 'coop-t-link-white' -%}
@@ -38,7 +47,7 @@
 
 		{# If link is internal get href from target page #}
 		{%- if linkEntry.type == 'internalLink'  -%}
-			
+
 			{#  If link entry is valid, render link #}
 			{%- if linkEntry.fields.page.data -%}
 
@@ -59,7 +68,7 @@
 				{%- if linkEntry.fields.anchor.data -%}
 					{%- set href = href + "#" + linkEntry.fields.anchor.data -%}
 				{%- endif -%}
-			
+
 			{% endif %}
 
 		{# If link is download get href from content #}
@@ -72,7 +81,7 @@
 			{% endif %}
 
 			{%- set iconName = 'download' -%}
-		
+
 		{# If link is external get href from content #}
 		{%- elif linkEntry.type == 'externalLink' -%}
 			{% if linkEntry.fields.url.data %}
@@ -99,7 +108,7 @@
 				<span class="{{ config.iconClass if config.iconClass else 'coop-t-link__icon' }}" aria-hidden="true">
 					{%- set iconId = iconName | lower | replace(" ","-") -%}
 					{%- set svgClass = config.svgClass if config.svgClass else 'coop-t-link__svg' -%}
-					
+
 					{{ icon.render(iconId, svgClass) }}
 				</span>
 			{%- endif -%}
