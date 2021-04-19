@@ -17,20 +17,23 @@
   <div class="coop-c-notification {{ notificationTypeClass }}" role="{{ role }}">
     <h3 class="coop-c-notification__heading">{{ notificationData.fields.header.data }}</h3>
 
-    {%- if notificationData.fields.bodyText -%}
-      <p class="coop-c-notification__p">{{ notificationData.fields.bodyText.data }}</p>
-    {%- endif -%}
+      <p class="coop-c-notification__p">
+        
+        {%- if notificationData.fields.bodyText -%}
+          {{ notificationData.fields.bodyText.data | safe }}
+        {%- endif -%}
 
-    <p class="coop-c-notification__p">
-      {%- set linkConfig = {
-        'contentType': 'Notifcation',
-        'contentParent': notificationData.fields.name.data,
-        'overrideContentfulClassNames': true,
-        'classNames': 'coop-c-notification__link'
-      } -%}
+        {%- set linkConfig = {
+          'contentType': 'Notification',
+          'contentParent': notificationData.fields.name.data,
+          'overrideContentfulClassNames': true,
+          'classNames': 'coop-c-notification__link'
+        } -%}
+  
+        {{ link.render(notificationData.fields.link, cms, linkConfig) }}
 
-      {{ link.render(notificationData.fields.link, cms, linkConfig) }}
-    </p>
+        </p>
+    
   </div>
 
 {%- endmacro -%}
