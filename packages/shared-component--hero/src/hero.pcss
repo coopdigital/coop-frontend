@@ -277,3 +277,18 @@
     font-size: var(--type-sp-l);
   }
 }
+
+/* target links in heros that aren't coop-btn,
+   or are direct descendants of hero__body
+   or direct descendants of p tags descended directly from hero__body */
+.coop-c-hero.coop-u-black .coop-c-hero__body > a,
+.coop-c-hero.coop-u-black .coop-c-hero__body > p > a,
+.coop-c-hero.coop-u-black .coop-c-hero__body a:not(.coop-btn) {
+  color: var(--color-black);
+}
+
+.coop-c-hero.coop-u-white .coop-c-hero__body > a,
+.coop-c-hero.coop-u-white .coop-c-hero__body > p > a,
+.coop-c-hero.coop-u-white .coop-c-hero__body a:not(.coop-btn) {
+  color: var(--color-white);
+}
