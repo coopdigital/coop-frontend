@@ -1,10 +1,15 @@
 {% macro render(content, cms, config) %}
-
   {% set imageWidthLarge = 720 %}
   {% set imageWidthSmall = 390 %}
 
   {% with image = cms.get_asset(content.image.sys.id) %}
-    {% if config and config.isContained %}
+	{%- if image.data.fields.description -%}
+		{% set altText = image.data.fields.description %}
+	{%- else -%}
+		{% set altText = image.data.fields.title %}
+	{%- endif %-}
+
+    {%- if config and config.isContained -%}
     <div class="coop-l-grid__item--small-10 coop-l-grid__item--medium-9 coop-l-grid__item--large-7">
       <figure class="coop-c-image">
         <picture class="coop-c-image__media">
@@ -35,12 +40,12 @@
 
           <img
             src="{{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthLarge }}"
-            alt="{% if image.description %}{{ image.description }}{% endif %}"
+            alt="{{altText}}"
           />
         </picture>
       </figure>
     </div>
-    {% else %}
+    {%- else -%}
       <figure class="coop-c-image">
         <picture class="coop-c-image__media">
 
@@ -59,9 +64,9 @@
             type="image/jpeg" />
 
           <img src="{{ image.data.fields.file.url }}?fm=jpg&amp;q=60&amp;w={{ imageWidthLarge }}"
-            alt="{% if image.description %}{{ image.description }}{% endif %}" />
+            alt="{{altText}}" />
         </picture>
       </figure>
-    {% endif %}
+    {%- endif -%}
   {% endwith %}
 {% endmacro %}
