@@ -3,11 +3,11 @@
   {% set imageWidthSmall = 390 %}
 
   {% with image = cms.get_asset(content.image.sys.id) %}
-	{%- if image.data.fields.description -%}
-		{% set altText = image.data.fields.description %}
-	{%- else -%}
-		{% set altText = image.data.fields.title %}
-	{%- endif %-}
+    {%- if image.data.fields.description -%}
+      {% set altText = image.data.fields.description %}
+    {%- else -%}
+      {% set altText = image.data.fields.title %}
+    {%- endif -%}
 
     {%- if config and config.isContained -%}
     <div class="coop-l-grid__item--small-10 coop-l-grid__item--medium-9 coop-l-grid__item--large-7">
