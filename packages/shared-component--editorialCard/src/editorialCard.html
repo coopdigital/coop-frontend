@@ -38,8 +38,24 @@
                 {% if link.type == 'internalLink' %}
                     {% if link.fields.page.data %}
                         {% with internalLink = cms.get_entry(link.fields.page.data.sys.id) %}
+
+                            {# Append full path if not home page #}
+                            {%- if internalLink.full_url_path == '/' -%}
+                                {%- set href = tenant_url_path -%}
+                            {%- else -%}
+                                {%- set href = tenant_url_path + internalLink.full_url_path -%}
+                            {%- endif -%}
+
+                            {# Strip trailing slash #}
+
+                            {%- set href = href.rstrip("/") -%}
+
+                            {# Append anchor if available #}
+                            {%- if link.fields.anchor and link.fields.anchor.data -%}
+                                {%- set href = href + "#" + link.fields.anchor.data -%}
+                            {%- endif -%}
                             <a
-                                href="{{tenant_url_path}}{{ internalLink.full_url_path }}"
+                                href="{{href}}"
                                 class="coop-c-editorialcard__link"
                                 data-contenttype="Card|Editorial"
                                 data-contentparent="{{ config.contentParent|safe }}"
