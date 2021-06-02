@@ -17,7 +17,9 @@
   --app-button-hover: #595959;
 }
 
-.coop-btn {
+.coop-btn,
+.wpwl-button-pay,
+.wpwl-apple-pay-button {
   display: inline-block;
   display: inline-flex;
   align-items: center;
@@ -39,6 +41,30 @@
   text-decoration: none;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background: var(--color-button-blue-hover);
+    color: var(--color-white);
+    border: 0;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    transition: none;
+    outline: 2px solid var(--color-link-focus);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    background: var(--color-button-blue-active);
+    color: var(--color-white);
+    outline: 0;
+  }
+
+  &:disabled {
+    background-color: var(--color-grey-mid);
+  }
+
   @media (--mq-medium) {
     min-height: 3.75rem; /* 60px / 16 */
     padding: var(--spacing-16) calc(var(--spacing-32) * 1.25);
@@ -46,44 +72,25 @@
   }
 }
 
-.coop-btn:hover,
-.coop-btn:focus {
-  background: var(--color-button-blue-hover);
-  color: var(--color-white);
-  border: 0;
-  text-decoration: underline;
-}
-
-.coop-btn:focus {
-  transition: none;
-  outline: 2px solid var(--color-link-focus);
-  outline-offset: 3px;
-}
-
-.coop-btn:active {
-  background: var(--color-button-blue-active);
-  color: var(--color-white);
-  outline: 0;
-}
-
 .coop-btn--full-width {
   width: 100%;
 }
 
-.coop-btn--primary {
+.coop-btn--primary,
+.wpwl-button-pay {
   background: var(--color-button-green-primary);
   color: var(--color-white);
-}
 
-.coop-btn--primary:hover,
-.coop-btn--primary:focus {
-  background: var(--color-button-green-primary-hover);
-  color: var(--color-white);
-}
+  &:hover,
+  &:focus {
+    background: var(--color-button-green-primary-hover);
+    color: var(--color-white);
+  }
 
-.coop-btn--primary:active {
-  background: var(--color-button-green-primary-active);
-  color: var(--color-white);
+  &:active {
+    background: var(--color-button-green-primary-active);
+    color: var(--color-white);
+  }
 }
 
 .coop-btn--white {
@@ -236,5 +243,16 @@
 
   @media (--mq-medium) {
     width: 11.25rem; /* 180px / 16 */
+  }
+}
+
+/* Apple pay button - apple button requires height over min-height */
+.wpwl-apple-pay-button {
+  -apple-pay-button-type: buy;
+  -apple-pay-button-style: black;
+  height: 3.25rem; /* 52px / 16 */
+
+  @media (--mq-medium) {
+    height: 3.75rem; /* 60px / 16 */
   }
 }
