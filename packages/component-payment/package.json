@@ -1,0 +1,33 @@
+{
+  "name": "@coopdigital/component-payment",
+  "version": "1.0.0",
+  "description": "Co-op payment form component and utilities",
+  "main": "dist/index.js",
+  "style": "src/payment.pcss",
+  "author": "@coopdigital",
+  "contributors": [
+    "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)"
+  ],
+  "private": true,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/component-payment"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^3.8.0",
+    "@testing-library/jest-dom": "^5.11.9"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-payment#readme",
+  "keywords": [
+    "templates"
+  ]
+}

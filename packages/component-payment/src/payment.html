@@ -1,0 +1,286 @@
+<!-- Recommended layout for the payment form -->
+<div class="coop-l-container">
+  <div class="coop-l-grid">
+    <div class="coop-grid__item coop-l-grid__item--medium-8">
+      <!-- Payment component that should wrap the form -->
+      <div class="coop-c-payment">
+        <header class="coop-c-payment__header">
+          <h3 class="coop-c-payment__title">Pay by card</h3>
+          <ul class="coop-u-list-bare coop-c-list-tags">
+            <li class="">
+              <svg
+                viewBox="0 0 60 40"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                class="card-brands-icon"
+              >
+                <path
+                  d="m51.432 22.448h-3.594s.365-.963 1.719-4.661c-.027.026.365-.964.573-1.589l.312 1.432c.806 3.985.99 4.818.99 4.818zm-37.604-1.693-1.51-7.682c-.208-1.068-1.015-1.406-1.953-1.406h-6.98l-.052.338c4.792 1.223 8.724 3.828 10.495 8.75zm4.662-9.088-4.218 11.406-.444-2.318c-.911-2.422-3.125-4.662-5.625-5.677l3.515 13.282h4.557l6.797-16.693h-4.584zm3.62 16.718h4.323l2.709-16.718h-4.324zm20-16.302c-.86-.338-2.213-.703-3.88-.703-4.27 0-7.265 2.265-7.292 5.522-.026 2.395 2.135 3.723 3.777 4.531 1.693.807 2.24 1.354 2.24 2.084 0 1.12-1.353 1.615-2.578 1.615-1.745 0-2.682-.209-4.064-.86l-.573-.287-.598 3.75c1.015.468 2.865.885 4.818.885 4.532.027 7.473-2.24 7.527-5.703 0-1.902-1.172-3.334-3.647-4.532-1.51-.755-2.422-1.302-2.422-2.083 0-.704.782-1.432 2.474-1.432 1.406-.027 2.448.26 3.228.625l.39.208zm11.067-.416h-3.334c-1.041 0-1.823.311-2.265 1.406l-6.406 15.314h4.531c.73-2.057.912-2.5.912-2.5h5.522s.13.573.521 2.5h4.01zm6.823-8.334v33.334c0 1.823-1.51 3.333-3.333 3.333h-53.334c-1.823 0-3.333-1.51-3.333-3.333v-33.334c0-1.823 1.51-3.333 3.333-3.333h53.334c1.823 0 3.333 1.51 3.333 3.333z"
+                  fill="#3957a7"
+                ></path>
+              </svg>
+            </li>
+            <li>
+              <svg
+                viewBox="0 0 131.39 86.9"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                class="card-brands-icon"
+              >
+                <path
+                  d="m0 0h131.39v86.9h-131.39z"
+                  fill="#fff"
+                  opacity="0"
+                ></path>
+                <path
+                  d="m48.37 15.14h34.66v56.61h-34.66z"
+                  fill="#ff5f00"
+                ></path>
+                <path
+                  d="m51.94 43.45a35.94 35.94 0 0 1 13.75-28.3 36 36 0 1 0 0 56.61 35.94 35.94 0 0 1 -13.75-28.31z"
+                  fill="#eb001b"
+                ></path>
+                <g fill="#f79e1b">
+                  <path
+                    d="m120.5 65.76v-1.16h.5v-.24h-1.19v.24h.47v1.16zm2.31 0v-1.4h-.36l-.42 1-.42-1h-.36v1.4h.26v-1.06l.39.91h.27l.39-.91v1.06z"
+                  ></path>
+                  <path
+                    d="m123.94 43.45a36 36 0 0 1 -58.25 28.3 36 36 0 0 0 0-56.61 36 36 0 0 1 58.25 28.3z"
+                  ></path>
+                </g>
+              </svg>
+            </li>
+          </ul>
+        </header>
+        <div id="card" class="wpwl-container wpwl-container-card wpwl-clearfix">
+          <form
+            class="wpwl-form wpwl-form-card wpwl-clearfix"
+            action=""
+            method="POST"
+          >
+            <div class="wpwl-group wpwl-group-brand wpwl-clearfix">
+              <div
+                class="wpwl-label wpwl-label-brand"
+                name="wpwl-label-paymentBrand"
+              >
+                Brand
+              </div>
+              <div class="wpwl-wrapper wpwl-wrapper-brand">
+                <select
+                  class="wpwl-control wpwl-control-brand"
+                  name="paymentBrand"
+                  aria-label="Brand"
+                  ><option value="VISA">Visa</option
+                  ><option value="MASTER">Mastercard</option></select
+                >
+              </div>
+              <div class="wpwl-brand wpwl-brand-VISA wpwl-brand-card"></div>
+            </div>
+            <div class="wpwl-group wpwl-group-cardHolder wpwl-clearfix">
+              <div
+                class="wpwl-label wpwl-label-cardHolder"
+                name="wpwl-label-card.holder"
+              >
+                Cardholder’s name
+              </div>
+              <div class="wpwl-wrapper wpwl-wrapper-cardHolder">
+                <input
+                  class="wpwl-control wpwl-control-cardHolder"
+                  name="card.holder"
+                  type="text"
+                  value=""
+                  aria-label="Cardholder’s name"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+            <div class="wpwl-group wpwl-group-cardNumber wpwl-clearfix">
+              <div
+                class="wpwl-label wpwl-label-cardNumber"
+                name="wpwl-label-card.number"
+              >
+                Card number
+              </div>
+              <div class="wpwl-wrapper wpwl-wrapper-cardNumber">
+                <!-- <iframe
+                  class="wpwl-control wpwl-control-iframe wpwl-control-cardNumber"
+                  frameborder="0"
+                  name="card.number"
+                  scrolling="no"
+                  src="https://test.oppwa.com/v1/pciIframe.html?checkoutId=E53B2E68D0507433FC2A6B7F62BAA1B7.uat01-vm-tx01"
+                  aria-label="Card number"
+                  title="Card number"
+                ></iframe> -->
+              </div>
+            </div>
+            <div class="wpwl-group wpwl-group-expiry wpwl-clearfix">
+              <div class="wpwl-label wpwl-label-expiry">Expiry date</div>
+              <div class="wpwl-wrapper wpwl-wrapper-expiry">
+                <input
+                  class="wpwl-control wpwl-control-expiry"
+                  data-action="blur-card-expiry"
+                  type="tel"
+                  value=""
+                  aria-label="Expiry date"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+            <div class="wpwl-group wpwl-group-cvv wpwl-clearfix">
+              <div class="wpwl-label wpwl-label-cvv" name="wpwl-label-card.cvv">
+                Security code
+              </div>
+              <div class="wpwl-wrapper wpwl-wrapper-cvv">
+                <!-- <iframe
+                  class="wpwl-control wpwl-control-iframe wpwl-control-cvv"
+                  frameborder="0"
+                  name="card.cvv"
+                  scrolling="no"
+                  data-maxlength="4"
+                  src="https://test.oppwa.com/v1/pciIframe.html?checkoutId=E53B2E68D0507433FC2A6B7F62BAA1B7.uat01-vm-tx01"
+                  aria-label="Security code"
+                  title="Security code"
+                ></iframe> -->
+                <div
+                  class="wpwl-icon ui-state-default ui-corner-all"
+                  data-action="toggle-popover"
+                >
+                  <span class="ui-icon ui-icon-help"></span>
+                </div>
+                <div class="wpwl-popover wpwl-top" role="tooltip">
+                  <div class="wpwl-img wpwl-brand-whereIsMyCVV"></div>
+                  <div class="wpwl-popover-content">
+                    The number on the signature strip on the back of your card,
+                    usually 3 or 4 digits.
+                  </div>
+                  <div class="wpwl-arrow"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="wpwl-group wpwl-group-mobilePhoneCountryCode wpwl-clearfix"
+              style="display: none;"
+            >
+              <div
+                class="wpwl-label wpwl-label-mobilePhoneCountryCode"
+                name="wpwl-label-customParameters[MOBILE_COUNTRY_CODE]"
+              >
+                Country code
+              </div>
+              <div class="wpwl-wrapper wpwl-wrapper-mobilePhoneCountryCode">
+                <input
+                  class="wpwl-control wpwl-control-mobilePhoneCountryCode"
+                  name="customParameters[MOBILE_COUNTRY_CODE]"
+                  type="text"
+                  value=""
+                  maxlength="5"
+                  aria-label="Country code"
+                  autocomplete="off"
+                  disabled=""
+                />
+              </div>
+            </div>
+            <div
+              class="wpwl-group wpwl-group-mobilePhoneNumber wpwl-clearfix"
+              style="display: none;"
+            >
+              <div
+                class="wpwl-label wpwl-label-mobilePhoneNumber"
+                name="wpwl-label-customer.mobile"
+              >
+                Mobile phone number
+              </div>
+              <div class="wpwl-wrapper wpwl-wrapper-mobilePhoneNumber">
+                <input
+                  class="wpwl-control wpwl-control-mobilePhoneNumber"
+                  name="customer.mobile"
+                  type="text"
+                  value=""
+                  maxlength="12"
+                  aria-label="Mobile phone number"
+                  autocomplete="off"
+                  disabled=""
+                />
+              </div>
+            </div>
+            <div
+              class="wpwl-group wpwl-group-birthDate wpwl-clearfix"
+              style="display: none;"
+            >
+              <div
+                class="wpwl-label wpwl-label-birthDate"
+                name="wpwl-label-widgetBirthDate"
+              >
+                Date of birth
+              </div>
+              <div class="wpwl-wrapper wpwl-wrapper-birthDate">
+                <input
+                  class="wpwl-control wpwl-control-birthDate"
+                  name="widgetBirthDate"
+                  type="text"
+                  value=""
+                  aria-label="Date of birth"
+                  autocomplete="off"
+                  disabled=""
+                />
+              </div>
+            </div>
+            <div class="wpwl-group wpwl-group-submit wpwl-clearfix">
+              <div class="wpwl-wrapper wpwl-wrapper-submit">
+                <button
+                  class="wpwl-button wpwl-button-pay"
+                  type="submit"
+                  aria-label="Pay £25.25"
+                >
+                  Pay £25.25
+                </button>
+              </div>
+            </div>
+            <input
+              name="shopperResultUrl"
+              type="hidden"
+              value="http://localhost:3000/payment-status"
+            /><input name="forceUtf8" type="hidden" value="&amp;#9760;" /><input
+              name="shopOrigin"
+              type="hidden"
+              value="http://localhost:3000"
+            /><input name="card.expiryMonth" type="hidden" value="" /><input
+              name="card.expiryYear"
+              type="hidden"
+              value=""
+            /><input
+              name="customer.email"
+              type="hidden"
+              value="offersuserfiftyseven@simulator.amazonses.com"
+            /><input
+              name="billing.street1"
+              type="hidden"
+              value="465 Kings Road"
+            /><input name="billing.street2" type="hidden" value="" /><input
+              name="billing.city"
+              type="hidden"
+              value="London"
+            /><input
+              name="billing.postcode"
+              type="hidden"
+              value="SW10 0LU"
+            /><input name="billing.country" type="hidden" value="GB" />
+          </form>
+          <iframe
+            name="card_1072970238675"
+            class="wpwl-target"
+            src="about:blank"
+            frameborder="0"
+            style="display:none;"
+          ></iframe>
+        </div>
+        <iframe
+          class="wpwl-control wpwl-control-iframe wpwl-control-internalRequestIframe disabled"
+          style="display: none"
+          name="internalRequest"
+          src="https://test.oppwa.com/v1/internalRequestIframe.html"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>

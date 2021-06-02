@@ -1,0 +1,72 @@
+/* Payment */
+
+@import "@coopdigital/foundations-vars";
+
+.coop-c-payment {
+  margin-top: var(--spacing-32);
+}
+
+.coop-c-payment__header {
+  display: flex;
+  flex-direction: row;
+}
+
+.coop-c-payment__heading {
+  margin-top: 0;
+}
+
+// Maps to .coop-label__hint
+// This will be removed as we should remove and inject a coop hint instead.
+.wpwl-popover-content {
+  display: block;
+  margin: 0 0 var(--spacing-8);
+  color: var(--color-grey-dark);
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--type-sp-s);
+  line-height: var(--type-line-height);
+}
+
+.wpwl-control-expiry,
+.wpwl-control-cvv {
+  max-width: calc((3 * 2ch) + 1.5rem);
+}
+
+// Hide brand field.
+.wpwl-group-brand {
+  display: none;
+}
+
+// By default the hint for CVV appears in a popover. These styles reset and
+// inline as a hint message instead.
+.wpwl-wrapper-cvv {
+  .wpwl-icon {
+    display: none;
+  }
+
+  .wpwl-img {
+    display: none;
+  }
+
+  .wpwl-popover {
+    display: block;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    position: static;
+    line-height: 1.25;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &-content {
+      margin-top: calc(-1 * var(--spacing-4));
+      margin-bottom: calc(1.5 * var(--spacing-8));
+    }
+  }
+
+  .wpwl-arrow {
+    display: none;
+  }
+}
