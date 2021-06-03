@@ -1,6 +1,12 @@
 {
   "npmClient": "npm",
-  "packages": ["packages/*", "design-system"],
+  "packages": [
+    "packages/component-*",
+    "packages/foundations-*",
+    "packages/css-*",
+    "packages/shared-component-*",
+    "design-system"
+  ],
   "version": "independent",
   "command": {
     "publish": {
@@ -8,7 +14,7 @@
       "ignoreChanges": ["*.md"]
     },
     "bootstrap": {
-      "ignore": ["@coopdigital/component-react-ui"]
+      "ignore": ["@coopdigital/react-ui"]
     }
   }
 }

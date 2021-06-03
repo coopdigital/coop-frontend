@@ -7,7 +7,7 @@ export default {
   roots: ["./packages"],
   testEnvironment: "node",
   testMatch: ["**/(*.)test.{js,jsx,mjs}"],
-  testPathIgnorePatterns: ["./node_modules/", "./packages/component-react-ui"],
+  testPathIgnorePatterns: ["./node_modules/", "./packages/react-ui"],
   transform: {
     "^.+\\.m?jsx?$": "babel-jest",
   },
