@@ -1,14 +1,14 @@
 {
   "npmClient": "npm",
-  "packages": [
-    "packages/*",
-    "design-system"
-  ],
+  "packages": ["packages/*", "design-system"],
   "version": "independent",
   "command": {
     "publish": {
       "allowBranch": "master",
       "ignoreChanges": ["*.md"]
+    },
+    "bootstrap": {
+      "ignore": ["@coopdigital/component-react-ui"]
     }
   }
 }
