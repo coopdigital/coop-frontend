@@ -1,0 +1,68 @@
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import Blockquote from "./Blockquote";
+
+export const BaseBlockquote = (args) => <Blockquote {...args} />;
+
+<Meta
+  title="Elements/Blockquote"
+  component={Blockquote}
+  parameters={{
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/fxMzW1FsGlMluRHmawIr9r/Co-op-Foundations-and-Components?node-id=2499%3A110",
+    },
+  }}
+/>
+
+# Blockquotes
+
+Intro to blockquotes
+
+## Usage
+
+Usage guidelines for the blockquote component.
+
+## Default Blockquote Example
+
+A test canvas to show the component and it's underlying code.
+A canvas can include stories or just plain components like the one below.
+
+<Canvas>
+  <Blockquote quote="This is a quote" citation="citation"></Blockquote>
+</Canvas>
+
+## Stories for the Blockquote component
+
+We can keep component stories at the bottom of the documentation pages, for better doc readability.
+
+### A default Blockquote
+
+A default Blockquote looks like this....
+
+<Story
+  name="Blockquote Basic"
+  args={{
+    quote: "Here is a quote passed from args",
+    citation: "citation",
+  }}
+>
+  {BaseBlockquote.bind({})}
+</Story>
+
+### A Blockquote with large quote text from `quoteLarge` prop.
+
+You can pass a variant prop of quoteLarge to the components which will modify styles of the quote.
+
+This will not change the citation styles
+
+<Story
+  name="Blockquote with quoteLarge variant"
+  args={{
+    quote: "We use the quoteLarge prop to create a large quote variant",
+    citation: "citation example",
+    quoteLarge: true,
+  }}
+>
+  {BaseBlockquote.bind({})}
+</Story>
