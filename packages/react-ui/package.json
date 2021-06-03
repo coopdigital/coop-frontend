@@ -1,0 +1,56 @@
+{
+  "name": "@coopdigital/react-ui",
+  "version": "1.0.0",
+  "description": "Co-op Component/React UI and Storybook with documentation",
+  "main": "dist/index.js",
+  "style": "src/component.pcss",
+  "author": "@coopdigital",
+  "contributors": [
+    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",
+    "Dale Hudson <dale.hudson@coop.co.uk> (https://github.com/dalecreativ)"
+  ],
+  "private": true,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/component-react-ui"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-storysource": "^6.2.9",
+    "@storybook/eslint-config-storybook": "^3.0.0",
+    "@storybook/react": "^6.2.9",
+    "@storybook/theming": "^6.2.9",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "prop-types": "^15.5.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "storybook-addon-designs": "^6.0.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-react-ui#readme",
+  "keywords": [
+    "templates"
+  ]
+}

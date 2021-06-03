@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/index.mjs"],"names":["Blockquote"],"mappings":";;;;;;;AAAA;;eAEeA,mB","sourcesContent":["import Blockquote from './Blockquote.jsx';\n\nexport default Blockquote;\n"],"file":"index.js"}
