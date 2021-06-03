@@ -78,7 +78,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-tap": "^2.0.0",
     "gulp-terser": "^2.0.1",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.10",
     "postcss-calc": "^7.0.4",
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^9.2.0",
