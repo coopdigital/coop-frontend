@@ -29,6 +29,7 @@
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-docs": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-storysource": "^6.2.9",
     "@storybook/eslint-config-storybook": "^3.0.0",
     "@storybook/react": "^6.2.9",
@@ -57,7 +58,7 @@
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
-  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-react-ui#readme",
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/react-ui#readme",
   "keywords": [
     "templates"
   ],

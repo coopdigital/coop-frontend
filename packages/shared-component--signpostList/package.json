@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--signpostlist",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Co-op Shared Component: Signpost list",
   "main": "dist/signpost-list.css",
   "style": "src/signpost-list.pcss",
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@coopdigital/foundations-grid": "^2.1.4",
-    "@coopdigital/foundations-typography": "^4.2.5",
+    "@coopdigital/foundations-typography": "^4.2.6",
     "@coopdigital/foundations-vars": "^3.8.1",
     "@coopdigital/shared-component--signpost": "^2.6.1"
   },

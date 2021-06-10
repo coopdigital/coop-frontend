@@ -7,7 +7,7 @@ module.exports = {
         configureJSX: true,
       },
     },
-    "@storybook/addon-links",
+    "@storybook/addon-postcss",
     "@storybook/addon-essentials",
     "@storybook/addon-storysource",
     "@storybook/addon-a11y",
