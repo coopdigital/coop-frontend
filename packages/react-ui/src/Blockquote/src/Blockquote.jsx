@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./blockquote.pcss";
 
 const Blockquote = ({ citation, quote, quoteLarge }) => (
   <blockquote className="coop-t-blockquote">

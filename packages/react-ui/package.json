@@ -37,8 +37,14 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@whitespace/storybook-addon-html": "^5.0.0",
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^5.0.5",
     "postcss": "^8.3.0",
+    "postcss-calc": "^8.0.0",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-custom-properties": "^11.0.0",
     "postcss-import": "^14.0.2",
+    "postcss-nesting": "^8.0.1",
     "prop-types": "^15.5.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -55,5 +61,10 @@
   "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/react-ui#readme",
   "keywords": [
     "templates"
-  ]
+  ],
+  "dependencies": {
+    "@coopdigital/foundations-global": "^3.3.4",
+    "@coopdigital/foundations-typography": "^4.2.5",
+    "@coopdigital/foundations-vars": "^3.8.1"
+  }
 }
