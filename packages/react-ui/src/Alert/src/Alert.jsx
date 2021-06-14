@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "../../utils/classNames";
-// import "./alert.scss";
 
 const Alert = ({ type, heading, link, children }) => {
   const { href, text } = link;
