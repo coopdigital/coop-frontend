@@ -1,6 +1,7 @@
 import "@coopdigital/foundations-vars";
 import "@coopdigital/foundations-typography";
 import "@coopdigital/foundations-global";
+import "@coopdigital/component-notification";
 
 export const parameters = {
   options: {
