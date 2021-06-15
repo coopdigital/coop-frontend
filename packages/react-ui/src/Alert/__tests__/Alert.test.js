@@ -21,7 +21,7 @@ describe("Alert", () => {
       <div>
         <Alert type="info" heading="Info Alert" link={link} />
         <Alert type="warn" heading="Warning Alert" link={link} />
-        <Alert type="error" heading="Warning Alert" link={link} />
+        <Alert type="error" heading="Error Alert" link={link} />
         <Alert heading="Alert with no link">Standard message</Alert>
       </div>
     );
