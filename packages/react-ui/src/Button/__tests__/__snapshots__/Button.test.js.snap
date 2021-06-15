@@ -1,54 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button should render empty button correctly 1`] = `
-<button
-  className="coop-btn"
-  type="button"
-/>
+<DocumentFragment>
+  <button
+    class="coop-btn"
+    type="button"
+  />
+</DocumentFragment>
 `;
 
 exports[`Button should support all sizes 1`] = `
-<div>
-  <button
-    className="coop-btn coop-btn--small"
-    type="button"
-  >
-    Small
-  </button>
-  <button
-    className="coop-btn"
-    type="button"
-  >
-    Default/Medium
-  </button>
-</div>
+<DocumentFragment>
+  <div>
+    <button
+      class="coop-btn coop-btn--small"
+      type="button"
+    >
+      Small
+    </button>
+    <button
+      class="coop-btn"
+      type="button"
+    >
+      Default/Medium
+    </button>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Button should support all variants 1`] = `
-<div>
+<DocumentFragment>
+  <div>
+    <button
+      class="coop-btn"
+      type="button"
+    >
+      Default
+    </button>
+    <button
+      class="coop-btn coop-btn--primary"
+      type="button"
+    >
+      Primary
+    </button>
+    <button
+      class="coop-btn coop-btn--white"
+      type="button"
+    >
+      White
+    </button>
+    <button
+      class="coop-btn coop-btn--grey"
+      type="button"
+    >
+      Grey
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Button should support full width buttons 1`] = `
+<DocumentFragment>
   <button
-    className="coop-btn"
+    class="coop-btn coop-btn--full-width"
     type="button"
   >
-    Default
+    Full width button
   </button>
+</DocumentFragment>
+`;
+
+exports[`Button should support loading state button prop 1`] = `
+<DocumentFragment>
   <button
-    className="coop-btn coop-btn--primary"
+    class="coop-btn coop-btn--loading"
     type="button"
   >
-    Primary
+    Button is loading
   </button>
-  <button
-    className="coop-btn coop-btn--white"
-    type="button"
-  >
-    White
-  </button>
-  <button
-    className="coop-btn coop-btn--grey"
-    type="button"
-  >
-    Grey
-  </button>
-</div>
+</DocumentFragment>
 `;

@@ -1,11 +1,17 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
-import Button from "../index";
+import { render, cleanup } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import Button from "../src/index";
+
+afterEach(cleanup);
 
 describe("Button", () => {
   it("should render correctly", () => {
-    const wrapper = mount(<Button>Button</Button>);
+    const wrapper = render(<Button>Button</Button>);
     expect(() => wrapper.unmount()).not.toThrow();
   });
 
@@ -19,10 +25,11 @@ describe("Button", () => {
       </div>
     );
 
-    const tree = renderer.create(<Variants />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Variants />);
+    const buttonVariantBlock = asFragment();
+    expect(buttonVariantBlock).toMatchSnapshot();
 
-    const wrapper = mount(<Variants />);
+    const wrapper = render(<Variants />);
     expect(() => wrapper.unmount()).not.toThrow();
   });
 
@@ -34,25 +41,44 @@ describe("Button", () => {
       </div>
     );
 
-    const tree = renderer.create(<Sizes />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Sizes />);
+    const buttonSizesBlock = asFragment()
+    expect(buttonSizesBlock).toMatchSnapshot();
 
-    const wrapper = mount(<Sizes />);
+    const wrapper = render(<Sizes />);
     expect(() => wrapper.unmount()).not.toThrow();
   });
 
   it("should render different text", () => {
-    const wrapper = mount(<Button>button</Button>);
-    expect(wrapper.text()).toContain("button");
+    const { rerender, getByText } = render(<Button>button</Button>);
+    expect(getByText('button')).toBeInTheDocument();
 
-    wrapper.setProps({
-      children: <span>New Text</span>,
-    });
-    expect(wrapper.text()).toContain("New Text");
+
+    rerender(<Button>New text</Button>);
+    expect(getByText('New text')).toBeInTheDocument();
   });
 
+  it('should support full width buttons', () => {
+    const {container, asFragment} = render(<Button fullWidth>Full width button</Button>);
+    const fullwidthButton = asFragment();
+
+    expect(container.firstChild).toHaveClass('coop-btn--full-width')
+    expect(fullwidthButton).toMatchSnapshot();
+  });
+
+  it('should support loading state button prop', () => {
+    const {container, asFragment} = render(<Button isLoading>Button is loading</Button>);
+    const loadingButton = asFragment();
+
+    expect(container.firstChild).toHaveClass('coop-btn--loading');
+    expect(loadingButton).toMatchSnapshot();
+  })
+
+
   it("should render empty button correctly", () => {
-    const tree = renderer.create(<Button />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const {container, asFragment} = render(<Button />);
+    const emptyButtonBlock = asFragment();
+
+    expect(emptyButtonBlock).toMatchSnapshot();
   });
 });
