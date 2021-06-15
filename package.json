@@ -59,6 +59,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@coopdigital/foundations-buttons": "^2.5.7",
     "@coopdigital/foundations-global": "^3.3.3",
     "@coopdigital/foundations-typography": "^4.2.4",
     "@coopdigital/foundations-vars": "^3.8.0"
