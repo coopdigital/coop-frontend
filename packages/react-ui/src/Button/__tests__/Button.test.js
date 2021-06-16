@@ -11,11 +11,12 @@ afterEach(cleanup);
 
 describe("Button", () => {
   it("should render correctly", () => {
-    const wrapper = render(<Button>Button</Button>);
-    expect(() => wrapper.unmount()).not.toThrow();
+    const {getByText} = render(<Button>Button rendered</Button>);
+    expect(getByText('Button rendered')).toBeInTheDocument();
   });
 
   it("should support all variants", () => {
+    const expectedButtonText = ['Default', 'Primary', 'White', 'Grey'];
     const Variants = () => (
       <div>
         <Button>Default</Button>
@@ -24,16 +25,19 @@ describe("Button", () => {
         <Button variant="grey">Grey</Button>
       </div>
     );
+    const { getByText, asFragment } = render(<Variants />);
 
-    const { asFragment } = render(<Variants />);
+    expectedButtonText.forEach( expectedText => {
+      expect(getByText(expectedText)).toBeInTheDocument();
+    });
+
     const buttonVariantBlock = asFragment();
     expect(buttonVariantBlock).toMatchSnapshot();
-
-    const wrapper = render(<Variants />);
-    expect(() => wrapper.unmount()).not.toThrow();
   });
 
   it("should support all sizes", () => {
+    const expectedButtonText = ['Small', 'Default/Medium'];
+
     const Sizes = () => (
       <div>
         <Button size="small">Small</Button>
@@ -41,12 +45,14 @@ describe("Button", () => {
       </div>
     );
 
-    const { asFragment } = render(<Sizes />);
+    const {getByText, asFragment } = render(<Sizes />);
+
+    expectedButtonText.forEach( expectedText => {
+      expect(getByText(expectedText)).toBeInTheDocument();
+    });
+
     const buttonSizesBlock = asFragment()
     expect(buttonSizesBlock).toMatchSnapshot();
-
-    const wrapper = render(<Sizes />);
-    expect(() => wrapper.unmount()).not.toThrow();
   });
 
   it("should render different text", () => {
