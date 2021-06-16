@@ -16,44 +16,60 @@ describe("Button", () => {
   });
 
   it("should support all variants", () => {
-    const expectedButtonText = ["Default", "Primary", "White", "Grey"];
+    const variantMap = new Map([
+      ["button-primary", { class: "coop-btn--primary", text: "Primary" }],
+      ["button-white", { class: "coop-btn--white", text: "White" }],
+      ["button-grey", { class: "coop-btn--grey", text: "Grey" }],
+    ]);
+
     const Variants = () => (
       <div>
         <Button>Default</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="white">White</Button>
-        <Button variant="grey">Grey</Button>
+        <Button data-testid="button-primary" variant="primary">
+          Primary
+        </Button>
+        <Button data-testid="button-white" variant="white">
+          White
+        </Button>
+        <Button data-testid="button-grey" variant="grey">
+          Grey
+        </Button>
       </div>
     );
-    const { getByText, asFragment } = render(<Variants />);
 
-    expectedButtonText.forEach((expectedText) => {
-      expect(getByText(expectedText)).toBeInTheDocument();
+    const { getByText, getByTestId, asFragment } = render(<Variants />);
+
+    variantMap.forEach((value, key) => {
+      expect(getByTestId(key)).toHaveClass(value.class);
+      expect(getByText(value.text)).toBeInTheDocument();
     });
 
     const buttonVariantBlock = asFragment();
-    console.dir(buttonVariantBlock);
     expect(buttonVariantBlock).toMatchSnapshot();
   });
 
   it("should support all sizes", () => {
     const expectedButtonText = ["Small", "Default/Medium"];
-
+    // const sizeMap = new Map([["small","coop-btn--small"],[,"V"],[10,"X"]]);
     const Sizes = () => (
       <div>
-        <Button size="small">Small</Button>
-        <Button size="medium">Default/Medium</Button>
+        <Button date-testid="button-small" size="small">
+          Small
+        </Button>
+        <Button date-testid="button-medium" size="medium">
+          Default/Medium
+        </Button>
       </div>
     );
 
-    const { getByText, asFragment } = render(<Sizes />);
+    const { getByText, getByTestId, asFragment } = render(<Sizes />);
 
     expectedButtonText.forEach((expectedText) => {
       expect(getByText(expectedText)).toBeInTheDocument();
     });
 
     const buttonSizesBlock = asFragment();
-    expect(buttonSizesBlock).toMatchSnapshot();
+    // expect(buttonSizesBlock).toMatchSnapshot();
   });
 
   it("should render different text", () => {
