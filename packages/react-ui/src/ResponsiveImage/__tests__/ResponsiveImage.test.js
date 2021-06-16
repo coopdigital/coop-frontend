@@ -1,24 +1,27 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
-import ResponsiveImage from "../index";
+import { render, cleanup } from '@testing-library/react';
+
+import ResponsiveImage from "../src/index";
+
+afterEach(cleanup);
 
 describe("ResponsiveImage", () => {
   it("should render correctly", () => {
-    const wrapper = mount(<ResponsiveImage src="src" alt="alt" />);
+    const wrapper = render(<ResponsiveImage src="src" alt="alt" />);
     expect(() => wrapper.unmount()).not.toThrow();
 
-    const tree = renderer
-      .create(<ResponsiveImage src="src" alt="alt" />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ResponsiveImage src="src" alt="alt" />);
+    const imageFragment = asFragment();
+    expect(imageFragment).toMatchSnapshot();
   });
 
   it("should allow width and height attributes on default src", () => {
-    const tree = renderer
-      .create(<ResponsiveImage src="src" alt="alt" width="120" height="120" />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const {asFragment} = render(<ResponsiveImage src="src" alt="alt" width="120" height="120" />);
+    const imageFragmentWidthHeight = asFragment();
+    expect(imageFragmentWidthHeight).toMatchSnapshot();
   });
 
   it("should render sources", () => {
@@ -44,9 +47,8 @@ describe("ResponsiveImage", () => {
         },
       },
     ];
-    const tree = renderer
-      .create(<ResponsiveImage src="src" alt="alt" sources={sourcesTest} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const {asFragment} = render(<ResponsiveImage src="src" alt="alt" sources={sourcesTest} />);
+    const imageFragmentWithSourceSet = asFragment();
+    expect(imageFragmentWithSourceSet).toMatchSnapshot();
   });
 });
