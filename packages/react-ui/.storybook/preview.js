@@ -2,6 +2,9 @@ import "@coopdigital/foundations-vars";
 import "@coopdigital/foundations-typography";
 import "@coopdigital/foundations-global";
 
+
+import "@coopdigital/shared-component--image";
+
 export const parameters = {
   options: {
     showRoots: true,

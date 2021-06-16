@@ -43,15 +43,15 @@
     "@testing-library/react": "^11.2.5",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "autoprefixer": "^9.8.6",
+    "babel-jest": "^27.0.2",
     "cssnano": "^5.0.5",
+    "jest": "^27.0.4",
     "postcss": "^8.3.0",
     "postcss-calc": "^8.0.0",
     "postcss-custom-media": "^8.0.0",
     "postcss-custom-properties": "^11.0.0",
     "postcss-import": "^14.0.2",
     "postcss-nesting": "^8.0.1",
-    "babel-jest": "^27.0.2",
-    "jest": "^27.0.4",
     "prop-types": "^15.5.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -72,6 +72,8 @@
   "dependencies": {
     "@coopdigital/foundations-global": "^3.3.4",
     "@coopdigital/foundations-typography": "^4.2.5",
-    "@coopdigital/foundations-vars": "^3.8.1"
+    "@coopdigital/foundations-vars": "^3.8.1",
+    "@coopdigital/shared-component--image": "^2.2.6",
+    "shortid": "^2.2.16"
   }
 }
