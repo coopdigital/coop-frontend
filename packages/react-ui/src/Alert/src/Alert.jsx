@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "../../utils/classNames";
 
-const Alert = ({ type, heading, link, children, ...props }) => {
+const Alert = ({ type, heading, link, children, testId }) => {
   const { href, text } = link;
 
   const classes = classNames("coop-c-notification", [
@@ -11,22 +11,17 @@ const Alert = ({ type, heading, link, children, ...props }) => {
     type === "success" && "coop-c-notification--success",
   ]);
 
-  const role = function (type) {
-    if (type === "warn" || type == "error") {
-      return "alert";
-    } else {
-      return "status";
-    }
-  };
-
   const tagAttributes = {
     className: classes,
-    role: role(type),
-    ...props,
+    role: type === "warn" || type === "error" ? "alert" : "status",
   };
 
   return (
-    <div {...tagAttributes}>
+    <div
+      data-testid={testId}
+      className={tagAttributes.className}
+      role={tagAttributes.role}
+    >
       <h3 className="coop-c-notification__heading">{heading}</h3>
       <p className="coop-c-notification__p">
         {href && (
@@ -57,6 +52,7 @@ Alert.propTypes = {
     text: PropTypes.string,
   }),
   children: PropTypes.node,
+  testId: PropTypes.string,
 };
 
 export default Alert;
