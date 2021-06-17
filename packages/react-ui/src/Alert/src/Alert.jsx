@@ -2,15 +2,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "../../utils/classNames";
 
-const Alert = ({ type, heading, link, children }) => {
+const Alert = ({ type, heading, link, children, ...props }) => {
   const { href, text } = link;
+
   const classes = classNames("coop-c-notification", [
     type === "warn" && "coop-c-notification--alert",
     type === "error" && "coop-c-notification--error",
   ]);
 
+  const role = function (type) {
+    if (type === "warn" || type == "error") {
+      return "alert";
+    } else {
+      return "status";
+    }
+  };
+
+  const tagAttributes = {
+    className: classes,
+    role: role(type),
+    ...props,
+  };
+
   return (
-    <div className={classes} role="status">
+    <div {...tagAttributes}>
       <h3 className="coop-c-notification__heading">{heading}</h3>
       <p className="coop-c-notification__p">
         {href && (
