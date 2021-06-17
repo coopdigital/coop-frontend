@@ -50,15 +50,13 @@ describe("Button", () => {
 
   it("should support all sizes", () => {
     const expectedButtonText = ["Small", "Default/Medium"];
-    // const sizeMap = new Map([["small","coop-btn--small"],[,"V"],[10,"X"]]);
+
     const Sizes = () => (
       <div>
-        <Button date-testid="button-small" size="small">
+        <Button data-testid="button-small" size="small">
           Small
         </Button>
-        <Button date-testid="button-medium" size="medium">
-          Default/Medium
-        </Button>
+        <Button size="medium">Default/Medium</Button>
       </div>
     );
 
@@ -68,8 +66,11 @@ describe("Button", () => {
       expect(getByText(expectedText)).toBeInTheDocument();
     });
 
+    //expect class modifier to be added to small size button.
+    expect(getByTestId("button-small")).toHaveClass("coop-btn--small");
+
     const buttonSizesBlock = asFragment();
-    // expect(buttonSizesBlock).toMatchSnapshot();
+    expect(buttonSizesBlock).toMatchSnapshot();
   });
 
   it("should render different text", () => {

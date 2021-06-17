@@ -14,6 +14,7 @@ exports[`Button should support all sizes 1`] = `
   <div>
     <button
       class="coop-btn coop-btn--small"
+      data-testid="button-small"
       type="button"
     >
       Small
@@ -39,18 +40,21 @@ exports[`Button should support all variants 1`] = `
     </button>
     <button
       class="coop-btn coop-btn--primary"
+      data-testid="button-primary"
       type="button"
     >
       Primary
     </button>
     <button
       class="coop-btn coop-btn--white"
+      data-testid="button-white"
       type="button"
     >
       White
     </button>
     <button
       class="coop-btn coop-btn--grey"
+      data-testid="button-grey"
       type="button"
     >
       Grey
