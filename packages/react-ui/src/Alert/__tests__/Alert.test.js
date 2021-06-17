@@ -47,42 +47,34 @@ describe("Alert", () => {
 
     const Variants = () => (
       <div>
-        <Alert type="info" heading="Info Alert" link={link} />
         <Alert
-          data-testid="alert-warn"
+          testId="alert-warn"
           type="warn"
           heading="Warning Alert"
           link={link}
         />
         <Alert
-          data-testid="alert-error"
+          testId="alert-error"
           type="error"
           heading="Error Alert"
           link={link}
         />
         <Alert
-          data-testid="alert-success"
+          testId="alert-success"
           type="success"
           heading="Success Notification Alert"
           link={link}
         />
-        <Alert data-testid="alert-default" heading="Alert with no link">
+        <Alert testId="alert-default" heading="Alert with no link">
           Standard message
         </Alert>
       </div>
     );
-    /**
-     * Default and alert type info are the same variant...
-     * when passing no type prop the alert deafults to the info alert type.
-     * Is it needed?
-     */
 
     const { getByText, getByTestId } = render(<Variants />);
 
     variantMap.forEach((value, key) => {
       expect(getByTestId(key)).toHaveClass(value.class);
-
-      //magic string for attribute??
       expect(getByTestId(key)).toHaveAttribute("role", value.role);
       expect(getByText(value.heading)).toBeInTheDocument();
     });
