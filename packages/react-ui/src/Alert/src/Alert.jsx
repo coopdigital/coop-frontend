@@ -8,6 +8,7 @@ const Alert = ({ type, heading, link, children, ...props }) => {
   const classes = classNames("coop-c-notification", [
     type === "warn" && "coop-c-notification--alert",
     type === "error" && "coop-c-notification--error",
+    type === "success" && "coop-c-notification--success",
   ]);
 
   const role = function (type) {
@@ -49,7 +50,7 @@ Alert.defaultProps = {
 };
 
 Alert.propTypes = {
-  type: PropTypes.oneOf(["info", "warn", "error"]),
+  type: PropTypes.oneOf(["info", "warn", "error", "success"]),
   heading: PropTypes.string.isRequired,
   link: PropTypes.shape({
     href: PropTypes.string,

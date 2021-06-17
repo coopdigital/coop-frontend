@@ -35,6 +35,14 @@ describe("Alert", () => {
           role: "alert",
         },
       ],
+      [
+        "alert-success",
+        {
+          class: "coop-c-notification--success",
+          heading: "Success Notification Alert",
+          role: "status",
+        },
+      ],
     ]);
 
     const Variants = () => (
@@ -50,6 +58,12 @@ describe("Alert", () => {
           data-testid="alert-error"
           type="error"
           heading="Error Alert"
+          link={link}
+        />
+        <Alert
+          data-testid="alert-success"
+          type="success"
+          heading="Success Notification Alert"
           link={link}
         />
         <Alert data-testid="alert-default" heading="Alert with no link">
