@@ -39,7 +39,7 @@
     "@storybook/eslint-config-storybook": "^3.0.0",
     "@storybook/react": "^6.2.9",
     "@storybook/theming": "^6.2.9",
-    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.5",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "autoprefixer": "^9.8.6",
@@ -71,6 +71,7 @@
   ],
   "dependencies": {
     "@coopdigital/component-notification": "^1.2.0",
+    "@coopdigital/foundations-buttons": "^2.5.7",
     "@coopdigital/foundations-global": "^3.3.4",
     "@coopdigital/foundations-typography": "^4.2.5",
     "@coopdigital/foundations-vars": "^3.8.1"
