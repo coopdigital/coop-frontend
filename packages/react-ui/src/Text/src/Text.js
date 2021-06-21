@@ -19,7 +19,12 @@ const Text = ({ className, variant, type, children, ...props }) => {
     ...props,
   };
 
-  return <TagName {...tagAttributes}>{children}</TagName>;
+  return (
+    <TagName
+      {...tagAttributes}
+      dangerouslySetInnerHTML={{ __html: children }}
+    />
+  );
 };
 
 Text.defaultProps = {
