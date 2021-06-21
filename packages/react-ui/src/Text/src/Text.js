@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "../../utils/classNames";
-import "./text.scss";
 
 const variantList = {
   mega: "coop-t-h-mega",
@@ -45,7 +44,7 @@ Text.propTypes = {
   variant: PropTypes.oneOf(Object.keys(variantList)),
   /** type -  the type of text element you want to render using the Text component. Includes:
    * `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, and `p` tags.
-  */
+   */
   type: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p"]),
   /** children - prop that accepts a string or node? */
   children: PropTypes.node,
