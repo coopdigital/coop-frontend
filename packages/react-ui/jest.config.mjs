@@ -2,7 +2,7 @@ export default {
   moduleFileExtensions: ["js", "jsx", "mjs"],
   modulePathIgnorePatterns: ["./node_modules/"],
   roots: ["./src"],
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   testMatch: ["**/(*.)test.{js,jsx,mjs}"],
   testPathIgnorePatterns: ["./node_modules/"],
   transform: {

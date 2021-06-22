@@ -1,13 +1,22 @@
 import "@coopdigital/foundations-vars";
 import "@coopdigital/foundations-typography";
 import "@coopdigital/foundations-global";
+import "@coopdigital/component-notification";
 import "@coopdigital/foundations-buttons";
 
 export const parameters = {
   options: {
     showRoots: true,
     storySort: {
-      order: ['Docs', ['Intro'], 'Foundations', 'Elements', 'Components', 'Patterns', 'Layout'],
+      order: [
+        "Docs",
+        ["Intro"],
+        "Foundations",
+        "Elements",
+        "Components",
+        "Patterns",
+        "Layout",
+      ],
     },
   },
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -26,4 +35,4 @@ export const parameters = {
       useTabs: false,
     },
   },
-}
+};
