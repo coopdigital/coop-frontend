@@ -70,6 +70,7 @@
     "templates"
   ],
   "dependencies": {
+    "@coopdigital/css-foundations": "^7.1.2",
     "@coopdigital/foundations-global": "^3.3.4",
     "@coopdigital/foundations-typography": "^4.2.5",
     "@coopdigital/foundations-vars": "^3.8.1"
