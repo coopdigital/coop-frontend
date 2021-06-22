@@ -1,5 +1,3 @@
 module.exports = {
-  extends: [
-    './.eslintrc.base.js',
-  ],
+  extends: ["@coopdigital/eslint-config"]
 };

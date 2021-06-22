@@ -1,11 +1,6 @@
 module.exports = {
-  extends: [
-    './.eslintrc.base.js',
-  ],
+  extends: ["@coopdigital/eslint-config"],
   rules: {
-    'func-names': [
-      'error',
-      'never',
-    ],
-  },
+    "func-names": ["error", "never"]
+  }
 };
