@@ -61,7 +61,6 @@
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.13.0",
-    "@coopdigital/eslint-config": "^1.0.0",
     "@coopdigital/foundations-global": "^3.3.3",
     "@coopdigital/foundations-typography": "^4.2.4",
     "@coopdigital/foundations-vars": "^3.8.0"
