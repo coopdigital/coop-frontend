@@ -7,9 +7,9 @@ require("core-js/modules/es.string.ends-with.js");
 
 require("core-js/modules/es.string.trim.js");
 
-require("core-js/modules/es.string.replace.js");
-
 require("core-js/modules/es.regexp.exec.js");
+
+require("core-js/modules/es.string.replace.js");
 
 /**
  * Append ID to ARIA "described by" list
