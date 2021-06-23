@@ -1,18 +1,26 @@
 import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
+// import { mount } from "enzyme";
+// import renderer from "react-test-renderer";
+import { render, cleanup } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import InputRadio from "../src/index";
 
 describe("InputRadio", () => {
   it("should render correctly", () => {
-    const wrapper = mount(
+    const { getByLabelText } = render(
       <InputRadio id="test" name="test" label="test" value={1} />
     );
-    expect(() => wrapper.unmount()).not.toThrow();
+    expect(getByLabelText("test")).toBeInTheDocument();
+  });
 
-    const tree = renderer
-      .create(<InputRadio id="test" name="test" label="test" value={1} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+  it("should be checked on selecting", () => {
+    const { getByLabelText } = render(
+      <InputRadio id="test" name="test" label="test" value={1} />
+    );
+
+    const radioInput = getByLabelText("test");
+    radioInput.click();
+
+    expect(radioInput).toBeChecked();
   });
 });
