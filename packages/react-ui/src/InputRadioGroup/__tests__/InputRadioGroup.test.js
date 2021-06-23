@@ -1,33 +1,26 @@
 import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
-import InputRadioGroup from "../src/index";
+import { render, cleanup } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
+import InputRadioGroup from "../src/index.mjs";
 import InputRadio from "../../InputRadio/src";
 
 describe("InputRadioGroup", () => {
   it("should render correctly", () => {
-    const wrapper = mount(
+    const { getByText, getAllByRole } = render(
       <InputRadioGroup
         id="group-1"
         legend="Radio Group with hint"
         hint="Hint message"
       />
     );
-    expect(() => wrapper.unmount()).not.toThrow();
+
+    expect(getByText("Radio Group with hint")).toBeInTheDocument();
+    expect(getByText("Hint message")).toBeInTheDocument();
   });
 
-  it("should support hints and errors", () => {
+  it("should support error props", () => {
     const All = () => (
       <div>
-        <InputRadioGroup
-          id="group-1"
-          legend="Radio Group with hint"
-          hint="Hint message"
-        >
-          <InputRadio id="radio-1" name="radio-1" label="Radio 1" value={1} />
-          <InputRadio id="radio-2" name="radio-2" label="Radio 2" value={2} />
-          <InputRadio id="radio-3" name="radio-3" label="Radio 3" value={3} />
-        </InputRadioGroup>
         <InputRadioGroup
           id="group-2"
           legend="Radio Group with hint and error"
@@ -42,10 +35,29 @@ describe("InputRadioGroup", () => {
       </div>
     );
 
-    const tree = renderer.create(<All />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { getByText } = render(<All />);
+    expect(getByText("Error message")).toBeInTheDocument();
+  });
 
-    const wrapper = mount(<All />);
-    expect(() => wrapper.unmount()).not.toThrow();
+  it("should only allow 1 selected radio in a group", () => {
+    const All = () => (
+      <div>
+        <InputRadioGroup id="group-2" legend="Radio Group selection">
+          <InputRadio id="radio-4" name="radio-4" label="Radio 4" value={4} />
+          <InputRadio id="radio-5" name="radio-5" label="Radio 5" value={5} />
+          <InputRadio id="radio-6" name="radio-6" label="Radio 6" value={6} />
+        </InputRadioGroup>
+      </div>
+    );
+
+    const { getAllByRole, container } = render(<All />);
+    const radioInputArray = getAllByRole("radio");
+    for (let i = 0; i < radioInputArray.length; i++) {
+      radioInputArray[i].click();
+      expect(radioInputArray[i]).toBeChecked();
+      if (radioInputArray[i - 1]) {
+        expect(radioInputArray[i - 1]).not.toBeChecked();
+      }
+    }
   });
 });
