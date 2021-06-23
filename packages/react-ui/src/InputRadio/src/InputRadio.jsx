@@ -1,6 +1,6 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import PropTypes from "prop-types";
-import { useRadioContext } from "../InputRadioGroup/InputRadioGroupContext";
+import { useRadioContext } from "../../InputRadioGroup/src/InputRadioGroupContext";
 import classNames from "../../utils/classNames";
 
 const InputRadio = forwardRef(
@@ -21,10 +21,9 @@ const InputRadio = forwardRef(
     const [selfChecked, setSelfChecked] = useState(!!checked);
     const context = useRadioContext();
     const { currentState, updateState, inGroup } = context;
-    const classes = classNames(
-      "coop-form__field coop-form__radio coop-c-form-choice__input coop-c-form-choice__input--radio-button",
-      [className]
-    );
+    const classes = classNames("coop-form__field coop-form__radio", [
+      className,
+    ]);
 
     if (inGroup) {
       useEffect(() => {
@@ -68,12 +67,9 @@ const InputRadio = forwardRef(
     };
 
     return (
-      <div className="coop-c-form-choice">
+      <div className="coop-form__choice">
         <input {...tagAttributes} />
-        <label
-          className="coop-form__label coop-c-form-choice__label"
-          htmlFor={id}
-        >
+        <label className="coop-form__label" htmlFor={id}>
           {label}
         </label>
       </div>
