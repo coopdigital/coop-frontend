@@ -1,18 +1,13 @@
 import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
+import { render, cleanup } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import InputCheckbox from "../src/index";
 
 describe("InputCheckbox", () => {
   it("should render correctly", () => {
-    const wrapper = mount(
+    const { getByLabelText } = render(
       <InputCheckbox id="test" name="test" label="test" value={1} />
     );
-    expect(() => wrapper.unmount()).not.toThrow();
-
-    const tree = renderer
-      .create(<InputCheckbox id="test" name="test" label="test" value={1} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(getByLabelText("test")).toBeInTheDocument();
   });
 });
