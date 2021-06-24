@@ -1,6 +1,6 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import { useRadioContext } from "../../InputRadioGroup/src/InputRadioGroupContext";
+// import { useRadioContext } from "../../InputRadioGroup/src/InputRadioGroupContext";
 import classNames from "../../utils/classNames";
 
 const InputRadio = forwardRef(
@@ -11,57 +11,24 @@ const InputRadio = forwardRef(
       className,
       label,
       checked,
-      value: radioValue,
+      value,
       disabled,
       onChange,
       ...props
     },
     ref
   ) => {
-    const [selfChecked, setSelfChecked] = useState(!!checked);
-    const context = useRadioContext();
-    const { currentState, updateState, inGroup } = context;
     const classes = classNames("coop-form__field coop-form__radio", [
       className,
     ]);
 
-    if (inGroup) {
-      useEffect(() => {
-        setSelfChecked(currentState === radioValue);
-      }, [currentState, radioValue]);
-    }
-
-    const onChangeHandler = (event) => {
-      if (disabled) return;
-      const selfEvent = {
-        target: {
-          checked: !selfChecked,
-        },
-        stopPropagation: event.stopPropagation,
-        preventDefault: event.preventDefault,
-        nativeEvent: event,
-      };
-      setSelfChecked(!selfChecked);
-      if (inGroup) {
-        if (updateState) updateState(radioValue);
-      }
-      if (onChange) onChange(selfEvent);
-    };
-
-    useEffect(() => {
-      if (checked === undefined) return;
-      setSelfChecked(!!checked);
-    }, [checked]);
-
     const tagAttributes = {
       id,
       name,
-      value: radioValue,
+      value,
       disabled,
       type: "radio",
       className: classes,
-      checked: selfChecked,
-      onChange: onChangeHandler,
       ref,
       ...props,
     };

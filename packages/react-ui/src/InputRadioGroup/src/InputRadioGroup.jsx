@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { RadioContext } from "./InputRadioGroupContext";
 
 const InputRadioGroup = ({
   id,
@@ -12,27 +11,8 @@ const InputRadioGroup = ({
   initialValue,
   value,
   children,
-  onChange,
   ...props
 }) => {
-  const [checked, setChecked] = useState(initialValue);
-
-  const updateState = (nextValue) => {
-    setChecked(nextValue);
-    if (onChange) onChange(nextValue);
-  };
-
-  const providerValue = {
-    updateState,
-    currentState: checked,
-    inGroup: true,
-  };
-
-  useEffect(() => {
-    if (value === undefined) return;
-    setChecked(value);
-  }, [value]);
-
   const hintId = `${id}-hint`;
   const errorId = `${id}-error`;
   const classNames = ["coop-c-form-choice"];
@@ -48,30 +28,28 @@ const InputRadioGroup = ({
   classNames.push(className);
 
   return (
-    <RadioContext.Provider value={providerValue}>
-      <div className="coop-form__row">
-        <fieldset
-          className={classNames.join(" ")}
-          aria-describedby={ariaDescribedBy && ariaDescribedBy.join(" ")}
-          {...props}
-        >
-          <legend className="coop-form__legend coop-c-form-choice__legend">
-            {legend}
-          </legend>
-          {hint && (
-            <p id={`${id}-hint`} className="coop-form__hint">
-              {hint}
-            </p>
-          )}
-          {hasError && (
-            <p id={`${id}-error`} className="coop-form__error">
-              {errorMsg}
-            </p>
-          )}
-          {children}
-        </fieldset>
-      </div>
-    </RadioContext.Provider>
+    <div className="coop-form__row">
+      <fieldset
+        className={classNames.join(" ")}
+        aria-describedby={ariaDescribedBy && ariaDescribedBy.join(" ")}
+        {...props}
+      >
+        <legend className="coop-form__legend coop-c-form-choice__legend">
+          {legend}
+        </legend>
+        {hint && (
+          <p id={`${id}-hint`} className="coop-form__hint">
+            {hint}
+          </p>
+        )}
+        {hasError && (
+          <p id={`${id}-error`} className="coop-form__error">
+            {errorMsg}
+          </p>
+        )}
+        {children}
+      </fieldset>
+    </div>
   );
 };
 
@@ -85,7 +63,6 @@ InputRadioGroup.defaultProps = {
   className: null,
   initialValue: null,
   value: null,
-  onChange: null,
 };
 
 InputRadioGroup.propTypes = {
@@ -98,5 +75,4 @@ InputRadioGroup.propTypes = {
   className: PropTypes.string,
   initialValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  onChange: PropTypes.func,
 };

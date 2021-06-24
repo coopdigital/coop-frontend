@@ -6,7 +6,7 @@ import InputRadio from "../../InputRadio/src";
 
 describe("InputRadioGroup", () => {
   it("should render correctly", () => {
-    const { getByText, getAllByRole } = render(
+    const { getByText } = render(
       <InputRadioGroup
         id="group-1"
         legend="Radio Group with hint"
@@ -28,9 +28,24 @@ describe("InputRadioGroup", () => {
           errorMsg="Error message"
           hasError
         >
-          <InputRadio id="radio-4" name="radio-4" label="Radio 4" value={4} />
-          <InputRadio id="radio-5" name="radio-5" label="Radio 5" value={5} />
-          <InputRadio id="radio-6" name="radio-6" label="Radio 6" value={6} />
+          <InputRadio
+            id="radio-4"
+            name="radio-test"
+            label="Radio 4"
+            value={4}
+          />
+          <InputRadio
+            id="radio-5"
+            name="radio-test"
+            label="Radio 5"
+            value={5}
+          />
+          <InputRadio
+            id="radio-6"
+            name="radio-test"
+            label="Radio 6"
+            value={6}
+          />
         </InputRadioGroup>
       </div>
     );
@@ -43,9 +58,24 @@ describe("InputRadioGroup", () => {
     const All = () => (
       <div>
         <InputRadioGroup id="group-2" legend="Radio Group selection">
-          <InputRadio id="radio-4" name="radio-4" label="Radio 4" value={4} />
-          <InputRadio id="radio-5" name="radio-5" label="Radio 5" value={5} />
-          <InputRadio id="radio-6" name="radio-6" label="Radio 6" value={6} />
+          <InputRadio
+            id="radio-4"
+            name="radio-test"
+            label="Radio 4"
+            value={4}
+          />
+          <InputRadio
+            id="radio-5"
+            name="radio-test"
+            label="Radio 5"
+            value={5}
+          />
+          <InputRadio
+            id="radio-6"
+            name="radio-test"
+            label="Radio 6"
+            value={6}
+          />
         </InputRadioGroup>
       </div>
     );

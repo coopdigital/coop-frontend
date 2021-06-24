@@ -14,17 +14,17 @@ import InputRadio from "../../InputRadio/src/";
 
 export const RadioGroup1 = () => (
   <>
-    <InputRadio id="radio-1" name="radio-1" label="Radio 1" value={1} />
-    <InputRadio id="radio-2" name="radio-2" label="Radio 2" value={2} />
-    <InputRadio id="radio-3" name="radio-3" label="Radio 3" value={3} />
+    <InputRadio id="radio-1" name="radio-test" label="Radio 1" value={1} />
+    <InputRadio id="radio-2" name="radio-test" label="Radio 2" value={2} />
+    <InputRadio id="radio-3" name="radio-test" label="Radio 3" value={3} />
   </>
 );
 
 export const RadioGroup2 = () => (
   <>
-    <InputRadio id="radio-4" name="radio-4" label="Radio 4" value={4} />
-    <InputRadio id="radio-5" name="radio-5" label="Radio 5" value={5} />
-    <InputRadio id="radio-6" name="radio-6" label="Radio 6" value={6} />
+    <InputRadio id="radio-4" name="radio-test" label="Radio 4" value={4} />
+    <InputRadio id="radio-5" name="radio-test" label="Radio 5" value={5} />
+    <InputRadio id="radio-6" name="radio-test" label="Radio 6" value={6} />
   </>
 );
 
@@ -66,9 +66,9 @@ A canvas can include stories or just plain components like the one below.
     legend="Basic radio group with hint"
     hint="Hint message to help guide the user"
   >
-    <InputRadio id="radio-1" name="radio-1" label="Radio 1" value={1} />
-    <InputRadio id="radio-2" name="radio-2" label="Radio 2" value={2} />
-    <InputRadio id="radio-3" name="radio-3" label="Radio 3" value={3} />
+    <InputRadio id="radio-1" name="radio-test" label="Radio 1" value={1} />
+    <InputRadio id="radio-2" name="radio-test" label="Radio 2" value={2} />
+    <InputRadio id="radio-3" name="radio-test" label="Radio 3" value={3} />
   </InputRadioGroup>
 </Canvas>
 
@@ -109,6 +109,7 @@ We can keep component stories at the bottom of the documentation pages, for bett
       legend: "Radio Group with hint and error",
       hint: "Hint message",
       errorMsg: "Error message",
+      hasError: true,
       children: <RadioGroup1 />,
     }}
   >
