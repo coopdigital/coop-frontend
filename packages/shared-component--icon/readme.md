@@ -25,3 +25,8 @@ It can then be used from within your template as follows:
 
 ## Development
 For information on how to develop this package see the [developing foundations and components for the design system documentation](https://github.com/coopdigital/coop-frontend/blob/master/packages/README.md).
+
+## License
+Copyright (c) 2021 Co-operative Group Limited.
+Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
+

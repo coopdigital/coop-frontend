@@ -66,3 +66,9 @@ Feature
 Foundations-global - We’ve added a padding class so logo meets minimum tap target size.
 
 _Previous releases did not have notes_
+
+
+## License
+Copyright (c) 2021 Co-operative Group Limited.
+Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
+

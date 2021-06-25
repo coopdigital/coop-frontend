@@ -36,3 +36,9 @@ We’ve made fixes the skip navigation.
 Fix background colour and hover not passing colour contrast guidelines.
 
 _Previous releases did not have notes_
+
+
+## License
+Copyright (c) 2021 Co-operative Group Limited.
+Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
+
