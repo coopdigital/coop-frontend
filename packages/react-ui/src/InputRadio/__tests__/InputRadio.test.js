@@ -1,6 +1,4 @@
 import React from "react";
-// import { mount } from "enzyme";
-// import renderer from "react-test-renderer";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import InputRadio from "../src/index";
