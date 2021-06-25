@@ -33,6 +33,7 @@ describe("InputSelect", () => {
         name="name"
         label="With Label and Hint"
         hint="Hint message"
+        width="33"
         hasError
         errorMsg="Error Message"
         options={options}
@@ -41,9 +42,23 @@ describe("InputSelect", () => {
 
     expect(getByText("Hint message")).toBeInTheDocument();
     expect(getByText("Error Message")).toBeInTheDocument();
+  });
 
+  it("should select options correctly", () => {
+    const { getByRole, getByLabelText } = render(
+      <InputSelect
+        id="id"
+        name="name"
+        label="With Label and Hint"
+        options={options}
+      />
+    );
     userEvent.selectOptions(getByLabelText("With Label and Hint"), "2");
     expect(getByRole("option", { name: "option one" }).selected).toBe(false);
     expect(getByRole("option", { name: "option two" }).selected).toBe(true);
+
+    userEvent.selectOptions(getByLabelText("With Label and Hint"), "1");
+    expect(getByRole("option", { name: "option one" }).selected).toBe(true);
+    expect(getByRole("option", { name: "option two" }).selected).toBe(false);
   });
 });
