@@ -31,7 +31,5 @@ describe("FormContainer", () => {
     const { getByTestId, getByText } = render(<WithProps />);
     expect(getByTestId("test-form-container-2")).toHaveClass("newClass");
     expect(getByText("Form Body")).toBeInTheDocument();
-    // const tree = renderer.create(<WithProps />).toJSON();
-    // expect(tree).toMatchSnapshot();
   });
 });
