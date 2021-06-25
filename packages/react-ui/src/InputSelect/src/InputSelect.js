@@ -49,9 +49,10 @@ const InputSelect = forwardRef(
           aria-describedby={`${id}-hint`}
           ref={ref}
           {...props}
+          defaultValue=""
         >
           {placeholder && (
-            <option value="" disabled selected hidden>
+            <option value="" disabled={true} hidden>
               {placeholder}
             </option>
           )}
