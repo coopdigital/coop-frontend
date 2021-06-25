@@ -1,24 +1,24 @@
 import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
-import ResponsiveImage from "../index";
+// import { mount } from "enzyme";
+// import renderer from "react-test-renderer";
+import { render, cleanup, getByText } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
+import ResponsiveImage from "../src/index";
 
 describe("ResponsiveImage", () => {
   it("should render correctly", () => {
-    const wrapper = mount(<ResponsiveImage src="src" alt="alt" />);
-    expect(() => wrapper.unmount()).not.toThrow();
-
-    const tree = renderer
-      .create(<ResponsiveImage src="src" alt="alt" />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container, getByAltText, getByTestId } = render(
+      <ResponsiveImage src="src" alt="alt" />
+    );
+    expect(getByAltText("alt")).toBeInTheDocument();
   });
 
   it("should allow width and height attributes on default src", () => {
-    const tree = renderer
-      .create(<ResponsiveImage src="src" alt="alt" width="120" height="120" />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container, getByAltText } = render(
+      <ResponsiveImage src="src" alt="alt" width="120" height="120" />
+    );
+    expect(getByAltText("alt")).toHaveAttribute("width", "120");
+    expect(getByAltText("alt")).toHaveAttribute("height", "120");
   });
 
   it("should render sources", () => {
@@ -44,9 +44,9 @@ describe("ResponsiveImage", () => {
         },
       },
     ];
-    const tree = renderer
-      .create(<ResponsiveImage src="src" alt="alt" sources={sourcesTest} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const { getByAltText, getByTestId, getAllByTestId } = render(
+      <ResponsiveImage src="src" alt="alt" sources={sourcesTest} />
+    );
+    console.log("CHECK:: ", getAllByTestId("test-picture-source").length);
   });
 });

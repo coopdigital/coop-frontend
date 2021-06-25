@@ -17,6 +17,7 @@ const generateSourceMap = (sources) =>
     const sourceProps = { type, media };
     return (
       <source
+        data-testid="test-picture-source"
         key={shortid.generate()}
         srcSet={srcSets.join(", ")}
         {...sourceProps}
@@ -27,7 +28,7 @@ const generateSourceMap = (sources) =>
 const ResponsiveImage = ({ src, alt, width, height, sources }) => {
   return (
     <figure className="coop-c-image">
-      <picture className="coop-c-image__media">
+      <picture data-testid="test-picture-el" className="coop-c-image__media">
         {generateSourceMap(sources)}
         <img src={src} alt={alt} width={width} height={height} />
       </picture>
