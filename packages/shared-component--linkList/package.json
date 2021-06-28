@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--linklist",
-  "version": "3.3.3",
+  "version": "3.3.4",
   "description": "Co-op Shared Component: link list",
   "main": "dist/linkList.css",
   "style": "src/linkList.pcss",
@@ -20,8 +20,8 @@
     "directory": "packages/shared-component--linklist"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.8.1",
-    "@coopdigital/shared-component--link": "^1.8.3"
+    "@coopdigital/foundations-vars": "^3.8.2",
+    "@coopdigital/shared-component--link": "^1.8.4"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
