@@ -10,7 +10,8 @@
   "version": "independent",
   "command": {
     "publish": {
-      "allowBranch": "master"
+      "allowBranch": "master",
+      "ignoreChanges": ["*.md"]
     },
     "bootstrap": {
       "ignore": ["@coopdigital/react-ui"]
