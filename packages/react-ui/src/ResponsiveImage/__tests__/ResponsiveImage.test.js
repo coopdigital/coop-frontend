@@ -44,10 +44,12 @@ describe("ResponsiveImage", () => {
         },
       },
     ];
-    const { getByAltText, asFragment, getAllByTestId } = render(
-      <ResponsiveImage src="src" alt="alt" sources={sourcesTest} />
+    const { getByAltText, getAllByTestId } = render(
+      <ResponsiveImage src="src" alt="alt-test" sources={sourcesTest} />
     );
-    // console.log("CHECK:: ", getAllByTestId("test-picture-source"));
+
+    expect(getByAltText("alt-test")).toBeInTheDocument();
+
     const sourceArray = getAllByTestId("test-picture-source");
 
     sourceArray.forEach((src) => {
