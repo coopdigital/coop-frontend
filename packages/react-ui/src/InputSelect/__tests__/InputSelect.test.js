@@ -18,7 +18,7 @@ describe("InputSelect", () => {
     },
   ];
 
-  xit("should render correctly", () => {
+  it("should render correctly", () => {
     const { getByLabelText } = render(
       <InputSelect id="test" name="test" label="Test select" />
     );
@@ -26,8 +26,8 @@ describe("InputSelect", () => {
     expect(getByLabelText("Test select")).toBeInTheDocument();
   });
 
-  xit("should render props correctly", () => {
-    const { getByRole, getByLabelText, getByText } = render(
+  it("should render props correctly", () => {
+    const { getByText } = render(
       <InputSelect
         id="id"
         name="name"
@@ -44,7 +44,7 @@ describe("InputSelect", () => {
     expect(getByText("Error Message")).toBeInTheDocument();
   });
 
-  xit("should select options correctly", () => {
+  it("should select options correctly", () => {
     const { getByRole, getByLabelText } = render(
       <InputSelect
         id="id"
@@ -63,7 +63,7 @@ describe("InputSelect", () => {
   });
 
   it("should render option placeholders correctly", () => {
-    const { getByRole, getByLabelText, getByText } = render(
+    const { getByText } = render(
       <InputSelect
         id="id"
         name="name"
