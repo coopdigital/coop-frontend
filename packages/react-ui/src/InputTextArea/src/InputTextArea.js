@@ -1,69 +1,65 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
+import classNames from "../../utils/classNames";
 
-const InputTextArea = forwardRef(
-  (
-    {
-      id,
-      name,
-      cols,
-      rows,
-      className,
-      label,
-      hint,
-      hasError,
-      errorMsg,
-      disabled,
-      ...props
-    },
-    ref
-  ) => {
-    const hintId = `${id}-hint`;
-    const errorId = `${id}-error`;
-    const classNames = ["coop-form__field", "coop-form__textarea"];
-    const ariaDescribedBy = [];
+const InputTextArea = ({
+  id,
+  name,
+  cols,
+  rows,
+  className,
+  label,
+  hint,
+  hasError,
+  errorMsg,
+  disabled,
+  ...props
+}) => {
+  const hintId = `${id}-hint`;
+  const errorId = `${id}-error`;
+  const ariaDescribedBy = [];
 
-    if (hint) ariaDescribedBy.push(hintId);
+  const classes = classNames("coop-form__field coop-form__textarea", [
+    hasError && "coop-form__invalid",
+    className,
+  ]);
 
-    if (hasError) {
-      classNames.push("coop-form__invalid");
-      ariaDescribedBy.push(errorId);
-    }
+  if (hint) ariaDescribedBy.push(hintId);
 
-    classNames.push(className);
-
-    return (
-      <div className="coop-form__row">
-        {label && (
-          <label htmlFor={id} className="coop-form__label">
-            {label}
-          </label>
-        )}
-        {hint && (
-          <p id={`${id}-hint`} className="coop-form__hint">
-            {hint}
-          </p>
-        )}
-        {hasError && (
-          <p id={`${id}-error`} className="coop-form__error">
-            {errorMsg}
-          </p>
-        )}
-        <textarea
-          cols={cols}
-          rows={rows}
-          name={name}
-          id={id}
-          className={classNames.join(" ")}
-          aria-describedby={ariaDescribedBy && ariaDescribedBy.join(" ")}
-          disabled={disabled}
-          ref={ref}
-          {...props}
-        />
-      </div>
-    );
+  if (hasError) {
+    ariaDescribedBy.push(errorId);
   }
-);
+
+  return (
+    <div className="coop-form__row">
+      {label && (
+        <label htmlFor={id} className="coop-form__label">
+          {label}
+        </label>
+      )}
+      {hint && (
+        <p id={`${id}-hint`} className="coop-form__hint">
+          {hint}
+        </p>
+      )}
+      {hasError && (
+        <p id={`${id}-error`} className="coop-form__error">
+          {errorMsg}
+        </p>
+      )}
+      <textarea
+        cols={cols}
+        rows={rows}
+        name={name}
+        id={id}
+        className={classes}
+        aria-describedby={ariaDescribedBy && ariaDescribedBy.join(" ")}
+        disabled={disabled}
+        {...props}
+      />
+    </div>
+  );
+};
 
 InputTextArea.defaultProps = {
   cols: 30,
