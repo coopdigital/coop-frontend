@@ -1,36 +1,42 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import classNames from "../../utils/classNames";
 
-const InputCheckbox = forwardRef(
-  ({ id, name, className, label, checked, value, disabled, ...props }, ref) => {
-    const classes = classNames("coop-form__field coop-form__checkbox", [
-      className,
-    ]);
+const InputCheckbox = ({
+  id,
+  name,
+  className,
+  label,
+  checked,
+  value,
+  disabled,
+  ...props
+}) => {
+  const classes = classNames("coop-form__field coop-form__checkbox", [
+    className,
+  ]);
 
-    const tagAttributes = {
-      id,
-      name,
-      value,
-      label,
-      disabled,
-      type: "checkbox",
-      className: classes,
-      checked,
-      ...props,
-      ref,
-    };
+  const tagAttributes = {
+    id,
+    name,
+    value,
+    label,
+    disabled,
+    type: "checkbox",
+    className: classes,
+    checked,
+    ...props,
+  };
 
-    return (
-      <div className="coop-form__choice">
-        <input {...tagAttributes} />
-        <label className="coop-form__label" htmlFor={id}>
-          {label}
-        </label>
-      </div>
-    );
-  }
-);
+  return (
+    <div className="coop-form__choice">
+      <input {...tagAttributes} />
+      <label className="coop-form__label" htmlFor={id}>
+        {label}
+      </label>
+    </div>
+  );
+};
 
 InputCheckbox.defaultProps = {
   disabled: false,
