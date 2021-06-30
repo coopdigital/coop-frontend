@@ -62,7 +62,8 @@
                 {% endwith %}
               {% endif %}
               {% if content.button %}
-                {% with button = cms.get_entry(content.button.sys.id) %}
+                {% for entry in content.button %}
+                  {% with button = cms.get_entry(entry.sys.id) %}
                     {%- set href = {} -%}
                       {% if button.type == 'internalLink' %}
                         {% if button.data.fields.page %}
@@ -74,7 +75,8 @@
                         {%- set _ = href.update({"url" : button.fields.url.data }) -%}
                       {% endif %}
                       <a href="{{href.url}}" class="coop-btn" data-contenttype="Membership hero" data-contentparent="{{content.heading}}" data-linktext="{{button.fields.title.data}}">{{button.fields.title.data|safe}}</a>
-                {% endwith %}
+                  {% endwith %}
+                {% endfor %}
               {% endif %}
               {% if content.link %}
                 {% with link = cms.get_entry(content.link.sys.id) %}
