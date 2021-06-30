@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import shortid from "shortid";
-// import "./responsiveImage.scss";
 
 const generateSourceMap = (sources) =>
   sources.map((source) => {
