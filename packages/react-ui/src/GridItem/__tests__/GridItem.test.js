@@ -1,6 +1,4 @@
 import React from "react";
-// import { mount } from "enzyme";
-// import renderer from "react-test-renderer";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import GridItem from "../src/index";
@@ -14,16 +12,6 @@ describe("GridItem", () => {
   it("should allow size and offset attributes", () => {
     const SizesAndOffsets = () => (
       <>
-        {/* <GridItem size={6} />
-        <GridItem offset={2} />
-        <GridItem sm={6} />
-        <GridItem smOffset={2} />
-        <GridItem md={6} />
-        <GridItem mdOffset={2} />
-        <GridItem lg={6} />
-        <GridItem lgOffset={2} />
-        <GridItem xlg={6} />
-        <GridItem xlgOffset={2} /> */}
         <GridItem
           size={6}
           offset={4}
@@ -39,8 +27,8 @@ describe("GridItem", () => {
       </>
     );
     const { getByTestId } = render(<SizesAndOffsets />);
-    // const gridItemArray = getAllByTestId("grid-item-test");
     const gridItemTest = getByTestId("grid-item-test");
+
     expect(gridItemTest).toHaveClass("coop-l-grid__item--6");
     expect(gridItemTest).toHaveClass("coop-l-grid__item--offset-4");
     expect(gridItemTest).toHaveClass("coop-l-grid__item--small-5");

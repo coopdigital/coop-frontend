@@ -1,7 +1,4 @@
 import React from "react";
-// import { mount } from "enzyme";
-// import renderer from "react-test-renderer";
-
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Grid from "../src/index";
@@ -11,7 +8,6 @@ afterEach(cleanup);
 describe("Grid", () => {
   it("should render correctly", () => {
     const { container } = render(<Grid />);
-
     expect(container.firstChild).toHaveClass("coop-l-grid");
   });
 
