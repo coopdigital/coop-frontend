@@ -1,48 +1,39 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-// import { useRadioContext } from "../../InputRadioGroup/src/InputRadioGroupContext";
 import classNames from "../../utils/classNames";
 
-const InputRadio = forwardRef(
-  (
-    {
-      id,
-      name,
-      className,
-      label,
-      checked,
-      value,
-      disabled,
-      onChange,
-      ...props
-    },
-    ref
-  ) => {
-    const classes = classNames("coop-form__field coop-form__radio", [
-      className,
-    ]);
+const InputRadio = ({
+  id,
+  name,
+  className,
+  label,
+  checked,
+  value,
+  disabled,
+  onChange,
+  ...props
+}) => {
+  const classes = classNames("coop-form__field coop-form__radio", [className]);
 
-    const tagAttributes = {
-      id,
-      name,
-      value,
-      disabled,
-      type: "radio",
-      className: classes,
-      ref,
-      ...props,
-    };
+  const tagAttributes = {
+    id,
+    name,
+    value,
+    disabled,
+    type: "radio",
+    className: classes,
+    ...props,
+  };
 
-    return (
-      <div className="coop-form__choice">
-        <input {...tagAttributes} />
-        <label className="coop-form__label" htmlFor={id}>
-          {label}
-        </label>
-      </div>
-    );
-  }
-);
+  return (
+    <div className="coop-form__choice">
+      <input {...tagAttributes} />
+      <label className="coop-form__label" htmlFor={id}>
+        {label}
+      </label>
+    </div>
+  );
+};
 
 InputRadio.defaultProps = {
   disabled: false,
