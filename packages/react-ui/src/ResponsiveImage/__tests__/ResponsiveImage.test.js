@@ -1,9 +1,9 @@
 import React from "react";
-// import { mount } from "enzyme";
-// import renderer from "react-test-renderer";
-import { render, cleanup, getByText } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import ResponsiveImage from "../src/index";
+import ResponsiveImage from "../src/";
+
+afterEach(cleanup);
 
 describe("ResponsiveImage", () => {
   it("should render correctly", () => {
