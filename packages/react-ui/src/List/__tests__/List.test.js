@@ -1,15 +1,16 @@
 import React from "react";
-import { mount } from "enzyme";
-import renderer from "react-test-renderer";
+// import { mount } from "enzyme";
+// import renderer from "react-test-renderer";
+import { render, cleanup } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import List from "../src/";
+
+afterEach(cleanup);
 
 describe("List", () => {
   it("should render default List", () => {
-    const wrapper = mount(<List />);
-    expect(() => wrapper.unmount()).not.toThrow();
-
-    const tree = renderer.create(<List />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { getByTestId } = render(<List />);
+    expect(getByTestId("list-ul-test")).toBeInTheDocument();
   });
 
   it("should work with all variants", () => {
@@ -32,10 +33,15 @@ describe("List", () => {
       </div>
     );
 
-    const wrapper = mount(<Variants />);
-    expect(() => wrapper.unmount()).not.toThrow();
+    const { getByText, getByTestId } = render(<Variants />);
 
-    const tree = renderer.create(<Variants />).toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(getByTestId("list-ul-test")).toBeInTheDocument();
+    expect(getByTestId("list-ol-test")).toBeInTheDocument();
+
+    const ulListItems = getByTestId("list-ul-test").childNodes;
+    const olListItems = getByTestId("list-ol-test").childNodes;
+
+    expect(ulListItems.length).toEqual(items.length);
+    expect(olListItems.length).toEqual(items.length);
   });
 });

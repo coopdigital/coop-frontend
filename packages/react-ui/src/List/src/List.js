@@ -17,7 +17,7 @@ const List = ({ className, type, items, bare, inline }) => {
   ]);
 
   return (
-    <Tag className={rootClasses}>
+    <Tag data-testid={`list-${Tag}-test`} className={rootClasses}>
       {items.map(({ content, ...props }, index) => (
         <li key={shortid.generate()} {...props}>
           {content}
