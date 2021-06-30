@@ -3,6 +3,8 @@ import "@coopdigital/foundations-typography";
 import "@coopdigital/foundations-global";
 import "@coopdigital/component-notification";
 import "@coopdigital/foundations-buttons";
+import "@coopdigital/css-foundations";
+import "@coopdigital/shared-component--image";
 
 export const parameters = {
   options: {
