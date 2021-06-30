@@ -28,9 +28,9 @@ describe("ResponsiveImage", () => {
         media: "(min-width: 1200)",
         srcSet: {
           "1x":
-            "//images.ctfassets.net/bffxiku554r1/7XDwxNP8ioupeMdJZxNS8/d23d2b802d6be0ecbcb7abd1ff33b159/coop-supporting-local-communities.png?fm=webp&amp;q=60&amp;w=600&amp;h=338",
+            "//images.ctfassets.net/bffxiku554r1/7XDwxNP8ioupeMdJZxNS8/d23d2b802d6be0ecbcb7abd1ff33b159/coop-supporting-local-communities.png?fm=webp&amp;q=60&amp;w=1200&amp;h=676",
           "2x":
-            "//images.ctfassets.net/bffxiku554r1/7XDwxNP8ioupeMdJZxNS8/d23d2b802d6be0ecbcb7abd1ff33b159/coop-supporting-local-communities.png?fm=webp&amp;q=60&amp;w=600&amp;h=338",
+            "//images.ctfassets.net/bffxiku554r1/7XDwxNP8ioupeMdJZxNS8/d23d2b802d6be0ecbcb7abd1ff33b159/coop-supporting-local-communities.png?fm=webp&amp;q=60&amp;w=1200&amp;h=676",
         },
       },
       {
@@ -44,9 +44,24 @@ describe("ResponsiveImage", () => {
         },
       },
     ];
-    const { getByAltText, getByTestId, getAllByTestId } = render(
+    const { getByAltText, asFragment, getAllByTestId } = render(
       <ResponsiveImage src="src" alt="alt" sources={sourcesTest} />
     );
-    console.log("CHECK:: ", getAllByTestId("test-picture-source").length);
+    // console.log("CHECK:: ", getAllByTestId("test-picture-source"));
+    const sourceArray = getAllByTestId("test-picture-source");
+
+    sourceArray.forEach((src) => {
+      expect(src.hasAttribute("srcSet")).toBe(true);
+    });
+
+    expect(sourceArray[0].getAttribute("srcSet")).toContain(
+      sourcesTest[0].srcSet["1x"]
+    );
+    expect(sourceArray[0].getAttribute("srcSet")).toContain(
+      sourcesTest[0].srcSet["2x"]
+    );
+    expect(sourceArray[1].getAttribute("srcSet")).toContain(
+      sourcesTest[1].srcSet["2x"]
+    );
   });
 });
