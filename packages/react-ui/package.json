@@ -77,6 +77,8 @@
     "@coopdigital/foundations-forms": "^5.3.2",
     "@coopdigital/foundations-global": "^3.3.4",
     "@coopdigital/foundations-typography": "^4.2.5",
-    "@coopdigital/foundations-vars": "^3.8.1"
+    "@coopdigital/foundations-vars": "^3.8.1",
+    "@coopdigital/shared-component--image": "^2.2.7",
+    "shortid": "^2.2.16"
   }
 }
