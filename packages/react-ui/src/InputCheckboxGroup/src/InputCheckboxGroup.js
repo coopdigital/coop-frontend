@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import classNames from "../../utils/classNames";
 
@@ -11,28 +11,8 @@ const InputCheckboxGroup = ({
   className,
   value,
   children,
-  onChange,
   ...props
 }) => {
-  const [selfVal, setSelfVal] = useState(value);
-
-  const updateState = (val, checked) => {
-    const removed = selfVal.filter((v) => v !== val);
-    const next = checked ? [...removed, val] : removed;
-    setSelfVal(next);
-    if (onChange) onChange(next);
-  };
-
-  useEffect(() => {
-    setSelfVal(value);
-  }, [value.join(",")]);
-
-  const providerValue = {
-    updateState,
-    values: selfVal,
-    inGroup: true,
-  };
-
   const hintId = `${id}-hint`;
   const errorId = `${id}-error`;
   const classes = classNames("coop-c-form-choice", [
@@ -79,7 +59,6 @@ InputCheckboxGroup.defaultProps = {
   children: null,
   className: null,
   value: [],
-  onChange: null,
 };
 
 InputCheckboxGroup.propTypes = {
@@ -102,6 +81,4 @@ InputCheckboxGroup.propTypes = {
   value: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ),
-  /** Do we need to onChange at this level? Would this trigger when child checkbox error state changes? */
-  onChange: PropTypes.func,
 };
