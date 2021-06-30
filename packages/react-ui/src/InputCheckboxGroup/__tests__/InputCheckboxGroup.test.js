@@ -17,7 +17,7 @@ describe("InputCheckboxGroup", () => {
     expect(getByText("Hint message")).toBeInTheDocument();
   });
 
-  xit("should support hints", () => {
+  it("should support hints", () => {
     const All = () => (
       <div>
         <InputCheckboxGroup
@@ -51,7 +51,7 @@ describe("InputCheckboxGroup", () => {
     expect(getByText("Hint message")).toBeInTheDocument();
   });
 
-  xit("should support error props", () => {
+  it("should support error props", () => {
     const All = () => (
       <div>
         <InputCheckboxGroup
