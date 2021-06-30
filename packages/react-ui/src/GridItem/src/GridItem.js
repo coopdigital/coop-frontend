@@ -22,7 +22,7 @@ const GridItem = ({
     size && `coop-l-grid__item--${size}`,
     offset && `coop-l-grid__item--offset-${offset}`,
     sm && `coop-l-grid__item--small-${sm}`,
-    smOffset && `coop-l-grid__item--small-${smOffset}`,
+    smOffset && `coop-l-grid__item--small-offset-${smOffset}`,
     md && `coop-l-grid__item--medium-${md}`,
     mdOffset && `coop-l-grid__item--medium-offset-${mdOffset}`,
     lg && `coop-l-grid__item--large-${lg}`,
@@ -34,7 +34,7 @@ const GridItem = ({
   ]);
 
   return (
-    <div className={classes} {...props}>
+    <div className={classes} data-testid="grid-item-test" {...props}>
       {children}
     </div>
   );
