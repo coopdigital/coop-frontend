@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/blockquote",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Co-op Components: Blockquote",
   "main": "dist/index.js",
   "style": "dist/blockquote.css",
@@ -21,7 +21,7 @@
     "directory": "packages/component-blockquote"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.7.2"
+    "@coopdigital/foundations-vars": "^3.8.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4"

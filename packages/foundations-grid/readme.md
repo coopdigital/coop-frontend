@@ -11,3 +11,10 @@ To allow for projects to convert to the new grid system when they can. We have i
   $ yarn add @coopdigital/foundations-grid
   ```
 2. Add CSS module to your application via a most appropriate method. This will entirely depend on your application and how you are currently loading CSS modules within it.
+
+
+## License
+Copyright (c) 2021 Co-operative Group Limited.
+Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
+
+ 

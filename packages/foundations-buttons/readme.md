@@ -37,3 +37,10 @@ We’ve made fixes to the buttons
 Fix hover background colour not passing colour contrast guidelines.
 
 _Previous releases did not have notes_
+
+
+## License
+Copyright (c) 2021 Co-operative Group Limited.
+Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
+
+ 

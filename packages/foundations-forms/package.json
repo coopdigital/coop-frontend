@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-forms",
-  "version": "5.3.2",
+  "version": "5.3.3",
   "description": "CSS Foundations: Forms",
   "main": "dist/forms.css",
   "style": "src/forms.pcss",
@@ -20,8 +20,8 @@
     "directory": "packages/foundations-forms"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^2.5.7",
-    "@coopdigital/foundations-vars": "^3.8.1"
+    "@coopdigital/foundations-buttons": "^2.5.8",
+    "@coopdigital/foundations-vars": "^3.8.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-buttons": ">= 2.5.0 < 3",

@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--link",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "description": "Co-op Shared Component: Link",
   "author": "@coopdigital",
   "contributors": [
@@ -18,9 +18,9 @@
     "directory": "packages/shared-component--link"
   },
   "devDependencies": {
-    "@coopdigital/foundations-typography": "^4.2.6",
-    "@coopdigital/foundations-vars": "^3.8.1",
-    "@coopdigital/shared-component--icon": "^2.1.0"
+    "@coopdigital/foundations-typography": "^4.2.7",
+    "@coopdigital/foundations-vars": "^3.8.2",
+    "@coopdigital/shared-component--icon": "^2.1.1"
   },
   "peerDependencies": {
     "@coopdigital/foundations-typography": ">= 4.2.2 < 5",
@@ -40,6 +40,6 @@
   },
   "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f",
   "dependencies": {
-    "@coopdigital/foundations-colors": "^2.6.5"
+    "@coopdigital/foundations-colors": "^2.6.6"
   }
 }
