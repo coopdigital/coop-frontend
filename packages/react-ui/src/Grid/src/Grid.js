@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "../../utils/classNames";
 
-const Grid = ({ className, center, reverse, children, ...props }) => (
+const Grid = ({ className, center, reverse, children }) => (
   <div
     className={classNames("coop-l-grid", [
       center && "coop-u-flex-center",
       reverse && "coop-u-flex-row-reverse",
       className,
     ])}
-    {...props}
   >
     {children}
   </div>

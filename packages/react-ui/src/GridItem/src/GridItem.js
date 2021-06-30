@@ -16,7 +16,6 @@ const GridItem = ({
   xlgOffset,
   collapse,
   children,
-  ...props
 }) => {
   const classes = classNames("coop-l-grid__item", [
     size && `coop-l-grid__item--${size}`,
@@ -34,7 +33,7 @@ const GridItem = ({
   ]);
 
   return (
-    <div className={classes} data-testid="grid-item-test" {...props}>
+    <div className={classes} data-testid="grid-item-test">
       {children}
     </div>
   );
