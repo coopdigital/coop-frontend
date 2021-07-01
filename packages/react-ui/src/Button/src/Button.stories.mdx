@@ -17,52 +17,114 @@ BasicButton.args = {
 
 # Buttons
 
-Buttons are functional. They should allow a user to complete a task, and tell them what it is going to do with the information they have provided.
+Buttons are interactive elements that people can use to take an action.
+
+[Go to buttons page on the Experience Library](https://pioneer-design-system.herokuapp.com/elements/buttons.html).
+
+## Installation
+Install via NPM:
+```bash
+$ npm install @coopdigital/foundations-buttons --save
+```
 
 ## Usage
 
-Usage guidelines and
+### CSS
+```css
+@import "node_modules/@coopdigital/foundations-colors/dist/buttons.css";
+```
 
-## Default Button Example
+### PostCSS
+```css
+@import "node_modules/@coopdigital/foundations-colors/src/buttons.pcss";
+```
 
-A test cnavas to show the component and it's underlying code.
-A canvas can include stories or just plain components like the one below.
+### PostCSS Import
+```css
+@import "@coopdigital/foundations-buttons";
+```
+
+### React
+TBC
+
+
+## Default button
 
 <Canvas>
   <BasicButton children="Default button" />
 </Canvas>
 
-## Stories for the Button component
+## Button variations
 
-We can keep component stories at the bottom of the documentation pages, for better doc readability.
+### Primary green button
 
-### A default button
+<Story
+  name="Base/Button primary"
+  args={{
+    variant: "primary",
+    children: "Join Co-op for £1", 
+  }}
+>
+  {BasicButton.bind({})}
+</Story>
 
-A default button looks like this....
+```
+<button class="coop-btn coop-btn--primary">Join Co-op for £1</button>
+```
+
+### Secondary blue button
 
 <Story
   name="Base/Button"
   args={{
-    children: "Label",
+    children: "Find this product",
     handleClick: testMyClick,
   }}
 >
   {BasicButton.bind({})}
 </Story>
 
-### A primary button variant
+```
+<button class="coop-btn">Find this product</button>
+```
 
-A primary button example
+### Tertiary grey button
+
+<Button variant="grey coop-btn--grey">Save</Button>
+
+```
+<button class="coop-btn coop-btn--grey">Save</button>
+```
+
+### White button
+
+<div style={{ background: "#812373", display: "block", padding: "1rem" }} >
+    <Button variant="white">Button</Button>
+</div>
+
+```
+<button class="coop-btn coop-btn--white">Save</button>
+```
+
+### Button sizes
+
+Buttons have 3 sizes:
+
+- default, no variant prop required
+- for a small button, add the value `small` to your `variant` prop on the component
 
 <Story
-  name="Base/Button primary"
+  name="Base/Buttons sizes"
   args={{
-    variant: "primary",
     children: "Label",
+    handleClick: testMyClick,
   }}
 >
-  {BasicButton.bind({})}
+  
+  
+  <Button handleClick={testMyClick} size="small">Small</Button>
 </Story>
+
 
 ### All buttons
 
@@ -89,24 +151,7 @@ Here we can look at decorators or something similar to wrap the output in grid, 
   <Button isLoading>Loading</Button>
 </Story>
 
-### Sizes
 
-Buttons have 3 sizes:
-
-- default, no variant prop required
-- `small`, add the value `small` to your `variant` prop on the component
-- `large`, add the value `large` to your `variant` prop on the component
-
-<Story
-  name="Base/Buttons sizes"
-  args={{
-    children: "Label",
-    handleClick: testMyClick,
-  }}
->
-  <Button handleClick={testMyClick}>Default</Button>
-  <Button size="small">Small</Button>
-</Story>
 
 ### Disabled
 
