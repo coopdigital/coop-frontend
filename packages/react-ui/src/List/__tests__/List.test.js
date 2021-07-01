@@ -29,19 +29,23 @@ describe("List", () => {
     const Variants = () => (
       <div>
         <List type="bullet" items={items} />
+        <List type="bullet" bare items={items} />
+        <List type="bullet" inline items={items} />
         <List type="numbered" items={items} />
+        <List type="numbered" bare items={items} />
+        <List type="numbered" inline items={items} />
       </div>
     );
 
-    const { getByText, getByTestId } = render(<Variants />);
+    const { getByText, getByTestId, getAllByTestId } = render(<Variants />);
 
-    expect(getByTestId("list-ul-test")).toBeInTheDocument();
-    expect(getByTestId("list-ol-test")).toBeInTheDocument();
+    const ulListVariants = getAllByTestId("list-ul-test");
+    const olListVariants = getAllByTestId("list-ol-test");
 
-    const ulListItems = getByTestId("list-ul-test").childNodes;
-    const olListItems = getByTestId("list-ol-test").childNodes;
+    expect(ulListVariants[1]).toHaveClass("coop-u-list-bare");
+    expect(ulListVariants[2]).toHaveClass("coop-u-list-inline");
 
-    expect(ulListItems.length).toEqual(items.length);
-    expect(olListItems.length).toEqual(items.length);
+    expect(olListVariants[1]).toHaveClass("coop-u-list-bare");
+    expect(olListVariants[2]).toHaveClass("coop-u-list-inline");
   });
 });
