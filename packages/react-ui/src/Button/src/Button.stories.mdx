@@ -1,8 +1,10 @@
-import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Source } from "@storybook/addon-docs/blocks";
 import Button from "./Button";
 
+import dedent from 'ts-dedent';
+
 export const BasicButton = (args) => (
-  <Button {...args} argTypes={{ onClick: { action: "clicked" } }} />
+  <Button {...args} argtypes={{ onClick: { action: "clicked" } }} />
 );
 function testMyClick(event) {
   console.log("EVENT:: ", event);
@@ -62,9 +64,8 @@ TBC
   </Story>
 </Canvas>
 
-```
-<button class="coop-btn coop-btn--primary">Join Co-op for £1</button>
-```
+<Source name="Base/Button primary"/>
+
 
 ### Secondary blue button
 <Canvas>
@@ -79,18 +80,26 @@ TBC
   </Story>
 </Canvas>
 
-```
-<button class="coop-btn">Find this product</button>
-```
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn">Find this product</button>
+  `}
+/>
+
 
 ### Tertiary grey button
 <Canvas>
-  <Button variant="grey coop-btn--grey">Save</Button>
+  <Button variant="grey">Save</Button>
 </Canvas>
 
-```
-<button class="coop-btn coop-btn--grey">Save</button>
-```
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--grey">Save</button>
+  `}
+/>
+
 
 ### White button
 
@@ -100,9 +109,13 @@ TBC
   </div>
 </Canvas>
 
-```
-<button class="coop-btn coop-btn--white">Save</button>
-```
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--white">White button</button>
+  `}
+/>
+
 
 ### Button sizes
 
@@ -124,18 +137,26 @@ Buttons have 3 sizes:
   </Story>
 </Canvas>
 
-```
-<button class="coop-btn coop-btn--small">Small button</button>
-```
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--small">Small button</button>
+  `}
+/>
+
 
 ### Loading button
 <Canvas>
   <Button isLoading>Loading</Button>
 </Canvas>
 
-```
-<button class="coop-btn coop-btn--loading">Loading button</button>
-```
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--loading">Loading button</button>
+  `}
+/>
+
 
 ## Storybook ArgsTable for this component
 
