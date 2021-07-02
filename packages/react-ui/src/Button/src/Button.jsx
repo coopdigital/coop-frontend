@@ -8,7 +8,6 @@ const Button = ({
   type,
   size,
   disabled,
-  fullWidth,
   isLoading,
   children,
   handleClick,
@@ -16,7 +15,6 @@ const Button = ({
 }) => {
   const classes = classNames("coop-btn", [
     variant && `coop-btn--${variant}`,
-    fullWidth && "coop-btn--full-width",
     isLoading && "coop-btn--loading",
     size === "small" && "coop-btn--small",
   ]);
@@ -38,7 +36,6 @@ Button.defaultProps = {
   type: "button",
   size: "medium",
   disabled: false,
-  fullWidth: false,
   isLoading: false,
   className: null,
   variant: null,
@@ -51,7 +48,6 @@ Button.propTypes = {
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   size: PropTypes.oneOf(["small", "medium"]),
   disabled: PropTypes.bool,
-  fullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   children: PropTypes.node,
   handleClick: PropTypes.func,

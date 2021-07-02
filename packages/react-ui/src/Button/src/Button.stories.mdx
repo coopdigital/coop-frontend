@@ -47,50 +47,46 @@ $ npm install @coopdigital/foundations-buttons --save
 ### React
 TBC
 
-
-## Default button
-
-<Canvas>
-  <BasicButton children="Default button" />
-</Canvas>
-
-## Button variations
+## Button types
 
 ### Primary green button
-
-<Story
-  name="Base/Button primary"
-  args={{
-    variant: "primary",
-    children: "Join Co-op for £1", 
-  }}
->
-  {BasicButton.bind({})}
-</Story>
+<Canvas>
+  <Story
+    name="Base/Button primary"
+    args={{
+      variant: "primary",
+      children: "Join Co-op for £1", 
+    }}
+  >
+    {BasicButton.bind({})}
+  </Story>
+</Canvas>
 
 ```
 <button class="coop-btn coop-btn--primary">Join Co-op for £1</button>
 ```
 
 ### Secondary blue button
-
-<Story
-  name="Base/Button"
-  args={{
-    children: "Find this product",
-    handleClick: testMyClick,
-  }}
->
-  {BasicButton.bind({})}
-</Story>
+<Canvas>
+  <Story
+    name="Base/Button"
+    args={{
+      children: "Find this product",
+      handleClick: testMyClick,
+    }}
+  >
+    {BasicButton.bind({})}
+  </Story>
+</Canvas>
 
 ```
 <button class="coop-btn">Find this product</button>
 ```
 
 ### Tertiary grey button
-
-<Button variant="grey coop-btn--grey">Save</Button>
+<Canvas>
+  <Button variant="grey coop-btn--grey">Save</Button>
+</Canvas>
 
 ```
 <button class="coop-btn coop-btn--grey">Save</button>
@@ -98,9 +94,11 @@ TBC
 
 ### White button
 
-<div style={{ background: "#812373", display: "block", padding: "1rem" }} >
-    <Button variant="white">White button</Button>
-</div>
+<Canvas>
+  <div style={{ background: "#812373", display: "block", padding: "1rem" }} >
+      <Button variant="white">White button</Button>
+  </div>
+</Canvas>
 
 ```
 <button class="coop-btn coop-btn--white">Save</button>
@@ -113,77 +111,31 @@ Buttons have 3 sizes:
 - default, no variant prop required
 - for a small button, add the value `small` to your `variant` prop on the component
 
-<Story
-  name="Base/Buttons sizes"
-  args={{
-    children: "Label",
-    handleClick: testMyClick,
-  }}
->
-  
-  
-  <Button handleClick={testMyClick} size="small">Small button</Button>
-</Story>
+<Canvas>
+  <Story
+    name="Base/Buttons sizes"
+    args={{
+      children: "Label",
+      handleClick: testMyClick,
+    }}
+  >
+    
+    <Button handleClick={testMyClick} size="small">Small button</Button>
+  </Story>
+</Canvas>
 
 ```
 <button class="coop-btn coop-btn--small">Small button</button>
 ```
 
 ### Loading button
-
-<Button isLoading>Loading</Button>
+<Canvas>
+  <Button isLoading>Loading</Button>
+</Canvas>
 
 ```
 <button class="coop-btn coop-btn--loading">Loading button</button>
 ```
-
-### All buttons
-
-All the buttons.
-
-Here we can look at decorators or something similar to wrap the output in grid, or just import grid and do it manually?
-
-<Story
-  name="Base/Buttons all"
-  args={{
-    children: "Label",
-  }}
->
-  <Button>Default</Button>
-  <Button variant="primary">Primary</Button>
-  <div
-    style={{ background: "grey", display: "inline-block", padding: ".25rem" }}
-  >
-    <Button variant="white">White</Button>
-  </div>
-  <Button variant="grey">Grey</Button>
-  <Button size="small">Small</Button>
-  <Button fullWidth>Full width</Button>
-  <Button isLoading>Loading</Button>
-</Story>
-
-
-
-### Disabled
-
-<Story
-  name="Base/Buttons disabled"
-  args={{
-    children: "Label",
-    disabled: true,
-  }}
->
-  <Button disabled>Primary</Button>
-  <Button variant="primary" disabled>
-    Primary
-  </Button>
-  <Button variant="white" disabled>
-    White
-  </Button>
-  <Button variant="grey" disabled>
-    Grey
-  </Button>
-</Story>
 
 ## Storybook ArgsTable for this component
 
