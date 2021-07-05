@@ -1,8 +1,10 @@
-import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { ArgsTable, Meta, Story, Canvas, Source } from "@storybook/addon-docs/blocks";
 import Button from "./Button";
 
+import dedent from 'ts-dedent';
+
 export const BasicButton = (args) => (
-  <Button {...args} argTypes={{ onClick: { action: "clicked" } }} />
+  <Button {...args} argtypes={{ onClick: { action: "clicked" } }} />
 );
 function testMyClick(event) {
   console.log("EVENT:: ", event);
@@ -17,117 +19,144 @@ BasicButton.args = {
 
 # Buttons
 
-Buttons are functional. They should allow a user to complete a task, and tell them what it is going to do with the information they have provided.
+Buttons are interactive elements that people can use to take an action.
+
+[Go to buttons page on the Experience Library](https://pioneer-design-system.herokuapp.com/elements/buttons.html).
+
+## Installation
+Install via NPM:
+```bash
+$ npm install @coopdigital/foundations-buttons --save
+```
 
 ## Usage
 
-Usage guidelines and
+### CSS
+```css
+@import "node_modules/@coopdigital/foundations-colors/dist/buttons.css";
+```
 
-## Default Button Example
+### PostCSS
+```css
+@import "node_modules/@coopdigital/foundations-colors/src/buttons.pcss";
+```
 
-A test cnavas to show the component and it's underlying code.
-A canvas can include stories or just plain components like the one below.
+### PostCSS Import
+```css
+@import "@coopdigital/foundations-buttons";
+```
 
+### React
+TBC
+
+## Button types
+
+### Primary green button
 <Canvas>
-  <BasicButton children="Default button" />
+  <Story
+    name="Base/Button primary"
+    args={{
+      variant: "primary",
+      children: "Join Co-op for £1", 
+    }}
+  >
+    {BasicButton.bind({})}
+  </Story>
 </Canvas>
 
-## Stories for the Button component
+<Source name="Base/Button primary"/>
 
-We can keep component stories at the bottom of the documentation pages, for better doc readability.
 
-### A default button
-
-A default button looks like this....
-
-<Story
-  name="Base/Button"
-  args={{
-    children: "Label",
-    handleClick: testMyClick,
-  }}
->
-  {BasicButton.bind({})}
-</Story>
-
-### A primary button variant
-
-A primary button example
-
-<Story
-  name="Base/Button primary"
-  args={{
-    variant: "primary",
-    children: "Label",
-  }}
->
-  {BasicButton.bind({})}
-</Story>
-
-### All buttons
-
-All the buttons.
-
-Here we can look at decorators or something similar to wrap the output in grid, or just import grid and do it manually?
-
-<Story
-  name="Base/Buttons all"
-  args={{
-    children: "Label",
-  }}
->
-  <Button>Default</Button>
-  <Button variant="primary">Primary</Button>
-  <div
-    style={{ background: "grey", display: "inline-block", padding: ".25rem" }}
+### Secondary blue button
+<Canvas>
+  <Story
+    name="Base/Button"
+    args={{
+      children: "Find this product",
+      handleClick: testMyClick,
+    }}
   >
-    <Button variant="white">White</Button>
-  </div>
-  <Button variant="grey">Grey</Button>
-  <Button size="small">Small</Button>
-  <Button fullWidth>Full width</Button>
-  <Button isLoading>Loading</Button>
-</Story>
+    {BasicButton.bind({})}
+  </Story>
+</Canvas>
 
-### Sizes
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn">Find this product</button>
+  `}
+/>
+
+
+### Tertiary grey button
+<Canvas>
+  <Button variant="grey">Save</Button>
+</Canvas>
+
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--grey">Save</button>
+  `}
+/>
+
+
+### White button
+
+<Canvas>
+  <div style={{ background: "#812373", display: "block", padding: "1rem" }} >
+      <Button variant="white">White button</Button>
+  </div>
+</Canvas>
+
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--white">White button</button>
+  `}
+/>
+
+
+### Button sizes
 
 Buttons have 3 sizes:
 
 - default, no variant prop required
-- `small`, add the value `small` to your `variant` prop on the component
-- `large`, add the value `large` to your `variant` prop on the component
+- for a small button, add the value `small` to your `variant` prop on the component
 
-<Story
-  name="Base/Buttons sizes"
-  args={{
-    children: "Label",
-    handleClick: testMyClick,
-  }}
->
-  <Button handleClick={testMyClick}>Default</Button>
-  <Button size="small">Small</Button>
-</Story>
+<Canvas>
+  <Story
+    name="Base/Buttons sizes"
+    args={{
+      children: "Label",
+      handleClick: testMyClick,
+    }}
+  >
+    
+    <Button handleClick={testMyClick} size="small">Small button</Button>
+  </Story>
+</Canvas>
 
-### Disabled
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--small">Small button</button>
+  `}
+/>
 
-<Story
-  name="Base/Buttons disabled"
-  args={{
-    children: "Label",
-    disabled: true,
-  }}
->
-  <Button disabled>Primary</Button>
-  <Button variant="primary" disabled>
-    Primary
-  </Button>
-  <Button variant="white" disabled>
-    White
-  </Button>
-  <Button variant="grey" disabled>
-    Grey
-  </Button>
-</Story>
+
+### Loading button
+<Canvas>
+  <Button isLoading>Loading</Button>
+</Canvas>
+
+<Source
+  language='html'
+  code={dedent`
+     <button class="coop-btn coop-btn--loading">Loading button</button>
+  `}
+/>
+
 
 ## Storybook ArgsTable for this component
 
