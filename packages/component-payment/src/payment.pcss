@@ -70,3 +70,14 @@
     display: none;
   }
 }
+
+/* Apple pay button - apple button requires height over min-height */
+.wpwl-apple-pay-button {
+  -apple-pay-button-type: buy;
+  -apple-pay-button-style: black;
+  height: 3.25rem; /* 52px / 16 */
+
+  @media (--mq-medium) {
+    height: 3.75rem; /* 60px / 16 */
+  }
+}
