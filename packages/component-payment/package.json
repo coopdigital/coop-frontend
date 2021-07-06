@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-payment",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Co-op payment form component and utilities",
   "main": "dist/index.js",
   "style": "src/payment.pcss",
