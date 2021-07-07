@@ -1,4 +1,7 @@
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import CustomDocumentationComponent from "./CustomSource";
+// import { Canvas } from '../../../.storybook/blocks/Canvas';
+import { SourcePlus } from '../../../.storybook/blocks/SourcePlus';
 
 <!-- import your component -->
 
@@ -31,7 +34,16 @@ export const BaseComponent = (args) => <ComponentExample {...args} />;
   }}
 />
 
-# Example Component
+## Custom Doc Block Here
+<CustomDocumentationComponent/>
+
+## Local `<Source/>` DocBlock
+Note: Renamed the components export from `Source` to `SourcePlus` to test use of doc block from storybook locally within our app.
+Imports from `./storybook/blocks/SourcePlus`.
+
+<SourcePlus name="Yet Another ComponentExample" language="jsx"/>
+
+## Example Component
 
 This package can be used as a starter for new foundations, elements or components.
 
@@ -54,10 +66,10 @@ A canvas can include stories or just plain components like the one below.
 <!-- Canvas -->
 
 <Canvas>
-  <Component
+  <BaseComponent
     heading="A heading"
     content="This is an example Component you can copy from to create your own components"
-  ></Component>
+  ></BaseComponent>
 </Canvas>
 
 ## Stories for the Component component
@@ -83,7 +95,7 @@ Create stories for each state, variant of your component.
     content: `some descriptive text`,
   }}
 >
-  {BaseComponent.bind({})}
+  {args => <ComponentExample {...args} />}
 </Story>
 
 <Story
@@ -93,7 +105,7 @@ Create stories for each state, variant of your component.
     content: `Use this package as a starter for new react component creation.`,
   }}
 >
-  {BaseComponent.bind({})}
+  {args => <ComponentExample {...args} />}
 </Story>
 
 <Story
@@ -103,5 +115,5 @@ Create stories for each state, variant of your component.
     content: "An text block passed from the content prop",
   }}
 >
-  {BaseComponent.bind({})}
+  {args => <ComponentExample {...args} />}
 </Story>
