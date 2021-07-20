@@ -38,4 +38,4 @@ To run storybook locally, run the following commands:
 
 Storybook should now be available at `http://localhost:6006`
 
-**_More details for setting up, running Storybook and creating components can be found [here](https://github.com/coopdigital/coop-frontend/blob/master/packages/react-ui/readme.md)_**
+**_More details for setting up, running Storybook and creating components can be found [here](https://github.com/coopdigital/coop-frontend/blob/master/packages/react-ui/README.md)_**
