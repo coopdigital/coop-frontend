@@ -3,26 +3,10 @@ import CustomDocumentationComponent from "../../../.storybook/blocks/CustomSourc
 // import { Canvas } from '../../../.storybook/blocks/Canvas';
 import { SourcePlus } from '../../../.storybook/blocks/SourcePlus';
 
-import ReactCodeHighlighter  from '../../../.storybook/blocks/ReactCodeHighlighter';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import ReactDOMServer from 'react-dom/server';
-import prettier from 'prettier/standalone';
-import parserHtml from "prettier/parser-html";
-
+import { ReactToHtmlHighlighter }  from '../../../.storybook/blocks/ReactToHtmlHighlighter';
 
 <!-- import your component -->
-
 import ComponentExample from "./ComponentExample";
-export const testComp = <ComponentExample heading="new test heading" content="This is an example Component you can copy from to create your own components"/>
-export const staticMarkup = ReactDOMServer.renderToStaticMarkup(testComp);
-console.log(staticMarkup);
-export const prettyHtml = prettier.format(staticMarkup, { parser: "html", plugins: [parserHtml]});
-console.log(prettyHtml);
-
-<!--  -->
-
 export const BaseComponent = (args) => <ComponentExample {...args} />;
 
 <!-- Meta
@@ -72,12 +56,13 @@ Rename the the pasted directory and its files to the (element|component) you are
 
 Usage guidelines for the blockquote component.
 
-## react syntax highlighter test
-export const myVariable = <ComponentExample heading="This is a heading" />;
+## test ReactCodeHighlighter in docs
+export const myTestComponent = <ComponentExample heading="This is a heading" />;
 
-<SyntaxHighlighter language="xml" styles={dark} >
-  {prettyHtml}
-</SyntaxHighlighter>
+<ReactToHtmlHighlighter>
+  <ComponentExample heading="This is a heading" />
+</ReactToHtmlHighlighter>
+
 
 ## Default Component Example
 
