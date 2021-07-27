@@ -5,6 +5,8 @@ import {
   Canvas,
   Preview
 } from "@storybook/addon-docs/blocks";
+import { HtmlBlock } from "../../../.storybook/coop-blocks/HtmlBlock";
+
 import Alert from "./Alert";
 
 <Meta title="Components/Alert" component={Alert} />
@@ -32,6 +34,15 @@ export const Template = args => <Alert {...args} />;
   </Story>
 </Preview>
 
+### Default HTML
+
+<HtmlBlock>
+  <Alert
+    title="Informational alert with text"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+  />
+</HtmlBlock>
+
 ## With link
 
 <Preview>
@@ -44,9 +55,19 @@ export const Template = args => <Alert {...args} />;
   </Story>
 </Preview>
 
+### HTML
+
+<HtmlBlock>
+  <Alert
+    title="Informational alert with text and link"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+    link="#"
+  />
+</HtmlBlock>
+
 ## Variants
 
-### Informational
+## Informational
 
 <Preview>
   <Story name="Info">
@@ -62,7 +83,21 @@ export const Template = args => <Alert {...args} />;
   </Story>
 </Preview>
 
-### Success
+### HTML
+
+<HtmlBlock>
+  <Alert
+    title="Informational alert with text"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+  />
+  <Alert
+    title="Informational alert with text and link"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+    link="#"
+  />
+</HtmlBlock>
+
+## Success
 
 <Preview>
   <Story name="Success">
@@ -80,7 +115,23 @@ export const Template = args => <Alert {...args} />;
   </Story>
 </Preview>
 
-### Warning
+### HTML
+
+<HtmlBlock>
+  <Alert
+    type="success"
+    title="Success alert with text"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+  />
+  <Alert
+    type="success"
+    title="Success alert with text and link"
+    text="Read more here"
+    link="#"
+  />
+</HtmlBlock>
+
+## Warning
 
 <Preview>
   <Story name="Warning">
@@ -97,7 +148,22 @@ export const Template = args => <Alert {...args} />;
   </Story>
 </Preview>
 
-### Error
+### HTML
+
+<HtmlBlock>
+  <Alert
+    type="warn"
+    title="Warning alert with text"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+  />
+  <Alert
+    type="warn"
+    title="Warning alert with text"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+  />
+</HtmlBlock>
+
+## Error
 
 <Preview>
   <Story name="Error">
@@ -114,3 +180,19 @@ export const Template = args => <Alert {...args} />;
     />
   </Story>
 </Preview>
+
+### HTML
+
+<HtmlBlock>
+  <Alert
+    type="error"
+    title="Error alert with text"
+    text="Use a brief line of text, preferably a single sentence, to provide more information."
+  />
+  <Alert
+    type="error"
+    title="Error alert with text and link"
+    text="Read more here"
+    link="#"
+  />
+</HtmlBlock>
