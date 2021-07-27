@@ -1,7 +1,13 @@
-import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import {
+  Meta,
+  Story,
+  Source,
+  Canvas,
+  Preview
+} from "@storybook/addon-docs/blocks";
 import Alert from "./Alert";
 
-<Meta title="Elements/Alert" component={Alert} />
+<Meta title="Components/Alert" component={Alert} />
 
 # Alert
 
@@ -9,48 +15,102 @@ Here is an alert component in documentation.
 
 ## Usage
 
-With `MDX` we can define a story for `Alert` right in the middle of our Markdown documentation.
+...
 
-## Basic Alert
+## Default Alert
 
-A basic alert looks like this....
+A default informational alert looks like this...
 
-<Story name="Alert/Base">
-  <Alert heading="Alert with no link">Standard message</Alert>
-</Story>
+export const Template = args => <Alert {...args} />;
 
-## All alerts
+<Preview>
+  <Story name="Default">
+    <Alert
+      title="Informational alert with text"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+    />
+  </Story>
+</Preview>
 
-<!-- const link = { href: "#", text: "Example message" }; -->
+## With link
 
-<Story name="Alert/All">
-  <Alert
-    type="info"
-    heading="Info Alert"
-    link={{ href: "#", text: "Info alert text" }}
-  />
-  <Alert
-    type="success"
-    heading="Success Notification Alert"
-    link={{ href: "#", text: "Success text" }}
-  />
-  <Alert
-    type="warn"
-    heading="Warning Alert"
-    link={{ href: "#", text: "Warning alert text" }}
-  />
-  <Alert
-    type="error"
-    heading="Error Alert"
-    link={{ href: "#", text: "Error alert text" }}
-  />
-  <Alert heading="Alert with no link">Standard message</Alert>
-</Story>
+<Preview>
+  <Story name="WithLink">
+    <Alert
+      title="Informational alert with text and link"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+      link="#"
+    />
+  </Story>
+</Preview>
 
-## Playground
+## Variants
 
-<Canvas>
-  <Alert type="info" heading="Info Alert" link="#" />
-  <Alert type="warn" heading="Warning Alert" link="#" />
-  <Alert heading="Alert with no link">Standard message</Alert>
-</Canvas>
+### Informational
+
+<Preview>
+  <Story name="Info">
+    <Alert
+      title="Informational alert with text"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+    />
+    <Alert
+      title="Informational alert with text and link"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+      link="#"
+    />
+  </Story>
+</Preview>
+
+### Success
+
+<Preview>
+  <Story name="Success">
+    <Alert
+      type="success"
+      title="Success alert with text"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+    />
+    <Alert
+      type="success"
+      title="Success alert with text and link"
+      text="Read more here"
+      link="#"
+    />
+  </Story>
+</Preview>
+
+### Warning
+
+<Preview>
+  <Story name="Warning">
+    <Alert
+      type="warn"
+      title="Warning alert with text"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+    />
+    <Alert
+      type="warn"
+      title="Warning alert with text"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+    />
+  </Story>
+</Preview>
+
+### Error
+
+<Preview>
+  <Story name="Error">
+    <Alert
+      type="error"
+      title="Error alert with text"
+      text="Use a brief line of text, preferably a single sentence, to provide more information."
+    />
+    <Alert
+      type="error"
+      title="Error alert with text and link"
+      text="Read more here"
+      link="#"
+    />
+  </Story>
+</Preview>
