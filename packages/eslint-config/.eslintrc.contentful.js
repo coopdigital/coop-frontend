@@ -1,11 +1,6 @@
 module.exports = {
-  extends: [
-    './.eslintrc.base.js',
-  ],
+  extends: ['./index.js'],
   rules: {
-    'func-names': [
-      'error',
-      'never',
-    ],
+    'func-names': ['error', 'never'],
   },
 };
