@@ -1,7 +1,7 @@
 {
   "name": "@coopdigital/eslint-config",
   "version": "1.0.0",
-  "description": "eslint-config for Co-op Digital",
+  "description": "Common ESlint config for Co-op Technology",
   "main": "index.js",
   "author": "Co-op Digital",
   "license": "MIT",
@@ -9,6 +9,7 @@
     "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx": "^0.1.0"
+    "eslint-plugin-jsx": "^0.1.0",
+    "eslint-plugin-react": "^7.24.0"
   }
 }
