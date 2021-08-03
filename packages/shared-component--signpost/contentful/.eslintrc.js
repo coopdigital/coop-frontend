@@ -1,5 +1,3 @@
 module.exports = {
-  extends: [
-    '../../../.eslintrc.contentful.js',
-  ],
+  extends: ['../../eslint-config/.eslintrc.contentful.js'],
 };
