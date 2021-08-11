@@ -2,7 +2,70 @@
 
 @import "@coopdigital/foundations-vars";
 
+.coop-c-tagscard {
+  display: flex;
+  flex: 1;
+  position: relative;  
+}
+
+.coop-c-tagscard__inner {
+  background: var(--color-black);
+  border-radius: var(--ui-border-radius);
+  display: block;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+
+  padding: var(--spacing-32) var(--spacing-16) var(--spacing-16);
+
+  @media (--mq-medium) {
+    padding: var(--spacing-32) var(--spacing-32) var(--spacing-16);
+  }
+
+  @supports (gap: 1rem) with (display: inline-flex) {
+    padding: var(--spacing-32) var(--spacing-16);
+
+    @media (--mq-medium) {
+      padding: var(--spacing-32);
+    }
+  }
+}
+
+.coop-c-tagscard__title {
+  font-weight: 600;
+  line-height: var(--spacing-32);
+  margin: 0;
+  margin-bottom: var(--spacing-16);
+  padding: 0;
+  color: var(--color-white);
+}
+ 
 .coop-c-list-tags {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.coop-c-tag {
+  background: var(--color-grey-light);
+  border-radius: var(--spacing-16);
+  color: var(--color-text);
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: var(--spacing-16);
+  margin-right: var(--spacing-16);
+  padding: 0;
+}
+
+.coop-c-tag__link {
+  display: block;
+  font-size: var(--type-sp-s);
+  font-weight: 500;
+  line-height: var(--spacing-24);
+  padding: var(--spacing-4) var(--spacing-16);
+}
+
+/* .coop-c-list-tags {
   margin-top: 0;
   margin-bottom: var(--spacing-4);
   padding-left: 0;
@@ -85,4 +148,4 @@
     top: 9px;
     width: 28px;
   }
-}
+} */
