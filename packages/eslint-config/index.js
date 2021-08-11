@@ -2,24 +2,29 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
-    node: true
+    node: true,
   },
   extends: [
-    "airbnb-base",
-    "plugin:jest/recommended",
-    "plugin:react/recommended"
+    'airbnb-base',
+    'plugin:jest/recommended',
+    'plugin:react/recommended',
   ],
   parserOptions: {
-    ecmaVersion: 12
+    ecmaVersion: 12,
   },
-  plugins: ["jest"],
+  plugins: ['jest'],
   rules: {
-    "import/extensions": [
-      "error",
-      "always",
+    'import/extensions': [
+      'error',
+      'always',
       {
-        ignorePackages: true
-      }
-    ]
-  }
+        ignorePackages: true,
+      },
+    ],
+  },
+  settings: {
+    react: {
+      version: '16.14',
+    },
+  },
 };
