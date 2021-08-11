@@ -5,6 +5,7 @@
     "packages/foundations-*",
     "packages/css-*",
     "packages/shared-component-*",
+    "packages/config-*",
     "design-system"
   ],
   "version": "independent",
