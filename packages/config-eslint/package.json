@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/config-eslint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common ESlint config for Co-op Technology",
   "main": "index.js",
   "author": "Co-op Digital",
