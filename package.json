@@ -47,7 +47,7 @@
     "postinstall": "lerna clean --yes && lerna bootstrap --hoist",
     "lint": "npm-run-all lint:*",
     "lint:css": "lerna exec --ignore @coopdigital/react-ui --ignore @coopdigital/config-eslint --stream -- 'stylelint 'src/**/*.{css,pcss}' --fix'",
-    "lint:js": "lerna exec --ignore design-system --ignore @coopdigital/config-eslint --stream -- 'eslint src/ contentful/ --ext .cjs,.js,.jsx,.mjs --fix --no-error-on-unmatched-pattern'",
+    "lint:js": "lerna exec --ignore design-system --stream -- 'eslint src/ contentful/ --ext .cjs,.js,.jsx,.mjs --fix --no-error-on-unmatched-pattern'",
     "prebuild": "npm run test",
     "build": "npm-run-all build:*",
     "build:css": "lerna exec --ignore design-system --ignore @coopdigital/react-ui --ignore @coopdigital/config-eslint --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
