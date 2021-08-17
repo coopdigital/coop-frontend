@@ -4,11 +4,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-    'plugin:jest/recommended',
-    'plugin:react/recommended',
-  ],
+  extends: ['airbnb-base', 'plugin:jest/recommended'],
   parserOptions: {
     ecmaVersion: 12,
   },
@@ -21,10 +17,5 @@ module.exports = {
         ignorePackages: true,
       },
     ],
-  },
-  settings: {
-    react: {
-      version: '16',
-    },
   },
 };

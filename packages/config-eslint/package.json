@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/config-eslint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common ESlint config for Co-op Technology",
   "main": "index.js",
   "author": "@coopdigital",
@@ -17,12 +17,20 @@
     "url": "https://github.com/coopdigital/coop-frontend.git",
     "directory": "packages/config-eslint"
   },
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx": "^0.1.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.4.0"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
@@ -32,4 +40,3 @@
     "eslint"
   ]
 }
-
