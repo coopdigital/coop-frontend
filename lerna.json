@@ -9,6 +9,9 @@
     "design-system"
   ],
   "version": "independent",
+  "publishConfig": {
+    "access": "public"
+  },
   "command": {
     "publish": {
       "allowBranch": "master",
