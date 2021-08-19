@@ -38,5 +38,8 @@
   "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/config-eslint",
   "keywords": [
     "eslint"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

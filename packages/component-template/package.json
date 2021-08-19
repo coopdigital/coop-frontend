@@ -32,5 +32,8 @@
   "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template#readme",
   "keywords": [
     "templates"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
