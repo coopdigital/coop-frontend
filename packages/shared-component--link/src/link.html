@@ -8,6 +8,13 @@
 
 		{%- set linkEntry = cms.get_entry(content.data.sys.id) -%}
 
+    {# Set link target, default is _self #}
+    {%- if linkEntry.data.fields.target == 'New tab/window' -%}
+      {%- set linkTarget = '_blank' -%}
+    {%- else -%}
+      {%- set linkTarget = '_self' -%}
+    {%- endif -%}
+
 		{% if config.classNames %}
 			{%- set classNames = config.classNames -%}
 		{% else %}
@@ -94,6 +101,7 @@
 		<a
 			class="{{ classNames }}"
 			href="{{ href }}"
+      target="{{ linkTarget }}"
 			title="{{ linkEntry.fields.title.data }}"
 			data-contenttype="{{ config.contentType }}"
 			data-contentparent="{{ config.contentParent }}"
