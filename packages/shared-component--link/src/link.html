@@ -9,7 +9,7 @@
 		{%- set linkEntry = cms.get_entry(content.data.sys.id) -%}
 
     {# Set link target, default is _self #}
-    {%- if linkEntry.data.fields.target == 'New tab/window' -%}
+    {%- if linkEntry.data.fields.target and linkEntry.data.fields.target == 'New tab/window' -%}
       {%- set linkTarget = '_blank' -%}
     {%- else -%}
       {%- set linkTarget = '_self' -%}
