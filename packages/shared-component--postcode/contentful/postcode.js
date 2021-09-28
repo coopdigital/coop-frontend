@@ -20,8 +20,8 @@ module.exports = function (migration) {
     .required(true)
     .validations([
       {
-        size: { max: 60 },
-        message: 'Text in this field must be less than 60 characters.',
+        size: { max: 70 },
+        message: 'Text in this field must be less than 70 characters.',
       },
     ]);
 
