@@ -8,6 +8,13 @@
 
 		{%- set linkEntry = cms.get_entry(content.data.sys.id) -%}
 
+    {# Set link target, default is _self #}
+    {%- if linkEntry.data.fields.target and linkEntry.data.fields.target == 'New tab/window' -%}
+      {%- set linkTarget = '_blank' -%}
+    {%- else -%}
+      {%- set linkTarget = '_self' -%}
+    {%- endif -%}
+
 		{% if config.classNames %}
 			{%- set classNames = config.classNames -%}
 		{% else %}
@@ -50,13 +57,13 @@
 			{#  If link entry is valid, render link #}
 			{%- if linkEntry.fields.page.data -%}
 
-				{%- set linkTarget = cms.get_entry(linkEntry.fields.page.data.sys.id) -%}
+				{%- set linkField = cms.get_entry(linkEntry.fields.page.data.sys.id) -%}
 
 				{# Append full path if not home page #}
-				{%- if linkTarget.full_url_path == '/' -%}
+				{%- if linkField.full_url_path == '/' -%}
 					{%- set href = tenant_url_path -%}
 				{%- else -%}
-					{%- set href = tenant_url_path + linkTarget.full_url_path -%}
+					{%- set href = tenant_url_path + linkField.full_url_path -%}
 				{%- endif -%}
 
 				{# Strip trailing slash #}
@@ -94,6 +101,7 @@
 		<a
 			class="{{ classNames }}"
 			href="{{ href }}"
+      target="{{ linkTarget }}"
 			title="{{ linkEntry.fields.title.data }}"
 			data-contenttype="{{ config.contentType }}"
 			data-contentparent="{{ config.contentParent }}"
