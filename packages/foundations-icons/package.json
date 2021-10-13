@@ -1,0 +1,25 @@
+{
+  "name": "@coopdigital/foundations-icons",
+  "version": "1.0.0",
+  "description": "Code for generating SVG sprites using svg-sprite and NPM scripts",
+  "main": "index.js",
+  "scripts": {
+    "update-sprite": "svg-sprite -s --symbol-dest dist --symbol-sprite coop-icon-sprite.svg src/icons/*.svg",
+    "serve-sandbox": "python -m SimpleHTTPServer",
+    "update-sprite-with-preview": "svg-sprite -s --symbol-dest dist --symbol-sprite coop-icon-sprite.svg --symbol-example true --symbol-example-dest index.html src/icons/*.svg",
+    "serve-example": "npm run update-sprite-with-preview && cd dist && python -m SimpleHTTPServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Matt Tyas",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "svg-sprite": "^1.5.3"
+  }
+}
