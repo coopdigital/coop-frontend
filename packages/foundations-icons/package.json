@@ -1,12 +1,14 @@
 {
   "name": "@coopdigital/foundations-icons",
   "version": "1.0.0",
-  "description": "Code for generating SVG sprites using svg-sprite and NPM scripts",
+  "description": "Code for generating an SVG sprite from source files using svg-sprite and NPM scripts",
   "main": "dist/icons.css",
   "style": "src/icons.pcss",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/foundations-icons"
   },
   "author": "@coopdigital",
   "contributors": [
@@ -17,12 +19,6 @@
     "dist",
     "src"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/coopdigital/coop-frontend.git",
-    "directory": "packages/foundations-layout"
-  },
   "devDependencies": {
     "svg-sprite": "^1.5.3",
     "@coopdigital/foundations-vars": "^3.8.2"
