@@ -7,3 +7,6 @@ contentful:
         environment:  master
         all_entries: true
         base_path: ./src
+
+plugins:
+  - jekyll-redirect-from

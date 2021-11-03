@@ -5,6 +5,7 @@ gem 'kramdown'
 gem 'kramdown-parser-gfm'
 gem 'scss_lint'
 gem 'contentful_bootstrap'
+gem 'jekyll-redirect-from'
 
 group :jekyll_plugins do
   gem 'jekyll-contentful-data-import'
