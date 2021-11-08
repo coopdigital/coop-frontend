@@ -13,23 +13,3 @@ This repository uses [lerna](https://github.com/lerna/lerna) to automatically ma
 If you publish a new or amended component - create a release for the coop-frontend repo adding release notes to let everyone know what changes you have made and why.
 
 The Slack github integration will let everyone on the #frontend and #designsystem channels know that there has been an update.
-
-## Storybook react-ui package
-
-Storybook allows you to create and update react components within the `./packages/react-ui` directory, using existing css and utility packages.
-
-The Storybook `react-ui` package is for documentation only. The components within the react-ui package are not currently distributed.
-
-The package is ignored by lerna so you will to install dependencies and run storybook within the packages/react-ui directory.
-
-### **How to install, run and deploy the Co-op react storybook**
-
-To run storybook locally, run the following commands:
-
-- `cd packages/react-ui`
-- `npm ci`
-- `npm run storybook`
-
-Storybook should now be available at `http://localhost:6006`
-
-**_More details for setting up, running Storybook and creating components can be found [here](https://github.com/coopdigital/coop-frontend/blob/master/packages/react-ui/README.md)_**
