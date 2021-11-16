@@ -84,22 +84,22 @@ jobs:
           paths:
             - ~/project/design-system/vendor/bundle
 
-  deploy:
-    executor: node
-    steps:
-      - checkout
-      - when:
-            condition: << pipeline.parameters.is-content-update >>
-            steps:
-              - run:
-                  name: Add commit with latest updated entry to force deploy
-                  command: |
-                    echo 'Last updated entry: << pipeline.parameters.entryID >>' >> design-system/last-updated-entry.txt
-                    git add design-system/last-updated-entry.txt
-                    git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
-      - run:
-          name: Deploy to Heroku
-          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git $CIRCLE_BRANCH:master --force
+  # deploy:
+  #   executor: node
+  #   steps:
+  #     - checkout
+  #     - when:
+  #           condition: << pipeline.parameters.is-content-update >>
+  #           steps:
+  #             - run:
+  #                 name: Add commit with latest updated entry to force deploy
+  #                 command: |
+  #                   echo 'Last updated entry: << pipeline.parameters.entryID >>' >> design-system/last-updated-entry.txt
+  #                   git add design-system/last-updated-entry.txt
+  #                   git -c user.name='CircleCI' -c user.email='circle-ci@coop.co.uk' commit -m "Updated Contentful entry: << pipeline.parameters.entryID >>"
+  #     - run:
+  #         name: Deploy to Heroku
+  #         command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git $CIRCLE_BRANCH:master --force
 
 workflows:
   version: 2
@@ -109,7 +109,7 @@ workflows:
       - build_site:
           requires:
             - build_packages
-      - deploy:
-          filters:
-            branches:
-              only: master
+      # - deploy:
+      #     filters:
+      #       branches:
+      #         only: master
