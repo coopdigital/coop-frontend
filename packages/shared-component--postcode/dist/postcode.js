@@ -21,7 +21,7 @@ function submitPostcode(e) {
   } else {
     $('div.coop-c-postcode').classList.add('error');
     var selector = 'coop-c-postcode';
-    var parentElement = '.coop-c-postcode__form';
+    var parentElement = '.coop-c-postcode__inner';
     showError(selector, '<span class="coop-u-red-mid">Please enter a valid postcode format</span> <br /> For example  M4 4BE', parentElement);
   }
 }
