@@ -16,6 +16,9 @@
     "url": "git+https://github.com/coopdigital/coop-frontend.git"
   },
   "author": "@coopdigital",
+  "contributors": [
+    "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
