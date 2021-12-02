@@ -1,0 +1,26 @@
+{
+  "name": "@coopdigital/foundations",
+  "version": "0.0.1",
+  "description": "Our foundations are the base CSS and variables and that we build our products on",
+  "main": "foundations.css",
+  "directories": {
+    "dist": "dist",
+    "doc": "docs"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/coop-frontend.git"
+  },
+  "author": "@coopdigital",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
