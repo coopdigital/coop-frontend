@@ -26,6 +26,7 @@ npm install @coopdigital/foundations
 ### Recommended: Importing everything
 
 ```css
+@import "@coopdigital/foundations/dist/vars/vars.css";
 @import "@coopdigital/foundations/dist/foundations.css";
 ```
 
