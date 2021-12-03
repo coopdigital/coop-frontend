@@ -1,18 +1,16 @@
-/**
- * We process all our .pcss files using the postcss.config.js at the root of
- * the project. However, for this one file we want to actually preserve the
- * variables. Therefore have this local config.
- */
-
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
+/**
+ * We process all our .pcss files using the postcss.config.js at the root of
+ * the project. However, for this folder we want to actually preserve the
+ * custom properties and media so we can distribute them.
+ */
 module.exports = {
   map: {
     inline: false,
   },
   plugins: [
     require('postcss-import'),
-    require('postcss-custom-media'),
     require('postcss-custom-media')({
       preserve: true,
     }),
