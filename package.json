@@ -57,7 +57,8 @@
     "pretest": "npm run lint",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build:foundations": "lerna run --stream --scope @coopdigital/foundations build"
   },
   "dependencies": {
     "@coopdigital/foundations-buttons": "^2.5.7",
