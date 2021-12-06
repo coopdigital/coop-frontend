@@ -1,4 +1,9 @@
-# Co-op design system
+# Deprecation warning
+This website has now been replaced with our new [Experience Library](https://github.com/coopdigital/experience-library). This is now a private repository. If you are a colleage and require access, please contact the project admins.
+
+You can still use the website application locally in order to test changes to packages. We do plan to create a new iteration of a component "workbench" in 2022. So this will be subject to change in the future.
+
+## Co-op design system
 
 The [design system](http://coop.co.uk/designsystem) provides guidance on designing and building digital services for the Co‑op.
 
