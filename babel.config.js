@@ -13,6 +13,7 @@ module.exports = (api) => {
       },
     ],
     '@babel/preset-typescript',
+    '@babel/preset-react',
   ];
 
   const plugins = [
@@ -24,6 +25,7 @@ module.exports = (api) => {
       {
         cjs: '',
         mjs: '',
+        jsx: 'js',
       },
     ],
     ['@babel/plugin-proposal-private-property-in-object', { loose: true }],

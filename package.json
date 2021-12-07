@@ -50,20 +50,29 @@
     "lint:js": "lerna exec --ignore design-system --stream -- 'eslint src/ contentful/ --ext .cjs,.js,.jsx,.mjs --fix --no-error-on-unmatched-pattern'",
     "prebuild": "npm run test",
     "build": "npm-run-all build:*",
-    "build:css": "lerna exec --ignore design-system --ignore @coopdigital/react-ui --ignore @coopdigital/config-eslint --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
+    "build:css": "lerna exec --ignore design-system --ignore @coopdigital/react-ui --ignore @coopdigital/config-eslint --stream -- 'postcss src/**/*.pcss --dir dist/ --ext css'",
     "build:js": "lerna exec --ignore design-system --ignore @coopdigital/react-ui --ignore @coopdigital/config-eslint --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
     "heroku-postbuild": "npm run --prefix design-system build",
     "heroku-cleanup": "npm prune --production",
     "pretest": "npm run lint",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build:component:css": "lerna exec --scope @coopdigital/component-editorial-card 'postcss src/css/*.pcss --dir dist/css --ext css'",
+    "build:component:html": "lerna exec --scope @coopdigital/component-editorial-card 'cp -R ./src/html ./dist'",
+    "build:component:react": "lerna exec --scope @coopdigital/component-editorial-card 'babel src/react --out-dir dist/react --source-maps --config-file ../../babel.config.js'",
+    "build:component:js": "lerna exec --scope @coopdigital/component-editorial-card 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'"
   },
   "dependencies": {
     "@coopdigital/foundations-buttons": "^2.5.7",
     "@coopdigital/foundations-global": "^3.3.3",
     "@coopdigital/foundations-typography": "^4.2.4",
     "@coopdigital/foundations-vars": "^3.8.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "heroku-run-build-script": true
 }

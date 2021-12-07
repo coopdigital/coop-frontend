@@ -1,0 +1,39 @@
+{
+  "name": "@coopdigital/component-editorial-card",
+  "version": "0.0.1",
+  "description": "Co-op Component/React and CSS Package Template",
+  "main": "dist/index.js",
+  "style": "src/component.pcss",
+  "author": "@coopdigital",
+  "contributors": [
+    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",
+    "Dale Hudson <dale.hudson@coop.co.uk> (https://github.com/dalecreativ)"
+  ],
+  "private": true,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/component-template"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^3.8.2"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template#readme",
+  "keywords": [
+    "templates"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
