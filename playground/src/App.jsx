@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import {EditorialCard} from "@coopdigital/component-editorial-card";
 import logo from "./logo.svg";
 import "./App.css";
 

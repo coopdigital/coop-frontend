@@ -11,8 +11,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-require("../css/EditorialCard.css");
-
 var EditorialCard = function EditorialCard(_ref) {
   var title = _ref.title,
       text = _ref.text,
@@ -20,23 +18,21 @@ var EditorialCard = function EditorialCard(_ref) {
       type = _ref.type,
       testId = _ref.testId;
   var tagAttributes = {
-    className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
+    className: "coop",
     role: type === "warn" || type === "error" ? "alert" : "status"
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     "data-testid": testId,
     className: tagAttributes.className,
     role: tagAttributes.role
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "coop-c-editorialcard__inner "
   }, /*#__PURE__*/_react.default.createElement("h3", {
-    className: "coop-c-editorialcard__title coop-c-notification__heading"
+    className: "coop-c-notification__heading"
   }, title), /*#__PURE__*/_react.default.createElement("p", {
     className: "coop-c-notification__p"
   }, link ? /*#__PURE__*/_react.default.createElement("a", {
     href: link,
     className: "coop-c-notification__link"
-  }, text) : text)));
+  }, text) : text));
 };
 
 EditorialCard.defaultProps = {

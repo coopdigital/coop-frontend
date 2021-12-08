@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import '../css/EditorialCard.css';
 
 const EditorialCard = ({ title, text, link, type, testId }) => {
   const tagAttributes = {
-    className: "coop",
+    className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
     role: type === "warn" || type === "error" ? "alert" : "status",
   };
 
@@ -13,16 +14,18 @@ const EditorialCard = ({ title, text, link, type, testId }) => {
       className={tagAttributes.className}
       role={tagAttributes.role}
     >
-      <h3 className="coop-c-notification__heading">{title}</h3>
-      <p className="coop-c-notification__p">
-        {link ? (
-          <a href={link} className="coop-c-notification__link">
-            {text}
-          </a>
-        ) : (
-          text
-        )}
-      </p>
+      <div className="coop-c-editorialcard__inner ">
+        <h3 className="coop-c-editorialcard__title coop-c-notification__heading">{title}</h3>
+        <p className="coop-c-notification__p">
+          {link ? (
+            <a href={link} className="coop-c-notification__link">
+              {text}
+            </a>
+          ) : (
+            text
+          )}
+        </p>
+      </div>
     </div>
   );
 };
