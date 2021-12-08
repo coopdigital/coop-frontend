@@ -1,5 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+var React = require('react');
+var PropTypes = require('prop-types');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 
 /* eslint-disable func-names */
 
@@ -73,17 +78,17 @@ var EditorialCard = function EditorialCard(_ref) {
     className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
     role: type === "warn" || type === "error" ? "alert" : "status"
   };
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default["default"].createElement("div", {
     "data-testid": testId,
     className: tagAttributes.className,
     role: tagAttributes.role
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React__default["default"].createElement("div", {
     className: "coop-c-editorialcard__inner "
-  }, /*#__PURE__*/React.createElement("h3", {
+  }, /*#__PURE__*/React__default["default"].createElement("h3", {
     className: "coop-c-editorialcard__title coop-c-notification__heading"
-  }, title), /*#__PURE__*/React.createElement("p", {
+  }, title), /*#__PURE__*/React__default["default"].createElement("p", {
     className: "coop-c-notification__p"
-  }, link ? /*#__PURE__*/React.createElement("a", {
+  }, link ? /*#__PURE__*/React__default["default"].createElement("a", {
     href: link,
     className: "coop-c-notification__link"
   }, text) : text)));
@@ -93,12 +98,13 @@ EditorialCard.defaultProps = {
   type: "info"
 };
 EditorialCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  link: PropTypes.string,
-  type: PropTypes.oneOf(["info", "warn", "error", "success"]),
-  testId: PropTypes.string
+  title: PropTypes__default["default"].string.isRequired,
+  text: PropTypes__default["default"].string.isRequired,
+  link: PropTypes__default["default"].string,
+  type: PropTypes__default["default"].oneOf(["info", "warn", "error", "success"]),
+  testId: PropTypes__default["default"].string
 };
 
-export { EditorialCard, postcode };
-//# sourceMappingURL=index.js.map
+exports.EditorialCard = EditorialCard;
+exports.postcode = postcode;
+//# sourceMappingURL=index.cjs.map

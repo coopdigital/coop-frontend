@@ -16,4 +16,4 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
   });
 };
 
-module.exports = { $, $$ };
+export { $, $$ };

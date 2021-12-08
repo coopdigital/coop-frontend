@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import '../css/EditorialCard.css';
+// import '../css/EditorialCard.css';
 
 const EditorialCard = ({ title, text, link, type, testId }) => {
   const tagAttributes = {

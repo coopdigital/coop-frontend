@@ -1,5 +1,5 @@
-const { $ } = require('./modules/bling');
-const { validatePostcode, showError } = require('./modules/helpers');
+import { $ } from './modules/bling';
+import { validatePostcode, showError } from './modules/helpers';
 
 function submitPostcode(e) {
   e.preventDefault();
@@ -28,4 +28,4 @@ function postcode(form) {
   form.addEventListener('submit', submitPostcode);
 }
 
-module.exports = postcode;
+export default postcode;

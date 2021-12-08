@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /* eslint-disable func-names */
 
 /* eslint-disable no-multi-assign */
-var $ = document.querySelector.bind(document);
+const $ = document.querySelector.bind(document);
 document.querySelectorAll.bind(document);
 
 Node.prototype.on = window.on = function (name, fn) {
@@ -14,25 +14,25 @@ Node.prototype.on = window.on = function (name, fn) {
 NodeList.prototype.__proto__ = Array.prototype; // eslint-disable-line
 
 NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn) {
-  this.forEach(function (elem) {
+  this.forEach(elem => {
     elem.on(name, fn);
   });
 };
 
 function validatePostcode(getPostcode) {
-  var validator = new RegExp(/\b((?:(?:gir)|(?:[a-pr-uwyz])(?:(?:[0-9](?:[a-hjkpstuw]|[0-9])?)|(?:[a-hk-y][0-9](?:[0-9]|[abehmnprv-y])?)))) ?([0-9][abd-hjlnp-uw-z]{2})\b/i);
-  var valid = validator.test(getPostcode);
+  const validator = new RegExp(/\b((?:(?:gir)|(?:[a-pr-uwyz])(?:(?:[0-9](?:[a-hjkpstuw]|[0-9])?)|(?:[a-hk-y][0-9](?:[0-9]|[abehmnprv-y])?)))) ?([0-9][abd-hjlnp-uw-z]{2})\b/i);
+  const valid = validator.test(getPostcode);
   return valid;
 }
 
 function showError(selector, message, parentElement) {
-  var errorMessageClass = selector + "__error";
-  var $errorMessageSelector = $("." + errorMessageClass);
+  const errorMessageClass = `${selector}__error`;
+  const $errorMessageSelector = $(`.${errorMessageClass}`);
 
   if ($errorMessageSelector) {
     $errorMessageSelector.innerHTML = message;
   } else {
-    var errorMessage = document.createElement('p');
+    const errorMessage = document.createElement('p');
     errorMessage.classList.add(errorMessageClass);
     errorMessage.setAttribute('role', 'alert');
     errorMessage.innerHTML = message;
@@ -42,15 +42,15 @@ function showError(selector, message, parentElement) {
 
 function submitPostcode(e) {
   e.preventDefault();
-  var postcodeInput = $('input#coop-c-postcode__search');
-  var check = validatePostcode(postcodeInput.value);
+  const postcodeInput = $('input#coop-c-postcode__search');
+  const check = validatePostcode(postcodeInput.value);
 
   if (check) {
-    window.location.replace(window.SHOP_URL + "?postcode=" + postcodeInput.value + "&utm_source=" + postcodeInput.dataset.utmSource + "&utm_medium=" + postcodeInput.dataset.utmMedium + "&utm_campaign=" + postcodeInput.dataset.utmCampaign);
+    window.location.replace(`${window.SHOP_URL}?postcode=${postcodeInput.value}&utm_source=${postcodeInput.dataset.utmSource}&utm_medium=${postcodeInput.dataset.utmMedium}&utm_campaign=${postcodeInput.dataset.utmCampaign}`);
   } else {
     $('div.coop-c-postcode').classList.add('error');
-    var selector = 'coop-c-postcode';
-    var parentElement = '.coop-c-postcode__inner';
+    const selector = 'coop-c-postcode';
+    const parentElement = '.coop-c-postcode__inner';
     showError(selector, '<span class="coop-u-red-mid">Please enter a valid postcode format</span> <br /> For example  M4 4BE', parentElement);
   }
 }
@@ -63,13 +63,14 @@ function postcode(form) {
   form.addEventListener('submit', submitPostcode);
 }
 
-var EditorialCard = function EditorialCard(_ref) {
-  var title = _ref.title,
-      text = _ref.text,
-      link = _ref.link,
-      type = _ref.type,
-      testId = _ref.testId;
-  var tagAttributes = {
+const EditorialCard = ({
+  title,
+  text,
+  link,
+  type,
+  testId
+}) => {
+  const tagAttributes = {
     className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
     role: type === "warn" || type === "error" ? "alert" : "status"
   };
@@ -101,4 +102,4 @@ EditorialCard.propTypes = {
 };
 
 export { EditorialCard, postcode };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.modern.js.map

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <EditorialCard />
+      <EditorialCard title="test title" content="test content here."/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
