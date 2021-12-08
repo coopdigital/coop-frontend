@@ -31,6 +31,7 @@ export const setValid = (field, fieldset) => {
   // Mark field as valid
   field.setCustomValidity('');
   field.classList.remove('coop-form__invalid');
+  field.removeAttribute('aria-invalid');
 };
 
 /**
@@ -42,6 +43,7 @@ export const setInvalid = (field, fieldset) => {
 
   // Mark field as invalid
   field.classList.add('coop-form__invalid');
+  field.setAttribute('aria-invalid', true);
 
   // Fill error message, show
   if (message && !fieldset) {
