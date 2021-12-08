@@ -2,11 +2,10 @@
   "name": "@coopdigital/component-editorial-card",
   "version": "0.0.1",
   "description": "Co-op Component/React and CSS Package Template",
-  "type": "module",
   "source": "src/index.mjs",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "style": "src/component.pcss",
+  "style": "dist/EditorialCard.css",
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",

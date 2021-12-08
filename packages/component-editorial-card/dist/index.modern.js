@@ -1,6 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const EditorialCard = ({
+  title,
+  text,
+  link,
+  type,
+  testId
+}) => {
+  const tagAttributes = {
+    className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
+    role: type === "warn" || type === "error" ? "alert" : "status"
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    "data-testid": testId,
+    className: tagAttributes.className,
+    role: tagAttributes.role
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "coop-c-editorialcard__inner "
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "coop-c-editorialcard__title coop-c-notification__heading"
+  }, title), /*#__PURE__*/React.createElement("p", {
+    className: "coop-c-notification__p"
+  }, link ? /*#__PURE__*/React.createElement("a", {
+    href: link,
+    className: "coop-c-notification__link"
+  }, text) : text)));
+};
+
+EditorialCard.defaultProps = {
+  type: "info"
+};
+EditorialCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  type: PropTypes.oneOf(["info", "warn", "error", "success"]),
+  testId: PropTypes.string
+};
+
 /* eslint-disable func-names */
 
 /* eslint-disable no-multi-assign */
@@ -62,44 +100,6 @@ function postcode(form) {
 
   form.addEventListener('submit', submitPostcode);
 }
-
-const EditorialCard = ({
-  title,
-  text,
-  link,
-  type,
-  testId
-}) => {
-  const tagAttributes = {
-    className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
-    role: type === "warn" || type === "error" ? "alert" : "status"
-  };
-  return /*#__PURE__*/React.createElement("div", {
-    "data-testid": testId,
-    className: tagAttributes.className,
-    role: tagAttributes.role
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "coop-c-editorialcard__inner "
-  }, /*#__PURE__*/React.createElement("h3", {
-    className: "coop-c-editorialcard__title coop-c-notification__heading"
-  }, title), /*#__PURE__*/React.createElement("p", {
-    className: "coop-c-notification__p"
-  }, link ? /*#__PURE__*/React.createElement("a", {
-    href: link,
-    className: "coop-c-notification__link"
-  }, text) : text)));
-};
-
-EditorialCard.defaultProps = {
-  type: "info"
-};
-EditorialCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  link: PropTypes.string,
-  type: PropTypes.oneOf(["info", "warn", "error", "success"]),
-  testId: PropTypes.string
-};
 
 export { EditorialCard, postcode };
 //# sourceMappingURL=index.modern.js.map

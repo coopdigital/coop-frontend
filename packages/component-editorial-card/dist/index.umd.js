@@ -8,6 +8,43 @@
   var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
   var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 
+  var EditorialCard = function EditorialCard(_ref) {
+    var title = _ref.title,
+        text = _ref.text,
+        link = _ref.link,
+        type = _ref.type,
+        testId = _ref.testId;
+    var tagAttributes = {
+      className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
+      role: type === "warn" || type === "error" ? "alert" : "status"
+    };
+    return /*#__PURE__*/React__default["default"].createElement("div", {
+      "data-testid": testId,
+      className: tagAttributes.className,
+      role: tagAttributes.role
+    }, /*#__PURE__*/React__default["default"].createElement("div", {
+      className: "coop-c-editorialcard__inner "
+    }, /*#__PURE__*/React__default["default"].createElement("h3", {
+      className: "coop-c-editorialcard__title coop-c-notification__heading"
+    }, title), /*#__PURE__*/React__default["default"].createElement("p", {
+      className: "coop-c-notification__p"
+    }, link ? /*#__PURE__*/React__default["default"].createElement("a", {
+      href: link,
+      className: "coop-c-notification__link"
+    }, text) : text)));
+  };
+
+  EditorialCard.defaultProps = {
+    type: "info"
+  };
+  EditorialCard.propTypes = {
+    title: PropTypes__default["default"].string.isRequired,
+    text: PropTypes__default["default"].string.isRequired,
+    link: PropTypes__default["default"].string,
+    type: PropTypes__default["default"].oneOf(["info", "warn", "error", "success"]),
+    testId: PropTypes__default["default"].string
+  };
+
   /* eslint-disable func-names */
 
   /* eslint-disable no-multi-assign */
@@ -69,43 +106,6 @@
 
     form.addEventListener('submit', submitPostcode);
   }
-
-  var EditorialCard = function EditorialCard(_ref) {
-    var title = _ref.title,
-        text = _ref.text,
-        link = _ref.link,
-        type = _ref.type,
-        testId = _ref.testId;
-    var tagAttributes = {
-      className: "coop coop-c-editorialcard coop-c-editorialcard--horizontal",
-      role: type === "warn" || type === "error" ? "alert" : "status"
-    };
-    return /*#__PURE__*/React__default["default"].createElement("div", {
-      "data-testid": testId,
-      className: tagAttributes.className,
-      role: tagAttributes.role
-    }, /*#__PURE__*/React__default["default"].createElement("div", {
-      className: "coop-c-editorialcard__inner "
-    }, /*#__PURE__*/React__default["default"].createElement("h3", {
-      className: "coop-c-editorialcard__title coop-c-notification__heading"
-    }, title), /*#__PURE__*/React__default["default"].createElement("p", {
-      className: "coop-c-notification__p"
-    }, link ? /*#__PURE__*/React__default["default"].createElement("a", {
-      href: link,
-      className: "coop-c-notification__link"
-    }, text) : text)));
-  };
-
-  EditorialCard.defaultProps = {
-    type: "info"
-  };
-  EditorialCard.propTypes = {
-    title: PropTypes__default["default"].string.isRequired,
-    text: PropTypes__default["default"].string.isRequired,
-    link: PropTypes__default["default"].string,
-    type: PropTypes__default["default"].oneOf(["info", "warn", "error", "success"]),
-    testId: PropTypes__default["default"].string
-  };
 
   exports.EditorialCard = EditorialCard;
   exports.postcode = postcode;

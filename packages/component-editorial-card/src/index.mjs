@@ -1,6 +1,7 @@
-import postcode from './js/submitPostcodeHandler.js';
-import EditorialCard from './react/EditorialCard.jsx';
+/* eslint-disable import/named */
+// import postcode from './js/submitPostcodeHandler.js';
+// import EditorialCard from './react/EditorialCard.jsx';
 
-// eslint-disable-next-line import/prefer-default-export
-// export { default as EditorialCard } from './react/EditorialCard.jsx';
-export { postcode, EditorialCard };
+export { default as EditorialCard } from './react/EditorialCard.jsx';
+export { default as postcode } from './js/submitPostcodeHandler.js';
+// export {postcode, EditorialCard};
