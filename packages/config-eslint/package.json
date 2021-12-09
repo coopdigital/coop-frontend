@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/config-eslint",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Common ESlint config for Co-op Technology",
   "main": "index.js",
   "author": "@coopdigital",
@@ -18,7 +18,7 @@
     "directory": "packages/config-eslint"
   },
   "devDependencies": {
-    "eslint": "^7.29.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.4.0",
