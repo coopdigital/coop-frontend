@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Co-op Component/React and CSS Package Template",
   "source": "src/index.mjs",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "src": "src/index.js",
   "style": "dist/EditorialCard.css",
   "author": "@coopdigital",
   "contributors": [
@@ -21,14 +22,19 @@
     "url": "https://github.com/coopdigital/coop-frontend.git",
     "directory": "packages/component-template"
   },
+  "scripts": {
+    "build": "package-builder",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.8.2"
+    "@coopdigital/foundations-vars": "^3.8.2",
+    "@coopdigital/package-builder": "^1.0.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "prop-types": "^15.5.4",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "prop-types": "^15.5.4"
+    "react-dom": "^16.14.0"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"

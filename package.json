@@ -63,7 +63,8 @@
     "build:component:css": "lerna exec --scope @coopdigital/component-editorial-card 'postcss src/css/*.pcss --dir dist/css --ext css'",
     "build:component:html": "lerna exec --scope @coopdigital/component-editorial-card 'cp -R ./src/html ./dist'",
     "build:component:react": "lerna exec --scope @coopdigital/component-editorial-card 'babel src/react --out-dir dist/react --source-maps --config-file ../../babel.config.js'",
-    "build:component:js": "lerna exec --scope @coopdigital/component-editorial-card 'rm -rf dist && microbundle --compress false --jsx React.createElement'"
+    "build:component:js": "lerna exec --scope @coopdigital/component-editorial-card 'rm -rf dist && microbundle --compress false --jsx React.createElement'",
+    "build:package-test": "lerna run --scope @coopdigital/component-editorial-card build "
   },
   "dependencies": {
     "@coopdigital/foundations-buttons": "^2.5.7",

@@ -1,6 +1,7 @@
 {
   "npmClient": "npm",
   "packages": [
+    "packages/package-builder",
     "packages/component-*",
     "packages/foundations-*",
     "packages/css-*",
