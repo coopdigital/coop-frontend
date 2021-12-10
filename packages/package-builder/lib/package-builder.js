@@ -5,6 +5,7 @@ const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
 const postcss = require('rollup-plugin-postcss');
 const copy = require('rollup-plugin-copy');
+const cleaner = require('rollup-plugin-cleaner');
 
 const currentWorkingPath = process.cwd();
 // Little refactor from where we get the code
@@ -23,6 +24,11 @@ const inputOptions = {
   external: ['react', 'prop-types'],
   plugins: [
     resolve(),
+    cleaner({
+      targets: [
+        './dist/',
+      ],
+    }),
     postcss({
       config: {
         path: '../../postcss.config.js',
@@ -30,7 +36,7 @@ const inputOptions = {
       extensions: ['.pcss', '.css'],
       inject: true,
       modules: false,
-      extract: path.resolve(style),
+      extract: false,
     }),
     babel({
       presets: ['@babel/preset-env', '@babel/preset-react'],
@@ -49,20 +55,18 @@ const inputOptions = {
 };
 const outputOptions = [
   {
-    file: `dist/${fileName}.cjs.js`,
+    file: 'dist/index.cjs.js',
     format: 'cjs',
   },
   {
-    file: `dist/${fileName}.esm.js`,
+    file: 'dist/index.esm.js',
     format: 'esm',
   },
 ];
 
 async function build() {
   // create bundle
-
   const bundle = await rollup.rollup(inputOptions);
-  console.log('BUNDLE::', bundle);
   // loop through the options and write individual bundles
   outputOptions.forEach(async (options) => {
     await bundle.write(options);
