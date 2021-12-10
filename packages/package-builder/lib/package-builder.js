@@ -1,65 +1,72 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-/* eslint-disable import/no-dynamic-require */
-
 const rollup = require('rollup');
 const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
+const postcss = require('rollup-plugin-postcss');
+const copy = require('rollup-plugin-copy');
 
 const currentWorkingPath = process.cwd();
-console.log('currentWorkingPath:: ', currentWorkingPath);
-const srcJSIndex = path.join(currentWorkingPath, 'src/index.mjs');
-console.log('indexSource::: ', srcJSIndex);
+// Little refactor from where we get the code
+const { src, name, style } = require(path.join(currentWorkingPath, 'package.json'));
 
+// build input path using the src
+const inputPath = path.join(currentWorkingPath, src);
 
-const { main, name, style } = require(path.join(currentWorkingPath, 'package.json'));
-// console.log(main, name, style)
-const inputPath = path.join(currentWorkingPath, main);
-
-console.log('inputPath::: ', inputPath );
-
-const newInputPath = path.join(currentWorkingPath, 'src/index.js');
-
-// Little workaround to get package name without scope
-// const fileName = name.replace('@coopdigital/', '');
-
-// const fileName = srcJSIndex.replace('.mjs', '');
-// console.log(fileName);
+// Little hack to just get the file name
+const packageRegEx = /@coopdigital\/component-|@coopdigital\/foundations-/;
+const fileName = name.replace(packageRegEx, '');
 
 // see below for details on the options
 const inputOptions = {
-  input: newInputPath,
+  input: inputPath,
+  external: ['react', 'prop-types'],
   plugins: [
     resolve(),
+    postcss({
+      config: {
+        path: '../../postcss.config.js',
+      },
+      extensions: ['.pcss', '.css'],
+      inject: true,
+      modules: false,
+      extract: path.resolve(style),
+    }),
     babel({
       presets: ['@babel/preset-env', '@babel/preset-react'],
       babelHelpers: 'bundled',
+      exclude: 'node_modules/**',
     }),
+    copy(
+      {
+        targets: [
+          { src: 'src/html/**.html', dest: 'dist/html' },
+          { src: 'src/jinja/**.html', dest: 'dist/jinja' },
+        ],
+      },
+    ),
   ],
 };
-
 const outputOptions = [
   {
-    file: path.join(currentWorkingPath, 'dist/index.cjs.js'),
+    file: `dist/${fileName}.cjs.js`,
     format: 'cjs',
   },
   {
-    file: path.join(currentWorkingPath, 'dist/index.esm.js'),
+    file: `dist/${fileName}.esm.js`,
     format: 'esm',
   },
 ];
 
-async function packageBuilder() {
-  console.log('HELLO FROM packageBuilder');
+async function build() {
   // create bundle
+
   const bundle = await rollup.rollup(inputOptions);
-  console.log('BUNDLE:: ', bundle);
+  console.log('BUNDLE::', bundle);
   // loop through the options and write individual bundles
   outputOptions.forEach(async (options) => {
-    console.log('options::', options);
     await bundle.write(options);
   });
 }
 
-packageBuilder();
+build();
