@@ -2,10 +2,11 @@
   "name": "@coopdigital/component-editorial-card",
   "version": "0.0.1",
   "description": "Co-op Component/React and CSS Package Template",
-  "source": "src/index.mjs",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "src": "src/index.js",
+  "source": "src/index.mjs",
+  "src": "src/index.mjs",
+  "styleSrc": "src/css/EditorialCard.pcss",
   "style": "dist/EditorialCard.css",
   "author": "@coopdigital",
   "contributors": [
@@ -23,7 +24,7 @@
     "directory": "packages/component-template"
   },
   "scripts": {
-    "build": "package-builder",
+    "build:rollup": "package-builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {
