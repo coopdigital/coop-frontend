@@ -6,14 +6,14 @@ We use foundations to help create our elements and components. When we keep our 
 
 ## Structure and contents
 
-The foundations are split into the following domains:
+The foundations are a mix of baseline CSS styles, fonts, custom properties and utility classes. We have split them into the following categories:
 
-- [Base]()
-- [Colors]()
-- [Layout]()
-- [Spacing]()
-- [Typography]()
-- [Ui]()
+- Base
+- Colors
+- Layout
+- Spacing
+- Typography
+- UI
 
 ## Usage
 
@@ -72,4 +72,4 @@ If you only require partials of the foundations you can use the imports below. M
 
 ## Migration from css-foundations to foundations
 
-If you want to migrate from
+[See our migration guide here](./docs/migration.md)
