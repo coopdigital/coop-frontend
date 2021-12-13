@@ -2,6 +2,7 @@
   "npmClient": "npm",
   "packages": [
     "packages/component-*",
+    "packages/foundations",
     "packages/foundations-*",
     "packages/css-*",
     "packages/shared-component-*",

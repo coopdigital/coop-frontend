@@ -1,0 +1,35 @@
+@import "../vars/breakpoints.pcss";
+@import "../vars/typography.pcss";
+@import "../vars/colors.pcss";
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--type-body-s);
+  line-height: var(--type-line-height);
+
+  @media (--mq-medium) {
+    font-size: var(--type-body-l);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
