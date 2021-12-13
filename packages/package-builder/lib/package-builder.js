@@ -16,7 +16,7 @@ const inputPath = path.join(currentWorkingPath, src);
 
 // Little hack to just get the file name
 const packageRegEx = /@coopdigital\/component-|@coopdigital\/foundations-/;
-const fileName = name.replace(packageRegEx, '');
+// const fileName = name.replace(packageRegEx, '');
 
 // see below for details on the options
 const inputOptions = {
@@ -34,9 +34,9 @@ const inputOptions = {
         path: '../../postcss.config.js',
       },
       extensions: ['.pcss', '.css'],
-      inject: true,
+      inject: false,
       modules: false,
-      extract: false,
+      extract: path.resolve(style),
     }),
     babel({
       presets: ['@babel/preset-env', '@babel/preset-react'],
@@ -53,6 +53,7 @@ const inputOptions = {
     ),
   ],
 };
+
 const outputOptions = [
   {
     file: 'dist/index.cjs.js',
