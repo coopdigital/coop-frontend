@@ -7,7 +7,7 @@
   "source": "src/index.mjs",
   "src": "src/index.mjs",
   "styleSrc": "src/css/EditorialCard.pcss",
-  "style": "dist/EditorialCard.css",
+  "style": "dist/css/editorialCard.css",
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",
