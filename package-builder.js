@@ -33,6 +33,7 @@ const inputOptions = {
       config: {
         path: '../../postcss.config.js',
       },
+      sourceMap: true,
       extensions: ['.pcss', '.css'],
       inject: false,
       modules: false,
