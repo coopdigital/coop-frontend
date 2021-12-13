@@ -24,7 +24,6 @@
     "directory": "packages/component-template"
   },
   "scripts": {
-    "build:rollup": "package-builder",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {
