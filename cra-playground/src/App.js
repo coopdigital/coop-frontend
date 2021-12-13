@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import {EditorialCard} from '@coopdigital/component-editorial-card';
+import {EditorialCard} from './EditorialCard.jsx';
+
 
 function App() {
   return (
