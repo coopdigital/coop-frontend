@@ -1,49 +1,10 @@
-> **DEPRECATED ⚠️ - This repository has been deprecated in favour of the new [Co-op Front-end repository](https://github.com/coopdigital/coop-frontend). Please use this new repo to manage code or raise an issues.**
+# Deprecation warning
 
-# CSS Foundations: Layout
-Utilities helpful in composing layouts using CSS Foundations.
+The code within this package has now been moved into our new @coopdigital/foundations package.
 
-## Installation
-Install via `npm` or Yarn:
-```bash
-$ npm install @coopdigital/foundations-layout --save
-# OR
-$ yarn add @coopdigital/foundations-layout
-```
+Please see the new package in Github for migration documentation
 
-## Usage
-You can include `foundations-layout` in your project by referencing it from your existing CSS via `@import` statement, i.e.:
-```css
-@import "node_modules/@coopdigital/foundations-layout/dist/layout.css";
-```
+- [Github](https://github.com/coopdigital/coop-frontend/tree/master/packages/foundations)
+- [NPM](https://www.npmjs.com/package/@coopdigital/foundations)
 
-If you use PostCSS in your build pipeline, you can reference the sources directly like so:
-```css
-@import "node_modules/@coopdigital/foundations-layout/src/layout.pcss";
-```
-
-If you use a `postcss-import` plugin, it gets even easier:
-```css
-@import "@coopdigital/foundations-layout";
-```
-
-## Examples
-Here's a bunch of examples, showing how you can integrate this CSS module in your project, based on most popular stacks of project. You can either use a post-processed and pre-built CSS form the `dist` directory, ot use PostCSS sources from the `src` dir.
-
-The latter have certain dependencies, which should be consumed by your frontend toolkit to postprocess the CSS correctly.
-
-### Vue.js
-TBD
-
-### React.js
-TBD
-
-## Development
-TBD
-
-
-## License
-Copyright (c) 2021 Co-operative Group Limited.
-Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
-
- 
+For more information on why this has changed please see the [discussion in Github](https://github.com/coopdigital/coop-frontend/discussions/444). Or for more context, contact [Michael Chadwick](michael.chadwick@coop.co.uk).

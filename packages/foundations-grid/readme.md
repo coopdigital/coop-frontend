@@ -1,20 +1,10 @@
-# Co-op Foundations: Grid
-Styles for a simple but flexible grid system powered by CSS Flexbox.
+# Deprecation warning
 
-## Legacy Grid system
-To allow for projects to convert to the new grid system when they can. We have included the legacy grid system as a seperate CSS file. So you can still install this module as a dependency and include the legacy CSS file in your project instead of the new. When you are ready to migrate then you will just simply swap the file path to the new CSS grid system.
+The code within this package has now been moved into our new @coopdigital/foundations package.
 
-## How to use
-1. Install via `npm` or Yarn:
-  ```bash
-  $ npm install @coopdigital/foundations-grid --save
-  $ yarn add @coopdigital/foundations-grid
-  ```
-2. Add CSS module to your application via a most appropriate method. This will entirely depend on your application and how you are currently loading CSS modules within it.
+Please see the new package in Github for migration documentation
 
+- [Github](https://github.com/coopdigital/coop-frontend/tree/master/packages/foundations)
+- [NPM](https://www.npmjs.com/package/@coopdigital/foundations)
 
-## License
-Copyright (c) 2021 Co-operative Group Limited.
-Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
-
- 
+For more information on why this has changed please see the [discussion in Github](https://github.com/coopdigital/coop-frontend/discussions/444). Or for more context, contact [Michael Chadwick](michael.chadwick@coop.co.uk).
