@@ -64,7 +64,10 @@
     "build:component:html": "lerna exec --scope @coopdigital/component-editorial-card 'cp -R ./src/html ./dist'",
     "build:component:react": "lerna exec --scope @coopdigital/component-editorial-card 'babel src/react --out-dir dist/react --source-maps --config-file ../../babel.config.js'",
     "build:component:js": "lerna exec --scope @coopdigital/component-editorial-card 'rm -rf dist && microbundle --compress false --jsx React.createElement'",
-    "build:rollup-test": "lerna exec --scope @coopdigital/component-editorial-card '../../package-builder.js'"
+    "build:package-test": "lerna run --scope @coopdigital/component-editorial-card build:rollup",
+    "build:rollup-css": "lerna exec --scope @coopdigital/component-editorial-card '../../cssBuilder.js'",
+    "build:rollup-js": "lerna exec --scope @coopdigital/component-editorial-card '../../package-builder.js'",
+    "build:rollup-all": "run-s build:rollup-css build:rollup-js"
   },
   "dependencies": {
     "@coopdigital/foundations-buttons": "^2.5.7",
@@ -76,7 +79,8 @@
     "rollup": "^2.61.1",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-postcss": "^4.0.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-rename": "^1.0.1"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",

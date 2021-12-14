@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './css/editorialCard.css';
 
 var EditorialCard = function EditorialCard(_ref) {
   var title = _ref.title,

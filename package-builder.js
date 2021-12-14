@@ -3,11 +3,12 @@ const rollup = require('rollup');
 const path = require('path');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const babel = require('@rollup/plugin-babel').default;
-const postcss = require('rollup-plugin-postcss');
 const copy = require('rollup-plugin-copy');
 const cleaner = require('rollup-plugin-cleaner');
+const rename = require('rollup-plugin-rename').default;
 
 const currentWorkingPath = process.cwd();
+
 // Little refactor from where we get the code
 const { src, name, style } = require(path.join(currentWorkingPath, 'package.json'));
 
@@ -16,28 +17,19 @@ const inputPath = path.join(currentWorkingPath, src);
 
 // Little hack to just get the file name
 const packageRegEx = /@coopdigital\/component-|@coopdigital\/foundations-/;
-// const fileName = name.replace(packageRegEx, '');
 
 // see below for details on the options
-const inputOptions = {
+const inputOptionsJS = {
   input: inputPath,
-  external: ['react', 'prop-types'],
+  external: ['react', 'prop-types', /\.pcss$/],
   plugins: [
-    resolve(),
+    resolve({
+      extensions: ['.mjs', '.js', '.jsx', '.json', '.pcss', '.css'],
+    }),
     cleaner({
       targets: [
-        './dist/',
+        './dist/index.[cjs,mjs].js',
       ],
-    }),
-    postcss({
-      config: {
-        path: '../../postcss.config.js',
-      },
-      sourceMap: true,
-      extensions: ['.pcss', '.css'],
-      inject: false,
-      modules: false,
-      extract: path.resolve(style),
     }),
     babel({
       presets: ['@babel/preset-env', '@babel/preset-react'],
@@ -59,16 +51,27 @@ const outputOptions = [
   {
     file: 'dist/index.cjs.js',
     format: 'cjs',
+    plugins: [
+      rename({
+        map: (name) => name.replace('.pcss', '.css'),
+      }),
+    ],
   },
   {
     file: 'dist/index.esm.js',
     format: 'esm',
+    plugins: [
+      rename({
+        map: (name) => name.replace('.pcss', '.css'),
+      }),
+    ],
   },
 ];
 
 async function build() {
   // create bundle
-  const bundle = await rollup.rollup(inputOptions);
+  const bundle = await rollup.rollup(inputOptionsJS);
+
   // loop through the options and write individual bundles
   outputOptions.forEach(async (options) => {
     await bundle.write(options);
