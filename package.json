@@ -67,7 +67,8 @@
     "build:package-test": "lerna run --scope @coopdigital/component-editorial-card build:rollup",
     "build:rollup-css": "lerna exec --scope @coopdigital/component-editorial-card '../../cssBuilder.js'",
     "build:rollup-js": "lerna exec --scope @coopdigital/component-editorial-card '../../package-builder.js'",
-    "build:rollup-all": "run-s build:rollup-css build:rollup-js"
+    "build:rollup-all": "run-s build:rollup-css build:rollup-js",
+    "build:rollup-config": "lerna exec --scope @coopdigital/component-editorial-card-test 'rollup --config ../../rollup.config.js'"
   },
   "dependencies": {
     "@coopdigital/foundations-buttons": "^2.5.7",
