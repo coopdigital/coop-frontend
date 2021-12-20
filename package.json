@@ -27,6 +27,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-react": "^7.24.0",
+    "glob": "^7.2.0",
     "jest": "^26.6.3",
     "lerna": "^4.0.0",
     "microbundle": "^0.14.2",
@@ -39,6 +40,7 @@
     "postcss-import": "^14.0.2",
     "postcss-nesting": "^8.0.1",
     "prettier": "^2.2.0",
+    "rollup-plugin-html-entry": "^0.3.0",
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-prettier": "^1.2.0",
@@ -68,7 +70,7 @@
     "build:rollup-css": "lerna exec --scope @coopdigital/component-editorial-card '../../cssBuilder.js'",
     "build:rollup-js": "lerna exec --scope @coopdigital/component-editorial-card '../../package-builder.js'",
     "build:rollup-all": "run-s build:rollup-css build:rollup-js",
-    "build:rollup-config": "lerna exec --scope @coopdigital/component-editorial-card-test 'rollup --config ../../rollup.config.js'"
+    "build:rollup-config": "lerna exec --scope @coopdigital/component-editorial-card 'rollup --config ../../rollup.config.js'"
   },
   "dependencies": {
     "@coopdigital/foundations-buttons": "^2.5.7",
