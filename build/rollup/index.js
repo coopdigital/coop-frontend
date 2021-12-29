@@ -6,8 +6,7 @@ export default function build() {
   const packageDirectory = process.cwd();
   const packageJsonContents = getPackageContents(packageDirectory);
 
-  if (!packageJsonContents) {
-    console.log('Error in finding or parsing the package.json of the package');
+  if (packageJsonContents === null) {
     return [];
   }
 
