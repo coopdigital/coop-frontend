@@ -2,8 +2,12 @@
   "name": "@coopdigital/component-template",
   "version": "1.2.0",
   "description": "Co-op Component/React and CSS Package Template",
-  "main": "dist/index.js",
-  "style": "src/component.pcss",
+  "main": "dist/react/index.js",
+  "style": "dist/css/component.css",
+  "sources": {
+    "styles": "src/component.pcss",
+    "react": "src/react/index.js"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",

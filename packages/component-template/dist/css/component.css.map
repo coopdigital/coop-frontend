@@ -1,0 +1,1 @@
+{"version":3,"sources":["component.pcss"],"names":[],"mappings":"AAAA,kBACE,WAAY,CACZ,YAAa,CACb,gBACF","file":"component.css","sourcesContent":[".coop-c-component {\n  width: 100px;\n  height: 100px;\n  background: green;\n}\n"]}
