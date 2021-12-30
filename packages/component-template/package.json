@@ -2,11 +2,12 @@
   "name": "@coopdigital/component-template",
   "version": "1.2.0",
   "description": "Co-op Component/React and CSS Package Template",
-  "main": "dist/react/index.js",
-  "style": "dist/css/component.css",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "style": "dist/styles.css",
   "sources": {
-    "styles": "src/component.pcss",
-    "react": "src/react/index.js"
+    "style": "src/component.pcss",
+    "main": "src/index.js"
   },
   "author": "@coopdigital",
   "contributors": [

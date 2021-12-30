@@ -10,8 +10,13 @@ var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
 var Component = function Component() {
   return /*#__PURE__*/React__default["default"].createElement("div", {
-    class: "coop-c-component"
+    className: "coop-c-component"
   }, "Example HTML");
 };
 
+var supportingFunction = function supportingFunction() {
+  console.log('Kaboom');
+};
+
 exports.Component = Component;
+exports.supportingFunction = supportingFunction;
