@@ -4,14 +4,13 @@ import resolve from '@rollup/plugin-node-resolve';
 import path from 'path';
 import cleaner from 'rollup-plugin-cleaner';
 import copy from 'rollup-plugin-copy';
-import rename from 'rollup-plugin-rename';
 
-export default function reactBuild(packageDirectory, packageContents) {
-  const { sources } = packageContents;
+export default function componentBuild(packageDirectory, packageContents) {
+  const { main, module, sources } = packageContents;
 
-  if (sources.react === undefined) return undefined;
+  if (sources.main === undefined) return undefined;
 
-  const input = path.join(packageDirectory, sources.react);
+  const input = path.join(packageDirectory, sources.main);
   return {
     input,
     external: ['react', 'prop-types', /\.pcss$/],
@@ -20,7 +19,7 @@ export default function reactBuild(packageDirectory, packageContents) {
         extensions: ['.mjs', '.js', '.jsx'],
       }),
       cleaner({
-        targets: ['./dist/react/', './dist/jinja'],
+        targets: ['./dist/**.js', './dist/jinja', './dist/html'],
       }),
       babel({
         presets: ['@babel/preset-env', '@babel/preset-react'],
@@ -29,29 +28,19 @@ export default function reactBuild(packageDirectory, packageContents) {
       }),
       copy({
         targets: [
-          { src: 'src/html/**.html', dest: 'dist/html' },
+          { src: 'src/html/**/*.html', dest: 'dist/html' },
           { src: 'src/jinja/**.html', dest: 'dist/jinja' },
         ],
       }),
     ],
     output: [
       {
-        file: 'dist/react/index.cjs.js',
+        file: path.resolve(main),
         format: 'cjs',
-        plugins: [
-          rename({
-            map: (name) => name.replace('.pcss', '.css'),
-          }),
-        ],
       },
       {
-        file: 'dist/react/index.esm.js',
+        file: path.resolve(module),
         format: 'esm',
-        plugins: [
-          rename({
-            map: (name) => name.replace('.pcss', '.css'),
-          }),
-        ],
       },
     ],
   };

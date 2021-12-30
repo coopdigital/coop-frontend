@@ -6,9 +6,9 @@ import postcss from 'rollup-plugin-postcss';
 export default function cssBuild(packageDirectory, packageContents) {
   const { sources, style } = packageContents;
 
-  if (sources.styles === undefined || style === undefined) return undefined;
+  if (sources.style === undefined || style === undefined) return undefined;
 
-  const input = path.join(packageDirectory, sources.styles);
+  const input = path.join(packageDirectory, sources.style);
   const output = path.join(packageDirectory, style);
 
   return {

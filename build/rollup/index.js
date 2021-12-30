@@ -1,4 +1,4 @@
-import reactBuild from './reactBuild.js';
+import componentBuild from './componentBuild.js';
 import cssBuild from './cssBuild.js';
 import getPackageContents from './getPackageContents.js';
 
@@ -11,10 +11,10 @@ export default function build() {
   }
 
   const buildConfig = [];
-  const reactConfig = reactBuild(packageDirectory, packageJsonContents);
+  const componentConfig = componentBuild(packageDirectory, packageJsonContents);
   const cssConfig = cssBuild(packageDirectory, packageJsonContents);
 
-  if (reactConfig) buildConfig.push(reactConfig);
+  if (componentConfig) buildConfig.push(componentConfig);
   if (cssConfig) buildConfig.push(cssConfig);
 
   return buildConfig;
