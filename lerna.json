@@ -6,17 +6,13 @@
     "packages/foundations-*",
     "packages/css-*",
     "packages/shared-component-*",
-    "packages/config-*",
-    "design-system"
+    "packages/config-*"
   ],
   "version": "independent",
   "command": {
     "publish": {
       "allowBranch": "master",
       "ignoreChanges": ["*.md"]
-    },
-    "bootstrap": {
-      "ignore": ["@coopdigital/react-ui"]
     }
   }
 }
