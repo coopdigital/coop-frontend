@@ -6,7 +6,7 @@ require("core-js/modules/es.regexp.exec.js");
 
 require("core-js/modules/es.regexp.to-string.js");
 
-var _require = require('./bling'),
+var _require = require('./bling.js'),
     $ = _require.$;
 
 function validatePostcode(getPostcode) {

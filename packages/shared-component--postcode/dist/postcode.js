@@ -4,10 +4,10 @@ require("core-js/modules/es.regexp.exec.js");
 
 require("core-js/modules/es.string.replace.js");
 
-var _require = require('./modules/bling'),
+var _require = require('./modules/bling.js'),
     $ = _require.$;
 
-var _require2 = require('./modules/helpers'),
+var _require2 = require('./modules/helpers.js'),
     validatePostcode = _require2.validatePostcode,
     showError = _require2.showError;
 
