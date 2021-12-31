@@ -4,10 +4,7 @@
 
 import fs from 'fs';
 
-import {
-  validate,
-  validateGroup,
-} from '../../src/validation/index.mjs';
+import { validate, validateGroup } from '../../src/validation/index.mjs';
 
 const { readFile } = fs.promises;
 
@@ -18,7 +15,9 @@ describe('Form validation (automatic)', () => {
       let input;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/text.html');
+        document.body.innerHTML = await readFile(
+          './packages/foundations-forms/src/examples/text.html'
+        );
         error = document.getElementById('full-name-1-error');
         input = document.getElementById('full-name-1');
       });
@@ -32,6 +31,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(input.classList).toContain('coop-form__invalid');
+        expect(input.hasAttribute('aria-invalid')).toBe(true);
         expect(error.textContent).toBe('Enter your example field');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -46,6 +46,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(input.classList).toContain('coop-form__invalid');
+        expect(input.hasAttribute('aria-invalid')).toBe(true);
         expect(error.textContent).toBe('Enter a valid example field');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -60,6 +61,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(input.classList).not.toContain('coop-form__invalid');
+        expect(input.hasAttribute('aria-invalid')).toBe(false);
         expect(error.textContent).toBe('');
         expect(error.hasAttribute('hidden')).toBe(true);
       });
@@ -70,7 +72,9 @@ describe('Form validation (automatic)', () => {
       let textarea;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/textarea.html');
+        document.body.innerHTML = await readFile(
+          './packages/foundations-forms/src/examples/textarea.html'
+        );
         error = document.getElementById('feedback-1-error');
         textarea = document.getElementById('feedback-1');
       });
@@ -84,6 +88,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(textarea.classList).toContain('coop-form__invalid');
+        expect(textarea.hasAttribute('aria-invalid')).toBe(true);
         expect(error.textContent).toBe('Enter your example field');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -97,6 +102,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(textarea.classList).not.toContain('coop-form__invalid');
+        expect(textarea.hasAttribute('aria-invalid')).toBe(false);
         expect(error.textContent).toBe('');
         expect(error.hasAttribute('hidden')).toBe(true);
       });
@@ -107,7 +113,9 @@ describe('Form validation (automatic)', () => {
       let select;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/selects.html');
+        document.body.innerHTML = await readFile(
+          './packages/foundations-forms/src/examples/selects.html'
+        );
         error = document.getElementById('sort-by-1-error');
         select = document.getElementById('sort-by-1');
         select.selectedIndex = 0; // "Please select"
@@ -119,6 +127,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(select.classList).toContain('coop-form__invalid');
+        expect(select.hasAttribute('aria-invalid')).toBe(true);
         expect(error.textContent).toBe('Enter your example field');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -131,6 +140,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(select.classList).toContain('coop-form__invalid');
+        expect(select.hasAttribute('aria-invalid')).toBe(true);
         expect(error.textContent).toBe('Enter your example field');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -143,6 +153,7 @@ describe('Form validation (automatic)', () => {
         });
 
         expect(select.classList).not.toContain('coop-form__invalid');
+        expect(select.hasAttribute('aria-invalid')).toBe(false);
         expect(error.textContent).toBe('');
         expect(error.hasAttribute('hidden')).toBe(true);
       });
@@ -157,13 +168,16 @@ describe('Form validation (automatic)', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/checkboxes-hint.html');
+        document.body.innerHTML = await readFile(
+          './packages/foundations-forms/src/examples/checkboxes-hint.html'
+        );
         fieldset = document.querySelector('fieldset');
         error = document.getElementById('checkbox-2-error');
         checkboxes = document.querySelectorAll('[type="checkbox"]');
 
-        fieldMap = new Map(Array.from(checkboxes)
-          .map((checkbox) => [checkbox]));
+        fieldMap = new Map(
+          Array.from(checkboxes).map((checkbox) => [checkbox])
+        );
       });
 
       test('Marks up field group as required', () => {
@@ -171,7 +185,9 @@ describe('Form validation (automatic)', () => {
           required: 'Select options owned by you',
         });
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('checkbox-2-hint checkbox-2-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'checkbox-2-hint checkbox-2-error'
+        );
         expect(error.textContent).toBe('Select options owned by you');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -184,13 +200,14 @@ describe('Form validation (automatic)', () => {
       let fieldMap;
 
       beforeEach(async () => {
-        document.body.innerHTML = await readFile('./packages/foundations-forms/src/examples/radios-hint.html');
+        document.body.innerHTML = await readFile(
+          './packages/foundations-forms/src/examples/radios-hint.html'
+        );
         fieldset = document.querySelector('fieldset');
         error = document.getElementById('radio-2-error');
         radios = document.querySelectorAll('[type="radio"]');
 
-        fieldMap = new Map(Array.from(radios)
-          .map((checkbox) => [checkbox]));
+        fieldMap = new Map(Array.from(radios).map((checkbox) => [checkbox]));
       });
 
       test('Marks up field group as required', () => {
@@ -198,7 +215,9 @@ describe('Form validation (automatic)', () => {
           required: 'Select type of delivery',
         });
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('radio-2-hint radio-2-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'radio-2-hint radio-2-error'
+        );
         expect(error.textContent).toBe('Select type of delivery');
         expect(error.hasAttribute('hidden')).toBe(false);
       });

@@ -57,6 +57,7 @@ var setValid = function setValid(field, fieldset) {
 
   field.setCustomValidity('');
   field.classList.remove('coop-form__invalid');
+  field.removeAttribute('aria-invalid');
 };
 /**
  * Mark up form field as invalid
@@ -69,7 +70,8 @@ var setInvalid = function setInvalid(field, fieldset) {
   var messageId = field.id + "-error";
   var message = document.getElementById(messageId); // Mark field as invalid
 
-  field.classList.add('coop-form__invalid'); // Fill error message, show
+  field.classList.add('coop-form__invalid');
+  field.setAttribute('aria-invalid', true); // Fill error message, show
 
   if (message && !fieldset) {
     message.innerHTML = field.validationMessage;
