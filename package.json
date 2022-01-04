@@ -53,10 +53,10 @@
     "test": "jest --coverage",
     "prebuild": "npm run test",
     "build": "npm-run-all build:*",
-    "build:css": "lerna exec --ignore @coopdigital/config-eslint --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
-    "build:js": "lerna exec --ignore @coopdigital/config-eslint --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
+    "build:css": "lerna exec --scope @coopdigital/foundations-* --scope @coopdigital/shared-component-* --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
+    "build:js": "lerna exec --scope @coopdigital/foundations-* --scope @coopdigital/shared-component-* --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
     "build:foundations": "lerna run --stream --scope @coopdigital/foundations build",
-    "build:component": "lerna exec --scope @coopdigital/component-template 'rollup --config ../../build/rollup/index.js'",
+    "build:component": "lerna exec --scope @coopdigital/component-* 'rollup --config ../../build/rollup/index.js'",
     "publish": "lerna publish"
   },
   "heroku-run-build-script": true
