@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/index.mjs"],"names":["Component"],"mappings":";;;;;;;AAAA;;eAEeA,kB","sourcesContent":["import Component from './Component.jsx';\n\nexport default Component;\n"],"file":"index.js"}
