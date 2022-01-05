@@ -2,8 +2,10 @@
   "name": "@coopdigital/component-skipnav",
   "version": "2.3.6",
   "description": "Co-op Component: Skipnav",
-  "main": "dist/skipnav.css",
-  "style": "src/skipnav.pcss",
+  "style": "dist/skipnav.css",
+  "sources": {
+    "style": "src/skipnav.pcss"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"
