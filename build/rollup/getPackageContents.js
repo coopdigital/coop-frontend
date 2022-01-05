@@ -8,6 +8,7 @@ export default function getPackageContents(packageDirectory) {
     const contents = JSON.parse(file);
     return contents;
   } catch {
+    // eslint-disable-next-line no-console
     console.log('Error in finding or parsing the package.json of the package');
     return null;
   }
