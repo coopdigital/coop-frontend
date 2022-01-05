@@ -1,7 +1,0 @@
-pre-commit:
-  parallel: true
-  commands:
-    build-packages:
-      tags: frontend css
-      glob: "*.{css,pcss}"
-      run: lerna run dist && git add {staged_files}
