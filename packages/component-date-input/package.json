@@ -2,8 +2,10 @@
   "name": "@coopdigital/component-date-input",
   "version": "1.2.18",
   "description": "Co-op Components: Date input",
-  "main": "dist/date-input.css",
-  "style": "src/date-input.pcss",
+  "style": "dist/date-input.css",
+  "sources": {
+    "style": "src/date-input.pcss"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)"

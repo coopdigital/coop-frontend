@@ -2,8 +2,10 @@
   "name": "@coopdigital/component-squircles",
   "version": "2.3.4",
   "description": "Co-op Component: Squircles",
-  "main": "dist/squircles.css",
-  "style": "src/squircles.pcss",
+  "style": "dist/squircles.css",
+  "sources": {
+    "style": "src/squircles.pcss"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"

@@ -2,8 +2,10 @@
   "name": "@coopdigital/component-notification--alert",
   "version": "1.1.7",
   "description": "Co-op Components: Notification - alert",
-  "main": "dist/notification--alert.css",
-  "style": "src/notification--alert.pcss",
+  "style": "dist/notification--alert.css",
+  "sources": {
+    "style": "src/notification--alert.pcss"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"

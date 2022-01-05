@@ -2,8 +2,10 @@
   "name": "@coopdigital/component-card--product",
   "version": "2.2.5",
   "description": "Co-op Components: Card - product",
-  "main": "dust/card--product.css",
-  "style": "src/card--product.pcss",
+  "style": "dist/card--product.css",
+  "sources": {
+    "style": "src/card--product.pcss"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"

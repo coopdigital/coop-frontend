@@ -2,8 +2,10 @@
   "name": "@coopdigital/component-signpost",
   "version": "3.2.5",
   "description": "Co-op Component: signpost",
-  "main": "dist/signpost.css",
-  "style": "src/signpost.pcss",
+  "style": "dist/signpost.css",
+  "sources": {
+    "style": "src/signpost.pcss"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"

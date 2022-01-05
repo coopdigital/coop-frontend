@@ -2,8 +2,10 @@
   "name": "@coopdigital/component-search",
   "version": "2.3.21",
   "description": "Co-op Component Search",
-  "main": "dist/search.css",
-  "style": "src/search.pcss",
+  "style": "dist/search.css",
+  "sources": {
+    "style": "src/search.pcss"
+  },
   "author": "@coopdigital",
   "contributors": [
     "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)"
