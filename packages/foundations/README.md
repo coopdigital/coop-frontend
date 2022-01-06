@@ -58,6 +58,7 @@ If you only require partials of the foundations you can use the imports below. M
 /* UI */
 @import "@coopdigital/foundations/dist/ui/a11y.css";
 @import "@coopdigital/foundations/dist/ui/logo.css";
+@import "@coopdigital/foundations/dist/ui/icons.css";
 
 /* Utilities */
 @import "@coopdigital/foundations/dist/colors/colors-utilities.css";
@@ -66,6 +67,73 @@ If you only require partials of the foundations you can use the imports below. M
 @import "@coopdigital/foundations/dist/typography/typography-utilities.css";
 @import "@coopdigital/foundations/dist/spacing/spacing-utilities.css";
 @import "@coopdigital/foundations/dist/layout/layout-utilities.css";
+```
+
+## Icon usage
+Icons are spearted out as separate SVG files in `src` and combined in the build script into an SVG sprite called `coop-icon-sprite.svg`.
+
+This sprite can be served into your project from `node_nodules` from within `foundations/dist/assets/icons/coop-icon-sprite.svg`, using the build process of your choice.
+
+[Design guidelines on using the icons can be found on the Experience Library icons page](https://www.coop.co.uk/experience-library/foundations/icon-set.html)
+
+### Using the icons in your project
+Once you have the icons loaded in your front-end you can referrence them by using:
+
+```html
+<svg>
+    <use xlink:href="coop-icon-sprite.svg#[icon-file-name]"></use>
+</svg>
+```
+
+For example the shopping basket icon would be used with:
+
+```html
+<svg>
+    <use xlink:href="coop-icon-sprite.svg#icon-basket"></use>
+</svg>
+```
+
+### Full list of icons by ID
+
+```
+#icon-add
+#icon-minus
+#icon-arrow-up
+#icon-arrow-down
+#icon-arrow-left
+#icon-arrow-right
+#icon-chevron-up
+#icon-chevron-down
+#icon-chevron-left
+#icon-chevron-right
+#icon-avatar
+#icon-avatar-alt
+#icon-basket
+#icon-clock
+#icon-close
+#icon-close-alt
+#icon-coop
+#icon-coop-card
+#icon-location
+#icon-coop-location
+#icon-download
+#icon-home
+#icon-information
+#icon-mail
+#icon-menu
+#icon-message
+#icon-open-new
+#icon-phone
+#icon-question
+#icon-search
+#icon-settings
+#icon-tick
+#icon-tick-alt
+#icon-van
+#icon-warning
+#icon-write
+#icon-pencil
+#icon-calendar
 ```
 
 ## Contributing
