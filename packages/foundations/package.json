@@ -30,7 +30,7 @@
     "build:lint": "stylelint 'src/**/*.{css,pcss}' --fix",
     "build:css": "postcss 'src/**/*.pcss' --base 'src' --dir 'dist/' --ext css",
     "build:vars": "postcss 'src/vars/*.pcss' --base 'src' --dir 'dist/' --ext css",
-    "build:icons": "svg-sprite -s --symbol-dest packages/foundations/dist/assets/icons --symbol-sprite coop-icon-sprite.svg packages/foundations/src/ui/icons/*.svg",
+    "build:icons": "svg-sprite -s --symbol-dest dist/assets/icons --symbol-sprite coop-icon-sprite.svg src/ui/icons/*.svg",
     "build": "npm-run-all --serial build:clean build:lint build:css build:vars build:icons"
   }
 }

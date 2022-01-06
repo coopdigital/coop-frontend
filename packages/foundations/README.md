@@ -70,11 +70,11 @@ If you only require partials of the foundations you can use the imports below. M
 ```
 
 ## Icon usage
-Icons are spearted out as separate SVG files in `src` and combined in the build script into an SVG sprite called `coop-icon-sprite.svg`.
+Icons are separted out as separate SVG files in `src` and combined in the build script into an SVG sprite called `coop-icon-sprite.svg`.
 
 This sprite can be served into your project from `node_nodules` from within `foundations/dist/assets/icons/coop-icon-sprite.svg`, using the build process of your choice.
 
-[Design guidelines on using the icons can be found on the Experience Library icons page](https://www.coop.co.uk/experience-library/foundations/icon-set.html)
+[Go to the design guidelines on using the icons on the Experience Library icons page](https://www.coop.co.uk/experience-library/foundations/icon-set.html)
 
 ### Using the icons in your project
 Once you have the icons loaded in your front-end you can referrence them by using:
