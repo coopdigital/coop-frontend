@@ -1,7 +1,9 @@
 name: Version
 
 on:
-  workflow_dispatch:
+  # workflow_dispatch:
+  push:
+    branches: [master]
 
 jobs:
   versioning:
@@ -15,9 +17,11 @@ jobs:
         with:
           node-version: "16.x"
 
+      - name: Run install and lerna boostrap
+        run: npm ci
+
       - name: Run build
-      - run: npm ci
-      - run: npm run build
+        run: npm run build
 
       - name: Run lerna version
-      - run: npm run package:version
+        run: npm run package:version
