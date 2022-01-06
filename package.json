@@ -62,7 +62,7 @@
     "build:foundations": "lerna run --stream --scope @coopdigital/foundations build",
     "build:component": "lerna exec --scope @coopdigital/component-* 'rollup --config ../../build/rollup/index.js'",
     "package:version": "lerna version --conventional-commits --yes",
-    "build:icons": "svg-sprite -s --symbol-dest packages/foundations/dist/assets/icons --symbol-sprite coop-icon-sprite.svg packages/foundations/src/ui/icons/*.svg",
+    "build:icons": "svg-sprite -s --symbol-dest dist/assets/icons --symbol-sprite coop-icon-sprite.svg src/ui/icons/*.svg",
     "publish": "lerna publish"
   },
   "heroku-run-build-script": true
