@@ -14,4 +14,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
+
+      - name: Run build
+      - run: npm ci
+      - run: npm run build
+
+      - name: Run lerna version
+      - run: npm run package:version
