@@ -1,4 +1,4 @@
-name: Versioning
+name: Version
 
 on:
   workflow_dispatch:
@@ -14,4 +14,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
+
+      - name: Run install and lerna boostrap
+        run: npm ci
+
+      - name: Run build
+        run: npm run build
+
+      - name: Run lerna version
+        run: npm run package:version
