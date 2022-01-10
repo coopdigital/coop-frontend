@@ -29,7 +29,6 @@ jobs:
          
 
       - name: Publish
-        run: npx lerna changed
-        # run: npx lerna publish from-package --yes
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx lerna publish from-package --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
