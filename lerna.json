@@ -13,6 +13,9 @@
     "publish": {
       "allowBranch": "master",
       "ignoreChanges": ["*.md"]
+    },
+    "version": {
+      "message": "chore(release): publish"
     }
   }
 }
