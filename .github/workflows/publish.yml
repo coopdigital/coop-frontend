@@ -23,13 +23,14 @@ jobs:
           echo "@coopdigital:registry=https://registry.npmjs.org/" > .npmrc
           echo "registry=https://registry.npmjs.org/" >> .npmrc
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+          echo ${{ secrets.NPM_TOKEN_2 }}
           npm whoami
           npm access ls-packages
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_2 }}
          
 
       - name: Publish
         run: npx lerna publish from-package --yes
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_2 }}
