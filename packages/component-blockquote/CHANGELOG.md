@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.2...@coopdigital/blockquote@1.1.3) (2022-01-10)
+
+
+### Bug Fixes
+
+* changes to trigger lerna publish ([6bc88d0](https://github.com/coopdigital/coop-frontend/commit/6bc88d0e6c2cee873e127c05e7c180dd7f0d251e))
+
+
+
+
+
 ## [1.1.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.1...@coopdigital/blockquote@1.1.2) (2022-01-10)
 
 
