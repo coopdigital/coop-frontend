@@ -61,7 +61,7 @@
     "build:js": "lerna exec --scope @coopdigital/foundations-* --scope @coopdigital/shared-component-* --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
     "build:foundations": "lerna run --stream --scope @coopdigital/foundations build",
     "build:component": "lerna exec --scope @coopdigital/component-* 'rollup --config ../../build/rollup/index.js'",
-    "package:version": "lerna version --conventional-commits --yes --no-push --no-git-tag-version --allow-branch feat/versioning-workflow",
+    "package:version": "lerna version --conventional-commits --yes",
     "publish": "lerna publish"
   },
   "heroku-run-build-script": true
