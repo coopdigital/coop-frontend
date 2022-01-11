@@ -15,9 +15,9 @@ $ npm install @coopdigital/component-blockquote --save
 ## Usage
 
 ### React
-You can include this react component in your project by importing importing it via the `import` statement.
+You can include this react component in your project by importing it via the `import` statement.
 ```jsx
-import Blockquote from '@coopdigital/blockquote';
+import Blockquote from '@coopdigital/component-blockquote';
 ```
 
 If you want to use the JSX template for compiling in your own project you can include the component with the following `import` statement
@@ -58,4 +58,3 @@ If you use a `postcss-import` plugin:
 Copyright (c) 2021 Co-operative Group Limited.
 Licensed [MIT](https://github.com/coopdigital/coop-frontend/blob/master/LICENSE).
 
- 
