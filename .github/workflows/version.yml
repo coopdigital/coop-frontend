@@ -1,10 +1,14 @@
 name: Version
 
 on:
-  workflow_dispatch:
+  pull_request:
+    types: [ closed ]
+    branches:
+      - master
 
 jobs:
   versioning:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
