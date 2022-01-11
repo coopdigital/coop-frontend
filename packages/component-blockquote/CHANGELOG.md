@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.7...@coopdigital/blockquote@1.1.8) (2022-01-11)
+
+
+### Bug Fixes
+
+* remove github auth from publish action and update blockquote to test publish ([fc7cfde](https://github.com/coopdigital/coop-frontend/commit/fc7cfde04ac5039775541e9626590a64da2b705c))
+
+
+
+
+
 ## [1.1.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.6...@coopdigital/blockquote@1.1.7) (2022-01-11)
 
 
