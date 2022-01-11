@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.6...@coopdigital/blockquote@1.1.7) (2022-01-11)
+
+
+### Bug Fixes
+
+* remove fallback non scoped npm reg setup, update blockquote to test actions ([305bdf4](https://github.com/coopdigital/coop-frontend/commit/305bdf45c64a51a3d3292cd1806505b0a784afab))
+
+
+
+
+
 ## [1.1.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.5...@coopdigital/blockquote@1.1.6) (2022-01-11)
 
 
