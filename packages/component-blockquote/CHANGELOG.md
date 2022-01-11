@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.5...@coopdigital/blockquote@1.1.6) (2022-01-11)
+
+
+### Bug Fixes
+
+* upate pubilsh workflow to use npm script for publish, test update blockquote to publish ([76dd84b](https://github.com/coopdigital/coop-frontend/commit/76dd84bec1873b6f02d7244e684e771b49fce22d))
+
+
+
+
+
 ## [1.1.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.4...@coopdigital/blockquote@1.1.5) (2022-01-11)
 
 **Note:** Version bump only for package @coopdigital/blockquote

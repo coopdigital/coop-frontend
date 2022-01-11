@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.12](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--notification@2.2.11...@coopdigital/shared-component--notification@2.2.12) (2022-01-11)
+
+**Note:** Version bump only for package @coopdigital/shared-component--notification
+
+
+
+
+
 ## [2.2.11](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--notification@2.2.10...@coopdigital/shared-component--notification@2.2.11) (2022-01-10)
 
 

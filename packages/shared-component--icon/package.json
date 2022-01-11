@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--icon",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Co-op Shared Component: Icon",
   "main": "dist/icon.css",
   "style": "src/icon.pcss",
