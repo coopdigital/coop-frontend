@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import path from 'path';
-import cleaner from 'rollup-plugin-cleaner';
+import cleaner from 'rollup-plugin-delete';
 import postcss from 'rollup-plugin-postcss';
 
 export default function cssBuild(packageDirectory, packageContents) {
@@ -15,7 +15,7 @@ export default function cssBuild(packageDirectory, packageContents) {
     input,
     plugins: [
       cleaner({
-        targets: ['./dist/css'],
+        targets: ['./dist/*.css', './dist/*.css.map'],
       }),
       postcss({
         config: {

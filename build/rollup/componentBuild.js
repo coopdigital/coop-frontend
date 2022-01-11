@@ -2,7 +2,7 @@
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import path from 'path';
-import cleaner from 'rollup-plugin-cleaner';
+import cleaner from 'rollup-plugin-delete';
 import copy from 'rollup-plugin-copy';
 
 export default function componentBuild(packageDirectory, packageContents) {
