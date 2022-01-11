@@ -37,3 +37,12 @@ jobs:
 
       - name: Lerna version
         run: npm run package:version
+
+
+  close_job:
+    if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo PR #${{ github.event.number }} has been closed without being merged
+
