@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.8...@coopdigital/blockquote@1.1.9) (2022-01-11)
+
+
+### Bug Fixes
+
+* update blockquote to test publish ([84b32fe](https://github.com/coopdigital/coop-frontend/commit/84b32fe11fc822cae03af18d0f493bebff049192))
+
+
+
+
+
 ## [1.1.8](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/blockquote@1.1.7...@coopdigital/blockquote@1.1.8) (2022-01-11)
 
 
