@@ -37,12 +37,18 @@
     "postcss-nesting": "^8.0.1",
     "prettier": "^2.2.0",
     "rollup": "^2.62.0",
-    "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-rename": "^1.0.1",
+<<<<<<< HEAD
     "stylelint": "^14.2.0",
     "stylelint-prettier": "^2.0.0",
+=======
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.2.0",
+>>>>>>> ci: update rollup build to use rollup-plugin-delete to clear dist css before rebuilding from src css
     "svg-sprite": "^1.5.3",
     "typescript": "^4.2.3"
   },
