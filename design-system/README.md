@@ -35,15 +35,9 @@ Then:
 This project uses [Jekyll](http://jekyllrb.com/) to compile the pages, and NPM packages to include the foundation and component packages dependencies and compile the assets. To install all required dependencies, run:
 
 ```
-bundle install
-```
-
-Note: Don't run `npm install` or `npm ci` within the Design System. Instead, use Lerna to ensure all packages are symlinked ready to go, then you can preview your local package changes:
-
-```
-cd ../
 npm ci
-cd ./design-system
+
+bundle install
 ```
 
 ## Local development
