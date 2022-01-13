@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.2.21...@coopdigital/shared-component--postcode@2.3.0) (2022-01-13)
+
+
+### Features
+
+* add autocapitalize to postcode inputs to encourage all caps entry on virtual keyboards ([9c41c27](https://github.com/coopdigital/coop-frontend/commit/9c41c27c586944f9d593ed1169d8aa55194d7a97))
+
+
+
+
+
 ## [2.2.21](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.2.20...@coopdigital/shared-component--postcode@2.2.21) (2021-12-31)
 
 
