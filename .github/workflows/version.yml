@@ -1,11 +1,11 @@
 name: Version
 
 on:
-  pull_request:
-    types: [closed]
-    branches:
-      - master
   workflow_dispatch:
+  # pull_request:
+  #   types: [closed]
+  #   branches:
+  #     - master
 
 jobs:
   versioning:
