@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.1.0...@coopdigital/foundations@1.1.5) (2022-01-21)
+
+
+### Bug Fixes
+
+* improve borders when viewing the site on a tablet ([8c774ef](https://github.com/coopdigital/coop-frontend/commit/8c774efef763ff595ca35bff1f55a8de717f32e8))
+* manually bump version ([75c10d2](https://github.com/coopdigital/coop-frontend/commit/75c10d2d1032d18d468c4ee8a0f6a43ea101623b))
+
+
+
+
+
 ## [1.1.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.1.0...@coopdigital/foundations@1.1.1) (2022-01-18)
 
 
