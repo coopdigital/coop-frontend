@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.24](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-search@2.3.23...@coopdigital/component-search@2.3.24) (2022-01-24)
+
+**Note:** Version bump only for package @coopdigital/component-search
+
+
+
+
+
 ## [2.3.23](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-search@2.3.22...@coopdigital/component-search@2.3.23) (2022-01-21)
 
 **Note:** Version bump only for package @coopdigital/component-search

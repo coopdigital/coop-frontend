@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.1.5...@coopdigital/foundations@1.2.0) (2022-01-24)
+
+
+### Features
+
+* added scooter icon to main set ([0c6ccca](https://github.com/coopdigital/coop-frontend/commit/0c6cccabe707c10071c35bcb4b029e8fd7f40e14))
+
+
+
+
+
 ## [1.1.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.1.0...@coopdigital/foundations@1.1.5) (2022-01-21)
 
 
