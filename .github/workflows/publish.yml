@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: "14.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Authenticate with Registry
         run: |
@@ -25,4 +25,4 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - run: npm run publish
+      - run: yarn run publish
