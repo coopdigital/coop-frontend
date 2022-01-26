@@ -93,6 +93,22 @@ For example the shopping basket icon would be used with:
 </svg>
 ```
 
+### CSS
+There is some basic CSS classes to space and size the icons. The scooter being rectangular takes a modifier class to double the width.
+
+``` CSS
+.coop-i {
+    fill: currentColor;
+    margin: 20px;
+    width: 32px;
+    height: 32px;
+}
+
+.coop-i--scooter {
+    width: 64px;
+}
+```
+
 ### Full list of icons by ID
 
 ```
@@ -134,7 +150,9 @@ For example the shopping basket icon would be used with:
 #icon-write
 #icon-pencil
 #icon-calendar
+#icon-scooter
 ```
+
 
 ## Contributing
 
