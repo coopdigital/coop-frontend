@@ -117,46 +117,6 @@ The allowed types are
 
 ```
 
-## Creating a Contentful page for your component
-
-To document your component. You'll need to create a new design system [like the date input page for example](https://coop-design-system.herokuapp.com/pattern-library/foundations/date-input.html) pattern page and link it to the design system Contenful space.
-
-Create a page for the component in an [existing or new folder here](https://github.com/coopdigital/coop-frontend/tree/master/design-system/src/pattern-library/components).
-
-Then create a design pattern page in the [design system Contentful space](https://app.contentful.com/spaces/95z9ms2kvox3/entries?id=PqNCla0FvyJeggwp&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author&filters.0.key=__status&filters.0.val=published). For access email matt.tyas@coop.co.uk.
-
-Publish the page then `cd design-system` and in your terminal and run `npm run server` to grab the latest data from Contentful.
-
-Open the `design-system/_data/contentful/spaces/design-system-content.yml` file and search for you page. Grab the page ID and add it to the component page you created in `{% if designPattern.sys.id == 'your page ID' %}`.
-
-Let the local design system build refresh.
-
-You should then see your new page at - for example: `0.0.0.0:9000/pattern-library/components/cards/product-card.html`
-
-Running the design system build will have copied your component to `/_includes/pattern-library/components/my-component`
-
-You can then reference this in your component page as an include to render the component and the component as an HTML example in your page:
-
-```HTML
-{% include pattern-library/components/[my-component]/dist/[my-component].html %}
-```
-
-## Publishing new versions
-
-If your component is ready to publish commit your files and open a pull request.
-
-Once approved - switch to master and pull the changes down.
-
-Creating and publishing new versions is only enabled on the master branch. To create and publish new versions, the following needs to be run by a user with write permissions to the @coopdigital npm registry.
-
-```shell script
-$ npm run publish
-```
-
-If you need permissions email matt.tyas@coop.co.uk
-
-This should provide a prompt to update the version according to [semantic versioning](https://semver.org/) - note that cross-linked dependencies within the local packages will be updated automatically.
-
 ## Husky git hooks pre commit
 
 [Husky](https://typicode.github.io/husky/#/) is used to manage git hooks in the repo.
@@ -165,3 +125,32 @@ What we use Husky for:
 
 - Commit message: We use husky to run commitlint on your commit messages to help enforce the Conventional Commits standard.
 - Pre push: We run `npm test` whenever you push to a branch to make sure we are not breaking anything as we go.
+
+## Publishing new versions
+
+If your package is ready to publish commit your files and open a pull request.
+
+Once approved and merged - go to the [Actions tab](https://github.com/coopdigital/coop-frontend/actions) in Github. There are two workflows which you need to run.
+
+If you need permissions email matt.tyas@coop.co.uk or michael.chadwick@coop.co.uk
+
+### Versioning workflow
+
+Run the Version workflow. This will assess the changes across packages and bump their version based on the conventional commits.
+
+Steps in the workflow:
+
+- Run the build and test scripts
+- Run lerna version and check if there are any changes.
+- Automatically tag a new versions of any changed packages.
+- Create a tag, update the package changelog.md and push those changes to the repository using the `chore(release): publish` commit message.
+
+### Publishing workflow
+
+Once you have seen the commits and new tags pushed. Make sure that the versions picked were correct. You will then need to run the Publish workflow.
+
+Steps in the workflow:
+
+- Autheticate with Git and pull all the lastest tags.
+- Detect the new versions from those tags.
+- Authenticate with NPM and publish them.
