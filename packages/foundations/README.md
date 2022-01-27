@@ -87,14 +87,32 @@ Once you have the icons loaded in your front-end you can referrence them by usin
 
 For example the shopping basket icon would be used with:
 
+### Using the icons accessibily
+You should always try to pair an icon with text if possible as suggested in the [Experience Library guidelines on icons](https://www.coop.co.uk/experience-library/foundations/icon-set.html)
+
+If the icon is paired with text it is classed as decorative and can be hidden from screenreaders.
+
 ```html
-<svg>
+<p>
+    <svg aria-hidden=“true”>
+        <title>Basket</title>
+        <use xlink:href="coop-icon-sprite.svg#icon-basket"></use>
+    </svg>
+    Basket
+</p>
+```
+
+If it is not possible to pair the icon with text then the aria-hidden attribute is not needed.
+
+```html
+<svg role="img">
+    <title>Basket</title>
     <use xlink:href="coop-icon-sprite.svg#icon-basket"></use>
 </svg>
 ```
 
 ### CSS
-There is some basic CSS classes to space and size the icons. The scooter being rectangular takes a modifier class to double the width.
+There are some CSS classes to space and size the icons. The scooter being rectangular takes a modifier class to double the width.
 
 ``` CSS
 .coop-i {
