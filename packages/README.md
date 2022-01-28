@@ -5,7 +5,7 @@
 This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. Install dependencies in the root of the repo:
 
 ```shell script
-$ npm ci
+$ yarn install --frozen-lockfile
 ```
 
 This will install lerna, then [bootstrap the local packages](https://github.com/lerna/lerna/tree/master/commands/bootstrap#readme).
@@ -16,31 +16,9 @@ Create a new branch.
 
 Make a copy of the [component-template](https://github.com/coopdigital/coop-frontend/tree/master/packages/component-template) following the README.
 
-Add your HTML and CSS.
+The project is setup to use Yarn Workspaces. So any new package under `/packages` will be picked up in the Workbench application for development.
 
-To preview the package in the design system during initial development you'll have to use NPM link.
-
-```shell script
-$ cd packages/component-[name]
-$ npm link
-$ cd ../../design-system
-$ npm link @coopdigital/component-[name]
-```
-
-Shared components use Jinja2 and will need a corresponding model in Contentful. For information on how and why to create these email matt.tyas@coop.co.uk.
-
-Developing components is done in the [examples section of the design system](https://coop-design-system.herokuapp.com/pattern-library/examples/index.html). Create a new page and link it from the index.html
-
-```
----
-layout: blank-full
-id: examples
----
-
-{% include pattern-library/components/component-name/dist/component-name.html %}
-```
-
-Include the component then preview it at http://0.0.0.0:9000/pattern-library/examples/components/component-name.html
+Shared components use Jinja2 and will need a corresponding model in Contentful. For information on how and why to create these email matt.tyas@coop.co.uk or michael.chadwick@coop.co.uk.
 
 ## Amending a current package
 
@@ -49,23 +27,15 @@ Working on a current component does not need an NPM link. Once published we use 
 From the root of the coop-frontend run
 
 ```shell script
-$ npm run build
+$ yarn build
 ```
-
-Switching to the design system directory you can then run
-
-```
-$ npm run server
-```
-
-Changes will be made to the current packages will then be picked up.
 
 ## Troubleshooting
 
 If you are getting errors go to the root of the coop-frontend repo and run:
 
 ```shell script
-$ npm ci && npm run build
+$ yarn install --frozen-lockfile && yarn build
 ```
 
 ## Writing commit messages with Conventional Commits
@@ -124,7 +94,7 @@ The allowed types are
 What we use Husky for:
 
 - Commit message: We use husky to run commitlint on your commit messages to help enforce the Conventional Commits standard.
-- Pre push: We run `npm test` whenever you push to a branch to make sure we are not breaking anything as we go.
+- Pre push: We run `yarn test` whenever you push to a branch to make sure we are not breaking anything as we go.
 
 ## Publishing new versions
 
