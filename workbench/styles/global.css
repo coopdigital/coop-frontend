@@ -1,0 +1,10 @@
+body{
+    background-color: var(--color-grey-neutral-light);
+}
+.main-content{
+    background: white;
+    box-shadow: var(--ui-shadow);
+    border: 2px solid var(--color-light-dark);
+    border-radius: 8px;
+
+}
