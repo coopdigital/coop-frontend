@@ -6,7 +6,9 @@ export default function EditorialCard() {
   const [title, setTitle] = useState(`<span>
   <h3>
     Find out the difference 
-    <span className="coop-u-nowrap">Co-op</span> makes as we celebrate 25 years of Fairtrade
+    <span className="coop-u-nowrap">Co-op
+    
+    </span> makes as we celebrate 25 years of Fairtrade
   </h3>
 </span>`);
 
