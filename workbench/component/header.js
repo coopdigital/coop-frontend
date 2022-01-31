@@ -14,13 +14,13 @@ export default function Header() {
       >
         <div className="coop-l-container">
           <div className="coop-l-container">
-            <Link href="/" className="coop-l-grid">
+            <Link href="/">
               <a
                 className="coop-t-nounderline"
                 style={{ color: 'white', fill: 'white' }}
               >
                 <div className="coop-l-grid">
-                  <div className="coop-l-gird__item">
+                  <div>
                     <Logo />
                   </div>
                   <div>
