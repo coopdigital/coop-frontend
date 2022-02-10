@@ -3,6 +3,8 @@
 exports.__esModule = true;
 exports.setValue = exports.getValue = exports.getLabelOrLegend = exports.getLabel = void 0;
 
+require("core-js/modules/es.object.to-string.js");
+
 require("core-js/modules/web.dom-collections.for-each.js");
 
 require("core-js/modules/es.array.from.js");
