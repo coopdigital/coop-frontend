@@ -1,5 +1,7 @@
 "use strict";
 
+require("core-js/modules/es.object.to-string.js");
+
 require("core-js/modules/web.dom-collections.for-each.js");
 
 /* eslint-disable func-names */
