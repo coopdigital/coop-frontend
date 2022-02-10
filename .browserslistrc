@@ -1,3 +1,9 @@
-> 2% in GB
-last 2 versions and not <= 0.2% in GB
-not ie <= 10
+last 3 Chrome versions and not <= 0.2% in GB
+last 3 Firefox versions and not <= 0.2% in GB
+last 3 Safari versions and not <= 0.2% in GB
+last 3 Edge versions and not <= 0.2% in GB
+last 3 Samsung versions and not <= 0.2% in GB
+last 3 iOS version and not <= 0.2% in GB
+last 3 ChromeAndroid versions and not <= 0.2% in GB
+last 3 FirefoxAndroid versions and not <= 0.2% in GB
+ie 11
