@@ -13,7 +13,7 @@ module.exports = {
     }),
     require('postcss-nesting'),
     require('postcss-calc'),
-    require('autoprefixer'),
+    require('autoprefixer')({ flexbox: false }),
     require('cssnano'),
   ],
 };
