@@ -1,7 +1,9 @@
 "use strict";
 
 exports.__esModule = true;
-exports.getCheckedValues = exports.getChecked = exports.hasChecked = exports.isChecked = exports.isCheckboxes = exports.isCheckbox = void 0;
+exports.isChecked = exports.isCheckboxes = exports.isCheckbox = exports.hasChecked = exports.getCheckedValues = exports.getChecked = void 0;
+
+require("core-js/modules/es.object.to-string.js");
 
 require("core-js/modules/es.array.from.js");
 

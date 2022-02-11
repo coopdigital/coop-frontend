@@ -3,6 +3,8 @@
 exports.__esModule = true;
 exports.default = void 0;
 
+require("core-js/modules/es.object.to-string.js");
+
 require("core-js/modules/web.dom-collections.for-each.js");
 
 var _handlers = require("./handlers");

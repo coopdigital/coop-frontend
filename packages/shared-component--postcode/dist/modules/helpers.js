@@ -4,7 +4,11 @@ require("core-js/modules/es.regexp.constructor.js");
 
 require("core-js/modules/es.regexp.exec.js");
 
+require("core-js/modules/es.regexp.sticky.js");
+
 require("core-js/modules/es.regexp.to-string.js");
+
+require("core-js/modules/es.regexp.test.js");
 
 var _require = require('./bling.js'),
     $ = _require.$;
