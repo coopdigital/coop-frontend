@@ -22,12 +22,12 @@
     "directory": "packages/component-template"
   },
   "devDependencies": {
-    "@coopdigital/foundations-forms": "^5.4.0",
-    "@coopdigital/foundations-vars": "^3.8.2"
+    "@coopdigital/foundations-forms": "^5.3.6",
+    "@coopdigital/foundations": "^1.2.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations-forms": ">= 4.0.3 < 6",
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+    "@coopdigital/foundations": ">= 1.2.0 < 2"
   },
   "publishConfig": {
     "access": "public"
