@@ -1,0 +1,50 @@
+{
+  "name": "@coopdigital/component-searchable-dropdown",
+  "version": "0.0.1",
+  "description": "Co-op Components: Searchable Dropdown",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "style": "dist/styles.css",
+  "sources": {
+    "style": "src/searchableDropdown.pcss",
+    "main": "src/index.js"
+  },
+  "author": "@coopdigital",
+  "contributors": [
+    "Matt Tyas <matt.tyas@coop.co.uk> (https://github.com/matt-tyas)",
+    "Dale Hudson <dale.hudson@coop.co.uk> (https://github.com/dalecreativ)"
+  ],
+  "private": true,
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coopdigital/coop-frontend.git",
+    "directory": "packages/component-searchable-dropdown"
+  },
+  "devDependencies": {
+    "@coopdigital/foundations-vars": "^3.8.2",
+    "prop-types": "^15.5.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "prop-types": ">= 15.5.4 < 16",
+    "react": ">= 16.14.0 < 17",
+    "react-dom": ">= 16.14.0 < 17"
+  },
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-searchable-dropdown#readme",
+  "keywords": [
+    "templates"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
