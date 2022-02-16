@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"icons.css"}
+{"version":3,"sources":["../../src/ui/icons.pcss"],"names":[],"mappings":"AAAA,QACE,iBAAkB,CAClB,WAAY,CACZ,UAAW,CACX,WACF,CAEA,iBACE,UACF","file":"icons.css","sourcesContent":[".coop-i {\n  fill: currentColor;\n  margin: 20px;\n  width: 32px;\n  height: 32px;\n}\n\n.coop-i--scooter {\n  width: 64px;\n}\n"]}
