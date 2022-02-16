@@ -23,11 +23,11 @@
   },
   "devDependencies": {
     "@coopdigital/component-notification": "^1.2.2",
-    "@coopdigital/foundations-vars": "^3.8.2"
+    "@coopdigital/foundations": "^1.2.0"
   },
   "peerDependencies": {
     "@coopdigital/component-notification": ">= 1.0.11 < 2",
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4"
+    "@coopdigital/foundations": ">= 1.2.0 < 2"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
