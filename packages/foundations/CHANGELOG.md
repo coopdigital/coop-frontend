@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.2.0...@coopdigital/foundations@1.2.1) (2022-02-16)
+
+
+### Bug Fixes
+
+* add layout for scooter icon ([6869b5e](https://github.com/coopdigital/coop-frontend/commit/6869b5e65aa7e825001ae52d07615e6b169ec1a2))
+* updated scooter icon stoke error and added CSS to properly size it ([798b1d8](https://github.com/coopdigital/coop-frontend/commit/798b1d8bc1b9d527ec78e3b47c25f5f28abd5753))
+
+
+
+
+
 # [1.2.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.1.5...@coopdigital/foundations@1.2.0) (2022-01-24)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.4.0...@coopdigital/shared-component--postcode@2.5.0) (2022-02-16)
+
+
+### Features
+
+* update postcode js based on browser support ([63cea87](https://github.com/coopdigital/coop-frontend/commit/63cea87fe696daa92fd579371dbab4e512310111))
+
+
+
+
+
 # [2.4.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.2.21...@coopdigital/shared-component--postcode@2.4.0) (2022-01-21)
 
 
