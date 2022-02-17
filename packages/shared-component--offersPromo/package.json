@@ -20,12 +20,10 @@
     "directory": "packages/shared-component--offersPromo"
   },
   "devDependencies": {
-    "@coopdigital/foundations-layout": "^3.3.6",
-    "@coopdigital/foundations-vars": "^3.8.2"
+    "@coopdigital/foundations": "^1.2.1"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-layout": ">= 3.2.0 < 4",
-    "@coopdigital/foundations-vars": ">= 3.3.0 < 4"
+    "@coopdigital/foundations": ">= 1.2.0 < 2"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
