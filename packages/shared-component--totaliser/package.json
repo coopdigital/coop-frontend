@@ -20,14 +20,12 @@
     "directory": "packages/shared-component--totaliser"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^2.7.0",
-    "@coopdigital/foundations-layout": "^3.3.6",
-    "@coopdigital/foundations-vars": "^3.8.2"
+    "@coopdigital/foundations-buttons": "^2.6.0",
+    "@coopdigital/foundations": "^1.2.1"
   },
   "peerDependencies": {
     "@coopdigital/foundations-buttons": ">= 2.1.14 < 3",
-    "@coopdigital/foundations-layout": ">= 3.1.13 < 4",
-    "@coopdigital/foundations-vars": ">= 3.3.0 < 4"
+    "@coopdigital/foundations": ">= 1.2.0 < 2"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
