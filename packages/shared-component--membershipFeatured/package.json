@@ -20,13 +20,11 @@
     "directory": "packages/shared-component--membershipFeatured"
   },
   "devDependencies": {
-    "@coopdigital/foundations-grid": "^2.1.5",
-    "@coopdigital/foundations-vars": "^3.8.2",
+    "@coopdigital/foundations": "^1.2.1",
     "@coopdigital/shared-component--editorialcard": "^2.4.8"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-grid": ">= 2.0.7 < 3",
-    "@coopdigital/foundations-vars": ">= 3.3.0 < 4",
+    "@coopdigital/foundations": ">= 1.2.0 < 2",
     "@coopdigital/shared-component--editorialcard": ">= 2.1.15 < 3"
   },
   "bugs": {
