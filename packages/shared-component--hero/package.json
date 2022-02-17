@@ -19,12 +19,12 @@
     "directory": "packages/shared-component--hero"
   },
   "devDependencies": {
-    "@coopdigital/foundations-vars": "^3.8.2",
+    "@coopdigital/foundations": "^1.2.1",
     "@coopdigital/shared-component--link": "^1.8.6",
     "@coopdigital/shared-component--signpost": "^2.6.4"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "@coopdigital/foundations": ">= 1.2.0 < 2",
     "@coopdigital/shared-component--link": ">=1.5.0 < 2",
     "@coopdigital/shared-component--signpost": ">= 2.3.0 < 3"
   },
