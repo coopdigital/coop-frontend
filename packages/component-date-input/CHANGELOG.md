@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-date-input@1.2.23...@coopdigital/component-date-input@1.3.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to date input ([d4e13f9](https://github.com/coopdigital/coop-frontend/commit/d4e13f95f33fe1f90e7bceba4143baf34e789101))
+
+
+
+
+
 ## [1.2.23](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-date-input@1.2.22...@coopdigital/component-date-input@1.2.23) (2022-02-17)
 
 **Note:** Version bump only for package @coopdigital/component-date-input

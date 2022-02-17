@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.6.0...@coopdigital/shared-component--postcode@2.6.1) (2022-02-17)
+
+
+### Bug Fixes
+
+* remove redundant lock file ([15beb30](https://github.com/coopdigital/coop-frontend/commit/15beb308b22983e6151cd28df99ff70359534cd4))
+
+
+
+
+
 # [2.6.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.5.0...@coopdigital/shared-component--postcode@2.6.0) (2022-02-17)
 
 
