@@ -18,13 +18,11 @@
     "directory": "packages/shared-component--link"
   },
   "devDependencies": {
-    "@coopdigital/foundations-typography": "^4.2.7",
-    "@coopdigital/foundations-vars": "^3.8.2",
+    "@coopdigital/foundations": "^1.2.1",
     "@coopdigital/shared-component--icon": "^2.1.2"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-typography": ">= 4.2.2 < 5",
-    "@coopdigital/foundations-vars": ">= 3.1.2 < 4",
+    "@coopdigital/foundations": ">= 1.2.0 < 2",
     "@coopdigital/shared-component--icon": ">= 1.0.2 < 3"
   },
   "bugs": {
