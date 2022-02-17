@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-search@2.3.25...@coopdigital/component-search@2.4.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to search ([041d4ab](https://github.com/coopdigital/coop-frontend/commit/041d4ab85f8f9bcd6ce596b0a5572ac8d8d03a34))
+
+
+
+
+
 ## [2.3.25](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-search@2.3.24...@coopdigital/component-search@2.3.25) (2022-02-16)
 
 **Note:** Version bump only for package @coopdigital/component-search

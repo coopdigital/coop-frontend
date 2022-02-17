@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-signpost@3.2.7...@coopdigital/component-signpost@3.3.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to signpost ([8768baf](https://github.com/coopdigital/coop-frontend/commit/8768baf63d489246f701bb5176f3812064096962))
+
+
+
+
+
 ## [3.2.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-signpost@3.2.6...@coopdigital/component-signpost@3.2.7) (2022-02-16)
 
 **Note:** Version bump only for package @coopdigital/component-signpost

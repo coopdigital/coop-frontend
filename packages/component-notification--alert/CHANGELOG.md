@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-notification--alert@1.1.13...@coopdigital/component-notification--alert@1.2.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to notification ([1da0669](https://github.com/coopdigital/coop-frontend/commit/1da0669df566abe29d1f14d8ddf300e57b944b60))
+
+
+
+
+
 ## [1.1.13](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-notification--alert@1.1.8...@coopdigital/component-notification--alert@1.1.13) (2022-01-21)
 
 

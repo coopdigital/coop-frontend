@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-blockquote@1.1.2...@coopdigital/component-blockquote@1.2.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to blockquote ([b100f07](https://github.com/coopdigital/coop-frontend/commit/b100f0786fcc37c668a52b462fd2a69f97b14c58))
+
+
+
+
+
 ## [1.1.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-blockquote@1.1.1...@coopdigital/component-blockquote@1.1.2) (2022-02-16)
 
 

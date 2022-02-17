@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-squircles@2.3.5...@coopdigital/component-squircles@2.4.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to squircles ([38e063b](https://github.com/coopdigital/coop-frontend/commit/38e063bee8f44256a1f50efcfa484bd1fc4e4edf))
+
+
+
+
+
 ## [2.3.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-squircles@2.3.4...@coopdigital/component-squircles@2.3.5) (2022-01-10)
 
 

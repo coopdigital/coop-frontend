@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-card--product@2.2.7...@coopdigital/component-card--product@2.3.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to product card ([6d5a114](https://github.com/coopdigital/coop-frontend/commit/6d5a114139e4a5a198bc10505be586799b5fd93a))
+
+
+
+
+
 ## [2.2.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-card--product@2.2.6...@coopdigital/component-card--product@2.2.7) (2022-02-16)
 
 **Note:** Version bump only for package @coopdigital/component-card--product

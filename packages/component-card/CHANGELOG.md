@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-card@3.3.7...@coopdigital/component-card@3.4.0) (2022-02-17)
+
+
+### Features
+
+* add new foundations package to card ([c377744](https://github.com/coopdigital/coop-frontend/commit/c377744d5d325346055502cdc94a27cf411c8f1c))
+
+
+
+
+
 ## [3.3.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-card@3.3.6...@coopdigital/component-card@3.3.7) (2022-02-16)
 
 **Note:** Version bump only for package @coopdigital/component-card

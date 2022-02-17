@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.13](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--notification@2.2.12...@coopdigital/shared-component--notification@2.2.13) (2022-02-17)
+
+
+### Bug Fixes
+
+* add missing map file for notification ([cc34c95](https://github.com/coopdigital/coop-frontend/commit/cc34c95a2b60a47a6d31eeac0bfc11761c0ea06d))
+
+
+
+
+
 ## [2.2.12](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--notification@2.2.11...@coopdigital/shared-component--notification@2.2.12) (2022-01-11)
 
 **Note:** Version bump only for package @coopdigital/shared-component--notification
