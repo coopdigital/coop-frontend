@@ -1191,16 +1191,6 @@
   resolved "https://registry.yarnpkg.com/@coopdigital/foundations-colors/-/foundations-colors-2.6.6.tgz#9be45e6500e4fec5c2ae9f469a28ee04ec8cf8f1"
   integrity sha512-30HO5d4zDBlzVxUfSU4BDQOfkdet63mIDuALHHWe9ffXtxJutoGrS7NlHdxol3+aVzYNChG3sDdzYcGCK4dXbg==
 
-"@coopdigital/foundations-grid@^2.1.5":
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/@coopdigital/foundations-grid/-/foundations-grid-2.1.5.tgz#5175371af2aa83b9d3bce52a62c898d626ae49fd"
-  integrity sha512-daozV4Z8T6Fb85EP1zckuuhJoCD4BlJ5nwchqT6e9F1ax/YSQXAMWuzFlehOLff8v87OV1vZ6LEVu2HbZlP70A==
-
-"@coopdigital/foundations-layout@^3.3.6":
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/@coopdigital/foundations-layout/-/foundations-layout-3.3.6.tgz#c37b383addd6dcc1534708a495b4975c82d9f32d"
-  integrity sha512-bwEAZBpogS5T5Megif4RiygnlG8nW656jVvXefkaemXJu8FUrS5F/bhcfMAjvXuvQwKzM6HTpdLrDD1xnrornw==
-
 "@coopdigital/foundations-typography@^4.2.7":
   version "4.2.7"
   resolved "https://registry.yarnpkg.com/@coopdigital/foundations-typography/-/foundations-typography-4.2.7.tgz#af2a401b674373f2e864b3fe6f3d672d167bdfc6"
