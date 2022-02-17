@@ -1186,21 +1186,6 @@
   dependencies:
     chalk "^4.0.0"
 
-"@coopdigital/foundations-colors@^2.6.6":
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/@coopdigital/foundations-colors/-/foundations-colors-2.6.6.tgz#9be45e6500e4fec5c2ae9f469a28ee04ec8cf8f1"
-  integrity sha512-30HO5d4zDBlzVxUfSU4BDQOfkdet63mIDuALHHWe9ffXtxJutoGrS7NlHdxol3+aVzYNChG3sDdzYcGCK4dXbg==
-
-"@coopdigital/foundations-typography@^4.2.7":
-  version "4.2.7"
-  resolved "https://registry.yarnpkg.com/@coopdigital/foundations-typography/-/foundations-typography-4.2.7.tgz#af2a401b674373f2e864b3fe6f3d672d167bdfc6"
-  integrity sha512-SfXJAeefCmjmQECKzeiKF9O9lOozYqUi1xYk7bHVgAAKWKl1/3bCfToYA4M65zZ823yhFL4sCjfAjlNLl45wxQ==
-
-"@coopdigital/foundations-vars@^3.8.2":
-  version "3.8.2"
-  resolved "https://registry.yarnpkg.com/@coopdigital/foundations-vars/-/foundations-vars-3.8.2.tgz#4879bb7230d9a49e8edf81f5d8a4c41bf0a7ac8d"
-  integrity sha512-FMNcxgGLz9hWFfCX4Kvjrj3iCTPYTjQZMEHGVhFVYfCPx2HrlcziInzorM8GNJ69g1AhD+a7ToJskbBd6rpq3g==
-
 "@coopdigital/shared-component--icon@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@coopdigital/shared-component--icon/-/shared-component--icon-1.0.2.tgz#9e1fd17ff2128e3b118b9ecd08748510f99657bf"
