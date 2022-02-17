@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--totaliser",
-  "version": "1.1.14",
+  "version": "1.2.0",
   "description": "Co-op Component: Money raised totaliser",
   "main": "dist/totaliser.css",
   "style": "src/totaliser.pcss",
@@ -20,12 +20,12 @@
     "directory": "packages/shared-component--totaliser"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^2.6.0",
-    "@coopdigital/foundations": "^1.2.1"
+    "@coopdigital/foundations": "^1.2.1",
+    "@coopdigital/foundations-buttons": "^2.6.0"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-buttons": ">= 2.1.14 < 3",
-    "@coopdigital/foundations": ">= 1.2.0 < 2"
+    "@coopdigital/foundations": ">= 1.2.0 < 2",
+    "@coopdigital/foundations-buttons": ">= 2.1.14 < 3"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"

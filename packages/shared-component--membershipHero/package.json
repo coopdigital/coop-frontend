@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--membershiphero",
-  "version": "1.4.15",
+  "version": "1.5.0",
   "description": "Co-op Shared Component: Hero",
   "main": "dist/membership-hero.css",
   "style": "src/membership-hero.pcss",
@@ -20,12 +20,12 @@
     "directory": "packages/shared-component--membershipHero"
   },
   "devDependencies": {
-    "@coopdigital/foundations-buttons": "^2.6.0",
-    "@coopdigital/foundations": "^1.2.1"
+    "@coopdigital/foundations": "^1.2.1",
+    "@coopdigital/foundations-buttons": "^2.6.0"
   },
   "peerDependencies": {
-    "@coopdigital/foundations-buttons": ">= 2.2.2 < 3",
-    "@coopdigital/foundations": ">= 1.2.0 < 2"
+    "@coopdigital/foundations": ">= 1.2.0 < 2",
+    "@coopdigital/foundations-buttons": ">= 2.2.2 < 3"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"

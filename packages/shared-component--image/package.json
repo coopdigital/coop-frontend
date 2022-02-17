@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--image",
-  "version": "2.2.9",
+  "version": "2.3.0",
   "description": "Co-op Shared Component: Image",
   "main": "dist/image.css",
   "style": "src/image.pcss",

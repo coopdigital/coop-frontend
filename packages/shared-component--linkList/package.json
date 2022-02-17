@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--linklist",
-  "version": "3.3.8",
+  "version": "3.4.0",
   "description": "Co-op Shared Component: link list",
   "main": "dist/linkList.css",
   "style": "src/linkList.pcss",

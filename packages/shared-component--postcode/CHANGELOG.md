@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.5.0...@coopdigital/shared-component--postcode@2.6.0) (2022-02-17)
+
+
+### Features
+
+* add foundations package to postcode ([15ed18a](https://github.com/coopdigital/coop-frontend/commit/15ed18afcaa392941fbbb3bc679ed9e96234ee4f))
+
+
+
+
+
 # [2.5.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.4.0...@coopdigital/shared-component--postcode@2.5.0) (2022-02-16)
 
 
