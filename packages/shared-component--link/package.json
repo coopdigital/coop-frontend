@@ -36,8 +36,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f",
-  "dependencies": {
-    "@coopdigital/foundations-colors": "^2.6.6"
-  }
+  "gitHead": "4f6dd72bd513475b22840730c22185415f50af8f"
 }
