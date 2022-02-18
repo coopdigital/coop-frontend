@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../component/layout';
+import Layout from 'components/layout';
 export default function Home() {
   const htmlComonentList = [
     { linkText: 'Editorial card', path: '/editorial-card' },
@@ -27,7 +27,7 @@ export default function Home() {
             <nav>
               <ul>
                 <li>
-                  <Link href="/editorial-card">
+                  <Link href="/components/editorial-card">
                     <a>Editorial card</a>
                   </Link>
                 </li>

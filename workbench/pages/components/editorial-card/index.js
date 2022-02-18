@@ -1,13 +1,14 @@
-import Layout from '../../component/layout';
-import Head from 'next/head';
 import { useState } from 'react';
+import Head from 'next/head';
+import Layout from 'components/layout';
+import { EditorialCard } from 'components/EditorialCard';
 
-export default function EditorialCard() {
+export default function EditorialCardPage() {
   const [title, setTitle] = useState(`<span>
   <h3>
-    Find out the difference 
+    Find out the difference
     <span className="coop-u-nowrap">Co-op
-    
+
     </span> makes as we celebrate 25 years of Fairtrade
   </h3>
 </span>`);
@@ -96,6 +97,35 @@ export default function EditorialCard() {
                 setTitle(event.target.value);
               }}
             ></textarea>
+          </div>
+        </section>
+
+        <section className="coop-l-grid">
+          <div className="coop-l-grid__item coop-l-grid__item--large-4 coop-l-grid__item--medium-6 coop-u-margin-t-64">
+            <h2>Examples</h2>
+            <h3>Default</h3>
+            <EditorialCard
+              title="Find out the difference Co-op makes as we celebrate 25 years of Fairtrade"
+              href="#"
+            />
+            <h3>With a subtitle</h3>
+            <EditorialCard
+              title="Find out the difference Co-op makes as we celebrate 25 years of Fairtrade"
+              label="Fairtrade"
+              href="#"
+            />
+            <h3>With a paragraph</h3>
+            <EditorialCard
+              title="Find out the difference Co-op makes as we celebrate 25 years of Fairtrade"
+              label="Fairtrade"
+              href="#"
+            >
+              <p>
+                Join us in celebrating 25 years of Fairtrade by enjoying
+                products that carry the Fairtrade Mark, or holding your own
+                Fairtrade party.
+              </p>
+            </EditorialCard>
           </div>
         </section>
       </Layout>
