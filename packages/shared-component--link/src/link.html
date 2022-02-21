@@ -71,7 +71,7 @@
 				{%- set href = href.rstrip("/") -%}
 
 				{# Append anchor if available #}
-				{%- if linkEntry.fields.anchor.data -%}
+				{%- if linkEntry.fields.anchor and linkEntry.fields.anchor.data -%}
 					{%- set href = href + "#" + linkEntry.fields.anchor.data -%}
 				{%- endif -%}
 
@@ -128,7 +128,7 @@
 				{%- import '/shared-component--icon/src/icon.html' as icon -%}
 
 				<span class="coop-t-link__icon-wrapper">{{ icon.render('arrow-right', 'coop-t-link__icon') }}</span>
-			{%- endif -%}
+			{%- endif -%}			
 		</a>
 
 	{%- endif -%}
