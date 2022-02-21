@@ -1,12 +1,17 @@
 {
   "name": "@coopdigital/coop-frontend",
+  "version": "1.0.0",
+  "repository": "https://github.com/coopdigital/coop-frontend.git",
   "description": "Co-op Frontend and Design System",
   "author": "Co-op Digital",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "design-system"
+  ],
   "engines": {
-    "node": "12.x || 14.x || 16.x",
-    "npm": "7.x | 8.x"
+    "node": "12.x || 14.x || 16.x"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
@@ -62,15 +67,7 @@
     "build:foundations": "lerna run --stream --scope @coopdigital/foundations build",
     "build:component": "lerna exec --scope @coopdigital/component-* 'rollup --config ../../build/rollup/index.js'",
     "package:version": "lerna version --conventional-commits --yes",
+    "dev": "lerna run --stream --scope design-system server",
     "publish": "lerna publish from-package --yes --no-verify-access"
-  },
-  "heroku-run-build-script": true,
-  "dependencies": {
-    "stylelint-config-prettier": "^9.0.3"
-  },
-  "version": "1.0.0",
-  "repository": "https://github.com/coopdigital/coop-frontend.git",
-  "workspaces": [
-    "packages/*"
-    ]  
+  }
 }
