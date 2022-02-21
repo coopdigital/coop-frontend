@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.9.0...@coopdigital/shared-component--link@1.9.1) (2022-02-21)
+
+
+### Bug Fixes
+
+* add check for whether link model has an anchor field (recipes tenant doesn't) ([5d1e0e0](https://github.com/coopdigital/coop-frontend/commit/5d1e0e06780de274e1441864d4770595049134d2))
+
+
+
+
+
 # [1.9.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.8.6...@coopdigital/shared-component--link@1.9.0) (2022-02-17)
 
 
