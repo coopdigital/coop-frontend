@@ -1,3 +1,5 @@
+import classNames from 'utils/classNames';
+
 const EditorialCardLink = ({ href, title, dataContentParent, children }) => {
   if (href) {
     return (
@@ -16,15 +18,20 @@ const EditorialCardLink = ({ href, title, dataContentParent, children }) => {
   return children;
 };
 
-export const EditorialCard = ({
+const EditorialCard = ({
   title,
   label,
   href,
   children,
   dataContentParent,
+  isHorizontal,
 }) => {
+  const classes = classNames('coop-c-editorialcard', [
+    isHorizontal ? 'coop-c-editorialcard--horizontal' : null,
+  ]);
+
   return (
-    <article className="coop-c-editorialcard ">
+    <article className={classes}>
       <EditorialCardLink
         href={href}
         dataContentParent={dataContentParent}
@@ -65,3 +72,5 @@ export const EditorialCard = ({
     </article>
   );
 };
+
+export default EditorialCard;
