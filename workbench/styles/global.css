@@ -1,10 +1,13 @@
-body{
-    background-color: var(--color-grey-neutral-light);
-}
-.main-content{
-    background: white;
-    box-shadow: var(--ui-shadow);
-    border: 2px solid var(--color-light-dark);
-    border-radius: 8px;
+@import "@coopdigital/foundations/src/vars/vars.pcss";
+@import "@coopdigital/foundations/src/foundations.pcss";
+@import "@coopdigital/shared-component--editorialcard/src/editorialCard.pcss";
 
+body {
+  background-color: var(--color-grey-neutral-light);
+}
+.main-content {
+  background: white;
+  box-shadow: var(--ui-shadow);
+  border: 2px solid var(--color-light-dark);
+  border-radius: 8px;
 }
