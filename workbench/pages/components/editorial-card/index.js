@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Layout from 'components/layout';
-import EditorialCard from 'components/EditorialCard';
 
 const EditorialCardPage = () => {
   const [title, setTitle] = useState(`
