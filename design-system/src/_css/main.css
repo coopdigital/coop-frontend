@@ -3,10 +3,8 @@
 
 /* Foundations */
 @import "normalize.css";
-@import "@coopdigital/foundations-vars";
-@import "@coopdigital/foundations-global";
-@import "@coopdigital/foundations-typography";
-@import "@coopdigital/foundations-grid";
+@import "@coopdigital/foundations/src/vars/vars.pcss";
+@import "@coopdigital/foundations/src/foundations.pcss";
 @import "@coopdigital/foundations-buttons";
 @import "@coopdigital/foundations-forms";
 @import "@coopdigital/foundations-tables";
@@ -56,9 +54,6 @@
 @import "design-system/swatches.css";
 @import "design-system/states.css";
 @import "design-system/footer.css";
-
-@import "@coopdigital/foundations-colors";
-@import "@coopdigital/foundations-layout";
 
 .coop-c-notification--success {
   background-color: var(--color-green-success-light);
