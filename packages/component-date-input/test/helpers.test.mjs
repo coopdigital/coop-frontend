@@ -13,7 +13,9 @@ describe('Date inputs', () => {
     let fieldMap;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/component-date-input/src/examples/date-inputs.html');
+      document.body.innerHTML = await readFile(
+        './packages/component-date-input/src/html/date-inputs.html'
+      );
       inputs = document.querySelectorAll('[type="text"]');
       fieldMap = new Map(Array.from(inputs).map((input) => [input]));
     });

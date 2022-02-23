@@ -21,24 +21,35 @@ describe('Date inputs', () => {
     let fieldMap;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/component-date-input/src/examples/date-inputs.html');
+      document.body.innerHTML = await readFile(
+        './packages/component-date-input/src/html/date-inputs.html'
+      );
       fieldset = document.querySelector('fieldset');
       error = document.getElementById('dob-1-error');
       inputs = document.querySelectorAll('[type="text"]');
 
       fieldMap = new Map([
-        [inputs[0], {
-          required: 'Enter your day of birth',
-          invalid: 'Enter a valid day of birth',
-        }],
-        [inputs[1], {
-          required: 'Enter your month of birth',
-          invalid: 'Enter a valid month of birth',
-        }],
-        [inputs[2], {
-          required: 'Enter your year of birth',
-          invalid: 'Enter a valid year of birth',
-        }],
+        [
+          inputs[0],
+          {
+            required: 'Enter your day of birth',
+            invalid: 'Enter a valid day of birth',
+          },
+        ],
+        [
+          inputs[1],
+          {
+            required: 'Enter your month of birth',
+            invalid: 'Enter a valid month of birth',
+          },
+        ],
+        [
+          inputs[2],
+          {
+            required: 'Enter your year of birth',
+            invalid: 'Enter a valid year of birth',
+          },
+        ],
       ]);
     });
 
@@ -53,7 +64,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows group "all empty" required message
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your date of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -69,7 +82,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows first error in group
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your day of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -85,7 +100,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows first error in group
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your month of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -101,7 +118,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows first error in group
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your year of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -117,7 +136,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows first error in group
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your day of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -133,7 +154,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows first error in group
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your month of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -149,7 +172,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows group "all empty" required message
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your date of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -166,7 +191,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows group "all empty" required message
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your date of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
 
@@ -181,7 +208,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows first error in group
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter your month of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
 
@@ -212,7 +241,9 @@ describe('Date inputs', () => {
       });
 
       // Fieldset shows group "all invalid" required message
-      expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+      expect(fieldset.getAttribute('aria-describedby')).toBe(
+        'dob-1-hint dob-1-error'
+      );
       expect(error.textContent).toBe('Enter a valid date of birth');
       expect(error.hasAttribute('hidden')).toBe(false);
     });
@@ -225,24 +256,35 @@ describe('Date inputs', () => {
     let fieldMap;
 
     beforeEach(async () => {
-      document.body.innerHTML = await readFile('./packages/component-date-input/src/examples/date-inputs.html');
+      document.body.innerHTML = await readFile(
+        './packages/component-date-input/src/html/date-inputs.html'
+      );
       fieldset = document.querySelector('fieldset');
       error = document.getElementById('dob-1-error');
       inputs = document.querySelectorAll('[type="text"]');
 
       fieldMap = new Map([
-        [inputs[0], {
-          required: 'Enter your day of birth',
-          invalid: 'Enter a valid day of birth',
-        }],
-        [inputs[1], {
-          required: 'Enter your month of birth',
-          invalid: 'Enter a valid month of birth',
-        }],
-        [inputs[2], {
-          required: 'Enter your year of birth',
-          invalid: 'Enter a valid year of birth',
-        }],
+        [
+          inputs[0],
+          {
+            required: 'Enter your day of birth',
+            invalid: 'Enter a valid day of birth',
+          },
+        ],
+        [
+          inputs[1],
+          {
+            required: 'Enter your month of birth',
+            invalid: 'Enter a valid month of birth',
+          },
+        ],
+        [
+          inputs[2],
+          {
+            required: 'Enter your year of birth',
+            invalid: 'Enter a valid year of birth',
+          },
+        ],
       ]);
     });
 
@@ -255,7 +297,9 @@ describe('Date inputs', () => {
         inputs[0].setCustomValidity('Enter your day of birth');
         setGroupInvalid(fieldMap, fieldset);
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'dob-1-hint dob-1-error'
+        );
         expect(error.textContent).toBe('Enter your day of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -268,7 +312,9 @@ describe('Date inputs', () => {
         inputs[1].setCustomValidity('Enter your month of birth');
         setGroupInvalid(fieldMap, fieldset);
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'dob-1-hint dob-1-error'
+        );
         expect(error.textContent).toBe('Enter your month of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -281,7 +327,9 @@ describe('Date inputs', () => {
         inputs[2].setCustomValidity('Enter your year of birth');
         setGroupInvalid(fieldMap, fieldset);
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'dob-1-hint dob-1-error'
+        );
         expect(error.textContent).toBe('Enter your year of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -295,7 +343,9 @@ describe('Date inputs', () => {
         inputs[1].setCustomValidity('Enter your day and month of birth');
         setGroupInvalid(fieldMap, fieldset);
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'dob-1-hint dob-1-error'
+        );
         expect(error.textContent).toBe('Enter your day and month of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -309,7 +359,9 @@ describe('Date inputs', () => {
         inputs[2].setCustomValidity('Enter your day and month of birth');
         setGroupInvalid(fieldMap, fieldset);
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'dob-1-hint dob-1-error'
+        );
         expect(error.textContent).toBe('Enter your day and month of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -324,7 +376,9 @@ describe('Date inputs', () => {
         inputs[2].setCustomValidity('Enter your date of birth');
         setGroupInvalid(fieldMap, fieldset);
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'dob-1-hint dob-1-error'
+        );
         expect(error.textContent).toBe('Enter your date of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
@@ -337,7 +391,9 @@ describe('Date inputs', () => {
         inputs[2].setCustomValidity('Enter your year of birth');
         setInvalid(inputs[2], fieldset);
 
-        expect(fieldset.getAttribute('aria-describedby')).toBe('dob-1-hint dob-1-error');
+        expect(fieldset.getAttribute('aria-describedby')).toBe(
+          'dob-1-hint dob-1-error'
+        );
         expect(error.textContent).toBe('Enter your year of birth');
         expect(error.hasAttribute('hidden')).toBe(false);
       });
