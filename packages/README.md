@@ -18,7 +18,7 @@ Make a copy of the [component-template](https://github.com/coopdigital/coop-fron
 
 The project is setup to use Yarn Workspaces. So any new package under `/packages` will be picked up in the Workbench application for development.
 
-Shared components use Jinja2 and will need a corresponding model in Contentful. For information on how and why to create these email matt.tyas@coop.co.uk or michael.chadwick@coop.co.uk.
+Shared components use Jinja2 and will need a corresponding model in Contentful. For information on how and why to create these please contact us via Slack in the [#experience-library-support](https://co-opdigital.slack.com/archives/C01ASJRQUCD) channel
 
 ## Amending a current package
 
@@ -102,7 +102,7 @@ If your package is ready to publish commit your files and open a pull request.
 
 Once approved and merged - go to the [Actions tab](https://github.com/coopdigital/coop-frontend/actions) in Github. There are two workflows which you need to run.
 
-If you need permissions email matt.tyas@coop.co.uk or michael.chadwick@coop.co.uk
+If you need permissions please contact us via Slack in the [#experience-library-support](https://co-opdigital.slack.com/archives/C01ASJRQUCD) channel
 
 ### Versioning workflow
 

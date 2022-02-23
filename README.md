@@ -13,3 +13,9 @@ This repository uses [lerna](https://github.com/lerna/lerna) to automatically ma
 If you publish a new or amended component - create a release for the coop-frontend repo adding release notes to let everyone know what changes you have made and why.
 
 The Slack github integration will let everyone on the #frontend and #designsystem channels know that there has been an update.
+
+## Using a package that is deprecated?
+
+We have been changing a lot in our frontend packages in order to simplify how teams use them. This means we have deprecated packages in favour of others or that it was no longer needed.
+
+If you are using a deprecated package please look in our `./docs/migrations` directory for a possible migration or contact the Experience Library Slack channel for support [#experience-library-support](https://co-opdigital.slack.com/archives/C01ASJRQUCD)
