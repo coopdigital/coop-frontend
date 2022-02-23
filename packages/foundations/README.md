@@ -70,6 +70,7 @@ If you only require partials of the foundations you can use the imports below. M
 ```
 
 ## Icon usage
+
 Icons are separted out as separate SVG files in `src` and combined in the build script into an SVG sprite called `coop-icon-sprite.svg`.
 
 This sprite can be served into your project from `node_nodules` from within `foundations/dist/assets/icons/coop-icon-sprite.svg`, using the build process of your choice.
@@ -77,28 +78,30 @@ This sprite can be served into your project from `node_nodules` from within `fou
 [Go to the design guidelines on using the icons on the Experience Library icons page](https://www.coop.co.uk/experience-library/foundations/icon-set.html)
 
 ### Using the icons in your project
+
 Once you have the icons loaded in your front-end you can referrence them by using:
 
 ```html
 <svg>
-    <use xlink:href="coop-icon-sprite.svg#[icon-file-name]"></use>
+  <use xlink:href="coop-icon-sprite.svg#[icon-file-name]"></use>
 </svg>
 ```
 
 For example the shopping basket icon would be used with:
 
 ### Using the icons accessibily
+
 You should always try to pair an icon with text if possible as suggested in the [Experience Library guidelines on icons](https://www.coop.co.uk/experience-library/foundations/icon-set.html)
 
 If the icon is paired with text it is classed as decorative and can be hidden from screenreaders.
 
 ```html
 <p>
-    <svg aria-hidden=“true”>
-        <title>Basket</title>
-        <use xlink:href="coop-icon-sprite.svg#icon-basket"></use>
-    </svg>
-    Basket
+  <svg aria-hidden="“true”">
+    <title>Basket</title>
+    <use xlink:href="coop-icon-sprite.svg#icon-basket"></use>
+  </svg>
+  Basket
 </p>
 ```
 
@@ -106,15 +109,16 @@ If it is not possible to pair the icon with text then the aria-hidden attribute 
 
 ```html
 <svg role="img">
-    <title>Basket</title>
-    <use xlink:href="coop-icon-sprite.svg#icon-basket"></use>
+  <title>Basket</title>
+  <use xlink:href="coop-icon-sprite.svg#icon-basket"></use>
 </svg>
 ```
 
 ### CSS
+
 There are some CSS classes to space and size the icons. The scooter being rectangular takes a modifier class to double the width.
 
-``` CSS
+```CSS
 .coop-i {
     fill: currentColor;
     margin: 20px;
@@ -171,9 +175,8 @@ There are some CSS classes to space and size the icons. The scooter being rectan
 #icon-scooter
 ```
 
-
 ## Contributing
 
 ## Migration from css-foundations to foundations
 
-[See our migration guide here](./docs/migration.md)
+[See our migration guide here](../../docs/migrations/@coopdigital-foundations-migration.md)
