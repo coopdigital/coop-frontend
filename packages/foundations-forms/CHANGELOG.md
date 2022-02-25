@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.5.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.4.1...@coopdigital/foundations-forms@5.5.0) (2022-02-25)
+
+
+### Features
+
+* new select dropdown styling ([bfa3ea9](https://github.com/coopdigital/coop-frontend/commit/bfa3ea961c942446d1124cb7c61543bfd9a069f5))
+* new select dropdown styling ([c0fa5b2](https://github.com/coopdigital/coop-frontend/commit/c0fa5b280c0ce6c3ea383ad6c91bb91cc0f3caad))
+
+
+
+
+
 ## [5.4.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.4.0...@coopdigital/foundations-forms@5.4.1) (2022-02-17)
 
 **Note:** Version bump only for package @coopdigital/foundations-forms
