@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.5.0...@coopdigital/foundations-forms@5.5.1) (2022-03-04)
+
+
+### Bug Fixes
+
+* amended positioning on dropdown chevron to px value ([3bc1433](https://github.com/coopdigital/coop-frontend/commit/3bc1433ce1722b0c810580d71f8cbcc26a370ca1))
+
+
+
+
+
 # [5.5.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.4.1...@coopdigital/foundations-forms@5.5.0) (2022-02-25)
 
 
