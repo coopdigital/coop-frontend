@@ -2,6 +2,8 @@
 @import "@coopdigital/foundations/src/foundations.pcss";
 @import "@coopdigital/shared-component--editorialcard/src/editorialCard.pcss";
 
+@import "./Combobox.css";
+
 body {
   background-color: var(--color-grey-neutral-light);
 }
