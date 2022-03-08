@@ -124,7 +124,14 @@
   }
 }
 .coop-c-hero__title--mega {
-  font-size: var(--type-h1-mega-s);
+  font-size: var(--type-h1-s);
+  line-height: 2.813rem;
+}
+@media (--mq-xsmall) {
+  .coop-c-hero__title--mega {
+    font-size: var(--type-h1-mega-s);
+    line-height: 3.625rem;
+  }
 }
 @media (--mq-large) {
   .coop-c-hero__title--mega {
@@ -271,6 +278,7 @@
 
 .coop-c-hero__disclaimer p {
   font-size: var(--type-sp-s);
+  line-height: var(--type-line-height);
 }
 
 @media (--mq-large) {
