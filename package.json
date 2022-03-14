@@ -8,7 +8,8 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "design-system"
+    "design-system",
+    "workbench"
   ],
   "engines": {
     "node": "12.x || 14.x || 16.x"
@@ -66,8 +67,8 @@
     "build:js": "lerna exec --scope @coopdigital/foundations-* --scope @coopdigital/shared-component-* --stream -- 'babel src/ --out-dir dist/ --source-maps --config-file ../../babel.config.js'",
     "build:foundations": "lerna run --stream --scope @coopdigital/foundations build",
     "build:component": "lerna exec --scope @coopdigital/component-* 'rollup --config ../../build/rollup/index.js'",
+    "workbench:dev": "lerna run --stream --scope workbench dev",
     "package:version": "lerna version --conventional-commits --yes",
-    "dev": "lerna run --stream --scope design-system server",
     "publish": "lerna publish from-package --yes --no-verify-access"
   }
 }

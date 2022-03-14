@@ -5,42 +5,28 @@ class ComboboxLibrary {
     this.dropDown = container.querySelector('[data-dropdown]');
     this.list = container.querySelector('[data-list]');
     this.options = container.querySelectorAll('[data-option]');
-    this.optionsText = Array.from(this.options).map(
-      (option) => option.innerText
-    );
   }
 
   static comboboxIsOpen = false;
+  static hasResults = 0;
 
   setup() {
     this.input.addEventListener('focus', () =>
       ComboboxLibrary.toggleDropdown(this.dropDown)
     );
-    this.input.addEventListener('blur', () => {
-      // We close the dropdown on blur but this will close
-      // if we click on the list
+    // this.input.addEventListener('blur', () => {
+    //   // We close the dropdown on blur but this will close
+    //   // if we click on the list
+    //   ComboboxLibrary.toggleDropdown(this.dropDown);
+    // });
+
+    this.list.addEventListener('click', (evt) => {
+      ComboboxLibrary.updateSelection(evt, this.input);
       ComboboxLibrary.toggleDropdown(this.dropDown);
     });
 
-    list.addEventListener('click', (e) => {
-      ComboboxLibrary.updateSelection(e, this.input);
-      ComboboxLibrary.toggleDropdown(this.dropDown);
-    });
-
-    this.input.addEventListener('input', (e) => {
-      this.list.innerHTML = '';
-      const filteredOptions = ComboboxLibrary.filterOptions(
-        this.optionsText,
-        e.target.value
-      );
-      filteredOptions.forEach((filteredOption) => {
-        const option = ComboboxLibrary.createOption(
-          filteredOption,
-          this.input,
-          this.dropDown
-        );
-        this.list.append(option);
-      });
+    this.input.addEventListener('input', (evt) => {
+      ComboboxLibrary.filterOptions(this.list, this.options, evt);
     });
   }
 
@@ -48,7 +34,6 @@ class ComboboxLibrary {
    * Dropdown states
    */
   static toggleDropdown = (dropDown) => {
-    console.log(this.comboboxIsOpen);
     if (this.comboboxIsOpen) {
       this.closeDropDown(dropDown);
       return;
@@ -62,29 +47,47 @@ class ComboboxLibrary {
   };
 
   static closeDropDown = (dropDown) => {
-    this.comboboxIsOpen = false;
     dropDown.setAttribute('aria-expanded', 'false');
+    this.comboboxIsOpen = false;
   };
 
   /**
-   * Filter the input from a user
+   * Filter the input from user input and return them as a new list. If no
+   * results then return a no results message
    */
-  static filterOptions = (options, inputValue) => {
-    const optionsArray = Array.from(options);
-    return optionsArray.filter((option) =>
+  static filterOptions = (list, options, event) => {
+    // Clear down the list before we re-populate.
+    list.innerHTML = '';
+
+    const inputValue = event.target.value;
+    const getOptions = Array.from(options).map((option) => option.innerHTML);
+
+    // Ensure both the option and the input value are lower case to allow for
+    // case sensitive matches
+    const filteredOptions = Array.from(getOptions).filter((option) =>
       option.toLowerCase().includes(inputValue.toLowerCase())
     );
+
+    if (filteredOptions.length > 0) {
+      this.hasResults = filteredOptions.length;
+      filteredOptions.forEach((filteredOption) => {
+        const option = ComboboxLibrary.createOption(filteredOption);
+        list.append(option);
+      });
+    } else {
+      const noResultOption = ComboboxLibrary.createNoResultOption();
+      list.append(noResultOption);
+    }
   };
 
   /**
    * Updating the selection from a user
    */
   static updateSelection = (selection, targetInput) => {
-    console.log(selection, targetInput);
-    // if (selection) {
-    //   targetInput.value = selection;
-    //   this.hasSelection = true;
-    // }
+    console.log(selection);
+    if (selection && selection.target.innerText) {
+      targetInput.value = selection.target.innerText;
+    }
   };
 
   /**
@@ -92,19 +95,17 @@ class ComboboxLibrary {
    *
    * Is this the best way? Could this impact perf if there are lots of options?
    */
-  static createOption = (text, input, dropDown) => {
-    const button = document.createElement('button');
+  static createOption = (text) => {
     const option = document.createElement('li');
+    option.setAttribute('data-option', '');
+    option.innerHTML = text;
+    return option;
+  };
 
-    button.innerHTML = text;
-    button.setAttribute('data-option', '');
-    button.addEventListener('click', (e) => {
-      this.updateSelection(e.target.innerHTML, input);
-      this.closeDropDown(dropDown);
-    });
-
-    option.appendChild(button);
-
+  static createNoResultOption = () => {
+    const option = document.createElement('p');
+    option.setAttribute('data-no-results', '');
+    option.innerHTML = 'No relevant options';
     return option;
   };
 }

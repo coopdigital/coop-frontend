@@ -1,5 +1,6 @@
 @import "@coopdigital/foundations/src/vars/vars.pcss";
 @import "@coopdigital/foundations/src/foundations.pcss";
+@import "@coopdigital/foundations-forms/src/forms.pcss";
 @import "@coopdigital/shared-component--editorialcard/src/editorialCard.pcss";
 
 @import "./Combobox.css";

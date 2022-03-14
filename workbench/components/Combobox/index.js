@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import ComboboxLibrary from './ComboboxLibrary.js';
 
 const Combobox = () => {
@@ -19,7 +20,22 @@ const Combobox = () => {
           data-input
           data-testid="combobox-input"
         />
-        <DropDown />
+        <div
+          style={{ display: 'none' }}
+          data-dropdown
+          aria-expanded="false"
+          data-testid="combobox-dropdown"
+        >
+          <ul data-list>
+            <li data-option>Partner</li>
+            <li data-option>Spouse</li>
+            <li data-option>Parent</li>
+            <li data-option>Child</li>
+            <li data-option>Brother</li>
+            <li data-option>Grandchild</li>
+            <li data-option>Father</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
