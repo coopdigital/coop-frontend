@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--hero@3.13.2...@coopdigital/shared-component--hero@3.13.3) (2022-03-23)
+
+
+### Bug Fixes
+
+* **INS-10:** reducing font size and line height of hero mega and disclaimer ([c886de4](https://github.com/coopdigital/coop-frontend/commit/c886de4a2e72c9a9c6639feffa705d74ce35d5c1))
+
+
+
+
+
 ## [3.13.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--hero@3.13.1...@coopdigital/shared-component--hero@3.13.2) (2022-02-21)
 
 **Note:** Version bump only for package @coopdigital/shared-component--hero
