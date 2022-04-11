@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@coopdigital/component-card": "*",
+    "@coopdigital/component-searchable-dropdown": "*",
     "@coopdigital/component-template": "*",
     "@coopdigital/foundations": "*",
     "@coopdigital/foundations-forms": "*",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "eslint": "8.7.0",
-    "eslint-config-next": "12.0.8"
+    "eslint-config-next": "12.0.8",
+    "next-transpile-modules": "^9.0.0"
   }
 }
