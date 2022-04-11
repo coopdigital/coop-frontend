@@ -31,6 +31,11 @@ export default function Home() {
                     <a>Editorial card</a>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/components/searchable-dropdown">
+                    <a>Searchable Dropdown</a>
+                  </Link>
+                </li>
               </ul>
             </nav>
           </section>

@@ -1,11 +1,11 @@
-import Combobox from 'components/Combobox';
+import { SearchableDropdown } from '@coopdigital/component-searchable-dropdown/src/index';
 import Layout from 'components/layout';
 
 const ComoboboxPage = () => {
   return (
     <Layout>
       <div className="coop-form__row">
-        <Combobox />
+        <SearchableDropdown />
       </div>
       <div className="coop-form__row">
         <label htmlFor="">Another field</label>

@@ -1,4 +1,8 @@
-module.exports = {
+const withTM = require('next-transpile-modules')([
+  '../node_modules/@coopdigital/component-searchable-dropdown',
+]);
+
+module.exports = withTM({
   reactStrictMode: true,
   basePath: '/workbench',
   webpack: (config, options) => {
@@ -20,4 +24,4 @@ module.exports = {
 
     return config;
   },
-};
+});
