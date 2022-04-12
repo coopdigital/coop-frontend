@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
+    'arrow-body-style': 'off',
     'import/extensions': [
       'error',
       'always',
