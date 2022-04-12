@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign, no-console */
 /**
  * Use aria-selected to highlight the selected option in CSS
  */
@@ -14,13 +15,9 @@ class SearchableDropdownLibrary {
   }
 
   setup() {
-    this.input.addEventListener('focusin', () =>
-      SearchableDropdownLibrary.toggleDropdown(this.dropDown)
-    );
-
-    this.input.addEventListener('focusout', (evt) => {
-      console.log(evt);
-      SearchableDropdownLibrary.toggleDropdown(this.dropDown);
+    this.input.addEventListener('focusin', () => {
+      console.log('focus in');
+      this.toggleDropdown(this.dropDown);
     });
 
     // this.input.addEventListener('blur', () => {
@@ -29,94 +26,99 @@ class SearchableDropdownLibrary {
     //   SearchableDropdownLibrary.toggleDropdown(this.dropDown);
     // });
 
-    this.list.addEventListener('click', (evt) => {
-      SearchableDropdownLibrary.updateSelection(evt, this.input);
-      SearchableDropdownLibrary.toggleDropdown(this.dropDown);
+    this.list.addEventListener('mousedown', (evt) => {
+      console.log(evt);
+      this.updateSelection(evt, this.input);
+      this.toggleDropdown(this.dropDown);
+    });
+
+    this.input.addEventListener('focusout', (evt) => {
+      console.log(evt);
+      this.closeDropDown(this.dropDown);
     });
 
     this.input.addEventListener('input', (evt) => {
-      SearchableDropdownLibrary.filterOptions(this.list, this.options, evt);
+      this.filterOptions(this.list, this.options, evt);
     });
-  }
 
-  /**
-   * Dropdown states
-   */
-  static toggleDropdown = (dropDown) => {
-    if (this.comboboxIsOpen) {
-      this.closeDropDown(dropDown);
-      return;
-    }
-    this.openDropDown(dropDown);
-  };
+    this.toggleDropdown = (dropDown) => {
+      if (this.comboboxIsOpen) {
+        this.closeDropDown(dropDown);
+        return;
+      }
+      this.openDropDown(dropDown);
+    };
 
-  static openDropDown = (dropDown) => {
-    this.comboboxIsOpen = true;
-    dropDown.setAttribute('aria-expanded', 'true');
-  };
+    this.openDropDown = (dropDown) => {
+      this.comboboxIsOpen = true;
+      dropDown.setAttribute('aria-expanded', 'true');
+    };
 
-  static closeDropDown = (dropDown) => {
-    dropDown.setAttribute('aria-expanded', 'false');
-    this.comboboxIsOpen = false;
-  };
+    this.closeDropDown = (dropDown) => {
+      dropDown.setAttribute('aria-expanded', 'false');
+      this.comboboxIsOpen = false;
+    };
 
-  /**
-   * Filter the input from user input and return them as a new list. If no
-   * results then return a no results message
-   */
-  static filterOptions = (list, options, event) => {
-    // Clear down the list before we re-populate.
-    list.innerHTML = '';
+    /**
+     * Filter the input from user input and return them as a new list. If no
+     * results then return a no results message
+     */
 
-    const inputValue = event.target.value;
-    const getOptions = Array.from(options).map((option) => option.innerHTML);
+    this.filterOptions = (list, options, event) => {
+      // Clear down the list before we re-populate.
+      list.innerHTML = '';
 
-    // Ensure both the option and the input value are lower case to allow for
-    // case sensitive matches
-    const filteredOptions = Array.from(getOptions).filter((option) =>
-      option.toLowerCase().includes(inputValue.toLowerCase())
-    );
+      const inputValue = event.target.value;
+      const getOptions = Array.from(options).map((option) => option.innerHTML);
 
-    if (filteredOptions.length > 0) {
-      this.hasResults = filteredOptions.length;
-      filteredOptions.forEach((filteredOption) => {
-        const option = SearchableDropdownLibrary.createOption(filteredOption);
-        list.append(option);
+      // Ensure both the option and the input value are lower case to allow for
+      // case sensitive matches
+      const filteredOptions = Array.from(getOptions).filter((option) => {
+        return option.toLowerCase().includes(inputValue.toLowerCase());
       });
-    } else {
-      const noResultOption = SearchableDropdownLibrary.createNoResultOption();
-      list.append(noResultOption);
-    }
-  };
 
-  /**
-   * Updating the selection from a user
-   */
-  static updateSelection = (selection, targetInput) => {
-    console.log(selection);
-    if (selection && selection.target.innerText) {
-      targetInput.value = selection.target.innerText;
-    }
-  };
+      if (filteredOptions.length > 0) {
+        this.hasResults = filteredOptions.length;
+        filteredOptions.forEach((filteredOption) => {
+          const option = this.createOption(filteredOption);
+          list.append(option);
+        });
+      } else {
+        const noResultOption = this.createNoResultOption();
+        list.append(noResultOption);
+      }
+    };
 
-  /**
-   * Creating a new option from the filtered results
-   *
-   * Is this the best way? Could this impact perf if there are lots of options?
-   */
-  static createOption = (text) => {
-    const option = document.createElement('li');
-    option.setAttribute('data-option', '');
-    option.innerHTML = text;
-    return option;
-  };
+    /**
+     * Updating the selection from a user
+     */
 
-  static createNoResultOption = () => {
-    const option = document.createElement('p');
-    option.setAttribute('data-no-results', '');
-    option.innerHTML = 'No relevant options';
-    return option;
-  };
+    this.updateSelection = (selection, targetInput) => {
+      console.log(selection, targetInput);
+      if (selection && selection.target.innerText) {
+        targetInput.value = selection.target.innerText;
+      }
+    };
+
+    /**
+     * Creating a new option from the filtered results
+     *
+     * Is this the best way? Could this impact perf if there are lots of options?
+     */
+    this.createOption = (text) => {
+      const option = document.createElement('li');
+      option.setAttribute('data-option', '');
+      option.innerHTML = text;
+      return option;
+    };
+
+    this.createNoResultOption = () => {
+      const option = document.createElement('p');
+      option.setAttribute('data-no-results', '');
+      option.innerHTML = 'No relevant options';
+      return option;
+    };
+  }
 }
 
 export default SearchableDropdownLibrary;
