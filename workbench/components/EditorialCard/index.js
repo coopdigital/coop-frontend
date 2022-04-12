@@ -1,4 +1,4 @@
-import classNames from 'utils/classNames';
+import classNames from '../../utils/classNames';
 
 const EditorialCardLink = ({ href, title, dataContentParent, children }) => {
   if (href) {

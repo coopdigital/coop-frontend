@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Layout from 'components/layout';
+import Layout from '../../../components/Layout';
 
 const EditorialCardPage = () => {
   const [title, setTitle] = useState(`
@@ -25,11 +25,11 @@ const EditorialCardPage = () => {
 
         <section className="coop-u-padding-t-32">
           <p className="">npm install @coopdigital/editorialCard</p>
-          {`<EditorialCard ` +
-            `
-          title="Welcome to Co-op, buy some crisps!
-          imgSrc="//image-url"
-           />`}
+          <code>
+            {
+              '<EditorialCard title="Welcome to Co-op, buy some crisps! imgSrc="//image-url" />'
+            }
+          </code>
         </section>
 
         <section className="coop-l-grid">

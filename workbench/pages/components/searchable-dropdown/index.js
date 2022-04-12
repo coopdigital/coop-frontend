@@ -1,5 +1,5 @@
 import { SearchableDropdown } from '@coopdigital/component-searchable-dropdown/src/index';
-import Layout from 'components/layout';
+import Layout from '../../../components/Layout';
 
 const ComoboboxPage = () => {
   return (
@@ -8,8 +8,8 @@ const ComoboboxPage = () => {
         <SearchableDropdown />
       </div>
       <div className="coop-form__row">
-        <label htmlFor="">Another field</label>
-        <input type="text" />
+        <label htmlFor="another-field">Another field</label>
+        <input name="another-field" type="text" />
       </div>
     </Layout>
   );

@@ -6,18 +6,16 @@ export default function Breadcrumb() {
 
   const filterEmpty = (el) => el !== '';
   function formatLabel(label) {
-    if (label == '' || label == '/') {
+    if (label === '' || label === '/') {
       return label;
     }
 
     const hashSplit = label.split('#');
     const dashSplit = hashSplit[0].split('-');
 
-    const upperCase = dashSplit.map(
-      (word) => `${word[0].toUpperCase()}${word.slice(1)}`
-    );
-
-    return upperCase.join(' ');
+    return dashSplit
+      .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+      .join(' ');
   }
 
   function getRoutes() {
@@ -38,30 +36,20 @@ export default function Breadcrumb() {
 
   return (
     <div>
-      {breadcrumbLinks.map((link, index, array) =>
-        isCurrentPage(index, array) ? (
-          <PageSignPost
-            label={breadcrumbLabel[index]}
-            key={breadcrumbLabel[index]}
-          />
-        ) : (
+      {breadcrumbLinks.map((link, index, array) => {
+        return (
           <PageLink
             link={link}
+            active={isCurrentPage(index, array)}
             label={breadcrumbLabel[index]}
             key={breadcrumbLabel[index]}
           />
-        )
-      )}
+        );
+      })}
     </div>
   );
 }
-function PageSignPost(props) {
-  return (
-    <Divider>
-      <span className="coop-t-font-size-18">{props.label} </span>
-    </Divider>
-  );
-}
+
 function PageLink(props) {
   return (
     <Divider>

@@ -1,5 +1,5 @@
-import Layout from 'components/layout';
-import EditorialCard from 'components/EditorialCard';
+import Layout from '../../components/Layout';
+import EditorialCard from '../../components/EditorialCard';
 
 export default function EditorialCardExamplePage() {
   return (

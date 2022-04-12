@@ -1,5 +1,6 @@
-import Header from './header';
-import Breadcrumb from './breadcrumb';
+import Header from './Header';
+import Breadcrumb from './Breadcrumb';
+
 export default function Layout(props) {
   return (
     <>
