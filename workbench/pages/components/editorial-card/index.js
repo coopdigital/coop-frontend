@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Layout from '../../../components/tempLayout';
+import Layout from '../../../components/Layout';
 
 const EditorialCardPage = () => {
   const [title, setTitle] = useState(`
