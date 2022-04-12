@@ -1,5 +1,5 @@
-import Header from './tempHeader';
-import Breadcrumb from './tempBreadcrumb';
+import Header from './Header';
+import Breadcrumb from './Breadcrumb';
 
 export default function Layout(props) {
   return (
