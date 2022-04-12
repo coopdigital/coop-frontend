@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout';
+import Layout from '../../components/tempLayout';
 import EditorialCard from '../../components/EditorialCard';
 
 export default function EditorialCardExamplePage() {

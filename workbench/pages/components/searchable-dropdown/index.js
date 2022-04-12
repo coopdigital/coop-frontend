@@ -1,5 +1,5 @@
 import { SearchableDropdown } from '@coopdigital/component-searchable-dropdown/src/index';
-import Layout from '../../../components/Layout';
+import Layout from '../../../components/tempLayout';
 
 const ComoboboxPage = () => {
   return (
