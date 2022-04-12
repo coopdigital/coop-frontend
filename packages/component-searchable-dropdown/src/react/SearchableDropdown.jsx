@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import SearchableDropdownLibrary from "../lib/SearchableDropdownLibrary.js";
+import React, { useRef, useEffect } from 'react';
+import SearchableDropdownLibrary from '../lib/SearchableDropdownLibrary.js';
 
 const SearchableDropdown = () => {
   const comboboxRef = useRef();
@@ -25,7 +25,7 @@ const SearchableDropdown = () => {
           aria-expanded="false"
         />
         <div
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
           data-dropdown
           data-testid="combobox-dropdown"
         >

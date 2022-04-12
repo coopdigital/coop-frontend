@@ -1,17 +1,17 @@
 import { useRef, useEffect } from 'react';
-import ComboboxLibrary from './ComboboxLibrary.js';
+import SearchableDropdownLibrary from '@coopdigital/component-searchable-dropdown/src/lib/SearchableDropdownLibrary';
 
 const Combobox = () => {
   const comboboxRef = useRef();
-
+  console.log('hello');
   useEffect(() => {
-    new ComboboxLibrary(comboboxRef.current).setup();
+    new SearchableDropdownLibrary(comboboxRef.current).setup();
   }, []);
 
   return (
     <div ref={comboboxRef}>
       <div data-combobox>
-        <label htmlor="combobox">How you know them</label>
+        <label htmlFor="combobox">How you know them</label>
         <input
           name="combobox"
           className="coop-form__input"

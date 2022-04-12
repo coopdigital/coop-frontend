@@ -1,12 +1,15 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from 'components/layout';
+import Layout from '../components/Layout';
+
 export default function Home() {
+  /*
   const htmlComonentList = [
     { linkText: 'Editorial card', path: '/editorial-card' },
     { linkText: 'Blockquote', path: '/blockquote' },
   ];
   const reactComponentList = [];
+  */
 
   return (
     <div>

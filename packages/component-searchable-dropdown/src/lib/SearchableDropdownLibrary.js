@@ -9,10 +9,9 @@ class SearchableDropdownLibrary {
     this.dropDown = container.querySelector('[data-dropdown]');
     this.list = container.querySelector('[data-list]');
     this.options = container.querySelectorAll('[data-option]');
+    this.comboboxIsOpen = false;
+    this.hasResults = 0;
   }
-
-  static comboboxIsOpen = false;
-  static hasResults = 0;
 
   setup() {
     this.input.addEventListener('focusin', () =>
