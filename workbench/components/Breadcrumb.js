@@ -1,38 +1,33 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+const filterEmpty = (el) => el !== '';
+const isCurrentPage = (index, list) => index === list.length - 1;
+
+function formatRouteLabel(label) {
+  if (label === '' || label === '/') {
+    return label;
+  }
+  return label.split('#')[0].replaceAll('-', ' ');
+}
+
+function getRoutes(path) {
+  let subRoute = path.split('/');
+  const routes = subRoute.map((element) => `${element}`);
+  subRoute[0] = 'workbench';
+  for (let i = 1; i < routes.length; i++) {
+    routes[i] = `${routes[i - 1]}/${routes[i]}`;
+  }
+  subRoute = subRoute.map((label) => formatRouteLabel(label));
+  subRoute = subRoute.filter(filterEmpty);
+  routes[0] = '/';
+
+  return [[...new Set(routes.filter(filterEmpty))], subRoute];
+}
+
 export default function Breadcrumb() {
   const router = useRouter();
-
-  const filterEmpty = (el) => el !== '';
-  function formatLabel(label) {
-    if (label === '' || label === '/') {
-      return label;
-    }
-
-    const hashSplit = label.split('#');
-    const dashSplit = hashSplit[0].split('-');
-
-    return dashSplit
-      .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
-      .join(' ');
-  }
-
-  function getRoutes() {
-    let subRoute = router.asPath.split('/');
-    let routes = subRoute.map((element) => `${element}`);
-    subRoute[0] = 'workbench';
-    for (let i = 1; i < routes.length; i++) {
-      routes[i] = `${routes[i - 1]}/${routes[i]}`;
-    }
-    subRoute = subRoute.map((i) => formatLabel(i));
-    subRoute = subRoute.filter(filterEmpty);
-    routes[0] = '/';
-    routes = routes.filter(filterEmpty);
-    return [[...new Set(routes)], subRoute];
-  }
-  const [breadcrumbLinks, breadcrumbLabel] = getRoutes();
-  const isCurrentPage = (index, list) => index === list.length - 1;
+  const [breadcrumbLinks, breadcrumbLabel] = getRoutes(router.asPath);
 
   return (
     <div>
@@ -50,22 +45,22 @@ export default function Breadcrumb() {
   );
 }
 
-function PageLink(props) {
+const PageLink = ({ label, link }) => {
   return (
     <Divider>
-      <Link href={props.link}>
-        <a className="coop-t-font-size-18" href={props.link}>
-          {props.label}
+      <Link href={link}>
+        <a className="coop-t-font-size-18 capitalize" href={link}>
+          {label}
         </a>
       </Link>
     </Divider>
   );
-}
+};
 
-function Divider(props) {
+const Divider = ({ children }) => {
   return (
     <span>
-      {props.children} {'/'}{' '}
+      {children} {'/'}{' '}
     </span>
   );
-}
+};
