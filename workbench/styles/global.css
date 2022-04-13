@@ -14,3 +14,7 @@ body {
   border: 2px solid var(--color-light-dark);
   border-radius: 8px;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
