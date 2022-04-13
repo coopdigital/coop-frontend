@@ -18,17 +18,14 @@ const EditorialCardPage = () => {
         <section>
           <h1> Editorial Card</h1>
           <p className="coop-t-lead-p">
-            An editorial card lets you highlight and link to more in-depth
-            content on another page.
+            An editorial card lets you highlight and link to more in-depth content on another page.
           </p>
         </section>
 
         <section className="coop-u-padding-t-32">
           <p className="">npm install @coopdigital/editorialCard</p>
           <code>
-            {
-              '<EditorialCard title="Welcome to Co-op, buy some crisps! imgSrc="//image-url" />'
-            }
+            {'<EditorialCard title="Welcome to Co-op, buy some crisps! imgSrc="//image-url" />'}
           </code>
         </section>
 
