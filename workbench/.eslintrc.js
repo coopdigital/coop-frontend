@@ -20,23 +20,7 @@ module.exports = {
   plugins: ['jest'],
   rules: {
     'arrow-body-style': 'off',
-    'max-len': [
-      'warn',
-      {
-        ignoreUrls: true,
-        ignoreStrings: true,
-        ignoreComments: true,
-        code: 100,
-      },
-    ],
-    'jsx-a11y/anchor-is-valid': [0, 'never'],
-    'object-curly-newline': [0, 'never'],
-    'no-plusplus': [
-      1,
-      {
-        allowForLoopAfterthoughts: true,
-      },
-    ],
+
     'import/extensions': [
       0,
       'never',
