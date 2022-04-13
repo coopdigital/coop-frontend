@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     '../node_modules/eslint-config-next',
     '../node_modules/eslint-config-next/core-web-vitals',
+    '../packages/config-eslint/index.js',
   ],
   settings: {
     react: {
@@ -19,8 +20,7 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
-    'arrow-body-style': 'off',
-
+    'jsx-a11y/anchor-is-valid': [0, 'never'],
     'import/extensions': [
       0,
       'never',
