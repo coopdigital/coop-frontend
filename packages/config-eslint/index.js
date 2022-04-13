@@ -27,7 +27,7 @@ module.exports = {
       },
     ],
     'arrow-body-style': 'off',
-    'object-curly-newline': ['warn', { multiline: true }],
+    'object-curly-newline': 'off',
     'import/prefer-default-export': 'off',
     'import/extensions': [
       'error',
