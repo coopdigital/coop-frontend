@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   moduleFileExtensions: ['js', 'jsx', 'mjs'],
   modulePathIgnorePatterns: ['./node_modules/'],
   moduleNameMapper: {

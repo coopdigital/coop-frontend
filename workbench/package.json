@@ -8,7 +8,13 @@
     "build:static": "next build && next export",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[m|t|j]sx?$": "babel-jest"
+    }
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
