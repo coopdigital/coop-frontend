@@ -8,6 +8,20 @@ yarn run dev
 Navigate to ```localhost:3000/workbench```
 
 
+## Deploying
+
+We are using the one-web-hosting tool for deploying. You'll first need to generate a static output, then use the one-web-hosting tool command wrapped with the aws-profile that has permissions for the environment you're deploying to. 
+
+Example for building for development.
+
+- yarn run build:static
+- aws-profile -p coop-pub2-dev one-web-hosting deploy --yes --env=dev
+- development.static.coop.co.uk/workbench
+
+The aws profile name may different depenending on what you've called it. You can check this by viewing ``` cat ~/.aws/config ```
+
+If you want to change the path the website is viewable in, one-web-hosting.json amend the projectName to whatever you like. Then amend the basePath in next.config.js to mirror this new value.
+
 ## Building
 
 > #### Ensure that you've ``` yarn install ``` in the _root_ of this repository first. 
