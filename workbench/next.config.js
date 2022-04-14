@@ -5,6 +5,7 @@ const withTM = require('next-transpile-modules')([
 module.exports = withTM({
   reactStrictMode: true,
   basePath: '/workbench',
+  trailingSlash: true,
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.pcss/,
