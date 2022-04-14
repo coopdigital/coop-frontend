@@ -1,5 +1,27 @@
 {% macro render(content, cms, config) %}
 
+{% import 'macros/elements/images.html' as images %}
+
+{%
+  set imageDimensions = {
+    'width': 565,
+    'height': 317,
+
+    'small' : {
+      'width': 565,
+      'height': 317
+    },
+    'medium' : {
+      'width': 484,
+      'height': 272
+    },
+    'large' : {
+      'width': 393,
+      'height': 223
+    }
+  }
+%}
+
   <div class="coop-c-signpost-list__item coop-c-signpost">
     {% if content.fields.link and content.fields.link.sys.id %}
       {% with entryLink = cms.get_entry(content.fields.link.sys.id) %}
@@ -46,40 +68,7 @@
       {% with imageEntry = cms.get_asset(content.fields.image.sys.id) %}
         <figure class="coop-c-signpost__media">
           <picture class="coop-c-signpost__image">
-
-            <source media="(min-width: 48em)"
-                    srcset="{{ imageEntry.fields.file.url }}?fm=webp&amp;fit=thumb&amp;q=60&amp;w=360&amp;h=203 1x,
-                              {{ imageEntry.fields.file.url }}?fm=webp&amp;fit=thumb&amp;q=60&amp;w={{ 360 * 2 }}&amp;h={{ 203 * 2 }} 2x"
-                    type="image/webp" />
-
-            <source media="(min-width: 37.5em)"
-                    srcset="{{ imageEntry.fields.file.url }}?fm=webp&amp;fit=thumb&amp;q=60&amp;w=751&amp;h=423 1x,
-                              {{ imageEntry.fields.file.url }}?fm=webp&amp;fit=thumb&amp;q=60&amp;w={{ 751 * 2 }}&amp;h={{ 423 * 2 }} 2x"
-                    type="image/webp" />
-
-            <source media="(min-width: 25.9375em)"
-                    srcset="{{ imageEntry.fields.file.url }}?fm=webp&amp;fit=thumb&amp;q=60&amp;w=583&amp;h=329 1x,
-                              {{ imageEntry.fields.file.url }}?fm=webp&amp;fit=thumb&amp;q=60&amp;w={{ 583 * 2 }}&amp;h={{ 329 * 2 }} 2x"
-                    type="image/webp" />
-
-
-            <source media="(min-width: 48em)"
-                    srcset="{{ imageEntry.fields.file.url }}?fm=jpg&amp;fit=thumb&amp;fl=progressive&amp;q=60&amp;w=360&amp;h=203 1x,
-                              {{ imageEntry.fields.file.url }}?fm=jpg&amp;fit=thumb&amp;fl=progressive&amp;q=60&amp;w={{ 360 * 2 }}&amp;h={{ 203 * 2 }} 2x"
-                    type="image/jpeg" />
-
-            <source media="(min-width: 37.5em)"
-                    srcset="{{ imageEntry.fields.file.url }}?fm=jpg&amp;fit=thumb&amp;fl=progressive&amp;q=60&amp;w=751&amp;h=423 1x,
-                              {{ imageEntry.fields.file.url }}?fm=jpg&amp;fit=thumb&amp;fl=progressive&amp;q=60&amp;w={{ 751 * 2 }}&amp;h={{ 423 * 2 }} 2x"
-                    type="image/jpeg" />
-
-            <source media="(min-width: 25.9375em)"
-                    srcset="{{ imageEntry.fields.file.url }}?fm=jpg&amp;fit=thumb&amp;fl=progressive&amp;q=60&amp;w=583&amp;h=329 1x,
-                              {{ imageEntry.fields.file.url }}?fm=jpg&amp;fit=thumb&amp;fl=progressive&amp;q=60&amp;w={{ 583 * 2 }}&amp;h={{ 329 * 2 }} 2x"
-                    type="image/jpeg"/>
-
-            <img src="{{ imageEntry.fields.file.url }}?fm=jpg&amp;fit=thumb&amp;q=60&amp;w=751&amp;h=423"
-                  alt="{% if imageEntry.fields.description %}{{ imageEntry.fields.description }}{% else %}{{ imageEntry.fields.title }}{% endif %}">
+            {{ images.render(imageEntry, imageDimensions) }}
           </picture>
 
         </figure>
