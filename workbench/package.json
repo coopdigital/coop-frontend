@@ -11,11 +11,6 @@
     "lint": "next lint",
     "test": "jest --coverage"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.[m|t|j]sx?$": "babel-jest"
-    }
-  },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@coopdigital/component-card": "*",
