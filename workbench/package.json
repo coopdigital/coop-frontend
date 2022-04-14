@@ -9,7 +9,8 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --maxWorkers=25%"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
