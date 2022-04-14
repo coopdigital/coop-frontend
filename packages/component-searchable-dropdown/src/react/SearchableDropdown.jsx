@@ -24,11 +24,7 @@ const SearchableDropdown = () => {
           aria-autocomplete="list"
           aria-expanded="false"
         />
-        <div
-          style={{ display: 'none' }}
-          data-dropdown
-          data-testid="combobox-dropdown"
-        >
+        <div style={{ display: 'none' }} data-dropdown data-testid="combobox-dropdown">
           <ul id="comboboxvalues" role="listbox" data-list>
             {/* These valuse would be mapped from a data prop */}
             <li role="option" aria-selected="false" data-option>
