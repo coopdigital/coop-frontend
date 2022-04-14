@@ -28,6 +28,8 @@ module.exports = {
     ],
     'arrow-body-style': 'off',
     'object-curly-newline': 'off',
+    'operator-linebreak': ['warn', 'before'],
+    'comma-dangle': ['warn', 'only-multiline'],
     'import/prefer-default-export': 'off',
     'import/extensions': [
       'error',
