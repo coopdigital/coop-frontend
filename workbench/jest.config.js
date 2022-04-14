@@ -8,6 +8,6 @@ module.exports = {
   testMatch: ['**/(*.)test.{js,jsx,mjs}'],
   testPathIgnorePatterns: ['./node_modules/'],
   transform: {
-    '^.+\\.m?jsx?$': 'babel-jest',
+    '^.+\\.m?jsx?$': ['babel-jest', { presets: ['next/babel'] }],
   },
 };
