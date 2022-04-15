@@ -5,16 +5,17 @@ export const generateBreadcrumbTrail = (path) => {
   const fragments = path.split('/').filter((fragment) => fragment);
   fragments.unshift('workbench');
 
-  const trail = fragments.reduce((previous, current, index) => {
-    const fragmentPath = index > 0 ? `${previous[index - 1].path}/${current}` : '';
+  const trail = fragments.reduce((trailArray, current, index) => {
+    const fragmentPath = index > 0 ? `${trailArray[index - 1].path}/${current}` : '';
     const isActive = index === fragments.length - 1;
-    previous.push({ path: fragmentPath, label: current.replaceAll('-', ' '), isActive });
-    return previous;
+    trailArray.push({ path: fragmentPath, label: current.replaceAll('-', ' '), isActive });
+    return trailArray;
   }, []);
 
   // Because we set the basePath in next.config to /workbench but still want to render the first breadcrumb
   // Remember Next will prepend the basePath to all urls
   trail[0].path = '/';
+  trail[0].label = 'home';
   return trail;
 };
 
@@ -35,9 +36,11 @@ export const Breadcrumb = () => {
 
 const PageLink = ({ label, link, active }) => {
   return (
-    <span>
+    <span className="coop-t-font-size-16">
       <Link href={link}>
-        <a className="coop-t-font-size-18 capitalize">{label}</a>
+        <a className=" coop-t-nounderline capitalize">
+          <strong>{label}</strong>
+        </a>
       </Link>
       {active ? '' : ' / '}
     </span>

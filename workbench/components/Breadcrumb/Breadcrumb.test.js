@@ -10,7 +10,7 @@ describe('bread crumb trail', () => {
     const path = generateBreadcrumbTrail('/components');
 
     expect(path).toStrictEqual([
-      { path: '/', label: 'workbench', isActive: false },
+      { path: '/', label: 'home', isActive: false },
       { path: '/components', label: 'components', isActive: true },
     ]);
   });
@@ -19,7 +19,7 @@ describe('bread crumb trail', () => {
     const path = generateBreadcrumbTrail('/components/searchable-dropdown');
 
     expect(path).toStrictEqual([
-      { path: '/', label: 'workbench', isActive: false },
+      { path: '/', label: 'home', isActive: false },
       { path: '/components', label: 'components', isActive: false },
       {
         path: '/components/searchable-dropdown',
@@ -33,7 +33,7 @@ describe('bread crumb trail', () => {
     const path = generateBreadcrumbTrail('/components/searchable-dropdown/some-nested-page');
 
     expect(path).toStrictEqual([
-      { path: '/', label: 'workbench', isActive: false },
+      { path: '/', label: 'home', isActive: false },
       { path: '/components', label: 'components', isActive: false },
       {
         path: '/components/searchable-dropdown',
@@ -53,7 +53,7 @@ describe('bread crumb trail', () => {
       '/components/searchable-dropdown/some-nested-page/apple/orange/banana'
     );
     expect(path).toStrictEqual([
-      { path: '/', label: 'workbench', isActive: false },
+      { path: '/', label: 'home', isActive: false },
       { path: '/components', label: 'components', isActive: false },
       {
         path: '/components/searchable-dropdown',
@@ -87,7 +87,7 @@ describe('bread crumb trail', () => {
     const path = generateBreadcrumbTrail('/components/searchable-dropdown');
 
     expect(path).toStrictEqual([
-      { path: '/', label: 'workbench', isActive: false },
+      { path: '/', label: 'home', isActive: false },
       { path: '/components', label: 'components', isActive: false },
       {
         path: '/components/searchable-dropdown',
