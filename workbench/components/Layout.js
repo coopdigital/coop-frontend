@@ -1,14 +1,19 @@
 import Header from './Header';
-import Breadcrumb from './Breadcrumb';
+import { Breadcrumb } from './Breadcrumb';
 
 export default function Layout(props) {
   return (
     <>
       <Header />
-      <div className="coop-l-container coop-u-padding-b-16 coop-u-padding-t-8">
-        <Breadcrumb />
+      <div
+        style={{ borderBottom: '1px solid #ccc' }}
+        className="coop-u-margin-b-16 coop-u-padding-b-16"
+      >
+        <div className="coop-l-container">
+          <Breadcrumb />
+        </div>
       </div>
-      <main className="main-content coop-u-padding-b-32 coop-u-padding-t-32 coop-l-container">
+      <main className="">
         <div className="coop-l-container">{props.children}</div>
       </main>
     </>

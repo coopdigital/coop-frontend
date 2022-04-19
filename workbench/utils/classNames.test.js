@@ -1,4 +1,4 @@
-import classNames from '../classNames';
+import classNames from './classNames';
 
 describe('classNames', () => {
   it('should return default className if additionalClasses are empty/invalid', () => {

@@ -9,7 +9,8 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --maxWorkers=25%"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
@@ -20,12 +21,16 @@
     "@coopdigital/foundations-forms": "^5.5.2",
     "@coopdigital/shared-component--editorialcard": "^2.5.1",
     "next": "12.1.0",
+    "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "12.1.2",
+    "babel-jest": "^27.5.1",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
-    "next-transpile-modules": "^9.0.0"
+    "jest": "^27.5.1"
   }
 }

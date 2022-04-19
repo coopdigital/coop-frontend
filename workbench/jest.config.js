@@ -4,7 +4,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|pcss)$': '<rootDir>/__mocks__/styleMock.js',
   },
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   testMatch: ['**/(*.)test.{js,jsx,mjs}'],
   testPathIgnorePatterns: ['./node_modules/'],
   transform: {
