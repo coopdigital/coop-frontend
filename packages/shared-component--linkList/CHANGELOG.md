@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--linklist@3.4.2...@coopdigital/shared-component--linklist@3.4.3) (2022-04-19)
+
+**Note:** Version bump only for package @coopdigital/shared-component--linklist
+
+
+
+
+
 ## [3.4.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--linklist@3.4.1...@coopdigital/shared-component--linklist@3.4.2) (2022-02-21)
 
 **Note:** Version bump only for package @coopdigital/shared-component--linklist

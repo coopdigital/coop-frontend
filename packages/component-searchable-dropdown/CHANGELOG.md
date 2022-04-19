@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2022-04-19)
+
+
+### Bug Fixes
+
+* remove static class props from searchable lib ([7949f6c](https://github.com/coopdigital/coop-frontend/commit/7949f6c65407124347ec8c9679aff754dba35cab))
+
+
+### Features
+
+* wip searchable dropdown ([8dd04a9](https://github.com/coopdigital/coop-frontend/commit/8dd04a98b88686f41c21139efec0915d1977db1f))
+
+
+
+
+
 ## [1.3.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-template@1.3.0...@coopdigital/component-template@1.3.1) (2022-02-17)
 
 

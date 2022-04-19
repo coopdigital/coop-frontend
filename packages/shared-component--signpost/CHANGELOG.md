@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--signpost@2.7.0...@coopdigital/shared-component--signpost@2.7.1) (2022-04-19)
+
+
+### Bug Fixes
+
+* used the images.render function in signpost.html for consistency ([fb4a38e](https://github.com/coopdigital/coop-frontend/commit/fb4a38eeacf1ceb98b9b026eb99db19842a039fb))
+
+
+
+
+
 # [2.7.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--signpost@2.6.4...@coopdigital/shared-component--signpost@2.7.0) (2022-02-17)
 
 
