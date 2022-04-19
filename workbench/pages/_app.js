@@ -2,7 +2,7 @@ import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div style={{ background: 'var(--color-grey-neutral-light)' }}>
+    <div>
       <Component {...pageProps} />
     </div>
   );
