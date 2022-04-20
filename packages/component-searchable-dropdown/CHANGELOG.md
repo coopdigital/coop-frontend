@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-searchable-dropdown@0.1.0...@coopdigital/component-searchable-dropdown@0.1.1) (2022-04-20)
+
+
+### Bug Fixes
+
+* add jsx to editorconfig ([f235902](https://github.com/coopdigital/coop-frontend/commit/f235902c844d9b6aea34d87fce8f758dff7916a5))
+
+
+
+
+
 # 0.1.0 (2022-04-19)
 
 

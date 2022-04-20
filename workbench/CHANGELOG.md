@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.2.0...workbench@0.3.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* add trailing slash option to next conf ([c32d358](https://github.com/coopdigital/coop-frontend/commit/c32d358e8fb0c1b8e41ba1239c62e04d6d5ff7c3))
+* fix broken classnames import ([4a57617](https://github.com/coopdigital/coop-frontend/commit/4a576179b98e2584ee1f473eae0c694c2d4bc3ee))
+
+
+### Features
+
+* create new breadcrumb component ([cd904dd](https://github.com/coopdigital/coop-frontend/commit/cd904ddec6d8ba52cb1d0097230b98c32cf1fde5))
+* set first breadcrumb label to home ([dd182fa](https://github.com/coopdigital/coop-frontend/commit/dd182fa95a307715dfab547d0e114310529f75b1))
+* styling tweaks to main container ([5a54a13](https://github.com/coopdigital/coop-frontend/commit/5a54a13c70cc889b793cb06c098e132f899aad07))
+
+
+
+
+
 # 0.2.0 (2022-04-19)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/config-eslint@1.3.0...@coopdigital/config-eslint@1.3.1) (2022-04-20)
+
+**Note:** Version bump only for package @coopdigital/config-eslint
+
+
+
+
+
 # [1.3.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/config-eslint@1.2.2...@coopdigital/config-eslint@1.3.0) (2022-04-19)
 
 

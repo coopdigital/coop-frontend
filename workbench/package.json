@@ -1,6 +1,6 @@
 {
   "name": "workbench",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@coopdigital/component-card": "^3.4.1",
-    "@coopdigital/component-searchable-dropdown": "^0.1.0",
+    "@coopdigital/component-searchable-dropdown": "^0.1.1",
     "@coopdigital/component-template": "*",
     "@coopdigital/foundations": "^1.2.2",
     "@coopdigital/foundations-forms": "^5.5.2",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--hero@3.13.4...@coopdigital/shared-component--hero@3.13.5) (2022-04-20)
+
+**Note:** Version bump only for package @coopdigital/shared-component--hero
+
+
+
+
+
 ## [3.13.4](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--hero@3.13.3...@coopdigital/shared-component--hero@3.13.4) (2022-04-19)
 
 **Note:** Version bump only for package @coopdigital/shared-component--hero
