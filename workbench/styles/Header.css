@@ -1,0 +1,30 @@
+.wb-header {
+  background: var(--color-brand-membership-blue-dark-1);
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.wb-header-bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+.wb-header-link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  fill: white;
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.wb-header-inner {
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  & > strong {
+    margin: -0.5rem 0 0 1rem;
+  }
+}

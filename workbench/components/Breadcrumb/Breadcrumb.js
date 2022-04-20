@@ -36,9 +36,9 @@ export const Breadcrumb = () => {
 
 const PageLink = ({ label, link, active }) => {
   return (
-    <span className="coop-t-font-size-16">
+    <span className="wb-breadcrumb coop-t-font-size-16">
       <Link href={link}>
-        <a className=" coop-t-nounderline capitalize">
+        <a className="coop-t-nounderline capitalize">
           <strong>{label}</strong>
         </a>
       </Link>

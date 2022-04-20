@@ -4,22 +4,15 @@ import Logo from './coop-logo';
 export default function Header() {
   return (
     <>
-      <header
-        className="coop-u-padding-t-16 coop-u-padding-b-8 main"
-        style={{
-          background: 'var(--color-brand-membership-blue-dark-1)',
-          color: 'white',
-          marginBottom: '.75rem',
-        }}
-      >
+      <header className="wb-header coop-u-padding-t-16 coop-u-padding-b-8 main ">
         <div className="coop-l-container">
           <Link href="/">
-            <a className="coop-t-nounderline" style={{ color: 'white', fill: 'white' }}>
-              <div style={{ display: 'flex', alignContent: 'center', alignItems: 'center' }}>
+            <a className="wb-header-link">
+              <div className="wb-header-inner">
                 <span>
                   <Logo />
                 </span>
-                <strong style={{ margin: '-.5rem 0 0 1rem' }}>Component Workbench</strong>
+                <strong>Component Workbench</strong>
               </div>
             </a>
           </Link>

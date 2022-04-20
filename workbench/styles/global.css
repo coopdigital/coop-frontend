@@ -3,6 +3,8 @@
 @import "@coopdigital/foundations-forms/src/forms.pcss";
 @import "@coopdigital/shared-component--editorialcard/src/editorialCard.pcss";
 
+@import "./Header.css";
+@import "./Breadcrumbs.css";
 @import "./Combobox.css";
 
 body {
