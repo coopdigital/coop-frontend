@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--offers@2.3.1...@coopdigital/shared-component--offers@2.3.2) (2022-04-20)
+
+
+### Bug Fixes
+
+* ran build for changed packages ([5e7f1db](https://github.com/coopdigital/coop-frontend/commit/5e7f1dbdf38ca13b8233b81f72d3725b8a47d834))
+
+
+
+
+
 ## [2.3.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--offers@2.3.0...@coopdigital/shared-component--offers@2.3.1) (2022-04-19)
 
 

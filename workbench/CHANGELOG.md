@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/coopdigital/coop-frontend/compare/workbench@0.3.0...workbench@0.3.1) (2022-04-20)
+
+
+### Bug Fixes
+
+* reset workbench body styles ([de1c124](https://github.com/coopdigital/coop-frontend/commit/de1c12424a44b5b9d769b9d114a7893e4445d931))
+
+
+
+
+
 # [0.3.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.2.0...workbench@0.3.0) (2022-04-20)
 
 

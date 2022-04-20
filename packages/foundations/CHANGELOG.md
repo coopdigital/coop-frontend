@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.2.2...@coopdigital/foundations@1.2.3) (2022-04-20)
+
+
+### Bug Fixes
+
+* ran build for changed packages ([5e7f1db](https://github.com/coopdigital/coop-frontend/commit/5e7f1dbdf38ca13b8233b81f72d3725b8a47d834))
+* updated valifdation error reds to be consistent at E20F14 ([b90240a](https://github.com/coopdigital/coop-frontend/commit/b90240af9bf80d5e11c9b6d4e2089aef9ec5a795))
+
+
+
+
+
 ## [1.2.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.2.1...@coopdigital/foundations@1.2.2) (2022-04-19)
 
 

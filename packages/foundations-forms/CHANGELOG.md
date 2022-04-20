@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.5.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.5.2...@coopdigital/foundations-forms@5.5.3) (2022-04-20)
+
+
+### Bug Fixes
+
+* ran build for changed packages ([5e7f1db](https://github.com/coopdigital/coop-frontend/commit/5e7f1dbdf38ca13b8233b81f72d3725b8a47d834))
+* update form error colour in dist ([d85be0a](https://github.com/coopdigital/coop-frontend/commit/d85be0a7dbf65b4781099091cf3e15bfa9096adb))
+* updated valifdation error reds to be consistent at E20F14 ([b90240a](https://github.com/coopdigital/coop-frontend/commit/b90240af9bf80d5e11c9b6d4e2089aef9ec5a795))
+
+
+
+
+
 ## [5.5.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.5.1...@coopdigital/foundations-forms@5.5.2) (2022-04-19)
 
 
