@@ -20,15 +20,15 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14.x"
+          node-version: "16.x"
 
-      - name: install and boostrap
+      - name: Install and bootstrap
         run: yarn install --frozen-lockfile
 
-      - name: test and build
+      - name: Test and build
         run: yarn run build
 
-      - name: setup git
+      - name: Configure git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
