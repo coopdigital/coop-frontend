@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--image",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Co-op Shared Component: Image",
   "main": "dist/image.css",
   "style": "src/image.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--image"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.2.3"
+    "@coopdigital/foundations": "^1.2.4"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

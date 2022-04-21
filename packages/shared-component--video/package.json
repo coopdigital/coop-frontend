@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--video",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Co-op Shared Component: Video",
   "main": "dist/video.css",
   "style": "src/video.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--video"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.2.3"
+    "@coopdigital/foundations": "^1.2.4"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.2.3...@coopdigital/foundations@1.2.4) (2022-04-21)
+
+
+### Bug Fixes
+
+* bg colour on validation notification to #fcf1f1 ([112c536](https://github.com/coopdigital/coop-frontend/commit/112c53672dded1a1cc440a8b49a4a9067073c437)), closes [#fcf1f1](https://github.com/coopdigital/coop-frontend/issues/fcf1f1)
+
+
+
+
+
 ## [1.2.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.2.2...@coopdigital/foundations@1.2.3) (2022-04-20)
 
 

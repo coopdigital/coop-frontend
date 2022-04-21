@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.4](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--notification@2.3.3...@coopdigital/shared-component--notification@2.3.4) (2022-04-21)
+
+
+### Bug Fixes
+
+* push affected css changes for runner ([3ba5846](https://github.com/coopdigital/coop-frontend/commit/3ba5846475eec8e7fa0d3bb2c84e98592874d19f))
+
+
+
+
+
 ## [2.3.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--notification@2.3.2...@coopdigital/shared-component--notification@2.3.3) (2022-04-20)
 
 

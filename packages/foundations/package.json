@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Our foundations are the base CSS and variables that we build our products on",
   "main": "dist/foundations.css",
   "style": "dist/foundations.css",

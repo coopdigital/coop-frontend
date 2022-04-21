@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--editorialcard",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "Co-op Shared Component: Editorial Card",
   "main": "dist/editorialCard.css",
   "style": "src/editorialCard.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--editorialCard"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.2.3"
+    "@coopdigital/foundations": "^1.2.4"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"
