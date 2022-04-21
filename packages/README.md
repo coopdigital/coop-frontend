@@ -69,23 +69,20 @@ The full structure of a commit would look something like. [See docs](https://www
 
 ```
 
-The allowed types are
+The allowed types are as follows:
 
-```bash
-
-  build,
-  chore,
-  ci,
-  docs,
-  feat,
-  fix,
-  perf,
-  refactor,
-  revert,
-  style,
-  test,
-
-```
+| Prefix    | Explanation                                                                          |
+| --------- | ------------------------------------------------------------------------------------ |
+| build:    | Changes that affect the build system or external dependencies                        |
+| ci:       | Changes to CI config files and scripts (workflows, jenkins, etc)                     |
+| docs:     | Documentation changes                                                                |
+| feat:     | New feature                                                                          |
+| fix:      | Bug fix                                                                              |
+| perf:     | Code change that improves performance                                                |
+| refactor: | Doesn't fix a bug or add a feature                                                   |
+| style:    | Changes that do not affect the meaning of the code (**not** for css/visual changes!) |
+| test:     | Adding missing tests or correcting existing tests                                    |
+| wip:      | For a feature, spike or other thing in progress                                      |
 
 ## Husky git hooks pre commit
 
