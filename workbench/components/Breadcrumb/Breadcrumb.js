@@ -8,7 +8,7 @@ export const generateBreadcrumbTrail = (path) => {
   const trail = fragments.reduce((trailArray, current, index) => {
     const fragmentPath = index > 0 ? `${trailArray[index - 1].path}/${current}` : '';
     const isActive = index === fragments.length - 1;
-    trailArray.push({ path: fragmentPath, label: current.replaceAll('-', ' '), isActive });
+    trailArray.push({ path: fragmentPath, label: current.replace(/-/g, ' '), isActive });
     return trailArray;
   }, []);
 
