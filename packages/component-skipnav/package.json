@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-skipnav",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "Co-op Component: Skipnav",
   "style": "dist/skipnav.css",
   "sources": {
@@ -22,7 +22,7 @@
     "directory": "packages/component-skipnav"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.2.4"
+    "@coopdigital/foundations": "^1.3.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

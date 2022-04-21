@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.6.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.5.4...@coopdigital/foundations-forms@5.6.0) (2022-04-21)
+
+
+### Features
+
+* added utility classes ([d8689eb](https://github.com/coopdigital/coop-frontend/commit/d8689eb5358d756d9fde99fc96b51fa77773a1a3))
+* split out error colour vars to be more simple to use ([9a2b585](https://github.com/coopdigital/coop-frontend/commit/9a2b585417990fbfe150f8573cd94d76188b02f9))
+
+
+
+
+
 ## [5.5.4](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.5.3...@coopdigital/foundations-forms@5.5.4) (2022-04-21)
 
 

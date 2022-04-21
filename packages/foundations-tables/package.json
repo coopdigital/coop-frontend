@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/foundations-tables",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "CSS Foundations: Tables",
   "main": "dist/tables.css",
   "style": "src/tables.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/foundations-tables"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.2.4"
+    "@coopdigital/foundations": "^1.3.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

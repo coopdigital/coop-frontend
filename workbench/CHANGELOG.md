@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/coopdigital/coop-frontend/compare/workbench@0.3.2...workbench@0.3.3) (2022-04-21)
+
+
+### Bug Fixes
+
+* revert to regex replace to keep node 14 happy ([793f644](https://github.com/coopdigital/coop-frontend/commit/793f644d290069652b8be727f794daafea7b9be2))
+
+
+
+
+
 ## [0.3.2](https://github.com/coopdigital/coop-frontend/compare/workbench@0.3.1...workbench@0.3.2) (2022-04-21)
 
 **Note:** Version bump only for package workbench

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.4](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--text@2.3.3...@coopdigital/shared-component--text@2.3.4) (2022-04-21)
+
+**Note:** Version bump only for package @coopdigital/shared-component--text
+
+
+
+
+
 ## [2.3.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--text@2.3.2...@coopdigital/shared-component--text@2.3.3) (2022-04-21)
 
 **Note:** Version bump only for package @coopdigital/shared-component--text
