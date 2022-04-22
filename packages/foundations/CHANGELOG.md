@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.3.0...@coopdigital/foundations@1.3.1) (2022-04-22)
+
+
+### Bug Fixes
+
+* changed color to background on the error red bg color util ([a9a6399](https://github.com/coopdigital/coop-frontend/commit/a9a6399546a12f687a8a9239586f4fafdc1177b6))
+
+
+
+
+
 # [1.3.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.2.4...@coopdigital/foundations@1.3.0) (2022-04-21)
 
 

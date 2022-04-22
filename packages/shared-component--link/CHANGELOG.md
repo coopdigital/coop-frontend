@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.9.5...@coopdigital/shared-component--link@1.9.6) (2022-04-22)
+
+
+### Bug Fixes
+
+* addedoverrideLinkURL field to the config object to enable tracking parameters to be added ([bca93c9](https://github.com/coopdigital/coop-frontend/commit/bca93c91e016c69d587cd902085d4a6a0d4a9dae))
+
+
+
+
+
 ## [1.9.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.9.4...@coopdigital/shared-component--link@1.9.5) (2022-04-21)
 
 **Note:** Version bump only for package @coopdigital/shared-component--link

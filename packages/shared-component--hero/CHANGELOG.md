@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.9](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--hero@3.13.8...@coopdigital/shared-component--hero@3.13.9) (2022-04-22)
+
+
+### Bug Fixes
+
+* add an overrideLinkURL field to the config object to enable tracking parameters to be added ([edabf86](https://github.com/coopdigital/coop-frontend/commit/edabf86e60bef8ad32fa070cb32a54cc1f12659c))
+* undo changes to hero usedfor debugging ([5a18b81](https://github.com/coopdigital/coop-frontend/commit/5a18b812d75561bd84afd4e821295517c98883e4))
+
+
+
+
+
 ## [3.13.8](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--hero@3.13.7...@coopdigital/shared-component--hero@3.13.8) (2022-04-21)
 
 **Note:** Version bump only for package @coopdigital/shared-component--hero

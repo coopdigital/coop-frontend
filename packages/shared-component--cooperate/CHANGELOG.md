@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--cooperate@1.6.5...@coopdigital/shared-component--cooperate@1.6.6) (2022-04-22)
+
+**Note:** Version bump only for package @coopdigital/shared-component--cooperate
+
+
+
+
+
 ## [1.6.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--cooperate@1.6.4...@coopdigital/shared-component--cooperate@1.6.5) (2022-04-21)
 
 **Note:** Version bump only for package @coopdigital/shared-component--cooperate
