@@ -1,4 +1,4 @@
-name: Build the Workbench and deploy to development
+name: Dev - Workbench deploy
 
 on:
   workflow_dispatch:
