@@ -90,7 +90,9 @@
 
 		{# If link is external get href from content #}
 		{%- elif linkEntry.type == 'externalLink' -%}
-			{% if linkEntry.fields.url.data %}
+			{% if config.overrideLinkURL %} 
+				{%- set href = config.overrideLinkURL -%}
+			{% elif linkEntry.fields.url.data %}
 				{%- set href = linkEntry.fields.url.data -%}
 			{% endif %}
 		{%- endif -%}
