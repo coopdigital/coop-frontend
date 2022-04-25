@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.9.6...@coopdigital/shared-component--link@1.9.7) (2022-04-25)
+
+
+### Bug Fixes
+
+* adds grey button styleing to link component ([8a1bdc5](https://github.com/coopdigital/coop-frontend/commit/8a1bdc587c1b0e27837104d75026d4d79ad0b286))
+* remove override link url from link component ([00cf189](https://github.com/coopdigital/coop-frontend/commit/00cf189c93c00797ed15d3b2807d9a881292b1b9))
+
+
+
+
+
 ## [1.9.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.9.5...@coopdigital/shared-component--link@1.9.6) (2022-04-22)
 
 
