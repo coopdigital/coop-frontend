@@ -2,6 +2,25 @@
 
 A mono-repository containing foundations and component packages needed for designing and building digital services for the Co‑op. All packages can be found in the [packages](./packages) directory.
 
+🚨 This project uses `yarn` rather than `npm` as it allows us to manage local workspaces and maintain links to local components. This is a requirement not a preference. 🚨
+
+## Prerequisites
+
+- Lerna installed globally `npm install lerna -g`
+- Yarn installed globally `npm install yarn -g`
+- Ensure you are using node 16.5 - you may wish to [install nvm to help with this](https://github.com/nvm-sh/nvm)
+
+## Installation
+
+- Clone this repo onto your machine
+- From the root run `yarn install`
+- This may take a while to complete but once it is done you should be able to cd into the `workbench` directory and run `yarn dev`
+
+## Gotchas
+
+- Make sure you use `yarn add` rather than `npm install`
+- Make sure you run `yarn dev` rather than `npm dev`
+
 ## Developing foundation and component packages
 
 This repository uses [lerna](https://github.com/lerna/lerna) to automatically manage versioning of all the different packages. These are published as separate packages to [Co-op digital's NPM organisation](https://www.npmjs.com/org/coopdigital). These packages can be installed by digital teams as required as dependencies of their project.
