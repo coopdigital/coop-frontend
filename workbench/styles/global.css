@@ -2,10 +2,10 @@
 @import "@coopdigital/foundations/src/foundations.pcss";
 @import "@coopdigital/foundations-forms/src/forms.pcss";
 @import "@coopdigital/shared-component--editorialcard/src/editorialCard.pcss";
+@import "@coopdigital/component-searchable-dropdown/src/searchableDropdown.pcss";
 
 @import "./Header.css";
 @import "./Breadcrumbs.css";
-@import "./Combobox.css";
 
 body {
   background-color: #fafafa;
