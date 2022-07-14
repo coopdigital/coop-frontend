@@ -5,7 +5,7 @@ const ComoboboxPage = () => {
   return (
     <Layout>
       <div className="coop-form__row">
-        <SearchableDropdown />
+        <SearchableDropdown width="300px" />
       </div>
       <div className="coop-form__row">
         <label htmlFor="another-field">Another field</label>

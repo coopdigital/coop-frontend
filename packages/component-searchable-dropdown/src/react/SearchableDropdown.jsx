@@ -6,11 +6,12 @@ import {
   ComboboxList,
   ComboboxOption,
 } from '@reach/combobox';
+import PropTypes from 'prop-types';
 import '@reach/combobox/styles.css';
 
-const SearchableDropdown = () => {
+const SearchableDropdown = ({ width }) => {
   return (
-    <div className="coop-c-combobox">
+    <div className="coop-c-combobox" style={{ width }}>
       <label htmlFor="relationship" id="relationshipLabel">
         This person is my:
       </label>
@@ -32,3 +33,7 @@ const SearchableDropdown = () => {
 };
 
 export default SearchableDropdown;
+
+SearchableDropdown.propTypes = {
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+};
