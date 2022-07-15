@@ -45,6 +45,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@reach/combobox": "^0.17.0"
+    "@reach/combobox": "^0.17.0",
+    "match-sorter": "^6.3.1"
   }
 }

@@ -8,13 +8,27 @@ const ComoboboxPage = () => {
   return (
     <Layout>
       <div className="coop-form__row">
-        <SearchableDropdown width="300px" label="This person is my..." id="relationship">
-          <SearchableOption value="Child" />
+        <SearchableDropdown
+          compact
+          width="300px"
+          label="This person is my..."
+          id="relationship"
+          options={[
+            'Options props',
+            'Child',
+            'Grandchild',
+            'Grandparent',
+            'Parent',
+            'Partner',
+            'Spouse',
+          ]}
+        >
+          {/* <SearchableOption value="Child" />
           <SearchableOption value="Grandchild" />
           <SearchableOption value="Grandparent" />
           <SearchableOption value="Parent" />
           <SearchableOption value="Partner" />
-          <SearchableOption value="Spouse" />
+        <SearchableOption value="Spouse" /> */}
         </SearchableDropdown>
       </div>
       <div className="coop-form__row">
