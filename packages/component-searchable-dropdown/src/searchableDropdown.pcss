@@ -7,6 +7,12 @@
   position: relative;
 }
 
+/*
+  TODO
+  We need a nicer way to handle the dropdown arrow. Embeddeding svgs like this works but its icky.
+  A nicer way would be to make all the icons importable and embed the arrow in the markup.
+*/
+
 [data-reach-combobox]:after {
   content: "";
   display: block;
@@ -41,6 +47,12 @@ li[data-reach-combobox-option] span[data-user-value] {
 li[data-reach-combobox-option][aria-selected="true"] {
   outline: 2px solid var(--color-link-focus);
 }
+
+/*
+  Override styles for compact variant
+  We should consider this for all components going forward
+  20px min font size for inputs is too big for some use cases
+*/
 
 .coop-c-combobox.compact input {
   font-size: 1rem;
