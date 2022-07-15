@@ -19,7 +19,7 @@ const SearchableDropdown = ({ children, compact, id, label, width }) => {
         {label}
       </label>
       <Combobox openOnFocus aria-labelledby={inputLabel}>
-        <ComboboxInput id={id} />
+        <ComboboxInput autoComplete="off" id={id} />
         <ComboboxPopover className={layoutClass}>
           <ComboboxList>{children}</ComboboxList>
         </ComboboxPopover>
