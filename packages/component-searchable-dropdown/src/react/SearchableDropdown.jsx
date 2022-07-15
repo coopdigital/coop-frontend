@@ -10,16 +10,17 @@ import {
 } from '@reach/combobox';
 import '@reach/combobox/styles.css';
 
-const SearchableDropdown = ({ children, id, label, width }) => {
+const SearchableDropdown = ({ children, compact, id, label, width }) => {
+  const layoutClass = compact ? 'compact' : '';
   const inputLabel = `${id}-label`;
   return (
-    <div className={'coop-c-combobox'} style={{ width }}>
+    <div className={`coop-c-combobox ${layoutClass}`} style={{ width }}>
       <label htmlFor={id} id={inputLabel}>
         {label}
       </label>
       <Combobox openOnFocus aria-labelledby={inputLabel}>
         <ComboboxInput id={id} />
-        <ComboboxPopover>
+        <ComboboxPopover className={layoutClass}>
           <ComboboxList>{children}</ComboboxList>
         </ComboboxPopover>
       </Combobox>
@@ -42,6 +43,7 @@ export { SearchableDropdown, SearchableOption };
 
 SearchableDropdown.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  compact: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
