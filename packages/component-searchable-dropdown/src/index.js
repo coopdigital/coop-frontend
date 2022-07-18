@@ -1,1 +1,1 @@
-export { SearchableDropdown, SearchableOption } from './react/SearchableDropdown.jsx';
+export { SearchableDropdown } from './react/SearchableDropdown.jsx';
