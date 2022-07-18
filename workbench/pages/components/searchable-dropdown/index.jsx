@@ -20,6 +20,9 @@ const ComoboboxPage = () => {
             'Partner',
             'Spouse',
           ]}
+          onSelect={(value) => {
+            console.log(value);
+          }}
         />
       </div>
       <div className="coop-form__row">

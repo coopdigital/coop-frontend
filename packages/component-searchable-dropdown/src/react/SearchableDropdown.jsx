@@ -17,10 +17,9 @@ function useFilteredResults(options, term) {
   );
 }
 
-const SearchableDropdown = ({ className, compact, id, label, options, style }) => {
+const SearchableDropdown = ({ className, compact, id, label, onSelect, options, style }) => {
   const layoutClass = compact ? 'compact' : '';
   const inputLabel = `${id}-label`;
-
   const [inputValue, setInputValue] = useState('');
   const handleChange = (event) => setInputValue(event.target.value);
   const results = useFilteredResults(options, inputValue);
@@ -30,7 +29,7 @@ const SearchableDropdown = ({ className, compact, id, label, options, style }) =
       <label htmlFor={id} id={inputLabel}>
         {label}
       </label>
-      <Combobox openOnFocus aria-labelledby={inputLabel}>
+      <Combobox openOnFocus aria-labelledby={inputLabel} onSelect={onSelect || null}>
         <ComboboxInput autoComplete="off" id={id} onChange={handleChange} />
         <ComboboxPopover className={layoutClass}>
           <ComboboxList>
@@ -55,6 +54,7 @@ SearchableDropdown.propTypes = {
   compact: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  onSelect: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
   style: PropTypes.object,
 };
