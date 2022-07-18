@@ -66,6 +66,7 @@
     "lint:js": "lerna --ignore design-system exec --stream -- 'eslint src/ contentful/ --ext .cjs,.js,.jsx,.mjs --fix --no-error-on-unmatched-pattern'",
     "pretest": "yarn run lint",
     "test": "jest --coverage",
+    "test:watch": "jest --watch --maxWorkers=25%",
     "prebuild": "yarn run test",
     "build": "npm-run-all build:*",
     "build:css": "lerna exec --scope @coopdigital/foundations-* --scope @coopdigital/shared-component-* --stream -- 'postcss src/*.pcss --dir dist/ --ext css'",
