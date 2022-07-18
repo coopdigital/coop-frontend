@@ -7,7 +7,8 @@ const ComoboboxPage = () => {
       <div className="coop-form__row">
         <SearchableDropdown
           compact
-          width="300px"
+          style={{ width: '300px' }}
+          className="additional-class"
           label="This person is my..."
           id="relationship"
           options={[

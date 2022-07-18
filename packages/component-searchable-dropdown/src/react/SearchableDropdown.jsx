@@ -17,7 +17,7 @@ function useFilteredResults(options, term) {
   );
 }
 
-const SearchableDropdown = ({ compact, id, label, options, width }) => {
+const SearchableDropdown = ({ className, compact, id, label, options, style }) => {
   const layoutClass = compact ? 'compact' : '';
   const inputLabel = `${id}-label`;
 
@@ -26,7 +26,7 @@ const SearchableDropdown = ({ compact, id, label, options, width }) => {
   const results = useFilteredResults(options, inputValue);
 
   return (
-    <div className={`coop-c-combobox ${layoutClass}`} style={{ width }}>
+    <div className={`coop-c-combobox ${layoutClass} ${className}`} style={style}>
       <label htmlFor={id} id={inputLabel}>
         {label}
       </label>
@@ -51,9 +51,10 @@ const SearchableDropdown = ({ compact, id, label, options, width }) => {
 export { SearchableDropdown };
 
 SearchableDropdown.propTypes = {
+  className: PropTypes.string,
   compact: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  style: PropTypes.object,
 };
