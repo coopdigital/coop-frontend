@@ -1,7 +1,4 @@
-import {
-  SearchableDropdown,
-  SearchableOption,
-} from '@coopdigital/component-searchable-dropdown/src/index';
+import { SearchableDropdown } from '@coopdigital/component-searchable-dropdown/src/index';
 import Layout from '../../../components/Layout';
 
 const ComoboboxPage = () => {
@@ -22,14 +19,7 @@ const ComoboboxPage = () => {
             'Partner',
             'Spouse',
           ]}
-        >
-          {/* <SearchableOption value="Child" />
-          <SearchableOption value="Grandchild" />
-          <SearchableOption value="Grandparent" />
-          <SearchableOption value="Parent" />
-          <SearchableOption value="Partner" />
-        <SearchableOption value="Spouse" /> */}
-        </SearchableDropdown>
+        />
       </div>
       <div className="coop-form__row">
         <label htmlFor="another-field">Another field</label>

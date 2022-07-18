@@ -6,7 +6,6 @@ import {
   ComboboxPopover,
   ComboboxList,
   ComboboxOption,
-  ComboboxOptionText,
 } from '@reach/combobox';
 import { matchSorter } from 'match-sorter';
 import '@reach/combobox/styles.css';
@@ -18,7 +17,7 @@ function useFilteredResults(options, term) {
   );
 }
 
-const SearchableDropdown = ({ children, compact, id, label, options, width }) => {
+const SearchableDropdown = ({ compact, id, label, options, width }) => {
   const layoutClass = compact ? 'compact' : '';
   const inputLabel = `${id}-label`;
 
@@ -34,7 +33,6 @@ const SearchableDropdown = ({ children, compact, id, label, options, width }) =>
       <Combobox openOnFocus aria-labelledby={inputLabel}>
         <ComboboxInput autoComplete="off" id={id} onChange={handleChange} />
         <ComboboxPopover className={layoutClass}>
-          {/* <ComboboxList>{children}</ComboboxList> */}
           <ComboboxList>
             {results.length ? (
               results.map((option) => {
@@ -50,29 +48,12 @@ const SearchableDropdown = ({ children, compact, id, label, options, width }) =>
   );
 };
 
-const SearchableOption = ({ children, value }) => {
-  if (children) {
-    return (
-      <ComboboxOption value={value}>
-        {children} <ComboboxOptionText />
-      </ComboboxOption>
-    );
-  }
-  return <ComboboxOption value={value} />;
-};
-
-export { SearchableDropdown, SearchableOption };
+export { SearchableDropdown };
 
 SearchableDropdown.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
   compact: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-};
-
-SearchableOption.propTypes = {
-  children: PropTypes.node,
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
