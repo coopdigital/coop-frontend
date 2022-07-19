@@ -8,7 +8,6 @@ import {
   ComboboxOption,
 } from '@reach/combobox';
 import { matchSorter } from 'match-sorter';
-import '@reach/combobox/styles.css';
 
 function useFilteredResults(options, term) {
   return useMemo(
