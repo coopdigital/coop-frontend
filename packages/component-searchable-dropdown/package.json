@@ -15,7 +15,9 @@
   },
   "author": "@coopdigital",
   "contributors": [
-    "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)"
+    "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)",
+    "Omid Kashan <omid.kashan@coop.co.uk> (https://github.com/omidantilong)",
+    "Mitchell Harrison <mitchell.harrison@coop.co.uk> (https://github.com/MBLHarrison)"
   ],
   "private": true,
   "files": [
