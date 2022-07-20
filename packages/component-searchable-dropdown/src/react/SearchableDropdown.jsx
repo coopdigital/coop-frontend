@@ -16,12 +16,22 @@ function useFilteredResults(options, term) {
   );
 }
 
-const SearchableDropdown = ({ className, compact, id, label, onSelect, options, style }) => {
+const SearchableDropdown = ({
+  className,
+  compact,
+  id,
+  label,
+  noResults,
+  onSelect,
+  options,
+  style,
+}) => {
   const layoutClass = compact ? 'compact' : '';
   const inputLabel = `${id}-label`;
   const [inputValue, setInputValue] = useState('');
   const handleChange = (event) => setInputValue(event.target.value);
   const results = useFilteredResults(options, inputValue);
+  const noResultsText = noResults || 'No relevant options';
 
   return (
     <div className={`coop-c-combobox ${layoutClass} ${className}`} style={style}>
@@ -37,7 +47,7 @@ const SearchableDropdown = ({ className, compact, id, label, onSelect, options, 
                 return <ComboboxOption key={option} value={option} />;
               })
             ) : (
-              <li className="coop-c-combobox--null">No revelant options</li>
+              <li className="coop-c-combobox--null">{noResultsText}</li>
             )}
           </ComboboxList>
         </ComboboxPopover>
@@ -53,6 +63,7 @@ SearchableDropdown.propTypes = {
   compact: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  noResults: PropTypes.string,
   onSelect: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
   style: PropTypes.object,
