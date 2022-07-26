@@ -40,7 +40,7 @@ const SearchableDropdown = ({
       </label>
       <Combobox openOnFocus aria-labelledby={inputLabel} onSelect={onSelect || null}>
         <ComboboxInput autoComplete="off" id={id} onChange={handleChange} />
-        <ComboboxPopover className={layoutClass}>
+        <ComboboxPopover className={layoutClass} data-input={inputValue}>
           <ComboboxList>
             {results.length ? (
               results.map((option) => {
