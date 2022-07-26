@@ -40,11 +40,6 @@
 
 /* Styles for the input when expanded */
 
-[data-reach-combobox][data-expanded="true"] input {
-  //border-bottom-left-radius: 0;
-  //border-bottom-right-radius: 0;
-}
-
 [data-reach-combobox][data-expanded="true"] input[aria-activedescendant] {
   outline: none;
 }
@@ -58,12 +53,10 @@
 [data-reach-combobox-popover] {
   border: 2px solid var(--color-grey-dark);
   background: var(--color-white);
-  //border-top: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   max-height: 17.5rem;
   overflow: scroll;
-  position: relative;
   transform: translateY(-4px);
 }
 
