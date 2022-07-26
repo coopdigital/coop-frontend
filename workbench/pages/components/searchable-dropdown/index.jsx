@@ -25,10 +25,6 @@ const ComoboboxPage = () => {
           }}
         />
       </div>
-      <div className="coop-form__row">
-        <label htmlFor="another-field">Another field</label>
-        <input name="another-field" type="text" />
-      </div>
     </Layout>
   );
 };
