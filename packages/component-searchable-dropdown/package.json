@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@reach/combobox": "^0.17.0",
+    "downshift": "^6.1.7",
     "match-sorter": "^6.3.1"
   }
 }
