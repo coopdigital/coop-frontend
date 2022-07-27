@@ -24,6 +24,7 @@ const SearchableDropdown = ({
   noResults,
   onSelect,
   options,
+  placeholder,
   style,
 }) => {
   const layoutClass = compact ? 'compact' : '';
@@ -32,6 +33,7 @@ const SearchableDropdown = ({
   const handleChange = (event) => setInputValue(event.target.value);
   const results = useFilteredResults(options, inputValue);
   const noResultsText = noResults || 'No relevant options';
+  const placeholderValue = placeholder || null;
 
   return (
     <div className={`coop-c-combobox ${layoutClass} ${className}`} style={style}>
@@ -39,7 +41,12 @@ const SearchableDropdown = ({
         {label}
       </label>
       <Combobox openOnFocus aria-labelledby={inputLabel} onSelect={onSelect || null}>
-        <ComboboxInput autoComplete="off" id={id} onChange={handleChange} />
+        <ComboboxInput
+          autoComplete="off"
+          placeholder={placeholderValue}
+          id={id}
+          onChange={handleChange}
+        />
         <ComboboxPopover className={layoutClass} data-input={inputValue}>
           <ComboboxList>
             {results.length ? (
@@ -66,5 +73,6 @@ SearchableDropdown.propTypes = {
   noResults: PropTypes.string,
   onSelect: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
+  placeholder: PropTypes.string,
   style: PropTypes.object,
 };

@@ -44,6 +44,19 @@ describe('Searchable Dropdown', () => {
     expect(dropdownLabel).toBeInTheDocument();
   });
 
+  it('adds placeholder option if provided', () => {
+    render(
+      <SearchableDropdown
+        label="Choose a fruit"
+        id="fruits"
+        options={['apple', 'orange', 'banana']}
+        placeholder="Select option"
+      />
+    );
+    const dropdownInput = document.querySelector('[data-reach-combobox-input]');
+    expect(dropdownInput).toHaveAttribute('placeholder', 'Select option');
+  });
+
   it('applies the label and id props correctly', () => {
     render(
       <SearchableDropdown

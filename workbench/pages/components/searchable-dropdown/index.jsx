@@ -20,6 +20,7 @@ const ComoboboxPage = () => {
             'Partner',
             'Spouse',
           ]}
+          placeholder="Select option"
           onSelect={(value) => {
             console.log(value);
           }}
