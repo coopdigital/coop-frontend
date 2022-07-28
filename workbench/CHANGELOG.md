@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.3.4...workbench@0.4.0) (2022-07-28)
+
+
+### Bug Fixes
+
+* remove second input from combobox page ([3bc64fd](https://github.com/coopdigital/coop-frontend/commit/3bc64fd1baa1878d00685e3567159455a10472ca))
+
+
+### Features
+
+* add combobox initial placeholder option ([7cd10b0](https://github.com/coopdigital/coop-frontend/commit/7cd10b0ab91469e7a3af74880761b67e4fb144fa))
+* add downshift version of combobox ([272b94f](https://github.com/coopdigital/coop-frontend/commit/272b94f2a2ffbaa609089ed94575874019604d70))
+* add props for child options, id, label ([eb7feca](https://github.com/coopdigital/coop-frontend/commit/eb7feca682e237513b774ce0855c3ada174cf3d1))
+* clean up combobox css imports ([33c4d2d](https://github.com/coopdigital/coop-frontend/commit/33c4d2d65799d44db0573df081f261c4927bcc83))
+* expose onSelect to outer component ([c3502fd](https://github.com/coopdigital/coop-frontend/commit/c3502fd0e057fa9a45fd0bcc92be34265fae4ad8))
+* filter non-matches when typing ([b937ce6](https://github.com/coopdigital/coop-frontend/commit/b937ce6f219e86630c41bfe2f3e9b3c2e5de2350))
+* forward style and classname props ([2e8d731](https://github.com/coopdigital/coop-frontend/commit/2e8d7318f3d59418b39045a973e188885964bd93))
+* remove composite elements from combobox ([7eb972c](https://github.com/coopdigital/coop-frontend/commit/7eb972c8087edd104f8bd3165fef95e4bf0be7ce))
+* remove old combobox lib code ([e34e6dd](https://github.com/coopdigital/coop-frontend/commit/e34e6dd817596efa5fbecbac8c09a4a6aea446b4))
+* remove reach combobox ([e4b862d](https://github.com/coopdigital/coop-frontend/commit/e4b862d7c993c914621fdaca899cb19904728832))
+* start adding props to combobox ([70f2329](https://github.com/coopdigital/coop-frontend/commit/70f2329e032340f124a11bdb3e13846a4300fc5b))
+* use explicit jsx extension for next pages ([531df52](https://github.com/coopdigital/coop-frontend/commit/531df5222528252b7e925780ecdfa5b86e46285f))
+
+
+
+
+
 ## [0.3.4](https://github.com/coopdigital/coop-frontend/compare/workbench@0.3.3...workbench@0.3.4) (2022-04-22)
 
 **Note:** Version bump only for package workbench
