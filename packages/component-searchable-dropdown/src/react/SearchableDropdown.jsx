@@ -1,20 +1,8 @@
-import React, { useMemo, useState } from 'react';
+/* eslint-disable indent */
+import React, { useState } from 'react';
+import { useCombobox } from 'downshift';
 import PropTypes from 'prop-types';
-import {
-  Combobox,
-  ComboboxInput,
-  ComboboxPopover,
-  ComboboxList,
-  ComboboxOption,
-} from '@reach/combobox';
 import { matchSorter } from 'match-sorter';
-
-function useFilteredResults(options, term) {
-  return useMemo(
-    () => (term.trim() === '' ? options : matchSorter(options, term)),
-    [options, term]
-  );
-}
 
 const SearchableDropdown = ({
   className,
@@ -27,38 +15,58 @@ const SearchableDropdown = ({
   placeholder,
   style,
 }) => {
-  const layoutClass = compact ? 'compact' : '';
-  const inputLabel = `${id}-label`;
-  const [inputValue, setInputValue] = useState('');
-  const handleChange = (event) => setInputValue(event.target.value);
-  const results = useFilteredResults(options, inputValue);
+  const [inputItems, setInputItems] = useState(options);
+  const sizeVariant = compact ? 'compact' : '';
   const noResultsText = noResults || 'No relevant options';
   const placeholderValue = placeholder || null;
 
+  const {
+    isOpen,
+    closeMenu,
+    getToggleButtonProps,
+    getLabelProps,
+    getMenuProps,
+    getInputProps,
+    getComboboxProps,
+    openMenu,
+    getItemProps,
+  } = useCombobox({
+    id,
+    items: inputItems,
+    onInputValueChange: ({ inputValue }) => {
+      setInputItems(matchSorter(options, inputValue));
+    },
+    onSelectedItemChange: ({ selectedItem: selected }) => {
+      if (typeof onSelect === 'function') onSelect(selected);
+      closeMenu();
+    },
+  });
+
   return (
-    <div className={`coop-c-combobox ${layoutClass} ${className}`} style={style}>
-      <label htmlFor={id} id={inputLabel}>
+    <div className={`coop-c-combobox ${sizeVariant} ${className}`} style={style}>
+      <label {...getLabelProps()} htmlFor={`${id}-input`}>
         {label}
       </label>
-      <Combobox openOnFocus aria-labelledby={inputLabel} onSelect={onSelect || null}>
-        <ComboboxInput
-          autoComplete="off"
-          placeholder={placeholderValue}
-          id={id}
-          onChange={handleChange}
-        />
-        <ComboboxPopover className={layoutClass} data-input={inputValue}>
-          <ComboboxList>
-            {results.length ? (
-              results.map((option) => {
-                return <ComboboxOption key={option} value={option} />;
-              })
-            ) : (
-              <li className="coop-c-combobox--null">{noResultsText}</li>
-            )}
-          </ComboboxList>
-        </ComboboxPopover>
-      </Combobox>
+      <div {...getComboboxProps()}>
+        <input {...getInputProps({ onFocus: openMenu })} placeholder={placeholderValue} />
+        <button type="button" {...getToggleButtonProps()} aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path d="m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z" />
+          </svg>
+        </button>
+      </div>
+      <ul {...getMenuProps()}>
+        {isOpen && inputItems.length
+          ? inputItems.map((item, index) => (
+              <li {...getItemProps({ item, index })} key={`${item}${index}`}>
+                {item}
+              </li>
+            ))
+          : null}
+        {isOpen && !inputItems.length ? (
+          <li className="coop-c-combobox--null">{noResultsText}</li>
+        ) : null}
+      </ul>
     </div>
   );
 };

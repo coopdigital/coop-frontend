@@ -1,111 +1,81 @@
-/* Core reach styles */
-
-:root {
-  --reach-combobox: 1;
-}
-
 .coop-c-combobox,
 .coop-c-combobox input {
   font-family: var(--font-family);
   max-width: 100%;
 }
 
-[data-reach-combobox] {
+.coop-c-combobox,
+.coop-c-combobox > [role="combobox"] {
   position: relative;
 }
 
-[data-reach-combobox] input {
-  border: 2px solid var(--color-grey-dark);
-}
-
-/*
-  TODO
-  We need a nicer way to handle the dropdown arrow. Embeddeding svgs like this works but its icky.
-  A nicer way would be to make all the icons importable and embed the arrow in the markup.
-*/
-
-[data-reach-combobox]:after {
-  content: "";
-  display: block;
-  background-image: url("data:image/svg+xml,%3Csvg width='18' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.49346 15.253c-.15514.0745-.32179.1098-.49346.1098-.08246 0-.16399-.0081-.24413-.0251-.08604-.0182-.16952-.0464-.24933-.0847-.14581-.0701-.27347-.1714-.37876-.2979L1.7607 8.32874c-.2294-.2426-.3515-.5583-.3515-.9017 0-.3322.1137-.6395.3243-.8871l.0558-.0589c.2341-.2229.5246-.3431.8386-.3431.3247 0 .6232.1292.8489.3679L8.99416 12.261l5.49814-5.81396c.2288-.2689.5381-.4176.8798-.4176.3307 0 .6321.1386.8944.4176.2094.2461.3243.55.3243.8793 0 .3292-.1149.6331-.3521.9101L9.87436 14.9525c-.10569.1277-.2341.2299-.3809.3005Z' fill='%23979797'/%3E%3Cmask id='a' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='1' y='6' width='16' height='10'%3E%3Cpath d='M9.49346 15.253c-.15514.0745-.32179.1098-.49346.1098-.08246 0-.16399-.0081-.24413-.0251-.08604-.0182-.16952-.0464-.24933-.0847-.14581-.0701-.27347-.1714-.37876-.2979L1.7607 8.32874c-.2294-.2426-.3515-.5583-.3515-.9017 0-.3322.1137-.6395.3243-.8871l.0558-.0589c.2341-.2229.5246-.3431.8386-.3431.3247 0 .6232.1292.8489.3679L8.99416 12.261l5.49814-5.81396c.2288-.2689.5381-.4176.8798-.4176.3307 0 .6321.1386.8944.4176.2094.2461.3243.55.3243.8793 0 .3292-.1149.6331-.3521.9101L9.87436 14.9525c-.10569.1277-.2341.2299-.3809.3005Z' fill='%23fff'/%3E%3C/mask%3E%3Cg mask='url(%23a)'%3E%3Cpath d='M-.0000019 20.0192H18V.980665L.00000166.980662-.0000019 20.0192Z' fill='%23282828'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: no-repeat;
+.coop-c-combobox > [role="combobox"] > button {
   position: absolute;
-  top: calc(50% - 0.625rem);
-  right: 1.25rem;
-  width: 1rem;
-  height: 1rem;
-  z-index: 1;
-  pointer-events: none;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3rem;
+  background: none;
+  padding: 0;
+  border: none;
+  transform: translateY(2px);
 }
 
-/* Styles for the input when expanded */
+.coop-c-combobox > [role="combobox"][aria-expanded="true"] > button {
+  transform: rotate(180deg) translateY(4px);
+}
 
-[data-reach-combobox][data-expanded="true"] input[aria-activedescendant] {
+.coop-c-combobox > [role="combobox"][aria-expanded="true"] > input[aria-activedescendant] {
   outline: none;
 }
+/* Styles for the popover / listbox */
+/*
+.coop-c-combobox > [role="combobox"][aria-expanded="true"] + [role="listbox"] {
+  outline: 2px solid var(--color-link-focus);
+  outline-offset: 2px;
+}*/
 
-[data-reach-combobox][data-expanded="true"]:after {
-  transform: rotate(180deg) translate(-2px, -3px);
-}
-
-/* Styles for the popover / list element */
-
-[data-reach-combobox-popover] {
-  border: 2px solid var(--color-grey-dark);
+.coop-c-combobox > [role="listbox"] {
+  //border: 2px solid var(--color-link-focus);
+  border: 2px solid var(--color-black);
   background: var(--color-white);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   max-height: 17.5rem;
   overflow: scroll;
   transform: translateY(-4px);
-}
-
-[data-reach-combobox-list] {
   list-style: none;
   margin: 0;
   padding: 0;
-  user-select: none;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 
-[data-reach-combobox-popover][data-input=""] li[data-reach-combobox-option] span {
-  font-weight: normal;
+.coop-c-combobox > [role="listbox"]:empty {
+  display: none;
 }
 
-/* Styles for the combobox options */
+/* Styles for the combobox elements */
 
-li[data-reach-combobox-option] {
+.coop-c-combobox > [role="listbox"] li {
   padding: 0.75rem;
   cursor: pointer;
   margin: 0;
   border-bottom: 1px solid var(--color-grey-mid);
 }
 
-li[data-reach-combobox-option] span {
-  font-weight: normal;
+.coop-c-combobox > [role="listbox"] li:last-child {
+  border-bottom: 0;
 }
 
-li[data-reach-combobox-option] span[data-suggested-value] {
-  font-weight: 600;
-}
-
-li[data-reach-combobox-option][aria-selected="true"] {
+.coop-c-combobox > [role="listbox"] li[aria-selected="true"] {
+  background: var(--color-button-grey);
   outline: 2px solid var(--color-link-focus);
   outline-offset: -2px;
 }
 
-li[data-reach-combobox-option][aria-selected="true"] {
-  background: var(--color-button-grey);
-}
-
-li[data-reach-combobox-option]:hover {
-  background: var(--color-button-grey);
-}
-
-li[data-reach-combobox-option][aria-selected="true"]:hover {
-  background: var(--color-button-grey);
-}
-
-[data-suggested-value] {
+.coop-c-combobox--selected {
   font-weight: bold;
 }
 
@@ -121,7 +91,7 @@ li[data-reach-combobox-option][aria-selected="true"]:hover {
   height: auto;
 }
 
-.compact[data-reach-combobox-popover] li {
+.coop-c-combobox.compact > [role="listbox"] > li {
   font-size: 1rem;
 }
 
@@ -131,4 +101,5 @@ li[data-reach-combobox-option][aria-selected="true"]:hover {
 
 .coop-c-combobox--null {
   padding: 0.5rem;
+  pointer-events: none;
 }

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import { SearchableDropdown } from './SearchableDropdown.jsx';
 
 describe('Searchable Dropdown', () => {
@@ -53,7 +53,7 @@ describe('Searchable Dropdown', () => {
         placeholder="Select option"
       />
     );
-    const dropdownInput = document.querySelector('[data-reach-combobox-input]');
+    const dropdownInput = document.querySelector('[role="combobox"] > input');
     expect(dropdownInput).toHaveAttribute('placeholder', 'Select option');
   });
 
@@ -67,12 +67,12 @@ describe('Searchable Dropdown', () => {
     );
 
     const dropdownLabel = screen.getByText('Choose a fruit');
-    const dropdownInput = document.querySelector('[data-reach-combobox-input]');
+    const dropdownInput = document.querySelector('[role="combobox"] > input');
 
-    expect(dropdownLabel).toHaveAttribute('for', 'fruits');
+    expect(dropdownLabel).toHaveAttribute('for', 'fruits-input');
     expect(dropdownLabel).toHaveAttribute('id', 'fruits-label');
 
-    expect(dropdownInput).toHaveAttribute('id', 'fruits');
+    expect(dropdownInput).toHaveAttribute('id', 'fruits-input');
     expect(dropdownInput).toHaveAttribute('aria-labelledby', 'fruits-label');
   });
 
@@ -84,11 +84,13 @@ describe('Searchable Dropdown', () => {
         options={['apple', 'orange', 'banana']}
       />
     );
-    const dropdownComponent = document.querySelector('[data-reach-combobox]');
+    const dropdownComponent = document.querySelector('[role="combobox"]');
     const dropdownLabel = screen.getByText('Choose a fruit');
     dropdownLabel.click();
 
-    expect(dropdownComponent).toHaveAttribute('data-expanded', 'true');
+    waitFor(() => {
+      expect(dropdownComponent).toHaveAttribute('aria-expanded', 'true');
+    });
   });
 
   it('forwards style props to the searchable dropdown wrapper', () => {
@@ -128,15 +130,18 @@ describe('Searchable Dropdown', () => {
       />
     );
 
-    const dropdownPopover = document.querySelector('[data-reach-popover]');
-    const dropdownInput = document.querySelector('[data-reach-combobox-input]');
+    const dropdownPopover = document.querySelector('[role="listbox"]');
+    const dropdownInput = document.querySelector('[role="combobox"] > input');
 
     fireEvent.change(dropdownInput, { target: { value: 'apple' } });
 
     const dropdownResults = dropdownPopover.querySelectorAll('li');
-    expect(dropdownResults).toHaveLength(2);
-    expect(screen.queryByText('orange')).not.toBeInTheDocument();
-    expect(screen.queryByText('banana')).not.toBeInTheDocument();
+
+    waitFor(() => {
+      expect(dropdownResults).toHaveLength(2);
+      expect(screen.queryByText('orange')).not.toBeInTheDocument();
+      expect(screen.queryByText('banana')).not.toBeInTheDocument();
+    });
   });
 
   it('displays a no-results message when there are no matching options', () => {
@@ -148,10 +153,11 @@ describe('Searchable Dropdown', () => {
       />
     );
 
-    const dropdownInput = document.querySelector('[data-reach-combobox-input]');
+    const dropdownInput = document.querySelector('[role="combobox"] > input');
     fireEvent.change(dropdownInput, { target: { value: 'pizza' } });
-
-    expect(screen.getByText('No relevant options')).toBeInTheDocument();
+    waitFor(() => {
+      expect(screen.getByText('No relevant options')).toBeInTheDocument();
+    });
   });
 
   it('displays a custom no-results message if one is provided', () => {
@@ -164,9 +170,10 @@ describe('Searchable Dropdown', () => {
       />
     );
 
-    const dropdownInput = document.querySelector('[data-reach-combobox-input]');
+    const dropdownInput = document.querySelector('[role="combobox"] > input');
     fireEvent.change(dropdownInput, { target: { value: 'pizza' } });
-
-    expect(screen.getByText('Custom message text')).toBeInTheDocument();
+    waitFor(() => {
+      expect(screen.getByText('Custom message text')).toBeInTheDocument();
+    });
   });
 });
