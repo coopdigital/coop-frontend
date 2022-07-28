@@ -23,6 +23,6 @@ jobs:
           echo "@coopdigital:registry=https://registry.npmjs.org/" > .npmrc
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_EXPLIB" >> .npmrc
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN_EXPLIB }}
+          NPM_TOKEN_EXPLIB: ${{ secrets.NPM_TOKEN_EXPLIB }}
 
       - run: yarn run publish
