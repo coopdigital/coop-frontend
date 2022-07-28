@@ -6,14 +6,26 @@ import cleaner from 'rollup-plugin-delete';
 import copy from 'rollup-plugin-copy';
 
 export default function componentBuild(packageDirectory, packageContents) {
-  const { main, module, sources } = packageContents;
+  const { main, module, sources, devDependencies, dependencies, peerDependencies } =
+    packageContents;
+
+  const combinedDependencies = {
+    devDependencies: devDependencies ? Object.keys(devDependencies) : [],
+    peerDependencies: peerDependencies ? Object.keys(peerDependencies) : [],
+    dependencies: dependencies ? Object.keys(dependencies) : [],
+  };
 
   if (sources.main === undefined) return undefined;
 
   const input = path.join(packageDirectory, sources.main);
   return {
     input,
-    external: ['react', 'prop-types', /\.pcss$/],
+    external: [
+      /\.pcss$/,
+      ...combinedDependencies.devDependencies,
+      ...combinedDependencies.peerDependencies,
+      ...combinedDependencies.dependencies,
+    ],
     plugins: [
       resolve({
         extensions: ['.mjs', '.js', '.jsx'],

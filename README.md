@@ -2,7 +2,7 @@
 
 A mono-repository containing foundations and component packages needed for designing and building digital services for the Co‑op. All packages can be found in the [packages](./packages) directory.
 
-🚨 This project uses `yarn` rather than `npm` as it allows us to manage local workspaces and maintain links to local components. This is a requirement not a preference. 🚨
+🚨 This project uses `yarn` rather than `npm` as it allows us to manage local workspaces and maintain links to local components. This is a requirement not a preference. If you install dependencies inside components, especially React components, you will run into trouble if you do not use yarn. 🚨
 
 ## Prerequisites
 
@@ -15,6 +15,11 @@ A mono-repository containing foundations and component packages needed for desig
 - Clone this repo onto your machine
 - From the root run `yarn install`
 - This may take a while to complete but once it is done you should be able to cd into the `workbench` directory and run `yarn dev`
+
+## Testing
+
+- Run `yarn test` at root
+- You can also use `yarn test:watch` for continuous feedback
 
 ## Gotchas
 

@@ -1,58 +1,86 @@
-import React, { useRef, useEffect } from 'react';
-import SearchableDropdownLibrary from '../lib/SearchableDropdownLibrary.js';
+/* eslint-disable indent */
+import React, { useState } from 'react';
+import { useCombobox } from 'downshift';
+import PropTypes from 'prop-types';
+import { matchSorter } from 'match-sorter';
 
-const SearchableDropdown = () => {
-  const comboboxRef = useRef();
+const SearchableDropdown = ({
+  className,
+  compact,
+  id,
+  label,
+  noResults,
+  onSelect,
+  options,
+  placeholder,
+  style,
+}) => {
+  const [inputItems, setInputItems] = useState(options);
+  const sizeVariant = compact ? 'compact' : '';
+  const noResultsText = noResults || 'No relevant options';
+  const placeholderValue = placeholder || null;
 
-  useEffect(() => {
-    new SearchableDropdownLibrary(comboboxRef.current).setup();
-  }, []);
+  const {
+    isOpen,
+    closeMenu,
+    getToggleButtonProps,
+    getLabelProps,
+    getMenuProps,
+    getInputProps,
+    getComboboxProps,
+    openMenu,
+    getItemProps,
+  } = useCombobox({
+    id,
+    items: inputItems,
+    onInputValueChange: ({ inputValue }) => {
+      setInputItems(matchSorter(options, inputValue));
+    },
+    onSelectedItemChange: ({ selectedItem: selected }) => {
+      if (typeof onSelect === 'function') onSelect(selected);
+      closeMenu();
+    },
+  });
 
   return (
-    <div ref={comboboxRef}>
-      <div data-combobox>
-        <label htmlFor="combobox">How you know them</label>
-        <input
-          name="combobox"
-          className="coop-form__input"
-          type="text"
-          placeholder="Select option"
-          data-input
-          data-testid="combobox-input"
-          role="combobox"
-          aria-controls="comboboxvalues"
-          aria-autocomplete="list"
-          aria-expanded="false"
-        />
-        <div style={{ display: 'none' }} data-dropdown data-testid="combobox-dropdown">
-          <ul id="comboboxvalues" role="listbox" data-list>
-            {/* These valuse would be mapped from a data prop */}
-            <li role="option" aria-selected="false" data-option>
-              Partner
-            </li>
-            <li role="option" aria-selected="false" data-option>
-              Spouse
-            </li>
-            <li role="option" aria-selected="false" data-option>
-              Parent
-            </li>
-            <li role="option" aria-selected="false" data-option>
-              Child
-            </li>
-            <li role="option" aria-selected="false" data-option>
-              Brother
-            </li>
-            <li role="option" aria-selected="false" data-option>
-              Grandchild
-            </li>
-            <li role="option" aria-selected="false" data-option>
-              Father
-            </li>
-          </ul>
-        </div>
+    <div className={`coop-c-combobox ${sizeVariant} ${className}`} style={style}>
+      <label {...getLabelProps()} htmlFor={`${id}-input`}>
+        {label}
+      </label>
+      <div {...getComboboxProps()}>
+        <input {...getInputProps({ onFocus: openMenu })} placeholder={placeholderValue} />
+        <button type="button" {...getToggleButtonProps()} aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path d="m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z" />
+          </svg>
+        </button>
       </div>
+      <ul {...getMenuProps()}>
+        {isOpen && inputItems.length
+          ? inputItems.map((item, index) => (
+              <li {...getItemProps({ item, index })} key={`${item}${index}`}>
+                {item}
+              </li>
+            ))
+          : null}
+        {isOpen && !inputItems.length ? (
+          <li className="coop-c-combobox--null">{noResultsText}</li>
+        ) : null}
+      </ul>
     </div>
   );
 };
 
-export default SearchableDropdown;
+export { SearchableDropdown };
+
+SearchableDropdown.propTypes = {
+  className: PropTypes.string,
+  compact: PropTypes.bool,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  noResults: PropTypes.string,
+  onSelect: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
+  placeholder: PropTypes.string,
+  style: PropTypes.object,
+};
