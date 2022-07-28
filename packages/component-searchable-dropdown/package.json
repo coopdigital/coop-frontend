@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-searchable-dropdown",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Co-op Component: Searchable Dropdown",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,7 +19,7 @@
     "Omid Kashan <omid.kashan@coop.co.uk> (https://github.com/omidantilong)",
     "Mitchell Harrison <mitchell.harrison@coop.co.uk> (https://github.com/MBLHarrison)"
   ],
-  "private": true,
+  "private": false,
   "files": [
     "dist",
     "src"
