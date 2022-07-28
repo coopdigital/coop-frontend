@@ -25,7 +25,7 @@
   transform: rotate(180deg) translateY(4px);
 }
 
-.coop-c-combobox > [role="combobox"][aria-expanded="true"] > input {
+.coop-c-combobox > [role="combobox"][aria-expanded="true"] > input[aria-activedescendant] {
   outline: none;
 }
 /* Styles for the popover / listbox */
@@ -36,7 +36,8 @@
 }*/
 
 .coop-c-combobox > [role="listbox"] {
-  border: 2px solid var(--color-link-focus);
+  //border: 2px solid var(--color-link-focus);
+  border: 2px solid var(--color-black);
   background: var(--color-white);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -70,6 +71,8 @@
 
 .coop-c-combobox > [role="listbox"] li[aria-selected="true"] {
   background: var(--color-button-grey);
+  outline: 2px solid var(--color-link-focus);
+  outline-offset: -2px;
 }
 
 .coop-c-combobox--selected {
