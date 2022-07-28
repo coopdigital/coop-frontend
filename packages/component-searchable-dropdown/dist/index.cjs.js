@@ -3,14 +3,32 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
+var downshift = require('downshift');
 var PropTypes = require('prop-types');
-var combobox = require('@reach/combobox');
 var matchSorter = require('match-sorter');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
 
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
@@ -71,65 +89,88 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
-function useFilteredResults(options, term) {
-  return React.useMemo(function () {
-    return term.trim() === '' ? options : matchSorter.matchSorter(options, term);
-  }, [options, term]);
-}
-
 var SearchableDropdown = function SearchableDropdown(_ref) {
   var className = _ref.className,
       compact = _ref.compact,
       id = _ref.id,
       label = _ref.label,
+      noResults = _ref.noResults,
       onSelect = _ref.onSelect,
       options = _ref.options,
+      placeholder = _ref.placeholder,
       style = _ref.style;
-  var layoutClass = compact ? 'compact' : '';
-  var inputLabel = "".concat(id, "-label");
 
-  var _useState = React.useState(''),
+  var _useState = React.useState(options),
       _useState2 = _slicedToArray(_useState, 2),
-      inputValue = _useState2[0],
-      setInputValue = _useState2[1];
+      inputItems = _useState2[0],
+      setInputItems = _useState2[1];
 
-  var handleChange = function handleChange(event) {
-    return setInputValue(event.target.value);
-  };
+  var sizeVariant = compact ? 'compact' : '';
+  var noResultsText = noResults || 'No relevant options';
+  var placeholderValue = placeholder || null;
 
-  var results = useFilteredResults(options, inputValue);
-  return /*#__PURE__*/React__default["default"].createElement("div", {
-    className: "coop-c-combobox ".concat(layoutClass, " ").concat(className),
-    style: style
-  }, /*#__PURE__*/React__default["default"].createElement("label", {
-    htmlFor: id,
-    id: inputLabel
-  }, label), /*#__PURE__*/React__default["default"].createElement(combobox.Combobox, {
-    openOnFocus: true,
-    "aria-labelledby": inputLabel,
-    onSelect: onSelect || null
-  }, /*#__PURE__*/React__default["default"].createElement(combobox.ComboboxInput, {
-    autoComplete: "off",
+  var _useCombobox = downshift.useCombobox({
     id: id,
-    onChange: handleChange
-  }), /*#__PURE__*/React__default["default"].createElement(combobox.ComboboxPopover, {
-    className: layoutClass
-  }, /*#__PURE__*/React__default["default"].createElement(combobox.ComboboxList, null, results.length ? results.map(function (option) {
-    return /*#__PURE__*/React__default["default"].createElement(combobox.ComboboxOption, {
-      key: option,
-      value: option
-    });
-  }) : /*#__PURE__*/React__default["default"].createElement("li", {
+    items: inputItems,
+    onInputValueChange: function onInputValueChange(_ref2) {
+      var inputValue = _ref2.inputValue;
+      setInputItems(matchSorter.matchSorter(options, inputValue));
+    },
+    onSelectedItemChange: function onSelectedItemChange(_ref3) {
+      var selected = _ref3.selectedItem;
+      if (typeof onSelect === 'function') onSelect(selected);
+      closeMenu();
+    }
+  }),
+      isOpen = _useCombobox.isOpen,
+      closeMenu = _useCombobox.closeMenu,
+      getToggleButtonProps = _useCombobox.getToggleButtonProps,
+      getLabelProps = _useCombobox.getLabelProps,
+      getMenuProps = _useCombobox.getMenuProps,
+      getInputProps = _useCombobox.getInputProps,
+      getComboboxProps = _useCombobox.getComboboxProps,
+      openMenu = _useCombobox.openMenu,
+      getItemProps = _useCombobox.getItemProps;
+
+  return /*#__PURE__*/React__default["default"].createElement("div", {
+    className: "coop-c-combobox ".concat(sizeVariant, " ").concat(className),
+    style: style
+  }, /*#__PURE__*/React__default["default"].createElement("label", _extends({}, getLabelProps(), {
+    htmlFor: "".concat(id, "-input")
+  }), label), /*#__PURE__*/React__default["default"].createElement("div", getComboboxProps(), /*#__PURE__*/React__default["default"].createElement("input", _extends({}, getInputProps({
+    onFocus: openMenu
+  }), {
+    placeholder: placeholderValue
+  })), /*#__PURE__*/React__default["default"].createElement("button", _extends({
+    type: "button"
+  }, getToggleButtonProps(), {
+    "aria-label": "toggle menu"
+  }), /*#__PURE__*/React__default["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    height: "24",
+    width: "24"
+  }, /*#__PURE__*/React__default["default"].createElement("path", {
+    d: "m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z"
+  })))), /*#__PURE__*/React__default["default"].createElement("ul", getMenuProps(), isOpen && inputItems.length ? inputItems.map(function (item, index) {
+    return /*#__PURE__*/React__default["default"].createElement("li", _extends({}, getItemProps({
+      item: item,
+      index: index
+    }), {
+      key: "".concat(item).concat(index)
+    }), item);
+  }) : null, isOpen && !inputItems.length ? /*#__PURE__*/React__default["default"].createElement("li", {
     className: "coop-c-combobox--null"
-  }, "No revelant options")))));
+  }, noResultsText) : null));
 };
 SearchableDropdown.propTypes = {
   className: PropTypes__default["default"].string,
   compact: PropTypes__default["default"].bool,
   id: PropTypes__default["default"].string.isRequired,
   label: PropTypes__default["default"].string.isRequired,
+  noResults: PropTypes__default["default"].string,
   onSelect: PropTypes__default["default"].func,
   options: PropTypes__default["default"].arrayOf(PropTypes__default["default"].oneOfType([PropTypes__default["default"].number, PropTypes__default["default"].string])).isRequired,
+  placeholder: PropTypes__default["default"].string,
   style: PropTypes__default["default"].object
 };
 

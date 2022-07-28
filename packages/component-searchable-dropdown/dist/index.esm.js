@@ -1,7 +1,25 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
+import { useCombobox } from 'downshift';
 import PropTypes from 'prop-types';
-import { Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption } from '@reach/combobox';
 import { matchSorter } from 'match-sorter';
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
 
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
@@ -62,65 +80,88 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
-function useFilteredResults(options, term) {
-  return useMemo(function () {
-    return term.trim() === '' ? options : matchSorter(options, term);
-  }, [options, term]);
-}
-
 var SearchableDropdown = function SearchableDropdown(_ref) {
   var className = _ref.className,
       compact = _ref.compact,
       id = _ref.id,
       label = _ref.label,
+      noResults = _ref.noResults,
       onSelect = _ref.onSelect,
       options = _ref.options,
+      placeholder = _ref.placeholder,
       style = _ref.style;
-  var layoutClass = compact ? 'compact' : '';
-  var inputLabel = "".concat(id, "-label");
 
-  var _useState = useState(''),
+  var _useState = useState(options),
       _useState2 = _slicedToArray(_useState, 2),
-      inputValue = _useState2[0],
-      setInputValue = _useState2[1];
+      inputItems = _useState2[0],
+      setInputItems = _useState2[1];
 
-  var handleChange = function handleChange(event) {
-    return setInputValue(event.target.value);
-  };
+  var sizeVariant = compact ? 'compact' : '';
+  var noResultsText = noResults || 'No relevant options';
+  var placeholderValue = placeholder || null;
 
-  var results = useFilteredResults(options, inputValue);
-  return /*#__PURE__*/React.createElement("div", {
-    className: "coop-c-combobox ".concat(layoutClass, " ").concat(className),
-    style: style
-  }, /*#__PURE__*/React.createElement("label", {
-    htmlFor: id,
-    id: inputLabel
-  }, label), /*#__PURE__*/React.createElement(Combobox, {
-    openOnFocus: true,
-    "aria-labelledby": inputLabel,
-    onSelect: onSelect || null
-  }, /*#__PURE__*/React.createElement(ComboboxInput, {
-    autoComplete: "off",
+  var _useCombobox = useCombobox({
     id: id,
-    onChange: handleChange
-  }), /*#__PURE__*/React.createElement(ComboboxPopover, {
-    className: layoutClass
-  }, /*#__PURE__*/React.createElement(ComboboxList, null, results.length ? results.map(function (option) {
-    return /*#__PURE__*/React.createElement(ComboboxOption, {
-      key: option,
-      value: option
-    });
-  }) : /*#__PURE__*/React.createElement("li", {
+    items: inputItems,
+    onInputValueChange: function onInputValueChange(_ref2) {
+      var inputValue = _ref2.inputValue;
+      setInputItems(matchSorter(options, inputValue));
+    },
+    onSelectedItemChange: function onSelectedItemChange(_ref3) {
+      var selected = _ref3.selectedItem;
+      if (typeof onSelect === 'function') onSelect(selected);
+      closeMenu();
+    }
+  }),
+      isOpen = _useCombobox.isOpen,
+      closeMenu = _useCombobox.closeMenu,
+      getToggleButtonProps = _useCombobox.getToggleButtonProps,
+      getLabelProps = _useCombobox.getLabelProps,
+      getMenuProps = _useCombobox.getMenuProps,
+      getInputProps = _useCombobox.getInputProps,
+      getComboboxProps = _useCombobox.getComboboxProps,
+      openMenu = _useCombobox.openMenu,
+      getItemProps = _useCombobox.getItemProps;
+
+  return /*#__PURE__*/React.createElement("div", {
+    className: "coop-c-combobox ".concat(sizeVariant, " ").concat(className),
+    style: style
+  }, /*#__PURE__*/React.createElement("label", _extends({}, getLabelProps(), {
+    htmlFor: "".concat(id, "-input")
+  }), label), /*#__PURE__*/React.createElement("div", getComboboxProps(), /*#__PURE__*/React.createElement("input", _extends({}, getInputProps({
+    onFocus: openMenu
+  }), {
+    placeholder: placeholderValue
+  })), /*#__PURE__*/React.createElement("button", _extends({
+    type: "button"
+  }, getToggleButtonProps(), {
+    "aria-label": "toggle menu"
+  }), /*#__PURE__*/React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    height: "24",
+    width: "24"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z"
+  })))), /*#__PURE__*/React.createElement("ul", getMenuProps(), isOpen && inputItems.length ? inputItems.map(function (item, index) {
+    return /*#__PURE__*/React.createElement("li", _extends({}, getItemProps({
+      item: item,
+      index: index
+    }), {
+      key: "".concat(item).concat(index)
+    }), item);
+  }) : null, isOpen && !inputItems.length ? /*#__PURE__*/React.createElement("li", {
     className: "coop-c-combobox--null"
-  }, "No revelant options")))));
+  }, noResultsText) : null));
 };
 SearchableDropdown.propTypes = {
   className: PropTypes.string,
   compact: PropTypes.bool,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  noResults: PropTypes.string,
   onSelect: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
+  placeholder: PropTypes.string,
   style: PropTypes.object
 };
 
