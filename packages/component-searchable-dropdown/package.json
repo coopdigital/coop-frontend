@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-searchable-dropdown",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Co-op Component: Searchable Dropdown",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -26,10 +26,10 @@
     "directory": "packages/component-searchable-dropdown"
   },
   "devDependencies": {
+    "@testing-library/react": "12.1.2",
     "prop-types": "^15.5.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@testing-library/react": "12.1.2"
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations-forms": "5.6.1"
