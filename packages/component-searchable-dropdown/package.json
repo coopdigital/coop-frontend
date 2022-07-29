@@ -9,13 +9,8 @@
     "style": "src/searchableDropdown.pcss",
     "main": "src/index.js"
   },
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch --maxWorkers=25%"
-  },
   "author": "@coopdigital",
   "contributors": [
-    "Michael Chadwick <michael.chadwick@coop.co.uk> (https://github.com/mchadwickweb)",
     "Omid Kashan <omid.kashan@coop.co.uk> (https://github.com/omidantilong)",
     "Mitchell Harrison <mitchell.harrison@coop.co.uk> (https://github.com/MBLHarrison)"
   ],
@@ -33,27 +28,30 @@
   "devDependencies": {
     "prop-types": "^15.5.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "@testing-library/react": "12.1.2"
   },
   "peerDependencies": {
-    "@testing-library/react": "12.1.2",
-    "prop-types": ">= 15.5.4 < 16",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@coopdigital/foundations-forms": "5.6.1"
   },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
   "homepage": "https://github.com/coopdigital/coop-frontend/tree/master/packages/component-searchable-dropdown#readme",
   "keywords": [
-    "templates"
+    "combobox",
+    "searchable dropdown",
+    "select",
+    "filterable dropdown"
   ],
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@reach/combobox": "^0.17.0",
     "downshift": "^6.1.7",
-    "match-sorter": "^6.3.1"
+    "match-sorter": "^6.3.1",
+    "prop-types": ">= 15.5.4 < 16",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }
