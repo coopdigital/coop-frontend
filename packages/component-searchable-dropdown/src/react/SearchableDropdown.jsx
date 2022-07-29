@@ -4,6 +4,21 @@ import { useCombobox } from 'downshift';
 import PropTypes from 'prop-types';
 import { matchSorter } from 'match-sorter';
 
+const SearchableDropdownHighlight = ({ item, input }) => {
+  if (!input.trim()) return <span>{item}</span>;
+
+  const regex = new RegExp(`(${input})`, 'gi');
+  const parts = item.split(regex);
+
+  return (
+    <span>
+      {parts.filter(String).map((part, i) => {
+        return regex.test(part) ? <span key={i}>{part}</span> : <mark key={i}>{part}</mark>;
+      })}
+    </span>
+  );
+};
+
 const SearchableDropdown = ({
   className,
   compact,
@@ -19,7 +34,7 @@ const SearchableDropdown = ({
   const sizeVariant = compact ? 'compact' : '';
   const noResultsText = noResults || 'No relevant options';
   const placeholderValue = placeholder || null;
-
+  const [input, setInput] = useState('');
   const {
     isOpen,
     closeMenu,
@@ -35,6 +50,7 @@ const SearchableDropdown = ({
     items: inputItems,
     onInputValueChange: ({ inputValue }) => {
       setInputItems(matchSorter(options, inputValue));
+      setInput(inputValue);
     },
     onSelectedItemChange: ({ selectedItem: selected }) => {
       if (typeof onSelect === 'function') onSelect(selected);
@@ -59,7 +75,7 @@ const SearchableDropdown = ({
         {isOpen && inputItems.length
           ? inputItems.map((item, index) => (
               <li {...getItemProps({ item, index })} key={`${item}${index}`}>
-                {item}
+                <SearchableDropdownHighlight input={input} item={item} />
               </li>
             ))
           : null}
@@ -83,4 +99,9 @@ SearchableDropdown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
   placeholder: PropTypes.string,
   style: PropTypes.object,
+};
+
+SearchableDropdownHighlight.propTypes = {
+  input: PropTypes.string,
+  item: PropTypes.string,
 };
