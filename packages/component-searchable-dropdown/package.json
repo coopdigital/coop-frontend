@@ -25,15 +25,6 @@
     "url": "https://github.com/coopdigital/coop-frontend.git",
     "directory": "packages/component-searchable-dropdown"
   },
-  "devDependencies": {
-    "@testing-library/react": "12.1.2",
-    "prop-types": "^15.5.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "peerDependencies": {
-    "@coopdigital/foundations-forms": "5.6.1"
-  },
   "bugs": {
     "url": "https://github.com/coopdigital/coop-frontend/issues"
   },
@@ -50,8 +41,14 @@
   "dependencies": {
     "downshift": "^6.1.7",
     "match-sorter": "^6.3.1",
-    "prop-types": ">= 15.5.4 < 16",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "prop-types": "^15.5.4",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/react": "12.1.2"
+  },
+  "peerDependencies": {
+    "@coopdigital/foundations-forms": "5.6.1"
   }
 }
