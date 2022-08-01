@@ -58,12 +58,12 @@ The component can be further customised using the props below:
 
 | prop          | type     | description                                                                                     | default             |
 | ------------- | -------- | ----------------------------------------------------------------------------------------------- | ------------------- |
-| `className`   | `string` | Additional class (or classes) to append to the outer coop-c-combobox element                    |
-| `compact`     | `bool`   | Reduces the input font size to 1rem                                                             | -                   |
+| `className`   | `string` | Additional class (or classes) to append to the outer coop-c-combobox element                    | -                   |
+| `compact`     | `bool`   | Reduces the input font size to 1rem                                                             | false               |
 | `noResults`   | `string` | String to display when no matching options are found                                            | No relevant options |
 | `onSelect`    | `func`   | Callback function when an option is selected, receives the selected value as its only parameter | -                   |
 | `placeholder` | `string` | Placeholder text to display when no option is selected                                          | -                   |
-| `style`       | `object` | CSS object with inline styles to be added to the outer coop-c-combobox element                  |
+| `style`       | `object` | CSS object with inline styles to be added to the outer coop-c-combobox element                  | -                   |
 
 ## Kitchen sink
 
