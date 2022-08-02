@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-searchable-dropdown",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Co-op Component: Searchable Dropdown",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
