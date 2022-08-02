@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-searchable-dropdown@0.2.3...@coopdigital/component-searchable-dropdown@0.2.5) (2022-08-02)
+
+
+### Bug Fixes
+
+* remove inline comment from searchable-dropdown pcss ([a816bbe](https://github.com/coopdigital/coop-frontend/commit/a816bbe1ad772912cf2789d9d1ebff71d6905d2d))
+
+
+
+
+
 ## [0.2.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-searchable-dropdown@0.2.2...@coopdigital/component-searchable-dropdown@0.2.3) (2022-07-29)
 
 **Note:** Version bump only for package @coopdigital/component-searchable-dropdown
