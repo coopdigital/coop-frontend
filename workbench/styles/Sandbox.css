@@ -1,0 +1,16 @@
+.wb-sandbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.wb-sandbox-component {
+}
+.wb-sandbox-controls > div {
+  position: relative;
+}
+.wb-sandbox-controls input[type="checkbox"] {
+  position: static;
+  opacity: 1;
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+}

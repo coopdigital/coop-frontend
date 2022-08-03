@@ -6,6 +6,7 @@
 
 @import "./Header.css";
 @import "./Breadcrumbs.css";
+@import "./Sandbox.css";
 
 body {
   background-color: #fafafa;
@@ -19,4 +20,10 @@ body {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+input {
+  font-size: 1rem;
+  height: auto;
+  padding: 0.75rem;
 }
