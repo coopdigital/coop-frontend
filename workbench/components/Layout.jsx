@@ -1,7 +1,7 @@
-import Header from './Header';
+import { Header } from './Header';
 import { Breadcrumb } from './Breadcrumb';
 
-export default function Layout(props) {
+export function Layout(props) {
   return (
     <>
       <Header />

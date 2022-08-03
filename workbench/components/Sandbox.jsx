@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-export default function Sandbox({ config, children }) {
+export function Sandbox({ config, children }) {
   /*
-            {config} - 
+            {config} -
             {children}
     */
 
@@ -33,9 +33,9 @@ export default function Sandbox({ config, children }) {
       <div className="wb-sandbox-controls">
         <h3>Toggles</h3>
         {config.map((field) => {
-          //const additionalClass = field.type === 'checkbox' ? 'coop-form__choice' : '';
+          // const additionalClass = field.type === 'checkbox' ? 'coop-form__choice' : '';
           return (
-            <div className={`coop-u-padding-b-16 coop-form__row`} key={field.name}>
+            <div className={'coop-u-padding-b-16 coop-form__row'} key={field.name}>
               <label className="coop-form__label" htmlFor={field.name}>
                 {field.name}
               </label>

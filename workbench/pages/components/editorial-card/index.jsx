@@ -1,8 +1,8 @@
 /* eslint-disable */
 import Head from 'next/head';
-import Layout from '../../../components/Layout';
-import EditorialCard from '../../../components/EditorialCard';
-import Sandbox from 'components/Sandbox';
+import { Layout } from '../../../components/Layout';
+import { EditorialCard } from '../../../components/EditorialCard';
+import { Sandbox } from 'components/Sandbox';
 
 const config = [
   {

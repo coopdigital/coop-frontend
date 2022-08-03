@@ -1,7 +1,7 @@
 import { SearchableDropdown } from '@coopdigital/component-searchable-dropdown/src/index';
-import Layout from '../../../components/Layout';
+import { Layout } from '../../../components/Layout';
 
-const ComoboboxPage = () => {
+const ComboboxPage = () => {
   return (
     <Layout>
       <div className="coop-form__row">
@@ -30,4 +30,4 @@ const ComoboboxPage = () => {
   );
 };
 
-export default ComoboboxPage;
+export default ComboboxPage;
