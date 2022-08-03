@@ -21,9 +21,3 @@ body {
 .capitalize {
   text-transform: capitalize;
 }
-
-input {
-  font-size: 1rem;
-  height: auto;
-  padding: 0.75rem;
-}
