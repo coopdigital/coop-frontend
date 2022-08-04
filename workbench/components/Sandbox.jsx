@@ -1,3 +1,4 @@
+import { EditorialCard } from 'components/EditorialCard';
 import React, { useState } from 'react';
 
 export function Sandbox({ config, children }) {
@@ -6,24 +7,27 @@ export function Sandbox({ config, children }) {
             {children}
     */
 
-  const defaults = {};
-  const fields = [];
+  const values = {};
 
   config.forEach((field) => {
-    defaults[field.name] = field.default;
-    fields.push(field.name);
+    values[field.name] = field.value;
   });
 
-  const [data, setData] = useState(defaults);
-  console.log(data, fields);
+  const [data, setData] = useState(values);
   const handleChange = (event) => {
     let value;
-    if (event.target.type === 'checkbox') {
+    const { prop, proptype } = event.target.dataset;
+
+    if (proptype === 'checkbox') {
       value = event.target.checked;
-    } else {
+    }
+    if (proptype === 'text') {
       value = event.target.value;
     }
-    const { prop } = event.target.dataset;
+    if (proptype === 'array') {
+      value = event.target.value.split(',');
+    }
+
     setData({ ...data, [prop]: value });
   };
 
@@ -31,20 +35,27 @@ export function Sandbox({ config, children }) {
     <div className="wb-sandbox">
       <div className="wb-sandbox-component">{React.cloneElement(children, { ...data })}</div>
       <div className="wb-sandbox-controls">
-        <h3>Toggles</h3>
+        <h3>Controls</h3>
         {config.map((field) => {
           // const additionalClass = field.type === 'checkbox' ? 'coop-form__choice' : '';
+          const inputConditionalProps = {
+            defaultChecked: field.type === 'checkbox' && field.value === true ? true : null,
+            value: field.type === 'text' ? data[field.name] : '',
+          };
           return (
-            <div className={'coop-u-padding-b-16 coop-form__row'} key={field.name}>
+            <div className={'coop-form__row'} key={field.name}>
               <label className="coop-form__label" htmlFor={field.name}>
                 {field.name}
               </label>
               <input
                 type={field.type}
                 id={field.name}
-                value={data[field.name]}
                 data-prop={field.name}
+                data-proptype={field.proptype || field.type || 'text'}
                 onInput={handleChange}
+                // onChange={handleChange}
+                // value={field.value}
+                {...inputConditionalProps}
               />
             </div>
           );

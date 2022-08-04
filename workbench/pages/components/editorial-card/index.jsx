@@ -7,16 +7,16 @@ import { Sandbox } from 'components/Sandbox';
 const config = [
   {
     name: 'title',
-    default: 'test title',
+    value: 'Find out the difference Co-op makes as we celebrate 25 years of Fairtrade',
     type: 'text',
   },
   {
     name: 'label',
-    default: 'label test',
+    value: 'Lorem ipsum dolor sit',
     type: 'text',
   },
-  { name: 'href', default: '#', type: 'text' },
-  { name: 'isHorizontal', default: false, type: 'checkbox' },
+  { name: 'href', value: '#', type: 'text' },
+  { name: 'isHorizontal', value: false, type: 'checkbox' },
 ];
 
 const EditorialCardPage = () => {
