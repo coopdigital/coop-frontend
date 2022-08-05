@@ -1,4 +1,3 @@
-import { EditorialCard } from 'components/EditorialCard';
 import React, { useState } from 'react';
 
 export function Sandbox({ config, children }) {
@@ -37,7 +36,6 @@ export function Sandbox({ config, children }) {
       <div className="wb-sandbox-controls">
         <h3>Controls</h3>
         {config.map((field) => {
-          // const additionalClass = field.type === 'checkbox' ? 'coop-form__choice' : '';
           const inputConditionalProps = {
             defaultChecked: field.type === 'checkbox' && field.value === true ? true : null,
             value: field.type === 'text' ? data[field.name] : '',
