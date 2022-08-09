@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Logo from './coop-logo';
 
-export default function Header() {
+export function Header() {
   return (
     <>
       <header className="wb-header coop-u-padding-t-16 coop-u-padding-b-8 main ">
