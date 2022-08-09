@@ -4,6 +4,10 @@ import { useCombobox } from 'downshift';
 import PropTypes from 'prop-types';
 import { matchSorter } from 'match-sorter';
 
+const filterItems = (options, inputValue) => {
+  return inputValue !== '' ? matchSorter(options, inputValue) : options;
+};
+
 const SearchableDropdown = ({
   className,
   compact,
@@ -34,7 +38,7 @@ const SearchableDropdown = ({
     id,
     items: inputItems,
     onInputValueChange: ({ inputValue }) => {
-      setInputItems(matchSorter(options, inputValue));
+      setInputItems(filterItems(options, inputValue));
     },
     onSelectedItemChange: ({ selectedItem: selected }) => {
       if (typeof onSelect === 'function') onSelect(selected);

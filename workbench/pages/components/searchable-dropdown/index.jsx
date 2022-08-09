@@ -2,7 +2,7 @@ import { SearchableDropdown } from '@coopdigital/component-searchable-dropdown/s
 import { Sandbox } from 'components/Sandbox';
 import { Layout } from '../../../components/Layout';
 
-const defaultOptions = ['apple', 'banana', 'orange'];
+const defaultOptions = ['watermelon', 'mango', 'apple', 'banana', 'orange'];
 
 const config = [
   { name: 'compact', type: 'checkbox', value: true },
