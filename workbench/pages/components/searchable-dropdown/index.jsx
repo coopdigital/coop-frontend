@@ -1,5 +1,5 @@
 import { SearchableDropdown } from '@coopdigital/component-searchable-dropdown/src/index';
-import { Sandbox } from 'components/Sandbox';
+import { Sandbox } from '../../../components/Sandbox';
 import { Layout } from '../../../components/Layout';
 
 const defaultOptions = ['watermelon', 'mango', 'apple', 'banana', 'orange'];

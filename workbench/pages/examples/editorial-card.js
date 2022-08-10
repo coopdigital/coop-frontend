@@ -1,5 +1,5 @@
-import Layout from '../../components/Layout';
-import EditorialCard from '../../components/EditorialCard';
+import { Layout } from '../../components/Layout';
+import { EditorialCard } from '../../components/EditorialCard';
 
 export default function EditorialCardExamplePage() {
   return (
@@ -25,9 +25,8 @@ export default function EditorialCardExamplePage() {
             href="#"
           >
             <p>
-              Join us in celebrating 25 years of Fairtrade by enjoying products
-              that carry the Fairtrade Mark, or holding your own Fairtrade
-              party.
+              Join us in celebrating 25 years of Fairtrade by enjoying products that carry the
+              Fairtrade Mark, or holding your own Fairtrade party.
             </p>
           </EditorialCard>
         </div>
