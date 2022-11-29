@@ -15,8 +15,10 @@
 }
 
 .coop-c-skip-nav__link {
+  --offscreen-position: -9999px;
+
   position: absolute;
-  left: -9999px;
+  left: var(--offscreen-position);
   top: 0;
   font-size: var(--type-body-s);
   padding: var(--spacing-medium--1-4);
@@ -36,4 +38,8 @@
 .coop-c-skip-nav__link:focus,
 .coop-c-skip-nav__link:active {
   left: var(--spacing-medium--1-4);
+}
+
+.coop-c-skip-nav__link:focus:not(:focus-visible) {
+  left: var(--offscreen-position);
 }
