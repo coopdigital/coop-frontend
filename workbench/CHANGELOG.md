@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.4.3...workbench@0.5.0) (2022-12-02)
+
+
+### Bug Fixes
+
+* do not sort combobox values if input is empty ([30abe4b](https://github.com/coopdigital/coop-frontend/commit/30abe4b09b216040ac3862c5a99be2d2a682c536))
+* move control input styles into scoped class ([17bbb9a](https://github.com/coopdigital/coop-frontend/commit/17bbb9a1eeb3523aebee621739225237d3607bcc))
+* remove unused import from sandbox ([4075b89](https://github.com/coopdigital/coop-frontend/commit/4075b89ec4e9e2d62813e14450906bff9180a8f2))
+* use named imports on example editorialCard page ([35133c1](https://github.com/coopdigital/coop-frontend/commit/35133c15bf8f790a76798ce26d181a02986cee91))
+
+
+### Features
+
+* remove default exports and use jsx file extension ([1e6838f](https://github.com/coopdigital/coop-frontend/commit/1e6838fcc1ae74079b66d04094f5ad4d40794e7c))
+* sandbox improvements ([cdee3b1](https://github.com/coopdigital/coop-frontend/commit/cdee3b1a0770d7b942003fe2599540d1aeb62fe2))
+
+
+
+
+
 ## [0.4.3](https://github.com/coopdigital/coop-frontend/compare/workbench@0.4.2...workbench@0.4.3) (2022-08-02)
 
 **Note:** Version bump only for package workbench
