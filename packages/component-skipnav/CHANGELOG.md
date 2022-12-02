@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-skipnav@2.4.5...@coopdigital/component-skipnav@2.5.0) (2022-12-02)
+
+
+### Features
+
+* only show skipnav when focus-visible ([5b6c2b3](https://github.com/coopdigital/coop-frontend/commit/5b6c2b3534b396143a98caab7bd56f79bc77bc83))
+
+
+
+
+
 ## [2.4.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-skipnav@2.4.4...@coopdigital/component-skipnav@2.4.5) (2022-04-22)
 
 **Note:** Version bump only for package @coopdigital/component-skipnav

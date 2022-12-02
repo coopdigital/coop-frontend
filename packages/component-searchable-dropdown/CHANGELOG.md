@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-searchable-dropdown@0.2.5...@coopdigital/component-searchable-dropdown@0.2.6) (2022-12-02)
+
+
+### Bug Fixes
+
+* do not sort combobox values if input is empty ([30abe4b](https://github.com/coopdigital/coop-frontend/commit/30abe4b09b216040ac3862c5a99be2d2a682c536))
+
+
+
+
+
 ## [0.2.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-searchable-dropdown@0.2.3...@coopdigital/component-searchable-dropdown@0.2.5) (2022-08-02)
 
 
