@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--membership@3.2.5...@coopdigital/shared-component--membership@3.2.6) (2023-02-21)
+
+**Note:** Version bump only for package @coopdigital/shared-component--membership
+
+
+
+
+
 ## [3.2.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--membership@3.2.4...@coopdigital/shared-component--membership@3.2.5) (2022-04-22)
 
 **Note:** Version bump only for package @coopdigital/shared-component--membership

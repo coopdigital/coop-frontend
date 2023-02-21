@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.3.1...@coopdigital/foundations@1.3.2) (2023-02-21)
+
+
+### Bug Fixes
+
+* typography package now uses newly licensed fonts ([635ebc5](https://github.com/coopdigital/coop-frontend/commit/635ebc5f8626e41b9ceb0dd6aadd8c894d38f201))
+
+
+
+
+
 ## [1.3.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.3.0...@coopdigital/foundations@1.3.1) (2022-04-22)
 
 

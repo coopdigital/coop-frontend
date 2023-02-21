@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.5...@coopdigital/shared-component--video@2.3.6) (2023-02-21)
+
+**Note:** Version bump only for package @coopdigital/shared-component--video
+
+
+
+
+
 ## [2.3.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.4...@coopdigital/shared-component--video@2.3.5) (2022-04-22)
 
 **Note:** Version bump only for package @coopdigital/shared-component--video

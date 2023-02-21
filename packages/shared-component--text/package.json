@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--text",
-  "version": "2.3.5",
+  "version": "2.3.6",
   "description": "Co-op Shared Component: Text",
   "main": "dist/text.css",
   "style": "src/text.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--text"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.3.1"
+    "@coopdigital/foundations": "^1.3.2"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

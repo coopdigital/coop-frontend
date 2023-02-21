@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/coopdigital/coop-frontend/compare/workbench@0.5.0...workbench@0.5.1) (2023-02-21)
+
+**Note:** Version bump only for package workbench
+
+
+
+
+
 # [0.5.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.4.3...workbench@0.5.0) (2022-12-02)
 
 
