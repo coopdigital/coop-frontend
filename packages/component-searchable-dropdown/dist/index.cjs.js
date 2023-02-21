@@ -89,6 +89,10 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
+var filterItems = function filterItems(options, inputValue) {
+  return inputValue !== '' ? matchSorter.matchSorter(options, inputValue) : options;
+};
+
 var SearchableDropdown = function SearchableDropdown(_ref) {
   var className = _ref.className,
       compact = _ref.compact,
@@ -114,7 +118,7 @@ var SearchableDropdown = function SearchableDropdown(_ref) {
     items: inputItems,
     onInputValueChange: function onInputValueChange(_ref2) {
       var inputValue = _ref2.inputValue;
-      setInputItems(matchSorter.matchSorter(options, inputValue));
+      setInputItems(filterItems(options, inputValue));
     },
     onSelectedItemChange: function onSelectedItemChange(_ref3) {
       var selected = _ref3.selectedItem;
