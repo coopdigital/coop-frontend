@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "private": true,
   "engines": {
     "node": "16.x || 17.x",
@@ -35,9 +35,9 @@
     "@coopdigital/shared-component--cooperate": "^1.6.7",
     "@coopdigital/shared-component--editorialcard": "^2.5.6",
     "@coopdigital/shared-component--featurecard": "^2.5.6",
-    "@coopdigital/shared-component--hero": "^3.13.11",
+    "@coopdigital/shared-component--hero": "^3.13.12",
     "@coopdigital/shared-component--image": "^2.3.6",
-    "@coopdigital/shared-component--linklist": "^3.4.9",
+    "@coopdigital/shared-component--linklist": "^3.4.10",
     "@coopdigital/shared-component--membership": "^3.2.6",
     "@coopdigital/shared-component--membershipfeatured": "^1.4.6",
     "@coopdigital/shared-component--membershiphero": "^1.5.6",
