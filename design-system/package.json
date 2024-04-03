@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "private": true,
   "engines": {
     "node": "16.x || 17.x",
@@ -48,7 +48,7 @@
     "@coopdigital/shared-component--signpostlist": "^1.6.7",
     "@coopdigital/shared-component--statement": "^3.2.6",
     "@coopdigital/shared-component--totaliser": "^1.2.6",
-    "@coopdigital/shared-component--video": "^2.3.6",
+    "@coopdigital/shared-component--video": "^2.3.7",
     "handlebars": "^4.7.6",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.6...@coopdigital/shared-component--video@2.3.7) (2024-04-03)
+
+
+### Bug Fixes
+
+* update video component to use youtube-nocookie url ([#530](https://github.com/coopdigital/coop-frontend/issues/530)) ([234b057](https://github.com/coopdigital/coop-frontend/commit/234b05781adea0871b7be69a542f569cef9c883b))
+
+
+
+
+
 ## [2.3.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.5...@coopdigital/shared-component--video@2.3.6) (2023-02-21)
 
 **Note:** Version bump only for package @coopdigital/shared-component--video
