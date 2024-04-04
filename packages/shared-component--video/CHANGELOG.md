@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.8](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.7...@coopdigital/shared-component--video@2.3.8) (2024-04-04)
+
+
+### Bug Fixes
+
+* undo nocookie youtube url change ([#531](https://github.com/coopdigital/coop-frontend/issues/531)) ([5031a3a](https://github.com/coopdigital/coop-frontend/commit/5031a3a3d3d5975af7b962bf289bc6764731142d))
+
+
+
+
+
 ## [2.3.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.6...@coopdigital/shared-component--video@2.3.7) (2024-04-03)
 
 

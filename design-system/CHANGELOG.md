@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.14](https://github.com/coopdigital/coop-frontend/compare/design-system@1.1.13...design-system@1.1.14) (2024-04-04)
+
+**Note:** Version bump only for package design-system
+
+
+
+
+
 ## [1.1.13](https://github.com/coopdigital/coop-frontend/compare/design-system@1.1.12...design-system@1.1.13) (2024-04-03)
 
 **Note:** Version bump only for package design-system
