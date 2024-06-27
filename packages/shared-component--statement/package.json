@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--statement",
-  "version": "3.2.6",
+  "version": "3.2.7",
   "description": "Co-op Shared Component: Statement",
   "main": "dist/statement.css",
   "style": "src/statement.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--statement"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.3.2"
+    "@coopdigital/foundations": "^1.4.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.10](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.9.9...@coopdigital/shared-component--link@1.9.10) (2024-06-27)
+
+**Note:** Version bump only for package @coopdigital/shared-component--link
+
+
+
+
+
 ## [1.9.9](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--link@1.9.8...@coopdigital/shared-component--link@1.9.9) (2023-12-13)
 
 **Note:** Version bump only for package @coopdigital/shared-component--link

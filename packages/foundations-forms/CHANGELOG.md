@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.6.3](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.6.2...@coopdigital/foundations-forms@5.6.3) (2024-06-27)
+
+**Note:** Version bump only for package @coopdigital/foundations-forms
+
+
+
+
+
 ## [5.6.2](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-forms@5.6.1...@coopdigital/foundations-forms@5.6.2) (2023-02-21)
 
 **Note:** Version bump only for package @coopdigital/foundations-forms
