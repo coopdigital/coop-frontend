@@ -62,7 +62,7 @@
     "postinstall": "lerna clean --yes && lerna bootstrap",
     "prepare": "husky install",
     "lint": "npm-run-all lint:*",
-    "lint:css": "lerna --ignore design-system exec --stream -- 'stylelint 'src/**/*.{css,pcss}' --fix --allow-empty-input'",
+    "lint:css": "lerna --ignore design-system exec --stream -- 'stylelint src/**/*.{css,pcss} --fix --allow-empty-input'",
     "lint:js": "lerna --ignore design-system exec --stream -- 'eslint src/ contentful/ --ext .cjs,.js,.jsx,.mjs --fix --no-error-on-unmatched-pattern'",
     "pretest": "yarn run lint",
     "test": "jest --coverage",
