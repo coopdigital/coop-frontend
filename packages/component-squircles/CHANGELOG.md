@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.8](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-squircles@2.4.7...@coopdigital/component-squircles@2.4.8) (2024-07-11)
+
+**Note:** Version bump only for package @coopdigital/component-squircles
+
+
+
+
+
 ## [2.4.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-squircles@2.4.6...@coopdigital/component-squircles@2.4.7) (2024-06-27)
 
 **Note:** Version bump only for package @coopdigital/component-squircles

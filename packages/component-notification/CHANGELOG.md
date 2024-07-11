@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.8](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-notification@1.3.7...@coopdigital/component-notification@1.3.8) (2024-07-11)
+
+**Note:** Version bump only for package @coopdigital/component-notification
+
+
+
+
+
 ## [1.3.7](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-notification@1.3.6...@coopdigital/component-notification@1.3.7) (2024-06-27)
 
 **Note:** Version bump only for package @coopdigital/component-notification

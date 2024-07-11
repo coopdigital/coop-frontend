@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--link",
-  "version": "1.9.10",
+  "version": "1.9.11",
   "description": "Co-op Shared Component: Link",
   "author": "@coopdigital",
   "contributors": [
@@ -18,7 +18,7 @@
     "directory": "packages/shared-component--link"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.4.0",
+    "@coopdigital/foundations": "^1.4.1",
     "@coopdigital/shared-component--icon": "^2.2.0"
   },
   "peerDependencies": {
