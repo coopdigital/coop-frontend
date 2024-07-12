@@ -16,6 +16,7 @@ const config = [
     type: 'text',
   },
   { name: 'href', value: '#', type: 'text' },
+  { name: 'color', value: '--color-white', type: 'text' },
   { name: 'isHorizontal', value: false, type: 'checkbox' },
 ];
 

@@ -18,10 +18,17 @@ const EditorialCardLink = ({ href, title, dataContentParent, children }) => {
   return children;
 };
 
-const EditorialCard = ({ title, label, href, children, dataContentParent, isHorizontal }) => {
+const isValidCSSVar = (variable) => {
+  return /^--[a-zA-Z0-9-]+$/.test(variable);
+};
+
+const EditorialCard = ({ title, label, href, color,
+  children, dataContentParent, isHorizontal }) => {
   const classes = classNames('coop-c-editorialcard', [
     isHorizontal ? 'coop-c-editorialcard--horizontal' : null,
   ]);
+
+  const backgroundColor = isValidCSSVar(color) ? `var(${color})` : 'transparent';
 
   return (
     <article className={classes}>
@@ -45,7 +52,7 @@ const EditorialCard = ({ title, label, href, children, dataContentParent, isHori
               />
             </picture>
           </figure>
-          <div className="coop-c-editorialcard__content">
+          <div className="coop-c-editorialcard__content" style={{ background: backgroundColor }}>
             <header className="coop-c-editorialcard__header">
               {label ? <p className="coop-c-editorialcard__subtitle">{label}</p> : null}
               <h3 className="coop-c-editorialcard__title">{title}</h3>
