@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.5.3...workbench@0.6.0) (2024-08-09)
+
+
+### Features
+
+* add css color var input to editorial card for testing ([4742c0f](https://github.com/coopdigital/coop-frontend/commit/4742c0f14c7da8fe4c33588e5c9850bc0de2f628))
+
+
+
+
+
 ## [0.5.3](https://github.com/coopdigital/coop-frontend/compare/workbench@0.5.2...workbench@0.5.3) (2024-07-11)
 
 **Note:** Version bump only for package workbench

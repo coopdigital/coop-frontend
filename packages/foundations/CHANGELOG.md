@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.4.1...@coopdigital/foundations@1.5.0) (2024-08-09)
+
+
+### Features
+
+* add line height to coop-t-headline class ([93657ac](https://github.com/coopdigital/coop-frontend/commit/93657acd5ba5cc0f08baf79fd1dfef64b77c19fa))
+
+
+
+
+
 ## [1.4.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.4.0...@coopdigital/foundations@1.4.1) (2024-07-11)
 
 **Note:** Version bump only for package @coopdigital/foundations

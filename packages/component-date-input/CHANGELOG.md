@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.11](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-date-input@1.3.10...@coopdigital/component-date-input@1.3.11) (2024-08-09)
+
+**Note:** Version bump only for package @coopdigital/component-date-input
+
+
+
+
+
 ## [1.3.10](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-date-input@1.3.9...@coopdigital/component-date-input@1.3.10) (2024-07-11)
 
 **Note:** Version bump only for package @coopdigital/component-date-input
