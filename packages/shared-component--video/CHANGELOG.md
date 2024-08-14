@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.12](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.11...@coopdigital/shared-component--video@2.3.12) (2024-08-14)
+
+
+### Bug Fixes
+
+* add frame title for accessibility ([#537](https://github.com/coopdigital/coop-frontend/issues/537)) ([d29a76c](https://github.com/coopdigital/coop-frontend/commit/d29a76c62b95d4160205dafd17daadb6b6d82cca))
+
+
+
+
+
 ## [2.3.11](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--video@2.3.10...@coopdigital/shared-component--video@2.3.11) (2024-08-09)
 
 **Note:** Version bump only for package @coopdigital/shared-component--video
