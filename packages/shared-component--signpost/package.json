@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--signpost",
-  "version": "2.7.10",
+  "version": "2.7.11",
   "description": "Co-op Shared Component: Signpost",
   "main": "dist/signpost.css",
   "style": "src/signpost.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--signpost"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.5.0",
+    "@coopdigital/foundations": "^1.6.0",
     "@coopdigital/shared-component--icon": "^1.0.2"
   },
   "peerDependencies": {

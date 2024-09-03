@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.10](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-tags@3.3.9...@coopdigital/component-tags@3.3.10) (2024-09-03)
+
+**Note:** Version bump only for package @coopdigital/component-tags
+
+
+
+
+
 ## [3.3.9](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-tags@3.3.8...@coopdigital/component-tags@3.3.9) (2024-08-09)
 
 **Note:** Version bump only for package @coopdigital/component-tags

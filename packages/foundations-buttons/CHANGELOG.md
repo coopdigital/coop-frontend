@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.10](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-buttons@2.7.9...@coopdigital/foundations-buttons@2.7.10) (2024-09-03)
+
+**Note:** Version bump only for package @coopdigital/foundations-buttons
+
+
+
+
+
 ## [2.7.9](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-buttons@2.7.8...@coopdigital/foundations-buttons@2.7.9) (2024-08-09)
 
 **Note:** Version bump only for package @coopdigital/foundations-buttons

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.10](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-tables@3.1.9...@coopdigital/foundations-tables@3.1.10) (2024-09-03)
+
+**Note:** Version bump only for package @coopdigital/foundations-tables
+
+
+
+
+
 ## [3.1.9](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations-tables@3.1.8...@coopdigital/foundations-tables@3.1.9) (2024-08-09)
 
 **Note:** Version bump only for package @coopdigital/foundations-tables

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.5.0...@coopdigital/foundations@1.6.0) (2024-09-03)
+
+
+### Features
+
+* **wtf-1469:** add responsive headline class ([c368c4b](https://github.com/coopdigital/coop-frontend/commit/c368c4b5785395321d6b1b254d74c5c7cf3f0d6a))
+
+
+
+
+
 # [1.5.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.4.1...@coopdigital/foundations@1.5.0) (2024-08-09)
 
 

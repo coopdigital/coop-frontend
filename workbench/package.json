@@ -1,6 +1,6 @@
 {
   "name": "workbench",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,12 +14,12 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "@coopdigital/component-card": "^3.4.9",
+    "@coopdigital/component-card": "^3.4.10",
     "@coopdigital/component-searchable-dropdown": "^0.2.7",
     "@coopdigital/component-template": "*",
-    "@coopdigital/foundations": "^1.5.0",
-    "@coopdigital/foundations-forms": "^5.6.5",
-    "@coopdigital/shared-component--editorialcard": "^2.5.9",
+    "@coopdigital/foundations": "^1.6.0",
+    "@coopdigital/foundations-forms": "^5.6.6",
+    "@coopdigital/shared-component--editorialcard": "^2.5.10",
     "next": "12.1.0",
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",

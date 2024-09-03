@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--postcode",
-  "version": "2.6.10",
+  "version": "2.6.11",
   "description": "Co-op Shared Component: Postcode",
   "main": "dist/postcode.css",
   "style": "src/postcode.pcss",
@@ -20,7 +20,7 @@
     "directory": "packages/shared-component--postcode"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.5.0"
+    "@coopdigital/foundations": "^1.6.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

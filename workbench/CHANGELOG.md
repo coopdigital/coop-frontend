@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.6.0...workbench@0.7.0) (2024-09-03)
+
+
+### Features
+
+* **wtf-1469:** add responsive headline class ([c368c4b](https://github.com/coopdigital/coop-frontend/commit/c368c4b5785395321d6b1b254d74c5c7cf3f0d6a))
+
+
+
+
+
 # [0.6.0](https://github.com/coopdigital/coop-frontend/compare/workbench@0.5.3...workbench@0.6.0) (2024-08-09)
 
 
