@@ -22,7 +22,7 @@ export default function Home() {
       <main>
         <Layout>
           <section>
-            <h1>Workbench</h1>
+            <h1 className="coop-t-headline-mega">Workbench</h1>
             <p>Have a look at our components</p>
           </section>
 
