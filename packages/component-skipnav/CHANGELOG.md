@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.6](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-skipnav@2.5.5...@coopdigital/component-skipnav@2.5.6) (2024-09-04)
+
+**Note:** Version bump only for package @coopdigital/component-skipnav
+
+
+
+
+
 ## [2.5.5](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-skipnav@2.5.4...@coopdigital/component-skipnav@2.5.5) (2024-09-03)
 
 **Note:** Version bump only for package @coopdigital/component-skipnav

@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-card--product",
-  "version": "2.3.10",
+  "version": "2.3.11",
   "description": "Co-op Components: Card - product",
   "style": "dist/card--product.css",
   "sources": {
@@ -22,7 +22,7 @@
     "directory": "packages/component-card--product"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.6.0"
+    "@coopdigital/foundations": "^1.7.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.6.0...@coopdigital/foundations@1.7.0) (2024-09-04)
+
+
+### Features
+
+* **wtf-1470:** add font sizes for headline h1 ([cf74bf6](https://github.com/coopdigital/coop-frontend/commit/cf74bf6962fe5d751de5e177f96ad5984652bfbc))
+
+
+
+
+
 # [1.6.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.5.0...@coopdigital/foundations@1.6.0) (2024-09-03)
 
 

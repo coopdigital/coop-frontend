@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.4.11](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-card@3.4.10...@coopdigital/component-card@3.4.11) (2024-09-04)
+
+**Note:** Version bump only for package @coopdigital/component-card
+
+
+
+
+
 ## [3.4.10](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-card@3.4.9...@coopdigital/component-card@3.4.10) (2024-09-03)
 
 **Note:** Version bump only for package @coopdigital/component-card

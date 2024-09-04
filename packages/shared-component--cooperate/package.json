@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--cooperate",
-  "version": "1.6.11",
+  "version": "1.6.12",
   "description": "Co-op Shared Component: Co-operate explainer",
   "main": "dist/cooperate.css",
   "style": "src/cooperate.pcss",
@@ -20,9 +20,9 @@
     "directory": "packages/shared-component--cooperate"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.6.0",
-    "@coopdigital/shared-component--signpost": "^2.7.11",
-    "@coopdigital/shared-component--signpostlist": "^1.6.11"
+    "@coopdigital/foundations": "^1.7.0",
+    "@coopdigital/shared-component--signpost": "^2.7.12",
+    "@coopdigital/shared-component--signpostlist": "^1.6.12"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2",
