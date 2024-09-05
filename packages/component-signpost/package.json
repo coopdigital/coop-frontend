@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-signpost",
-  "version": "3.3.11",
+  "version": "3.3.12",
   "description": "Co-op Component: signpost",
   "style": "dist/signpost.css",
   "sources": {
@@ -22,7 +22,7 @@
     "directory": "packages/component-signpost"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.7.0"
+    "@coopdigital/foundations": "^1.8.0"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2"

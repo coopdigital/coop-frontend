@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.12](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-signpost@3.3.11...@coopdigital/component-signpost@3.3.12) (2024-09-05)
+
+**Note:** Version bump only for package @coopdigital/component-signpost
+
+
+
+
+
 ## [3.3.11](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/component-signpost@3.3.10...@coopdigital/component-signpost@3.3.11) (2024-09-04)
 
 **Note:** Version bump only for package @coopdigital/component-signpost
