@@ -161,10 +161,14 @@ h6,
 .coop-t-headline-h1 {
   font-family: var(--font-family-headline);
   color: var(--color-brand-coop);
-  font-size: var(--type-headline-mega-xs);
+  font-size: var(--type-headline-h1-xs);
+
+  @media (--mq-small) {
+    font-size: var(--type-headline-h1-s);
+  }
 
   @media (--mq-medium) {
-    font-size: var(--type-headline-mega-s);
+    font-size: var(--type-headline-h1-m);
   }
 }
 
