@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.13](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--image@2.3.12...@coopdigital/shared-component--image@2.3.13) (2025-01-27)
+
+**Note:** Version bump only for package @coopdigital/shared-component--image
+
+
+
+
+
 ## [2.3.12](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--image@2.3.11...@coopdigital/shared-component--image@2.3.12) (2024-09-05)
 
 **Note:** Version bump only for package @coopdigital/shared-component--image

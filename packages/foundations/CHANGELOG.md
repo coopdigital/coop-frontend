@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.8.0...@coopdigital/foundations@1.9.0) (2025-01-27)
+
+
+### Features
+
+* add correct h1 sizes ([fbe51ae](https://github.com/coopdigital/coop-frontend/commit/fbe51ae009d6cdb3cb81e7c9325c9aa011667bb8))
+* rebuild production files ([1b7b17d](https://github.com/coopdigital/coop-frontend/commit/1b7b17d4530e2756c1dc471f31a2d13a325e4a7f))
+
+
+
+
+
 # [1.8.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.7.0...@coopdigital/foundations@1.8.0) (2024-09-05)
 
 

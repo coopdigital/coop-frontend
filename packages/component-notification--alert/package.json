@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/component-notification--alert",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "description": "Co-op Components: Notification - alert",
   "style": "dist/notification--alert.css",
   "sources": {
@@ -22,8 +22,8 @@
     "directory": "packages/notification--alert"
   },
   "devDependencies": {
-    "@coopdigital/component-notification": "^1.3.12",
-    "@coopdigital/foundations": "^1.8.0"
+    "@coopdigital/component-notification": "^1.3.13",
+    "@coopdigital/foundations": "^1.9.0"
   },
   "peerDependencies": {
     "@coopdigital/component-notification": ">= 1.0.11 < 2",
