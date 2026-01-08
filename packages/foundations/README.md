@@ -71,7 +71,7 @@ If you only require partials of the foundations you can use the imports below. M
 
 ## Icon usage
 
-Icons are separted out as separate SVG files in `src` and combined in the build script into an SVG sprite called `coop-icon-sprite.svg`.
+Icons are separated out as separate SVG files in `src` and combined in the build script into an SVG sprite called `coop-icon-sprite.svg`.
 
 This sprite can be served into your project from `node_nodules` from within `foundations/dist/assets/icons/coop-icon-sprite.svg`, using the build process of your choice.
 
@@ -79,7 +79,7 @@ This sprite can be served into your project from `node_nodules` from within `fou
 
 ### Using the icons in your project
 
-Once you have the icons loaded in your front-end you can referrence them by using:
+Once you have the icons loaded in your front-end you can reference them by using:
 
 ```html
 <svg>
@@ -89,11 +89,11 @@ Once you have the icons loaded in your front-end you can referrence them by usin
 
 For example the shopping basket icon would be used with:
 
-### Using the icons accessibily
+### Using the icons accessibly
 
 You should always try to pair an icon with text if possible as suggested in the [Experience Library guidelines on icons](https://www.coop.co.uk/experience-library/foundations/icon-set.html)
 
-If the icon is paired with text it is classed as decorative and can be hidden from screenreaders.
+If the icon is paired with text it is classed as decorative and can be hidden from screen readers.
 
 ```html
 <p>
