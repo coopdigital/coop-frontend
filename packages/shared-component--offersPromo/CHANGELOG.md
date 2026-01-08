@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.14](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--offerspromo@1.3.13...@coopdigital/shared-component--offerspromo@1.3.14) (2026-01-08)
+
+**Note:** Version bump only for package @coopdigital/shared-component--offerspromo
+
+
+
+
+
 ## [1.3.13](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--offerspromo@1.3.12...@coopdigital/shared-component--offerspromo@1.3.13) (2025-01-27)
 
 **Note:** Version bump only for package @coopdigital/shared-component--offerspromo

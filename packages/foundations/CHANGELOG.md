@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.9.0...@coopdigital/foundations@1.9.1) (2026-01-08)
+
+
+### Bug Fixes
+
+* migrate foundations to trusted publishing ([8f7979d](https://github.com/coopdigital/coop-frontend/commit/8f7979d683f52c78431b8bfa29861201c109bf06))
+* spelling errors in foundations readme ([20508ed](https://github.com/coopdigital/coop-frontend/commit/20508ed5c200aa3482e287e549d27110a873a233))
+
+
+
+
+
 # [1.9.0](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/foundations@1.8.0...@coopdigital/foundations@1.9.0) (2025-01-27)
 
 

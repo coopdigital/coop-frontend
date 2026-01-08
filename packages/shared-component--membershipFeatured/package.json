@@ -1,6 +1,6 @@
 {
   "name": "@coopdigital/shared-component--membershipfeatured",
-  "version": "1.4.13",
+  "version": "1.4.14",
   "description": "Co-op Shared Component: Membership featured",
   "main": "dist/membership-featured.css",
   "style": "src/membership-featured.pcss",
@@ -20,8 +20,8 @@
     "directory": "packages/shared-component--membershipFeatured"
   },
   "devDependencies": {
-    "@coopdigital/foundations": "^1.9.0",
-    "@coopdigital/shared-component--editorialcard": "^2.5.13"
+    "@coopdigital/foundations": "^1.9.1",
+    "@coopdigital/shared-component--editorialcard": "^2.5.14"
   },
   "peerDependencies": {
     "@coopdigital/foundations": ">= 1.2.0 < 2",

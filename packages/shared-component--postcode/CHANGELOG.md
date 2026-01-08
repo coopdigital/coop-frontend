@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.15](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.6.14...@coopdigital/shared-component--postcode@2.6.15) (2026-01-08)
+
+**Note:** Version bump only for package @coopdigital/shared-component--postcode
+
+
+
+
+
 ## [2.6.14](https://github.com/coopdigital/coop-frontend/compare/@coopdigital/shared-component--postcode@2.6.13...@coopdigital/shared-component--postcode@2.6.14) (2025-01-27)
 
 **Note:** Version bump only for package @coopdigital/shared-component--postcode
