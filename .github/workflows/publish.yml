@@ -3,13 +3,10 @@ name: Publish
 on:
   workflow_dispatch:
 
-permissions:
-  id-token: write # Required for OIDC
-  contents: read
-
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
         with:
@@ -20,4 +17,12 @@ jobs:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
       - run: yarn install --frozen-lockfile
+
+      - name: Authenticate with Registry
+        run: |
+          echo "@coopdigital:registry=https://registry.npmjs.org/" > .npmrc
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_EXPLIB" >> .npmrc
+        env:
+          NPM_TOKEN_EXPLIB: ${{ secrets.NPM_TOKEN_EXPLIB }}
+
       - run: yarn run publish
